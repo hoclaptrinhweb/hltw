@@ -3,10 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HocLapTrinhWeb", "HocLapTrinhWeb", "{8E7A6398-F5DE-4158-8A86-ADCFB0114B83}"
 	ProjectSection(WebsiteProperties) = preProject
-		SccProjectName = ""
-		SccAuxPath = ""
-		SccLocalPath = ""
-		SccProvider = ""
+		SccProjectName = "Svn"
+		SccAuxPath = "Svn"
+		SccLocalPath = "Svn"
+		SccProvider = "SubversionScc"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		ProjectReferences = "{74D8ED7C-1363-4E9B-9640-771409D3599E}|HocLapTrinhWeb.BLL.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/HocLapTrinhWeb"
@@ -27,10 +27,19 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HocLapTrinhWeb", "HocLapTri
 		VWDDynamicPort = "false"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
+	ProjectSection(SvnOrigin) = preProject
+		@Keys = Enlist,Svn.Uri
+		Enlist = Required
+		Svn.Uri = HocLapTrinhWeb/
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HocLapTrinhWeb.BLL", "HocLapTrinhWeb.BLL\HocLapTrinhWeb.BLL.csproj", "{74D8ED7C-1363-4E9B-9640-771409D3599E}"
 EndProject
 Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|.NET = Debug|.NET
 		Debug|Any CPU = Debug|Any CPU
