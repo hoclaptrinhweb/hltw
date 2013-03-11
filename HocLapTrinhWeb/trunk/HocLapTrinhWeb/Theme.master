@@ -1,0 +1,119 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="Theme.master.cs"
+    Inherits="Theme" %>
+
+<%@ Register Src="usercontrols/ucFooter1.ascx" TagName="ucFooter1" TagPrefix="uc1" %>
+<%@ Register Src="usercontrols/ucCopyRight.ascx" TagName="ucCopyRight" TagPrefix="uc2" %>
+<%@ Register Src="usercontrols/ucRightFacebook.ascx" TagName="ucRightFacebook" TagPrefix="uc3" %>
+<%@ Register Src="usercontrols/ucHeader.ascx" TagName="ucHeader" TagPrefix="uc4" %>
+<%@ Register Src="usercontrols/ucHeaderFix.ascx" TagName="ucHeaderFix" TagPrefix="uc5" %>
+<%@ Register Src="usercontrols/ucNavigation.ascx" TagName="ucNavigation" TagPrefix="uc6" %>
+<%@ Register Src="usercontrols/ucRightNews1.ascx" TagName="ucRightNews1" TagPrefix="uc7" %>
+<%@ Register Src="usercontrols/ucRightSearch.ascx" TagName="ucRightSearch" TagPrefix="uc8" %>
+<%@ Register Src="usercontrols/ucNewsTicker.ascx" TagName="ucNewsTicker" TagPrefix="uc11" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="english, en, Vietnamese,vn" />
+    <link rel="shortcut icon" href="http://www.hoclaptrinhweb.com/favicon.png" />
+    <title></title>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://www.hoclaptrinhweb.com/js/IE9.js"></script>
+        <script type="text/javascript" src="http://www.hoclaptrinhweb.com/js/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="http://ad.vatgia.com/static/jsv2/advatgia.js"></script>
+    <asp:Literal ID="lrStyle" runat="server"></asp:Literal>
+    <asp:Literal ID="lrScript" runat="server"></asp:Literal>
+    <asp:Literal ID="lrScriptDetail" runat="server"></asp:Literal>
+    <meta runat="server" id="metaDesc" name="description" content="Hoclaptrinhweb.com là một website chuyên về Lập trình - Thiết kế website Graphic - HTML - CSS - Jquery - Photography - Tin công nghệ - Game. Hoclaptrinhweb.com là một website tổng hợp thông tin hoàn toàn được điều khiển tự động bởi máy tính. Mỗi ngày  tin tức từ  nhiều nguồn chính thức của các web điện tử và trang tin được Hoclaptrinhweb.com tự động tổng hợp, phân loại, phát hiện các bài đăng lại...." />
+    <meta runat="server" id="metaKeywords" name="keywords" content="web online, hoc lap trinh web, hoc lap trinh, học lập trình web, lập trình web" />
+    <meta property="og:title" content="" runat="server" id="metaTitle" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="http://www.hoclaptrinhweb.com" />
+    <meta property="og:url" content="" runat="server" id="metaUrl" />
+    <meta property="og:image" content="" runat="server" id="metaImage" />
+    <meta property="og:description" content="Hoclaptrinhweb.com là một website chuyên về Lập trình - Thiết kế website Graphic - HTML - CSS - Jquery - Photography - Tin công nghệ - Game. Hoclaptrinhweb.com là một website tổng hợp thông tin hoàn toàn được điều khiển tự động bởi máy tính. Mỗi ngày  tin tức từ  nhiều nguồn chính thức của các web điện tử và trang tin được Hoclaptrinhweb.com tự động tổng hợp, phân loại, phát hiện các bài đăng lại...." id="metaDescFb" />
+    <meta prefix="fb: http://ogp.me/ns/fb#" property="fb:app_id" content="312319252170353" />
+    <meta http-equiv="REFRESH" content="1800" />
+    <meta name="alexaVerifyID" content="N-eLjeUgLZY0YPY61XUqot_heyI" />
+    <meta name="verify-adnet" content="dac9efd0b7344c3d593bfd5cf511ce30" />
+    <meta name="robots" content="index,follow" />
+    <meta name="Googlebot" content="INDEX,FOLLOW" />
+</head>
+<body>
+    <script type="text/javascript">
+        var pageOptions = {
+            'webId': 661,
+            'category': 0
+        };
+        var adblock = {
+            'adblock1': {
+                'divIdShow': 'adVatgia_block_1',
+                'numAd': 4,
+                'typeShow': 0,
+                'style': { 'width': 300 }
+            },
+            'adblock2': {
+                'divIdShow': 'adVatgia_block_2',
+                'numAd': 3,
+                'typeShow': 1,
+                'style': { 'width': 650 }
+            },
+            'adblock3': {
+                'divIdShow': 'adVatgia_block_3',
+                'numAd': 6,
+                'typeShow': 1,
+                'style': { 'width': 1000 }
+            },
+            'adblock4': {
+                'divIdShow': 'adVatgia_block_4',
+                'numAd': 4,
+                'typeShow': 2,
+                'style': { 'width': 310, 'height': 230, 'link': '#aaa', 'border': '#2D81FB', 'align': 'right' }
+            }
+        };
+    </script>
+    <form id="form1" runat="server">
+    <uc5:ucHeaderFix ID="ucHeaderFix1" runat="server" />
+    <uc4:ucHeader ID="ucHeader1" runat="server" />
+    <uc6:ucNavigation ID="ucNavigation1" runat="server" />
+    <uc11:ucNewsTicker ID="ucNewsTicker1" runat="server" />
+    <div class="inner">
+        <div class="container">
+            <div class="main">
+                <div id="adVatgia_block_2" style="margin-bottom: 5px;">
+                </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="sidebar">
+                <uc8:ucRightSearch ID="ucRightSearch1" runat="server" />
+                <uc7:ucRightNews1 ID="ucRightNews11" runat="server" />
+                <uc3:ucRightFacebook ID="ucRightFacebook1" runat="server" />
+            </div>
+            <div class="clear">
+            </div>
+            <div id="adVatgia_block_3">
+            </div>
+            <div id="adVatgia_block_4">
+            </div>
+        </div>
+    </div>
+    <uc1:ucFooter1 ID="ucFooter11" runat="server" />
+    <uc2:ucCopyRight ID="ucCopyRight1" runat="server" />
+    <script type="text/javascript">new vatgiaAd(pageOptions, adblock).Ads();</script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-30339288-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <a rel="author" href="<%= UrlRoot %>/about.html" class="none">about hoclaptrinhweb</a>
+    </form>
+</body>
+</html>

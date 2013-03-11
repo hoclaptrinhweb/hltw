@@ -1,0 +1,440 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DH.Data.SqlServer</name>
+    </assembly>
+    <members>
+        <member name="M:DH.Data.SqlServer.Message.AddMessage(System.String,System.String,System.Int32)">
+            <summary>
+            Thêm MsgMessage
+            </summary>
+            <param name="pMsgCode">Mã: 10 ký tự</param>
+            <param name="pMessage">Thông báo</param>
+            <param name="pMsgNumber"></param>
+        </member>
+        <member name="M:DH.Data.SqlServer.Message.SetMessage(DH.Data.SqlServer.Message)">
+            <summary>
+            Gán lại Messeage từ 1 class khác được triệu gọi
+            </summary>
+            <param name="Msg"></param>
+        </member>
+        <member name="M:DH.Data.SqlServer.Message.Clear">
+            <summary>
+            Xóa MsgMessage
+            </summary>
+        </member>
+        <member name="M:DH.Data.SqlServer.Message.ClearAll">
+            <summary>
+            Xóa toàn bộ MsgMessage và ListMessage
+            </summary>
+        </member>
+        <member name="M:DH.Data.SqlServer.ClassBase.BeginTransaction">
+            <summary>
+            Khởi tạo Transaction
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.ClassBase.BeginTransaction(System.Boolean@)">
+            <summary>
+            Khởi tạo Transaction
+            </summary>
+            <param name="existsTrans"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.ClassBase.CloseConnection(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="opened">false: sẽ close connect. True: ko close connect</param>
+        </member>
+        <member name="M:DH.Data.SqlServer.ClassBase.OpenConnection(System.Boolean@)">
+            <summary>
+            opened=true: Connect đã mở trước đó.
+            opened=false: Connect được mở
+            </summary>
+            <param name="opened"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.#ctor(DH.Data.SqlServer.Connection,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="Connect"></param>
+            <param name="TabName"></param>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.AddParams(System.Data.SqlClient.SqlParameter)">
+            <summary>
+            Thêm SqlParameter
+            </summary>
+            <param name="op">SqlParameter cần thêm</param>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.AddParams(System.String,System.Data.SqlDbType,System.Object,System.Data.ParameterDirection)">
+            <summary>
+            Thêm SqlParameter
+            </summary>
+            <param name="ParamName">@Param Name</param>
+            <param name="ParamType">SqlDbType</param>
+            <param name="ParamValue">Giá trị</param>
+            <param name="dir">Parameter Direction</param>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.ClearParams">
+            <summary>
+            Xóa tất cả SQLParameter
+            </summary>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.FillData(System.Data.DataTable)">
+            <summary>
+            Fill dữ liệu có cấu trúc
+            </summary>
+            <param name="ObjData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.FillDataWithNotStructure(System.Data.DataTable)">
+            <summary>
+            Fill dữ liệu không có cấu trúc. Phải chỉ rõ SelectClause
+            </summary>
+            <param name="ObjData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.GetRowCount">
+            <summary>
+            Lấy lên số dòng dữ liệu
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.AddNew(System.Data.DataTable)">
+            <summary>
+            Thêm dữ liệu. Nếu 1 row sẽ trã về Identity. Unique Index/Constriant Violation( ErrorNumber: 2627)
+            </summary>
+            <param name="ObjData">Dữ liệu cần thêm</param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.AddNewMultiRow(System.Data.DataTable)">
+            <summary>
+            Thêm dữ liệu theo Rowstate. Unique Index/Constriant Violation(ErrorNumber: 2627)
+            </summary>
+            <param name="ObjData">Dữ liệu cần thêm</param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.Get_IDENT_CURRENT(System.String)">
+            <summary>
+            Lấy lên id tự tăng
+            </summary>
+            <param name="TableName">Tên bảng</param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.UpdateChange(System.Data.DataTable)">
+            <summary>
+            Cập nhật dữ liệu
+            </summary>
+            <param name="ObjData">Dữ liệu cập nhật</param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.UpdateChange(System.Data.DataTable,System.String[])">
+            <summary>
+            Cập nhật dữ liệu theo column
+            </summary>
+            <param name="ObjData">Dữ liệu cập nhật</param>
+            <param name="ColumnsName">Column cần cập nhật. Nếu là Null-->cập nhật tất cả</param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.UpdateDirect(System.Data.DataRow,System.String[])">
+            <summary>
+            Cập nhật 1 dòng dữ liệu
+            </summary>
+            <param name="ObjDataRow">Dòng dữ liệu cần cập nhật</param>
+            <param name="ColumnsName">Những trường cần cập nhật. Nếu là Null-->cập nhật tất cả</param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.Delete(System.Data.DataTable)">
+            <summary>
+            Xóa dữ liệu. ForeignKey Violation(ErrorNumber: 547)
+            </summary>
+            <param name="ObjData">Dữ liệu cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.DeleteDirect">
+            <summary>
+            Xóa dữ liệu. ForeignKey Violation(ErrorNumber: 547)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.ExecuteProcedure(System.String)">
+            <summary>
+            Thực thi 1 Procedure hay Funtion
+            </summary>
+            <param name="ProcedureName">Tên procedure</param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.FillDataFromProcedure(System.String,System.Data.DataTable)">
+            <summary>
+            Fill dữ liệu từ 1 procedure
+            </summary>
+            <param name="ProcedureName"></param>
+            <param name="ObjsData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.FillDataFromSQLQuery(System.String,System.Data.DataTable)">
+            <summary>
+            Fill dữ liệu từ câu sql.
+            </summary>
+            <param name="StringSQL"></param>
+            <param name="ObjsData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.DataAccess.ExecuteNonQuery(System.String)">
+            <summary>
+            Thực thi câu sql
+            </summary>
+            <param name="StringSQL"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DH.Data.SqlServer.DataAccess.SqlParameters">
+            <summary>
+            Danh sách SQLParameter
+            </summary>
+        </member>
+        <member name="M:DH.Data.SqlServer.Connection.Open">
+            <summary>
+            Mở connect
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Connection.CreateConnection(System.String,System.String,System.String)">
+            <summary>
+            Tạo 1 connect mới
+            </summary>
+            <param name="ConnectionString"></param>
+            <param name="Key">Thông tin database</param>
+            <param name="ValidKey">Mã hợp lệ</param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Connection.GetConnected">
+            <summary>
+            Lấy lên connect hiện tại
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Connection.Close">
+            <summary>
+            Đóng kết nối
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Connection.BeginTransaction">
+            <summary>
+            Khởi tạo Transaction
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Connection.Commit">
+            <summary>
+            Commit 1 transaction
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Connection.GetTransaction">
+            <summary>
+            Lấy lên transaction hiện tại
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Connection.SavePoint(System.String)">
+            <summary>
+            Đánh dấu nơi cần rollback
+            </summary>
+            <param name="savepointName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Connection.IsTrans">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Connection.Rollback">
+            <summary>
+            Rollback transaction
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Connection.Rollback(System.String)">
+            <summary>
+            Rollback tại Savepoint
+            </summary>
+            <param name="savepointName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DH.Data.SqlServer.Connection.State">
+            <summary>
+            Lấy lên trạng thái connect
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:DH.Data.SqlServer.TypeConvertor" -->
+        <member name="M:DH.Data.SqlServer.TypeConvertor.ToNetType(System.Data.DbType)">
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.TypeConvertor.ToNetType(System.Data.SqlDbType)">
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.TypeConvertor.ToDbType(System.Type)">
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.TypeConvertor.ToDbType(System.Data.SqlDbType)">
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.TypeConvertor.ToSqlDbType(System.Type)">
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.TypeConvertor.ToSqlDbType(System.Data.DbType)">
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.ConvertType.ToSqlDbType(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="theType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Adapter.BuildSelect(System.Int32,System.String[],System.String,System.String,System.String,System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Xây dựng câu select
+            </summary>
+            <param name="Top"></param>
+            <param name="Cols"></param>
+            <param name="TableName"></param>
+            <param name="WhereClause"></param>
+            <param name="OrderByClause"></param>
+            <param name="GroupByClause"></param>
+            <param name="HavingClause"></param>
+            <param name="Params"></param>
+        </member>
+        <member name="M:DH.Data.SqlServer.Adapter.BuildProcedure(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Xây dựng câu truy vấn procedure
+            </summary>
+            <param name="ProcedureName"></param>
+            <param name="Params"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Adapter.BuildSQL(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Xây dựng câu truy vấn SQL
+            </summary>
+            <param name="StringSQL"></param>
+            <param name="Params"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Adapter.BuildInsert(System.String,System.Data.DataTable,System.String[])">
+            <summary>
+            Xây dựng câu insert
+            </summary>
+            <param name="TableName"></param>
+            <param name="DataTableSource"></param>
+            <param name="Cols"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Adapter.BuildInsert(System.String)">
+            <summary>
+            Xây dựng câu insert nhiều row theo Command Builder
+            </summary>
+            <param name="TableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Adapter.BuildUpdate(System.String,System.Data.DataTable,System.String[],System.String[])">
+            <summary>
+            Xây dựng câu lệnh update
+            </summary>
+            <param name="TableName"></param>
+            <param name="dt"></param>
+            <param name="Cols"></param>
+            <param name="Keys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Adapter.BuildDelete(System.String,System.String[])">
+            <summary>
+            Xây dựng câu sql xóa dữ liệu
+            </summary>
+            <param name="TableName"></param>
+            <param name="Keys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Adapter.Fill(System.Data.DataTable)">
+            <summary>
+            Đổ dữ liệu bào DataTableSource [Phân trang]
+            </summary>
+            <param name="DataTableSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Adapter.FillNonStruct(System.Data.DataTable)">
+            <summary>
+            Fill dữ liệu từ Procedure hoặc câu sQL
+            </summary>
+            <param name="DataTableSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Adapter.ExecuteUpdateRow(System.String,System.Data.DataRow,System.String[],System.String[])">
+            <summary>
+            Thực thi cập nhật dữ liệu (Ok)
+            </summary>
+            <param name="TableName"></param>
+            <param name="row"></param>
+            <param name="Cols"></param>
+            <param name="Keys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Adapter.ExecuteDelete(System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Thực thi lệnh xóa dữ liệu
+            </summary>
+            <param name="TableName">Tên table</param>
+            <param name="WhereClause">điều kiện where</param>
+            <param name="Params">tham số</param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Adapter.ExecuteNonQuery(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Thực thi câu lệnh SQL
+            </summary>
+            <param name="StringSQL">Chuổi SQL cần thực thi</param>
+            <param name="Params">Tham số</param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Adapter.ExecuteProcedure(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Thực thi Procedure
+            </summary>
+            <param name="ProcedureName">Tên procedure</param>
+            <param name="Params">Tham số</param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Adapter.ExecuteReader(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Thực thi câu lệnh. trả về DataReader
+            </summary>
+            <param name="Top"></param>
+            <param name="SelectClause"></param>
+            <param name="TableName"></param>
+            <param name="WhereClause"></param>
+            <param name="OrderByClause"></param>
+            <param name="GroupByClause"></param>
+            <param name="HavingClause"></param>
+            <param name="Params"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Adapter.Update(System.Data.DataTable)">
+            <summary>
+            Gọi hàm Insert, Update, Delete
+            </summary>
+            <param name="DataTableSource">Dữ liệu cần cập nhật</param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.Data.SqlServer.Adapter.Get_IDENT_CURRENT(System.String)">
+            <summary>
+            Lấy lên id tự tăng
+            </summary>
+            <param name="TableName"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

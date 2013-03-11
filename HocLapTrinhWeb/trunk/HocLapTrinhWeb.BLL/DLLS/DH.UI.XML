@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DH.UI</name>
+    </assembly>
+    <members>
+        <member name="M:DH.UI.UCBase.Page_Load(System.Object,System.EventArgs)">
+            <summary>
+            cho phep overide
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DH.UI.UCBase.CreateConnection(System.String,System.String,System.String)">
+            <summary>
+            Tạo lại connect mới
+            </summary>
+            <param name="ConnectionString">Chuổi connect</param>
+            <param name="Key">Khóa kết nối</param>
+            <param name="ValidKey">Khóa hợp lệ</param>
+            <returns></returns>
+        </member>
+        <member name="F:DH.UI.PageBase.connectionString">
+            <summary>
+            Chuỗi kết nối database hiện hành
+            </summary>
+        </member>
+        <member name="F:DH.UI.PageBase.msg">
+            <summary>
+            Lớp lấy thông báo lỗi
+            </summary>
+        </member>
+        <member name="F:DH.UI.PageBase.CurrentConnect">
+            <summary>
+            Connect hiện tại
+            </summary>
+        </member>
+        <member name="M:DH.UI.PageBase.InitializeCulture">
+             <summary>
+            1. Khoi tao Language
+             </summary>
+        </member>
+        <member name="M:DH.UI.PageBase.OnPreInit(System.EventArgs)">
+            <summary>
+            2. Khoi tao page
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DH.UI.PageBase.CreateConnection(System.String,System.String,System.String)">
+            <summary>
+            Tạo lại connect mới
+            </summary>
+            <param name="ConnectionString">Chuổi connect</param>
+            <param name="Key">Khóa kết nối</param>
+            <param name="ValidKey">Khóa hợp lệ</param>
+            <returns></returns>
+        </member>
+        <member name="M:DH.UI.PageBase.Reload">
+            <summary>
+            Load lại page
+            </summary>
+        </member>
+        <member name="M:DH.UI.PageBase.ReloadWithAjax">
+            <summary>
+            Load lại page với ajax
+            </summary>
+        </member>
+        <member name="M:DH.UI.PageBase.getCurrentConnection">
+            <summary>
+            Lấy lên kết nối hiện tại khi kế thừa PageBase
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DH.UI.PageBase.GetRequestURL">
+            <summary>
+            Lấy lên địa chỉ url của page hiện hành
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DH.UI.PageBase.GoPage(System.String)">
+            <summary>
+            Chuyển tới địa chỉ url
+            </summary>
+            <param name="URL">URL cần chuyển tới</param>
+        </member>
+        <member name="M:DH.UI.PageBase.GoPageWithAjax(System.String)">
+            <summary>
+            Chuyển tới địa chỉ url bằng script
+            </summary>
+            <param name="URL">Url cần chuyển tới</param>
+        </member>
+        <member name="M:DH.UI.PageBase.SetMetaDescription(System.String)">
+            <summary>
+            Gán meta description cho page hiện hành
+            </summary>
+            <param name="description"></param>
+        </member>
+        <member name="M:DH.UI.PageBase.SetMetaKeyword(System.String)">
+            <summary>
+            Gán meta keyword cho page hiện hành
+            </summary>
+            <param name="keyword"></param>
+        </member>
+        <member name="P:DH.UI.PageBase.Language">
+            <summary>
+            Ngôn ngữ hiện tại của trang
+            </summary>
+        </member>
+        <member name="P:DH.UI.PageBase.UrlRoot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DH.UI.MessageBox.GetMessage(System.String)">
+            <summary>
+            Lấy lên thông báo từ hệ thống
+            </summary>
+            <param name="msgcode"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
