@@ -1,0 +1,164 @@
+﻿
+/* ---- grid style ---------*/
+.GridStyle
+{
+	border: solid 1px #cfcfcf;
+	border-collapse: collapse;
+	vertical-align: middle;
+	width: 100%;
+	padding-top: 0px;
+}
+.GridTitle
+{
+	height: 24px;
+	font-weight: bold;
+	background-color: #E6E6E6;
+	text-align: center;
+	padding: 3px 3px 3px 3px;
+}
+
+.GridTitle a
+{
+	color: #000000 !important;
+}
+
+.GridStyle tr.GridTitle:hover
+{
+	background-color: #E6E6E6;
+}
+
+.GridStyle tr
+{
+	height: 24px;
+}
+
+.GridStyle tr:hover
+{
+	cursor: default;
+	background-color: #E8EDF7;
+}
+.GridStyle tr a:hover
+{
+	cursor: pointer;
+	color: #ff0000;
+}
+
+
+.GridStyle td
+{
+	border: 1px solid #CCCCCC;
+	padding: 3px 3px 3px 3px;
+	color: #616161;
+	cursor:pointer;
+}
+
+.GridStyle a
+{
+	color: #1F92FF;
+	text-decoration: none;
+}
+
+.GridStyle .RowStyle
+{
+	background-color: #ffffff;
+}
+
+.GridStyle .AlternateRowStyle
+{
+	background-color: #f8f8f8;
+}
+
+.GridStyle .Paging
+{
+	background-color: #ffffff;
+	margin: 0px;
+	height: 24px;
+	vertical-align: middle;
+}
+.GridStyle tr.Paging:hover
+{
+	background-color: #ffffff;
+}
+
+.GridStyle .Paging a
+{
+	color: #3B5998;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.GridStyle .Paging a:hover
+{
+	color: #ff0000;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.GridStyle .Paging span
+{
+	color: #6E6E6E;
+}
+
+.GridStyle .Paging td
+{
+	padding: 0 4px 1px 5px;
+}
+
+.GridStyle .Paging td table
+{
+	border-collapse: separate;
+}
+
+.GridStyle .Paging td table tr
+{
+	height: 15px;
+}
+
+.GridStyle .Paging td table tr td
+{
+	padding: 0px 5px 0px 5px;
+	border: solid 1px #cfcfcf;
+	background-color: #ffffff;
+	vertical-align: middle;
+}
+
+/* ---- grid style end----------*/
+
+/* Tables 
+table {
+	border-collapse:separate;
+	border-spacing:0px;
+}
+caption, th, td {
+	text-align:left;
+	font-weight:normal;
+}
+table, td, th {
+	vertical-align:middle;
+}
+table {
+	width:100%;
+}
+thead td, thead th {
+	background-color:#E6E6E6;
+}
+tr td, thead th {
+	border-left:1px solid #CCCCCC;
+	color:#616161;
+	padding:8px;
+}
+tr td {
+	vertical-align:middle;
+}
+thead td, thead th {
+	font-weight:bold;
+	padding:8px;
+}
+th, td {
+	border-bottom:1px solid #DEDEDE;
+}
+tbody th {
+	padding:0 8px;
+	text-align:left;
+}
+*/

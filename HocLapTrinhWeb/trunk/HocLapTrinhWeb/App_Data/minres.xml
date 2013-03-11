@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<combres xmlns='urn:combres'>
+  <resourceSets url="~/minres.axd"
+                defaultDuration="30"
+                defaultVersion="auto">
+    <resourceSet name="DefaultJs" type="js">
+      <resource path="~/js/jquery-1.4.1.min.js" />
+    </resourceSet>
+    <resourceSet name="DefaultThemeJs" type="js">
+      <resource path="~/js/jquery.js" />
+      <resource path="~/js/jquery.cluetip.min.js" />
+      <resource path="~/js/custom.js" />
+    </resourceSet>
+    <resourceSet name="syntaxhighlighter" type="js" >
+      <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shCore.js" />
+      <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js" />
+      <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shBrushXml.js" />
+      <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shBrushCss.js" />
+      <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shBrushPhp.js" />
+      <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shBrushCSharp.js" />
+      <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shBrushSql.js" />
+    </resourceSet>
+    <resourceSet name="DefaultCss" type="css" >
+      <resource path="~/css/news.css" />
+      <resource path="~/css/StyleSheet.css" />
+      <resource path="~/js/syntaxhighlighter_3.0.83/styles/shCoreDefault.css" />
+    </resourceSet>
+    <resourceSet name="DefaultThemeCss" type="css" debugEnabled="true" >
+      <resource path="~/style.css" />
+      <resource path="~/css/jquery.cluetip.css" />
+      <resource path="~/js/syntaxhighlighter_3.0.83/styles/shCoreDefault.css" />
+    </resourceSet>
+  </resourceSets>
+</combres>

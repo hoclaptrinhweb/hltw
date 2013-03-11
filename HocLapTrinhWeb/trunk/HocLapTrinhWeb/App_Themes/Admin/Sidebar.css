@@ -1,0 +1,163 @@
+﻿  /*Left Menu  */
+/* sidebar */
+#sidebar {
+	float:left;
+	width:185px;
+	color:#333;
+	padding:25px 25px;
+}
+#sidebar a {
+	color:#333;
+}
+#main_menu {
+	list-style-type:none;
+	padding:0;
+}
+#main_menu li {
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #FFFFFF;
+    display: block;
+    width: 100%;
+}
+
+#main_menu li ul
+{
+	background:url("http://manager.skyhotel.vn//images/admin/bg_ip.png") repeat-x scroll 0 0 #CCCCCC;
+	padding-left:15px;
+}
+
+#main_menu li ul li {
+    border: 0 none;
+}
+
+#main_menu li ul li.active a
+{
+	color:Red;
+}
+
+#main_menu li.active 
+{
+	background:yellow;
+}
+#main_menu li ul li.active
+{
+	background:none;
+}
+#main_menu li a {
+    color: #363636;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px 5px 6px 20px;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+#main_menu li a:hover {
+	color:red;
+	font-weight:bold;
+}
+.ul-header {
+	border-bottom:1px solid #e0e0e0;
+	font-weight:bold;
+	font-size:14px;
+	display:block;
+	width:175px;
+	padding:6px;
+	color:#444444;
+	margin-top:10px;
+}
+.ul-header a {
+	font-weight:bold;
+	font-size:14px;
+	color:#444444;
+	text-decoration:none;
+}
+/** sidebar icons **/
+#main_menu li a.icn_news {
+	background: url('img/icons/small/news.png') no-repeat left;
+}
+#main_menu li a.icn_updatenews {
+	background: url('img/icons/small/updatenews.png') no-repeat left;
+}
+#main_menu li a.icn_document {
+	background: url('img/icons/small/document.png') no-repeat left;
+}
+#main_menu li a.icn_contact {
+	background: url('img/icons/small/contact.png') no-repeat left;
+}
+#main_menu li a.icn_advertising {
+	background: url('img/icons/small/advertising.png') no-repeat left;
+}
+#main_menu li a.icn_FileManager {
+	background: url('img/icons/small/filemanager.png') no-repeat left;
+}
+
+
+/*
+#sidebar ul li a.icn_manage_image {
+	background: url('img/icons/small/image_manage.png') no-repeat left;
+}
+#sidebar ul li a.icn_add_image {
+	background: url('img/icons/small/image_add.png') no-repeat left;
+}
+#sidebar ul li a.icn_edit_image {
+	background: url('img/icons/small/image_edit.png') no-repeat left;
+}
+#sidebar ul li a.icn_delete_image {
+	background: url('img/icons/small/image_delete.png') no-repeat left;
+}
+#sidebar ul li a.icn_manage_users {
+	background: url('img/icons/small/user.png') no-repeat left;
+}
+#sidebar ul li a.icn_add_users {
+	background: url('img/icons/small/user_add.png') no-repeat left;
+}
+#sidebar ul li a.icn_edit_users {
+	background: url('img/icons/small/user_edit.png') no-repeat left;
+}
+#sidebar ul li a.icn_delete_users {
+	background: url('img/icons/small/user_delete.png') no-repeat left;
+}
+#sidebar ul li a.icn_manage_pages {
+	background: url('img/icons/small/page.png') no-repeat left;
+}
+#sidebar ul li a.icn_add_pages {
+	background: url('img/icons/small/page_add.png') no-repeat left;
+}
+#sidebar ul li a.icn_edit_pages {
+	background: url('img/icons/small/page_edit.png') no-repeat left;
+}
+#sidebar ul li a.icn_delete_pages {
+	background: url('img/icons/small/page_delete.png') no-repeat left;
+}
+#sidebar ul li a.icn_manage_comments {
+	background: url('img/icons/small/comment.png') no-repeat left;
+}
+#sidebar ul li a.icn_add_comments {
+	background: url('img/icons/small/comment_add.png') no-repeat left;
+}
+#sidebar ul li a.icn_edit_comments {
+	background: url('img/icons/small/comment_edit.png') no-repeat left;
+}
+#sidebar ul li a.icn_delete_comments {
+	background: url('img/icons/small/comment_delete.png') no-repeat left;
+}
+*/
+.toggle {
+	display:block;
+}
+.ul-header a.visible {
+	background:url('img/icons/small/toggle_close.png') no-repeat scroll 97% 50%;
+}
+.ul-header a.hidden {
+	background:url('img/icons/small/toggle_open.png') no-repeat scroll 97% 50%;
+}
+
+.show
+{
+	display:block;
+}
+
+.hide
+{
+	display:none;
+}

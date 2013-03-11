@@ -1,0 +1,257 @@
+﻿
+/*------------Header start-------------*/
+#logo {
+	padding:15px 0 0 0;
+}
+#header {
+	color:#fff;
+}
+#header a {
+	color:#fff;
+	text-decoration:underline;
+}
+#header a:hover {
+	color:#fff;
+	text-decoration:none;
+}
+.header-top {
+	background:#2c2c2c;
+	padding:6px 25px 2px;
+}
+.header-middle {
+	background:#404040 url('img/header-middle.gif') repeat-x bottom;
+	border-top:1px solid #606060;
+	border-bottom:1px solid #050505;
+	height:62px;
+	min-width:1000px;
+}
+.header-bottom {
+	background:#313131 url('img/header-bottom.gif') repeat-x bottom;
+	border-top:1px solid #545454;
+	border-bottom:1px solid #545454;
+	padding:7px 25px;
+}
+#header p {
+	margin:0 0 5px 0;
+}
+#header span {
+	color:#6e7d87;
+}
+
+
+/* Navigation */
+#nav {
+	font-size:16px;
+	font-weight:bold;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	width:78%;
+	height:62px;
+}
+#nav li {
+	display:block;
+	float:right;
+	padding:19px 21px;
+	text-align: left;
+	position:relative;
+	height:24px;
+	font-size:16px;
+}
+#nav li:hover {
+	background:#2d2d2d;
+	border-right:1px solid #606060;
+	border-left:1px solid #606060;
+	border-top:0;
+	border-bottom:0;
+	padding:19px 20px;
+}
+#nav li a {
+	color:#fff;
+	padding:22px 10px 22px 40px;
+	text-shadow: 0 -1px 1px #000000;
+	font-size:16px;
+	text-decoration:none;
+}
+#nav li a:hover {
+	text-decoration:none;
+}
+#nav li a.settings {
+	background: url('img/icons/nav/settings.png') no-repeat 0 -38px;
+}
+#nav li a.users {
+	background: url('img/icons/nav/users.png') no-repeat 0 -38px;
+}
+#nav li a.content {
+	background: url('img/icons/nav/content.png') no-repeat 0 -38px;
+}
+#nav li a.dashboard {
+	background: url('img/icons/nav/dashboard.png') no-repeat 0 -38px;
+}
+#nav li:hover > a {
+	background-position: 0 16px;
+}
+/* sub levels link hover */
+#nav ul li:hover a, #nav li:hover li a {
+	background: none;
+	border: none;
+}
+#nav ul a:hover {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+/* dropdown */
+#nav li:hover > ul {
+	display: block;
+}
+/* drop down widths */
+#nav li.dashboard ul {
+	width: 172px;
+}
+#nav li.dashboard ul li ul {
+	left:172px;
+}
+#nav li.content ul {
+	width: 163px;
+}
+#nav li.content ul li ul {
+	left: 151px;
+}
+#nav li.users ul {
+	width: 134px;
+}
+#nav li.users ul li ul {
+	left:134px;
+}
+#nav li.settings ul {
+	width: 153px;
+}
+#nav li.settings ul li ul {
+	left: 153px;
+}
+#nav li.help ul {
+	width: 124px;
+}
+#nav li.help ul li ul {
+	left: 124px;
+}
+/* level 2 list */
+#nav ul {
+	display: none;
+	margin: 0;
+	padding: 0;
+	/*	width: 174px; */
+	position: absolute;
+	top: 62px;
+	left: -1px;
+	background: #2d2d2d;
+	border:1px solid #606060;
+	z-index:10;
+	border-top:none;
+	-webkit-border-radius: 0 0 3px 3px;
+	-moz-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+	padding-bottom:5px;
+}
+#nav ul li {
+	float: none;
+	padding: 6px 0 1px;
+	margin: 0;
+}
+#nav ul li:hover {
+	padding: 6px 0 1px;
+}
+#nav ul li:hover {
+	background:#478db4;
+	border:0;
+}
+#nav ul a {
+	font-size:12px;
+	font-weight:bold;
+	margin:0;
+	padding:0 15px;
+	text-shadow:none;
+	padding-left:15px;
+	vertical-align:top;
+}
+#nav ul li:hover > a {
+	text-shadow:none;
+	vertical-align:top;
+}
+/* level 3+ list */
+#nav ul ul {
+	/*	left: 174px; */
+	top: 0;
+	-moz-border-radius:0px 5px 5px 5px;
+	-webkit-border-radius: 0px 5px 5px 5px;
+	border-top:1px solid #606060;
+}
+/* rounded corners of first and last link */
+
+#nav ul li:last-child > a {
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+}
+/* clearfix */
+#nav:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+#nav {
+	display: inline-block;
+}
+html[xmlns] #nav {
+	display: block;
+}
+* html #nav {
+	height: 1%;
+}
+
+
+
+
+/* breadcrumbs (SiteMap)*/
+#breadcrumbs {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+#breadcrumbs li {
+	display:inline;
+	font-size:12px;
+	line-height: normal;
+	float: none;
+	font-size:14px;
+}
+#breadcrumbs li a {
+	float: none;
+	display: inline;
+	font-weight: bold;
+	padding: 0;
+	text-decoration:none;
+	font-size:12px;
+}
+#breadcrumbs li.bold a {
+	font-weight:bold;
+}
+#breadcrumbs li:HOVER {
+	background: none;
+	padding: 0;
+}
+#breadcrumbs li:HOVER A {
+	text-decoration:underline;
+	padding: 0;
+}
+.breadcrumbs li a:HOVER {
+	text-decoration:underline;
+	background: none;
+	padding: 0;
+}
+/*------------Header end-------------*/
+

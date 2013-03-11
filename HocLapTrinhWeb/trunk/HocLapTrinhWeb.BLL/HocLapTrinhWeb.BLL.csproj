@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{74D8ED7C-1363-4E9B-9640-771409D3599E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HocLapTrinhWeb.BLL</RootNamespace>
+    <AssemblyName>HocLapTrinhWeb.BLL</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/HocLapTrinhWeb.BLL/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DH.Data.SqlServer, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLS\DH.Data.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.3.9.1, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLS\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\table\AlexaBLL.cs" />
+    <Compile Include="BLL\table\AlexaDetailBLL.cs" />
+    <Compile Include="BLL\table\AutoAdvBLL.cs" />
+    <Compile Include="BLL\table\ContactBLL.cs" />
+    <Compile Include="BLL\table\CommentNewsBLL.cs" />
+    <Compile Include="BLL\table\t_NewsTagBLL.cs" />
+    <Compile Include="BLL\table\SeoConfigBLL.cs" />
+    <Compile Include="BLL\table\NewsTypeBLL.cs" />
+    <Compile Include="BLL\table\NewsBLL.cs" />
+    <Compile Include="BLL\table\ReferenceSiteBLL.cs" />
+    <Compile Include="BLL\table\t_TagBLL.cs" />
+    <Compile Include="BLL\table\UpPostBLL.cs" />
+    <Compile Include="BLL\table\UpNewsBLL.cs" />
+    <Compile Include="BLL\table\UpNewsTypeBLL.cs" />
+    <Compile Include="BLL\table\UpCategoryForumBLL.cs" />
+    <Compile Include="BLL\table\UpUserForumBLL.cs" />
+    <Compile Include="BLL\table\UpCategoryBLL.cs" />
+    <Compile Include="BLL\table\UpForumBLL.cs" />
+    <Compile Include="BLL\table\UpUserBLL.cs" />
+    <Compile Include="BLL\table\ltk_UserBLL.cs" />
+    <Compile Include="BLL\table\RoleBLL.cs" />
+    <Compile Include="BLL\table\UserBLL.cs" />
+    <Compile Include="BLL\table\UserPermissionBLL.cs" />
+    <Compile Include="BLL\table\VideoBLL.cs" />
+    <Compile Include="BLL\view\vnn_AutoAdvBLL.cs" />
+    <Compile Include="BLL\view\vnn_CommentBLL.cs" />
+    <Compile Include="BLL\view\vnn_ContactBLL.cs" />
+    <Compile Include="BLL\view\vnn_SeoConfigBLL.cs" />
+    <Compile Include="BLL\view\vnn_AlexaDetailBLL.cs" />
+    <Compile Include="BLL\view\vnn_AlexaBLL.cs" />
+    <Compile Include="BLL\view\vnn_NewsTypeBLL.cs" />
+    <Compile Include="BLL\view\ltk_NewsBLL.cs" />
+    <Compile Include="BLL\view\ltk_NewsTypeBLL.cs" />
+    <Compile Include="BLL\view\ltk_ReferenceSiteBLL.cs" />
+    <Compile Include="BLL\view\vnn_NewsBLL.cs" />
+    <Compile Include="BLL\view\vnn_UpPostBLL.cs" />
+    <Compile Include="BLL\view\vnn_UpNewsBLL.cs" />
+    <Compile Include="BLL\view\vnn_UpNewsTypeBLL.cs" />
+    <Compile Include="BLL\view\vnn_UpCategoryForumBLL.cs" />
+    <Compile Include="BLL\view\vnn_UpPostNewsBLL.cs" />
+    <Compile Include="BLL\view\vnn_UpUserForumBLL.cs" />
+    <Compile Include="BLL\view\vnn_UpCategoryBLL.cs" />
+    <Compile Include="BLL\view\vnn_UpForumBLL.cs" />
+    <Compile Include="BLL\view\vnn_UpUserBLL.cs" />
+    <Compile Include="BLL\view\vnn_RoleBLL.cs" />
+    <Compile Include="Auto\BrowserSession.cs" />
+    <Compile Include="BLL\view\v_TagBLL.cs" />
+    <Compile Include="DAL\ClassBaseDAL.cs" />
+    <Compile Include="Auto\FormElementCollection.cs" />
+    <Compile Include="dsHocLapTrinhWeb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHocLapTrinhWeb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateNews\UpdateNewsBase.cs" />
+    <Compile Include="vnn_dsHocLapTrinhWeb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vnn_dsHocLapTrinhWeb.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLLS\AjaxControlToolkit.dll" />
+    <Content Include="DLLS\CollectionPager.dll" />
+    <Content Include="DLLS\DH.Data.SqlServer.dll" />
+    <Content Include="DLLS\DH.Data.SqlServer.xml" />
+    <Content Include="DLLS\DH.UI.dll" />
+    <Content Include="DLLS\DH.UI.XML" />
+    <Content Include="DLLS\DH.Utilities.dll" />
+    <Content Include="DLLS\DH.Utilities.XML" />
+    <Content Include="DLLS\DropOptGroup.dll" />
+    <Content Include="DLLS\FredCK.FCKeditorV2.dll" />
+    <Content Include="DLLS\HtmlAgilityPack.dll" />
+    <Content Include="DLLS\INNO.WebControls.dll" />
+    <Content Include="DLLS\LIBDatePicker.dll" />
+    <Content Include="DLLS\NatsNet.Web.UI.Controls.dll" />
+    <Content Include="DLLS\TInternet.dll" />
+    <Content Include="DLLS\TUtil.dll" />
+    <Content Include="DLLS\Validators.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="dsHocLapTrinhWeb.xsc">
+      <DependentUpon>dsHocLapTrinhWeb.xsd</DependentUpon>
+    </None>
+    <None Include="dsHocLapTrinhWeb.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHocLapTrinhWeb.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsHocLapTrinhWeb.xss">
+      <DependentUpon>dsHocLapTrinhWeb.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="vnn_dsHocLapTrinhWeb.xsc">
+      <DependentUpon>vnn_dsHocLapTrinhWeb.xsd</DependentUpon>
+    </None>
+    <None Include="vnn_dsHocLapTrinhWeb.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vnn_dsHocLapTrinhWeb.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="vnn_dsHocLapTrinhWeb.xss">
+      <DependentUpon>vnn_dsHocLapTrinhWeb.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

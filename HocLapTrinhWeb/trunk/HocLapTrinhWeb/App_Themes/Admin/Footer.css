@@ -1,0 +1,19 @@
+﻿/* --------Footer---------*/
+
+.footer {
+	background:#313131 url('../img/header-bottom.gif') repeat-x bottom;
+	border-top:1px solid #545454;
+	border-bottom:1px solid #000;
+	padding:10px 25px;
+	color:#fff;
+	text-align:center;
+}
+.footer a {
+	color:#fff;
+	text-decoration:underline;
+}
+.footer a:hover {
+	color:#fff;
+	text-decoration:none;
+}
+/* --------Footer End---------*/

@@ -1,0 +1,48 @@
+﻿
+/* Dashboard Button */			
+.dashboard_button{
+	float:left;
+	width:135px;
+	height:80px;
+	overflow:hidden;
+	border:1px solid #c0c0c0;
+	padding:15px;
+	margin:0 12px 12px 0;
+	background:#eaeaea url(img/highlight_line.gif) repeat-x top left;
+	font-size:11px;
+	line-height:1.4em;
+	text-decoration:none;
+	color:#a1a1a1;
+	}
+.dashboard_button span{
+	display:block;
+	padding-top:7px;
+	}
+.dashboard_button_heading{
+	display:block;
+	color:#4a4a4a;
+	font-size:14px;
+	padding:0 0 0 40px;
+	line-height:29px;
+	height:35px;
+	}
+.two_lines.dashboard_button_heading{
+	line-height:17px;
+	}
+.dashboard_button:hover{
+	background:#ddd;
+	border:1px solid #aaa;
+	padding-top:16px;
+	height:79px;
+}
+.dashboard_button:hover .dashboard_button_heading{
+	color:#222;
+}
+
+.button1 .dashboard_button_heading{ background:transparent url(img/icons/button/news.png) no-repeat 0px top;	}
+.button2 .dashboard_button_heading{ background:transparent url(img/icons/button/updatenews.png) no-repeat 0px top;	}
+.button3 .dashboard_button_heading{ background:transparent url(img/icons/button/document.png) no-repeat 0px top;	}
+.button4 .dashboard_button_heading{ background:transparent url(img/icons/button/contact.png) no-repeat 0px top;	}
+.button5 .dashboard_button_heading{ background:transparent url(img/icons/button/advertising.png) no-repeat 0px top;	}
+.button6 .dashboard_button_heading{ background:transparent url(img/icons/button/filemanager.png) no-repeat 0px top;	}
+

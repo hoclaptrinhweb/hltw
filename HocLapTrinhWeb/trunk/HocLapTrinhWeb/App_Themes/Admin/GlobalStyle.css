@@ -1,0 +1,166 @@
+﻿
+/*------------public-------------*/
+
+/* misc */
+.cl {
+	clear:both;
+	display:block;
+	height:0;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	line-height:0;
+}
+.fl {
+	float:left;
+}
+.fr {
+	float:right;
+}
+.fn {
+	float:none!important;
+}
+.tl {
+	text-align:left;
+}
+.tr {
+	text-align:right;
+}
+.tc {
+	text-align:center;
+}
+.hd {
+	display: none;
+}
+.strong {
+	font-weight:bold;
+}
+
+
+.trEmpty , .trempty
+{
+	height:5px;
+}
+
+.tdEmpty , .tdempty
+{
+	width:5px;
+}
+
+.tdBetween, .tdbetween
+{
+	width:10px;
+}
+
+.Caption , .caption{
+	font-weight:bold;
+	padding-right:1px;
+	
+}
+
+.Require, .require{
+	color:red;
+	padding:0;
+	margin:0;
+}
+
+td.Require, td.require{/* Red line*/
+	background-image: url("img/redline.jpg");
+	background-repeat:repeat-y;
+    background-position:1px top;
+    vertical-align:top;
+    padding: 0px;
+    height:18px;
+    width: 3px;
+}
+
+.ChildBox {/* dóng khung nội dung */
+	border:solid 1px #9d9d9d;
+	padding:3px 3px 3px 3px;
+	
+}
+
+.ChildBox-Title {/* dóng khung tieu de */
+	
+	background-color:#E6E6E6;
+	font-weight:bold;
+	padding: 5px 5px 5px 5px;
+	text-align:left;
+	height:15px;
+	vertical-align: middle;
+	
+}
+
+.Spacer{/* khoang cach xuong hang*/
+height:5px;
+}
+
+
+/* notifications */
+.notification.success {
+	background:#effeb9 url('img/icons/notifications/success.png') no-repeat 10px 10px;
+	border-color:#98c700;
+}
+.notification.error {
+	background:#fccac3 url('img/icons/notifications/error.png') no-repeat 10px 10px;
+	border-color:#ea5338;
+}
+.notification.warning {
+	background:#ffeaa7 url('img/icons/notifications/warning.png') no-repeat 10px 10px;
+	border-color:#f9b418;
+}
+.notification.info {
+	background:#d1e4f3 url('img/icons/notifications/info.png') no-repeat 10px 10px;
+	border-color:#4d8fcc;
+}
+.notification.tip {
+	background:#feeac9 url('img/icons/notifications/tip.png') no-repeat 10px 10px;
+	border-color:#d38e49;
+}
+.notification {
+	border-width:1px;
+	border-style:solid;
+	padding:17px 17px 17px 55px;
+	margin-bottom:15px;
+	-moz-border-radius:3px;
+	-webkit-border:3px;
+	border-radius:3px;
+}
+.notification .close {
+	background:url("img/icons/small/close.png") no-repeat scroll 0 0 transparent;
+	cursor:pointer;
+	display:block;
+	float:right;
+	height:16px;
+	margin-top:2px;
+	opacity:0.7;
+	width:16px;
+}
+.notification .close:hover {
+	opacity:1;
+}
+
+/* Dialog Box */
+.message {
+	font-size:12px;
+	padding:15px;
+	margin-bottom:10px;
+	border:1px solid #AAAAAA;
+}
+.message.new {
+	background:#feeac9;
+	border:1px solid #d38e49;
+}
+.message h4 {
+	border-bottom:1px solid #AAAAAA;
+	padding-bottom:5px;
+}
+small {
+	font-size:10px;
+}
+
+.none {
+    display: none;
+}
+
+/*------------public end-------------*/
