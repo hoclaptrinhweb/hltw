@@ -191,8 +191,9 @@ public partial class administrator_usercontrols_NewsDetail : DH.UI.UCBase
 
                     arrDels.Add(rowNewsTag.TagID);
                 }
-                //Remove
-                
+                //Remove not arrDels
+                var dtDel = tNewsTag.Get_NewsTagByID(dt[0].NewsID, arrDels);
+                tNewsTag.Delete(dtDel);
                 return true;
             }
             return false;
