@@ -20,6 +20,7 @@
                     <table cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                             <td>
+                                <asp:Label ID="lbTotal" runat="server"></asp:Label>
                                 <asp:Button ID="btnUpdate" runat="server" CssClass="button" EnableViewState="False"
                                     Text="Cập nhật tin" UseSubmitBehavior="false" OnClientClick="if(!IsEdit('chckSelect','notselect')) return; showClose=true;isUpdate=true;"
                                     OnClick="BtnUpdateClick" />
@@ -36,8 +37,12 @@
                                     OnClick="BtnNewClick" />
                             </td>
                             <td align="right">
-                                <asp:Label ID="lbTotal" runat="server"></asp:Label>
-                                <asp:Label ID="Label8" CssClass="Caption" runat="server" Text=" Loại tin: "></asp:Label>
+                                <asp:DropDownList ID="dropIsActive" runat="server" AutoPostBack="True" 
+                                    onselectedindexchanged="dropIsActive_SelectedIndexChanged">
+                                    <asp:ListItem Value="-1">Tất cả</asp:ListItem>
+                                    <asp:ListItem Value="1">Kích hoạt</asp:ListItem>
+                                    <asp:ListItem Value="0">Chưa kích hoạt</asp:ListItem>
+                                </asp:DropDownList>
                                 <asp:ObjectDataSource ID="ObjNewsType" runat="server" OnObjectCreating="ObjNewsTypeObjectCreating"
                                     SelectMethod="GetAllNewsTypeForGridView" TypeName="HocLapTrinhWeb.BLL.vnn_NewsTypeBLL">
                                 </asp:ObjectDataSource>
@@ -131,6 +136,7 @@
                         OnObjectCreating="ObjDataObjectCreating" OnSelected="ObjDataSelected" OnSelecting="ObjDataSelecting">
                         <SelectParameters>
                             <asp:ControlParameter Name="newsTypeID" ControlID="drNewsType" Type="int32" PropertyName="SelectedValue" />
+                            <asp:ControlParameter ControlID="dropIsActive" Name="IsActive" PropertyName="SelectedValue" />
                         </SelectParameters>
                     </asp:ObjectDataSource>
                 </div>
