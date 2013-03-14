@@ -6,7 +6,7 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://xoxco.com/projects/code/tagsinput/jquery.tagsinput.js"></script>
 <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js'></script>
-<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/start/jquery-ui.css" />
+<link href="../admin/css/jquery-ui.css" rel="stylesheet" type="text/css" />
 <input id="notselect" type="hidden" value='<%=msg.GetMessage("ERR-000007")%>' />
 <input id="deleteconfirm" type="hidden" value='<%=msg.GetMessage("ERR-000008")%>' />
 <input id="hdDateFormat" type="hidden" value="<%= CurrentPage.Language%>" />
@@ -488,6 +488,19 @@
         });
     });
 
+
+    function onAddTag()
+    {
+        alert('add');
+    }
+    function onRemoveTag()
+    {
+        alert('remove');
+    }
+    function onChange()
+    {
+        alert('change');
+    }
 </script>
 <style type="text/css">
     .MaxImage

@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
 using System.IO;
+using System.Collections;
 
 public partial class administrator_usercontrols_NewsDetail : DH.UI.UCBase
 {
@@ -74,7 +75,7 @@ public partial class administrator_usercontrols_NewsDetail : DH.UI.UCBase
             row.UpdatedDate = DateTime.Now;
             row.IPUpdate = txtIPUpdate.Text;
             row.RefAddress = txtNguon.Text;
-            var pathImage = CheckUploadImageThumbnail(XuLyChuoi.ConvertToUnSign(txtTitle.Text),fileuploadThumbnail, false, Global.MaxThumbnailSize, int.Parse(dropNewsType.SelectedValue));
+            var pathImage = CheckUploadImageThumbnail(XuLyChuoi.ConvertToUnSign(txtTitle.Text), fileuploadThumbnail, false, Global.MaxThumbnailSize, int.Parse(dropNewsType.SelectedValue));
             row.Thumbnail = pathImage != "" ? pathImage : imgThumbnail.ImageUrl.Replace("~/", "");
             row.Image = "";
             row.IsHot = false;
@@ -97,7 +98,38 @@ public partial class administrator_usercontrols_NewsDetail : DH.UI.UCBase
                 dt.Addtbl_NewsRow(row);
                 if (rowVideo.LinkVideo != "")
                     dtVideo.Addtbl_VideoRow(rowVideo);
-                return newsBll.Add(dt, dtVideo);
+                if (newsBll.Add(dt, dtVideo))
+                {
+                    var tNewsTag = new t_NewsTagBLL(getCurrentConnection());
+                    var dtNewsTag = new dsHocLapTrinhWeb.tbl_NewsTagDataTable();
+                    var arrKey = txtkeyword.Text.Split(',');
+                    for (var i = 0; i < arrKey.Length; i++)
+                    {
+                        var rowNewsTag = dtNewsTag.Newtbl_NewsTagRow();
+                        // Lưu vào tbl_Tag
+                        var vTagBll = new v_TagBLL(getCurrentConnection());
+                        var rowTag = vTagBll.GetTagByName(arrKey[i]);
+                        if (rowTag == null)
+                        {
+                            var dtTag = new dsHocLapTrinhWeb.tbl_TagDataTable();
+                            rowTag = dtTag.Newtbl_TagRow();
+                            rowTag.TagName = arrKey[i];
+                            dtTag.Addtbl_TagRow(rowTag);
+                            if (vTagBll.Add(dtTag))
+                                rowNewsTag.TagID = dtTag[0].TagID;
+                            else
+                                return false;
+                        }
+                        else
+                            rowNewsTag.TagID = rowTag.TagID;
+                        rowNewsTag.NewsID = dt[0].NewsID;
+                        dtNewsTag.Addtbl_NewsTagRow(rowNewsTag);
+                    }
+                    tNewsTag.Add(dtNewsTag);
+                    return true;
+                }
+                else
+                    return false;
             }
             row.IPUpdate = DH.Utilities.Net.GetVisitorIPAddress();
             row.UpdatedBy = int.Parse(Session["UserID"].ToString());
@@ -125,10 +157,44 @@ public partial class administrator_usercontrols_NewsDetail : DH.UI.UCBase
                     if (imgThumbnail.ImageUrl.ToLower() != "~/upload/image/noimage.jpg")
                         File.Delete(Server.MapPath(imgThumbnail.ImageUrl));
                 }
+                var tNewsTag = new t_NewsTagBLL(getCurrentConnection());
+                var arrKey = txtkeyword.Text.Split(',');
+                var arrDels = new ArrayList();
+                for (var i = 0; i < arrKey.Length; i++)
+                {
+                    var dtNewsTag = new dsHocLapTrinhWeb.tbl_NewsTagDataTable();
+                    var rowNewsTag = dtNewsTag.Newtbl_NewsTagRow();
+                    // Lưu vào tbl_Tag
+                    var vTagBll = new v_TagBLL(getCurrentConnection());
+                    var rowTag = vTagBll.GetTagByName(arrKey[i]);
+                    if (rowTag == null)
+                    {
+                        var dtTag = new dsHocLapTrinhWeb.tbl_TagDataTable();
+                        rowTag = dtTag.Newtbl_TagRow();
+                        rowTag.TagName = arrKey[i];
+                        dtTag.Addtbl_TagRow(rowTag);
+                        if (vTagBll.Add(dtTag))
+                            rowNewsTag.TagID = dtTag[0].TagID;
+                    }
+                    else
+                        rowNewsTag.TagID = rowTag.TagID;
+
+                    rowNewsTag.NewsID = dt[0].NewsID;
+
+                    //Kiểm tra tag đã tồn tại trong newstag chưa
+                    var rowExist = tNewsTag.Get_NewsTagByID(rowTag.TagID,dt[0].NewsID);
+                    if (rowExist == null)
+                    {
+                        dtNewsTag.Addtbl_NewsTagRow(rowNewsTag);
+                        tNewsTag.Add(dtNewsTag);
+                    }
+
+                    arrDels.Add(rowNewsTag.TagID);
+                }
+                //Remove
+                
                 return true;
             }
-            return false;
-
             return false;
 
         }
