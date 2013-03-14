@@ -63,6 +63,12 @@ public partial class administrator_usercontrols_ucUser : DH.UI.UCBase
             lbTotal.Text = ((vnn_dsHocLapTrinhWeb.ltk_vw_UserDataTable)e.ReturnValue).Count.ToString();
     }
 
+    protected void dropIsActive_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        gvData.PageIndex = 0;
+        gvData.DataBind();
+    }
+
     protected void BtnDeleteClick(object sender, EventArgs e)
     {
         var userBll = new UserBLL(CurrentPage.getCurrentConnection());

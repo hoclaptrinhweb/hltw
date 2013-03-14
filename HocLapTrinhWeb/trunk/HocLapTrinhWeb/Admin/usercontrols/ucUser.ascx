@@ -29,6 +29,12 @@
                         <asp:Button ID="btnDelete" CssClass="button" runat="server" UseSubmitBehavior="False"
                             Text="Xóa" OnClientClick="if(! IsDelete('chckSelect','notselect','deleteconfirm')) return;"
                             CausesValidation="False" OnClick="BtnDeleteClick" />
+                        <asp:DropDownList ID="dropIsActive" runat="server" AutoPostBack="True" 
+                            onselectedindexchanged="dropIsActive_SelectedIndexChanged">
+                            <asp:ListItem Value="-1">Tất cả</asp:ListItem>
+                            <asp:ListItem Value="1">Kích hoạt</asp:ListItem>
+                            <asp:ListItem Value="0">Chưa kích hoạt</asp:ListItem>
+                        </asp:DropDownList>
                     </div>
                 </div>
                 <div class="box table">
@@ -101,6 +107,9 @@
                     <asp:ObjectDataSource ID="ObjData" runat="server" TypeName="HocLapTrinhWeb.BLL.ltk_UserBLL"
                         EnablePaging="True" SelectMethod="GetAllUserForGridView" SelectCountMethod="GetAllUserRowCount"
                         OnObjectCreating="ObjDataObjectCreating" OnSelected="ObjDataSelected" OnSelecting="ObjDataSelecting">
+                        <SelectParameters>
+                            <asp:ControlParameter ControlID="dropIsActive" Name="IsActive" PropertyName="SelectedValue" />
+                        </SelectParameters>
                     </asp:ObjectDataSource>
                 </div>
             </ContentTemplate>
@@ -110,7 +119,7 @@
                 <asp:AsyncPostBackTrigger ControlID="btnEdit" />
             </Triggers>
         </asp:UpdatePanel>
-        <div id="divAdd" class="popup" style="display: none;" >
+        <div id="divAdd" class="popup" style="display: none;">
             <asp:UpdatePanel ID="updatepanel2" runat="server">
                 <ContentTemplate>
                     <asp:HiddenField runat="server" ID="hdIsAddSuccessful" Value="0" />
