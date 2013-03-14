@@ -21,7 +21,7 @@ public partial class Admin_usercontrols_ucDefault : DH.UI.UCBase
             lbContact.Text += " ( " + n + " ) ";
 
             var vUserBll = new ltk_UserBLL(getCurrentConnection());
-            n = vUserBll.GetAllUserRowCount();
+            n = vUserBll.GetAllUserRowCount(-1);
             lbUser.Text += " ( " + n + " ) ";
 
             var vNewsType = new vnn_NewsTypeBLL(getCurrentConnection());
