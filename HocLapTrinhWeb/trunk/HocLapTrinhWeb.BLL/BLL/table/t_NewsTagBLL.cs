@@ -60,6 +60,46 @@ namespace HocLapTrinhWeb.BLL
             }
         }
 
+
+        public dsHocLapTrinhWeb.tbl_NewsTagRow Get_NewsTagByID(int tagid, int newsid)
+        {
+            var isOpen = false;
+            try
+            {
+                if (OpenConnection(ref isOpen))
+                {
+                    var dt = new dsHocLapTrinhWeb.tbl_NewsTagDataTable();
+                    _classBaseDAL = new ClassBaseDAL(IConnect, dt) { WhereClause = dt.TagIDColumn.ColumnName + "=@tagid" };
+                    _classBaseDAL.AddParams("@tagid", SqlDbType.Int, tagid, ParameterDirection.Input);
+
+                    _classBaseDAL.WhereClause += " and " + dt.NewsIDColumn.ColumnName + "=@newsid";
+                    _classBaseDAL.AddParams("@newsid", SqlDbType.Int, newsid, ParameterDirection.Input);
+                    if (_classBaseDAL.FillData(dt))
+                    {
+                        if (dt.Count == 0)
+                        {
+                            AddMessage("ERR-000009", "Du lieu khong ton tai." + _classBaseDAL.getMessage(), _classBaseDAL.getMsgNumber());
+                            return null;
+                        }
+                        return dt[0];
+                    }
+                    AddMessage("ERR-000006", "Tải dữ liệu không thành công." + _classBaseDAL.getMessage(), _classBaseDAL.getMsgNumber());
+                    return null;
+                }
+                AddMessage("ERR-000001", "Kết nối bị lỗi." + getMessage(), 0);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                AddMessage("ERR-000006", "Tải dữ liệu không thành công." + ex.Message, 0);
+                return null;
+            }
+            finally
+            {
+                CloseConnection(isOpen);
+            }
+        }
+
         public dsHocLapTrinhWeb.tbl_NewsTagRow GetNewsTagByDate(string strdate)
         {
             var isOpen = false;
@@ -172,8 +212,8 @@ namespace HocLapTrinhWeb.BLL
                 CloseConnection(isOpen);
             }
         }
-       
-        public bool Update(dsHocLapTrinhWeb.tbl_NewsTagDataTable dt,params string[] columnsName)
+
+        public bool Update(dsHocLapTrinhWeb.tbl_NewsTagDataTable dt, params string[] columnsName)
         {
             var isOpen = false;
             try
@@ -184,7 +224,7 @@ namespace HocLapTrinhWeb.BLL
                     dt.AcceptChanges();
                     foreach (dsHocLapTrinhWeb.tbl_NewsTagRow row in dt.Rows)
                         row.SetModified();
-                    if (_classBaseDAL.UpdateChange(dt,columnsName))
+                    if (_classBaseDAL.UpdateChange(dt, columnsName))
                         return true;
                     AddMessage("ERR-000004", "Update data fail." + _classBaseDAL.getMessage(), _classBaseDAL.getMsgNumber());
                     return false;

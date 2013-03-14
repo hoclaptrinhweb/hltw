@@ -100,6 +100,7 @@
     <Compile Include="BLL\table\UserBLL.cs" />
     <Compile Include="BLL\table\UserPermissionBLL.cs" />
     <Compile Include="BLL\table\VideoBLL.cs" />
+    <Compile Include="BLL\view\v_NewsTagBLL.cs" />
     <Compile Include="BLL\view\vnn_AutoAdvBLL.cs" />
     <Compile Include="BLL\view\vnn_CommentBLL.cs" />
     <Compile Include="BLL\view\vnn_ContactBLL.cs" />

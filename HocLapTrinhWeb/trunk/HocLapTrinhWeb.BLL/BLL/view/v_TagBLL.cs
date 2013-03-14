@@ -95,7 +95,44 @@ namespace HocLapTrinhWeb.BLL
             }
         }
 
-        public dsHocLapTrinhWeb.tbl_TagDataTable GetTagByName(string strName)
+        public dsHocLapTrinhWeb.tbl_TagRow GetTagByName(string strName)
+        {
+            var isOpen = false;
+            try
+            {
+                if (OpenConnection(ref isOpen))
+                {
+                    var dt = new dsHocLapTrinhWeb.tbl_TagDataTable();
+                    _ClassBaseDAL = new ClassBaseDAL(IConnect, dt) { WhereClause = dt.TagNameColumn.ColumnName + " =  @strName " };
+                    _ClassBaseDAL.ClearParams();
+                    _ClassBaseDAL.AddParams("@strName", SqlDbType.NVarChar, strName, ParameterDirection.Input);
+                    if (_ClassBaseDAL.FillData(dt))
+                    {
+                        if (dt.Count == 0)
+                        {
+                            AddMessage("ERR-000009", "Du lieu khong ton tai." + _ClassBaseDAL.getMessage(), _ClassBaseDAL.getMsgNumber());
+                            return null;
+                        }
+                        return dt[0];
+                    }
+                    AddMessage("ERR-000006", "Tải dữ liệu không thành công." + _ClassBaseDAL.getMessage(), _ClassBaseDAL.getMsgNumber());
+                    return null;
+                }
+                AddMessage("ERR-000001", "Kết nối bị lỗi." + getMessage(), 0);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                AddMessage("ERR-000006", "Tải dữ liệu không thành công." + ex.Message, 0);
+                return null;
+            }
+            finally
+            {
+                CloseConnection(isOpen);
+            }
+        }
+
+        public dsHocLapTrinhWeb.tbl_TagDataTable SearchTagByName(string strName)
         {
             var isOpen = false;
             try
