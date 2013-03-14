@@ -21,8 +21,7 @@
 </asp:Panel>
 <asp:Panel ID="pGuest" runat="server">
     <ul class="top_nav">
-        <li><a id="signup" href='<%= CurrentPage.UrlRoot + "/members/register.aspx" %>'>Đăng
-            ký</a></li>
+        <li><a id="signup" href='<%= CurrentPage.UrlRoot + "/members/register.aspx" %>'>Đăng ký</a></li>
         <li><a id="signin" href='<%= CurrentPage.UrlRoot + "/members/login.aspx" %>'>Đăng nhập</a></li>
     </ul>
 </asp:Panel>
