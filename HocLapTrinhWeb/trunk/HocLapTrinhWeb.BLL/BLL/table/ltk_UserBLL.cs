@@ -29,7 +29,7 @@ namespace HocLapTrinhWeb.BLL
         /// <param name="startRowIndex"></param>
         /// <param name="maximumRows"></param>
         /// <returns></returns>
-        public vnn_dsHocLapTrinhWeb.ltk_vw_UserDataTable GetAllUserForGridView(int startRowIndex, int maximumRows)
+        public vnn_dsHocLapTrinhWeb.ltk_vw_UserDataTable GetAllUserForGridView(int startRowIndex, int maximumRows, int IsActive)
         {
             var isOpen = false;
             try
@@ -43,6 +43,11 @@ namespace HocLapTrinhWeb.BLL
                             MaxRows = maximumRows,
                             OrderByClause = dt.UserIDColumn.ColumnName + " desc"
                         };
+                    if (IsActive != -1)
+                    {
+                        _classBaseDAL.WhereClause = dt.IsActiveColumn.ColumnName + "=@IsActive";
+                        _classBaseDAL.AddParams("@IsActive", SqlDbType.Int, IsActive, ParameterDirection.Input);
+                    }
                     if (_classBaseDAL.FillData(dt))
                         return dt;
                     AddMessage("ERR-000006", "Tải dữ liệu không thành công." + _classBaseDAL.getMessage(), _classBaseDAL.getMsgNumber());
@@ -95,7 +100,7 @@ namespace HocLapTrinhWeb.BLL
         /// Lấy lên số dòng dữ liệu
         /// </summary>
         /// <returns></returns>
-        public int GetAllUserRowCount()
+        public int GetAllUserRowCount(int IsActive)
         {
             var isOpen = false;
             try
@@ -104,6 +109,11 @@ namespace HocLapTrinhWeb.BLL
                 {
                     var dt = new vnn_dsHocLapTrinhWeb.ltk_vw_UserDataTable();
                     _classBaseDAL = new ClassBaseDAL(IConnect, dt);
+                    if (IsActive != -1)
+                    {
+                        _classBaseDAL.WhereClause = dt.IsActiveColumn.ColumnName + "=@IsActive";
+                        _classBaseDAL.AddParams("@IsActive", SqlDbType.Int, IsActive, ParameterDirection.Input);
+                    }
                     var rowcount = _classBaseDAL.GetRowCount();
                     if (rowcount == -1)
                         AddMessage("ERR-000006", "Tải dữ liệu không thành công." + _classBaseDAL.getMessage(), _classBaseDAL.getMsgNumber());
