@@ -60,6 +60,44 @@ namespace HocLapTrinhWeb.BLL
             }
         }
 
+        public dsHocLapTrinhWeb.tbl_NewsTagDataTable Get_NewsTagByID(int newsid, ArrayList notTagid)
+        {
+            var isOpen = false;
+            try
+            {
+                if (OpenConnection(ref isOpen))
+                {
+                    var dt = new dsHocLapTrinhWeb.tbl_NewsTagDataTable();
+                    _classBaseDAL = new ClassBaseDAL(IConnect, dt) { WhereClause = dt.NewsIDColumn.ColumnName + "=@newsid" };
+                    _classBaseDAL.ClearParams();
+                    _classBaseDAL.AddParams("@newsid", SqlDbType.Int, newsid, ParameterDirection.Input);
+
+                    string strWhereClause = dt.TagIDColumn.ColumnName + " not in (";
+                    for (int i = 1; i < notTagid.Count + 1; i++)
+                    {
+                        strWhereClause += "@" + i + ",";
+                        _classBaseDAL.AddParams(i.ToString(), SqlDbType.Int, Convert.ToInt16(notTagid[i - 1].ToString()), ParameterDirection.Input);
+                    }
+                    _classBaseDAL.WhereClause = strWhereClause.Substring(0, strWhereClause.Length - 1) + ")";
+
+                    if (_classBaseDAL.FillData(dt))
+                        return dt;
+                    AddMessage("ERR-000006", "Tải dữ liệu không thành công." + _classBaseDAL.getMessage(), _classBaseDAL.getMsgNumber());
+                    return null;
+                }
+                AddMessage("ERR-000001", "Kết nối bị lỗi." + getMessage(), 0);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                AddMessage("ERR-000006", "Tải dữ liệu không thành công." + ex.Message, 0);
+                return null;
+            }
+            finally
+            {
+                CloseConnection(isOpen);
+            }
+        }
 
         public dsHocLapTrinhWeb.tbl_NewsTagRow Get_NewsTagByID(int tagid, int newsid)
         {
