@@ -29,7 +29,7 @@ namespace HocLapTrinhWeb.BLL
         /// </summary>
         /// <param name="newsTypeID"></param>
         /// <returns></returns>
-        public vnn_dsHocLapTrinhWeb.vnn_vw_NewsTypeRefSiteDataTable GetNewsTypeRefSiteForGridView(int startRowIndex, int maximumRows, int newsTypeID)
+        public vnn_dsHocLapTrinhWeb.vnn_vw_NewsTypeRefSiteDataTable GetNewsTypeRefSiteForGridView(int startRowIndex, int maximumRows, int newsTypeID, int IsActive)
         {
             bool isOpen = false;
             try
@@ -37,12 +37,19 @@ namespace HocLapTrinhWeb.BLL
                 if (OpenConnection(ref isOpen))
                 {
                     var dt = new vnn_dsHocLapTrinhWeb.vnn_vw_NewsTypeRefSiteDataTable();
-                    _ClassBaseDAL = new ClassBaseDAL(IConnect, dt) {StartRow = startRowIndex, MaxRows = maximumRows};
+                    _ClassBaseDAL = new ClassBaseDAL(IConnect, dt) { StartRow = startRowIndex, MaxRows = maximumRows };
+                    
                     if (newsTypeID != -1)
                     {
                         _ClassBaseDAL.WhereClause = dt.NewsTypeIDColumn.ColumnName + "=@NewsTypeID";
                         _ClassBaseDAL.AddParams("@NewsTypeID", SqlDbType.Int, newsTypeID, ParameterDirection.Input);
                     }
+                    if (IsActive != -1)
+                    {
+                        _ClassBaseDAL.WhereClause = (_ClassBaseDAL.WhereClause == null ? "" : " and ") + dt.IsAutoRunColumn.ColumnName + "=@IsActive";
+                        _ClassBaseDAL.AddParams("@IsActive", SqlDbType.Int, IsActive, ParameterDirection.Input);
+                    }
+
                     _ClassBaseDAL.OrderByClause = dt.NewsTypeIDColumn.ColumnName;
                     if (_ClassBaseDAL.FillData(dt))
                         return dt;
@@ -72,7 +79,7 @@ namespace HocLapTrinhWeb.BLL
                 if (OpenConnection(ref isOpen))
                 {
                     var dt = new dsHocLapTrinhWeb.tbl_ReferenceSiteDataTable();
-                    _ClassBaseDAL = new ClassBaseDAL(IConnect, dt) {OrderByClause = dt.NewsTypeIDColumn.ColumnName};
+                    _ClassBaseDAL = new ClassBaseDAL(IConnect, dt) { OrderByClause = dt.NewsTypeIDColumn.ColumnName };
                     if (newsTypeID != -1)
                     {
                         _ClassBaseDAL.WhereClause = dt.NewsTypeIDColumn.ColumnName + "=@NewsTypeID";
@@ -105,8 +112,7 @@ namespace HocLapTrinhWeb.BLL
                 if (OpenConnection(ref isOpen))
                 {
                     var dt = new vnn_dsHocLapTrinhWeb.vnn_vw_NewsTypeRefSiteDataTable();
-                    _ClassBaseDAL = new ClassBaseDAL(IConnect, dt)
-                        {SelectClause = " DISTINCT  " + dt.RefSiteColumn.ColumnName};
+                    _ClassBaseDAL = new ClassBaseDAL(IConnect, dt) { SelectClause = " DISTINCT  " + dt.RefSiteColumn.ColumnName };
                     if (_ClassBaseDAL.FillData(dt))
                         return dt;
                     if (dt.Rows.Count > 0)
@@ -133,7 +139,7 @@ namespace HocLapTrinhWeb.BLL
         /// </summary>
         /// <param name="newsTypeID"></param>
         /// <returns></returns>
-        public int GetNewsTypeRefSiteRowCount(int newsTypeID)
+        public int GetNewsTypeRefSiteRowCount(int newsTypeID, int IsActive)
         {
             var isOpen = false;
             try
@@ -146,6 +152,11 @@ namespace HocLapTrinhWeb.BLL
                     {
                         _ClassBaseDAL.WhereClause = dt.NewsTypeIDColumn.ColumnName + "=@NewsTypeID";
                         _ClassBaseDAL.AddParams("@NewsTypeID", SqlDbType.Int, newsTypeID, ParameterDirection.Input);
+                    }
+                    if (IsActive != -1)
+                    {
+                        _ClassBaseDAL.WhereClause = (_ClassBaseDAL.WhereClause == null ? "" : " and ") + dt.IsAutoRunColumn.ColumnName + "=@IsActive";
+                        _ClassBaseDAL.AddParams("@IsActive", SqlDbType.Int, IsActive, ParameterDirection.Input);
                     }
                     int rowcount = _ClassBaseDAL.GetRowCount();
                     if (rowcount == -1)
