@@ -27,6 +27,10 @@ public partial class Admin_usercontrols_ucDefault : DH.UI.UCBase
             var vNewsType = new vnn_NewsTypeBLL(getCurrentConnection());
             n = vNewsType.GetAllNewsTypeRowCount();
             lbNewsType.Text += " ( " + n + " ) ";
+
+            var vTag = new v_TagBLL(getCurrentConnection());
+            n = vTag.GetAllTagRowCount();
+            lbTag.Text += " ( " + n + " ) ";
         }
     }
 }
