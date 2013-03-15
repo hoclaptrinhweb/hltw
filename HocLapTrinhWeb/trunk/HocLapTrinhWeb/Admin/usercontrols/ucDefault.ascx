@@ -18,6 +18,12 @@
                 <asp:Label ID="Label5" runat="server" Text="Quản lý loại tin"></asp:Label></asp:HyperLink>
         </div>
         <div>
+            <asp:HyperLink ID="hdTag" class="dashboard_button button1" NavigateUrl="~/admin/Tag.aspx"
+                runat="server">
+                <asp:Label ID="lbTag" class="dashboard_button_heading" runat="server" Text="Thẻ tag"></asp:Label>
+                <asp:Label ID="Label6" runat="server" Text="Quản lý loại tin"></asp:Label></asp:HyperLink>
+        </div>
+        <div>
             <asp:HyperLink ID="hdCommentNews" class="dashboard_button button1" NavigateUrl="~/Admin/CommentNews.aspx"
                 runat="server">
                 <asp:Label ID="lbCommentNews" class="dashboard_button_heading" runat="server" Text="Bình luận"></asp:Label>
