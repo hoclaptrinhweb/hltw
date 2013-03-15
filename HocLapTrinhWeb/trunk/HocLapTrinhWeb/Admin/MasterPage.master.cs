@@ -52,6 +52,7 @@ public partial class administrator_MasterPage : System.Web.UI.MasterPage
             Session["UserName"] = row.UserName;
             Session["FullName"] = row.FullName;
             Session["UserID"] = row.UserID.ToString();
+            Session["IsAdmin"] = row.IsAdmin;
             return true;
         }
         catch (Exception)
