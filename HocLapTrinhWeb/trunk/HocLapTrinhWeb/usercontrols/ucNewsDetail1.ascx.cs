@@ -104,7 +104,18 @@ public partial class usercontrols_ucNewsDetail1 : DH.UI.UCBase
             lbRefAddress.Text = "";
         }
         lbCreatedDate.Text = rNews.UpdatedDate.ToString(CultureInfo.InvariantCulture);
-        lbKeyword.Text = rNews.IsKeywordNull() ? "" : rNews.Keyword;
+
+        //Xử lý keyword
+        if (!rNews.IsKeywordNull() && rNews.Keyword != "")
+        {
+            var arrKeyword = rNews.Keyword.Split(',');
+            for (var i = 0; i < arrKeyword.Length; i++)
+            {
+                lbKeyword.Text += "<a href='" + CurrentPage.UrlRoot + "/tag/" + arrKeyword[i].Replace(" ", "-") + ".aspx'>" + arrKeyword[i] + "</a>";
+            }
+        }
+        //
+
         var dt = new dsHocLapTrinhWeb.tbl_NewsDataTable();
         var rowUpdate = dt.Newtbl_NewsRow();
         rowUpdate.NewsID = NewsID;

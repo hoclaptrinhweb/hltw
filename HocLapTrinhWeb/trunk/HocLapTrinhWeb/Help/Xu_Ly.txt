@@ -11,8 +11,5 @@ icon
 
 
 
-Chèn iframe tăng lượng truy cập
-=> auto quảng cáo
-=> ket hop voi send ajax de cap nhat
-=> áp dụng hình thức thay đổi ip để tăng lượt view trong vật giá
+==> Đang xử lý phần tag trong tin tức
 
