@@ -250,7 +250,7 @@ namespace HocLapTrinhWeb.BLL
         /// <returns></returns>
         public bool Delete(int id)
         {
-            bool isOpen = false;
+            var isOpen = false;
             try
             {
                 if (OpenConnection(ref isOpen))
