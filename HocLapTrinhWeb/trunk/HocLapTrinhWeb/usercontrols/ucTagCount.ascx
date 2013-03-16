@@ -2,7 +2,7 @@
 <div class="keyword">
     <asp:Repeater ID="rpTagCount" runat="server">
         <ItemTemplate>
-            <a href="">
+            <a href="<%# CurrentPage.UrlRoot + "/tag/" + Eval("TagName").ToString().Replace(" ","-") + ".aspx" %>">
                 <%# Eval("TagName") %></a>
         </ItemTemplate>
     </asp:Repeater>
