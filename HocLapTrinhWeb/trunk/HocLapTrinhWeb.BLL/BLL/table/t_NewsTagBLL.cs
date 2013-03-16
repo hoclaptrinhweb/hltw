@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections;
 using System.Data;
 using DH.Data.SqlServer;
@@ -72,13 +73,13 @@ namespace HocLapTrinhWeb.BLL
                     _classBaseDAL.ClearParams();
                     _classBaseDAL.AddParams("@newsid", SqlDbType.Int, newsid, ParameterDirection.Input);
 
-                    string strWhereClause = dt.TagIDColumn.ColumnName + " not in (";
-                    for (int i = 1; i < notTagid.Count + 1; i++)
+                    var strWhereClause = " and " + dt.TagIDColumn.ColumnName + " not in (";
+                    for (var i = 1; i < notTagid.Count + 1; i++)
                     {
                         strWhereClause += "@" + i + ",";
                         _classBaseDAL.AddParams(i.ToString(), SqlDbType.Int, Convert.ToInt16(notTagid[i - 1].ToString()), ParameterDirection.Input);
                     }
-                    _classBaseDAL.WhereClause = strWhereClause.Substring(0, strWhereClause.Length - 1) + ")";
+                    _classBaseDAL.WhereClause += strWhereClause.Substring(0, strWhereClause.Length - 1) + ")";
 
                     if (_classBaseDAL.FillData(dt))
                         return dt;
