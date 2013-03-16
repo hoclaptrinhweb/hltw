@@ -87,6 +87,7 @@
     <Compile Include="BLL\table\NewsBLL.cs" />
     <Compile Include="BLL\table\ReferenceSiteBLL.cs" />
     <Compile Include="BLL\table\t_TagBLL.cs" />
+    <Compile Include="BLL\table\t_TagCountBLL.cs" />
     <Compile Include="BLL\table\UpPostBLL.cs" />
     <Compile Include="BLL\table\UpNewsBLL.cs" />
     <Compile Include="BLL\table\UpNewsTypeBLL.cs" />

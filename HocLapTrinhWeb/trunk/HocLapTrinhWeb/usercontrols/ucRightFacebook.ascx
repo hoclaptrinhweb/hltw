@@ -1,5 +1,15 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="ucRightFacebook.ascx.cs"
     Inherits="usercontrols_ucRightFacebook" %>
+<%@ Register Src="ucTagCount.ascx" TagName="ucTagCount" TagPrefix="uc1" %>
+<div class="box_outer">
+    <div class="widget">
+        <h3 class="widget_title">
+            Từ khoá nổi bật</h3>
+        <div class="wid_border">
+        </div>
+        <uc1:ucTagCount ID="ucTagCount1" runat="server" />
+    </div>
+</div>
 <div class="box_outer">
     <div class="widget">
         <h3 class="widget_title">
@@ -54,5 +64,8 @@
     <script type="text/javascript" src="http://widget.adnet.vn/js/js.php?widget_id=20114"></script>
 </div>
 <div class="box_outer">
-    <embed onmousedown="AdsvnRenderClick(912)" src="<%= CurrentPage.UrlRoot %>/images/ads/vietbando336x140.swf" flashvars="stringURL=http%3A%2F%2Fwww.vietbando.com" width="300px" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" allowscriptaccess="always" wmode="transparent" quality="high">
+    <embed onmousedown="AdsvnRenderClick(912)" src="<%= CurrentPage.UrlRoot %>/images/ads/vietbando336x140.swf"
+        flashvars="stringURL=http%3A%2F%2Fwww.vietbando.com" width="300px" pluginspage="http://www.macromedia.com/go/getflashplayer"
+        type="application/x-shockwave-flash" allowscriptaccess="always" wmode="transparent"
+        quality="high">
 </div>
