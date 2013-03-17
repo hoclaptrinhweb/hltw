@@ -40,18 +40,18 @@
         </div>
         <div class="like_box_footer">
             <div class="tagcloud tabbed_tag">
-                <a href="http://hosgroup.com.vn/phan-mem/phan-mem-quan-ly-ban-hang" title="Phần mềm quản lý bán hàng phổ biến nhất">
+                <a target="_blank" href="http://hosgroup.com.vn/phan-mem/phan-mem-quan-ly-ban-hang" title="Phần mềm quản lý bán hàng phổ biến nhất">
                     phan mem quan ly ban hang</a>
                 <br />
-                <a href="http://www.phanmembanhang.com" title="Phần mềm bán hàng tối ưu nhất">phan mem
+                <a target="_blank" href="http://www.phanmembanhang.com" title="Phần mềm bán hàng tối ưu nhất">phan mem
                     ban hang</a><br />
-                <a href="http://hosgroup.com.vn/phan-mem/phan-mem-quan-ly-nhan-su" title="Phần mềm quản lý nhân sự chuyên nghiệp LotusPro">
+                <a target="_blank" href="http://hosgroup.com.vn/phan-mem/phan-mem-quan-ly-nhan-su" title="Phần mềm quản lý nhân sự chuyên nghiệp LotusPro">
                     phan mem quan ly nhan su</a>
                 <br />
-                Lap trinh <a href="http://maybanhang.net/phan-mem-quan-ly-ban-hang/">phan mem ban hang</a>
+                Lap trinh <a target="_blank" href="http://maybanhang.net/phan-mem-quan-ly-ban-hang/">phan mem ban hang</a>
                 tiet kiem va hieu qua
                 <br />
-                Tin tức mới nhất về <a href="http://www.tinmoi.vn/samsung-galaxy-s4-e218.html">Samsung
+                Tin tức mới nhất về <a target="_blank" href="http://www.tinmoi.vn/samsung-galaxy-s4-e218.html">Samsung
                     Galaxy S4</a>
             </div>
         </div>
