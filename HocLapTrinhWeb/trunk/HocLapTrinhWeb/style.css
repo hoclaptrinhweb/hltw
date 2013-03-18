@@ -3911,3 +3911,88 @@ color: White  !important;
 	color: #FFF;
 	text-shadow: -1px -1px 0 rgba(153,102,51,0.3);
 }
+
+#respond .box_inner
+{
+	border: 1px solid rgba(0,0,0,0.05);
+	border-bottom-color: rgba(0,0,0,0.2);
+	padding-bottom: 4px;
+	background: #D2D2D2 url(assets/images/bg-2.png) 0 100% repeat-x;
+	background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	-webkit-background-clip: padding-box;
+	-o-background-clip: padding-box;
+	-ms-background-clip: padding-box;
+	-khtml-background-clip: padding-box;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1); /*gainsboro*/
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+	-o-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+	-ms-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+	-khtml-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	clear: both;
+	overflow: hidden;
+	display: block;
+	margin-bottom: 25px;
+}
+#respond .news_box
+{
+	padding: 15px;
+	background: white;
+	box-shadow: inset 0 0 0 1px white;
+	-moz-box-shadow: inset 0 0 0 1px white;
+	-webkit-box-shadow: inset 0 0 0 1px white;
+	-o-box-shadow: inset 0 0 0 1px white;
+	-ms-box-shadow: inset 0 0 0 1px white;
+	-khtml-box-shadow: inset 0 0 0 1px white;
+	display: block;
+	overflow: hidden;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+}
+#respond .news_box_title
+{
+	margin: -15px !important;
+	margin-bottom: 15px !important;
+	font: 17px 'GnuolaneFree', Arial;
+	text-transform: capitalize;
+	line-height: 20px;
+	padding: 13px 15px;
+	display: block;
+	background: #333 url(assets/images/bg-title.png) repeat-x 0% bottom;
+	color: #FFF;
+	text-shadow: 0 1px 1px rgba(0,0,0,.75);
+	border: #222 1px solid;
+	overflow: hidden;
+}
+#respond .news_box_title2
+{
+	margin: -15px !important;
+	margin-bottom: 15px !important;
+	font: 19px 'GnuolaneFree', arial, Georgia, serif;
+	text-transform: capitalize;
+	line-height: 20px;
+	padding: 13px 15px;
+	padding-bottom: 13px;
+	display: block;
+	background: #F5F5F5;
+	color: #444;
+	text-shadow: #FFF 0 1px 0px;
+	box-shadow: inset 0 0 0 1px white;
+	-moz-box-shadow: inset 0 0 0 1px white;
+	-webkit-box-shadow: inset 0 0 0 1px white;
+	-o-box-shadow: inset 0 0 0 1px white;
+	-ms-box-shadow: inset 0 0 0 1px white;
+	-khtml-box-shadow: inset 0 0 0 1px white;
+	border-bottom: 1px #EEE solid;
+}

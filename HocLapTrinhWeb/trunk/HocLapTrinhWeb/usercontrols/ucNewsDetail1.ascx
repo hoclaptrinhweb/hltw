@@ -39,10 +39,10 @@
                 <asp:Literal ID="lbTitle" runat="server"></asp:Literal></a>
         </h1>
         <div class="article_meta">
-            <span class="meta_author">Nguồn: 
-                <asp:HyperLink ID="lbRefAddress" runat="server" Target="_blank">[lbRefAddress]</asp:HyperLink></span> <span itemprop="dateModified"
-                    class="meta_date">Posted date: <strong>
-                        <asp:Literal ID="lbCreatedDate" runat="server"></asp:Literal></strong></span>
+            <span class="meta_author">Nguồn:
+                <asp:HyperLink ID="lbRefAddress" runat="server" Target="_blank">[lbRefAddress]</asp:HyperLink></span>
+            <span itemprop="dateModified" class="meta_date">Posted date: <strong>
+                <asp:Literal ID="lbCreatedDate" runat="server"></asp:Literal></strong></span>
             <span class="meta_sap">|</span> <span itemprop="review" class="meta_comments">Xem :
                 <a>
                     <asp:Literal ID="lbView" runat="server"></asp:Literal></a></span>
@@ -72,19 +72,19 @@
         <div class="dots">
         </div>
         <div class="articles_nav">
-            <span class="prev_article"><a id="aPrev" runat="server" rel="prev"><span>‹</span> Tin cũ hơn</a></span> 
-            <span class="next_article"><a id="aNext" runat="server" rel="next">Tin mới hơn <span>›</span></a></span>
+            <span class="prev_article"><a id="aPrev" runat="server" rel="prev"><span>‹</span> Tin
+                cũ hơn</a></span> <span class="next_article"><a id="aNext" runat="server" rel="next">
+                    Tin mới hơn <span>›</span></a></span>
         </div>
         <!--Ad360.vn-ad-2874-640-90-start -->
-<script type="text/javascript">
-    var _ad360_id = 2874;
-    var _ad360_w = 640;
-    var _ad360_h = 90;
-    var _ad360_pos = 0;
-</script>
-<script language="javascript" type="text/javascript" src="http://provider.ad360.vn/showads.min.js"></script>
-<!-- Ad360.vn-ad-2874-640-90-ends -->
-
+        <script type="text/javascript">
+            var _ad360_id = 2874;
+            var _ad360_w = 640;
+            var _ad360_h = 90;
+            var _ad360_pos = 0;
+        </script>
+        <script language="javascript" type="text/javascript" src="http://provider.ad360.vn/showads.min.js"></script>
+        <!-- Ad360.vn-ad-2874-640-90-ends -->
         <asp:Panel ID="pGuest" runat="server">
             <div class="single_share">
                 <div id="_commentNotiBox">
@@ -96,76 +96,6 @@
                         </a>
                     </p>
                 </div>
-            </div>
-        </asp:Panel>
-        <asp:Panel ID="pUser" runat="server">
-            <div class="single_share">
-                <div class="mingid-comment">
-                    <h2 class="mingid-head rs">
-                        <span class="total_comment"></span>Bình luận</h2>
-                    <div class="clear">
-                    </div>
-                    <div class="mingid-inputbox">
-                        <div class="mingid-rowForm">
-                            <table width="100%">
-                                <tr>
-                                    <td style="vertical-align: top;">
-                                        Nội dung
-                                    </td>
-                                    <td>
-                                        <textarea cols="5" rows="4" class="mingid-inputTxt" id="cmContent"></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Nhập mã
-                                    </td>
-                                    <td>
-                                        <input type="text" maxlength="50" value="" class="mingid-inputTxt" style="width: 50%"
-                                            id="cmCaptcha" />
-                                        <img class="imgCaptcha" src='<%= CurrentPage.UrlRoot + "/handler/captcha.ashx" %>'
-                                            alt="captcha hoclaptrinhweb.com" />
-                                        <a rel="nofollow" onclick="NewCaptcha();">Mã mới</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                    </td>
-                                    <td style="text-align: right;">
-                                        <span id="Span3"></span><span class="mingid-btnBlue" id="Span4" onclick="Send()"><span>
-                                            Bình luận</span></span>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <script type="text/javascript">
-                    function Send() {
-                        $("#result").text('');
-                        $.ajax({
-                            type: "POST",
-                            url: "<%= CurrentPage.UrlRoot %>/webservice/commentnews.asmx/PostDataUser",
-                            data: "{'content':'" + $('#cmContent').val() + "','newsid' : " + $("#<%= hdNewsID.ClientID %>").val() + ",'keyname' : '" + $('#cmCaptcha').val() + "'}",
-                            contentType: "application/json; charset=utf-8",
-                            dataType: "json",
-                            success: function (msg) {
-                                if (msg.d == "Gửi bình luận thành công !") {
-                                    window.location.reload();
-                                    NewCaptcha();
-                                }
-                                else {
-                                    $("#result").text(msg.d);
-                                }
-                            },
-                            error: function () { $("#result").text('Có lỗi xảy ra') }
-                        });
-                        return false;
-                    };
-                    function NewCaptcha() {
-                        $('.imgCaptcha').attr('src', '<%= CurrentPage.UrlRoot %>/handler/captcha.ashx?guid=' + Math.random())
-                    };
-                </script>
             </div>
         </asp:Panel>
         <div class="_commentList">
@@ -191,7 +121,7 @@
         </div>
         <div id="fb-root">
         </div>
-        <script type="text/javascript">            
+        <script type="text/javascript">
             (function (d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0];
                 if (d.getElementById(id)) return;
@@ -203,6 +133,62 @@
         </div>
     </div>
 </div>
+<asp:Panel ID="pUser" runat="server">
+    <div id="respond">
+        <div class="box_inner">
+            <div class="news_box">
+                <h2 class="news_box_title2">
+                    Gửi bình luận
+                </h2>
+                <div class="add_comment">
+                    <p>
+                        <input type="text" maxlength="50" value="" class="mingid-inputTxt" style="width: 50%"
+                            id="cmCaptcha" />
+                        <label for="url">
+                            <img class="imgCaptcha" src='<%= CurrentPage.UrlRoot + "/handler/captcha.ashx" %>'
+                                alt="captcha hoclaptrinhweb.com" />
+                            <a rel="nofollow" onclick="NewCaptcha();">Mã mới</a>
+                        </label>
+                    </p>
+                    <p>
+                        <textarea cols="5" rows="4" class="mingid-inputTxt" id="cmContent"></textarea>
+                    </p>
+                    <p class="form-submit">
+                        <button class="send_comment" type="button" onclick="return Send()" id="submit">
+                            Gửi
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function Send() {
+                $("#result").text('');
+                $.ajax({
+                    type: "POST",
+                    url: "<%= CurrentPage.UrlRoot %>/webservice/commentnews.asmx/PostDataUser",
+                    data: "{'content':'" + $('#cmContent').val() + "','newsid' : " + $("#<%= hdNewsID.ClientID %>").val() + ",'keyname' : '" + $('#cmCaptcha').val() + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (msg) {
+                        if (msg.d == "Gửi bình luận thành công !") {
+                            window.location.reload();
+                            NewCaptcha();
+                        }
+                        else {
+                            $("#result").text(msg.d);
+                        }
+                    },
+                    error: function () { $("#result").text('Có lỗi xảy ra') }
+                });
+                return false;
+            };
+            function NewCaptcha() {
+                $('.imgCaptcha').attr('src', '<%= CurrentPage.UrlRoot %>/handler/captcha.ashx?guid=' + Math.random())
+            };
+        </script>
+    </div>
+</asp:Panel>
 <div style="float: left; width: 49%;">
     <h4>
         Tin mới hơn</h4>
