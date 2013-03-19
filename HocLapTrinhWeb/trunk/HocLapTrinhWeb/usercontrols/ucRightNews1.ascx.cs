@@ -13,11 +13,11 @@ public partial class usercontrols_ucRightNews1 : DH.UI.UCBase
     public void LoadData()
     {
         var vnnNewsBll = new NewsBLL(CurrentPage.getCurrentConnection());
-        var dt = vnnNewsBll.GetNewsAll("NewsTypeName,NewsTypeID,Thumbnail,Title,NewsID", 10, NewsTypeID, 1, "", "", "viewed", "desc");
+        var dt = vnnNewsBll.GetNewsAll("NewsTypeName,NewsTypeID,Thumbnail,Title,NewsID", 5, NewsTypeID, 1, "", "", "viewed", "desc");
         rpDataNewsMore.DataSource = dt;
         rpDataNewsMore.DataBind();
 
-        dt = vnnNewsBll.GetNewsAll("NewsTypeName,NewsTypeID,Thumbnail,Title,NewsID", 10, NewsTypeID, 1, "", "", "NEWID()", "");
+        dt = vnnNewsBll.GetNewsAll("NewsTypeName,NewsTypeID,Thumbnail,Title,NewsID", 5, NewsTypeID, 1, "", "", "NEWID()", "");
         rpDataNewsRandom.DataSource = dt;
         rpDataNewsRandom.DataBind();
     }
