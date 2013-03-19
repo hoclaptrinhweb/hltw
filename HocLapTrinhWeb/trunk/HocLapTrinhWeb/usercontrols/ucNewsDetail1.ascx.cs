@@ -139,6 +139,7 @@ public partial class usercontrols_ucNewsDetail1 : DH.UI.UCBase
         rpDataOld.DataBind();
         if (dt != null && dt.Count > 0)
         {
+            aPrev.Visible = true;
             aPrev.HRef = CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(dt[0].NewsTypeName) + "/" + XuLyChuoi.ConvertToUnSign(dt[0].Title) + "-hltw" + dt[0].NewsID + ".aspx";
             aPrev.Title = dt[0].Title.Replace("\"", "");
         }
@@ -147,6 +148,7 @@ public partial class usercontrols_ucNewsDetail1 : DH.UI.UCBase
         rpDataNew.DataSource = dt.Select("", "createddate desc");
         rpDataNew.DataBind();
         if (dt.Count == 0) return;
+        aNext.Visible = true;
         aNext.HRef = CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(dt[0].NewsTypeName) + "/" + XuLyChuoi.ConvertToUnSign(dt[0].Title) + "-hltw" + dt[0].NewsID + ".aspx";
         aNext.Title = dt[0].Title.Replace("\"", "");
     }
