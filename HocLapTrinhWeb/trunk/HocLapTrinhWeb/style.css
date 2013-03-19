@@ -2240,7 +2240,7 @@ cursor:pointer;
 }
 
 .sidebar .widget ul.blog_posts_widget li img {
-       padding:4px;
+       padding:0px;
        border:1px solid #eee;
        margin-bottom:0;
        margin-right:5px;
@@ -4020,10 +4020,11 @@ color:Black;
 .entry-related ul {
 overflow: hidden;
 padding: 5px 10px 10px;
+background:white;
 }
 .entry-related ul li {
 border-bottom: 1px solid #ECEDE8;
-padding: 8px 0;
+padding: 3px 0;
 color: #999;
 position: relative;
 top: -1px;
