@@ -72,8 +72,8 @@
         <div class="dots">
         </div>
         <div class="articles_nav">
-            <span class="prev_article"><a id="aPrev" runat="server" rel="prev"><span>‹</span> Tin
-                cũ hơn</a></span> <span class="next_article"><a id="aNext" runat="server" rel="next">
+            <span class="prev_article"><a id="aPrev" visible="false" runat="server" rel="prev"><span>‹</span> Tin cũ hơn</a></span> 
+            <span class="next_article"><a id="aNext" visible="false" runat="server" rel="next">
                     Tin mới hơn <span>›</span></a></span>
         </div>
         <!--Ad360.vn-ad-2874-640-90-start -->
@@ -98,6 +98,10 @@
                 </div>
             </div>
         </asp:Panel>
+    </div>
+</div>
+<div class="box_inner" style="margin-top:10px;margin-bottom:10px;">
+    <div class="news_box">
         <div class="_commentList">
             <asp:HiddenField ID="hdNewsID" runat="server" />
             <asp:Repeater ID="rpComment" runat="server">
@@ -147,7 +151,7 @@
                         <label for="url">
                             <img class="imgCaptcha" src='<%= CurrentPage.UrlRoot + "/handler/captcha.ashx" %>'
                                 alt="captcha hoclaptrinhweb.com" />
-                            <a rel="nofollow" onclick="NewCaptcha();">Mã mới</a>
+                            <a rel="nofollow" style="cursor: pointer;margin-left: 10px;color: blue;font-weight: bold;" onclick="NewCaptcha();">Mã mới</a>
                         </label>
                     </p>
                     <p>
@@ -157,6 +161,8 @@
                         <button class="send_comment" type="button" onclick="return Send()" id="submit">
                             Gửi
                         </button>
+                        <label id="result">
+                        </label>
                     </p>
                 </div>
             </div>
@@ -189,8 +195,8 @@
         </script>
     </div>
 </asp:Panel>
-<div style="float: left; width: 49%;">
-    <h4>
+<div class="entry-related" style="float: left; width: 49%;">
+    <h4 class="section-title">
         Tin mới hơn</h4>
     <ul class="newmore">
         <asp:Repeater ID="rpDataNew" runat="server">
@@ -199,16 +205,15 @@
                     rel='<%# CurrentPage.UrlRoot + "/Handler/tooltip.ashx?id=" + Eval("NewsID") %>'
                     href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("NewsID") +  ".aspx" %>'>
                     <span itemprop="name">
-                        <%# Eval("Title") %></span> </a><a itemprop="location" class="none">
-                            <%# Eval("NewsTypeName") %></a>
+                        <%# Eval("Title") %></span> </a>
                     <meta itemprop="startDate" content='<%# ((DateTime)Eval("CreatedDate")).ToString("yyyy-MM-dd") %>'>
                 </li>
             </ItemTemplate>
         </asp:Repeater>
     </ul>
 </div>
-<div style="float: right; width: 49%;">
-    <h4>
+<div class="entry-related" style="float: right; width: 49%;">
+    <h4 class="section-title">
         Tin cũ hơn</h4>
     <ul class="newmore">
         <asp:Repeater ID="rpDataOld" runat="server">
@@ -217,8 +222,7 @@
                     rel='<%# CurrentPage.UrlRoot + "/Handler/tooltip.ashx?id=" + Eval("NewsID") %>'
                     href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("NewsID") +  ".aspx" %>'>
                     <span itemprop="name">
-                        <%# Eval("Title") %></span> </a><a itemprop="location" class="none">
-                            <%# Eval("NewsTypeName") %></a>
+                        <%# Eval("Title") %></span> </a>
                     <meta itemprop="startDate" content='<%# ((DateTime)Eval("CreatedDate")).ToString("yyyy-MM-dd") %>'>
                 </li>
             </ItemTemplate>

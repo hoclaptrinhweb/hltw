@@ -1885,7 +1885,7 @@ box-shadow: inset 1px 1px 2px 0px #e9e9e9;
 	margin-bottom:10px;
 	padding:10px;
 	width:96%;
-	height:130px;
+	height:50px;
 	font-family:arial;
 }
 
@@ -3995,4 +3995,46 @@ color: White  !important;
 	-ms-box-shadow: inset 0 0 0 1px white;
 	-khtml-box-shadow: inset 0 0 0 1px white;
 	border-bottom: 1px #EEE solid;
+}
+
+.entry-related {
+float: right;
+width: 309px;
+border: 1px solid #ECEDE8;
+border-top: none;
+}
+.entry-related h4 {
+background: #F5F5F5;
+}
+.section-title {
+background: #fbfbfb;
+padding: 10px 15px;
+border-top: 1px solid #ECEDE8;
+border-bottom: 1px solid #ECEDE8;
+font-size: 15px;
+font-weight:bold;
+line-height: 1;
+margin:0px;
+color:Black;
+}
+.entry-related ul {
+overflow: hidden;
+padding: 5px 10px 10px;
+}
+.entry-related ul li {
+border-bottom: 1px solid #ECEDE8;
+padding: 8px 0;
+color: #999;
+position: relative;
+top: -1px;
+}
+.entry-related li a {
+display: block;
+background: url(http://demo.theme-junkie.com/daily/wp-content/themes/daily/images/ico-bullet.gif) no-repeat 0 5px;
+padding-left: 12px;
+color:#326693;
+}
+.entry-related li a:hover
+{
+    text-decoration:underline;
 }
