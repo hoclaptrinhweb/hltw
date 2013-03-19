@@ -14,7 +14,7 @@
                         <asp:Repeater ID="rpDataNewsRandom" runat="server">
                             <ItemTemplate>
                                 <li itemscope itemtype="http://schema.org/Article" class="blog_post"><a href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/hltw"  + Eval("NewsTypeID") +  ".aspx" %>'>
-                                    <img itemprop="image" src="<%# CurrentPage.UrlRoot + "/images/w70-" + Eval("Thumbnail").ToString().ToLower().Replace(Global.ImagesNews.ToLower(), "") + ".ashx" %>"
+                                    <img itemprop="image" src="<%# CurrentPage.UrlRoot + "/images/w50-" + Eval("Thumbnail").ToString().ToLower().Replace(Global.ImagesNews.ToLower(), "") + ".ashx" %>"
                                         alt='<%# Eval("Title") %>' class="alignleft"></a>
                                     <p>
                                         <a itemprop="url" itemprop="name" href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("NewsID") +  ".aspx" %>'>
@@ -30,7 +30,7 @@
                         <asp:Repeater ID="rpDataNewsMore" runat="server">
                             <ItemTemplate>
                                 <li itemscope itemtype="http://schema.org/Article" class="blog_post"><a href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/hltw"  + Eval("NewsTypeID") +  ".aspx" %>'>
-                                    <img itemprop="image" src="<%# CurrentPage.UrlRoot + "/images/w70-" + Eval("Thumbnail").ToString().ToLower().Replace(Global.ImagesNews.ToLower(), "") + ".ashx" %>"
+                                    <img itemprop="image" src="<%# CurrentPage.UrlRoot + "/images/w50-" + Eval("Thumbnail").ToString().ToLower().Replace(Global.ImagesNews.ToLower(), "") + ".ashx" %>"
                                         alt='<%# Eval("Title") %>' class="alignleft"></a>
                                     <p>
                                         <a itemprop="url" itemprop="name" href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("NewsID") +  ".aspx" %>'>
