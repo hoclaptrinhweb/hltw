@@ -1062,8 +1062,9 @@ a.nb_recent_more:hover {
     margin:-11px;
     padding:0 10px;
     font-size:17px;
-    color:#404040;
+    color:black;
     margin-bottom:2px;
+    font-weight: bold;
     font-family:play;
 }
 .sidebar .widget .wid_border {
@@ -2324,6 +2325,8 @@ cursor:pointer;
        border-bottom:1px solid #d3d3d3;
        font-family:play;
        font-size:14px;
+    font-weight: bold;
+    color: black;
     cursor: pointer;
 }
 .tabbed_widget ul.tabbed_nav li a:hover {
@@ -4039,3 +4042,10 @@ color:#326693;
 {
     text-decoration:underline;
 }
+.tag1{font-size: 0.8em !important}
+.tag2{font-size: 0.9em !important}
+.tag3{font-size: 1em !important}
+.tag4{font-size: 1.2em !important}
+.tag5{font-size: 1.4em !important}
+.tag6{font-size: 1.7em !important}
+.tag7{font-size: 2.0em !important}
