@@ -105,6 +105,8 @@ public partial class administrator_usercontrols_NewsDetail : DH.UI.UCBase
                     var arrKey = txtkeyword.Text.Split(',');
                     for (var i = 0; i < arrKey.Length; i++)
                     {
+                        if (arrKey[i] == "")
+                            continue;
                         var rowNewsTag = dtNewsTag.Newtbl_NewsTagRow();
                         // Lưu vào tbl_Tag
                         var vTagBll = new v_TagBLL(getCurrentConnection());
@@ -162,6 +164,8 @@ public partial class administrator_usercontrols_NewsDetail : DH.UI.UCBase
                 var arrDels = new ArrayList();
                 for (var i = 0; i < arrKey.Length; i++)
                 {
+                    if(arrKey[i] == "")
+                        continue;
                     var dtNewsTag = new dsHocLapTrinhWeb.tbl_NewsTagDataTable();
                     var rowNewsTag = dtNewsTag.Newtbl_NewsTagRow();
                     // Lưu vào tbl_Tag
