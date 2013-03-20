@@ -10,7 +10,8 @@ public partial class usercontrols_ucTagCount : DH.UI.UCBase
         var dt = vTagCountBll.GetAll(50);
         if (dt == null || dt.Count <= 0) return;
         hdNewsCount.Value = dt[0].TagCount.ToString();
-        rpTagCount.DataSource = dt;
+        dt.DefaultView.Sort = "tagname asc";
+        rpTagCount.DataSource = dt.DefaultView;
         rpTagCount.DataBind();
     }
 
