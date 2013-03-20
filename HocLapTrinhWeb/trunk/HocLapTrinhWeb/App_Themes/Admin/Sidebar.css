@@ -75,6 +75,15 @@
 #main_menu li a.icn_news {
 	background: url('img/icons/small/news.png') no-repeat left;
 }
+#main_menu li a.icn_user {
+	background: url('img/icons/small/user.png') no-repeat left;
+}
+#main_menu li a.icn_newstype {
+	background: url('img/icons/small/newstype.png') no-repeat left;
+}
+#main_menu li a.icn_tags {
+	background: url('img/icons/small/tags.png') no-repeat left;
+}
 #main_menu li a.icn_updatenews {
 	background: url('img/icons/small/updatenews.png') no-repeat left;
 }
@@ -84,8 +93,17 @@
 #main_menu li a.icn_contact {
 	background: url('img/icons/small/contact.png') no-repeat left;
 }
+#main_menu li a.icn_comment {
+	background: url('img/icons/small/comment.png') no-repeat left;
+}
 #main_menu li a.icn_advertising {
 	background: url('img/icons/small/advertising.png') no-repeat left;
+}
+#main_menu li a.icn_config {
+	background: url('img/icons/small/config.png') no-repeat left;
+}
+#main_menu li a.icn_alexa {
+	background: url('img/icons/small/alexa.png') no-repeat left;
 }
 #main_menu li a.icn_FileManager {
 	background: url('img/icons/small/filemanager.png') no-repeat left;
