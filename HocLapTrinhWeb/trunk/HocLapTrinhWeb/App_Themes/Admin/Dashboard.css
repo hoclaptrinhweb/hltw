@@ -39,10 +39,14 @@
 	color:#222;
 }
 
-.button1 .dashboard_button_heading{ background:transparent url(img/icons/button/news.png) no-repeat 0px top;	}
-.button2 .dashboard_button_heading{ background:transparent url(img/icons/button/updatenews.png) no-repeat 0px top;	}
-.button3 .dashboard_button_heading{ background:transparent url(img/icons/button/document.png) no-repeat 0px top;	}
-.button4 .dashboard_button_heading{ background:transparent url(img/icons/button/contact.png) no-repeat 0px top;	}
-.button5 .dashboard_button_heading{ background:transparent url(img/icons/button/advertising.png) no-repeat 0px top;	}
-.button6 .dashboard_button_heading{ background:transparent url(img/icons/button/filemanager.png) no-repeat 0px top;	}
+.news .dashboard_button_heading{ background:transparent url(img/icons/32x32/news.png) no-repeat 0px top;	}
+.user .dashboard_button_heading{ background:transparent url(img/icons/32x32/user.png) no-repeat 0px top;	}
+.newstype .dashboard_button_heading{ background:transparent url(img/icons/32x32/newstype.png) no-repeat 0px top;	}
+.tags .dashboard_button_heading{ background:transparent url(img/icons/32x32/tags.png) no-repeat 0px top;	}
+.updatenews .dashboard_button_heading{ background:transparent url(img/icons/32x32/updatenews.png) no-repeat 0px top;	}
+.contact .dashboard_button_heading{ background:transparent url(img/icons/32x32/contact.png) no-repeat 0px top;	}
+.comment .dashboard_button_heading{ background:transparent url(img/icons/32x32/comment.png) no-repeat 0px top;	}
+.config .dashboard_button_heading{ background:transparent url(img/icons/32x32/config.png) no-repeat 0px top;	}
+.alexa .dashboard_button_heading{ background:transparent url(img/icons/32x32/alexa.png) no-repeat 0px top;	}
+.advertising .dashboard_button_heading{ background:transparent url(img/icons/32x32/advertising.png) no-repeat 0px top;	}
 
