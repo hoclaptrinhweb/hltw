@@ -7,28 +7,31 @@ public partial class usercontrols_ucTagCount : DH.UI.UCBase
     {
         base.Page_Load(sender, e);
         var vTagCountBll = new t_TagCountBLL(getCurrentConnection());
-        var vNewsBll = new vnn_NewsBLL(getCurrentConnection());
-        hdNewsCount.Value = vNewsBll.GetAllNewsRowCount("", -1, -1, "", "", "").ToString();
-        rpTagCount.DataSource = vTagCountBll.GetAll(30);
-        rpTagCount.DataBind();
+        var dt = vTagCountBll.GetAll(30);
+        if (dt != null && dt.Count > 0)
+        {
+            hdNewsCount.Value = dt[0].TagCount.ToString();
+            rpTagCount.DataSource = dt;
+            rpTagCount.DataBind();
+        }
     }
 
     public string GetTagClass(int category)
     {
-        var result = (category * 100) / int.Parse(hdNewsCount.Value);
-        if (result <= 1)
-            return "tag1";
-        if (result <= 4)
-            return "tag2";
-        if (result <= 8)
-            return "tag3";
-        if (result <= 12)
-            return "tag4";
-        if (result <= 18)
-            return "tag5";
-        if (result <= 30)
+        var result = int.Parse(hdNewsCount.Value) - category;
+        if (result <= 100)
+            return "tag7";
+        if (result <= 200)
             return "tag6";
-        return result <= 50 ? "tag7" : "";
+        if (result <= 300)
+            return "tag5";
+        if (result <= 350)
+            return "tag4";
+        if (result <= 400)
+            return "tag3";
+        if (result <= 450)
+            return "tag2";
+        return result <= 500 ? "tag1" : "";
     }
 
 }
