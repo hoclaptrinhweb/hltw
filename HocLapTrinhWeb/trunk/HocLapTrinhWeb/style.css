@@ -1944,12 +1944,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 /* tags */
 .tagcloud a {
-       text-transform:capitalize;
-       background:#fcfcfc;
-       font-size:11px !important;
+    font: bold 11px/21px Arial, Tahoma, sans-serif;
        display:inline-block;
-       margin:0 3px 3px 0;
-    color: blue;
+       margin:5px 10px 0 0;
+        color: blue;
 }
 /* ads Widgets */
 
@@ -4042,6 +4040,7 @@ color:#326693;
 {
     text-decoration:underline;
 }
+
 .tag1{font-size: 0.8em !important}
 .tag2{font-size: 0.9em !important}
 .tag3{font-size: 1em !important}
