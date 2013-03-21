@@ -18,19 +18,19 @@ public partial class usercontrols_ucTagCount : DH.UI.UCBase
     public string GetTagClass(int category)
     {
         var result = int.Parse(hdNewsCount.Value) - category;
-        if (result <= 10)
-            return "tag7";
-        if (result <= 20)
-            return "tag6";
         if (result <= 30)
-            return "tag5";
-        if (result <= 35)
-            return "tag4";
+            return "tag7";
         if (result <= 40)
+            return "tag6";
+        if (result <= 50)
+            return "tag5";
+        if (result <= 60)
+            return "tag4";
+        if (result <= 70)
             return "tag3";
-        if (result <= 45)
+        if (result <= 80)
             return "tag2";
-        return result <= 50 ? "tag1" : "";
+        return result <= 90 ? "tag1" : "";
     }
 
 }
