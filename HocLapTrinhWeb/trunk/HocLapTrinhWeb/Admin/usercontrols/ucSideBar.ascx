@@ -46,6 +46,9 @@
                             Text="Lấy tin tự động"></asp:HyperLink></li>
                 </ul>
             </li>
+            <li class="<%= SetClass("admin/Video.aspx")  %>">
+                <asp:HyperLink ID="HyperLink1" class="icn_video" runat="server" NavigateUrl="~/admin/Video.aspx"
+                    Text="Video"></asp:HyperLink></li>
             <li class="<%= SetClass("admin/Contact.aspx")  %>">
                 <asp:HyperLink ID="hpContact" class="icn_contact" runat="server" NavigateUrl="~/admin/Contact.aspx"
                     Text="Liên hệ"></asp:HyperLink></li>

@@ -108,6 +108,9 @@
 #main_menu li a.icn_FileManager {
 	background: url('img/icons/small/filemanager.png') no-repeat left;
 }
+#main_menu li a.icn_video {
+	background: url('img/icons/small/video.png') no-repeat left;
+}
 
 
 /*

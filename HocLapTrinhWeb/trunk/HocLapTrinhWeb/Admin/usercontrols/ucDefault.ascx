@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ucDefault.ascx.cs" Inherits="Admin_usercontrols_ucDefault" %>
 <div id="page-content">
-    <div id="page-header">
+    <div id="page-header" style="display:none">
         <h1>
             <asp:Label ID="lblPageHeader" runat="server" Text="Bảng điều khiển"></asp:Label></h1>
     </div>
@@ -22,6 +22,12 @@
                 runat="server">
                 <asp:Label ID="lbTag" class="dashboard_button_heading" runat="server" Text="Thẻ tag"></asp:Label>
                 <asp:Label ID="Label6" runat="server" Text="Quản lý loại tin"></asp:Label></asp:HyperLink>
+        </div>
+         <div>
+            <asp:HyperLink ID="HyperLink4" class="dashboard_button video" NavigateUrl="~/Admin/video.aspx"
+                runat="server">
+                <asp:Label ID="Label13" class="dashboard_button_heading" runat="server" Text="Video"></asp:Label>
+                <asp:Label ID="Label14" runat="server" Text="Quản lý video"></asp:Label></asp:HyperLink>
         </div>
         <div>
             <asp:HyperLink ID="hdCommentNews" class="dashboard_button comment" NavigateUrl="~/Admin/CommentNews.aspx"
