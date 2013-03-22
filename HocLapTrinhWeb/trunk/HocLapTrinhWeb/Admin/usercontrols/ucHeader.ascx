@@ -24,25 +24,6 @@
                     </li>
                 </ul>
             </li>
-            <li class="users"><a class="settings">Cài đặt hệ thống</a>
-                <ul>
-                    <li>
-                        <asp:HyperLink ID="hpUser" CssClass="users" NavigateUrl="~/admin/User.aspx" runat="server"
-                            Text="Quản trị viên" /></li>
-                    <li runat="server" id="liRoleDetail" visible="false">
-                        <asp:HyperLink ID="hpRoleDetail" class="icn_updatenews" NavigateUrl="~/admin/RoleDetail.aspx"
-                            runat="server" Text="RoleDetail"></asp:HyperLink></li>
-                    <li runat="server" id="liAdv" visible="false">
-                        <asp:HyperLink ID="hpAdv" class="icn_box" NavigateUrl="~/admin/ForumDocumentCat.aspx"
-                            runat="server" Text="Quản lý Box"></asp:HyperLink></li>
-                    <li runat="server" id="liRole" visible="false">
-                        <asp:HyperLink ID="hpRole" class="icn_updatenews" NavigateUrl="~/admin/Role.aspx"
-                            runat="server" Text="Quản lý Trang"></asp:HyperLink></li>
-                    <li runat="server" id="liUserPermission" visible="false">
-                        <asp:HyperLink ID="hpUserPermission" class="icn_updatenews" NavigateUrl="~/admin/UserPermission.aspx"
-                            runat="server" Text="UserPermission"></asp:HyperLink></li>
-                </ul>
-            </li>
             <li class="dashboard">
                 <asp:HyperLink ID="hpDashboard" class="dashboard" NavigateUrl="~/admin/Default.aspx"
                     runat="server" Text="Bảng điều khiển" /></li>
