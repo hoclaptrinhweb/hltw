@@ -207,27 +207,6 @@
                 </tr>
                 <tr valign="top">
                     <td>
-                        <asp:Label ID="Label7" runat="server" Text="Video" CssClass="Caption"></asp:Label>
-                        <asp:HiddenField ID="hdVideoId" runat="server" />
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td colspan="6">
-                        <asp:TextBox ID="txtVideo" runat="server" Width="100%"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr class="trEmpty">
-                    <td colspan="3">
-                    </td>
-                    <td>
-                    </td>
-                    <td colspan="5">
-                    </td>
-                </tr>
-                <tr valign="top">
-                    <td>
                         <asp:Label ID="Label6" runat="server" Text="Ảnh" CssClass="Caption"></asp:Label>
                     </td>
                     <td>

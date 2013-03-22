@@ -83,11 +83,6 @@ public partial class administrator_usercontrols_NewsDetail : DH.UI.UCBase
             row.IsActive = cboxActive.Checked;
             var newsId = Request.QueryString["NewsID"];
 
-            var dtVideo = new dsHocLapTrinhWeb.tbl_VideoDataTable();
-            var rowVideo = dtVideo.Newtbl_VideoRow();
-            rowVideo.VideoID = -1;
-            rowVideo.NewsID = -1;
-            rowVideo.LinkVideo = txtVideo.Text;
             if (newsId == null)
             {
                 row.CreatedDate = DateTime.Now;
@@ -96,9 +91,7 @@ public partial class administrator_usercontrols_NewsDetail : DH.UI.UCBase
                 row.UpdatedBy = int.Parse(Session["UserID"].ToString());
                 row.CreatedBy = int.Parse(Session["UserID"].ToString());
                 dt.Addtbl_NewsRow(row);
-                if (rowVideo.LinkVideo != "")
-                    dtVideo.Addtbl_VideoRow(rowVideo);
-                if (newsBll.Add(dt, dtVideo))
+                if (newsBll.Add(dt))
                 {
                     var tNewsTag = new t_NewsTagBLL(getCurrentConnection());
                     var dtNewsTag = new dsHocLapTrinhWeb.tbl_NewsTagDataTable();
@@ -140,18 +133,7 @@ public partial class administrator_usercontrols_NewsDetail : DH.UI.UCBase
             row.NewsID = int.Parse(newsId);
             row.CreatedDate = Convert.ToDateTime(txtNgaytao.Text);
             dt.Addtbl_NewsRow(row);
-            rowVideo.NewsID = row.NewsID;
-            if (hdVideoId.Value != "")
-            {
-                rowVideo.VideoID = int.Parse(hdVideoId.Value);
-                dtVideo.Addtbl_VideoRow(rowVideo);
-            }
-            else
-            {
-                if (rowVideo.LinkVideo != "")
-                    dtVideo.Addtbl_VideoRow(rowVideo);
-            }
-            if (newsBll.Update(dt, dtVideo))
+            if (newsBll.Update(dt))
             {
                 if (imgThumbnail.ImageUrl != ("~/" + row.Thumbnail) &&
                     File.Exists(Server.MapPath(imgThumbnail.ImageUrl)))
@@ -260,8 +242,6 @@ public partial class administrator_usercontrols_NewsDetail : DH.UI.UCBase
             cboxHot.Checked = rNews.IsHot;
             var videoBll = new VideoBLL(CurrentPage.getCurrentConnection());
             var rVideo = videoBll.GetVideoByNewsID(rNews.NewsID);
-            txtVideo.Text = rVideo != null ? rVideo.LinkVideo : "";
-            hdVideoId.Value = rVideo != null ? rVideo.VideoID.ToString() : "";
             if (rNews.IsThumbnailNull() || rNews.Thumbnail == "")
                 imgThumbnail.Visible = false;
             else
