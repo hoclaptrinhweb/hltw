@@ -31,7 +31,7 @@
                             Text="Post"></asp:HyperLink></li>
                 </ul>
             </li>--%>
-            <li class="<%= SetClass("admin/News.aspx","admin/UpdateNews.aspx","admin/NewsType.aspx")  %>">
+            <li class="<%= SetClass("admin/News.aspx","admin/NewsDetail.aspx","admin/UpdateNews.aspx","admin/NewsType.aspx")  %>">
                 <asp:HyperLink ID="hpNews" class="icn_news" runat="server" NavigateUrl="~/admin/News.aspx"
                     Text="Quản lý tin tức"></asp:HyperLink>
                 <ul style="display: block" class="<%= "sub " + IsShow("admin/News.aspx","admin/UpdateNews.aspx","admin/NewsType.aspx") %>">
@@ -46,7 +46,7 @@
                             Text="Lấy tin tự động"></asp:HyperLink></li>
                 </ul>
             </li>
-            <li class="<%= SetClass("admin/Video.aspx")  %>">
+            <li class="<%= SetClass("admin/Video.aspx","admin/VideoDetail.aspx")  %>">
                 <asp:HyperLink ID="HyperLink1" class="icn_video" runat="server" NavigateUrl="~/admin/Video.aspx"
                     Text="Video"></asp:HyperLink></li>
             <li class="<%= SetClass("admin/Contact.aspx")  %>">
