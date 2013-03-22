@@ -26,14 +26,14 @@
     <Shape ID="DesignTable:tbl_SeoConfig" ZOrder="10" X="206" Y="55" Height="26" Width="150" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="142" SplitterPosition="22" />
     <Shape ID="DesignTable:tbl_Contact" ZOrder="8" X="210" Y="103" Height="26" Width="150" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="193" SplitterPosition="22" />
     <Shape ID="DesignTable:tbl_CommentNews" ZOrder="7" X="204" Y="149" Height="32" Width="174" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="125" SplitterPosition="28" />
-    <Shape ID="DesignTable:tbl_Video" ZOrder="5" X="239" Y="204" Height="32" Width="150" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="121" SplitterPosition="28" />
     <Shape ID="DesignTable:tbl_User" ZOrder="6" X="382" Y="-4" Height="32" Width="150" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="305" SplitterPosition="28" />
-    <Shape ID="DesignTable:tbl_Tag" ZOrder="3" X="712" Y="-1" Height="32" Width="150" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="75" SplitterPosition="28" />
-    <Shape ID="DesignTable:tbl_NewsTag" ZOrder="2" X="711" Y="39" Height="32" Width="160" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="98" SplitterPosition="28" />
-    <Shape ID="DesignTable:tbl_AutoAdv" ZOrder="1" X="233" Y="258" Height="32" Width="157" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="282" SplitterPosition="28" />
+    <Shape ID="DesignTable:tbl_Tag" ZOrder="4" X="712" Y="-1" Height="32" Width="150" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="75" SplitterPosition="28" />
+    <Shape ID="DesignTable:tbl_NewsTag" ZOrder="3" X="711" Y="39" Height="32" Width="160" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="98" SplitterPosition="28" />
+    <Shape ID="DesignTable:tbl_AutoAdv" ZOrder="2" X="233" Y="258" Height="32" Width="157" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="282" SplitterPosition="28" />
+    <Shape ID="DesignTable:tbl_Video" ZOrder="1" X="233" Y="208" Height="28" Width="150" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="300" SplitterPosition="24" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK_tbl_News_tbl_NewsType" ZOrder="4" LineWidth="11">
+    <Connector ID="DesignRelation:FK_tbl_News_tbl_NewsType" ZOrder="5" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>555</X>

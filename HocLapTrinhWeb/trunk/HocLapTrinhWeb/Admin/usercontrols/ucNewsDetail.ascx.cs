@@ -240,8 +240,8 @@ public partial class administrator_usercontrols_NewsDetail : DH.UI.UCBase
             cboxActive.Checked = rNews.IsActive;
             cboxDelete.Checked = rNews.IsDelete;
             cboxHot.Checked = rNews.IsHot;
-            var videoBll = new VideoBLL(CurrentPage.getCurrentConnection());
-            var rVideo = videoBll.GetVideoByNewsID(rNews.NewsID);
+            var videoBll = new t_VideoBLL(CurrentPage.getCurrentConnection());
+            var rVideo = videoBll.GetVideoByID(rNews.NewsID);
             if (rNews.IsThumbnailNull() || rNews.Thumbnail == "")
                 imgThumbnail.Visible = false;
             else

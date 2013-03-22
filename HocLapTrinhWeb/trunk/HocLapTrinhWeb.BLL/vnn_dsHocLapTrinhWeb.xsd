@@ -981,6 +981,95 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="vnn_vw_Video" msprop:Generator_TableClassName="vnn_vw_VideoDataTable" msprop:Generator_TableVarName="tablevnn_vw_Video" msprop:Generator_TablePropName="vnn_vw_Video" msprop:Generator_RowDeletingName="vnn_vw_VideoRowDeleting" msprop:Generator_UserTableName="vnn_vw_Video" msprop:Generator_RowChangingName="vnn_vw_VideoRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_VideoRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_VideoRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_VideoRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_VideoRowChanged" msprop:Generator_RowClassName="vnn_vw_VideoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VideoID" msprop:Generator_ColumnVarNameInTable="columnVideoID" msprop:Generator_ColumnPropNameInRow="VideoID" msprop:Generator_ColumnPropNameInTable="VideoIDColumn" msprop:Generator_UserColumnName="VideoID" type="xs:int" />
+              <xs:element name="VideoTypeID" msprop:Generator_ColumnVarNameInTable="columnVideoTypeID" msprop:Generator_ColumnPropNameInRow="VideoTypeID" msprop:Generator_ColumnPropNameInTable="VideoTypeIDColumn" msprop:Generator_UserColumnName="VideoTypeID" type="xs:int" />
+              <xs:element name="VideoURL" msprop:Generator_ColumnVarNameInTable="columnVideoURL" msprop:Generator_ColumnPropNameInRow="VideoURL" msprop:Generator_ColumnPropNameInTable="VideoURLColumn" msprop:Generator_UserColumnName="VideoURL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Brief" msprop:Generator_ColumnVarNameInTable="columnBrief" msprop:Generator_ColumnPropNameInRow="Brief" msprop:Generator_ColumnPropNameInTable="BriefColumn" msprop:Generator_UserColumnName="Brief">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Content" msprop:Generator_ColumnVarNameInTable="columnContent" msprop:Generator_ColumnPropNameInRow="Content" msprop:Generator_ColumnPropNameInTable="ContentColumn" msprop:Generator_UserColumnName="Content" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Thumbnail" msprop:Generator_ColumnVarNameInTable="columnThumbnail" msprop:Generator_ColumnPropNameInRow="Thumbnail" msprop:Generator_ColumnPropNameInTable="ThumbnailColumn" msprop:Generator_UserColumnName="Thumbnail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Keyword" msprop:Generator_ColumnVarNameInTable="columnKeyword" msprop:Generator_ColumnPropNameInRow="Keyword" msprop:Generator_ColumnPropNameInTable="KeywordColumn" msprop:Generator_UserColumnName="Keyword" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsHot" msprop:Generator_ColumnVarNameInTable="columnIsHot" msprop:Generator_ColumnPropNameInRow="IsHot" msprop:Generator_ColumnPropNameInTable="IsHotColumn" msprop:Generator_UserColumnName="IsHot" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Viewed" msprop:Generator_ColumnVarNameInTable="columnViewed" msprop:Generator_ColumnPropNameInRow="Viewed" msprop:Generator_ColumnPropNameInTable="ViewedColumn" msprop:Generator_UserColumnName="Viewed" type="xs:int" minOccurs="0" />
+              <xs:element name="Priority" msprop:Generator_ColumnVarNameInTable="columnPriority" msprop:Generator_ColumnPropNameInRow="Priority" msprop:Generator_ColumnPropNameInTable="PriorityColumn" msprop:Generator_UserColumnName="Priority" type="xs:int" minOccurs="0" />
+              <xs:element name="IPAddress" msprop:Generator_ColumnVarNameInTable="columnIPAddress" msprop:Generator_ColumnPropNameInRow="IPAddress" msprop:Generator_ColumnPropNameInTable="IPAddressColumn" msprop:Generator_UserColumnName="IPAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" msprop:Generator_UserColumnName="CreatedDate" type="xs:dateTime" />
+              <xs:element name="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" msprop:Generator_UserColumnName="CreatedBy" type="xs:int" />
+              <xs:element name="IsDelete" msprop:Generator_ColumnVarNameInTable="columnIsDelete" msprop:Generator_ColumnPropNameInRow="IsDelete" msprop:Generator_ColumnPropNameInTable="IsDeleteColumn" msprop:Generator_UserColumnName="IsDelete" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UpdatedDate" msprop:Generator_ColumnVarNameInTable="columnUpdatedDate" msprop:Generator_ColumnPropNameInRow="UpdatedDate" msprop:Generator_ColumnPropNameInTable="UpdatedDateColumn" msprop:Generator_UserColumnName="UpdatedDate" type="xs:dateTime" />
+              <xs:element name="UpdatedBy" msprop:Generator_ColumnVarNameInTable="columnUpdatedBy" msprop:Generator_ColumnPropNameInRow="UpdatedBy" msprop:Generator_ColumnPropNameInTable="UpdatedByColumn" msprop:Generator_UserColumnName="UpdatedBy" type="xs:int" />
+              <xs:element name="IPUpdate" msprop:Generator_ColumnVarNameInTable="columnIPUpdate" msprop:Generator_ColumnPropNameInRow="IPUpdate" msprop:Generator_ColumnPropNameInTable="IPUpdateColumn" msprop:Generator_UserColumnName="IPUpdate">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" msprop:Generator_UserColumnName="IsActive" type="xs:boolean" />
+              <xs:element name="MoveFrom" msprop:Generator_ColumnVarNameInTable="columnMoveFrom" msprop:Generator_ColumnPropNameInRow="MoveFrom" msprop:Generator_ColumnPropNameInTable="MoveFromColumn" msprop:Generator_UserColumnName="MoveFrom" type="xs:int" minOccurs="0" />
+              <xs:element name="ParentID" msprop:Generator_ColumnVarNameInTable="columnParentID" msprop:Generator_ColumnPropNameInRow="ParentID" msprop:Generator_ColumnPropNameInTable="ParentIDColumn" msprop:Generator_UserColumnName="ParentID" type="xs:int" minOccurs="0" />
+              <xs:element name="NewsTypeName" msprop:Generator_ColumnVarNameInTable="columnNewsTypeName" msprop:Generator_ColumnPropNameInRow="NewsTypeName" msprop:Generator_ColumnPropNameInTable="NewsTypeNameColumn" msprop:Generator_UserColumnName="NewsTypeName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1060,6 +1149,10 @@
     <xs:unique name="vnn_vw_TagCount_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:vnn_vw_TagCount" />
       <xs:field xpath="mstns:TagID" />
+    </xs:unique>
+    <xs:unique name="vnn_vw_Video_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vnn_vw_Video" />
+      <xs:field xpath="mstns:VideoID" />
     </xs:unique>
   </xs:element>
 </xs:schema>

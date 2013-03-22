@@ -6,7 +6,7 @@ using HocLapTrinhWeb.DAL;
 
 namespace HocLapTrinhWeb.BLL
 {
-    public class VideoBLL : ClassBase
+    public class t_VideoBLL : ClassBase
     {
         #region Variable
         ClassBaseDAL _classBaseDal;
@@ -18,7 +18,7 @@ namespace HocLapTrinhWeb.BLL
         /// 
         /// </summary>
         /// <param name="conn"></param>
-        public VideoBLL(Connection conn)
+        public t_VideoBLL(Connection conn)
         {
             IConnect = conn;
         }
@@ -35,43 +35,6 @@ namespace HocLapTrinhWeb.BLL
                         {WhereClause = dt.VideoIDColumn.ColumnName + "=@id"};
                     _classBaseDal.ClearParams();
                     _classBaseDal.AddParams("@id", SqlDbType.Int, id, ParameterDirection.Input);
-                    if (_classBaseDal.FillData(dt))
-                    {
-                        if (dt.Count == 0)
-                        {
-                            AddMessage("ERR-000009", "Du lieu khong ton tai." + _classBaseDal.getMessage(), _classBaseDal.getMsgNumber());
-                            return null;
-                        }
-                        return dt[0];
-                    }
-                    AddMessage("ERR-000006", "Tải dữ liệu không thành công." + _classBaseDal.getMessage(), _classBaseDal.getMsgNumber());
-                    return null;
-                }
-                AddMessage("ERR-000001", "Kết nối bị lỗi." + getMessage(), 0);
-                return null;
-            }
-            catch (Exception ex)
-            {
-                AddMessage("ERR-000006", "Tải dữ liệu không thành công." + ex.Message, 0);
-                return null;
-            }
-            finally
-            {
-                CloseConnection(isOpen);
-            }
-        }
-
-        public dsHocLapTrinhWeb.tbl_VideoRow GetVideoByNewsID(int newsid)
-        {
-            var isOpen = false;
-            try
-            {
-                if (OpenConnection(ref isOpen))
-                {
-                    var dt = new dsHocLapTrinhWeb.tbl_VideoDataTable();
-                    _classBaseDal = new ClassBaseDAL(IConnect, dt) { WhereClause = dt.NewsIDColumn.ColumnName + "=@id" };
-                    _classBaseDal.ClearParams();
-                    _classBaseDal.AddParams("@id", SqlDbType.Int, newsid, ParameterDirection.Input);
                     if (_classBaseDal.FillData(dt))
                     {
                         if (dt.Count == 0)
