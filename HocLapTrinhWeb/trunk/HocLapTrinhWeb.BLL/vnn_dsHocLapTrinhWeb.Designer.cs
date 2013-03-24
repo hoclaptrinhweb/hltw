@@ -10215,6 +10215,8 @@ namespace HocLapTrinhWeb.BLL {
             
             private global::System.Data.DataColumn columnUserName;
             
+            private global::System.Data.DataColumn columnRefAddress;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public vnn_vw_VideoDataTable() {
@@ -10434,6 +10436,14 @@ namespace HocLapTrinhWeb.BLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RefAddressColumn {
+                get {
+                    return this.columnRefAddress;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -10492,7 +10502,8 @@ namespace HocLapTrinhWeb.BLL {
                         int MoveFrom, 
                         int ParentID, 
                         string NewsTypeName, 
-                        string UserName) {
+                        string UserName, 
+                        string RefAddress) {
                 vnn_vw_VideoRow rowvnn_vw_VideoRow = ((vnn_vw_VideoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         VideoID,
@@ -10517,7 +10528,8 @@ namespace HocLapTrinhWeb.BLL {
                         MoveFrom,
                         ParentID,
                         NewsTypeName,
-                        UserName};
+                        UserName,
+                        RefAddress};
                 rowvnn_vw_VideoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowvnn_vw_VideoRow);
                 return rowvnn_vw_VideoRow;
@@ -10570,6 +10582,7 @@ namespace HocLapTrinhWeb.BLL {
                 this.columnParentID = base.Columns["ParentID"];
                 this.columnNewsTypeName = base.Columns["NewsTypeName"];
                 this.columnUserName = base.Columns["UserName"];
+                this.columnRefAddress = base.Columns["RefAddress"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10621,6 +10634,8 @@ namespace HocLapTrinhWeb.BLL {
                 base.Columns.Add(this.columnNewsTypeName);
                 this.columnUserName = new global::System.Data.DataColumn("UserName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUserName);
+                this.columnRefAddress = new global::System.Data.DataColumn("RefAddress", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRefAddress);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnVideoID}, true));
                 this.columnVideoID.AllowDBNull = false;
@@ -10648,6 +10663,7 @@ namespace HocLapTrinhWeb.BLL {
                 this.columnNewsTypeName.MaxLength = 250;
                 this.columnUserName.AllowDBNull = false;
                 this.columnUserName.MaxLength = 50;
+                this.columnRefAddress.MaxLength = 500;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15819,6 +15835,22 @@ namespace HocLapTrinhWeb.BLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string RefAddress {
+                get {
+                    try {
+                        return ((string)(this[this.tablevnn_vw_Video.RefAddressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RefAddress\' in table \'vnn_vw_Video\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevnn_vw_Video.RefAddressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsContentNull() {
                 return this.IsNull(this.tablevnn_vw_Video.ContentColumn);
             }
@@ -15923,6 +15955,18 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetParentIDNull() {
                 this[this.tablevnn_vw_Video.ParentIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRefAddressNull() {
+                return this.IsNull(this.tablevnn_vw_Video.RefAddressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRefAddressNull() {
+                this[this.tablevnn_vw_Video.RefAddressColumn] = global::System.Convert.DBNull;
             }
         }
         
