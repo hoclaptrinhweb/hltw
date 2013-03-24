@@ -30,7 +30,7 @@
     <Shape ID="DesignTable:vnn_vw_NewsType" ZOrder="4" X="520" Y="218" Height="28" Width="202" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="259" SplitterPosition="24" />
     <Shape ID="DesignTable:vnn_vw_NewsTag" ZOrder="3" X="992" Y="34" Height="28" Width="167" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="82" SplitterPosition="24" />
     <Shape ID="DesignTable:vnn_vw_TagCount" ZOrder="2" X="745" Y="2" Height="32" Width="198" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="98" SplitterPosition="28" />
-    <Shape ID="DesignTable:vnn_vw_Video" ZOrder="1" X="689" Y="123" Height="28" Width="150" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="300" SplitterPosition="24" />
+    <Shape ID="DesignTable:vnn_vw_Video" ZOrder="1" X="718" Y="127" Height="28" Width="150" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="300" SplitterPosition="24" />
   </Shapes>
   <Connectors />
 </DiagramLayout>
