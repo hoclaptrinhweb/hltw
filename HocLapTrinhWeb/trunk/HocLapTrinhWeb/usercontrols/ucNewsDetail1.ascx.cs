@@ -17,7 +17,7 @@ public partial class usercontrols_ucNewsDetail1 : DH.UI.UCBase
             var lrScriptDetail = (Literal)Page.Master.FindControl("lrScriptDetail");
             if (lrScriptDetail != null)
             {
-                lrScriptDetail.Text = "<script type='text/javascript' src='" + CurrentPage.UrlRoot + "/js/syntaxhighlighter.js'>";
+                lrScriptDetail.Text = "<script type='text/javascript' src='" + CurrentPage.UrlRoot + "/js/syntaxhighlighter.js'></script>";
                 lrScriptDetail.Text += "<script type=\"text/javascript\">SyntaxHighlighter.all();</script>";
             }
         }
