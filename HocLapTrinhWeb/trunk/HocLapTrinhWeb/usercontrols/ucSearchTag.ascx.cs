@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using HocLapTrinhWeb.BLL;
 
@@ -27,9 +22,7 @@ public partial class usercontrols_ucSearchTag : DH.UI.UCBase
     {
         get
         {
-            if (Request.QueryString["TagName"] != null)
-                return Request.QueryString["TagName"];
-            return "";
+            return Request.QueryString["TagName"] ?? "";
         }
     }
 
