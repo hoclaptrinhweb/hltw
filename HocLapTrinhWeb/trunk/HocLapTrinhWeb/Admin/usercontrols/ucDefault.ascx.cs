@@ -31,6 +31,10 @@ public partial class Admin_usercontrols_ucDefault : DH.UI.UCBase
             var vTag = new v_TagBLL(getCurrentConnection());
             n = vTag.GetAllTagRowCount();
             lbTag.Text += " ( " + n + " ) ";
+
+            var vVideo = new v_VideoBLL(getCurrentConnection());
+            n = vVideo.GetAllVideoRowCount(-1);
+            lbVideo.Text += " ( " + n + " ) ";
         }
     }
 }
