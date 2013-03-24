@@ -26,7 +26,7 @@
          <div>
             <asp:HyperLink ID="HyperLink4" class="dashboard_button video" NavigateUrl="~/Admin/video.aspx"
                 runat="server">
-                <asp:Label ID="Label13" class="dashboard_button_heading" runat="server" Text="Video"></asp:Label>
+                <asp:Label ID="lbVideo" class="dashboard_button_heading" runat="server" Text="Video"></asp:Label>
                 <asp:Label ID="Label14" runat="server" Text="Quản lý video"></asp:Label></asp:HyperLink>
         </div>
         <div>
