@@ -7,9 +7,6 @@ Viết chương trình auto update bài viết Cái này viết Ứng dụng win
 
 Viết thêm Video
 Viết thêm hỏi và đáp
-icon
-
-
 
 ==> Đang xử lý phần tag trong tin tức
 
