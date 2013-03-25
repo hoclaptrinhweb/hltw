@@ -14,11 +14,10 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
     {
         base.Page_Load(sender, e);
         if (IsPostBack) return;
-        var newsID = Request.QueryString["VideoID"];
-        if (newsID == null)
+        if (VideoID == -1)
             OnLoad();
         else
-            LoadDataEdit(int.Parse(newsID));
+            LoadDataEdit(VideoID);
     }
 
     protected void ObjectDataSource1ObjectCreating(object sender, ObjectDataSourceEventArgs e)
@@ -53,6 +52,18 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
 
     #region Method Page
 
+    private int VideoID
+    {
+        get
+        {
+            if (!string.IsNullOrEmpty(Request.QueryString["VideoID"]))
+                try
+                { return int.Parse(Request.QueryString["VideoID"]); }
+                catch { return -1; }
+            return -1;
+        }
+    }
+
     /// <summary>
     /// Add & Edit ListPrice
     /// </summary>
@@ -61,11 +72,12 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
     {
         try
         {
-            var newsBll = new NewsBLL(CurrentPage.getCurrentConnection());
-            var dt = new dsHocLapTrinhWeb.tbl_NewsDataTable();
-            var row = dt.Newtbl_NewsRow();
+            var videoBll = new v_VideoBLL(CurrentPage.getCurrentConnection());
+            var dt = new dsHocLapTrinhWeb.tbl_VideoDataTable();
+            var row = dt.Newtbl_VideoRow();
             row.Title = txtTitle.Text;
             row.Brief = txtBrief.Text;
+            row.VideoURL = txtLinkVideo.Text;
             row.Content = FCKContent.Text;
             row.Keyword = txtkeyword.Text;
             row.Viewed = int.Parse(txtSolanxem.Text);
@@ -78,63 +90,26 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
             row.RefAddress = txtNguon.Text;
             var pathImage = CheckUploadImageThumbnail(XuLyChuoi.ConvertToUnSign(txtTitle.Text), fileuploadThumbnail, false, Global.MaxThumbnailSize, int.Parse(dropNewsType.SelectedValue));
             row.Thumbnail = pathImage != "" ? pathImage : imgThumbnail.ImageUrl.Replace("~/", "");
-            row.Image = "";
             row.IsHot = false;
-            row.IsShowImage = false;
             row.IsActive = cboxActive.Checked;
-            var newsId = Request.QueryString["NewsID"];
-
-            if (newsId == null)
+            if (VideoID == -1)
             {
                 row.CreatedDate = DateTime.Now;
                 row.MoveFrom = int.Parse(dropNewsType.SelectedValue);
-                row.NewsTypeID = int.Parse(dropNewsType.SelectedValue);
+                row.VideoTypeID = int.Parse(dropNewsType.SelectedValue);
                 row.UpdatedBy = int.Parse(Session["UserID"].ToString());
                 row.CreatedBy = int.Parse(Session["UserID"].ToString());
-                dt.Addtbl_NewsRow(row);
-                if (newsBll.Add(dt))
-                {
-                    var tNewsTag = new t_NewsTagBLL(getCurrentConnection());
-                    var dtNewsTag = new dsHocLapTrinhWeb.tbl_NewsTagDataTable();
-                    var arrKey = txtkeyword.Text.Split(',');
-                    for (var i = 0; i < arrKey.Length; i++)
-                    {
-                        if (arrKey[i] == "")
-                            continue;
-                        var rowNewsTag = dtNewsTag.Newtbl_NewsTagRow();
-                        // Lưu vào tbl_Tag
-                        var vTagBll = new v_TagBLL(getCurrentConnection());
-                        var rowTag = vTagBll.GetTagByName(arrKey[i]);
-                        if (rowTag == null)
-                        {
-                            var dtTag = new dsHocLapTrinhWeb.tbl_TagDataTable();
-                            rowTag = dtTag.Newtbl_TagRow();
-                            rowTag.TagName = arrKey[i];
-                            dtTag.Addtbl_TagRow(rowTag);
-                            if (vTagBll.Add(dtTag))
-                                rowNewsTag.TagID = dtTag[0].TagID;
-                            else
-                                return false;
-                        }
-                        else
-                            rowNewsTag.TagID = rowTag.TagID;
-                        rowNewsTag.NewsID = dt[0].NewsID;
-                        dtNewsTag.Addtbl_NewsTagRow(rowNewsTag);
-                    }
-                    tNewsTag.Add(dtNewsTag);
-                    return true;
-                }
-                else
-                    return false;
+                dt.Addtbl_VideoRow(row);
+                return videoBll.Add(dt);
             }
             row.IPUpdate = DH.Utilities.Net.GetVisitorIPAddress();
             row.UpdatedBy = int.Parse(Session["UserID"].ToString());
-            row.NewsTypeID = int.Parse(dropNewsType.SelectedValue);
+            row.VideoTypeID = int.Parse(dropNewsType.SelectedValue);
             row.MoveFrom = int.Parse(hdVideoTypeID.Value);
-            row.NewsID = int.Parse(newsId);
+            row.VideoID = VideoID;
             row.CreatedDate = Convert.ToDateTime(txtNgaytao.Text);
-            dt.Addtbl_NewsRow(row);
-            if (newsBll.Update(dt))
+            dt.Addtbl_VideoRow(row);
+            if (videoBll.Update(dt))
             {
                 if (imgThumbnail.ImageUrl != ("~/" + row.Thumbnail) &&
                     File.Exists(Server.MapPath(imgThumbnail.ImageUrl)))
@@ -142,45 +117,6 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
                     if (imgThumbnail.ImageUrl.ToLower() != "~/upload/image/noimage.jpg")
                         File.Delete(Server.MapPath(imgThumbnail.ImageUrl));
                 }
-                var tNewsTag = new t_NewsTagBLL(getCurrentConnection());
-                var arrKey = txtkeyword.Text.Split(',');
-                var arrDels = new ArrayList();
-                for (var i = 0; i < arrKey.Length; i++)
-                {
-                    if (arrKey[i] == "")
-                        continue;
-                    var dtNewsTag = new dsHocLapTrinhWeb.tbl_NewsTagDataTable();
-                    var rowNewsTag = dtNewsTag.Newtbl_NewsTagRow();
-                    // Lưu vào tbl_Tag
-                    var vTagBll = new v_TagBLL(getCurrentConnection());
-                    var rowTag = vTagBll.GetTagByName(arrKey[i]);
-                    if (rowTag == null)
-                    {
-                        var dtTag = new dsHocLapTrinhWeb.tbl_TagDataTable();
-                        rowTag = dtTag.Newtbl_TagRow();
-                        rowTag.TagName = arrKey[i];
-                        dtTag.Addtbl_TagRow(rowTag);
-                        if (vTagBll.Add(dtTag))
-                            rowNewsTag.TagID = dtTag[0].TagID;
-                    }
-                    else
-                        rowNewsTag.TagID = rowTag.TagID;
-
-                    rowNewsTag.NewsID = dt[0].NewsID;
-
-                    //Kiểm tra tag đã tồn tại trong newstag chưa
-                    var rowExist = tNewsTag.Get_NewsTagByID(rowTag.TagID, dt[0].NewsID);
-                    if (rowExist == null)
-                    {
-                        dtNewsTag.Addtbl_NewsTagRow(rowNewsTag);
-                        tNewsTag.Add(dtNewsTag);
-                    }
-
-                    arrDels.Add(rowNewsTag.TagID);
-                }
-                //Remove not arrDels
-                var dtDel = tNewsTag.Get_NewsTagByID(dt[0].NewsID, arrDels);
-                tNewsTag.Delete(dtDel);
                 return true;
             }
             return false;
@@ -264,16 +200,16 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
         if (suffixImage != ".jpg" && suffixImage != ".jpeg" && suffixImage != ".tif" && suffixImage != ".png" &&
             suffixImage != ".gif" && suffixImage != ".bmp")
             return "";
-        var pathImage = imgfilename + DateTime.Now.ToString("hhmmssddMMyyyy") + suffixImage;
+        var pathImage = imgfilename + "-" + DateTime.Now.ToString("hhmmssddMMyyyy") + suffixImage;
         try
         {
             if (resizeImage)
                 DH.Utilities.ImageResizer.ResizeFromStream(fileupload.PostedFile.InputStream, maxSize,
                                                            System.Drawing.Drawing2D.InterpolationMode.
                                                                HighQualityBilinear,
-                                                           Server.MapPath("~/" + Global.ImagesNews + pathImage));
+                                                           Server.MapPath("~/" + Global.ImagesVideo + pathImage));
             else
-                fileupload.SaveAs(Server.MapPath("~/" + Global.ImagesNews + pathImage));
+                fileupload.SaveAs(Server.MapPath("~/" + Global.ImagesVideo + pathImage));
         }
         catch (Exception)
         {
@@ -281,40 +217,7 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
             SaveValidate.ErrorMessage = msg.GetMessage("ERR-000013");
             return "";
         }
-        return Global.ImagesNews + pathImage;
-    }
-
-    public string CheckUploadImage(FileUpload fileupload, bool resizeImage, int maxWithSize, int maxHeightSize, int newsType)
-    {
-        if (fileupload.PostedFile.ContentLength == 0)
-            return "";
-        var suffixImage = Path.GetExtension(fileupload.FileName).ToLower();
-        if (suffixImage != ".jpg" && suffixImage != ".jpeg" && suffixImage != ".tif" && suffixImage != ".png" &&
-            suffixImage != ".gif" && suffixImage != ".bmp")
-            return "";
-        var imgfilename = fileupload.FileName.Substring(0, fileupload.FileName.Length - 4);
-        var pathImage = imgfilename + DateTime.Now.ToString("hhmmssddMMyyyy") + suffixImage;
-
-        try
-        {
-            if (resizeImage)
-                DH.Utilities.ImageResizer.ResizeFromStream(fileupload.PostedFile.InputStream, maxWithSize,
-                                                           maxHeightSize,
-                                                           System.Drawing.Drawing2D.InterpolationMode.
-                                                               HighQualityBilinear,
-                                                           DH.Utilities.EnumImageResizer.Align.Center,
-                                                           DH.Utilities.EnumImageResizer.Valign.Middle,
-                                                           Server.MapPath("~/" + Global.ImagesNews + pathImage));
-            else
-                fileupload.SaveAs(Server.MapPath("~/" + Global.ImagesNews + pathImage));
-        }
-        catch (Exception)
-        {
-            SaveValidate.IsValid = false;
-            SaveValidate.ErrorMessage = msg.GetMessage("ERR-000013");
-            return "";
-        }
-        return Global.ImagesNews + pathImage;
+        return Global.ImagesVideo + pathImage;
     }
 
     #endregion
