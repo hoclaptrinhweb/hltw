@@ -4041,10 +4041,14 @@ color:#326693;
     text-decoration:underline;
 }
 
-.tag1{font-size: 0.8em !important}
-.tag2{font-size: 0.9em !important}
-.tag3{font-size: 1em !important}
-.tag4{font-size: 1.2em !important}
-.tag5{font-size: 1.4em !important}
-.tag6{font-size: 1.7em !important}
-.tag7{font-size: 2.0em !important}
+.tagcloud .tag1{font-size: 0.8em !important}
+.tagcloud .tag2{ font-size: 0.9em !important;color: #00F}
+.tagcloud .tag3{ font-size: 1em !important;color: #600}
+.tagcloud .tag4{ font-size: 1.2em !important;color: #c60}
+.tagcloud .tag5{ font-size: 1.4em !important;color: #930}
+.tagcloud .tag6{ font-size: 1.7em !important;color: #300}
+.tagcloud .tag7{ font-size: 2.0em !important;color: #900}
+.tagcloud a:hover {
+background: #c00;
+color: #fff;
+}

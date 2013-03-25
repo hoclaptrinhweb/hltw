@@ -5,10 +5,10 @@ public partial class Theme : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //lrStyle.Text = Combres.WebExtensions.CombresLink("DefaultThemeCss");
-        //lrScript.Text = Combres.WebExtensions.CombresLink("DefaultThemeJs");
-        lrStyle.Text = "<link rel='stylesheet' type='text/css' href='" + UrlRoot + "/default.css'/>";
-        lrScript.Text = "<script type='text/javascript' src='" + UrlRoot + "/js/default.js'></script>";
+        lrStyle.Text = Combres.WebExtensions.CombresLink("DefaultThemeCss");
+        lrScript.Text = Combres.WebExtensions.CombresLink("DefaultThemeJs");
+        //  lrStyle.Text = "<link rel='stylesheet' type='text/css' href='" + UrlRoot + "/default.css'/>";
+        //  lrScript.Text = "<script type='text/javascript' src='" + UrlRoot + "/js/default.js'></script>";
         Login();
     }
 
