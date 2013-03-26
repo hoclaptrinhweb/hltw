@@ -99,6 +99,11 @@
                                 </asp:DropDownList>
                             </td>
                             <td>
+                                <asp:DropDownList ID="dropTag" runat="server" Width="80px">
+                                    <asp:ListItem Value="-1">Tất cả</asp:ListItem>
+                                    <asp:ListItem Value="0">Chưa tag</asp:ListItem>
+                                    <asp:ListItem Value="1">Đã tag</asp:ListItem>
+                                </asp:DropDownList>
                             </td>
                             <td>
                                 <span lang="en-us">
