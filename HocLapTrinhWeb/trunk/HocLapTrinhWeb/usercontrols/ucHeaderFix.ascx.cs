@@ -6,7 +6,7 @@ public partial class usercontrols_ucHeaderFix : DH.UI.UCBase
     protected override void Page_Load(object sender, EventArgs e)
     {
         base.Page_Load(sender, e);
-        GetMenuNewsType(-1);
+       // GetMenuNewsType(-1);
     }
     private void GetMenuNewsType(int productID)
     {
