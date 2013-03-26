@@ -3576,6 +3576,10 @@ Vo Nhat Nam
 	margin-left:10px;
     color: black;
 }
+.more_news a:hover
+{
+    text-decoration: underline;
+}
 .newsitem li span
 {
 	font-size: 17px;
