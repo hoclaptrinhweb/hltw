@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Web;
 using System.Web.Services;
 using HocLapTrinhWeb.BLL;
+using System.Web.Script.Services;
 
 /// <summary>
 /// Summary description for CommentNews
@@ -14,6 +15,7 @@ using HocLapTrinhWeb.BLL;
 public class CommentNews : WebService
 {
     [WebMethod(EnableSession = true)]
+    [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
     public string PostDataGuest(string username, string email, string content, int newsid, string keyname)
     {
         try
@@ -81,6 +83,7 @@ public class CommentNews : WebService
 
 
     [WebMethod(EnableSession = true)]
+    [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
     public string PostDataUser(string content, int newsid, string keyname)
     {
         try
@@ -160,6 +163,7 @@ public class CommentNews : WebService
     }
 
     [WebMethod(EnableSession = true)]
+    [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
     public string PostDataEmail(string email, string keyname)
     {
         if (HttpContext.Current.Session["captcha"] == null)
@@ -175,6 +179,7 @@ public class CommentNews : WebService
     }
 
     [WebMethod]
+    [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
     public string PostData(string type)
     {
         try
@@ -185,9 +190,9 @@ public class CommentNews : WebService
                 var autoAdv = new AutoAdvBLL(con);
                 //Kiểm tra bài viết có trong CSDL không
                 var ntype = 1;
-                if(type.Contains("360"))
+                if (type.Contains("360"))
                     ntype = 0;
-                var row = autoAdv.GetAutoAdvByDate(DateTime.Now.ToString("MM/dd/yyyy"),ntype);
+                var row = autoAdv.GetAutoAdvByDate(DateTime.Now.ToString("MM/dd/yyyy"), ntype);
                 if (row == null)
                     return "0";
                 dsHocLapTrinhWeb.tbl_AutoAdvDataTable dt;
@@ -248,5 +253,11 @@ public class CommentNews : WebService
         {
             return "0";
         }
+    }
+
+    [WebMethod]
+    public string PostDatai(int type)
+    {
+        return "nhat nam";
     }
 }
