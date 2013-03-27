@@ -53,6 +53,8 @@
                 <br />
                 Tin tức mới nhất về <a target="_blank" href="http://www.tinmoi.vn/samsung-galaxy-s4-e218.html">Samsung
                     Galaxy S4</a>
+                <br/>
+                tin tức <a target="_blank" href="http://trangcongnghe.com">công nghệ </a> việt nam
             </div>
         </div>
     </div>
