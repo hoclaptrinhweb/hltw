@@ -1231,6 +1231,7 @@ line-height:88px;
 }
 #footer a:hover {
     color:red !important;
+    text-decoration: underline;
 }
 
 .scrollTo_top {
