@@ -4,6 +4,7 @@ using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
 using System.IO;
 using System.Collections;
+using HtmlAgilityPack;
 
 
 public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
@@ -99,6 +100,17 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
                 row.VideoTypeID = int.Parse(dropNewsType.SelectedValue);
                 row.UpdatedBy = int.Parse(Session["UserID"].ToString());
                 row.CreatedBy = int.Parse(Session["UserID"].ToString());
+                if (txtLinkVideo.Text.Contains("youtube.com"))
+                {
+                    //YouTuBe
+                    var update = new UpdateNewsBase();
+                    var doc = update.GetContentFromUrl(txtLinkVideo.Text);
+                    row.Title = doc.DocumentNode.SelectSingleNode("//span[@id='eow-title']").InnerText.Replace("\n", "").Trim();
+                    var brief = doc.DocumentNode.SelectSingleNode("//p[@id='eow-description']").InnerText;
+                    row.Brief = (brief == "Không có mô tả nào." ? "" : brief);
+                    row.Thumbnail = doc.DocumentNode.SelectSingleNode("//meta[@property='og:image']").Attributes["content"].Value;
+                    row.RefAddress = txtLinkVideo.Text;
+                }
                 dt.Addtbl_VideoRow(row);
                 return videoBll.Add(dt);
             }
@@ -111,12 +123,12 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
             dt.Addtbl_VideoRow(row);
             if (videoBll.Update(dt))
             {
-                if (imgThumbnail.ImageUrl != ("~/" + row.Thumbnail) &&
-                    File.Exists(Server.MapPath(imgThumbnail.ImageUrl)))
-                {
-                    if (imgThumbnail.ImageUrl.ToLower() != "~/upload/image/noimage.jpg")
-                        File.Delete(Server.MapPath(imgThumbnail.ImageUrl));
-                }
+                if (imgThumbnail.ImageUrl.Contains("hoclaptrinhweb.com"))
+                    if (imgThumbnail.ImageUrl != ("~/" + row.Thumbnail) && File.Exists(Server.MapPath(imgThumbnail.ImageUrl)))
+                    {
+                        if (imgThumbnail.ImageUrl.ToLower() != "~/upload/image/noimage.jpg")
+                            File.Delete(Server.MapPath(imgThumbnail.ImageUrl));
+                    }
                 return true;
             }
             return false;

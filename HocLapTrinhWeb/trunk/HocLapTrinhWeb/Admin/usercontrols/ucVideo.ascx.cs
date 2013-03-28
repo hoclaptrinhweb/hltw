@@ -106,6 +106,8 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
             {
                 foreach (var t in arrImage)
                 {
+                    if (t.ToString().Contains("http://"))
+                        continue;
                     var filepath = Server.MapPath("~/" + Global.ImagesVideo + t);
                     if (File.Exists(filepath))
                         File.Delete(filepath);

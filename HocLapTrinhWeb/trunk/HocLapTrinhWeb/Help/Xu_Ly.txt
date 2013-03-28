@@ -9,4 +9,5 @@ Viết thêm Video
 Viết thêm hỏi và đáp
 
 ==> Đang xử lý phần tag trong tin tức
+==> Dựa vào acc vatgia để tính số lượng click tối đa
 
