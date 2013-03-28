@@ -255,9 +255,4 @@ public class CommentNews : WebService
         }
     }
 
-    [WebMethod]
-    public string PostDatai(int type)
-    {
-        return "nhat nam";
-    }
 }
