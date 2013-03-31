@@ -75,20 +75,15 @@
                             </td>
                             <td>
                                 <asp:DropDownList ID="dropVideoType" runat="server" DataSourceID="ObjectDataSource1"
-                                    DataTextField="TreeView" DataValueField="NewsTypeID" OnDataBound="DropVideoTypeDataBound"
+                                    DataTextField="TreeView" DataValueField="VideoTypeID" OnDataBound="DropVideoTypeDataBound"
                                     Width="100px">
                                 </asp:DropDownList>
                                 <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OnObjectCreating="ObjectDataSource1ObjectCreating"
-                                    SelectMethod="GetAllNewsTypeForGridView" TypeName="HocLapTrinhWeb.BLL.vnn_NewsTypeBLL">
+                                    SelectMethod="GetAllVideoTypeForGridView" TypeName="HocLapTrinhWeb.BLL.vnn_VideoTypeBLL">
                                 </asp:ObjectDataSource>
                             </td>
                             <td>
-                                <asp:DropDownList ID="dropRefSite" runat="server" DataSourceID="objRefSite" DataTextField="refsite"
-                                    DataValueField="refsite" OnDataBound="DropRefSiteDataBound" Width="100px">
-                                </asp:DropDownList>
-                                <asp:ObjectDataSource ID="objRefSite" runat="server" OnObjectCreating="ObjRefSiteObjectCreating"
-                                    SelectMethod="GetNewsTypeRefSiteForDropDownList" TypeName="HocLapTrinhWeb.BLL.ltk_ReferenceSiteBLL">
-                                </asp:ObjectDataSource>
+
                             </td>
                             <td>
                                 <asp:DropDownList ID="dropIsActive" runat="server" Width="80px">
@@ -146,7 +141,7 @@
                             <asp:TemplateField HeaderText="Xem">
                                 <HeaderStyle Width="6%" />
                                 <ItemTemplate>
-                                    <asp:HyperLink ID="htLink" Target="_blank" runat="server" NavigateUrl='<%# CurrentPage.UrlRoot + "/video/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("VideoID") +  ".aspx" %>'
+                                    <asp:HyperLink ID="htLink" Target="_blank" runat="server" NavigateUrl='<%# CurrentPage.UrlRoot + "/video/" +  XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("VideoID") +  ".aspx" %>'
                                         Text="Xem"></asp:HyperLink>
                                 </ItemTemplate>
                             </asp:TemplateField>
@@ -187,7 +182,7 @@
                         SelectMethod="GetAllVideoForGridView" StartRowIndexParameterName="startRowIndex"
                         TypeName="HocLapTrinhWeb.BLL.v_VideoBLL" OnSelected="ObjDataSelected" OnSelecting="ObjDataSelecting">
                         <SelectParameters>
-                            <asp:ControlParameter Name="NewsTypeID" ControlID="dropVideoType" />
+                            <asp:ControlParameter Name="VideoTypeID" ControlID="dropVideoType" />
                         </SelectParameters>
                     </asp:ObjectDataSource>
                 </div>
@@ -228,7 +223,7 @@
                                         </td>
                                         <td>
                                             <asp:DropDownList ID="drVideoTypeMove" runat="server" DataSourceID="ObjectDataSource1"
-                                                DataTextField="TreeView" DataValueField="NewsTypeID" OnDataBound="DrVideoTypeMoveDataBound">
+                                                DataTextField="TreeView" DataValueField="VideoTypeID" OnDataBound="DrVideoTypeMoveDataBound">
                                             </asp:DropDownList>
                                         </td>
                                     </tr>

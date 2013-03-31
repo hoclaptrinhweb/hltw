@@ -44,11 +44,11 @@
                     </td>
                     <td>
                         <asp:HiddenField ID="hdVideoTypeID" runat="server" />
-                        <asp:DropDownList ID="dropNewsType" runat="server" DataSourceID="ObjectDataSource1"
-                            DataTextField="TreeView" DataValueField="NewsTypeID" OnDataBound="DropNewsTypeDataBound">
+                        <asp:DropDownList ID="dropVideoType" runat="server" DataSourceID="ObjectDataSource1"
+                            DataTextField="TreeView" DataValueField="VideoTypeID" OnDataBound="DropVideoTypeDataBound">
                         </asp:DropDownList>
                         <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OnObjectCreating="ObjectDataSource1ObjectCreating"
-                            SelectMethod="GetAllNewsTypeForGridView" TypeName="HocLapTrinhWeb.BLL.vnn_NewsTypeBLL">
+                            SelectMethod="GetAllVideoTypeForGridView" TypeName="HocLapTrinhWeb.BLL.vnn_VideoTypeBLL">
                         </asp:ObjectDataSource>
                     </td>
                     <td class="tdBetween">
@@ -68,7 +68,7 @@
                     <td colspan="3">
                     </td>
                     <td>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="dropNewsType"
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="dropVideoType"
                             Display="Dynamic" ErrorMessage="Bạn chưa chọn loại tin" InitialValue="-1"></asp:RequiredFieldValidator>
                     </td>
                     <td colspan="5">

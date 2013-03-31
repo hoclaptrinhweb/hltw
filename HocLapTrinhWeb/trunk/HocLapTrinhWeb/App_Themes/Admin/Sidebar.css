@@ -111,6 +111,9 @@
 #main_menu li a.icn_video {
 	background: url('img/icons/small/video.png') no-repeat left;
 }
+#main_menu li a.icn_videotype {
+	background: url('img/icons/small/videotype.png') no-repeat left;
+}
 
 
 /*

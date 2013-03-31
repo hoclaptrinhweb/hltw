@@ -28,7 +28,7 @@ namespace HocLapTrinhWeb.BLL
         /// <param name="startRowIndex"></param>
         /// <param name="maximumRows"></param>
         /// <returns></returns>
-        public vnn_dsHocLapTrinhWeb.vnn_vw_VideoDataTable GetAllVideoForGridView(int startRowIndex, int maximumRows, int NewsTypeID)
+        public vnn_dsHocLapTrinhWeb.vnn_vw_VideoDataTable GetAllVideoForGridView(int startRowIndex, int maximumRows, int VideoTypeID)
         {
             var isOpen = false;
             try
@@ -65,7 +65,7 @@ namespace HocLapTrinhWeb.BLL
         /// Lấy lên số dòng dữ liệu
         /// </summary>
         /// <returns></returns>
-        public int GetAllVideoRowCount(int NewsTypeID)
+        public int GetAllVideoRowCount(int VideoTypeID)
         {
             var isOpen = false;
             try

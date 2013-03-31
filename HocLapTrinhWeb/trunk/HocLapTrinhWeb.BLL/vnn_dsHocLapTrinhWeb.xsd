@@ -2,13 +2,14 @@
 <xs:schema id="vnn_dsHocLapTrinhWeb" targetNamespace="http://tempuri.org/vnn_dsHocLapTrinhWeb.xsd" xmlns:mstns="http://tempuri.org/vnn_dsHocLapTrinhWeb.xsd" xmlns="http://tempuri.org/vnn_dsHocLapTrinhWeb.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="4" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="5" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HocLapTrinhWeb_MyLifeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HocLapTrinhWeb_MyLifeConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HocLapTrinhWeb.BLL.Properties.Settings.GlobalReference.Default.HocLapTrinhWeb_MyLifeConnectionString" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HocLapTrinhWeb_MyLifeConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HocLapTrinhWeb_MyLifeConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HocLapTrinhWeb.BLL.Properties.Settings.GlobalReference.Default.HocLapTrinhWeb_MyLifeConnectionString1" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HocLapTrinhWeb_MyLifeConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HocLapTrinhWeb_MyLifeConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HocLapTrinhWeb.BLL.Properties.Settings.GlobalReference.Default.HocLapTrinhWeb_MyLifeConnectionString2" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HocLapTrinhWeb_MyLifeConnectionString3" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HocLapTrinhWeb_MyLifeConnectionString3 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HocLapTrinhWeb.BLL.Properties.Settings.GlobalReference.Default.HocLapTrinhWeb_MyLifeConnectionString3" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HocLapTrinhWeb_MyLifeConnectionString4" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HocLapTrinhWeb_MyLifeConnectionString4 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HocLapTrinhWeb.BLL.Properties.Settings.GlobalReference.Default.HocLapTrinhWeb_MyLifeConnectionString4" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HLTW_MyLifeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HLTW_MyLifeConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HocLapTrinhWeb.BLL.Properties.Settings.GlobalReference.Default.HLTW_MyLifeConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables />
         <Sources />
@@ -981,6 +982,65 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="vnn_vw_VideoType" msprop:Generator_TableClassName="vnn_vw_VideoTypeDataTable" msprop:Generator_TableVarName="tablevnn_vw_VideoType" msprop:Generator_TablePropName="vnn_vw_VideoType" msprop:Generator_RowDeletingName="vnn_vw_VideoTypeRowDeleting" msprop:Generator_UserTableName="vnn_vw_VideoType" msprop:Generator_RowChangingName="vnn_vw_VideoTypeRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_VideoTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_VideoTypeRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_VideoTypeRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_VideoTypeRowChanged" msprop:Generator_RowClassName="vnn_vw_VideoTypeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VideoTypeID" msprop:Generator_ColumnVarNameInTable="columnVideoTypeID" msprop:Generator_ColumnPropNameInRow="VideoTypeID" msprop:Generator_ColumnPropNameInTable="VideoTypeIDColumn" msprop:Generator_UserColumnName="VideoTypeID" type="xs:int" />
+              <xs:element name="VideoTypeName" msprop:Generator_ColumnVarNameInTable="columnVideoTypeName" msprop:Generator_ColumnPropNameInRow="VideoTypeName" msprop:Generator_ColumnPropNameInTable="VideoTypeNameColumn" msprop:Generator_UserColumnName="VideoTypeName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Priority" msprop:Generator_ColumnVarNameInTable="columnPriority" msprop:Generator_ColumnPropNameInRow="Priority" msprop:Generator_ColumnPropNameInTable="PriorityColumn" msprop:Generator_UserColumnName="Priority" type="xs:int" minOccurs="0" />
+              <xs:element name="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" msprop:Generator_UserColumnName="IsActive" type="xs:int" minOccurs="0" />
+              <xs:element name="ParentID" msprop:Generator_ColumnVarNameInTable="columnParentID" msprop:Generator_ColumnPropNameInRow="ParentID" msprop:Generator_ColumnPropNameInTable="ParentIDColumn" msprop:Generator_UserColumnName="ParentID" type="xs:int" minOccurs="0" />
+              <xs:element name="ParentName" msprop:Generator_ColumnVarNameInTable="columnParentName" msprop:Generator_ColumnPropNameInRow="ParentName" msprop:Generator_ColumnPropNameInTable="ParentNameColumn" msprop:Generator_UserColumnName="ParentName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Path" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPath" msprop:Generator_ColumnPropNameInRow="Path" msprop:Generator_ColumnPropNameInTable="PathColumn" msprop:Generator_UserColumnName="Path" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TreeView" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTreeView" msprop:Generator_ColumnPropNameInRow="TreeView" msprop:Generator_ColumnPropNameInTable="TreeViewColumn" msprop:Generator_UserColumnName="TreeView" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PathID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPathID" msprop:Generator_ColumnPropNameInRow="PathID" msprop:Generator_ColumnPropNameInTable="PathIDColumn" msprop:Generator_UserColumnName="PathID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Images" msprop:Generator_ColumnVarNameInTable="columnImages" msprop:Generator_ColumnPropNameInRow="Images" msprop:Generator_ColumnPropNameInTable="ImagesColumn" msprop:Generator_UserColumnName="Images" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="vnn_vw_Video" msprop:Generator_TableClassName="vnn_vw_VideoDataTable" msprop:Generator_TableVarName="tablevnn_vw_Video" msprop:Generator_TablePropName="vnn_vw_Video" msprop:Generator_RowDeletingName="vnn_vw_VideoRowDeleting" msprop:Generator_UserTableName="vnn_vw_Video" msprop:Generator_RowChangingName="vnn_vw_VideoRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_VideoRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_VideoRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_VideoRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_VideoRowChanged" msprop:Generator_RowClassName="vnn_vw_VideoRow">
           <xs:complexType>
             <xs:sequence>
@@ -1053,7 +1113,7 @@
               <xs:element name="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" msprop:Generator_UserColumnName="IsActive" type="xs:boolean" />
               <xs:element name="MoveFrom" msprop:Generator_ColumnVarNameInTable="columnMoveFrom" msprop:Generator_ColumnPropNameInRow="MoveFrom" msprop:Generator_ColumnPropNameInTable="MoveFromColumn" msprop:Generator_UserColumnName="MoveFrom" type="xs:int" minOccurs="0" />
               <xs:element name="ParentID" msprop:Generator_ColumnVarNameInTable="columnParentID" msprop:Generator_ColumnPropNameInRow="ParentID" msprop:Generator_ColumnPropNameInTable="ParentIDColumn" msprop:Generator_UserColumnName="ParentID" type="xs:int" minOccurs="0" />
-              <xs:element name="NewsTypeName" msprop:Generator_ColumnVarNameInTable="columnNewsTypeName" msprop:Generator_ColumnPropNameInRow="NewsTypeName" msprop:Generator_ColumnPropNameInTable="NewsTypeNameColumn" msprop:Generator_UserColumnName="NewsTypeName">
+              <xs:element name="VideoTypeName" msprop:Generator_ColumnVarNameInTable="columnVideoTypeName" msprop:Generator_ColumnPropNameInRow="VideoTypeName" msprop:Generator_ColumnPropNameInTable="VideoTypeNameColumn" msprop:Generator_UserColumnName="VideoTypeName">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="250" />

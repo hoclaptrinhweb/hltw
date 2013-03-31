@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ucNewsType.ascx.cs" Inherits="Admin_usercontrols_NewsType" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ucVideoType.ascx.cs" Inherits="Admin_usercontrols_ucVideoType" %>
 <%@ Register Assembly="INNO.WebControls" Namespace="INNO.WebControls" TagPrefix="inno" %>
 <input type="hidden" id="notselect" value="<%=msg.GetMessage("ERR-000007")%>" />
 <input type="hidden" id="deleteconfirm" value="<%=msg.GetMessage("ERR-000008")%>" />
@@ -7,7 +7,7 @@
 <div id="page-content">
     <div id="page-header">
         <h1>
-            <asp:Label ID="lblPageHeader" runat="server" Text="Loại tin tức"></asp:Label></h1>
+            <asp:Label ID="lblPageHeader" runat="server" Text="Loại video"></asp:Label></h1>
     </div>
     <div class="container">
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
@@ -41,7 +41,7 @@
                 </div>
                 <div class="box table">
                     <asp:GridView CellPadding="0" Width="100%" CssClass="GridStyle" AutoGenerateColumns="False"
-                        AllowPaging="True" DataKeyNames="NewsTypeID" DataSourceID="ObjData" ID="gvData"
+                        AllowPaging="True" DataKeyNames="VideoTypeID" DataSourceID="ObjData" ID="gvData"
                         AllowSorting="True" runat="server" OnDataBound="GvDataDataBound" OnPageIndexChanging="GvDataPageIndexChanging">
                         <Columns>
                             <asp:TemplateField>
@@ -56,11 +56,11 @@
                                         runat="server" />
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Tên" SortExpression="NewsTypeName">
+                            <asp:TemplateField HeaderText="Tên" SortExpression="VideoTypeName">
                                 <HeaderStyle Width="25%"></HeaderStyle>
                                 <ItemTemplate>
-                                    <asp:HiddenField ID="hdNewsTypeID" Value='<%# Eval("NewsTypeID") %>' runat="server" />
-                                    <asp:HyperLink ID="hpNewsTypeName" Target="_blank" runat="server" NavigateUrl='<%# CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/hltw" + Eval("NewsTypeID")+ ".aspx" %>'
+                                    <asp:HiddenField ID="hdVideoTypeID" Value='<%# Eval("VideoTypeID") %>' runat="server" />
+                                    <asp:HyperLink ID="hpVideoTypeName" Target="_blank" runat="server" NavigateUrl='<%# CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/hltw" + Eval("VideoTypeID")+ ".aspx" %>'
                                         Text='<%# Eval("TreeView") %>'></asp:HyperLink>
                                 </ItemTemplate>
                             </asp:TemplateField>
@@ -86,8 +86,8 @@
                             <asp:Label ID="lblNoItem" runat="server" Text="Updating data"></asp:Label>
                         </EmptyDataTemplate>
                     </asp:GridView>
-                    <asp:ObjectDataSource ID="ObjData" runat="server" TypeName="HocLapTrinhWeb.BLL.vnn_NewsTypeBLL"
-                        EnablePaging="True" SelectMethod="GetAllNewsTypeForGridView" SelectCountMethod="GetAllNewsTypeRowCount"
+                    <asp:ObjectDataSource ID="ObjData" runat="server" TypeName="HocLapTrinhWeb.BLL.vnn_VideoTypeBLL"
+                        EnablePaging="True" SelectMethod="GetAllVideoTypeForGridView" SelectCountMethod="GetAllVideoTypeRowCount"
                         OnObjectCreating="ObjDataObjectCreating" OnSelected="ObjDataSelected" OnSelecting="ObjDataSelecting">
                     </asp:ObjectDataSource>
                 </div>
@@ -103,7 +103,7 @@
                 <ContentTemplate>
                     <asp:HiddenField runat="server" ID="hdIsAddSuccessful" Value="0" />
                     <asp:HiddenField runat="server" ID="hdEdit" Value="0" />
-                    <asp:HiddenField runat="server" ID="hdNewsTypeID" Value="0" />
+                    <asp:HiddenField runat="server" ID="hdVideoTypeID" Value="0" />
                     <table cellpadding="3">
                         <tr>
                             <td class="midleft">
@@ -126,11 +126,11 @@
                                         <td class="Require">
                                         </td>
                                         <td>
-                                            <asp:DropDownList ID="dropNewsType" runat="server" AutoPostBack="False" DataSourceID="ObjNewsType"
-                                                DataTextField="TreeView" DataValueField="NewsTypeID" OnDataBound="DropNewsTypeDataBound">
+                                            <asp:DropDownList ID="dropVideoType" runat="server" AutoPostBack="False" DataSourceID="ObjVideoType"
+                                                DataTextField="TreeView" DataValueField="VideoTypeID" OnDataBound="DropVideoTypeDataBound">
                                             </asp:DropDownList>
-                                            <asp:ObjectDataSource ID="ObjNewsType" runat="server" OnObjectCreating="ObjNewsTypeObjectCreating"
-                                                SelectMethod="GetAllNewsTypeForGridView" TypeName="HocLapTrinhWeb.BLL.vnn_NewsTypeBLL">
+                                            <asp:ObjectDataSource ID="ObjVideoType" runat="server" OnObjectCreating="ObjVideoTypeObjectCreating"
+                                                SelectMethod="GetAllVideoTypeForGridView" TypeName="HocLapTrinhWeb.BLL.vnn_VideoTypeBLL">
                                             </asp:ObjectDataSource>
                                         </td>
                                     </tr>
@@ -138,22 +138,22 @@
                                     </tr>
                                     <tr valign="top">
                                         <td>
-                                            <asp:Label ID="lblNewsTypeName" CssClass="Caption" runat="server" Text="Tên"></asp:Label>
+                                            <asp:Label ID="lblVideoTypeName" CssClass="Caption" runat="server" Text="Tên"></asp:Label>
                                         </td>
                                         <td class="tdempty">
                                         </td>
                                         <td class="Require">
                                         </td>
                                         <td>
-                                            <asp:TextBox ID="txtNewsTypeName" runat="server" Width="300px"></asp:TextBox>
+                                            <asp:TextBox ID="txtVideoTypeName" runat="server" Width="300px"></asp:TextBox>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td colspan="3">
                                         </td>
                                         <td>
-                                            <asp:RequiredFieldValidator ID="rfvNewsTypeName" runat="server" ErrorMessage="Phải nhập tên"
-                                                Display="Dynamic" ValidationGroup="vAdd" ControlToValidate="txtNewsTypeName"
+                                            <asp:RequiredFieldValidator ID="rfvVideoTypeName" runat="server" ErrorMessage="Phải nhập tên"
+                                                Display="Dynamic" ValidationGroup="vAdd" ControlToValidate="txtVideoTypeName"
                                                 SetFocusOnError="True"></asp:RequiredFieldValidator>
                                         </td>
                                     </tr>
@@ -237,11 +237,11 @@
     function EndRequestHandler(sender, args)//ajax return value
     {
         if (isAdd) {
-            showPopupDiv('divAdd', 'Thêm NewsType', null, null, true, null, null, null); //absolute
+            showPopupDiv('divAdd', 'Thêm VideoType', null, null, true, null, null, null); //absolute
             isAdd = false;
         }
         if (isEdit) {
-            showPopupDiv('divAdd', 'Sửa thông tin NewsType', null, null, true, null, null, null);
+            showPopupDiv('divAdd', 'Sửa thông tin VideoType', null, null, true, null, null, null);
             isEdit = false;
         }
         var hdIsSuccessful = document.getElementById('<%= hdIsAddSuccessful.ClientID%>');
