@@ -3,8 +3,6 @@ using System.Globalization;
 using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
 using System.IO;
-using System.Collections;
-using HtmlAgilityPack;
 
 
 public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
@@ -23,8 +21,8 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
 
     protected void ObjectDataSource1ObjectCreating(object sender, ObjectDataSourceEventArgs e)
     {
-        var vnnNewsTypeBll = new vnn_NewsTypeBLL(CurrentPage.getCurrentConnection());
-        e.ObjectInstance = vnnNewsTypeBll;
+        var vnnVideoTypeBll = new vnn_VideoTypeBLL(CurrentPage.getCurrentConnection());
+        e.ObjectInstance = vnnVideoTypeBll;
     }
 
     protected void BtnSaveClick(object sender, EventArgs e)
@@ -44,9 +42,9 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
         Response.Redirect("Video.aspx");
     }
 
-    protected void DropNewsTypeDataBound(object sender, EventArgs e)
+    protected void DropVideoTypeDataBound(object sender, EventArgs e)
     {
-        dropNewsType.Items.Insert(0, new ListItem("Chọn Loại Tin", "-1"));
+        dropVideoType.Items.Insert(0, new ListItem("Chọn Loại Tin", "-1"));
     }
 
     #endregion
@@ -89,15 +87,15 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
             row.UpdatedDate = DateTime.Now;
             row.IPUpdate = txtIPUpdate.Text;
             row.RefAddress = txtNguon.Text;
-            var pathImage = CheckUploadImageThumbnail(XuLyChuoi.ConvertToUnSign(txtTitle.Text), fileuploadThumbnail, false, Global.MaxThumbnailSize, int.Parse(dropNewsType.SelectedValue));
+            var pathImage = CheckUploadImageThumbnail(XuLyChuoi.ConvertToUnSign(txtTitle.Text), fileuploadThumbnail, false, Global.MaxThumbnailSize, int.Parse(dropVideoType.SelectedValue));
             row.Thumbnail = pathImage != "" ? pathImage : imgThumbnail.ImageUrl.Replace("~/", "");
             row.IsHot = false;
             row.IsActive = cboxActive.Checked;
             if (VideoID == -1)
             {
                 row.CreatedDate = DateTime.Now;
-                row.MoveFrom = int.Parse(dropNewsType.SelectedValue);
-                row.VideoTypeID = int.Parse(dropNewsType.SelectedValue);
+                row.MoveFrom = int.Parse(dropVideoType.SelectedValue);
+                row.VideoTypeID = int.Parse(dropVideoType.SelectedValue);
                 row.UpdatedBy = int.Parse(Session["UserID"].ToString());
                 row.CreatedBy = int.Parse(Session["UserID"].ToString());
                 if (txtLinkVideo.Text.Contains("youtube.com"))
@@ -116,7 +114,7 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
             }
             row.IPUpdate = DH.Utilities.Net.GetVisitorIPAddress();
             row.UpdatedBy = int.Parse(Session["UserID"].ToString());
-            row.VideoTypeID = int.Parse(dropNewsType.SelectedValue);
+            row.VideoTypeID = int.Parse(dropVideoType.SelectedValue);
             row.MoveFrom = int.Parse(hdVideoTypeID.Value);
             row.VideoID = VideoID;
             row.CreatedDate = Convert.ToDateTime(txtNgaytao.Text);
@@ -168,7 +166,7 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
         {
             var rNews = videoBll.GetVideoByID(newsID);
             if (rNews == null) return;
-            dropNewsType.SelectedValue = rNews.VideoTypeID.ToString(CultureInfo.InvariantCulture);
+            dropVideoType.SelectedValue = rNews.VideoTypeID.ToString(CultureInfo.InvariantCulture);
             hdVideoTypeID.Value = rNews.VideoTypeID.ToString(CultureInfo.InvariantCulture);
             hdVideoID.Value = rNews.VideoID.ToString(CultureInfo.InvariantCulture);
             txtTitle.Text = rNews.Title;

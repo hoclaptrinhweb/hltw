@@ -25,12 +25,6 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
         e.ObjectInstance = vnnVideoBll;
     }
 
-    protected void ObjRefSiteObjectCreating(object sender, ObjectDataSourceEventArgs e)
-    {
-        var ltkReferenceSiteBll = new ltk_ReferenceSiteBLL(CurrentPage.getCurrentConnection());
-        e.ObjectInstance = ltkReferenceSiteBll;
-    }
-
     protected void GvDataRowDataBound(object sender, GridViewRowEventArgs e)
     {
         if (e.Row.RowType != DataControlRowType.DataRow) return;
@@ -87,7 +81,7 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
 
     protected void BtnDeleteClick(object sender, EventArgs e)
     {
-        var VideoBll = new t_VideoBLL(CurrentPage.getCurrentConnection());
+        var videoBll = new t_VideoBLL(CurrentPage.getCurrentConnection());
         try
         {
             var arrID = new ArrayList();
@@ -102,7 +96,7 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
                 if (!string.IsNullOrEmpty(hdThumbnail.Value))
                     arrImage.Add(hdThumbnail.Value);
             }
-            if (VideoBll.Delete(arrID))
+            if (videoBll.Delete(arrID))
             {
                 foreach (var t in arrImage)
                 {
@@ -116,7 +110,7 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
                 return;
             }
             SaveValidate.IsValid = false;
-            SaveValidate.ErrorMessage = msg.GetMessage(VideoBll.getMsgCode());
+            SaveValidate.ErrorMessage = msg.GetMessage(videoBll.getMsgCode());
         }
         catch
         {
@@ -156,19 +150,13 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
     /// <param name="e"></param>
     protected void ObjectDataSource1ObjectCreating(object sender, ObjectDataSourceEventArgs e)
     {
-        var vnnNewsTypeBll = new vnn_NewsTypeBLL(CurrentPage.getCurrentConnection());
-        e.ObjectInstance = vnnNewsTypeBll;
-
+        var vnnVideoTypeBll = new vnn_VideoTypeBLL(CurrentPage.getCurrentConnection());
+        e.ObjectInstance = vnnVideoTypeBll;
     }
 
     protected void DropVideoTypeDataBound(object sender, EventArgs e)
     {
         dropVideoType.Items.Insert(0, new ListItem("Tất cả", "-1"));
-    }
-
-    protected void DropRefSiteDataBound(object sender, EventArgs e)
-    {
-        dropRefSite.Items.Insert(0, new ListItem("Tất cả", ""));
     }
 
     //Sửa tin nhanh
