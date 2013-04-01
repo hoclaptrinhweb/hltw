@@ -28,10 +28,12 @@ public partial class Admin_usercontrols_ucCommentNews : DH.UI.UCBase
             {
                 if (hdEdit.Value == "1")
                 {
-                    tblSaveExpress.Visible = true;
+                    btnEditExpress.Text = "Hủy bỏ";
+                    btnEdit.Visible = false;
+                    btnDelete.Visible = false;
+                    btnSaveExpress.Visible = true;
                     var chckAllIsActive = (CheckBox)gvData.HeaderRow.FindControl("chckAllIsActive");
                     chckAllIsActive.Enabled = true;
-
                     foreach (GridViewRow row in gvData.Rows)
                     {
                         var chckIsActive = (CheckBox)row.FindControl("chckIsActive");
@@ -39,7 +41,12 @@ public partial class Admin_usercontrols_ucCommentNews : DH.UI.UCBase
                     }
                 }
                 else
-                    tblSaveExpress.Visible = false;
+                {
+                    btnEditExpress.Text = "Chỉnh sửa nhanh";
+                    btnSaveExpress.Visible = false;
+                    btnEdit.Visible = true;
+                    btnDelete.Visible = true;
+                }
                 btnEdit.Enabled = true;
                 btnDelete.Enabled = true;
             }
@@ -154,7 +161,7 @@ public partial class Admin_usercontrols_ucCommentNews : DH.UI.UCBase
     //Sửa tin nhanh
     protected void BtnEditExpressClick(object sender, EventArgs e)
     {
-        hdEdit.Value = "1";
+        hdEdit.Value = btnEditExpress.Text != "Hủy bỏ" ? "1" : "0";
         gvData.DataBind();
     }
 
