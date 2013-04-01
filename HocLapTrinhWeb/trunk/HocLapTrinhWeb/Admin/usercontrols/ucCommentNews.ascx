@@ -24,6 +24,9 @@
                         <asp:Label ID="lbTotal" runat="server"></asp:Label>
                         <asp:Button ID="btnEditExpress" runat="server" CausesValidation="False" CssClass="button"
                             OnClick="BtnEditExpressClick" Text="Chỉnh sửa nhanh" />
+                        <asp:Button ID="btnSaveExpress" runat="server" CausesValidation="False" CssClass="button"
+                            OnClick="BtnSaveExpressClick" OnClientClick="if(!Confirm('updateconfirm')) return;"
+                            Text="Lưu thay đổi" UseSubmitBehavior="False" />
                         <asp:Button ID="btnEdit" CssClass="button" runat="server" UseSubmitBehavior="False"
                             Text="Sửa" CausesValidation="False" OnClientClick="if(!IsEdit('chckSelect','notselect')) return; showClose=true;isEdit=true;"
                             OnClick="BtnEditClick" />
@@ -105,16 +108,6 @@
                             <asp:ControlParameter ControlID="dropCommentNewsType" Name="IsActive" PropertyName="SelectedValue" />
                         </SelectParameters>
                     </asp:ObjectDataSource>
-                    <table width="100%" runat="server" visible="false" id="tblSaveExpress" cellpadding="0"
-                        cellspacing="0">
-                        <tr>
-                            <td align="right">
-                                <asp:Button ID="btnSaveExpress" runat="server" CausesValidation="False" CssClass="button"
-                                    OnClick="BtnSaveExpressClick" OnClientClick="if(!Confirm('updateconfirm')) return;"
-                                    Text="Lưu thay đổi" UseSubmitBehavior="False" />
-                            </td>
-                        </tr>
-                    </table>
                 </div>
             </ContentTemplate>
             <Triggers>
