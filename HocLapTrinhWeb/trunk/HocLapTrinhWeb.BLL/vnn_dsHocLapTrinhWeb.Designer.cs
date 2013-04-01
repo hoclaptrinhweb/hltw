@@ -11093,7 +11093,6 @@ namespace HocLapTrinhWeb.BLL {
                 this.columnIPUpdate.AllowDBNull = false;
                 this.columnIPUpdate.MaxLength = 50;
                 this.columnIsActive.AllowDBNull = false;
-                this.columnVideoTypeName.AllowDBNull = false;
                 this.columnVideoTypeName.MaxLength = 250;
                 this.columnUserName.AllowDBNull = false;
                 this.columnUserName.MaxLength = 50;
@@ -16538,7 +16537,12 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string VideoTypeName {
                 get {
-                    return ((string)(this[this.tablevnn_vw_Video.VideoTypeNameColumn]));
+                    try {
+                        return ((string)(this[this.tablevnn_vw_Video.VideoTypeNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'VideoTypeName\' in table \'vnn_vw_Video\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablevnn_vw_Video.VideoTypeNameColumn] = value;
@@ -16678,6 +16682,18 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetParentIDNull() {
                 this[this.tablevnn_vw_Video.ParentIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVideoTypeNameNull() {
+                return this.IsNull(this.tablevnn_vw_Video.VideoTypeNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVideoTypeNameNull() {
+                this[this.tablevnn_vw_Video.VideoTypeNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
