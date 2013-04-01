@@ -25,7 +25,7 @@
                                     Text="Cập nhật tin" UseSubmitBehavior="false" OnClientClick="if(!IsEdit('chckSelect','notselect')) return; showClose=true;isUpdate=true;"
                                     OnClick="BtnUpdateClick" />
                                 <asp:Button ID="btnRefresh" CssClass="button" runat="server" UseSubmitBehavior="false"
-                                    Text="Làm mới trang" OnClick="BtnRefreshClick" />
+                                    Text="Làm mới" OnClick="BtnRefreshClick" />
                                 <asp:Button ID="btnDelete" CssClass="button" runat="server" UseSubmitBehavior="False"
                                     Text="Xóa" OnClientClick="if(! IsDelete('chckSelect','notselect','deleteconfirm')) return;"
                                     CausesValidation="False" OnClick="BtnDeleteClick" />
