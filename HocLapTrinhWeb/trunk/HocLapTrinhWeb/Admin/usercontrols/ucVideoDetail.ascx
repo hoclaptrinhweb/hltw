@@ -1,4 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ucVideoDetail.ascx.cs" Inherits="Admin_usercontrols_ucVideoDetail" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ucVideoDetail.ascx.cs"
+    Inherits="Admin_usercontrols_ucVideoDetail" %>
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <%@ Register Assembly="INNO.WebControls" Namespace="INNO.WebControls" TagPrefix="inno" %>
 <link rel="stylesheet" type="text/css" href="http://xoxco.com/projects/code/tagsinput/jquery.tagsinput.css" />
@@ -148,21 +149,11 @@
                     </td>
                     <td>
                     </td>
-                    <td class="Require">
+                    <td>
                     </td>
                     <td colspan="6">
-                        <asp:TextBox ID="txtBrief" runat="server" Rows="5" Width="100%" MaxLength="2000"
+                        <asp:TextBox ID="txtBrief" runat="server" Rows="3" Width="100%" MaxLength="2000"
                             TextMode="MultiLine"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                    </td>
-                    <td colspan="6">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtBrief"
-                            ErrorMessage="Hãy nhập dữ liệu" Display="Dynamic"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtBrief"
-                            Display="dynamic" ErrorMessage="<p>Tối đa 2000 ký tự</p>" ValidationExpression="^([\S\s]{0,2000})$"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr class="trEmpty">
@@ -202,7 +193,7 @@
                     <td>
                     </td>
                     <td colspan="6">
-                        <CKEditor:CKEditorControl ID="FCKContent" runat="server" Height="400" BasePath="~/ckeditor">
+                        <CKEditor:CKEditorControl ID="FCKContent" runat="server" Height="200" BasePath="~/ckeditor">
                         </CKEditor:CKEditorControl>
                     </td>
                 </tr>

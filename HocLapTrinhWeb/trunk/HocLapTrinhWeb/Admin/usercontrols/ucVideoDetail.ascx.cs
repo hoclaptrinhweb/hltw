@@ -13,6 +13,7 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
     {
         base.Page_Load(sender, e);
         if (IsPostBack) return;
+        dropVideoType.DataBind();
         if (VideoID == -1)
             OnLoad();
         else
@@ -98,17 +99,6 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
                 row.VideoTypeID = int.Parse(dropVideoType.SelectedValue);
                 row.UpdatedBy = int.Parse(Session["UserID"].ToString());
                 row.CreatedBy = int.Parse(Session["UserID"].ToString());
-                if (txtLinkVideo.Text.Contains("youtube.com"))
-                {
-                    //YouTuBe
-                    var update = new UpdateNewsBase();
-                    var doc = update.GetContentFromUrl(txtLinkVideo.Text);
-                    row.Title = doc.DocumentNode.SelectSingleNode("//span[@id='eow-title']").InnerText.Replace("\n", "").Trim();
-                    var brief = doc.DocumentNode.SelectSingleNode("//p[@id='eow-description']").InnerText;
-                    row.Brief = (brief == "Không có mô tả nào." ? "" : brief);
-                    row.Thumbnail = doc.DocumentNode.SelectSingleNode("//meta[@property='og:image']").Attributes["content"].Value;
-                    row.RefAddress = txtLinkVideo.Text;
-                }
                 dt.Addtbl_VideoRow(row);
                 return videoBll.Add(dt);
             }
@@ -172,23 +162,21 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
             txtTitle.Text = rNews.Title;
             txtLinkVideo.Text = rNews.VideoURL;
             txtBrief.Text = rNews.Brief;
-            FCKContent.Text = rNews.Content;
+            FCKContent.Text = rNews.IsContentNull() ? "" : rNews.Content;
             //   txtMoveFrom.Text = rNews.NameMoveFrom ?? "";
             txtkeyword.Text = rNews.IsKeywordNull() ? "" : rNews.Keyword;
-            txtDouutien.Text = rNews.Priority.ToString(CultureInfo.InvariantCulture);
+            txtDouutien.Text = rNews.IsPriorityNull() ? "0" : rNews.Priority.ToString();
             txtIPCreate.Text = rNews.IPAddress;
             txtIPUpdate.Text = rNews.IPUpdate;
             txtNgaycapnhat.Text = DateTime.Parse(rNews.UpdatedDate.ToString(), new CultureInfo(CurrentPage.Language), DateTimeStyles.None).ToString();
             txtNgaytao.Text = DateTime.Parse(rNews.CreatedDate.ToString(), new CultureInfo(CurrentPage.Language), DateTimeStyles.None).ToString();
             txtNguon.Text = rNews.IsRefAddressNull() ? "" : rNews.RefAddress;
-            txtSolanxem.Text = rNews.Viewed.ToString(CultureInfo.InvariantCulture);
+            txtSolanxem.Text = rNews.IsViewedNull() ? "0" : rNews.Viewed.ToString(CultureInfo.InvariantCulture);
             //    txtUserCreate.Text = rNews.CreatedByUserName;
             hdCreatedBy.Value = rNews.CreatedBy.ToString(CultureInfo.InvariantCulture);
             //    txtUserUpdate.Text = rNews.UpdatedByUserName;
             hdUpdateBy.Value = rNews.UpdatedBy.ToString(CultureInfo.InvariantCulture);
             cboxActive.Checked = rNews.IsActive;
-            cboxDelete.Checked = rNews.IsDelete;
-            cboxHot.Checked = rNews.IsHot;
             if (rNews.IsThumbnailNull() || rNews.Thumbnail == "")
                 imgThumbnail.Visible = false;
             else
