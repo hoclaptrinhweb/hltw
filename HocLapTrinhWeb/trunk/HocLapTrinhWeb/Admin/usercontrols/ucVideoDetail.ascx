@@ -38,6 +38,8 @@
                     <td style="width: 100px">
                         <asp:HiddenField ID="hdVideoID" runat="server" />
                         <asp:Label ID="Label2" runat="server" Text="Loại tin" CssClass="Caption"></asp:Label>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="dropVideoType"
+                            Display="Dynamic" ErrorMessage="Bạn chưa chọn loại tin" InitialValue="-1">(*)</asp:RequiredFieldValidator>
                     </td>
                     <td class="tdEmpty">
                     </td>
@@ -65,16 +67,6 @@
                         <asp:Label ID="txtMoveFrom" runat="server"></asp:Label>
                     </td>
                 </tr>
-                <tr>
-                    <td colspan="3">
-                    </td>
-                    <td>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="dropVideoType"
-                            Display="Dynamic" ErrorMessage="Bạn chưa chọn loại tin" InitialValue="-1"></asp:RequiredFieldValidator>
-                    </td>
-                    <td colspan="5">
-                    </td>
-                </tr>
                 <tr class="trEmpty">
                     <td colspan="3">
                     </td>
@@ -86,6 +78,10 @@
                 <tr valign="top">
                     <td>
                         <asp:Label ID="Label3" runat="server" Text="Tiêu đề" CssClass="Caption"></asp:Label>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" Display="dynamic"
+                            ControlToValidate="txtTitle" ValidationExpression="^([\S\s]{0,500})$" ErrorMessage="<p>Tối đa 500 ký tự</p>">(*)</asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic"
+                            ControlToValidate="txtTitle" ErrorMessage="Hãy nhập dữ liệu">(*)</asp:RequiredFieldValidator>
                     </td>
                     <td>
                     </td>
@@ -93,16 +89,6 @@
                     </td>
                     <td colspan="6">
                         <asp:TextBox ID="txtTitle" runat="server" Width="100%" MaxLength="500"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                    </td>
-                    <td colspan="6">
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" Display="dynamic"
-                            ControlToValidate="txtTitle" ValidationExpression="^([\S\s]{0,500})$" ErrorMessage="<p>Tối đa 500 ký tự</p>"></asp:RegularExpressionValidator>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic"
-                            ControlToValidate="txtTitle" ErrorMessage="Hãy nhập dữ liệu"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr class="trEmpty">
@@ -116,6 +102,10 @@
                 <tr valign="top">
                     <td>
                         <asp:Label ID="Label7" runat="server" Text="Link Video" CssClass="Caption"></asp:Label>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" Display="dynamic"
+                            ControlToValidate="txtTitle" ValidationExpression="^([\S\s]{0,500})$" ErrorMessage="<p>Tối đa 500 ký tự</p>">(*)</asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic"
+                            ControlToValidate="txtTitle" ErrorMessage="Hãy nhập dữ liệu">(*)</asp:RequiredFieldValidator>
                     </td>
                     <td>
                     </td>
@@ -123,16 +113,6 @@
                     </td>
                     <td colspan="6">
                         <asp:TextBox ID="txtLinkVideo" runat="server" Width="100%" MaxLength="500"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                    </td>
-                    <td colspan="6">
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" Display="dynamic"
-                            ControlToValidate="txtTitle" ValidationExpression="^([\S\s]{0,500})$" ErrorMessage="<p>Tối đa 500 ký tự</p>"></asp:RegularExpressionValidator>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic"
-                            ControlToValidate="txtTitle" ErrorMessage="Hãy nhập dữ liệu"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr class="trEmpty">
@@ -228,6 +208,9 @@
                 <tr valign="top">
                     <td>
                         <asp:Label ID="Label6" runat="server" Text="Ảnh" CssClass="Caption"></asp:Label>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="fileuploadThumbnail"
+                            ErrorMessage="Sai định dạng. Chọn định dạng jpg, gif, png, bmp" Display="Dynamic"
+                            ValidationExpression="^.*\.((j|J)(p|P)(e|E)?(g|G)|(g|G)(i|I)(f|F)|(p|P)(n|N)(g|G)|(b|B)(m|M)(p|P))$">(*)</asp:RegularExpressionValidator>
                     </td>
                     <td>
                     </td>
@@ -246,15 +229,6 @@
                                 </td>
                             </tr>
                         </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                    </td>
-                    <td colspan="6">
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="fileuploadThumbnail"
-                            ErrorMessage="Sai định dạng. Chọn định dạng jpg, gif, png, bmp" Display="Dynamic"
-                            ValidationExpression="^.*\.((j|J)(p|P)(e|E)?(g|G)|(g|G)(i|I)(f|F)|(p|P)(n|N)(g|G)|(b|B)(m|M)(p|P))$"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr class="trEmpty">
