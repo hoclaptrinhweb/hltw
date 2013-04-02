@@ -9,6 +9,11 @@
         else {
             $('.scrollTo_top').fadeOut(300);
         }
+        if ($(this).scrollTop() > $("#vbdAd").offset().top + $("#vbdAd").height() && $(this).scrollTop() < $(document).height() - 900) {
+            $("#divTag").addClass("tagcloudTop");
+        } else {
+            $("#divTag").removeClass("tagcloudTop");            
+        }
     });
 
     $('.scrollTo_top a').click(function () {
