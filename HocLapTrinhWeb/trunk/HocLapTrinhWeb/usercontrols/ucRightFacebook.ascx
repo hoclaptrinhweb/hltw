@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="ucRightFacebook.ascx.cs"
     Inherits="usercontrols_ucRightFacebook" %>
 <%@ Register Src="ucTagCount.ascx" TagName="ucTagCount" TagPrefix="uc1" %>
-<div class="box_outer">
+<div id="divTag" class="box_outer">
     <div class="widget">
         <h3 class="widget_title">
             Từ khoá nổi bật</h3>
@@ -53,8 +53,7 @@
                 <br />
                 Tin tức mới nhất về <a target="_blank" href="http://www.tinmoi.vn/samsung-galaxy-s4-e218.html">Samsung
                     Galaxy S4</a>
-                <br/>
-                tin tức <a target="_blank" href="http://trangcongnghe.com">công nghệ </a> việt nam
+                <br />Chuyên mục <a target="_blank" href="http://www.techz.vn/C/dien-thoai-rv">đánh giá điện thoại</a> smartphone 2013
             </div>
         </div>
     </div>
@@ -65,7 +64,7 @@
     <script type="text/javascript">        var is_load_adnet_lib = is_load_adnet_lib || 1; if (is_load_adnet_lib == 1) { is_load_adnet_lib = 2; if (typeof (jQuery) == 'undefined') { document.write(unescape("%3Cscript src='http://s0.adnet.vn/jquery.min.js' type='text/javascript'%3E%3C/script%3E")); } document.write(unescape("%3Cscript src='http://s0.adnet.vn/js/adnet34.js' type='text/javascript'%3E%3C/script%3E")); }</script>
     <script type="text/javascript" src="http://widget.adnet.vn/js/js.php?widget_id=20114"></script>
 </div>
-<div class="box_outer">
+<div id="vbdAd" class="box_outer">
     <embed onmousedown="AdsvnRenderClick(912)" src="<%= CurrentPage.UrlRoot %>/images/ads/vietbando336x140.swf"
         flashvars="stringURL=http%3A%2F%2Fwww.vietbando.com" width="300px" pluginspage="http://www.macromedia.com/go/getflashplayer"
         type="application/x-shockwave-flash" allowscriptaccess="always" wmode="transparent"

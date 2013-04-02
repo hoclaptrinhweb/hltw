@@ -4057,3 +4057,8 @@ color:#326693;
 background: #c00;
 color: #fff;
 }
+
+.tagcloudTop {
+    position: fixed;
+    top: 38px;
+}
