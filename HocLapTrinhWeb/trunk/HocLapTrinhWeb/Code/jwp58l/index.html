@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="swfobject.js" type="text/javascript"></script>
+    <script src="jwplayer.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="jwplayer" style="position: relative; width: 641px; height: 391px;"></div>
+
+    <script type="text/javascript">
+      jwplayer("jwplayer").setup({
+      'flashplayer': "player.swf",
+      'width': '641',
+      'height': '391',
+      'allowfullscreen':'true',
+      'allowscriptaccess':'always',
+      'wmode':'opaque',
+      'controlbar':'over',
+      'dock':'true',
+      'dock.position':'left',
+      'mute':'false',
+      'stretching':'uniform',
+      'autostart': 'true',
+      'file': 'http://www.youtube.com/watch?v=YXfm6ijkVvg',
+      'logo.file':'logo.png',
+      'logo.hide':'false',
+      'logo.position':'top-right',
+      'logo.link':'http://www.hoclaptrinhweb.com',
+      'abouttext':'Hoclaptrinhweb',
+      'aboutlink':'http://www.hoclaptrinhweb.com',
+      'skin':'NewTubeDark.zip'
+      });
+    </script>
+  </body>
+</html>
