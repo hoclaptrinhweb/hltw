@@ -31,6 +31,8 @@
         }
     </style>
     <script src="jwplayer.js" type="text/javascript"></script>
+    <script type="text/javascript">jwplayer.key = "9eRb2RMTClpeSt2vbXbNzdEPVQa3FPt5nu9WTw==";</script>
+    
 </head>
 <body>
     <div id='my-video'>
@@ -39,7 +41,11 @@
         jwplayer('my-video').setup({
             file: 'http://www.youtube.com/watch?v=YXfm6ijkVvg',
             width: '640',
-            height: '360'
+            height: '360',
+            logo: {
+                file: "http://www.hoclaptrinhweb.com/images/logo.png",
+                link: "http://www.hoclaptrinhweb.com/"
+            }
         });
     </script>
     <h1>
