@@ -110,7 +110,10 @@ public partial class usercontrols_ucNews : DH.UI.UCBase
         var vnnNewsTypeBll = new vnn_NewsTypeBLL(CurrentPage.getCurrentConnection());
         var row = vnnNewsTypeBll.GetNewsTypeByID(NewsTypeID);
         if (row == null)
+        {
+            Response.Redirect("~/FileNotFound.html");
             return;
+        }
 
         //Quy ve cung mot duong link
         if (Title != XuLyChuoi.ConvertToUnSign(row.NewsTypeName))
