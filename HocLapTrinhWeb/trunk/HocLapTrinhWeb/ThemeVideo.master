@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ThemeVideo.master.cs" Inherits="ThemeVideo" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="english, en, Vietnamese,vn" />
+    <link rel="shortcut icon" href="http://www.hoclaptrinhweb.com/favicon.png" />
+    <title></title>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://www.hoclaptrinhweb.com/js/IE9.js"></script>
+        <script type="text/javascript" src="http://www.hoclaptrinhweb.com/js/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="http://ad.vatgia.com/static/jsv2/advatgia.js"></script>
+    <asp:Literal ID="lrStyle" runat="server"></asp:Literal>
+    <asp:Literal ID="lrScript" runat="server"></asp:Literal>
+    <asp:Literal ID="lrScriptDetail" runat="server"></asp:Literal>
+    <meta runat="server" id="metaDesc" name="description" content="Hoclaptrinhweb.com là một website chuyên về Lập trình - Thiết kế website Graphic - HTML - CSS - Jquery - Photography - Tin công nghệ - Game. Hoclaptrinhweb.com là một website tổng hợp thông tin hoàn toàn được điều khiển tự động bởi máy tính. Mỗi ngày  tin tức từ  nhiều nguồn chính thức của các web điện tử và trang tin được Hoclaptrinhweb.com tự động tổng hợp, phân loại, phát hiện các bài đăng lại...." />
+    <meta runat="server" id="metaKeywords" name="keywords" content="web online, hoc lap trinh web, hoc lap trinh, học lập trình web, lập trình web" />
+    <meta property="og:title" content="" runat="server" id="metaTitle" />
+    <meta property="og:type" content="video" />
+    <meta property="og:site_name" content="http://www.hoclaptrinhweb.com" />
+    <meta property="og:url" content="" runat="server" id="metaUrl" />
+    <meta property="og:image" content="" runat="server" id="metaImage" />
+    <meta property="og:description" content="Hoclaptrinhweb.com là một website chuyên về Lập trình - Thiết kế website Graphic - HTML - CSS - Jquery - Photography - Tin công nghệ - Game. Hoclaptrinhweb.com là một website tổng hợp thông tin hoàn toàn được điều khiển tự động bởi máy tính. Mỗi ngày  tin tức từ  nhiều nguồn chính thức của các web điện tử và trang tin được Hoclaptrinhweb.com tự động tổng hợp, phân loại, phát hiện các bài đăng lại...." id="metaDescFb" />
+    <meta prefix="fb: http://ogp.me/ns/fb#" property="fb:app_id" content="312319252170353" />
+    <meta http-equiv="REFRESH" content="1800" />
+    <meta name="alexaVerifyID" content="N-eLjeUgLZY0YPY61XUqot_heyI" />
+    <meta name="verify-adnet" content="dac9efd0b7344c3d593bfd5cf511ce30" />
+    <meta name="robots" content="index,follow" />
+    <meta name="Googlebot" content="INDEX,FOLLOW" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
