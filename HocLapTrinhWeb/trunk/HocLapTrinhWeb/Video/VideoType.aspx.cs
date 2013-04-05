@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Video_VideoDetail : DH.UI.PageBase
+public partial class Video_VideoType : DH.UI.PageBase
 {
     protected void Page_Load(object sender, EventArgs e)
     {

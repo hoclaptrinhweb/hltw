@@ -60,7 +60,7 @@
                                 <HeaderStyle Width="25%"></HeaderStyle>
                                 <ItemTemplate>
                                     <asp:HiddenField ID="hdVideoTypeID" Value='<%# Eval("VideoTypeID") %>' runat="server" />
-                                    <asp:HyperLink ID="hpVideoTypeName" Target="_blank" runat="server" NavigateUrl='<%# CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/hltw" + Eval("VideoTypeID")+ ".aspx" %>'
+                                    <asp:HyperLink ID="hpVideoTypeName" Target="_blank" runat="server" NavigateUrl='<%# CurrentPage.UrlRoot + "/video/" + XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/hltw" + Eval("VideoTypeID")+ ".aspx" %>'
                                         Text='<%# Eval("TreeView") %>'></asp:HyperLink>
                                 </ItemTemplate>
                             </asp:TemplateField>

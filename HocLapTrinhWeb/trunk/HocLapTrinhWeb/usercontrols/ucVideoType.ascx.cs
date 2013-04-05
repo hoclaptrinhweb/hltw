@@ -5,10 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Video_VideoDetail : DH.UI.PageBase
+public partial class usercontrols_ucVideoType : DH.UI.UCBase
 {
-    protected void Page_Load(object sender, EventArgs e)
+    protected override void Page_Load(object sender, EventArgs e)
     {
-
+        base.Page_Load(sender, e);
     }
 }
