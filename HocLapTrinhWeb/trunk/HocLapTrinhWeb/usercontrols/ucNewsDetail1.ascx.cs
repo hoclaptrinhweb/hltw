@@ -83,7 +83,10 @@ public partial class usercontrols_ucNewsDetail1 : DH.UI.UCBase
 
         var rNews = vnnNewsBll.GetNewsAndNewsTypeByID("Title,Thumbnail,NewsTypeID,NewsTypeName,NewsID,Viewed,Brief,Content,CreatedDate,Keyword,UpdatedDate,RefAddress", NewsID, 1);
         if (rNews == null)
+        {
+            Response.Redirect("~/FileNotFound.html");
             return;
+        }
         if (Title != XuLyChuoi.ConvertToUnSign(rNews.Title) || CatName != XuLyChuoi.ConvertToUnSign(rNews.NewsTypeName))
             Response.Redirect(CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(rNews.NewsTypeName) + "/" + XuLyChuoi.ConvertToUnSign(rNews.Title) + "-hltw" + rNews.NewsID + ".aspx");
 
