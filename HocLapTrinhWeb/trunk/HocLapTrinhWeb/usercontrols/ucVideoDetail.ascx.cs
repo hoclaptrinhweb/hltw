@@ -56,7 +56,10 @@ public partial class usercontrols_ucVideoDetail : DH.UI.UCBase
 
         var rNews = vnnVideo.GetVideoByID("", VideoID, 1);
         if (rNews == null)
+        {
+            Response.Redirect("~/FileNotFound.html");
             return;
+        }
         hdLink.Value = rNews.VideoURL;
         SeoConfig(rNews.Title, rNews.Brief, rNews.IsKeywordNull() ? "" : rNews.Keyword, rNews.Thumbnail, CurrentPage.UrlRoot + "/video/" + XuLyChuoi.ConvertToUnSign(rNews.VideoTypeName) + "/" + XuLyChuoi.ConvertToUnSign(rNews.Title) + "-hltw" + rNews.VideoID + ".aspx", rNews.VideoURL);
     }
