@@ -55,17 +55,22 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
                     btnMoveVideo.Visible = false;
                     btnDelete.Visible = false;
                     btnSaveExpress.Visible = true;
-                    var chckAllIsHot = (CheckBox)gvData.HeaderRow.FindControl("chckAllIsHot");
-                    chckAllIsHot.Enabled = true;
                     var chckAllIsActive = (CheckBox)gvData.HeaderRow.FindControl("chckAllIsActive");
-                    chckAllIsActive.Enabled = true;
+                    if (chckAllIsActive != null)
+                        chckAllIsActive.Enabled = true;
 
                     foreach (GridViewRow row in gvData.Rows)
                     {
-                        var chckIsHot = (CheckBox)row.FindControl("chckIsHot");
-                        chckIsHot.Enabled = true;
                         var chckIsActive = (CheckBox)row.FindControl("chckIsActive");
-                        chckIsActive.Enabled = true;
+                        if (chckIsActive != null)
+                            chckIsActive.Enabled = true;
+
+                        var txtTitle = (TextBox)row.FindControl("txtTitle");
+                        if (txtTitle != null)
+                            txtTitle.Visible = true;
+
+                        var hlTitle = (HyperLink)row.FindControl("hlTitle");
+                        hlTitle.Visible = false;
                     }
                 }
                 else
@@ -111,10 +116,7 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
                 if (!chckDelete.Checked) continue;
                 var hdVideoID = (HiddenField)row.FindControl("hdVideoID");
                 arrID.Add(hdVideoID.Value);
-                var hdImage = (HiddenField)row.FindControl("hdImage");
                 var hdThumbnail = (HiddenField)row.FindControl("hdThumbnail");
-                if (!string.IsNullOrEmpty(hdImage.Value))
-                    arrImage.Add(hdImage.Value);
                 if (!string.IsNullOrEmpty(hdThumbnail.Value))
                     arrImage.Add(hdThumbnail.Value);
             }
@@ -122,6 +124,7 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
             {
                 foreach (var t in arrImage)
                 {
+                    if (t.ToString().Contains("http://")) continue;
                     var filepath = Server.MapPath("~/" + Global.ImagesVideo + t);
                     if (File.Exists(filepath))
                         File.Delete(filepath);
@@ -167,7 +170,6 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
     {
         var vnnVideoTypeBll = new vnn_VideoTypeBLL(CurrentPage.getCurrentConnection());
         e.ObjectInstance = vnnVideoTypeBll;
-
     }
 
     protected void DropVideoTypeDataBound(object sender, EventArgs e)
@@ -197,10 +199,10 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
                 var r = dt.Newtbl_VideoRow();
                 var hdVideoID = (HiddenField)row.FindControl("hdVideoID");
                 var chckThumbnail = (CheckBox)row.FindControl("chckThumbnail");
-                var chckIsHot = (CheckBox)row.FindControl("chckIsHot");
                 var chckIsActive = (CheckBox)row.FindControl("chckIsActive");
+                var txtTitle = (TextBox)row.FindControl("txtTitle");
                 r.VideoID = int.Parse(hdVideoID.Value);
-                r.IsHot = chckIsHot.Checked;
+                r.Title = txtTitle.Text;
                 r.IsActive = chckThumbnail.Checked && chckIsActive.Checked;
                 r.CreatedDate = DateTime.Now;
                 r.UpdatedBy = int.Parse(Session["UserID"].ToString());
@@ -209,7 +211,7 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
                 dt.Addtbl_VideoRow(r);
             }
             var vVideoBll = new v_VideoBLL(CurrentPage.getCurrentConnection());
-            if (!vVideoBll.UpdateStatus(dt, dt.IsHotColumn.ColumnName, dt.IsActiveColumn.ColumnName, dt.IPUpdateColumn.ColumnName, dt.UpdatedByColumn.ColumnName, dt.UpdatedDateColumn.ColumnName))
+            if (!vVideoBll.UpdateStatus(dt, dt.TitleColumn.ColumnName, dt.IsActiveColumn.ColumnName, dt.IPUpdateColumn.ColumnName, dt.UpdatedByColumn.ColumnName, dt.UpdatedDateColumn.ColumnName))
             {
                 SaveValidate.IsValid = false;
                 SaveValidate.ErrorMessage = msg.GetMessage(vVideoBll.getMsgCode());

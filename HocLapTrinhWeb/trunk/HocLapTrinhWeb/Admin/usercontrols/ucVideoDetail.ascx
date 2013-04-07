@@ -197,7 +197,7 @@
                     <td>
                     </td>
                     <td colspan="6">
-                        <CKEditor:CKEditorControl ID="FCKContent" runat="server" Height="400" BasePath="~/ckeditor">
+                        <CKEditor:CKEditorControl ID="FCKContent" runat="server" Height="200" BasePath="~/ckeditor">
                         </CKEditor:CKEditorControl>
                     </td>
                 </tr>
