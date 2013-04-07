@@ -48,9 +48,6 @@
                 <a target="_blank" href="http://hosgroup.com.vn/phan-mem/phan-mem-quan-ly-nhan-su" title="Phần mềm quản lý nhân sự chuyên nghiệp LotusPro">
                     phan mem quan ly nhan su</a>
                 <br />
-                Lap trinh <a target="_blank" href="http://maybanhang.net/phan-mem-quan-ly-ban-hang/">phan mem ban hang</a>
-                tiet kiem va hieu qua
-                <br />
                 Tin tức mới nhất về <a target="_blank" href="http://www.tinmoi.vn/samsung-galaxy-s4-e218.html">Samsung
                     Galaxy S4</a>
                 <br />Chuyên mục <a target="_blank" href="http://www.techz.vn/C/dien-thoai-rv">đánh giá điện thoại</a> smartphone 2013
