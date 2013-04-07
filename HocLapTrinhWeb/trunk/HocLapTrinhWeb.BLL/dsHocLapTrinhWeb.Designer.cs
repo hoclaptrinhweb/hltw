@@ -9841,25 +9841,14 @@ namespace HocLapTrinhWeb.BLL {
                 this.columnVideoID.AllowDBNull = false;
                 this.columnVideoID.ReadOnly = true;
                 this.columnVideoID.Unique = true;
-                this.columnVideoTypeID.AllowDBNull = false;
-                this.columnVideoURL.AllowDBNull = false;
                 this.columnVideoURL.MaxLength = 1000;
-                this.columnTitle.AllowDBNull = false;
                 this.columnTitle.MaxLength = 200;
-                this.columnBrief.AllowDBNull = false;
                 this.columnBrief.MaxLength = 500;
                 this.columnContent.MaxLength = 2147483647;
                 this.columnThumbnail.MaxLength = 250;
                 this.columnKeyword.MaxLength = 250;
-                this.columnIPAddress.AllowDBNull = false;
                 this.columnIPAddress.MaxLength = 50;
-                this.columnCreatedDate.AllowDBNull = false;
-                this.columnCreatedBy.AllowDBNull = false;
-                this.columnUpdatedDate.AllowDBNull = false;
-                this.columnUpdatedBy.AllowDBNull = false;
-                this.columnIPUpdate.AllowDBNull = false;
                 this.columnIPUpdate.MaxLength = 50;
-                this.columnIsActive.AllowDBNull = false;
                 this.columnRefAddress.MaxLength = 500;
             }
             
@@ -14168,7 +14157,12 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int VideoTypeID {
                 get {
-                    return ((int)(this[this.tabletbl_Video.VideoTypeIDColumn]));
+                    try {
+                        return ((int)(this[this.tabletbl_Video.VideoTypeIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'VideoTypeID\' in table \'tbl_Video\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tabletbl_Video.VideoTypeIDColumn] = value;
@@ -14179,7 +14173,12 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string VideoURL {
                 get {
-                    return ((string)(this[this.tabletbl_Video.VideoURLColumn]));
+                    try {
+                        return ((string)(this[this.tabletbl_Video.VideoURLColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'VideoURL\' in table \'tbl_Video\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tabletbl_Video.VideoURLColumn] = value;
@@ -14190,7 +14189,12 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Title {
                 get {
-                    return ((string)(this[this.tabletbl_Video.TitleColumn]));
+                    try {
+                        return ((string)(this[this.tabletbl_Video.TitleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Title\' in table \'tbl_Video\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tabletbl_Video.TitleColumn] = value;
@@ -14201,7 +14205,12 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Brief {
                 get {
-                    return ((string)(this[this.tabletbl_Video.BriefColumn]));
+                    try {
+                        return ((string)(this[this.tabletbl_Video.BriefColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Brief\' in table \'tbl_Video\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tabletbl_Video.BriefColumn] = value;
@@ -14308,7 +14317,12 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string IPAddress {
                 get {
-                    return ((string)(this[this.tabletbl_Video.IPAddressColumn]));
+                    try {
+                        return ((string)(this[this.tabletbl_Video.IPAddressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IPAddress\' in table \'tbl_Video\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tabletbl_Video.IPAddressColumn] = value;
@@ -14319,7 +14333,12 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime CreatedDate {
                 get {
-                    return ((global::System.DateTime)(this[this.tabletbl_Video.CreatedDateColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tabletbl_Video.CreatedDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreatedDate\' in table \'tbl_Video\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tabletbl_Video.CreatedDateColumn] = value;
@@ -14330,7 +14349,12 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int CreatedBy {
                 get {
-                    return ((int)(this[this.tabletbl_Video.CreatedByColumn]));
+                    try {
+                        return ((int)(this[this.tabletbl_Video.CreatedByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreatedBy\' in table \'tbl_Video\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tabletbl_Video.CreatedByColumn] = value;
@@ -14357,7 +14381,12 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime UpdatedDate {
                 get {
-                    return ((global::System.DateTime)(this[this.tabletbl_Video.UpdatedDateColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tabletbl_Video.UpdatedDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UpdatedDate\' in table \'tbl_Video\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tabletbl_Video.UpdatedDateColumn] = value;
@@ -14368,7 +14397,12 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int UpdatedBy {
                 get {
-                    return ((int)(this[this.tabletbl_Video.UpdatedByColumn]));
+                    try {
+                        return ((int)(this[this.tabletbl_Video.UpdatedByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UpdatedBy\' in table \'tbl_Video\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tabletbl_Video.UpdatedByColumn] = value;
@@ -14379,7 +14413,12 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string IPUpdate {
                 get {
-                    return ((string)(this[this.tabletbl_Video.IPUpdateColumn]));
+                    try {
+                        return ((string)(this[this.tabletbl_Video.IPUpdateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IPUpdate\' in table \'tbl_Video\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tabletbl_Video.IPUpdateColumn] = value;
@@ -14390,7 +14429,12 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsActive {
                 get {
-                    return ((bool)(this[this.tabletbl_Video.IsActiveColumn]));
+                    try {
+                        return ((bool)(this[this.tabletbl_Video.IsActiveColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IsActive\' in table \'tbl_Video\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tabletbl_Video.IsActiveColumn] = value;
@@ -14443,6 +14487,54 @@ namespace HocLapTrinhWeb.BLL {
                 set {
                     this[this.tabletbl_Video.RefAddressColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVideoTypeIDNull() {
+                return this.IsNull(this.tabletbl_Video.VideoTypeIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVideoTypeIDNull() {
+                this[this.tabletbl_Video.VideoTypeIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVideoURLNull() {
+                return this.IsNull(this.tabletbl_Video.VideoURLColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVideoURLNull() {
+                this[this.tabletbl_Video.VideoURLColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTitleNull() {
+                return this.IsNull(this.tabletbl_Video.TitleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTitleNull() {
+                this[this.tabletbl_Video.TitleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBriefNull() {
+                return this.IsNull(this.tabletbl_Video.BriefColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBriefNull() {
+                this[this.tabletbl_Video.BriefColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14519,6 +14611,42 @@ namespace HocLapTrinhWeb.BLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIPAddressNull() {
+                return this.IsNull(this.tabletbl_Video.IPAddressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIPAddressNull() {
+                this[this.tabletbl_Video.IPAddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCreatedDateNull() {
+                return this.IsNull(this.tabletbl_Video.CreatedDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCreatedDateNull() {
+                this[this.tabletbl_Video.CreatedDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCreatedByNull() {
+                return this.IsNull(this.tabletbl_Video.CreatedByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCreatedByNull() {
+                this[this.tabletbl_Video.CreatedByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIsDeleteNull() {
                 return this.IsNull(this.tabletbl_Video.IsDeleteColumn);
             }
@@ -14527,6 +14655,54 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIsDeleteNull() {
                 this[this.tabletbl_Video.IsDeleteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsUpdatedDateNull() {
+                return this.IsNull(this.tabletbl_Video.UpdatedDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetUpdatedDateNull() {
+                this[this.tabletbl_Video.UpdatedDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsUpdatedByNull() {
+                return this.IsNull(this.tabletbl_Video.UpdatedByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetUpdatedByNull() {
+                this[this.tabletbl_Video.UpdatedByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIPUpdateNull() {
+                return this.IsNull(this.tabletbl_Video.IPUpdateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIPUpdateNull() {
+                this[this.tabletbl_Video.IPUpdateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIsActiveNull() {
+                return this.IsNull(this.tabletbl_Video.IsActiveColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIsActiveNull() {
+                this[this.tabletbl_Video.IsActiveColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

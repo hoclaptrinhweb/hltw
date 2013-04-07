@@ -151,7 +151,7 @@ namespace HocLapTrinhWeb.BLL
                 {
                     _classBaseDal = new ClassBaseDAL(IConnect, dt);
                     dt.AcceptChanges();
-                    foreach (dsHocLapTrinhWeb.tbl_NewsRow row in dt.Rows)
+                    foreach (dsHocLapTrinhWeb.tbl_VideoRow row in dt.Rows)
                         row.SetModified();
                     if (_classBaseDal.UpdateChange(dt, columnsName))
                         return true;
@@ -308,7 +308,7 @@ namespace HocLapTrinhWeb.BLL
                 {
                     _classBaseDal = new ClassBaseDAL(IConnect, dt);
                     dt.AcceptChanges();
-                    foreach (dsHocLapTrinhWeb.tbl_NewsRow row in dt.Rows)
+                    foreach (dsHocLapTrinhWeb.tbl_VideoRow row in dt.Rows)
                         row.SetModified();
                     if (_classBaseDal.UpdateChange(dt, dt.VideoTypeIDColumn.ColumnName, dt.MoveFromColumn.ColumnName, dt.UpdatedDateColumn.ColumnName, dt.UpdatedByColumn.ColumnName, dt.IPUpdateColumn.ColumnName))
                         return true;

@@ -74,7 +74,6 @@
                                     ShowIconDatePicker="False" Width="70px" />
                             </td>
                             <td>
-                                &nbsp;
                                 <asp:DropDownList ID="dropVideoType" runat="server" DataSourceID="ObjectDataSource1"
                                     DataTextField="TreeView" DataValueField="VideoTypeID" OnDataBound="DropVideoTypeDataBound"
                                     Width="100px">
@@ -145,6 +144,7 @@
                                     <asp:HiddenField ID="hdVideoID" Value='<%# Eval("VideoID") %>' runat="server" />
                                     <asp:HiddenField ID="hdVideoTypeID" Value='<%# Eval("VideoTypeID") %>' runat="server" />
                                     <asp:HiddenField ID="hdThumbnail" Value='<%# Eval("Thumbnail") %>' runat="server" />
+                                    <asp:TextBox ID="txtTitle" runat="server" Visible="False" Text='<%# Eval("Title") %>'></asp:TextBox>
                                     <asp:HyperLink ID="hlTitle" runat="server" NavigateUrl='<%# "~/Admin/VideoDetail.aspx?VideoID="+Eval("VideoID") %>'
                                         Text='<%# Eval("Title") %>'></asp:HyperLink>
                                 </ItemTemplate>

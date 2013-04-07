@@ -221,7 +221,7 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
             hdVideoID.Value = rVideo.VideoID.ToString(CultureInfo.InvariantCulture);
             txtTitle.Text = rVideo.Title;
             txtBrief.Text = rVideo.Brief;
-            FCKContent.Text = rVideo.Content;
+            FCKContent.Text = rVideo.IsContentNull() ? "" : rVideo.Content;
             txtLinkVideo.Text = rVideo.VideoURL;
             txtkeyword.Text = rVideo.IsKeywordNull() ? "" : rVideo.Keyword;
             txtDouutien.Text = rVideo.Priority.ToString(CultureInfo.InvariantCulture);
