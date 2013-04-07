@@ -14,9 +14,9 @@ public partial class Code_DangKhoa_YouTuBe : DH.UI.PageBase
         //var dt = new dsHocLapTrinhWeb.tbl_VideoDataTable();
         //var update = new UpdateNewsBase();
         //var arr = new ArrayList();
-        //for (var i = 1; i <= 6; i++)
+        //for (var i = 1; i <= 2; i++)
         //{
-        //    var doc = update.GetContentFromUrl("http://www.youtube.com/playlist?list=UUwd4Q0VFfbt-JANv6ZhehxA&page=" + i);
+        //    var doc = update.GetContentFromUrl("http://www.youtube.com/playlist?list=UUddE7OQGYier3M7MRYhCmEg&page=" + i);
         //    var node = doc.DocumentNode.SelectNodes("//li//h3[@class='video-title-container']//a");
         //    if (node != null)
         //        foreach (var t in node)
@@ -33,7 +33,7 @@ public partial class Code_DangKhoa_YouTuBe : DH.UI.PageBase
         //            row.UpdatedDate = DateTime.Now;
         //            row.CreatedBy = 1;
         //            row.UpdatedBy = 1;
-        //            row.VideoTypeID = -1;
+        //            row.VideoTypeID = 10;
         //            row.VideoURL = "http://www.youtube.com" + t.Attributes["href"].Value;
         //            row.IPAddress = DH.Utilities.Net.GetVisitorIPAddress();
         //            row.IPUpdate = DH.Utilities.Net.GetVisitorIPAddress();
