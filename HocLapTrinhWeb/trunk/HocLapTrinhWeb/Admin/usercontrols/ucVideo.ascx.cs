@@ -8,6 +8,7 @@ using System.Drawing;
 
 public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
 {
+
     #region Event Page
 
     protected override void Page_Load(object sender, EventArgs e)
@@ -23,6 +24,12 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
     {
         var vnnVideoBll = new v_VideoBLL(CurrentPage.getCurrentConnection());
         e.ObjectInstance = vnnVideoBll;
+    }
+
+    protected void ObjRefSiteObjectCreating(object sender, ObjectDataSourceEventArgs e)
+    {
+        var ltkReferenceSiteBll = new ltk_ReferenceSiteBLL(CurrentPage.getCurrentConnection());
+        e.ObjectInstance = ltkReferenceSiteBll;
     }
 
     protected void GvDataRowDataBound(object sender, GridViewRowEventArgs e)
@@ -42,6 +49,11 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
             {
                 if (hdEdit.Value == "1")
                 {
+                    btnEditExpress.Text = "Hủy bỏ";
+                    btnNew.Visible = false;
+                    btnEdit.Visible = false;
+                    btnMoveVideo.Visible = false;
+                    btnDelete.Visible = false;
                     btnSaveExpress.Visible = true;
                     var chckAllIsHot = (CheckBox)gvData.HeaderRow.FindControl("chckAllIsHot");
                     chckAllIsHot.Enabled = true;
@@ -57,7 +69,14 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
                     }
                 }
                 else
+                {
+                    btnEditExpress.Text = "Chỉnh sửa nhanh";
                     btnSaveExpress.Visible = false;
+                    btnNew.Visible = true;
+                    btnMoveVideo.Visible = true;
+                    btnEdit.Visible = true;
+                    btnDelete.Visible = true;
+                }
                 btnEdit.Enabled = true;
                 btnDelete.Enabled = true;
             }
@@ -92,7 +111,10 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
                 if (!chckDelete.Checked) continue;
                 var hdVideoID = (HiddenField)row.FindControl("hdVideoID");
                 arrID.Add(hdVideoID.Value);
+                var hdImage = (HiddenField)row.FindControl("hdImage");
                 var hdThumbnail = (HiddenField)row.FindControl("hdThumbnail");
+                if (!string.IsNullOrEmpty(hdImage.Value))
+                    arrImage.Add(hdImage.Value);
                 if (!string.IsNullOrEmpty(hdThumbnail.Value))
                     arrImage.Add(hdThumbnail.Value);
             }
@@ -100,8 +122,6 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
             {
                 foreach (var t in arrImage)
                 {
-                    if (t.ToString().Contains("http://"))
-                        continue;
                     var filepath = Server.MapPath("~/" + Global.ImagesVideo + t);
                     if (File.Exists(filepath))
                         File.Delete(filepath);
@@ -143,15 +163,11 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
         CurrentPage.GoPage("VideoDetail.aspx");
     }
 
-    /// <summary>
-    /// dropdown Videotype
-    /// </summary>
-    /// <param name="sender"></param>
-    /// <param name="e"></param>
     protected void ObjectDataSource1ObjectCreating(object sender, ObjectDataSourceEventArgs e)
     {
         var vnnVideoTypeBll = new vnn_VideoTypeBLL(CurrentPage.getCurrentConnection());
         e.ObjectInstance = vnnVideoTypeBll;
+
     }
 
     protected void DropVideoTypeDataBound(object sender, EventArgs e)
@@ -159,10 +175,14 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
         dropVideoType.Items.Insert(0, new ListItem("Tất cả", "-1"));
     }
 
-    //Sửa tin nhanh
+    protected void DropRefSiteDataBound(object sender, EventArgs e)
+    {
+        dropRefSite.Items.Insert(0, new ListItem("Tất cả", ""));
+    }
+
     protected void BtnEditExpressClick(object sender, EventArgs e)
     {
-        hdEdit.Value = "1";
+        hdEdit.Value = btnEditExpress.Text != "Hủy bỏ" ? "1" : "0";
         gvData.DataBind();
     }
 
@@ -188,13 +208,13 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
                 r.IPUpdate = DH.Utilities.Net.GetVisitorIPAddress();
                 dt.Addtbl_VideoRow(r);
             }
-            var ltkVideoBll = new t_VideoBLL(CurrentPage.getCurrentConnection());
-            //if (!ltkVideoBll.UpdateStatus(dt, dt.IsHotColumn.ColumnName, dt.IsActiveColumn.ColumnName, dt.IPUpdateColumn.ColumnName, dt.UpdatedByColumn.ColumnName, dt.UpdatedDateColumn.ColumnName))
-            //{
-            //    SaveValidate.IsValid = false;
-            //    SaveValidate.ErrorMessage = msg.GetMessage(ltkVideoBll.getMsgCode());
-            //    return;
-            //}
+            var vVideoBll = new v_VideoBLL(CurrentPage.getCurrentConnection());
+            if (!vVideoBll.UpdateStatus(dt, dt.IsHotColumn.ColumnName, dt.IsActiveColumn.ColumnName, dt.IPUpdateColumn.ColumnName, dt.UpdatedByColumn.ColumnName, dt.UpdatedDateColumn.ColumnName))
+            {
+                SaveValidate.IsValid = false;
+                SaveValidate.ErrorMessage = msg.GetMessage(vVideoBll.getMsgCode());
+                return;
+            }
             hdEdit.Value = "0";
             gvData.DataBind();
         }
@@ -205,7 +225,6 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
         }
     }
 
-    //Tìm kiếm
     protected void BtnXemClick(object sender, EventArgs e)
     {
         Session["PageSize"] = dropPageSize.SelectedValue;
@@ -213,19 +232,15 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
         gvData.DataBind();
     }
 
-
-    //Chuyển tin
     protected void DrVideoTypeMoveDataBound(object sender, EventArgs e)
     {
         drVideoTypeMove.Items.Insert(0, new ListItem("Tất cả", "-1"));
-
     }
 
     protected void BtnSaveClick(object sender, EventArgs e)
     {
         try
         {
-
             var dt = new dsHocLapTrinhWeb.tbl_VideoDataTable();
             foreach (GridViewRow row in gvData.Rows)
             {
@@ -243,13 +258,13 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
                 r.IPUpdate = DH.Utilities.Net.GetVisitorIPAddress();
                 dt.Addtbl_VideoRow(r);
             }
-            //var ltkVideoBll = new ltk_VideoBLL(CurrentPage.getCurrentConnection());
-            //if (!ltkVideoBll.MoveVideo(dt))
-            //{
-            //    SaveValidate1.IsValid = false;
-            //    SaveValidate1.ErrorMessage = msg.GetMessage(ltkVideoBll.getMsgCode());
-            //    return;
-            //}
+            var vVideoBll = new v_VideoBLL(CurrentPage.getCurrentConnection());
+            if (!vVideoBll.MoveVideo(dt))
+            {
+                SaveValidate1.IsValid = false;
+                SaveValidate1.ErrorMessage = msg.GetMessage(vVideoBll.getMsgCode());
+                return;
+            }
             hdIsAddSuccessful.Value = "1";
 
             gvData.DataBind();
@@ -271,12 +286,13 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
     protected void ObjDataSelecting(object sender, ObjectDataSourceSelectingEventArgs e)
     {
         _bGetSelectCount = e.ExecutingSelectCount;
-    //    e.InputParameters["VideoTypeID"] = dropVideoType.SelectedValue;
-    //    e.InputParameters["IsActive"] = dropIsActive.SelectedValue;
-    //    e.InputParameters["Refsite"] = dropRefSite.SelectedValue;
-    //    e.InputParameters["FromDate"] = txtFromDate.Value.ToString("MM/dd/yyyy");
-    //    e.InputParameters["ToDate"] = txtToDate.Value.ToString("MM/dd/yyyy");
-    //    e.InputParameters["selectCol"] = "VideoID,VideoTypeID,Thumbnail,Title,VideoTypeName,CreatedByUserName,IsHot,IsActive,CreatedDate";
+        e.InputParameters["VideoTypeID"] = dropVideoType.SelectedValue;
+        e.InputParameters["IsActive"] = dropIsActive.SelectedValue;
+        e.InputParameters["Refsite"] = dropRefSite.SelectedValue;
+        e.InputParameters["Tag"] = dropTag.SelectedValue;
+        e.InputParameters["FromDate"] = txtFromDate.Value.ToString("MM/dd/yyyy");
+        e.InputParameters["ToDate"] = txtToDate.Value.ToString("MM/dd/yyyy");
+        e.InputParameters["selectCol"] = "";
     }
 
     protected void ObjDataSelected(object sender, ObjectDataSourceStatusEventArgs e)

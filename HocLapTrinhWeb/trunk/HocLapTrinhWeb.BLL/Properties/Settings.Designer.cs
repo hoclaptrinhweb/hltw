@@ -110,5 +110,16 @@ namespace HocLapTrinhWeb.BLL.Properties {
                 return ((string)(this["HLTW_MyLifeConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=112.213.89.157;Initial Catalog=HocLapTrinhWeb_MyLife;Persist Security" +
+            " Info=True;User ID=vnn;Password=123456")]
+        public string HocLapTrinhWeb_MyLifeConnectionString5 {
+            get {
+                return ((string)(this["HocLapTrinhWeb_MyLifeConnectionString5"]));
+            }
+        }
     }
 }

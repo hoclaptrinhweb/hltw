@@ -127,7 +127,7 @@ namespace HocLapTrinhWeb.BLL
         /// <returns></returns>
         public bool MoveNews(dsHocLapTrinhWeb.tbl_NewsDataTable dt)
         {
-            bool isOpen = false;
+            var isOpen = false;
             try
             {
                 if (OpenConnection(ref isOpen))
@@ -157,7 +157,7 @@ namespace HocLapTrinhWeb.BLL
 
         public bool CheckExistByRefAddress(string refAddress)
         {
-            bool isOpen = false;
+            var isOpen = false;
             try
             {
                 if (OpenConnection(ref isOpen))

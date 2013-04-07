@@ -123,12 +123,12 @@ public partial class usercontrols_ucVideoType : DH.UI.UCBase
         GetTreeView(row.VideoTypeID);
         var rchildren = vnnVideoTypeBll.GetDataAllChildrenByPathID("VideoTypeName,VideoTypeID,PathID", row.PathID);
         var vnnNewsBll = new v_VideoBLL(CurrentPage.getCurrentConnection());
-        var dt = vnnNewsBll.GetAllVideoForGridView((PageIndex - 1) * PageSize, PageSize,VideoTypeID);
+        var dt = vnnNewsBll.GetAllVideoForGridView((PageIndex - 1) * PageSize, PageSize,"",VideoTypeID,1,"","","");
         rpData.DataSource = dt;
         rpData.DataBind();
         if (dt != null && dt.Count > 0)
         {
-            var total = vnnNewsBll.GetAllVideoRowCount(VideoTypeID);
+            var total = vnnNewsBll.GetAllVideoRowCount("",VideoTypeID,1,"","","");
             Paging.InnerHtml = BindPaging(total);
         }
         vnnVideoTypeBll = new vnn_VideoTypeBLL(CurrentPage.getCurrentConnection());

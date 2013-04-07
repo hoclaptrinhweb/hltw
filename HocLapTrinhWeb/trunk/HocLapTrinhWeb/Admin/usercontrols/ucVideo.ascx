@@ -74,6 +74,7 @@
                                     ShowIconDatePicker="False" Width="70px" />
                             </td>
                             <td>
+                                &nbsp;
                                 <asp:DropDownList ID="dropVideoType" runat="server" DataSourceID="ObjectDataSource1"
                                     DataTextField="TreeView" DataValueField="VideoTypeID" OnDataBound="DropVideoTypeDataBound"
                                     Width="100px">
@@ -83,7 +84,12 @@
                                 </asp:ObjectDataSource>
                             </td>
                             <td>
-
+                                <asp:DropDownList ID="dropRefSite" runat="server" DataSourceID="objRefSite" DataTextField="refsite"
+                                    DataValueField="refsite" OnDataBound="DropRefSiteDataBound" Width="100px">
+                                </asp:DropDownList>
+                                <asp:ObjectDataSource ID="objRefSite" runat="server" OnObjectCreating="ObjRefSiteObjectCreating"
+                                    SelectMethod="GetNewsTypeRefSiteForDropDownList" TypeName="HocLapTrinhWeb.BLL.ltk_ReferenceSiteBLL">
+                                </asp:ObjectDataSource>
                             </td>
                             <td>
                                 <asp:DropDownList ID="dropIsActive" runat="server" Width="80px">
@@ -93,6 +99,11 @@
                                 </asp:DropDownList>
                             </td>
                             <td>
+                                <asp:DropDownList ID="dropTag" runat="server" Width="80px">
+                                    <asp:ListItem Value="-1">Tất cả</asp:ListItem>
+                                    <asp:ListItem Value="0">Chưa tag</asp:ListItem>
+                                    <asp:ListItem Value="1">Đã tag</asp:ListItem>
+                                </asp:DropDownList>
                             </td>
                             <td>
                                 <span lang="en-us">
@@ -220,6 +231,7 @@
                                         <td class="td1empty">
                                         </td>
                                         <td class="Require">
+                                            &nbsp;
                                         </td>
                                         <td>
                                             <asp:DropDownList ID="drVideoTypeMove" runat="server" DataSourceID="ObjectDataSource1"
@@ -294,7 +306,6 @@
     }
 
     function ShowHideBtnEdit() {
-        var checkedRow;
         var gvData = $("table[id$='gvData']")[0];
         var checkboxs = gvData.getElementsByTagName("input");
         var mCount = 0;
