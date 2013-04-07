@@ -32,7 +32,7 @@
         <div>
             <asp:HyperLink ID="HyperLink5" class="dashboard_button videotype" NavigateUrl="~/Admin/videotype.aspx"
                 runat="server">
-                <asp:Label ID="Label13" class="dashboard_button_heading" runat="server" Text="Loại Video"></asp:Label>
+                <asp:Label ID="lbVideoType" class="dashboard_button_heading" runat="server" Text="Loại Video"></asp:Label>
                 <asp:Label ID="Label15" runat="server" Text="Quản lý loại video"></asp:Label></asp:HyperLink>
         </div>
         <div>
