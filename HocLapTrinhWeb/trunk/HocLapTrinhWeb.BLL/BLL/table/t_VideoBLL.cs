@@ -137,6 +137,43 @@ namespace HocLapTrinhWeb.BLL
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <param name="columnsName"></param>
+        /// <returns></returns>
+        public bool UpdateStatus(dsHocLapTrinhWeb.tbl_VideoDataTable dt, params string[] columnsName)
+        {
+            var isOpen = false;
+            try
+            {
+                if (OpenConnection(ref isOpen))
+                {
+                    _classBaseDal = new ClassBaseDAL(IConnect, dt);
+                    dt.AcceptChanges();
+                    foreach (dsHocLapTrinhWeb.tbl_NewsRow row in dt.Rows)
+                        row.SetModified();
+                    if (_classBaseDal.UpdateChange(dt, columnsName))
+                        return true;
+                    AddMessage("ERR-000004", "Update data fail." + _classBaseDal.getMessage(), _classBaseDal.getMsgNumber());
+                    return false;
+                }
+                AddMessage("ERR-000001", "Connection failed." + getMessage(), 0);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                AddMessage("ERR-000004", "Update data fail." + ex.Message, 0);
+                return false;
+            }
+            finally
+            {
+                CloseConnection(isOpen);
+            }
+        }
+
+
+        /// <summary>
         /// Xóa dữ liệu
         /// </summary>
         /// <param name="dt"></param>
@@ -181,7 +218,7 @@ namespace HocLapTrinhWeb.BLL
         /// <returns></returns>
         public bool Delete(int id)
         {
-            bool isOpen = false;
+            var isOpen = false;
             try
             {
                 if (OpenConnection(ref isOpen))
@@ -248,6 +285,42 @@ namespace HocLapTrinhWeb.BLL
             catch (Exception ex)
             {
                 AddMessage("PRI-000005", ex.ToString(), 0);
+                return false;
+            }
+            finally
+            {
+                CloseConnection(isOpen);
+            }
+        }
+
+
+        /// <summary>
+        /// Cập nhật trạng thái tin
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public bool MoveVideo(dsHocLapTrinhWeb.tbl_VideoDataTable dt)
+        {
+            var isOpen = false;
+            try
+            {
+                if (OpenConnection(ref isOpen))
+                {
+                    _classBaseDal = new ClassBaseDAL(IConnect, dt);
+                    dt.AcceptChanges();
+                    foreach (dsHocLapTrinhWeb.tbl_NewsRow row in dt.Rows)
+                        row.SetModified();
+                    if (_classBaseDal.UpdateChange(dt, dt.VideoTypeIDColumn.ColumnName, dt.MoveFromColumn.ColumnName, dt.UpdatedDateColumn.ColumnName, dt.UpdatedByColumn.ColumnName, dt.IPUpdateColumn.ColumnName))
+                        return true;
+                    AddMessage("ERR-000004", "Update data fail." + _classBaseDal.getMessage(), _classBaseDal.getMsgNumber());
+                    return false;
+                }
+                AddMessage("ERR-000001", "Connection failed." + getMessage(), 0);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                AddMessage("ERR-000004", "Update data fail." + ex.Message, 0);
                 return false;
             }
             finally

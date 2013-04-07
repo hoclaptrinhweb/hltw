@@ -76,6 +76,8 @@ namespace HocLapTrinhWeb.BLL {
         
         private tbl_VideoTypeDataTable tabletbl_VideoType;
         
+        private tbl_VideoTagDataTable tabletbl_VideoTag;
+        
         private global::System.Data.DataRelation relationFK_tbl_News_tbl_NewsType;
         
         private global::System.Data.DataRelation relationFK_tbl_ReferenceSite_tbl_NewsType;
@@ -189,6 +191,9 @@ namespace HocLapTrinhWeb.BLL {
                 }
                 if ((ds.Tables["tbl_VideoType"] != null)) {
                     base.Tables.Add(new tbl_VideoTypeDataTable(ds.Tables["tbl_VideoType"]));
+                }
+                if ((ds.Tables["tbl_VideoTag"] != null)) {
+                    base.Tables.Add(new tbl_VideoTagDataTable(ds.Tables["tbl_VideoTag"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -470,6 +475,16 @@ namespace HocLapTrinhWeb.BLL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public tbl_VideoTagDataTable tbl_VideoTag {
+            get {
+                return this.tabletbl_VideoTag;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -612,6 +627,9 @@ namespace HocLapTrinhWeb.BLL {
                 }
                 if ((ds.Tables["tbl_VideoType"] != null)) {
                     base.Tables.Add(new tbl_VideoTypeDataTable(ds.Tables["tbl_VideoType"]));
+                }
+                if ((ds.Tables["tbl_VideoTag"] != null)) {
+                    base.Tables.Add(new tbl_VideoTagDataTable(ds.Tables["tbl_VideoTag"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -802,6 +820,12 @@ namespace HocLapTrinhWeb.BLL {
                     this.tabletbl_VideoType.InitVars();
                 }
             }
+            this.tabletbl_VideoTag = ((tbl_VideoTagDataTable)(base.Tables["tbl_VideoTag"]));
+            if ((initTable == true)) {
+                if ((this.tabletbl_VideoTag != null)) {
+                    this.tabletbl_VideoTag.InitVars();
+                }
+            }
             this.relationFK_tbl_News_tbl_NewsType = this.Relations["FK_tbl_News_tbl_NewsType"];
             this.relationFK_tbl_ReferenceSite_tbl_NewsType = this.Relations["FK_tbl_ReferenceSite_tbl_NewsType"];
             this.relationFK_tbl_UserPermission_tbl_Permission = this.Relations["FK_tbl_UserPermission_tbl_Permission"];
@@ -868,6 +892,8 @@ namespace HocLapTrinhWeb.BLL {
             base.Tables.Add(this.tabletbl_Video);
             this.tabletbl_VideoType = new tbl_VideoTypeDataTable();
             base.Tables.Add(this.tabletbl_VideoType);
+            this.tabletbl_VideoTag = new tbl_VideoTagDataTable();
+            base.Tables.Add(this.tabletbl_VideoTag);
             this.relationFK_tbl_News_tbl_NewsType = new global::System.Data.DataRelation("FK_tbl_News_tbl_NewsType", new global::System.Data.DataColumn[] {
                         this.tabletbl_NewsType.NewsTypeIDColumn}, new global::System.Data.DataColumn[] {
                         this.tabletbl_News.NewsTypeIDColumn}, false);
@@ -1044,6 +1070,12 @@ namespace HocLapTrinhWeb.BLL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializetbl_VideoTag() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -1174,6 +1206,9 @@ namespace HocLapTrinhWeb.BLL {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void tbl_VideoTypeRowChangeEventHandler(object sender, tbl_VideoTypeRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void tbl_VideoTagRowChangeEventHandler(object sender, tbl_VideoTagRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -10303,6 +10338,298 @@ namespace HocLapTrinhWeb.BLL {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class tbl_VideoTagDataTable : global::System.Data.TypedTableBase<tbl_VideoTagRow> {
+            
+            private global::System.Data.DataColumn columnVideoTagID;
+            
+            private global::System.Data.DataColumn columnVideoID;
+            
+            private global::System.Data.DataColumn columnTagID;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_VideoTagDataTable() {
+                this.TableName = "tbl_VideoTag";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal tbl_VideoTagDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected tbl_VideoTagDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VideoTagIDColumn {
+                get {
+                    return this.columnVideoTagID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VideoIDColumn {
+                get {
+                    return this.columnVideoID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TagIDColumn {
+                get {
+                    return this.columnTagID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_VideoTagRow this[int index] {
+                get {
+                    return ((tbl_VideoTagRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event tbl_VideoTagRowChangeEventHandler tbl_VideoTagRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event tbl_VideoTagRowChangeEventHandler tbl_VideoTagRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event tbl_VideoTagRowChangeEventHandler tbl_VideoTagRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event tbl_VideoTagRowChangeEventHandler tbl_VideoTagRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addtbl_VideoTagRow(tbl_VideoTagRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_VideoTagRow Addtbl_VideoTagRow(int VideoID, int TagID) {
+                tbl_VideoTagRow rowtbl_VideoTagRow = ((tbl_VideoTagRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        VideoID,
+                        TagID};
+                rowtbl_VideoTagRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtbl_VideoTagRow);
+                return rowtbl_VideoTagRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_VideoTagRow FindByVideoTagID(int VideoTagID) {
+                return ((tbl_VideoTagRow)(this.Rows.Find(new object[] {
+                            VideoTagID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                tbl_VideoTagDataTable cln = ((tbl_VideoTagDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new tbl_VideoTagDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnVideoTagID = base.Columns["VideoTagID"];
+                this.columnVideoID = base.Columns["VideoID"];
+                this.columnTagID = base.Columns["TagID"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnVideoTagID = new global::System.Data.DataColumn("VideoTagID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVideoTagID);
+                this.columnVideoID = new global::System.Data.DataColumn("VideoID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVideoID);
+                this.columnTagID = new global::System.Data.DataColumn("TagID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTagID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnVideoTagID}, true));
+                this.columnVideoTagID.AutoIncrement = true;
+                this.columnVideoTagID.AutoIncrementSeed = -1;
+                this.columnVideoTagID.AutoIncrementStep = -1;
+                this.columnVideoTagID.AllowDBNull = false;
+                this.columnVideoTagID.ReadOnly = true;
+                this.columnVideoTagID.Unique = true;
+                this.columnVideoID.AllowDBNull = false;
+                this.columnTagID.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_VideoTagRow Newtbl_VideoTagRow() {
+                return ((tbl_VideoTagRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new tbl_VideoTagRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(tbl_VideoTagRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.tbl_VideoTagRowChanged != null)) {
+                    this.tbl_VideoTagRowChanged(this, new tbl_VideoTagRowChangeEvent(((tbl_VideoTagRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.tbl_VideoTagRowChanging != null)) {
+                    this.tbl_VideoTagRowChanging(this, new tbl_VideoTagRowChangeEvent(((tbl_VideoTagRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.tbl_VideoTagRowDeleted != null)) {
+                    this.tbl_VideoTagRowDeleted(this, new tbl_VideoTagRowChangeEvent(((tbl_VideoTagRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.tbl_VideoTagRowDeleting != null)) {
+                    this.tbl_VideoTagRowDeleting(this, new tbl_VideoTagRowChangeEvent(((tbl_VideoTagRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removetbl_VideoTagRow(tbl_VideoTagRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsHocLapTrinhWeb ds = new dsHocLapTrinhWeb();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "tbl_VideoTagDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class dh_tbl_messageRow : global::System.Data.DataRow {
@@ -14417,6 +14744,54 @@ namespace HocLapTrinhWeb.BLL {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class tbl_VideoTagRow : global::System.Data.DataRow {
+            
+            private tbl_VideoTagDataTable tabletbl_VideoTag;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal tbl_VideoTagRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tabletbl_VideoTag = ((tbl_VideoTagDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int VideoTagID {
+                get {
+                    return ((int)(this[this.tabletbl_VideoTag.VideoTagIDColumn]));
+                }
+                set {
+                    this[this.tabletbl_VideoTag.VideoTagIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int VideoID {
+                get {
+                    return ((int)(this[this.tabletbl_VideoTag.VideoIDColumn]));
+                }
+                set {
+                    this[this.tabletbl_VideoTag.VideoIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int TagID {
+                get {
+                    return ((int)(this[this.tabletbl_VideoTag.TagIDColumn]));
+                }
+                set {
+                    this[this.tabletbl_VideoTag.TagIDColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -15286,6 +15661,40 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tbl_VideoTypeRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class tbl_VideoTagRowChangeEvent : global::System.EventArgs {
+            
+            private tbl_VideoTagRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_VideoTagRowChangeEvent(tbl_VideoTagRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_VideoTagRow Row {
                 get {
                     return this.eventRow;
                 }
