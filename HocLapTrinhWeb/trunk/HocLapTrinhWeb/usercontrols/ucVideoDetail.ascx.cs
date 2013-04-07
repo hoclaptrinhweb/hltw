@@ -43,7 +43,7 @@ public partial class usercontrols_ucVideoDetail : DH.UI.UCBase
             metaUrl.Content = strUrl;
         var metaVideo = (HtmlMeta)Page.Master.FindControl("metaVideo");
         if (metaVideo != null)
-            metaVideo.Content = strVideo;
+            metaVideo.Content = CurrentPage.UrlRoot + "/code/jwp58l/player.swf?file=" + HttpUtility.UrlEncode(strVideo) + "&abouttext=Hoclaptrinhweb.com&aboutlink=" + HttpUtility.UrlEncode(CurrentPage.UrlRoot) + "&skin=" + HttpUtility.UrlEncode(CurrentPage.UrlRoot + "/code/jwp58l/NewTubeDark.zip") + "&controlbar.position=over&dock.position=true&logo.file=" + HttpUtility.UrlEncode(CurrentPage.UrlRoot + "/code/jwp58l/logo.png") + "&logo.hide=false&logo.position=top-right&logo.link=" + HttpUtility.UrlEncode(CurrentPage.UrlRoot);
         //Image
         var metaImage = (HtmlMeta)Page.Master.FindControl("metaImage");
         if (metaImage != null)
