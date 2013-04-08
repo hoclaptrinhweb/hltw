@@ -254,14 +254,11 @@ public partial class Admin_usercontrols_ucVideo : DH.UI.UCBase
                 r.VideoID = int.Parse(hdVideoID.Value);
                 r.VideoTypeID = int.Parse(drVideoTypeMove.SelectedValue);
                 r.MoveFrom = int.Parse(hdVideoTypeID.Value);
-                r.CreatedDate = DateTime.Now;
                 r.UpdatedBy = int.Parse(Session["UserID"].ToString());
-                r.UpdatedDate = DateTime.Now;
-                r.IPUpdate = DH.Utilities.Net.GetVisitorIPAddress();
                 dt.Addtbl_VideoRow(r);
             }
             var vVideoBll = new v_VideoBLL(CurrentPage.getCurrentConnection());
-            if (!vVideoBll.MoveVideo(dt))
+            if (!vVideoBll.UpdateStatus(dt,dt.VideoTypeIDColumn.ColumnName,dt.MoveFromColumn.ColumnName,dt.UpdatedByColumn.ColumnName))
             {
                 SaveValidate1.IsValid = false;
                 SaveValidate1.ErrorMessage = msg.GetMessage(vVideoBll.getMsgCode());
