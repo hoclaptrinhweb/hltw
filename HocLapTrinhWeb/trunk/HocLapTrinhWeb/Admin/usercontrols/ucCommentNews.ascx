@@ -8,7 +8,7 @@
 <div id="page-content">
     <div id="page-header">
         <h1>
-            <asp:Label ID="lblPageHeader" runat="server" Text="Liên hệ"></asp:Label>
+            <asp:Label ID="lblPageHeader" runat="server" Text="Bình luận"></asp:Label>
         </h1>
     </div>
     <div class="container">
