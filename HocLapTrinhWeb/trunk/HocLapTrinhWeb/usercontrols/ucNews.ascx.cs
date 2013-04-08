@@ -71,8 +71,8 @@ public partial class usercontrols_ucNews : DH.UI.UCBase
         {
             if (PageIndex > 1)
             {
-                html += "<li><a class=\"firstPage\"  href=\"" + url + "trang=1" + "\" >|<<</a></li>";
-                html += "<li><a class=\"prevPage\"  href=\"" + url + "trang=" + (PageIndex - 1) + "\"><<</a></li>";
+                html += "<li class=\"first\"><a href=\"" + url + "trang=1" + "\" ><< Đầu tiên</a></li>";
+                html += "<li class=\"previous\"><a href=\"" + url + "trang=" + (PageIndex - 1) + "\">< Trước</a></li>";
             }
             var delta = 0;
             for (var i = 0; i < nPageShow; i++)
@@ -89,17 +89,17 @@ public partial class usercontrols_ucNews : DH.UI.UCBase
                 number += delta;
                 if (number == PageIndex)
                 {
-                    html += "<li><a class=\"pagecurrent\">" + number + "</a></li>";
+                    html += "<li class=\"pages selected\"><a>" + number + "</a></li>";
                 }
                 else
                 {
-                    html += "<li><a class=\"pages\" href=\"" + url + "trang=" + number + "\" >" + number + "</a></li>";
+                    html += "<li class=\"pages\"><a href=\"" + url + "trang=" + number + "\" >" + number + "</a></li>";
                 }
             }
             if (PageIndex < nSumOfPage)
             {
-                html += "<li><a class=\"nextPage\"  href=\"" + url + "trang=" + (PageIndex + 1) + "\">>></a></li>";
-                html += "<li><a class=\"endPage\"  href=\"" + url + "trang=" + (nSumOfPage) + "\">>>|</a></li>";
+                html += "<li class=\"next\"><a href=\"" + url + "trang=" + (PageIndex + 1) + "\">Tiếp theo ></a></li>";
+                html += "<li class=\"last\"><a href=\"" + url + "trang=" + (nSumOfPage) + "\">Cuối >></a></li>";
             }
         }
         return html;
