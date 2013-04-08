@@ -144,7 +144,7 @@
                                     <asp:HiddenField ID="hdVideoID" Value='<%# Eval("VideoID") %>' runat="server" />
                                     <asp:HiddenField ID="hdVideoTypeID" Value='<%# Eval("VideoTypeID") %>' runat="server" />
                                     <asp:HiddenField ID="hdThumbnail" Value='<%# Eval("Thumbnail") %>' runat="server" />
-                                    <asp:TextBox ID="txtTitle" runat="server" Visible="False" Text='<%# Eval("Title") %>'></asp:TextBox>
+                                    <asp:TextBox ID="txtTitle" style="width:98%" runat="server" Visible="False" Text='<%# Eval("Title") %>'></asp:TextBox>
                                     <asp:HyperLink ID="hlTitle" runat="server" NavigateUrl='<%# "~/Admin/VideoDetail.aspx?VideoID="+Eval("VideoID") %>'
                                         Text='<%# Eval("Title") %>'></asp:HyperLink>
                                 </ItemTemplate>
