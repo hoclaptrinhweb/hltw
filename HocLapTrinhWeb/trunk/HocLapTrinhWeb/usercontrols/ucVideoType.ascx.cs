@@ -45,11 +45,11 @@ public partial class usercontrols_ucVideoType : DH.UI.UCBase
         {
             try
             {
-                return Request.QueryString["pagesize"] != null ? int.Parse(Request.QueryString["pagesize"]) : 10;
+                return Request.QueryString["pagesize"] != null ? int.Parse(Request.QueryString["pagesize"]) : 24;
             }
             catch
             {
-                return 10;
+                return 24;
             }
         }
     }
