@@ -14,6 +14,7 @@ public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
     {
         base.Page_Load(sender, e);
         if (IsPostBack) return;
+        dropVideoType.DataBind();
         var videoID = Request.QueryString["VideoID"];
         if (videoID == null)
             OnLoad();
