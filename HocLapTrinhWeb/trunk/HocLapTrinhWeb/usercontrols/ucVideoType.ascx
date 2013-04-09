@@ -62,5 +62,7 @@
 </asp:Repeater>
 <div class="clear">
 </div>
+<div class="paging">
 <ul class="pagination" runat="server" id="Paging">
 </ul>
+</div>
