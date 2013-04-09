@@ -30,39 +30,39 @@
 </div>
 <div style="clear: both;">
 </div>
-<asp:Repeater ID="rpData" runat="server">
-    <ItemTemplate>
-        <div class="box_outer">
-            <div class="cat_article" itemscope itemtype="http://schema.org/Article">
-                <h2 class="cat_article_title">
-                    <a itemprop="url" href='<%# CurrentPage.UrlRoot + "/video/" +  XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("VideoID") +  ".aspx" %>'
-                        title="<%# Eval("Title").ToString().Replace('"',' ') %>"><span itemprop="name">
-                            <%# Eval("Title") %>
-                        </span></a>
-                </h2>
-                <div class="cat_article_warap">
-                    <div class="cat_article_img">
-                        <div class="cat_img">
-                            <a title="<%# Eval("Title").ToString().Replace('"',' ') %>" href='<%# CurrentPage.UrlRoot + "/video/" +  XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("VideoID") +  ".aspx" %>'>
-                                <%# Eval("Thumbnail").ToString() == "" ? "" : "<img alt=\"" + Eval("Title").ToString().Replace('"', ' ') + "\" itemprop=\"image\" class=\"left\" src=\"" + ( Eval("Thumbnail").ToString().Contains("http://") ? Eval("Thumbnail").ToString() : CurrentPage.UrlRoot + "/images/w93-" + Eval("Thumbnail").ToString().ToLower().Replace(Global.ImagesNews.ToLower(), "") + ".ashx\"") +" />"%>
-                                <span class="ca_article_icon"></span></a>
+<div class="box-content">
+<ul class="view c-view clear">
+    <asp:Repeater ID="rpData" runat="server">
+        <ItemTemplate>
+            <li>
+                <div class="in2">
+                    <div class="thumb c-thumb">
+                        <div class="in2">
+                            <a class="thumb-link" href="<%# CurrentPage.UrlRoot + "/video/" +  XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("VideoID") +  ".aspx" %>"
+                                title="<%# Eval("Title").ToString().Replace('"',' ') %>">
+                                <%# Eval("Thumbnail").ToString() == "" ? "" : "<img alt=\"" + Eval("Title").ToString().Replace('"', ' ') + "\" itemprop=\"image\" class=\"left\" src=\"" + (Eval("Thumbnail").ToString().Contains("http://") ? Eval("Thumbnail").ToString() : CurrentPage.UrlRoot + "/images/w180-" + Eval("Thumbnail").ToString().ToLower().Replace(Global.ImagesNews.ToLower(), "") + ".ashx") + "\" />"%>
+                            </a>
+                            <div class="ticker">
+                                <span title="Thời lượng">01:30</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="cat_article_content">
-                        <p itemprop="description">
-                            <%# Eval("Brief") %>
-                        </p>
-                        <a class="article_read_more" href='<%# CurrentPage.UrlRoot + "/video/" +  XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("VideoID") +  ".aspx" %>'>
-                            Chi tiết <span>›</span></a>
+                    <div class="title">
+                        <div class="in2">
+                            <a class="title-link" href="<%# CurrentPage.UrlRoot + "/video/" +  XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("VideoID") +  ".aspx" %>"
+                                title="<%# Eval("Title").ToString().Replace('"',' ') %>">
+                                <%# Eval("Title") %></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </ItemTemplate>
-</asp:Repeater>
+            </li>
+        </ItemTemplate>
+    </asp:Repeater>
+</ul>
+</div>
 <div class="clear">
 </div>
 <div class="paging">
-<ul class="pagination" runat="server" id="Paging">
-</ul>
+    <ul class="pagination" runat="server" id="Paging">
+    </ul>
 </div>
