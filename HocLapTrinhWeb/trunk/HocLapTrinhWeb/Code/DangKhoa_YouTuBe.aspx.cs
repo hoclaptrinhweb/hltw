@@ -9,14 +9,14 @@ public partial class Code_DangKhoa_YouTuBe : DH.UI.PageBase
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-       // GetDocument();
+       
     }
 
     public void GetImage()
     {
         var videoBll = new v_VideoBLL(getCurrentConnection());
         var dtUpdate = new dsHocLapTrinhWeb.tbl_VideoDataTable();
-        var dt = videoBll.GetAllVideoForGridView(0, 1000, "", -1, -1, "", "", "");
+        var dt = videoBll.GetAllVideoForGridView(0, 2000, "", -1, -1, "", "", "");
         if (dt != null && dt.Count > 0)
             for (var i = 0; i < dt.Count; i++)
             {
@@ -26,12 +26,13 @@ public partial class Code_DangKhoa_YouTuBe : DH.UI.PageBase
                 try
                 {
                     var webClient = new WebClient();
-                    var path = dt[i].Thumbnail.Replace("?feature=og", "");
+                    var path = dt[i].Thumbnail.Replace("?feature=og", "").Replace("mqdefault.jpg", "hqdefault.jpg");
                     fileName = path;
                     fileName = fileName.Substring(fileName.LastIndexOf("/", StringComparison.Ordinal) + 1);
                     var suffixImage = Path.GetExtension(fileName).ToLower();
-                    fileName = DateTime.Now.ToString("ddMMyyyy") + i + "_" + fileName;
-                    webClient.DownloadFile(path, Server.MapPath("~/" + Global.ImagesVideo + XuLyChuoi.ConvertToUnSign(dt[i].Title) + "_" + i + suffixImage));
+                    fileName = DateTime.Now.ToString("ddMMyyyy") + "_" + XuLyChuoi.ConvertToUnSign(dt[i].Title) + "_" + i +
+                               suffixImage;
+                    webClient.DownloadFile(path, Server.MapPath("~/" + Global.ImagesVideo + fileName));
                 }
                 catch (Exception)
                 {
@@ -134,7 +135,7 @@ public partial class Code_DangKhoa_YouTuBe : DH.UI.PageBase
                 row.CreatedBy = 1;
                 row.UpdatedBy = 1;
                 //Chú ý
-                row.VideoTypeID = 10;
+                row.VideoTypeID = -1;
                 row.VideoURL = t.Attributes["href"].Value;
                 row.IPAddress = DH.Utilities.Net.GetVisitorIPAddress();
                 row.IPUpdate = DH.Utilities.Net.GetVisitorIPAddress();
