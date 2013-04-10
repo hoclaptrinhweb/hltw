@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using HocLapTrinhWeb.BLL;
 
@@ -66,7 +61,7 @@ public partial class usercontrols_ucVideoType : DH.UI.UCBase
     {
         var vnnVideoTypeBll = new vnn_VideoTypeBLL(CurrentPage.getCurrentConnection());
         var row = vnnVideoTypeBll.GetVideoTypeByID(VideoTypeID);
-        var url = CurrentPage.UrlRoot + "/video/" + (row != null ? XuLyChuoi.ConvertToUnSign(row.VideoTypeName) : VideoTypeID.ToString()) + "/hltw" + VideoTypeID + ".aspx" + (PageSize == 10 ? "?" : "?pagesize=" + PageSize + "&");
+        var url = CurrentPage.UrlRoot + "/video/" + (row != null ? XuLyChuoi.ConvertToUnSign(row.VideoTypeName) : VideoTypeID.ToString()) + "/hltw" + VideoTypeID + ".aspx" + (PageSize == 24 ? "?" : "?pagesize=" + PageSize + "&");
 
         var html = "";
         var nSumOfPage = (total - 1) / PageSize + 1;
