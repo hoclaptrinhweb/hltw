@@ -51,6 +51,7 @@
                 Tin tức mới nhất về <a target="_blank" href="http://www.tinmoi.vn/samsung-galaxy-s4-e218.html">Samsung
                     Galaxy S4</a>
                 <br />Chuyên mục <a target="_blank" href="http://www.techz.vn/C/dien-thoai-rv">đánh giá điện thoại</a> smartphone 2013
+                <br/>Lap trinh <a target="_blank" href="http://maybanhang.net/phan-mem-quan-ly-ban-hang/">phan mem ban hang</a> tiet kiem va hieu qua
             </div>
         </div>
     </div>
