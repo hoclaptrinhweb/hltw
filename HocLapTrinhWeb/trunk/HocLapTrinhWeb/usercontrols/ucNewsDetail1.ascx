@@ -77,6 +77,7 @@
                     Tin mới hơn <span>›</span></a></span>
         </div>
         <!--Ad360.vn-ad-2874-640-90-start -->
+        <div style="margin-left:-15px;">
         <script type="text/javascript">
             var _ad360_id = 2874;
             var _ad360_w = 640;
@@ -84,6 +85,7 @@
             var _ad360_pos = 0;
         </script>
         <script language="javascript" type="text/javascript" src="http://provider.ad360.vn/showads.min.js"></script>
+        </div>
         <!-- Ad360.vn-ad-2874-640-90-ends -->
         <asp:Panel ID="pGuest" runat="server">
             <div class="single_share">
