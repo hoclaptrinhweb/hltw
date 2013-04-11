@@ -885,6 +885,99 @@ namespace HocLapTrinhWeb.BLL
             }
         }
 
+        public vnn_dsHocLapTrinhWeb.vnn_vw_VideoDataTable GetAllVideoOldForRepeater(string selectCol, int nTop, int notVideoID, int newsTypeID, int isActive, DateTime currDate)
+        {
+            var isOpen = false;
+            try
+            {
+                if (OpenConnection(ref isOpen))
+                {
+                    var dt = new vnn_dsHocLapTrinhWeb.vnn_vw_VideoDataTable();
+                    _ClassBaseDAL = new ClassBaseDAL(IConnect, dt) { Top = nTop };
+                    if (selectCol != "")
+                        _ClassBaseDAL.SelectClause = selectCol;
+                    if (newsTypeID != -1)
+                    {
+                        _ClassBaseDAL.WhereClause = dt.VideoTypeIDColumn.ColumnName + "=@VideoTypeID";
+                        _ClassBaseDAL.AddParams("@VideoTypeID", SqlDbType.Int, newsTypeID, ParameterDirection.Input);
+                    }
+                    if (isActive != -1)
+                    {
+                        _ClassBaseDAL.WhereClause += (_ClassBaseDAL.WhereClause != "" ? " and " : "") + dt.IsActiveColumn.ColumnName + "=@IsActive";
+                        _ClassBaseDAL.AddParams("@IsActive", SqlDbType.Int, isActive, ParameterDirection.Input);
+                    }
+                    _ClassBaseDAL.WhereClause += (_ClassBaseDAL.WhereClause != "" ? " and " : "") + dt.CreatedDateColumn.ColumnName + " < @CurrDate";
+                    _ClassBaseDAL.AddParams("@CurrDate", SqlDbType.DateTime, currDate, ParameterDirection.Input);
+
+                    _ClassBaseDAL.WhereClause += (_ClassBaseDAL.WhereClause != "" ? " and " : "") + dt.VideoIDColumn.ColumnName + " != @VideoID";
+                    _ClassBaseDAL.AddParams("@VideoID", SqlDbType.Int, notVideoID, ParameterDirection.Input);
+
+                    _ClassBaseDAL.OrderByClause = dt.CreatedDateColumn.ColumnName + " desc";
+                    if (_ClassBaseDAL.FillData(dt))
+                        return dt;
+                    AddMessage("ERR-000006", "Tải dữ liệu không thành công." + _ClassBaseDAL.getMessage(), _ClassBaseDAL.getMsgNumber());
+                    return null;
+                }
+                AddMessage("ERR-000001", "Connection failed." + getMessage(), 0);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                AddMessage("ERR-000006", "Tải dữ liệu không thành công." + ex.Message, 0);
+                return null;
+            }
+            finally
+            {
+                CloseConnection(isOpen);
+            }
+        }
+
+        public vnn_dsHocLapTrinhWeb.vnn_vw_VideoDataTable GetAllVideoNewForRepeater(string selectCol, int nTop, int notVideoID, int newsTypeID, int isActive, DateTime currDate)
+        {
+            var isOpen = false;
+            try
+            {
+                if (OpenConnection(ref isOpen))
+                {
+                    var dt = new vnn_dsHocLapTrinhWeb.vnn_vw_VideoDataTable();
+                    _ClassBaseDAL = new ClassBaseDAL(IConnect, dt) { Top = nTop };
+                    if (selectCol != "")
+                        _ClassBaseDAL.SelectClause = selectCol;
+                    if (newsTypeID != -1)
+                    {
+                        _ClassBaseDAL.WhereClause = dt.VideoTypeIDColumn.ColumnName + "=@VideoTypeID";
+                        _ClassBaseDAL.AddParams("@VideoTypeID", SqlDbType.Int, newsTypeID, ParameterDirection.Input);
+                    }
+                    if (isActive != -1)
+                    {
+                        _ClassBaseDAL.WhereClause += (_ClassBaseDAL.WhereClause != "" ? " and " : "") + dt.IsActiveColumn.ColumnName + "=@IsActive";
+                        _ClassBaseDAL.AddParams("@IsActive", SqlDbType.Int, isActive, ParameterDirection.Input);
+                    }
+                    _ClassBaseDAL.WhereClause += (_ClassBaseDAL.WhereClause != "" ? " and " : "") + dt.CreatedDateColumn.ColumnName + " > @CurrDate";
+                    _ClassBaseDAL.AddParams("@CurrDate", SqlDbType.DateTime, currDate, ParameterDirection.Input);
+
+                    _ClassBaseDAL.WhereClause += (_ClassBaseDAL.WhereClause != "" ? " and " : "") + dt.VideoIDColumn.ColumnName + " != @VideoID";
+                    _ClassBaseDAL.AddParams("@VideoID", SqlDbType.Int, notVideoID, ParameterDirection.Input);
+
+                    _ClassBaseDAL.OrderByClause = dt.CreatedDateColumn.ColumnName + " asc";
+                    if (_ClassBaseDAL.FillData(dt))
+                        return dt;
+                    AddMessage("ERR-000006", "Tải dữ liệu không thành công." + _ClassBaseDAL.getMessage(), _ClassBaseDAL.getMsgNumber());
+                    return null;
+                }
+                AddMessage("ERR-000001", "Connection failed." + getMessage(), 0);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                AddMessage("ERR-000006", "Tải dữ liệu không thành công." + ex.Message, 0);
+                return null;
+            }
+            finally
+            {
+                CloseConnection(isOpen);
+            }
+        }
 
         #endregion
 
