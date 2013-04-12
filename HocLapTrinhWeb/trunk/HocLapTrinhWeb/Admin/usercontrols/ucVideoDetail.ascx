@@ -505,6 +505,6 @@
 <style type="text/css">
     .MaxImage
     {
-        max-width: 500px;
+        max-width: 200px;
     }
 </style>
