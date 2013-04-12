@@ -294,7 +294,7 @@
 
         if (isMoveVideo) {
             showPopupDiv('divMoveVideo', 'Dời tin', null, null, true, null, null, null); //absolute
-            isAdd = false;
+            isMoveVideo = false;
         }
 
         var hdIsSuccessful = document.getElementById('<%= hdIsAddSuccessful.ClientID%>');
