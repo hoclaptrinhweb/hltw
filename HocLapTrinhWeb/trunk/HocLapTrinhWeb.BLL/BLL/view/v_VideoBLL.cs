@@ -979,6 +979,62 @@ namespace HocLapTrinhWeb.BLL
             }
         }
 
+        public vnn_dsHocLapTrinhWeb.vnn_vw_VideoDataTable GetVideoAll(string selectCol, int nTop, vnn_dsHocLapTrinhWeb.vnn_vw_VideoTypeDataTable dtVideoType, int isActive, string fromDate, string toDate, string orderByName, string orderByValue)
+        {
+            var isOpen = false;
+            try
+            {
+                if (OpenConnection(ref isOpen))
+                {
+                    var dt = new vnn_dsHocLapTrinhWeb.vnn_vw_VideoDataTable();
+                    _ClassBaseDAL = new ClassBaseDAL(IConnect, dt) { Top = nTop };
+                    if (selectCol != "")
+                        _ClassBaseDAL.SelectClause = selectCol;
+                    if (dtVideoType != null && dtVideoType.Count > 0)
+                    {
+                        var strWhereClause = dt.VideoTypeIDColumn.ColumnName + " in (";
+                        for (var i = 0; i < dtVideoType.Count; i++)
+                        {
+                            strWhereClause += "@" + i + ",";
+                            _ClassBaseDAL.AddParams(i.ToString(CultureInfo.InvariantCulture), SqlDbType.Int, dtVideoType[i].VideoTypeID, ParameterDirection.Input);
+                        }
+                        _ClassBaseDAL.WhereClause = strWhereClause.Substring(0, strWhereClause.Length - 1) + ")";
+                    }
+                    if (isActive != -1)
+                    {
+                        _ClassBaseDAL.WhereClause += (_ClassBaseDAL.WhereClause != null ? " and " : "") + dt.IsActiveColumn.ColumnName + "=@IsActive";
+                        _ClassBaseDAL.AddParams("@IsActive", SqlDbType.Int, isActive, ParameterDirection.Input);
+                    }
+                    if (fromDate != "" && toDate != "")
+                    {
+                        _ClassBaseDAL.WhereClause += (_ClassBaseDAL.WhereClause != null ? " and " : "") + "cast(CONVERT(nvarchar(10),createddate,101) AS DATETIME) >= cast(@FromDate AS DATETIME) and cast(CONVERT(nvarchar(10),createddate,101) AS DATETIME) <= cast(@ToDate AS DATETIME)";
+                        _ClassBaseDAL.AddParams("@FromDate", SqlDbType.NVarChar, fromDate, ParameterDirection.Input);
+                        _ClassBaseDAL.AddParams("@ToDate", SqlDbType.NVarChar, toDate, ParameterDirection.Input);
+                    }
+                    _ClassBaseDAL.OrderByClause = orderByName + " " + orderByValue;
+
+                    if (_ClassBaseDAL.FillData(dt))
+                        return dt;
+                    if (dt.Count > 0)
+                        return dt;
+                    AddMessage("ERR-000006", "Tải dữ liệu không thành công." + _ClassBaseDAL.getMessage(), _ClassBaseDAL.getMsgNumber());
+                    return null;
+                }
+                AddMessage("ERR-000001", "Connection failed." + getMessage(), 0);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                AddMessage("ERR-000006", "Tải dữ liệu không thành công." + ex.Message, 0);
+                return null;
+            }
+            finally
+            {
+                CloseConnection(isOpen);
+            }
+        }
+
+
         #endregion
 
         #endregion
