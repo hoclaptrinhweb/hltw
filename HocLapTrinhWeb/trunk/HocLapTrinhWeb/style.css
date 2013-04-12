@@ -4125,3 +4125,34 @@ margin-bottom: 10px;
 position: relative;
 float:left;
 }
+.box-title {
+background: #414141;
+height: 29px;
+overflow: hidden;
+margin-bottom: 1px;
+    float: left;
+    width: 100%;
+}
+.box-tab li, .box-tab li a {
+display: inline-block;
+height: 29px;
+line-height: 29px;
+color: #fff;
+    font-size: 15px;
+font-weight: bold;
+text-transform: uppercase;
+}
+.box-tab li a {
+padding: 0 17px;
+}
+.box-tab li a:hover,.box-tab li.active a,.box-tab li a.active {
+    background:#fd9c00;
+    color:#fff;
+    background-image:linear-gradient(bottom, #F38600 32%, #F89100 66%, #FC9B00 83%, #FFA200 92%);
+    background-image:-o-linear-gradient(bottom, #F38600 32%, #F89100 66%, #FC9B00 83%, #FFA200 92%);
+    background-image:-moz-linear-gradient(bottom, #F38600 32%, #F89100 66%, #FC9B00 83%, #FFA200 92%);
+    background-image:-webkit-linear-gradient(bottom, #F38600 32%, #F89100 66%, #FC9B00 83%, #FFA200 92%);
+    background-image:-ms-linear-gradient(bottom, #F38600 32%, #F89100 66%, #FC9B00 83%, #FFA200 92%);
+    background-image:-webkit-gradient( linear, left bottom, left top, color-stop(0.32, #F38600), color-stop(0.66, #F89100), color-stop(0.83, #FC9B00), color-stop(0.92, #FFA200) );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFA200', endColorstr='#F38600', GradientType=0)
+}

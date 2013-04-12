@@ -2,7 +2,6 @@
     Inherits="usercontrols_ucNewsType" %>
 <asp:Repeater ID="rpNewsType" runat="server" OnItemDataBound="rpNewsType_ItemDataBound">
     <ItemTemplate>
-      <%-- <%# BindAds((RepeaterItem)Container)%>--%>
         <div class="box_outer">
             <div class="news_box">
                 <div class="news_box_heading">
