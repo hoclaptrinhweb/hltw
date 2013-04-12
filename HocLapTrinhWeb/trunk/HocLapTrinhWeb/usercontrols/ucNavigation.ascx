@@ -5,6 +5,9 @@
         <div class="inner">
             <ul class="nav">
                 <li><a href='<%= CurrentPage.UrlRoot %>'>Trang chủ</a></li>
+                 <li>
+                <a href="<%= CurrentPage.UrlRoot + "/video/" %>"> Video </a>
+                </li>
                 <li>
                 <a href="<%= CurrentPage.UrlRoot + "/upnews.aspx" %>">Đăng tin</a>
                 </li>
