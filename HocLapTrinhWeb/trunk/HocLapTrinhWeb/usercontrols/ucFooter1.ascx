@@ -19,7 +19,7 @@
 				<li><a href="<%= CurrentPage.UrlRoot %>/thu-thuat-meo-vat/hltw21.aspx">Thủ thuật mẹo vặt</a></li>
 				<li><a href="<%= CurrentPage.UrlRoot %>/tin-cong-nghe/hltw20.aspx">Tin công nghệ</a></li>
 				<li><a href="<%= CurrentPage.UrlRoot %>/game/hltw35.aspx">Game</a></li>
-                <li><a href="<%= CurrentPage.UrlRoot %>/video/>">Video</a></li>
+                <li><a href="<%= CurrentPage.UrlRoot %>/video/">Video</a></li>
 			</ul>
             <ul class="menu">
 				<li class="menu_title"><h3>Chuyên mục</h3></li>
