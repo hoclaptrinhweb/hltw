@@ -50,8 +50,8 @@
       <resource path="~/css/jquery.cluetip.css" />
       <resource path="~/js/syntaxhighlighter_3.0.83/styles/shCoreDefault.css" />
     </resourceSet>
-    <resourceSet name="dotLessCss" type="css" version="auto" minifierRef="off">
+    <!--<resourceSet name="dotLessCss" type="css" version="auto" minifierRef="off">
       <resource path="~/css/dotLess.css.less" />
-    </resourceSet>
+    </resourceSet>-->
   </resourceSets>
 </combres>
