@@ -62,9 +62,3 @@
     <script type="text/javascript">        var is_load_adnet_lib = is_load_adnet_lib || 1; if (is_load_adnet_lib == 1) { is_load_adnet_lib = 2; if (typeof (jQuery) == 'undefined') { document.write(unescape("%3Cscript src='http://s0.adnet.vn/jquery.min.js' type='text/javascript'%3E%3C/script%3E")); } document.write(unescape("%3Cscript src='http://s0.adnet.vn/js/adnet34.js' type='text/javascript'%3E%3C/script%3E")); }</script>
     <script type="text/javascript" src="http://widget.adnet.vn/js/js.php?widget_id=20114"></script>
 </div>
-<div id="vbdAd" class="box_outer">
-    <embed onmousedown="AdsvnRenderClick(912)" src="<%= CurrentPage.UrlRoot %>/images/ads/vietbando336x140.swf"
-        flashvars="stringURL=http%3A%2F%2Fwww.vietbando.com" width="300px" pluginspage="http://www.macromedia.com/go/getflashplayer"
-        type="application/x-shockwave-flash" allowscriptaccess="always" wmode="transparent"
-        quality="high">
-</div>

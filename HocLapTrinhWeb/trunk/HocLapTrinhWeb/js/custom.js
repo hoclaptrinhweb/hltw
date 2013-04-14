@@ -9,7 +9,7 @@
         else {
             $('.scrollTo_top').fadeOut(300);
         }
-        if ($(this).scrollTop() > $("#vbdAd").offset().top + $("#vbdAd").height() && $(this).scrollTop() < $(document).height() - 900) {
+        if ($(this).scrollTop() > $("#adnet_widget_20114").offset().top + $("#adnet_widget_20114").height() && $(this).scrollTop() < $(document).height() - 900) {
             $("#divTag").addClass("tagcloudTop");
         } else {
             $("#divTag").removeClass("tagcloudTop");            
