@@ -5,7 +5,7 @@ public partial class Theme : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        lrStyle.Text = Combres.WebExtensions.CombresLink("DefaultThemeCss");
+       lrStyle.Text = Combres.WebExtensions.CombresLink("DefaultThemeCss");
         lrScript.Text = Combres.WebExtensions.CombresLink("DefaultThemeJs");
         Login();
     }

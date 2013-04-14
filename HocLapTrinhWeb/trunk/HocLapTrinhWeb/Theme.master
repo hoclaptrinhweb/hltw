@@ -15,6 +15,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="english, en, Vietnamese,vn" />
+    <asp:Literal ID="lrBase" runat="server"></asp:Literal>
     <link rel="shortcut icon" href="http://www.hoclaptrinhweb.com/favicon.png" />
     <title></title>
     <!--[if lt IE 9]>
