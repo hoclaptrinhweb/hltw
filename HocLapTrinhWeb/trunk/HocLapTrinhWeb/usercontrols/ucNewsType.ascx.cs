@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
 using System.Data;
@@ -9,8 +10,11 @@ public partial class usercontrols_ucNewsType : DH.UI.UCBase
     protected override void Page_Load(object sender, EventArgs e)
     {
         base.Page_Load(sender, e);
+        if (IsPostBack)
+            return;
+        SetBase();
         var vnnNewsTypeBll = new vnn_NewsTypeBLL(CurrentPage.getCurrentConnection());
-        var notNewsTypeID = new ArrayList {14, 22, 23, 34, 36};
+        var notNewsTypeID = new ArrayList { 14, 22, 23, 34, 36 };
         var dt = vnnNewsTypeBll.GetNewsTypeByParentID("Description,NewsTypeName,NewsTypeID,PathID", -1, notNewsTypeID);
         rpNewsType.DataSource = dt;
         rpNewsType.DataBind();
@@ -68,9 +72,9 @@ public partial class usercontrols_ucNewsType : DH.UI.UCBase
                                 "<p class='recent_news_excpert' itemprop=\"description\">" +
                                     row.Brief +
                                 "</p>" +
-                                //"<div class='nb_meta' >" +
-                                //    "<span class='news_date'></span><span class='news_comments_count'><a itemprop=\"review\">(" + row.Viewed + ") xem</a></span>" +
-                                //"</div>" +
+                //"<div class='nb_meta' >" +
+                //    "<span class='news_date'></span><span class='news_comments_count'><a itemprop=\"review\">(" + row.Viewed + ") xem</a></span>" +
+                //"</div>" +
                             "</div>" +
                         "</div>" +
                     "</div>";
@@ -79,4 +83,12 @@ public partial class usercontrols_ucNewsType : DH.UI.UCBase
             tmp = "<a rel='" + CurrentPage.UrlRoot + "/Handler/tooltip.ashx?id=" + row.NewsID + "' itemprop=\"name\" itemprop=\"url\" href='" + CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/" + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw" + Eval("NewsID") + ".aspx' title='" + row.Title + "'>" + Global.GetSubContent(row.Title, 45) + "</a>";
         return tmp;
     }
+
+    public void SetBase()
+    {
+        var lrBase = (Literal)Page.Master.FindControl("lrBase");
+        if (lrBase != null)
+            lrBase.Text = "<base href='" + CurrentPage.UrlRoot + "/'></base>";
+    }
+
 }
