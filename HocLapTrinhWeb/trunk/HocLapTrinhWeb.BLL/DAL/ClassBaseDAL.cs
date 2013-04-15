@@ -1,5 +1,5 @@
 using System.Data;
-using DH.Data.SqlServer;
+using HocLapTrinhWeb.DAL;
 
 namespace HocLapTrinhWeb.DAL
 {

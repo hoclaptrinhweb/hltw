@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Configuration;
 using System.Web.UI;
-using DH.Data.SqlServer;
 using System.Web.UI.HtmlControls;
+using HocLapTrinhWeb.DAL;
 
 namespace HocLapTrinhWeb.UI
 {

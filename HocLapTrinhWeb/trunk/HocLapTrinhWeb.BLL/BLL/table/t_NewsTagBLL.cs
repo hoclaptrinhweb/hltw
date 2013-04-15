@@ -2,7 +2,7 @@
 using System;
 using System.Collections;
 using System.Data;
-using DH.Data.SqlServer;
+using HocLapTrinhWeb.DAL;
 using HocLapTrinhWeb.DAL;
 
 namespace HocLapTrinhWeb.BLL

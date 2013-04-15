@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4B2A1A68-1A24-424A-95BB-29475FB4E10B}</ProjectGuid>
+    <ProjectGuid>{5EED6170-8745-4082-8497-CB0054B4FC36}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HocLapTrinhWeb.UI</RootNamespace>
-    <AssemblyName>HocLapTrinhWeb.UI</AssemblyName>
+    <RootNamespace>HocLapTrinhWeb.DAL</RootNamespace>
+    <AssemblyName>HocLapTrinhWeb.DAL</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,28 +32,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MessageBox.cs" />
-    <Compile Include="PageBase.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    <Compile Include="Adapter.cs" />
+    <Compile Include="ClassBase.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="ConvertType.cs" />
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="ErrorMessage.cs" />
+    <Compile Include="Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UCBase.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HocLapTrinhWeb.DAL\HocLapTrinhWeb.DAL.csproj">
-      <Project>{5EED6170-8745-4082-8497-CB0054B4FC36}</Project>
-      <Name>HocLapTrinhWeb.DAL</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

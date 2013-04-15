@@ -1,6 +1,5 @@
 ﻿<%@ WebHandler Language="C#" Class="GAllSiteMap" %>
 
-using System;
 using System.Web;
 using HocLapTrinhWeb.BLL;
 using System.Xml;
@@ -59,7 +58,7 @@ public class GAllSiteMap : IHttpHandler
         {
             writer.WriteStartDocument();
             writer.WriteStartElement("sitemapindex", "http://www.google.com/schemas/sitemap/0.84");
-            var con = new DH.Data.SqlServer.Connection();
+            var con = new HocLapTrinhWeb.DAL.Connection();
             con.CreateConnection(Global.cs_sqlserver, Global.Key, Global.ValidKey);
             var vnnNewsBll = new vnn_NewsBLL(con);
             //Tính tổng số page để tạo số sitemap con

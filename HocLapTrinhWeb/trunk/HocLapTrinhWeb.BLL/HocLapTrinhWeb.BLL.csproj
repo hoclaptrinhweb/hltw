@@ -61,10 +61,6 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DH.Data.SqlServer, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLLS\DH.Data.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="HtmlAgilityPack, Version=1.3.9.1, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLLS\HtmlAgilityPack.dll</HintPath>
@@ -153,10 +149,6 @@
   <ItemGroup>
     <Content Include="DLLS\AjaxControlToolkit.dll" />
     <Content Include="DLLS\CollectionPager.dll" />
-    <Content Include="DLLS\DH.Data.SqlServer.dll" />
-    <Content Include="DLLS\DH.Data.SqlServer.xml" />
-    <Content Include="DLLS\DH.UI.dll" />
-    <Content Include="DLLS\DH.UI.XML" />
     <Content Include="DLLS\DH.Utilities.dll" />
     <Content Include="DLLS\DH.Utilities.XML" />
     <Content Include="DLLS\DropOptGroup.dll" />
@@ -225,6 +217,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HocLapTrinhWeb.DAL\HocLapTrinhWeb.DAL.csproj">
+      <Project>{5EED6170-8745-4082-8497-CB0054B4FC36}</Project>
+      <Name>HocLapTrinhWeb.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

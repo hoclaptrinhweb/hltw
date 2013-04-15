@@ -22,7 +22,7 @@ public class User : WebService
         var strValue = "\"\"";
         try
         {
-            var con = new DH.Data.SqlServer.Connection();
+            var con = new HocLapTrinhWeb.DAL.Connection();
             if (con.CreateConnection(Global.cs_sqlserver, Global.Key, Global.ValidKey))
             {
                 var userBll = new ltk_UserBLL(con);

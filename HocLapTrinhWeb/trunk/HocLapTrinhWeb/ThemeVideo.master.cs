@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
 
 public partial class ThemeVideo : System.Web.UI.MasterPage
@@ -25,7 +20,7 @@ public partial class ThemeVideo : System.Web.UI.MasterPage
         {
             if (Session["UserName"] != null)
                 return true;
-            var con = new DH.Data.SqlServer.Connection();
+            var con = new HocLapTrinhWeb.DAL.Connection();
             if (con.CreateConnection(Global.cs_sqlserver, Global.Key, Global.ValidKey))
             {
                 var userBll = new ltk_UserBLL(con);

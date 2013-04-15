@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-using DH.Data.SqlServer;
+using HocLapTrinhWeb.DAL;
 using HocLapTrinhWeb.BLL;
 using System.Net;
 using System.IO;

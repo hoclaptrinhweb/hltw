@@ -1,5 +1,5 @@
 using System.Web.Services;
-using DH.Data.SqlServer;
+using HocLapTrinhWeb.DAL;
 using HocLapTrinhWeb.BLL;
 using System.Collections.Generic;
 
