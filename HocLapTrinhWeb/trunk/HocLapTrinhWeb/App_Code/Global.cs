@@ -33,6 +33,15 @@ public static class Global
     public static string Key = ConfigurationManager.AppSettings["Key"];
     public static string ValidKey = ConfigurationManager.AppSettings["ValidKey"];
 
+    public static string Email = ConfigurationManager.AppSettings["Email"];
+    public static string DisplayName = ConfigurationManager.AppSettings["DisplayName"];
+    public static string EmailCC = ConfigurationManager.AppSettings["EmailCC"];
+    public static string HostMail = ConfigurationManager.AppSettings["HostMail"];
+    public static string PostMail = ConfigurationManager.AppSettings["PostMail"];
+    public static string MailPass = ConfigurationManager.AppSettings["MailPass"];
+
+    
+
     #endregion
 
     #region Methods

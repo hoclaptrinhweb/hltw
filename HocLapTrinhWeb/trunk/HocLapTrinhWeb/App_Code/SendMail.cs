@@ -1,5 +1,4 @@
 using System;
-using System.Configuration;
 using System.Net.Mail;
 using System.Net;
 
@@ -17,19 +16,16 @@ public static class SendMail
                 {
                     IsBodyHtml = true,
                     Body = content,
-                    From =
-                        new MailAddress(ConfigurationManager.AppSettings["Email"],
-                                        ConfigurationManager.AppSettings["DisplayName"])
+                    From = new MailAddress(Global.Email, Global.DisplayName)
                 };
             msg.To.Add(new MailAddress(mailTo));
-            msg.CC.Add(new MailAddress(ConfigurationManager.AppSettings["EmailCC"]));
+            msg.CC.Add(new MailAddress(Global.EmailCC));
             msg.Subject = subject;
 
-            var client = new SmtpClient(ConfigurationManager.AppSettings["HostMail"], int.Parse(ConfigurationManager.AppSettings["PostMail"]))
+            var client = new SmtpClient(Global.HostMail, int.Parse(Global.PostMail))
                 {
                     Credentials =
-                        new NetworkCredential(ConfigurationManager.AppSettings["Email"],
-                                              ConfigurationManager.AppSettings["MailPass"]),
+                        new NetworkCredential(Global.Email, Global.MailPass),
                     EnableSsl = true
                 };
 
@@ -42,4 +38,5 @@ public static class SendMail
             return false;
         }
     }
+
 }
