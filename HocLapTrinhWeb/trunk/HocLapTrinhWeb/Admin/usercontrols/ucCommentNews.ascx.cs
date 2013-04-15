@@ -3,7 +3,7 @@ using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
 using System.Collections;
 
-public partial class Admin_usercontrols_ucCommentNews : DH.UI.UCBase
+public partial class Admin_usercontrols_ucCommentNews : HocLapTrinhWeb.UI.UCBase
 {
     #region Event Page
 

@@ -5,7 +5,7 @@ using HocLapTrinhWeb.BLL;
 using System.Net;
 using System.IO;
 
-public partial class Code_DangKhoa_YouTuBe : DH.UI.PageBase
+public partial class Code_DangKhoa_YouTuBe : HocLapTrinhWeb.UI.PageBase
 {
     protected void Page_Load(object sender, EventArgs e)
     {

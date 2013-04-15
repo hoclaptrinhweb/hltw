@@ -3,7 +3,7 @@ using System.Collections;
 using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
 
-public partial class Admin_usercontrols_ucAutoAdv : DH.UI.UCBase
+public partial class Admin_usercontrols_ucAutoAdv : HocLapTrinhWeb.UI.UCBase
 {
   
 

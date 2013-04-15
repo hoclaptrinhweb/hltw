@@ -3,7 +3,7 @@ using System.Globalization;
 using HocLapTrinhWeb.BLL;
 using DH.Utilities;
 
-public partial class usercontrols_ucRssDetail : DH.UI.UCBase
+public partial class usercontrols_ucRssDetail : HocLapTrinhWeb.UI.UCBase
 {
     protected override void Page_Load(object sender, EventArgs e)
     {

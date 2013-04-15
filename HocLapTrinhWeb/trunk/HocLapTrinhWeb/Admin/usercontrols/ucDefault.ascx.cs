@@ -1,7 +1,7 @@
 using System;
 using HocLapTrinhWeb.BLL;
 
-public partial class Admin_usercontrols_ucDefault : DH.UI.UCBase
+public partial class Admin_usercontrols_ucDefault : HocLapTrinhWeb.UI.UCBase
 {
     protected override void Page_Load(object sender, EventArgs e)
     {

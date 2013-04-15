@@ -6,7 +6,7 @@ using HocLapTrinhWeb.BLL;
 using System.IO;
 
 
-public partial class Admin_usercontrols_ucVideoDetail : DH.UI.UCBase
+public partial class Admin_usercontrols_ucVideoDetail : HocLapTrinhWeb.UI.UCBase
 {
     #region Event Page
 

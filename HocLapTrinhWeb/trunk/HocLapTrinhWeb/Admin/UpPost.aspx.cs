@@ -1,6 +1,6 @@
 using System;
 
-public partial class Admin_UpPost : DH.UI.PageBase
+public partial class Admin_UpPost : HocLapTrinhWeb.UI.PageBase
 {
     protected void Page_Load(object sender, EventArgs e)
     {

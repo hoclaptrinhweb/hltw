@@ -4,7 +4,7 @@ using System.Web;
 using HocLapTrinhWeb.BLL;
 using System.Web.UI.HtmlControls;
 
-public partial class usercontrols_ucVideoDetail : DH.UI.UCBase
+public partial class usercontrols_ucVideoDetail : HocLapTrinhWeb.UI.UCBase
 {
     protected override void Page_Load(object sender, EventArgs e)
     {

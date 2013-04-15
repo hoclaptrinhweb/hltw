@@ -3,7 +3,7 @@ using System.Globalization;
 using HocLapTrinhWeb.BLL;
 using System.Web.UI.HtmlControls;
 
-public partial class usercontrols_ucToDay : DH.UI.UCBase
+public partial class usercontrols_ucToDay : HocLapTrinhWeb.UI.UCBase
 {
     protected override void Page_Load(object sender, EventArgs e)
     {

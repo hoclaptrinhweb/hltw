@@ -2,7 +2,7 @@
 using System.Web;
 using HocLapTrinhWeb.BLL;
 
-public partial class administrator_usercontrols_ucLogin : DH.UI.UCBase
+public partial class administrator_usercontrols_ucLogin : HocLapTrinhWeb.UI.UCBase
 {
 
     #region Variables

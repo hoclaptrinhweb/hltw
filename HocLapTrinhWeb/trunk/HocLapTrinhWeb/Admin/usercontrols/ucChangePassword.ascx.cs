@@ -1,7 +1,7 @@
 ﻿using System;
 using HocLapTrinhWeb.BLL;
 
-public partial class administrator_usercontrols_ucChangePassword : DH.UI.UCBase
+public partial class administrator_usercontrols_ucChangePassword : HocLapTrinhWeb.UI.UCBase
 {
     #region Event Page
     protected override void Page_Load(object sender, EventArgs e)

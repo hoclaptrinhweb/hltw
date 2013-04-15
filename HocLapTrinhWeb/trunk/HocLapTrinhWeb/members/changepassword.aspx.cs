@@ -1,6 +1,6 @@
 ﻿using System;
 
-public partial class members_changepassword : DH.UI.PageBase
+public partial class members_changepassword : HocLapTrinhWeb.UI.PageBase
 {
     protected void Page_Load(object sender, EventArgs e)
     {

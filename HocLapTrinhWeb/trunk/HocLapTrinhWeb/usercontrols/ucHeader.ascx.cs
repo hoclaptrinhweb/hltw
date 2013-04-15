@@ -1,6 +1,6 @@
 using System;
 
-public partial class usercontrols_ucHeader : DH.UI.UCBase
+public partial class usercontrols_ucHeader : HocLapTrinhWeb.UI.UCBase
 {
     protected override void Page_Load(object sender, EventArgs e)
     {
