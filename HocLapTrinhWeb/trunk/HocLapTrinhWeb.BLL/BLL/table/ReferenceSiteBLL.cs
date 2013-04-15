@@ -2,7 +2,7 @@
 using System.Data;
 using System.Collections;
 using System.Globalization;
-using DH.Data.SqlServer;
+using HocLapTrinhWeb.DAL;
 using HocLapTrinhWeb.DAL;
 
 namespace HocLapTrinhWeb.BLL

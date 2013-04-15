@@ -1,6 +1,6 @@
 ﻿using System;
-using DH.Data.SqlServer;
 using System.Data;
+using HocLapTrinhWeb.DAL;
 
 namespace HocLapTrinhWeb.UI
 {

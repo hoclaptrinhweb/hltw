@@ -1,6 +1,6 @@
 ﻿<%@ WebHandler Language="C#" Class="AutoCompleteTag" %>
 using System.Web;
-using DH.Data.SqlServer;
+using HocLapTrinhWeb.DAL;
 using HocLapTrinhWeb.BLL;
 
 public class AutoCompleteTag : IHttpHandler

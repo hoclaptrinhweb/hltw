@@ -20,7 +20,7 @@ public partial class Theme : System.Web.UI.MasterPage
         {
             if (Session["UserName"] != null)
                 return true;
-            var con = new DH.Data.SqlServer.Connection();
+            var con = new HocLapTrinhWeb.DAL.Connection();
             if (con.CreateConnection(Global.cs_sqlserver, Global.Key, Global.ValidKey))
             {
                 var userBll = new ltk_UserBLL(con);

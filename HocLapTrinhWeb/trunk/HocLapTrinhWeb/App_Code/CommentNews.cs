@@ -32,7 +32,7 @@ public class CommentNews : WebService
             if (!Global.CheckEmail(email))
                 return "Email không hợp lệ";
 
-            var con = new DH.Data.SqlServer.Connection();
+            var con = new HocLapTrinhWeb.DAL.Connection();
             if (con.CreateConnection(Global.cs_sqlserver, Global.Key, Global.ValidKey))
             {
                 //Kiểm tra mail có trong CSDL không
@@ -101,7 +101,7 @@ public class CommentNews : WebService
                 return "Có lỗi xảy ra ! Bạn nhấn F5 để tải lại trang web.";
 
 
-            var con = new DH.Data.SqlServer.Connection();
+            var con = new HocLapTrinhWeb.DAL.Connection();
             if (con.CreateConnection(Global.cs_sqlserver, Global.Key, Global.ValidKey))
             {
 
@@ -136,7 +136,7 @@ public class CommentNews : WebService
         {
             if (HttpContext.Current.Session["UserName"] != null)
                 return true;
-            var con = new DH.Data.SqlServer.Connection();
+            var con = new HocLapTrinhWeb.DAL.Connection();
             if (con.CreateConnection(Global.cs_sqlserver, Global.Key, Global.ValidKey))
             {
                 var userBll = new ltk_UserBLL(con);
@@ -184,7 +184,7 @@ public class CommentNews : WebService
     {
         try
         {
-            var con = new DH.Data.SqlServer.Connection();
+            var con = new HocLapTrinhWeb.DAL.Connection();
             if (con.CreateConnection(Global.cs_sqlserver, Global.Key, Global.ValidKey))
             {
                 var autoAdv = new AutoAdvBLL(con);

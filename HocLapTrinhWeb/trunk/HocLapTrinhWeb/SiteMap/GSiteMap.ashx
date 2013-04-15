@@ -1,6 +1,5 @@
 ﻿<%@ WebHandler Language="C#" Class="GSiteMap" %>
 
-using System;
 using System.Web;
 using HocLapTrinhWeb.BLL;
 using System.Xml;
@@ -81,7 +80,7 @@ public class GSiteMap : IHttpHandler
             writer.WriteStartDocument();
             writer.WriteStartElement("urlset", "http://www.sitemaps.org/schemas/sitemap/0.9");
 
-            var con = new DH.Data.SqlServer.Connection();
+            var con = new HocLapTrinhWeb.DAL.Connection();
             con.CreateConnection(Global.cs_sqlserver, Global.Key, Global.ValidKey);
             var vnnNewsBll = new vnn_NewsBLL(con);
             //Lấy url tin phân trang vào sitemap

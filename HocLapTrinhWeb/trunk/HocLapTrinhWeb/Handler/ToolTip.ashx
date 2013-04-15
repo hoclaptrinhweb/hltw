@@ -2,7 +2,7 @@
 
 using System.Web;
 using HocLapTrinhWeb.BLL;
-using DH.Data.SqlServer;
+using HocLapTrinhWeb.DAL;
 
 public class ToolTip : IHttpHandler
 {

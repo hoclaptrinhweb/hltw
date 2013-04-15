@@ -27,7 +27,7 @@ public partial class administrator_MasterPage : System.Web.UI.MasterPage
     {
         try
         {
-            var iconnect = new DH.Data.SqlServer.Connection();
+            var iconnect = new HocLapTrinhWeb.DAL.Connection();
             if (!iconnect.CreateConnection(ConfigurationManager.ConnectionStrings["cs_sqlserver"].ToString(), ConfigurationManager.AppSettings["Key"], ConfigurationManager.AppSettings["ValidKey"]))
                 return false;
 
