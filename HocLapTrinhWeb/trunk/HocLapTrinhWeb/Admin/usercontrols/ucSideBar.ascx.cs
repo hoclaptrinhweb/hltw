@@ -1,7 +1,7 @@
 using System;
 using HocLapTrinhWeb.BLL;
 
-public partial class administrator_usercontrols_ucSideBar : DH.UI.UCBase
+public partial class administrator_usercontrols_ucSideBar : HocLapTrinhWeb.UI.UCBase
 {
 
     #region Event Page

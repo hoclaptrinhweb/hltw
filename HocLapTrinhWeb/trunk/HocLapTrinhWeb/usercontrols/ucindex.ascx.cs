@@ -5,7 +5,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
 
-public partial class usercontrols_ucindex : DH.UI.UCBase
+public partial class usercontrols_ucindex : HocLapTrinhWeb.UI.UCBase
 {
     protected override void Page_Load(object sender, EventArgs e)
     {

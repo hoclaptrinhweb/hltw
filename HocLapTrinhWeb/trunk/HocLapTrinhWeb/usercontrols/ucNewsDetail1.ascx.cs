@@ -4,7 +4,7 @@ using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
 using System.Web.UI.HtmlControls;
 
-public partial class usercontrols_ucNewsDetail1 : DH.UI.UCBase
+public partial class usercontrols_ucNewsDetail1 : HocLapTrinhWeb.UI.UCBase
 {
 
     #region Event Page

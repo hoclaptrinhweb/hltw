@@ -5,7 +5,7 @@ using HocLapTrinhWeb.BLL;
 using System.IO;
 using System.Collections;
 
-public partial class administrator_usercontrols_NewsDetail : DH.UI.UCBase
+public partial class administrator_usercontrols_NewsDetail : HocLapTrinhWeb.UI.UCBase
 {
     #region Event Page
 

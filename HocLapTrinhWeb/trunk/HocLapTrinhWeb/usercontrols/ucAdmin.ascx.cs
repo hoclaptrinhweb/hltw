@@ -1,7 +1,7 @@
 ﻿using System;
 using HocLapTrinhWeb.BLL;
 
-public partial class usercontrols_ucAdmin : DH.UI.UCBase
+public partial class usercontrols_ucAdmin : HocLapTrinhWeb.UI.UCBase
 {
     #region Event Page
 

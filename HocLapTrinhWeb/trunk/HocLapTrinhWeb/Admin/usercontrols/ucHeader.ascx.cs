@@ -1,6 +1,6 @@
 using System;
 
-public partial class administrator_usercontrols_WebUserControl : DH.UI.UCBase
+public partial class administrator_usercontrols_WebUserControl : HocLapTrinhWeb.UI.UCBase
 {
     #region Event Page
 

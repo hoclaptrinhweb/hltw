@@ -2,7 +2,7 @@
 using System.Collections;
 using HocLapTrinhWeb.BLL;
 
-public partial class usercontrols_ucMenuRight : DH.UI.UCBase
+public partial class usercontrols_ucMenuRight : HocLapTrinhWeb.UI.UCBase
 {
     protected override void Page_Load(object sender, EventArgs e)
     {

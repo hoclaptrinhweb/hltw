@@ -3,7 +3,7 @@ using System.Collections;
 using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
 
-public partial class Admin_usercontrols_ucTag : DH.UI.UCBase
+public partial class Admin_usercontrols_ucTag : HocLapTrinhWeb.UI.UCBase
 {
 
     protected override void Page_Load(object sender, EventArgs e)

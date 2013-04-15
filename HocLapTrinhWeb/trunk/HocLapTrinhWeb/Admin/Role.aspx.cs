@@ -1,6 +1,6 @@
 using System;
 
-public partial class dhadmincp_Role : DH.UI.PageBase
+public partial class dhadmincp_Role : HocLapTrinhWeb.UI.PageBase
 {
     protected void Page_Load(object sender, EventArgs e)
     {

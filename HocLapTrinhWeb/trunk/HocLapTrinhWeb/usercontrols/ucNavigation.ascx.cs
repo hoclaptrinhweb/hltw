@@ -1,6 +1,6 @@
 ﻿using System;
 
-public partial class usercontrols_ucNavigation : DH.UI.UCBase
+public partial class usercontrols_ucNavigation : HocLapTrinhWeb.UI.UCBase
 {
     protected override void Page_Load(object sender, EventArgs e)
     {

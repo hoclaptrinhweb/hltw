@@ -2,7 +2,7 @@
 using System.Web;
 using HocLapTrinhWeb.BLL;
 
-public partial class usercontrols_ucLoginUser : DH.UI.UCBase
+public partial class usercontrols_ucLoginUser : HocLapTrinhWeb.UI.UCBase
 {
 
     protected override void Page_Load(object sender, EventArgs e)
