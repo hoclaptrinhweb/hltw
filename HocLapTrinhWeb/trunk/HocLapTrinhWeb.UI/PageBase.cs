@@ -70,7 +70,7 @@ namespace HocLapTrinhWeb.UI
                 CurrentConnect = new ClassBase();
                 if (!CurrentConnect.IConnect.CreateConnection(this.connectionString, key, validKey))
                 {
-                    base.Server.Transfer(base.Request.ApplicationPath + "/Error.aspx");
+                    base.Server.Transfer(base.Request.ApplicationPath + "/Error.html?e=key");
                     return;
                 }
                 msg = new MessageBox(this.getCurrentConnection(), this.Session["Language"].ToString());
@@ -81,7 +81,7 @@ namespace HocLapTrinhWeb.UI
                 if (CurrentConnect.IConnect.GetConnected() != null)
                     this.msg.AddMessage("ERR-000000", exception.Message, 0);
                 else
-                    base.Server.Transfer(base.Request.ApplicationPath + "/Error.aspx");
+                    base.Server.Transfer(base.Request.ApplicationPath + "/Error.html");
             }
         }
 
