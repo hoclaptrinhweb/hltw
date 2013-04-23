@@ -26,7 +26,7 @@
 </style>
 <div class="top-menu-wrap" xmlns:v="http://rdf.data-vocabulary.org/#">
     <ul class="treeview" itemprop="breadcrumb">
-        <li typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href='<%= CurrentPage.UrlRoot %>'>
+        <li typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href='<%= CurrentPage.UrlRoot + "/video/" %>'>
             Home</a></li>
         <asp:Literal ID="lrTreeView" runat="server"></asp:Literal>
     </ul>

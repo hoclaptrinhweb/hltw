@@ -127,7 +127,7 @@ public partial class usercontrols_ucVideoDetail : HocLapTrinhWeb.UI.UCBase
         if (dt != null && dt.Count > 0)
         {
             aPrev.Visible = true;
-            aPrev.HRef = CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(dt[0].VideoTypeName) + "/" + XuLyChuoi.ConvertToUnSign(dt[0].Title) + "-hltw" + dt[0].VideoID + ".aspx";
+            aPrev.HRef = CurrentPage.UrlRoot + "/video/" + XuLyChuoi.ConvertToUnSign(dt[0].VideoTypeName) + "/" + XuLyChuoi.ConvertToUnSign(dt[0].Title) + "-hltw" + dt[0].VideoID + ".aspx";
             aPrev.Title = dt[0].Title.Replace("\"", "");
         }
         dt = vnnVideoBll.GetAllVideoNewForRepeater("Title,VideoID,VideoTypeName,CreatedDate,Thumbnail", 6, notVideoID, newsTypeID, 1, currdate);
@@ -135,7 +135,7 @@ public partial class usercontrols_ucVideoDetail : HocLapTrinhWeb.UI.UCBase
         rpDataNew.DataSource = dt.Select("", "createddate desc");
         rpDataNew.DataBind();
         aNext.Visible = true;
-        aNext.HRef = CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(dt[0].VideoTypeName) + "/" + XuLyChuoi.ConvertToUnSign(dt[0].Title) + "-hltw" + dt[0].VideoID + ".aspx";
+        aNext.HRef = CurrentPage.UrlRoot + "/video/" + XuLyChuoi.ConvertToUnSign(dt[0].VideoTypeName) + "/" + XuLyChuoi.ConvertToUnSign(dt[0].Title) + "-hltw" + dt[0].VideoID + ".aspx";
         aNext.Title = dt[0].Title.Replace("\"", "");
     }
 }
