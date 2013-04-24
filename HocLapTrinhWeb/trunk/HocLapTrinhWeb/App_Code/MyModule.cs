@@ -8,7 +8,8 @@ namespace AspNetResources.Web
         public void Init(HttpApplication app)
         {
             app.ReleaseRequestState += new EventHandler(InstallResponseFilter);
-            app.EndRequest += new EventHandler(InstallEndRequestFilter);
+            app.BeginRequest += (new EventHandler(this.Application_BeginRequest));
+            app.EndRequest += (new EventHandler(this.Application_EndRequest));
         }
 
 
@@ -22,32 +23,23 @@ namespace AspNetResources.Web
                 app.Context.Request.FilePath.ToLower().Contains("/test/") ||
                 app.Context.Request.FilePath.ToLower().Contains("/members/") ||
                 app.Context.Request.FilePath.ToLower().Contains("/ckeditor/")) return;
-            if (response.ContentType == "text/html")
+            if (response.ContentType == "text/html" && app.Context.Request.FilePath.ToLower().Contains(".aspx"))
                 response.Filter = new PageFilter(response.Filter);
         }
 
-        private void InstallEndRequestFilter(object sender, EventArgs e)
+        private void Application_BeginRequest(Object source, EventArgs e)
         {
-            var context = HttpContext.Current;
-            if (!context.Request.Url.ToString().StartsWith("http://m.hoclaptrinhweb.com")) return;
-            if (context.Response.ContentType != "image/png") return;
-            context.Request.Cookies.Clear();
-            context.Response.Cookies.Clear();
-            //List<string> cookiesToClear = new List<string>();
-            //foreach (string cookieName in context.Request.Cookies)
-            //{
-            //    HttpCookie cookie = context.Request.Cookies[cookieName];
-            //    cookiesToClear.Add(cookie.Name);
-            //}
-
-            //foreach (string name in cookiesToClear)
-            //{
-            //    HttpCookie cookie = new HttpCookie(name, string.Empty);
-            //    cookie.Expires = DateTime.Today.AddYears(-1);
-            //    context.Response.Cookies.Set(cookie);
-            //}
+            //var application = (HttpApplication)source;
+            //var context = application.Context;
+            //context.Response.Write("<h1><font color=red>HelloWorldModule: Beginning of Request</font></h1><hr>");
         }
 
+        private void Application_EndRequest(Object source, EventArgs e)
+        {
+            //var application = (HttpApplication)source;
+            //var context = application.Context;
+            //context.Response.Write("<hr><h1><font color=red>HelloWorldModule: End of Request</font></h1>");
+        }
 
         public void Dispose()
         {
