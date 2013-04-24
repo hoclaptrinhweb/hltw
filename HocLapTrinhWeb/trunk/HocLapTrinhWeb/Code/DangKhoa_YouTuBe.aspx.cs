@@ -10,7 +10,7 @@ public partial class Code_DangKhoa_YouTuBe : HocLapTrinhWeb.UI.PageBase
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        GetURL();
+        GetDocument();
     }
 
     public string strUrl
@@ -84,7 +84,7 @@ public partial class Code_DangKhoa_YouTuBe : HocLapTrinhWeb.UI.PageBase
                     var path = doc.DocumentNode.SelectSingleNode("//meta[@property='og:image']").Attributes["content"].Value.Replace("?feature=og", "");
                     fileName = path;
                     fileName = fileName.Substring(fileName.LastIndexOf("/", StringComparison.Ordinal) + 1);
-                    fileName = DateTime.Now.ToString("ddMMyyyy") + fileName;
+                    fileName = DateTime.Now.ToString("ddMMyyyy") + "_" + XuLyChuoi.ConvertToUnSign(row.Title) + "_" + fileName;
                     webClient.DownloadFile(path, Server.MapPath("~/" + Global.ImagesVideo + fileName));
                 }
                 catch (Exception)
@@ -114,6 +114,8 @@ public partial class Code_DangKhoa_YouTuBe : HocLapTrinhWeb.UI.PageBase
 
     public void GetDocument()
     {
+        if(strUrl == "")
+            return;
         var con = new Connection();
         con.CreateConnection(Global.cs_sqlserver, Global.Key, Global.ValidKey);
         var videoBll = new v_VideoBLL(con);
@@ -121,12 +123,11 @@ public partial class Code_DangKhoa_YouTuBe : HocLapTrinhWeb.UI.PageBase
         var update = new UpdateNewsBase();
         var arr = new ArrayList();
 
-        var doc = update.GetContentFromUrl(this.UrlRoot + "/code/Huy Dao Quang - YouTube.html");
+        var doc = update.GetContentFromUrl(this.UrlRoot + "/code/YouTube.html");
         var node = doc.DocumentNode.SelectNodes("//li//span[@class='content-item-detail']//a");
         if (node != null)
             foreach (var t in node)
             {
-                // arr.Add("http://www.youtube.com" + t.Attributes["href"].Value);
                 var rowEx = videoBll.GetVideoByRefAddress(t.Attributes["href"].Value, -1);
                 if (rowEx != null)
                     continue;
@@ -134,15 +135,29 @@ public partial class Code_DangKhoa_YouTuBe : HocLapTrinhWeb.UI.PageBase
                 doc = update.GetContentFromUrl(t.Attributes["href"].Value);
                 row.Title = doc.DocumentNode.SelectSingleNode("//span[@id='eow-title']").InnerText.Replace("\n", "").Trim();
                 var brief = doc.DocumentNode.SelectSingleNode("//p[@id='eow-description']").InnerText;
-                row.Brief = (brief == "Không có mô tả nào." ? "" : brief);
-                row.Thumbnail = doc.DocumentNode.SelectSingleNode("//meta[@property='og:image']").Attributes["content"].Value.Replace("?feature=og", "");
+                row.Brief = (brief == "Không có mô tả nào." ? "" : (brief.Length > 250 ? brief.Substring(0, 250) : brief));
+                string fileName;
+                try
+                {
+                    var webClient = new WebClient();
+                    var path = doc.DocumentNode.SelectSingleNode("//meta[@property='og:image']").Attributes["content"].Value.Replace("?feature=og", "");
+                    fileName = path;
+                    fileName = fileName.Substring(fileName.LastIndexOf("/", StringComparison.Ordinal) + 1);
+                    fileName = DateTime.Now.ToString("ddMMyyyy") + "_" + XuLyChuoi.ConvertToUnSign(row.Title) + "_" + fileName;
+                    webClient.DownloadFile(path, Server.MapPath("~/" + Global.ImagesVideo + fileName));
+                }
+                catch (Exception)
+                {
+                    fileName = "noimage.jpg";
+                }
+                row.Thumbnail = Global.ImagesVideo + fileName;
                 row.RefAddress = t.Attributes["href"].Value;
                 row.CreatedDate = DateTime.Now;
                 row.UpdatedDate = DateTime.Now;
                 row.CreatedBy = 1;
                 row.UpdatedBy = 1;
                 //Chú ý
-                row.VideoTypeID = -1;
+                row.VideoTypeID = 10;
                 row.VideoURL = t.Attributes["href"].Value;
                 row.IPAddress = DH.Utilities.Net.GetVisitorIPAddress();
                 row.IPUpdate = DH.Utilities.Net.GetVisitorIPAddress();
