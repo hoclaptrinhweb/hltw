@@ -45,8 +45,7 @@
                 <br />
                 <a target="_blank" href="http://www.phanmembanhang.com" title="Phần mềm bán hàng tối ưu nhất">phan mem
                     ban hang</a><br />
-                <a target="_blank" href="http://hosgroup.com.vn/phan-mem/phan-mem-quan-ly-nhan-su" title="Phần mềm quản lý nhân sự chuyên nghiệp LotusPro">
-                    phan mem quan ly nhan su</a>
+                <a  target="_blank" href="http://www.hosco.com.vn/phan-mem-quan-ly-nhan-su.html" title="phần mềm quản lý nhân sự chuyên nghiệp nhất">phần mềm quản lý nhân sự</a>
                 <br />
                 Tin tức mới nhất về <a target="_blank" href="http://www.tinmoi.vn/samsung-galaxy-s4-e218.html">Samsung
                     Galaxy S4</a>
