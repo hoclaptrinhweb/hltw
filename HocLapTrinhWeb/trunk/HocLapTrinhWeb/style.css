@@ -3807,7 +3807,7 @@ ul.pagination li a
 .fixed{
 position: fixed;
 top: 0px;
-z-index: 101;
+z-index: 9999999;
 width: 100%;
 min-width: 1000px;
 border-bottom: 3px solid #E26600;
