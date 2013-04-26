@@ -14,7 +14,7 @@
                 flickr</a></li>
             <li class="picasa"><a target="_blank" href="https://picasaweb.google.com/webhoclaptrinh">
                 picasa</a></li>
-            <li class="digg"><a target="_blank" href="http://digg.com/">digg</a></li>
+            <li class="digg"><a rel="author" href="<%= UrlRoot %>/about.html">about</a></li>
             <li class="vimeo"><a target="_blank" href="https://vimeo.com/hoclaptrinhweb">Vimeo</a></li>
             <li class="tumblr"><a target="_blank" href="http://hoclaptrinhweb.tumblr.com/">tumblr</a></li>
             <li>, <a class="lienket" href="http://blog.hmclip.vn" title="Chia sẻ là niềm vui"
