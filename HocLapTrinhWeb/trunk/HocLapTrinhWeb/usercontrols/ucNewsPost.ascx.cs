@@ -13,11 +13,27 @@ public partial class usercontrols_ucNewsPost : HocLapTrinhWeb.UI.UCBase
     {
         base.Page_Load(sender, e);
         if (IsPostBack) return;
-        var newsID = Request.QueryString["NewsID"];
-        if (newsID == null)
+        if (NewsID == -1)
             OnLoad();
         else
-            LoadDataEdit(int.Parse(newsID));
+            LoadDataEdit(NewsID);
+    }
+
+    public int NewsID
+    {
+        get
+        {
+            if (string.IsNullOrEmpty(Request.QueryString["NewsID"]))
+                return -1;
+            try
+            {
+                return int.Parse(Request.QueryString["NewsID"]);
+            }
+            catch (Exception)
+            {
+                return -1;
+            }
+        }
     }
 
     protected void ObjectDataSource1ObjectCreating(object sender, ObjectDataSourceEventArgs e)
@@ -81,9 +97,7 @@ public partial class usercontrols_ucNewsPost : HocLapTrinhWeb.UI.UCBase
             row.IsHot = false;
             row.IsShowImage = false;
             row.IsActive = cboxActive.Checked;
-            var newsId = Request.QueryString["NewsID"];
-
-            if (newsId == null)
+            if (NewsID == -1)
             {
                 row.CreatedDate = DateTime.Now;
                 row.MoveFrom = int.Parse(dropNewsType.SelectedValue);
@@ -130,7 +144,7 @@ public partial class usercontrols_ucNewsPost : HocLapTrinhWeb.UI.UCBase
             row.UpdatedBy = int.Parse(Session["UserID"].ToString());
             row.NewsTypeID = int.Parse(dropNewsType.SelectedValue);
             row.MoveFrom = int.Parse(hdNewsTypeID.Value);
-            row.NewsID = int.Parse(newsId);
+            row.NewsID = NewsID;
             row.CreatedDate = Convert.ToDateTime(txtNgaytao.Text);
             dt.Addtbl_NewsRow(row);
             if (newsBll.Update(dt))
