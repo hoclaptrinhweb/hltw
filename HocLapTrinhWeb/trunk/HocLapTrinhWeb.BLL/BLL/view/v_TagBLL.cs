@@ -132,7 +132,7 @@ namespace HocLapTrinhWeb.BLL
             }
         }
 
-        public dsHocLapTrinhWeb.tbl_TagDataTable SearchTagByName(string strName)
+        public dsHocLapTrinhWeb.tbl_TagDataTable SearchTagByName(int top, string strName)
         {
             var isOpen = false;
             try
@@ -140,7 +140,8 @@ namespace HocLapTrinhWeb.BLL
                 if (OpenConnection(ref isOpen))
                 {
                     var dt = new dsHocLapTrinhWeb.tbl_TagDataTable();
-                    _ClassBaseDAL = new ClassBaseDAL(IConnect, dt) { WhereClause = dt.TagNameColumn.ColumnName + " like '%' + @strName + '%' " };
+                    _ClassBaseDAL = new ClassBaseDAL(IConnect, dt)
+                        {WhereClause = dt.TagNameColumn.ColumnName + " like '%' + @strName + '%' ", Top = top};
                     _ClassBaseDAL.ClearParams();
                     _ClassBaseDAL.AddParams("@strName", SqlDbType.NVarChar, strName, ParameterDirection.Input);
                     if (_ClassBaseDAL.FillData(dt))

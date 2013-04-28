@@ -1,25 +1,30 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ucNewsDetail.ascx.cs"
-    Inherits="administrator_usercontrols_NewsDetail" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ucNewsPost.ascx.cs" Inherits="usercontrols_ucNewsPost" %>
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <%@ Register Assembly="INNO.WebControls" Namespace="INNO.WebControls" TagPrefix="inno" %>
 <link rel="stylesheet" type="text/css" href="http://xoxco.com/projects/code/tagsinput/jquery.tagsinput.css" />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://xoxco.com/projects/code/tagsinput/jquery.tagsinput.js"></script>
 <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js'></script>
-<link href="../admin/css/jquery-ui.css" rel="stylesheet" type="text/css" />
-<input id="notselect" type="hidden" value='<%=msg.GetMessage("ERR-000007")%>' />
-<input id="deleteconfirm" type="hidden" value='<%=msg.GetMessage("ERR-000008")%>' />
-<input id="hdDateFormat" type="hidden" value="<%= CurrentPage.Language%>" />
-<div id="page-content">
-    <div id="page-header">
-        <h1>
-            <asp:Label ID="lblPageHeader" runat="server" Text="Tin Tức"></asp:Label>&nbsp;</h1>
-    </div>
-    <div class="container">
-        <div class="box-headerdetail">
-            <asp:Label ID="lblBoxHeader" runat="server" Text="Thêm / Chỉnh sửa"></asp:Label>
+<link href="<%= CurrentPage.UrlRoot %>/admin/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<div class="box_outer">
+    <div class="cat_article" itemscope itemtype="http://schema.org/Article">
+        <h1 class="cat_article_title" itemprop="name">
+            <a>
+                <asp:Literal ID="lbTitle" runat="server"></asp:Literal></a>
+        </h1>
+        <div class="article_meta">
+            <span class="meta_author">Nguồn:
+                <asp:HyperLink ID="lbRefAddress" runat="server" Target="_blank">[lbRefAddress]</asp:HyperLink></span>
+            <span itemprop="dateModified" class="meta_date">Posted date: <strong>
+                <asp:Literal ID="lbCreatedDate" runat="server"></asp:Literal></strong></span>
+            <span class="meta_sap">|</span> <span itemprop="review" class="meta_comments">Xem :
+                <a>
+                    <asp:Literal ID="lbView" runat="server"></asp:Literal></a></span>
         </div>
-        <div class="box">
+        <h2 class="brief" itemprop="description">
+            <asp:Literal ID="lbBrief" runat="server"></asp:Literal>
+        </h2>
+        <div id="article_content" class="single_article_content" itemprop="articleBody">
             <table cellpadding="0" cellspacing="0" width="100%">
                 <tr valign="top">
                     <td>
@@ -173,7 +178,7 @@
                     <td>
                     </td>
                     <td colspan="6">
-                        <CKEditor:CKEditorControl ID="FCKContent" runat="server" Height="400" BasePath="~/ckeditor">
+                        <CKEditor:CKEditorControl ID="FCKContent" runat="server" Height="250" BasePath="~/ckeditor">
                         </CKEditor:CKEditorControl>
                     </td>
                 </tr>
@@ -305,8 +310,8 @@
                     <td>
                     </td>
                     <td>
-                        <inno:NumericTextBox ID="txtDouutien" runat="server" Precision="0" MaxLength="5"
-                            Width="220px" Alignment="Left"></inno:NumericTextBox>
+                        <inno:numerictextbox id="txtDouutien" runat="server" precision="0" maxlength="5"
+                            width="220px" alignment="Left"></inno:numerictextbox>
                     </td>
                     <td>
                     </td>
@@ -446,11 +451,12 @@
                     </td>
                 </tr>
             </table>
+            <div class="clear">
+            </div>
         </div>
     </div>
 </div>
 <script type="text/javascript">
-    var test = '<%= FCKContent.ClientID %>';
     function ShowAdv(t) {
         if ($(t).text() == "Hiện thêm thông tin") {
             $(t).text('Ẩn thông tin');
@@ -471,5 +477,8 @@
     .MaxImage
     {
         max-width: 200px;
+    }
+    td {
+        vertical-align: top;
     }
 </style>

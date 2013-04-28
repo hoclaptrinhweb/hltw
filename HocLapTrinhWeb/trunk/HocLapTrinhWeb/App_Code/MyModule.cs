@@ -22,6 +22,7 @@ namespace AspNetResources.Web
                 app.Context.Request.FilePath.ToLower().Contains("/admin/") ||
                 app.Context.Request.FilePath.ToLower().Contains("/test/") ||
                 app.Context.Request.FilePath.ToLower().Contains("/members/") ||
+                app.Context.Request.FilePath.ToLower().Contains("/newspost.aspx") ||
                 app.Context.Request.FilePath.ToLower().Contains("/ckeditor/")) return;
             if (response.ContentType == "text/html" && app.Context.Request.FilePath.ToLower().Contains(".aspx"))
                 response.Filter = new PageFilter(response.Filter);
