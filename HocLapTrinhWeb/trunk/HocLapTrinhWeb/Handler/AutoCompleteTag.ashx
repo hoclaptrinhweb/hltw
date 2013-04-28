@@ -14,7 +14,7 @@ public class AutoCompleteTag : IHttpHandler
         if (con.CreateConnection(Global.cs_sqlserver, Global.Key, Global.ValidKey))
         {
             var _v_TagBll = new v_TagBLL(con);
-            var dt = _v_TagBll.SearchTagByName(KeyWord);
+            var dt = _v_TagBll.SearchTagByName(10,KeyWord);
             if (dt != null && dt.Count > 0)
             {
                 foreach (var t in dt)
