@@ -41,7 +41,7 @@ public partial class usercontrols_ucContact : HocLapTrinhWeb.UI.UCBase
             row.Type = 1;
             row.Status = 0;
             row.CreatedDate = DateTime.Now;
-            SendMail.SendMailFrom("vonhatnam100689@mail.com", txtTitle.Text + " - " + txtEmail.Text, txtContent.Text);
+            SendMail.SendMailFrom("vonhatnam100689@gmail.com", txtTitle.Text + " - " + txtEmail.Text, txtContent.Text);
             dt.Addtbl_ContactRow(row);
             if (!contactBll.Add(dt)) return;
             Page.RegisterStartupScript("THANHCONG", "<script language='javascript' type='text/javascript'> alert('Gửi liên hệ thành công!')</script>");
