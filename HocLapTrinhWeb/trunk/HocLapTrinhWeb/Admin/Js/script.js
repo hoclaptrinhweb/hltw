@@ -217,3 +217,9 @@ function EventCheckBox() {
         ShowHideBtnEdit();
     });
 }
+// Fix lỗi postback
+$(document).keypress(function (e) {
+    if (e.which == 13) {
+        return false;
+    }
+});
