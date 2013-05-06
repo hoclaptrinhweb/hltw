@@ -1,0 +1,418 @@
+/*-------------start global popup-------------*/
+
+/*-------div overlay------*/
+#TB_overlay {
+	position: fixed;
+	z-index:100;
+	top: 0px;
+	left: 0px;
+	height:100%;
+	width:100%;
+}
+
+.TB_overlayMacFFBGHack {background: url(macFFBgHack.png) repeat;}
+.TB_overlayBG
+{
+	background-color:#000; 
+	filter: alpha(opacity=70);
+	opacity: 0.7;	
+	
+}
+
+* html #TB_overlay { /* ie6 hack */
+     position: absolute;
+     height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+
+/*-------image Loading------*/
+#TB_load{
+	position: fixed;
+	display:none;
+	height:13px;
+	width:158px;
+	z-index:103;
+	top: 50%;
+	left: 50%;
+	margin: -6px 0 0 -104px; /* -height/2 0 0 -width/2 */
+	color:Yellow;
+}
+
+* html #TB_load { /* ie6 hack */
+	position: absolute;
+/*margin-top: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');*/
+}
+
+/*--------Window popup------------*/
+#TB_window 
+{
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.24);
+	padding: 5px;
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #333333;
+	position: absolute;
+	text-align: left;
+	z-index: 102;
+	display: none;
+	border: 1px solid #929191;
+
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	-o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-o-border-radius:5px;
+}
+
+* html #TB_window { /* ie6 hack */
+	position: absolute;
+	margin-top: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');
+}
+
+#Content
+{
+	background-color:#FFFFFF
+}
+/*-------------End global popup-------------*/
+
+/*-------------start content popup-------------*/
+.divTitle
+{
+	background: none repeat scroll 0 0 #DDDDDD;
+    width: 100%;
+    height:33px;
+	border-bottom: 1px solid #CCCCCC;
+    
+}
+
+.divTitle .title{
+    color: #000000;
+    font-weight: bold;
+
+    line-height: 33px;
+    font-size: 14px;
+    padding: 10px 0px 0px 10px;
+    text-shadow: 0 1px 0 #F4F4F4;
+    
+}
+
+ .divTitle a.close{
+    float: right; cursor: pointer; padding-top: 11px; padding-right: 0px;
+    
+    color: #777777;
+    display: block;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 11px 12px 0;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #F4F4F4;
+    
+    transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+}
+.divTitle a.close:hover{
+    color: #fff;
+}
+
+
+
+.divContent
+{
+	width: 100%;
+	background-color:#ffffff;
+	
+}
+.divInnerContent
+{
+	padding:10px;
+}
+
+/*-------------End content popup-------------*/
+
+
+
+#TB_HideSelect{
+	z-index:99;
+	position:fixed;
+	top: 0;
+	left: 0;
+	background-color:#fff;
+	border:none;
+	filter:alpha(opacity=0);
+	-moz-opacity: 0;
+	opacity: 0;
+	height:100%;
+	width:100%;
+}
+
+* html #TB_HideSelect { /* ie6 hack */
+     position: absolute;
+     height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+/*----showpopup url----*/
+.dvTop
+{
+	float:left;
+	width:100%;
+	height:5px;
+	/*background-image:url(../Images/bg_img.jpg);*/
+	background-repeat:repeat-x;
+}
+.dvTop .dvTopLeft
+{
+	float:left;
+	height:5px;
+	width:5px;
+	background-color:transparent;
+	/*background:url(../Images/topleft.gif) no-repeat left top;*/
+}
+
+.dvTop .dvTopRight
+{
+	float:right;
+	height:5px;
+	width:5px;
+	background-color:transparent;
+	/*background:url(../Images/topright.gif) no-repeat right top;*/
+}
+.dvBottom
+{
+	float:left;
+	width:100%;
+	height:0px;
+	background:transparent;
+}
+.dvBottom .dvBottomLeft
+{
+	float:left;
+	height:0px;
+	width:5px;
+	background-color:transparent;
+	/*background:url(../Images/bottomleft.gif) no-repeat left bottom;*/
+}
+
+.dvBottom .dvBottomRight
+{
+	float:right;
+	height:0px;
+	width:5px;
+	background-color:transparent;
+	/*background:url(../Images/bottomright.gif) no-repeat right bottom;*/
+}
+.dvTitle
+{
+	width: 100%;
+	height: 22px;
+	background-color:#e8edf7;
+	/*background-image:url(../Images/bg_img.jpg);*/
+	/*background-repeat: repeat-x;*/
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color:#3b5998;
+	/*border:solid 1px #cfcfcf;*/
+	border-bottom:none;
+	/*padding: 4px 5px 0px;*/
+}
+
+.dvContent
+{
+	/*width: 100%;*/
+	/*width:100%;
+	background-color:#ffffff;
+	border:1px solid #cfcfcf;*/
+	/*padding: 5px 0px 5px 0px;*/
+	padding:0px 0px 0px 0px;
+	background-color:#ffffff;
+}
+
+
+/***************************************************************************************************/
+/*			Level 2
+*/
+
+
+
+#TB_windowLevel2 {
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+
+#TB_windowLevel2 a:link {color: #000000;}
+#TB_windowLevel2 a:visited {color: #000000;}
+#TB_windowLevel2 a:hover {color: #000;}
+#TB_windowLevel2 a:active {color: #000000;}
+#TB_windowLevel2 a:focus{color: #000000;}
+
+/* ----------------------------------------------------------------------------------------------------------------*/
+/* ---------->>> thickbox settings <<<-----------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------*/
+#TB_overlayLevel2 {
+	position: fixed;
+	z-index:150;
+	top: 0px;
+	left: 0px;
+	height:100%;
+	width:100%;
+}
+
+.TB_overlayMacFFBGHackLevel2 {background: url(macFFBgHack.png) repeat;}
+.TB_overlayBGLevel2 {
+	background-color:#CCCCCC; /*Mau nen ben ngoai*/
+	filter:alpha(opacity=75);
+	-moz-opacity: 0.75;
+	opacity: 0.75;
+}
+
+* html #TB_overlayLevel2 { /* ie6 hack */
+     position: absolute;
+     height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+#TB_windowLevel2 {
+	position: fixed;
+	background: #f5f5f5; /*Mau nen ben trong*/
+	z-index: 152;
+	color:#000000;
+	display:none;
+	border: 2 solid red;
+	text-align:left;
+	top:50%;
+	left:50%;
+	padding:0;
+}
+
+* html #TB_windowLevel2 { /* ie6 hack */
+position: absolute;
+margin-top: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');
+}
+
+#TB_windowLevel2 img#TB_Image {
+	display:block;
+	margin: 5px 0 0 5px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #666;
+	border-left: 1px solid #666;
+}
+
+
+#TB_loadLevel2{
+	position: fixed;
+	display:none;
+	height:13px;
+	width:158px;
+	z-index:153;
+	top: 50%;
+	left: 50%;
+	margin: -6px 0 0 -104px; /* -height/2 0 0 -width/2 */
+	color:Yellow;
+}
+
+* html #TB_loadLevel2 { /* ie6 hack */
+position: absolute;
+/*margin-top: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');*/
+}
+
+#TB_HideSelectLevel2{
+	z-index:199;
+	position:fixed;
+	top: 0;
+	left: 0;
+	background-color:#fff;
+	border:none;
+	filter:alpha(opacity=0);
+	-moz-opacity: 0;
+	opacity: 0;
+	height:100%;
+	width:100%;
+}
+
+* html #TB_HideSelectLevel2 { /* ie6 hack */
+     position: absolute;
+     height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+#TB_iframeContent{
+	clear:both;
+	border:none;
+	margin-bottom:-1px;
+	margin-top:1px;
+	_margin-bottom:1px;
+}
+#ContentLevel2
+{
+	background-color:#ffffff;
+}
+
+
+/************************************************************************** Start Radius Popup *******************************************************/
+
+.BTRadiusL
+{
+	
+	width:15px;
+	height:31px;
+}
+
+.BTRadiusR
+{
+	
+	width:15px;
+	height:31px;
+}
+
+.BBRadiusL
+{
+	
+	width:15px;
+	height:15px;
+}
+
+.BBRadiusR
+{
+	
+	width:15px;
+	height:15px;
+}
+
+.BT
+{
+	text-transform: uppercase;
+	height:31px;
+}
+
+.BT span
+{
+	margin-top: -8px;
+}
+
+.BT a
+{
+	margin-top: -8px;
+}
+
+.BR
+{
+	width:15px;
+}
+
+.BB
+{
+	height:15px;
+}
+
+.BL
+{
+	width:15px;
+}
+
+
+
+/************************************************************************** End Radius Popup *******************************************************/
