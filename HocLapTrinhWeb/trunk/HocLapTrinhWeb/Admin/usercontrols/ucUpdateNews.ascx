@@ -6,7 +6,7 @@
 <div id="page-content">
     <div id="page-header">
         <h1>
-            <asp:Label ID="Label6" runat="server" Text="Cập nhật tin tức"></asp:Label></h1>
+            <asp:Label ID="Label6" runat="server" Text="Lấy tin tự động"></asp:Label></h1>
     </div>
     <div class="container">
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
@@ -388,7 +388,7 @@
                                     <tr>
                                         <td align="center">
                                             <asp:Label ID="Label7" runat="server" Style="font-size: 30px; font-weight: bold"
-                                                Text="Website đang cập nhật tin tức..."></asp:Label>
+                                                Text="Website lấy tin tự động..."></asp:Label>
                                         </td>
                                     </tr>
                                     <tr>
