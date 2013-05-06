@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ví dụ sử dụng clueTip - Hoclaptrinhweb.com</title>
+    <script src="http://www.hoclaptrinhweb.com/js/jquery.js" type="text/javascript"></script>
+    <script src="http://www.hoclaptrinhweb.com/js/jquery.cluetip.min.js" type="text/javascript"></script>
+    <link href="http://www.hoclaptrinhweb.com/css/jquery.cluetip.css" rel="stylesheet"
+        type="text/css" />
+</head>
+<body>
+    <ul class="newsitem">
+        <li><a rel="http://www.hoclaptrinhweb.com/Handler/tooltip.ashx?id=25993" href="http://www.hoclaptrinhweb.com/tin-cong-nghe/169-usd-la-nguong-gia-moi-nhat-cua-tablet-hltw25994.aspx"
+            title="169 USD là ngưỡng giá mới nhất của tablet">169 USD là ngưỡng giá mới nhất
+            của tablet</a></li>
+        <li><a rel="http://www.hoclaptrinhweb.com/Handler/tooltip.ashx?id=25993" href="http://www.hoclaptrinhweb.com/tin-cong-nghe/cuoc-dua-ung-dung-nhan-tin-mien-phi-gay-can-tren-toan-the-gioi-hltw25993.aspx"
+            title="Cuộc đua ứng dụng nhắn tin miễn phí gay cấn trên toàn thế giới">Cuộc đua
+            ứng dụng nhắn tin miễn phí gay...</a></li>
+        <li><a rel="http://www.hoclaptrinhweb.com/Handler/tooltip.ashx?id=25992" href="http://www.hoclaptrinhweb.com/tin-cong-nghe/tan-dung-tiep-thi-truyen-thong-xa-hoi-tren-thiet-bi-di-dong-hltw25992.aspx"
+            title="Tận dụng tiếp thị truyền thông xã hội trên thiết bị di động">Tận dụng tiếp
+            thị truyền thông xã hội trên...</a></li>
+        <li><a rel="http://www.hoclaptrinhweb.com/Handler/tooltip.ashx?id=25991" href="http://www.hoclaptrinhweb.com/tin-cong-nghe/apple-nin-tho-trong-cuoc-cai-to-the-gioi-phang-tren-ios-7-hltw25991.aspx"
+            title="Apple nín thở trong cuộc cải tổ &quot;thế giới phẳng&quot; trên iOS 7">Apple
+            nín thở trong cuộc cải tổ "thế giới...</a></li>
+    </ul>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($)
+        {
+            $('.newsitem a').cluetip({
+                width: '400px',
+                showTitle: true,
+                positionBy: 'topBottom',
+                topOffset: 20,
+                cluezIndex: 100
+            });
+        });
+    </script>
+</body>
+</html>
