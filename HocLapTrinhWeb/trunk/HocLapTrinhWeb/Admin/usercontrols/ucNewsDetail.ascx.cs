@@ -29,18 +29,18 @@ public partial class administrator_usercontrols_NewsDetail : HocLapTrinhWeb.UI.U
     protected void BtnSaveClick(object sender, EventArgs e)
     {
         if (SaveData())
-            Response.Redirect("News.aspx");
+            Response.Redirect("~/admin/View.aspx?action=new");
     }
 
     protected void BtnSaveAndNewClick(object sender, EventArgs e)
     {
         if (SaveData())
-            Response.Redirect("NewsDetail.aspx");
+            Response.Redirect("~/Admin/View.aspx?action=newsdetail");
     }
 
     protected void BtnCancelAddClick(object sender, EventArgs e)
     {
-        Response.Redirect("News.aspx");
+        Response.Redirect("~/admin/View.aspx?action=new");
     }
 
     protected void DropNewsTypeDataBound(object sender, EventArgs e)

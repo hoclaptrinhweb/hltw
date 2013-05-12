@@ -68,7 +68,7 @@
                             <asp:TemplateField HeaderText="Chi tiết">
                                 <ItemStyle HorizontalAlign="Center" />
                                 <ItemTemplate>
-                                    <asp:HyperLink ID="hpchitiet" runat="server" NavigateUrl='<%# "~/admin/AlexaDetail.aspx?AlexaID=" + Eval("AlexaID") %>'
+                                    <asp:HyperLink ID="hpchitiet" runat="server" NavigateUrl='<%# "~/Admin/View.aspx?action=alexadetail&AlexaID=" + Eval("AlexaID") %>'
                                         Text=" Xem "></asp:HyperLink>
                                 </ItemTemplate>
                             </asp:TemplateField>
