@@ -15,7 +15,6 @@ public class Captcha : IHttpHandler, System.Web.SessionState.IRequiresSessionSta
 
     public void ProcessRequest(HttpContext context)
     {
-        // Some chars was deleted (i.e. l, 0, 0) to avoid misunderstanding
         //const string mapcar = "123456789abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ";
         const string mapcar = "123456789ABCDEFGHJKLMNPQRSTUVWXYZ";
         var randomGenerator = new Random();
@@ -64,22 +63,9 @@ public class Captcha : IHttpHandler, System.Web.SessionState.IRequiresSessionSta
         path.Warp(points, rect, matrix, WarpMode.Perspective, 0F);
         hatchBrush = new HatchBrush(HatchStyle.Max, Color.Black, Color.Black);
         g.FillPath(hatchBrush, path);
-        //var m = Math.Max(rect.Width, rect.Height);
-        //for (int i = 0; i < (int)(rect.Width * rect.Height / 30F); i++)
-        //{
-        //    var x = random.Next(rect.Width);
-        //    var y = random.Next(rect.Height);
-        //    var w = random.Next(m / 50);
-        //    var h = random.Next(m / 50);
-        //    g.FillEllipse(hatchBrush, x, y, w, h);
-        //}
         font.Dispose();
         hatchBrush.Dispose();
         g.Dispose();
-
-        //Sử dụng timeout
-        //HttpContext.Current.Cache.Insert(sGuid, keyword, null, DateTime.Now.AddSeconds(dTimeout), TimeSpan.Zero, CacheItemPriority.High, null);
-
         context.Response.ContentType = "image/jpeg";
         bitmap.Save(context.Response.OutputStream, ImageFormat.Jpeg);
         bitmap.Dispose();
