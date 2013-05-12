@@ -20,7 +20,7 @@
   <xs:element name="dsHocLapTrinhWeb" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsHocLapTrinhWeb" msprop:Generator_UserDSName="dsHocLapTrinhWeb">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="dh_tbl_message" msprop:Generator_UserTableName="dh_tbl_message" msprop:Generator_RowEvArgName="dh_tbl_messageRowChangeEvent" msprop:Generator_TableVarName="tabledh_tbl_message" msprop:Generator_TablePropName="dh_tbl_message" msprop:Generator_RowDeletingName="dh_tbl_messageRowDeleting" msprop:Generator_RowChangingName="dh_tbl_messageRowChanging" msprop:Generator_RowDeletedName="dh_tbl_messageRowDeleted" msprop:Generator_TableClassName="dh_tbl_messageDataTable" msprop:Generator_RowChangedName="dh_tbl_messageRowChanged" msprop:Generator_RowEvHandlerName="dh_tbl_messageRowChangeEventHandler" msprop:Generator_RowClassName="dh_tbl_messageRow">
+        <xs:element name="dh_tbl_message" msprop:Generator_UserTableName="dh_tbl_message" msprop:Generator_RowEvArgName="dh_tbl_messageRowChangeEvent" msprop:Generator_TableVarName="tabledh_tbl_message" msprop:Generator_TablePropName="dh_tbl_message" msprop:Generator_RowDeletingName="dh_tbl_messageRowDeleting" msprop:Generator_RowChangingName="dh_tbl_messageRowChanging" msprop:Generator_RowDeletedName="dh_tbl_messageRowDeleted" msprop:Generator_RowEvHandlerName="dh_tbl_messageRowChangeEventHandler" msprop:Generator_RowChangedName="dh_tbl_messageRowChanged" msprop:Generator_TableClassName="dh_tbl_messageDataTable" msprop:Generator_RowClassName="dh_tbl_messageRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MessageCode" msprop:Generator_ColumnVarNameInTable="columnMessageCode" msprop:Generator_ColumnPropNameInRow="MessageCode" msprop:Generator_ColumnPropNameInTable="MessageCodeColumn" msprop:Generator_UserColumnName="MessageCode">
@@ -47,7 +47,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="up_tbl_UserForum" msprop:Generator_UserTableName="up_tbl_UserForum" msprop:Generator_RowEvArgName="up_tbl_UserForumRowChangeEvent" msprop:Generator_TableVarName="tableup_tbl_UserForum" msprop:Generator_TablePropName="up_tbl_UserForum" msprop:Generator_RowDeletingName="up_tbl_UserForumRowDeleting" msprop:Generator_RowChangingName="up_tbl_UserForumRowChanging" msprop:Generator_RowDeletedName="up_tbl_UserForumRowDeleted" msprop:Generator_TableClassName="up_tbl_UserForumDataTable" msprop:Generator_RowChangedName="up_tbl_UserForumRowChanged" msprop:Generator_RowEvHandlerName="up_tbl_UserForumRowChangeEventHandler" msprop:Generator_RowClassName="up_tbl_UserForumRow">
+        <xs:element name="up_tbl_UserForum" msprop:Generator_UserTableName="up_tbl_UserForum" msprop:Generator_RowEvArgName="up_tbl_UserForumRowChangeEvent" msprop:Generator_TableVarName="tableup_tbl_UserForum" msprop:Generator_TablePropName="up_tbl_UserForum" msprop:Generator_RowDeletingName="up_tbl_UserForumRowDeleting" msprop:Generator_RowChangingName="up_tbl_UserForumRowChanging" msprop:Generator_RowDeletedName="up_tbl_UserForumRowDeleted" msprop:Generator_RowEvHandlerName="up_tbl_UserForumRowChangeEventHandler" msprop:Generator_RowChangedName="up_tbl_UserForumRowChanged" msprop:Generator_TableClassName="up_tbl_UserForumDataTable" msprop:Generator_RowClassName="up_tbl_UserForumRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:int" />
@@ -57,7 +57,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_News" msprop:Generator_UserTableName="tbl_News" msprop:Generator_RowEvArgName="tbl_NewsRowChangeEvent" msprop:Generator_TableVarName="tabletbl_News" msprop:Generator_TablePropName="tbl_News" msprop:Generator_RowDeletingName="tbl_NewsRowDeleting" msprop:Generator_RowChangingName="tbl_NewsRowChanging" msprop:Generator_RowDeletedName="tbl_NewsRowDeleted" msprop:Generator_TableClassName="tbl_NewsDataTable" msprop:Generator_RowChangedName="tbl_NewsRowChanged" msprop:Generator_RowEvHandlerName="tbl_NewsRowChangeEventHandler" msprop:Generator_RowClassName="tbl_NewsRow">
+        <xs:element name="tbl_News" msprop:Generator_UserTableName="tbl_News" msprop:Generator_RowEvArgName="tbl_NewsRowChangeEvent" msprop:Generator_TableVarName="tabletbl_News" msprop:Generator_TablePropName="tbl_News" msprop:Generator_RowDeletingName="tbl_NewsRowDeleting" msprop:Generator_RowChangingName="tbl_NewsRowChanging" msprop:Generator_RowDeletedName="tbl_NewsRowDeleted" msprop:Generator_RowEvHandlerName="tbl_NewsRowChangeEventHandler" msprop:Generator_RowChangedName="tbl_NewsRowChanged" msprop:Generator_TableClassName="tbl_NewsDataTable" msprop:Generator_RowClassName="tbl_NewsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NewsID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNewsID" msprop:Generator_ColumnPropNameInRow="NewsID" msprop:Generator_ColumnPropNameInTable="NewsIDColumn" msprop:Generator_UserColumnName="NewsID" type="xs:int" />
@@ -140,7 +140,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_NewsType" msprop:Generator_UserTableName="tbl_NewsType" msprop:Generator_RowEvArgName="tbl_NewsTypeRowChangeEvent" msprop:Generator_TableVarName="tabletbl_NewsType" msprop:Generator_TablePropName="tbl_NewsType" msprop:Generator_RowDeletingName="tbl_NewsTypeRowDeleting" msprop:Generator_RowChangingName="tbl_NewsTypeRowChanging" msprop:Generator_RowDeletedName="tbl_NewsTypeRowDeleted" msprop:Generator_TableClassName="tbl_NewsTypeDataTable" msprop:Generator_RowChangedName="tbl_NewsTypeRowChanged" msprop:Generator_RowEvHandlerName="tbl_NewsTypeRowChangeEventHandler" msprop:Generator_RowClassName="tbl_NewsTypeRow">
+        <xs:element name="tbl_NewsType" msprop:Generator_UserTableName="tbl_NewsType" msprop:Generator_RowEvArgName="tbl_NewsTypeRowChangeEvent" msprop:Generator_TableVarName="tabletbl_NewsType" msprop:Generator_TablePropName="tbl_NewsType" msprop:Generator_RowDeletingName="tbl_NewsTypeRowDeleting" msprop:Generator_RowChangingName="tbl_NewsTypeRowChanging" msprop:Generator_RowDeletedName="tbl_NewsTypeRowDeleted" msprop:Generator_RowEvHandlerName="tbl_NewsTypeRowChangeEventHandler" msprop:Generator_RowChangedName="tbl_NewsTypeRowChanged" msprop:Generator_TableClassName="tbl_NewsTypeDataTable" msprop:Generator_RowClassName="tbl_NewsTypeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NewsTypeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNewsTypeID" msprop:Generator_ColumnPropNameInRow="NewsTypeID" msprop:Generator_ColumnPropNameInTable="NewsTypeIDColumn" msprop:Generator_UserColumnName="NewsTypeID" type="xs:int" />
@@ -164,7 +164,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_Permission" msprop:Generator_UserTableName="tbl_Permission" msprop:Generator_RowEvArgName="tbl_PermissionRowChangeEvent" msprop:Generator_TableVarName="tabletbl_Permission" msprop:Generator_TablePropName="tbl_Permission" msprop:Generator_RowDeletingName="tbl_PermissionRowDeleting" msprop:Generator_RowChangingName="tbl_PermissionRowChanging" msprop:Generator_RowDeletedName="tbl_PermissionRowDeleted" msprop:Generator_TableClassName="tbl_PermissionDataTable" msprop:Generator_RowChangedName="tbl_PermissionRowChanged" msprop:Generator_RowEvHandlerName="tbl_PermissionRowChangeEventHandler" msprop:Generator_RowClassName="tbl_PermissionRow">
+        <xs:element name="tbl_Permission" msprop:Generator_UserTableName="tbl_Permission" msprop:Generator_RowEvArgName="tbl_PermissionRowChangeEvent" msprop:Generator_TableVarName="tabletbl_Permission" msprop:Generator_TablePropName="tbl_Permission" msprop:Generator_RowDeletingName="tbl_PermissionRowDeleting" msprop:Generator_RowChangingName="tbl_PermissionRowChanging" msprop:Generator_RowDeletedName="tbl_PermissionRowDeleted" msprop:Generator_RowEvHandlerName="tbl_PermissionRowChangeEventHandler" msprop:Generator_RowChangedName="tbl_PermissionRowChanged" msprop:Generator_TableClassName="tbl_PermissionDataTable" msprop:Generator_RowClassName="tbl_PermissionRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PermissionID" msprop:Generator_ColumnVarNameInTable="columnPermissionID" msprop:Generator_ColumnPropNameInRow="PermissionID" msprop:Generator_ColumnPropNameInTable="PermissionIDColumn" msprop:Generator_UserColumnName="PermissionID">
@@ -184,7 +184,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_ReferenceSite" msprop:Generator_UserTableName="tbl_ReferenceSite" msprop:Generator_RowEvArgName="tbl_ReferenceSiteRowChangeEvent" msprop:Generator_TableVarName="tabletbl_ReferenceSite" msprop:Generator_TablePropName="tbl_ReferenceSite" msprop:Generator_RowDeletingName="tbl_ReferenceSiteRowDeleting" msprop:Generator_RowChangingName="tbl_ReferenceSiteRowChanging" msprop:Generator_RowDeletedName="tbl_ReferenceSiteRowDeleted" msprop:Generator_TableClassName="tbl_ReferenceSiteDataTable" msprop:Generator_RowChangedName="tbl_ReferenceSiteRowChanged" msprop:Generator_RowEvHandlerName="tbl_ReferenceSiteRowChangeEventHandler" msprop:Generator_RowClassName="tbl_ReferenceSiteRow">
+        <xs:element name="tbl_ReferenceSite" msprop:Generator_UserTableName="tbl_ReferenceSite" msprop:Generator_RowEvArgName="tbl_ReferenceSiteRowChangeEvent" msprop:Generator_TableVarName="tabletbl_ReferenceSite" msprop:Generator_TablePropName="tbl_ReferenceSite" msprop:Generator_RowDeletingName="tbl_ReferenceSiteRowDeleting" msprop:Generator_RowChangingName="tbl_ReferenceSiteRowChanging" msprop:Generator_RowDeletedName="tbl_ReferenceSiteRowDeleted" msprop:Generator_RowEvHandlerName="tbl_ReferenceSiteRowChangeEventHandler" msprop:Generator_RowChangedName="tbl_ReferenceSiteRowChanged" msprop:Generator_TableClassName="tbl_ReferenceSiteDataTable" msprop:Generator_RowClassName="tbl_ReferenceSiteRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ReferenceSiteID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnReferenceSiteID" msprop:Generator_ColumnPropNameInRow="ReferenceSiteID" msprop:Generator_ColumnPropNameInTable="ReferenceSiteIDColumn" msprop:Generator_UserColumnName="ReferenceSiteID" type="xs:int" />
@@ -223,7 +223,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_Role" msprop:Generator_UserTableName="tbl_Role" msprop:Generator_RowEvArgName="tbl_RoleRowChangeEvent" msprop:Generator_TableVarName="tabletbl_Role" msprop:Generator_TablePropName="tbl_Role" msprop:Generator_RowDeletingName="tbl_RoleRowDeleting" msprop:Generator_RowChangingName="tbl_RoleRowChanging" msprop:Generator_RowDeletedName="tbl_RoleRowDeleted" msprop:Generator_TableClassName="tbl_RoleDataTable" msprop:Generator_RowChangedName="tbl_RoleRowChanged" msprop:Generator_RowEvHandlerName="tbl_RoleRowChangeEventHandler" msprop:Generator_RowClassName="tbl_RoleRow">
+        <xs:element name="tbl_Role" msprop:Generator_UserTableName="tbl_Role" msprop:Generator_RowEvArgName="tbl_RoleRowChangeEvent" msprop:Generator_TableVarName="tabletbl_Role" msprop:Generator_TablePropName="tbl_Role" msprop:Generator_RowDeletingName="tbl_RoleRowDeleting" msprop:Generator_RowChangingName="tbl_RoleRowChanging" msprop:Generator_RowDeletedName="tbl_RoleRowDeleted" msprop:Generator_RowEvHandlerName="tbl_RoleRowChangeEventHandler" msprop:Generator_RowChangedName="tbl_RoleRowChanged" msprop:Generator_TableClassName="tbl_RoleDataTable" msprop:Generator_RowClassName="tbl_RoleRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RoleID" msprop:Generator_ColumnVarNameInTable="columnRoleID" msprop:Generator_ColumnPropNameInRow="RoleID" msprop:Generator_ColumnPropNameInTable="RoleIDColumn" msprop:Generator_UserColumnName="RoleID">
@@ -243,7 +243,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_UserPermission" msprop:Generator_UserTableName="tbl_UserPermission" msprop:Generator_RowEvArgName="tbl_UserPermissionRowChangeEvent" msprop:Generator_TableVarName="tabletbl_UserPermission" msprop:Generator_TablePropName="tbl_UserPermission" msprop:Generator_RowDeletingName="tbl_UserPermissionRowDeleting" msprop:Generator_RowChangingName="tbl_UserPermissionRowChanging" msprop:Generator_RowDeletedName="tbl_UserPermissionRowDeleted" msprop:Generator_TableClassName="tbl_UserPermissionDataTable" msprop:Generator_RowChangedName="tbl_UserPermissionRowChanged" msprop:Generator_RowEvHandlerName="tbl_UserPermissionRowChangeEventHandler" msprop:Generator_RowClassName="tbl_UserPermissionRow">
+        <xs:element name="tbl_UserPermission" msprop:Generator_UserTableName="tbl_UserPermission" msprop:Generator_RowEvArgName="tbl_UserPermissionRowChangeEvent" msprop:Generator_TableVarName="tabletbl_UserPermission" msprop:Generator_TablePropName="tbl_UserPermission" msprop:Generator_RowDeletingName="tbl_UserPermissionRowDeleting" msprop:Generator_RowChangingName="tbl_UserPermissionRowChanging" msprop:Generator_RowDeletedName="tbl_UserPermissionRowDeleted" msprop:Generator_RowEvHandlerName="tbl_UserPermissionRowChangeEventHandler" msprop:Generator_RowChangedName="tbl_UserPermissionRowChanged" msprop:Generator_TableClassName="tbl_UserPermissionDataTable" msprop:Generator_RowClassName="tbl_UserPermissionRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:int" />
@@ -264,7 +264,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="up_tbl_Category" msprop:Generator_UserTableName="up_tbl_Category" msprop:Generator_RowEvArgName="up_tbl_CategoryRowChangeEvent" msprop:Generator_TableVarName="tableup_tbl_Category" msprop:Generator_TablePropName="up_tbl_Category" msprop:Generator_RowDeletingName="up_tbl_CategoryRowDeleting" msprop:Generator_RowChangingName="up_tbl_CategoryRowChanging" msprop:Generator_RowDeletedName="up_tbl_CategoryRowDeleted" msprop:Generator_TableClassName="up_tbl_CategoryDataTable" msprop:Generator_RowChangedName="up_tbl_CategoryRowChanged" msprop:Generator_RowEvHandlerName="up_tbl_CategoryRowChangeEventHandler" msprop:Generator_RowClassName="up_tbl_CategoryRow">
+        <xs:element name="up_tbl_Category" msprop:Generator_UserTableName="up_tbl_Category" msprop:Generator_RowEvArgName="up_tbl_CategoryRowChangeEvent" msprop:Generator_TableVarName="tableup_tbl_Category" msprop:Generator_TablePropName="up_tbl_Category" msprop:Generator_RowDeletingName="up_tbl_CategoryRowDeleting" msprop:Generator_RowChangingName="up_tbl_CategoryRowChanging" msprop:Generator_RowDeletedName="up_tbl_CategoryRowDeleted" msprop:Generator_RowEvHandlerName="up_tbl_CategoryRowChangeEventHandler" msprop:Generator_RowChangedName="up_tbl_CategoryRowChanged" msprop:Generator_TableClassName="up_tbl_CategoryDataTable" msprop:Generator_RowClassName="up_tbl_CategoryRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CategoryID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCategoryID" msprop:Generator_ColumnPropNameInRow="CategoryID" msprop:Generator_ColumnPropNameInTable="CategoryIDColumn" msprop:Generator_UserColumnName="CategoryID" type="xs:int" />
@@ -281,7 +281,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="up_tbl_CategoryForum" msprop:Generator_UserTableName="up_tbl_CategoryForum" msprop:Generator_RowEvArgName="up_tbl_CategoryForumRowChangeEvent" msprop:Generator_TableVarName="tableup_tbl_CategoryForum" msprop:Generator_TablePropName="up_tbl_CategoryForum" msprop:Generator_RowDeletingName="up_tbl_CategoryForumRowDeleting" msprop:Generator_RowChangingName="up_tbl_CategoryForumRowChanging" msprop:Generator_RowDeletedName="up_tbl_CategoryForumRowDeleted" msprop:Generator_TableClassName="up_tbl_CategoryForumDataTable" msprop:Generator_RowChangedName="up_tbl_CategoryForumRowChanged" msprop:Generator_RowEvHandlerName="up_tbl_CategoryForumRowChangeEventHandler" msprop:Generator_RowClassName="up_tbl_CategoryForumRow">
+        <xs:element name="up_tbl_CategoryForum" msprop:Generator_UserTableName="up_tbl_CategoryForum" msprop:Generator_RowEvArgName="up_tbl_CategoryForumRowChangeEvent" msprop:Generator_TableVarName="tableup_tbl_CategoryForum" msprop:Generator_TablePropName="up_tbl_CategoryForum" msprop:Generator_RowDeletingName="up_tbl_CategoryForumRowDeleting" msprop:Generator_RowChangingName="up_tbl_CategoryForumRowChanging" msprop:Generator_RowDeletedName="up_tbl_CategoryForumRowDeleted" msprop:Generator_RowEvHandlerName="up_tbl_CategoryForumRowChangeEventHandler" msprop:Generator_RowChangedName="up_tbl_CategoryForumRowChanged" msprop:Generator_TableClassName="up_tbl_CategoryForumDataTable" msprop:Generator_RowClassName="up_tbl_CategoryForumRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CategoryForumID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCategoryForumID" msprop:Generator_ColumnPropNameInRow="CategoryForumID" msprop:Generator_ColumnPropNameInTable="CategoryForumIDColumn" msprop:Generator_UserColumnName="CategoryForumID" type="xs:int" />
@@ -304,7 +304,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="up_tbl_Forum" msprop:Generator_UserTableName="up_tbl_Forum" msprop:Generator_RowEvArgName="up_tbl_ForumRowChangeEvent" msprop:Generator_TableVarName="tableup_tbl_Forum" msprop:Generator_TablePropName="up_tbl_Forum" msprop:Generator_RowDeletingName="up_tbl_ForumRowDeleting" msprop:Generator_RowChangingName="up_tbl_ForumRowChanging" msprop:Generator_RowDeletedName="up_tbl_ForumRowDeleted" msprop:Generator_TableClassName="up_tbl_ForumDataTable" msprop:Generator_RowChangedName="up_tbl_ForumRowChanged" msprop:Generator_RowEvHandlerName="up_tbl_ForumRowChangeEventHandler" msprop:Generator_RowClassName="up_tbl_ForumRow">
+        <xs:element name="up_tbl_Forum" msprop:Generator_UserTableName="up_tbl_Forum" msprop:Generator_RowEvArgName="up_tbl_ForumRowChangeEvent" msprop:Generator_TableVarName="tableup_tbl_Forum" msprop:Generator_TablePropName="up_tbl_Forum" msprop:Generator_RowDeletingName="up_tbl_ForumRowDeleting" msprop:Generator_RowChangingName="up_tbl_ForumRowChanging" msprop:Generator_RowDeletedName="up_tbl_ForumRowDeleted" msprop:Generator_RowEvHandlerName="up_tbl_ForumRowChangeEventHandler" msprop:Generator_RowChangedName="up_tbl_ForumRowChanged" msprop:Generator_TableClassName="up_tbl_ForumDataTable" msprop:Generator_RowClassName="up_tbl_ForumRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ForumID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnForumID" msprop:Generator_ColumnPropNameInRow="ForumID" msprop:Generator_ColumnPropNameInTable="ForumIDColumn" msprop:Generator_UserColumnName="ForumID" type="xs:int" />
@@ -328,7 +328,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="up_tbl_News" msprop:Generator_UserTableName="up_tbl_News" msprop:Generator_RowEvArgName="up_tbl_NewsRowChangeEvent" msprop:Generator_TableVarName="tableup_tbl_News" msprop:Generator_TablePropName="up_tbl_News" msprop:Generator_RowDeletingName="up_tbl_NewsRowDeleting" msprop:Generator_RowChangingName="up_tbl_NewsRowChanging" msprop:Generator_RowDeletedName="up_tbl_NewsRowDeleted" msprop:Generator_TableClassName="up_tbl_NewsDataTable" msprop:Generator_RowChangedName="up_tbl_NewsRowChanged" msprop:Generator_RowEvHandlerName="up_tbl_NewsRowChangeEventHandler" msprop:Generator_RowClassName="up_tbl_NewsRow">
+        <xs:element name="up_tbl_News" msprop:Generator_UserTableName="up_tbl_News" msprop:Generator_RowEvArgName="up_tbl_NewsRowChangeEvent" msprop:Generator_TableVarName="tableup_tbl_News" msprop:Generator_TablePropName="up_tbl_News" msprop:Generator_RowDeletingName="up_tbl_NewsRowDeleting" msprop:Generator_RowChangingName="up_tbl_NewsRowChanging" msprop:Generator_RowDeletedName="up_tbl_NewsRowDeleted" msprop:Generator_RowEvHandlerName="up_tbl_NewsRowChangeEventHandler" msprop:Generator_RowChangedName="up_tbl_NewsRowChanged" msprop:Generator_TableClassName="up_tbl_NewsDataTable" msprop:Generator_RowClassName="up_tbl_NewsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NewsID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNewsID" msprop:Generator_ColumnPropNameInRow="NewsID" msprop:Generator_ColumnPropNameInTable="NewsIDColumn" msprop:Generator_UserColumnName="NewsID" type="xs:int" />
@@ -367,7 +367,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="up_tbl_NewsType" msprop:Generator_UserTableName="up_tbl_NewsType" msprop:Generator_RowEvArgName="up_tbl_NewsTypeRowChangeEvent" msprop:Generator_TableVarName="tableup_tbl_NewsType" msprop:Generator_TablePropName="up_tbl_NewsType" msprop:Generator_RowDeletingName="up_tbl_NewsTypeRowDeleting" msprop:Generator_RowChangingName="up_tbl_NewsTypeRowChanging" msprop:Generator_RowDeletedName="up_tbl_NewsTypeRowDeleted" msprop:Generator_TableClassName="up_tbl_NewsTypeDataTable" msprop:Generator_RowChangedName="up_tbl_NewsTypeRowChanged" msprop:Generator_RowEvHandlerName="up_tbl_NewsTypeRowChangeEventHandler" msprop:Generator_RowClassName="up_tbl_NewsTypeRow">
+        <xs:element name="up_tbl_NewsType" msprop:Generator_UserTableName="up_tbl_NewsType" msprop:Generator_RowEvArgName="up_tbl_NewsTypeRowChangeEvent" msprop:Generator_TableVarName="tableup_tbl_NewsType" msprop:Generator_TablePropName="up_tbl_NewsType" msprop:Generator_RowDeletingName="up_tbl_NewsTypeRowDeleting" msprop:Generator_RowChangingName="up_tbl_NewsTypeRowChanging" msprop:Generator_RowDeletedName="up_tbl_NewsTypeRowDeleted" msprop:Generator_RowEvHandlerName="up_tbl_NewsTypeRowChangeEventHandler" msprop:Generator_RowChangedName="up_tbl_NewsTypeRowChanged" msprop:Generator_TableClassName="up_tbl_NewsTypeDataTable" msprop:Generator_RowClassName="up_tbl_NewsTypeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NewsTypeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNewsTypeID" msprop:Generator_ColumnPropNameInRow="NewsTypeID" msprop:Generator_ColumnPropNameInTable="NewsTypeIDColumn" msprop:Generator_UserColumnName="NewsTypeID" type="xs:int" />
@@ -388,7 +388,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="up_tbl_Post" msprop:Generator_UserTableName="up_tbl_Post" msprop:Generator_RowEvArgName="up_tbl_PostRowChangeEvent" msprop:Generator_TableVarName="tableup_tbl_Post" msprop:Generator_TablePropName="up_tbl_Post" msprop:Generator_RowDeletingName="up_tbl_PostRowDeleting" msprop:Generator_RowChangingName="up_tbl_PostRowChanging" msprop:Generator_RowDeletedName="up_tbl_PostRowDeleted" msprop:Generator_TableClassName="up_tbl_PostDataTable" msprop:Generator_RowChangedName="up_tbl_PostRowChanged" msprop:Generator_RowEvHandlerName="up_tbl_PostRowChangeEventHandler" msprop:Generator_RowClassName="up_tbl_PostRow">
+        <xs:element name="up_tbl_Post" msprop:Generator_UserTableName="up_tbl_Post" msprop:Generator_RowEvArgName="up_tbl_PostRowChangeEvent" msprop:Generator_TableVarName="tableup_tbl_Post" msprop:Generator_TablePropName="up_tbl_Post" msprop:Generator_RowDeletingName="up_tbl_PostRowDeleting" msprop:Generator_RowChangingName="up_tbl_PostRowChanging" msprop:Generator_RowDeletedName="up_tbl_PostRowDeleted" msprop:Generator_RowEvHandlerName="up_tbl_PostRowChangeEventHandler" msprop:Generator_RowChangedName="up_tbl_PostRowChanged" msprop:Generator_TableClassName="up_tbl_PostDataTable" msprop:Generator_RowClassName="up_tbl_PostRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PostID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPostID" msprop:Generator_ColumnPropNameInRow="PostID" msprop:Generator_ColumnPropNameInTable="PostIDColumn" msprop:Generator_UserColumnName="PostID" type="xs:int" />
@@ -412,7 +412,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="up_tbl_User" msprop:Generator_UserTableName="up_tbl_User" msprop:Generator_RowEvArgName="up_tbl_UserRowChangeEvent" msprop:Generator_TableVarName="tableup_tbl_User" msprop:Generator_TablePropName="up_tbl_User" msprop:Generator_RowDeletingName="up_tbl_UserRowDeleting" msprop:Generator_RowChangingName="up_tbl_UserRowChanging" msprop:Generator_RowDeletedName="up_tbl_UserRowDeleted" msprop:Generator_TableClassName="up_tbl_UserDataTable" msprop:Generator_RowChangedName="up_tbl_UserRowChanged" msprop:Generator_RowEvHandlerName="up_tbl_UserRowChangeEventHandler" msprop:Generator_RowClassName="up_tbl_UserRow">
+        <xs:element name="up_tbl_User" msprop:Generator_UserTableName="up_tbl_User" msprop:Generator_RowEvArgName="up_tbl_UserRowChangeEvent" msprop:Generator_TableVarName="tableup_tbl_User" msprop:Generator_TablePropName="up_tbl_User" msprop:Generator_RowDeletingName="up_tbl_UserRowDeleting" msprop:Generator_RowChangingName="up_tbl_UserRowChanging" msprop:Generator_RowDeletedName="up_tbl_UserRowDeleted" msprop:Generator_RowEvHandlerName="up_tbl_UserRowChangeEventHandler" msprop:Generator_RowChangedName="up_tbl_UserRowChanged" msprop:Generator_TableClassName="up_tbl_UserDataTable" msprop:Generator_RowClassName="up_tbl_UserRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UserID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:int" />
@@ -440,7 +440,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_Alexa" msprop:Generator_UserTableName="tbl_Alexa" msprop:Generator_RowEvArgName="tbl_AlexaRowChangeEvent" msprop:Generator_TableVarName="tabletbl_Alexa" msprop:Generator_TablePropName="tbl_Alexa" msprop:Generator_RowDeletingName="tbl_AlexaRowDeleting" msprop:Generator_RowChangingName="tbl_AlexaRowChanging" msprop:Generator_RowDeletedName="tbl_AlexaRowDeleted" msprop:Generator_TableClassName="tbl_AlexaDataTable" msprop:Generator_RowChangedName="tbl_AlexaRowChanged" msprop:Generator_RowEvHandlerName="tbl_AlexaRowChangeEventHandler" msprop:Generator_RowClassName="tbl_AlexaRow">
+        <xs:element name="tbl_Alexa" msprop:Generator_UserTableName="tbl_Alexa" msprop:Generator_RowEvArgName="tbl_AlexaRowChangeEvent" msprop:Generator_TableVarName="tabletbl_Alexa" msprop:Generator_TablePropName="tbl_Alexa" msprop:Generator_RowDeletingName="tbl_AlexaRowDeleting" msprop:Generator_RowChangingName="tbl_AlexaRowChanging" msprop:Generator_RowDeletedName="tbl_AlexaRowDeleted" msprop:Generator_RowEvHandlerName="tbl_AlexaRowChangeEventHandler" msprop:Generator_RowChangedName="tbl_AlexaRowChanged" msprop:Generator_TableClassName="tbl_AlexaDataTable" msprop:Generator_RowClassName="tbl_AlexaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AlexaID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAlexaID" msprop:Generator_ColumnPropNameInRow="AlexaID" msprop:Generator_ColumnPropNameInTable="AlexaIDColumn" msprop:Generator_UserColumnName="AlexaID" type="xs:int" />
@@ -455,7 +455,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_AlexaDetail" msprop:Generator_UserTableName="tbl_AlexaDetail" msprop:Generator_RowEvArgName="tbl_AlexaDetailRowChangeEvent" msprop:Generator_TableVarName="tabletbl_AlexaDetail" msprop:Generator_TablePropName="tbl_AlexaDetail" msprop:Generator_RowDeletingName="tbl_AlexaDetailRowDeleting" msprop:Generator_RowChangingName="tbl_AlexaDetailRowChanging" msprop:Generator_RowDeletedName="tbl_AlexaDetailRowDeleted" msprop:Generator_TableClassName="tbl_AlexaDetailDataTable" msprop:Generator_RowChangedName="tbl_AlexaDetailRowChanged" msprop:Generator_RowEvHandlerName="tbl_AlexaDetailRowChangeEventHandler" msprop:Generator_RowClassName="tbl_AlexaDetailRow">
+        <xs:element name="tbl_AlexaDetail" msprop:Generator_UserTableName="tbl_AlexaDetail" msprop:Generator_RowEvArgName="tbl_AlexaDetailRowChangeEvent" msprop:Generator_TableVarName="tabletbl_AlexaDetail" msprop:Generator_TablePropName="tbl_AlexaDetail" msprop:Generator_RowDeletingName="tbl_AlexaDetailRowDeleting" msprop:Generator_RowChangingName="tbl_AlexaDetailRowChanging" msprop:Generator_RowDeletedName="tbl_AlexaDetailRowDeleted" msprop:Generator_RowEvHandlerName="tbl_AlexaDetailRowChangeEventHandler" msprop:Generator_RowChangedName="tbl_AlexaDetailRowChanged" msprop:Generator_TableClassName="tbl_AlexaDetailDataTable" msprop:Generator_RowClassName="tbl_AlexaDetailRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AlexaDetailID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAlexaDetailID" msprop:Generator_ColumnPropNameInRow="AlexaDetailID" msprop:Generator_ColumnPropNameInTable="AlexaDetailIDColumn" msprop:Generator_UserColumnName="AlexaDetailID" type="xs:int" />
@@ -467,7 +467,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_SeoConfig" msprop:Generator_UserTableName="tbl_SeoConfig" msprop:Generator_RowEvArgName="tbl_SeoConfigRowChangeEvent" msprop:Generator_TableVarName="tabletbl_SeoConfig" msprop:Generator_TablePropName="tbl_SeoConfig" msprop:Generator_RowDeletingName="tbl_SeoConfigRowDeleting" msprop:Generator_RowChangingName="tbl_SeoConfigRowChanging" msprop:Generator_RowDeletedName="tbl_SeoConfigRowDeleted" msprop:Generator_TableClassName="tbl_SeoConfigDataTable" msprop:Generator_RowChangedName="tbl_SeoConfigRowChanged" msprop:Generator_RowEvHandlerName="tbl_SeoConfigRowChangeEventHandler" msprop:Generator_RowClassName="tbl_SeoConfigRow">
+        <xs:element name="tbl_SeoConfig" msprop:Generator_UserTableName="tbl_SeoConfig" msprop:Generator_RowEvArgName="tbl_SeoConfigRowChangeEvent" msprop:Generator_TableVarName="tabletbl_SeoConfig" msprop:Generator_TablePropName="tbl_SeoConfig" msprop:Generator_RowDeletingName="tbl_SeoConfigRowDeleting" msprop:Generator_RowChangingName="tbl_SeoConfigRowChanging" msprop:Generator_RowDeletedName="tbl_SeoConfigRowDeleted" msprop:Generator_RowEvHandlerName="tbl_SeoConfigRowChangeEventHandler" msprop:Generator_RowChangedName="tbl_SeoConfigRowChanged" msprop:Generator_TableClassName="tbl_SeoConfigDataTable" msprop:Generator_RowClassName="tbl_SeoConfigRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SeoConfigID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSeoConfigID" msprop:Generator_ColumnPropNameInRow="SeoConfigID" msprop:Generator_ColumnPropNameInTable="SeoConfigIDColumn" msprop:Generator_UserColumnName="SeoConfigID" type="xs:int" />
@@ -808,6 +808,28 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="tbl_Config" msprop:Generator_TableClassName="tbl_ConfigDataTable" msprop:Generator_TableVarName="tabletbl_Config" msprop:Generator_TablePropName="tbl_Config" msprop:Generator_RowDeletingName="tbl_ConfigRowDeleting" msprop:Generator_UserTableName="tbl_Config" msprop:Generator_RowChangingName="tbl_ConfigRowChanging" msprop:Generator_RowEvHandlerName="tbl_ConfigRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_ConfigRowDeleted" msprop:Generator_RowEvArgName="tbl_ConfigRowChangeEvent" msprop:Generator_RowChangedName="tbl_ConfigRowChanged" msprop:Generator_RowClassName="tbl_ConfigRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ConfigID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnConfigID" msprop:Generator_ColumnPropNameInRow="ConfigID" msprop:Generator_ColumnPropNameInTable="ConfigIDColumn" msprop:Generator_UserColumnName="ConfigID" type="xs:int" />
+              <xs:element name="NameConfig" msprop:Generator_ColumnVarNameInTable="columnNameConfig" msprop:Generator_ColumnPropNameInRow="NameConfig" msprop:Generator_ColumnPropNameInTable="NameConfigColumn" msprop:Generator_UserColumnName="NameConfig">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueConfig" msprop:Generator_ColumnVarNameInTable="columnValueConfig" msprop:Generator_ColumnPropNameInRow="ValueConfig" msprop:Generator_ColumnPropNameInTable="ValueConfigColumn" msprop:Generator_UserColumnName="ValueConfig">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" msprop:Generator_UserColumnName="IsActive" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -922,13 +944,17 @@
       <xs:selector xpath=".//mstns:tbl_VideoTag" />
       <xs:field xpath="mstns:VideoTagID" />
     </xs:unique>
+    <xs:unique name="tbl_Config_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Config" />
+      <xs:field xpath="mstns:ConfigID" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_tbl_News_tbl_NewsType" msdata:parent="tbl_NewsType" msdata:child="tbl_News" msdata:parentkey="NewsTypeID" msdata:childkey="NewsTypeID" msprop:Generator_UserChildTable="tbl_News" msprop:Generator_ChildPropName="Gettbl_NewsRows" msprop:Generator_UserParentTable="tbl_NewsType" msprop:Generator_UserRelationName="FK_tbl_News_tbl_NewsType" msprop:Generator_RelationVarName="relationFK_tbl_News_tbl_NewsType" msprop:Generator_ParentPropName="tbl_NewsTypeRow" />
-      <msdata:Relationship name="FK_tbl_ReferenceSite_tbl_NewsType" msdata:parent="tbl_NewsType" msdata:child="tbl_ReferenceSite" msdata:parentkey="NewsTypeID" msdata:childkey="NewsTypeID" msprop:Generator_UserChildTable="tbl_ReferenceSite" msprop:Generator_ChildPropName="Gettbl_ReferenceSiteRows" msprop:Generator_UserParentTable="tbl_NewsType" msprop:Generator_UserRelationName="FK_tbl_ReferenceSite_tbl_NewsType" msprop:Generator_RelationVarName="relationFK_tbl_ReferenceSite_tbl_NewsType" msprop:Generator_ParentPropName="tbl_NewsTypeRow" />
-      <msdata:Relationship name="FK_tbl_UserPermission_tbl_Permission" msdata:parent="tbl_Permission" msdata:child="tbl_UserPermission" msdata:parentkey="PermissionID" msdata:childkey="PermissionID" msprop:Generator_UserChildTable="tbl_UserPermission" msprop:Generator_ChildPropName="Gettbl_UserPermissionRows" msprop:Generator_UserParentTable="tbl_Permission" msprop:Generator_UserRelationName="FK_tbl_UserPermission_tbl_Permission" msprop:Generator_RelationVarName="relationFK_tbl_UserPermission_tbl_Permission" msprop:Generator_ParentPropName="tbl_PermissionRow" />
-      <msdata:Relationship name="FK_tbl_UserPermission_tbl_Role" msdata:parent="tbl_Role" msdata:child="tbl_UserPermission" msdata:parentkey="RoleID" msdata:childkey="RoleID" msprop:Generator_UserChildTable="tbl_UserPermission" msprop:Generator_ChildPropName="Gettbl_UserPermissionRows" msprop:Generator_UserParentTable="tbl_Role" msprop:Generator_UserRelationName="FK_tbl_UserPermission_tbl_Role" msprop:Generator_RelationVarName="relationFK_tbl_UserPermission_tbl_Role" msprop:Generator_ParentPropName="tbl_RoleRow" />
+      <msdata:Relationship name="FK_tbl_News_tbl_NewsType" msdata:parent="tbl_NewsType" msdata:child="tbl_News" msdata:parentkey="NewsTypeID" msdata:childkey="NewsTypeID" msprop:Generator_UserChildTable="tbl_News" msprop:Generator_ChildPropName="Gettbl_NewsRows" msprop:Generator_ParentPropName="tbl_NewsTypeRow" msprop:Generator_UserRelationName="FK_tbl_News_tbl_NewsType" msprop:Generator_RelationVarName="relationFK_tbl_News_tbl_NewsType" msprop:Generator_UserParentTable="tbl_NewsType" />
+      <msdata:Relationship name="FK_tbl_ReferenceSite_tbl_NewsType" msdata:parent="tbl_NewsType" msdata:child="tbl_ReferenceSite" msdata:parentkey="NewsTypeID" msdata:childkey="NewsTypeID" msprop:Generator_UserChildTable="tbl_ReferenceSite" msprop:Generator_ChildPropName="Gettbl_ReferenceSiteRows" msprop:Generator_ParentPropName="tbl_NewsTypeRow" msprop:Generator_UserRelationName="FK_tbl_ReferenceSite_tbl_NewsType" msprop:Generator_RelationVarName="relationFK_tbl_ReferenceSite_tbl_NewsType" msprop:Generator_UserParentTable="tbl_NewsType" />
+      <msdata:Relationship name="FK_tbl_UserPermission_tbl_Permission" msdata:parent="tbl_Permission" msdata:child="tbl_UserPermission" msdata:parentkey="PermissionID" msdata:childkey="PermissionID" msprop:Generator_UserChildTable="tbl_UserPermission" msprop:Generator_ChildPropName="Gettbl_UserPermissionRows" msprop:Generator_ParentPropName="tbl_PermissionRow" msprop:Generator_UserRelationName="FK_tbl_UserPermission_tbl_Permission" msprop:Generator_RelationVarName="relationFK_tbl_UserPermission_tbl_Permission" msprop:Generator_UserParentTable="tbl_Permission" />
+      <msdata:Relationship name="FK_tbl_UserPermission_tbl_Role" msdata:parent="tbl_Role" msdata:child="tbl_UserPermission" msdata:parentkey="RoleID" msdata:childkey="RoleID" msprop:Generator_UserChildTable="tbl_UserPermission" msprop:Generator_ChildPropName="Gettbl_UserPermissionRows" msprop:Generator_ParentPropName="tbl_RoleRow" msprop:Generator_UserRelationName="FK_tbl_UserPermission_tbl_Role" msprop:Generator_RelationVarName="relationFK_tbl_UserPermission_tbl_Role" msprop:Generator_UserParentTable="tbl_Role" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
