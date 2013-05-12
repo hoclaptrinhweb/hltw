@@ -146,7 +146,7 @@
                                     <asp:HiddenField ID="hdNewsTypeID" Value='<%# Eval("NewsTypeID") %>' runat="server" />
                                      <asp:HiddenField ID="hdImage" Value='<%# Eval("Image") %>' runat="server" />
                                     <asp:HiddenField ID="hdThumbnail" Value='<%# Eval("Thumbnail") %>' runat="server" />
-                                    <asp:HyperLink ID="hlTitle" runat="server" NavigateUrl='<%# "~/Admin/NewsDetail.aspx?NewsID="+Eval("NewsID") %>'
+                                    <asp:HyperLink ID="hlTitle" runat="server" NavigateUrl='<%# "~/Admin/View.aspx?action=newsdetail&NewsID="+Eval("NewsID") %>'
                                         Text='<%# Eval("Title") %>'></asp:HyperLink>
                                 </ItemTemplate>
                             </asp:TemplateField>

@@ -4,47 +4,47 @@
         <asp:HyperLink ID="hpOption" runat="server" Text="Chức năng"></asp:HyperLink></span>
     <asp:Panel ID="pnOption" runat="server">
         <ul id="main_menu">
-            <li class="<%= SetClass("admin/News.aspx","admin/NewsDetail.aspx","admin/UpdateNews.aspx","admin/NewsType.aspx")  %>">
-                <asp:HyperLink ID="hpNews" class="icn_news" runat="server" NavigateUrl="~/admin/News.aspx"
+            <li class="<%= SetClass("admin/View.aspx?action=new","Admin/View.aspx?action=newsdetail","Admin/View.aspx?action=updatenews","Admin/View.aspx?action=newtype")  %>">
+                <asp:HyperLink ID="hpNews" class="icn_news" runat="server" NavigateUrl="~/admin/View.aspx?action=new"
                     Text="Quản lý tin tức"></asp:HyperLink>
-                <ul style="display: block" class="<%= "sub " + IsShow("admin/News.aspx","admin/UpdateNews.aspx","admin/NewsType.aspx") %>">
-                    <li class="<%= SetClass("admin/NewsType.aspx")  %>">
-                        <asp:HyperLink ID="HyperLink2" class="icn_newstype" runat="server" NavigateUrl="~/admin/NewsType.aspx"
+                <ul style="display: block" class="<%= "sub " + IsShow("admin/View.aspx?action=new","Admin/View.aspx?action=updatenews","Admin/View.aspx?action=newtype") %>">
+                    <li class="<%= SetClass("Admin/View.aspx?action=newtype")  %>">
+                        <asp:HyperLink ID="HyperLink2" class="icn_newstype" runat="server" NavigateUrl="~/Admin/View.aspx?action=newtype"
                             Text="Loại Tin"></asp:HyperLink></li>
-                    <li class="<%= SetClass("admin/Tag.aspx")  %>">
-                        <asp:HyperLink ID="HyperLink9" class="icn_tags" runat="server" NavigateUrl="~/admin/Tag.aspx"
+                    <li class="<%= SetClass("Admin/View.aspx?action=tag")  %>">
+                        <asp:HyperLink ID="HyperLink9" class="icn_tags" runat="server" NavigateUrl="~/Admin/View.aspx?action=tag"
                             Text="Tag"></asp:HyperLink></li>
-                    <li class="<%= SetClass("admin/UpdateNews.aspx")  %>">
-                        <asp:HyperLink ID="HyperLink10" class="icn_updatenews" runat="server" NavigateUrl="~/admin/UpdateNews.aspx"
+                    <li class="<%= SetClass("Admin/View.aspx?action=updatenews")  %>">
+                        <asp:HyperLink ID="HyperLink10" class="icn_updatenews" runat="server" NavigateUrl="~/Admin/View.aspx?action=updatenews"
                             Text="Lấy tin tự động"></asp:HyperLink></li>
                 </ul>
             </li>
-            <li class="<%= SetClass("admin/Video.aspx","admin/VideoDetail.aspx","admin/videotype.aspx")  %>">
-                <asp:HyperLink ID="HyperLink1" class="icn_video" runat="server" NavigateUrl="~/admin/Video.aspx"
+            <li class="<%= SetClass("Admin/View.aspx?action=video","Admin/View.aspx?action=videodetail","Admin/View.aspx?action=videotype")  %>">
+                <asp:HyperLink ID="HyperLink1" class="icn_video" runat="server" NavigateUrl="~/Admin/View.aspx?action=video"
                     Text="Video"></asp:HyperLink>
-                <ul style="display: block" class="<%= "sub " + IsShow("admin/Video.aspx","admin/VideoDetail.aspx","admin/videotype.aspx") %>">
-                    <li class="<%= SetClass("admin/NewsType.aspx")  %>">
-                        <asp:HyperLink ID="HyperLink3" class="icn_videotype" runat="server" NavigateUrl="~/admin/VideoType.aspx"
+                <ul style="display: block" class="<%= "sub " + IsShow("Admin/View.aspx?action=video","Admin/View.aspx?action=videodetail","Admin/View.aspx?action=videotype") %>">
+                    <li class="<%= SetClass("Admin/View.aspx?action=videotype")  %>">
+                        <asp:HyperLink ID="HyperLink3" class="icn_videotype" runat="server" NavigateUrl="~/Admin/View.aspx?action=videotype"
                             Text="Loại Video"></asp:HyperLink></li>
                 </ul>
             </li>
-            <li class="<%= SetClass("admin/Contact.aspx")  %>">
-                <asp:HyperLink ID="hpContact" class="icn_contact" runat="server" NavigateUrl="~/admin/Contact.aspx"
+            <li class="<%= SetClass("Admin/View.aspx?action=contact")  %>">
+                <asp:HyperLink ID="hpContact" class="icn_contact" runat="server" NavigateUrl="~/Admin/View.aspx?action=contact"
                     Text="Liên hệ"></asp:HyperLink></li>
-            <li class="<%= SetClass("admin/CommentNews.aspx")  %>">
-                <asp:HyperLink ID="hpCommemnt" class="icn_comment" runat="server" NavigateUrl="~/admin/CommentNews.aspx"
+            <li class="<%= SetClass("Admin/View.aspx?action=commentnew")  %>">
+                <asp:HyperLink ID="hpCommemnt" class="icn_comment" runat="server" NavigateUrl="~/Admin/View.aspx?action=commentnew"
                     Text="Bình luận"></asp:HyperLink></li>
-            <li class="<%= SetClass("admin/User.aspx")  %>">
-                <asp:HyperLink ID="hpUser" class="icn_user" runat="server" NavigateUrl="~/admin/User.aspx"
+            <li class="<%= SetClass("Admin/View.aspx?action=user")  %>">
+                <asp:HyperLink ID="hpUser" class="icn_user" runat="server" NavigateUrl="~/Admin/View.aspx?action=user"
                     Text="Thành viên"></asp:HyperLink></li>
-            <li class="<%= SetClass("admin/AutoAdv.aspx")  %>">
-                <asp:HyperLink ID="hpAutoAdv" class="icn_advertising" runat="server" NavigateUrl="~/admin/AutoAdv.aspx"
+            <li class="<%= SetClass("Admin/View.aspx?action=autoadv")  %>">
+                <asp:HyperLink ID="hpAutoAdv" class="icn_advertising" runat="server" NavigateUrl="~/Admin/View.aspx?action=autoadv"
                     Text="Quảng cáo"></asp:HyperLink></li>
-            <li class="<%= SetClass("admin/Alexa.aspx")  %>">
-                <asp:HyperLink ID="HyperLink11" class="icn_alexa" runat="server" NavigateUrl="~/admin/Alexa.aspx"
+            <li class="<%= SetClass("admin/View.aspx?action=alexa")  %>">
+                <asp:HyperLink ID="HyperLink11" class="icn_alexa" runat="server" NavigateUrl="~/admin/View.aspx?action=alexa"
                     Text="Site Alexa"></asp:HyperLink></li>
-            <li class="<%= SetClass("admin/SeoConfig.aspx")  %>">
-                <asp:HyperLink ID="hpContact1" class="icn_config" runat="server" NavigateUrl="~/admin/SeoConfig.aspx"
+            <li class="<%= SetClass("Admin/View.aspx?action=seoconfig")  %>">
+                <asp:HyperLink ID="hpContact1" class="icn_config" runat="server" NavigateUrl="~/Admin/View.aspx?action=seoconfig"
                     Text="Site SeoConfig"></asp:HyperLink></li>
         </ul>
     </asp:Panel>

@@ -5,7 +5,7 @@
         <strong>
             <asp:Label ID="lblFullName" runat="server" Text="Khách"></asp:Label></strong>
         <asp:LinkButton ID="btnChangePass" CausesValidation="false" runat="server" Text=" | Đổi mật khẩu"
-            PostBackUrl="~/Admin/ChangePassword.aspx"></asp:LinkButton>
+            PostBackUrl="~/Admin/View.aspx?action=changepassword"></asp:LinkButton>
         |
         <asp:LinkButton ID="btnLogout" runat="server" Text="Đăng xuất" CausesValidation="false"
             OnClick="BtnLogoutClick"></asp:LinkButton>
@@ -25,7 +25,7 @@
                 </ul>
             </li>
             <li class="dashboard">
-                <asp:HyperLink ID="hpDashboard" class="dashboard" NavigateUrl="~/admin/Default.aspx"
+                <asp:HyperLink ID="hpDashboard" class="dashboard" NavigateUrl="~/Admin/View.aspx"
                     runat="server" Text="Bảng điều khiển" /></li>
         </ul>
         <img id="logo" src="img/logo.png" alt="Admin Daihoc" />
