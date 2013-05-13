@@ -48,7 +48,7 @@ public static class Global
 
     public static string GetSubContent(string pContent, int pLength)
     {
-        string strResult = pContent;
+        var strResult = pContent;
         if (pContent.Length > pLength)
         {
             strResult = DH.Utilities.StringExtension.SubString(pContent, pLength - 3) + "...";
@@ -65,7 +65,7 @@ public static class Global
     /// <param name="iSiteLink"></param>
     public static void GetAlexa(string host, ref int iTrafficRank, ref int iTrafficRankVn, ref int iSiteLink)
     {
-        string html = "http://data.alexa.com/data?cli=10&dat=s&url=" + host;
+        var html = "http://data.alexa.com/data?cli=10&dat=s&url=" + host;
         try
         {
             var xr = XmlReader.Create(html);
