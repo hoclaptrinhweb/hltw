@@ -41,11 +41,11 @@ public partial class usercontrols_ucNews : HocLapTrinhWeb.UI.UCBase
         {
             try
             {
-                return Request.QueryString["pagesize"] != null ? int.Parse(Request.QueryString["pagesize"]) : 10;
+                return Request.QueryString["pagesize"] != null ? int.Parse(Request.QueryString["pagesize"]) : 30;
             }
             catch
             {
-                return 10;
+                return 30;
             }
         }
     }
@@ -62,7 +62,7 @@ public partial class usercontrols_ucNews : HocLapTrinhWeb.UI.UCBase
     {
         var vnnNewsTypeBll = new vnn_NewsTypeBLL(CurrentPage.getCurrentConnection());
         var row = vnnNewsTypeBll.GetNewsTypeByID(NewsTypeID);
-        var url = CurrentPage.UrlRoot + "/" + (row != null ? XuLyChuoi.ConvertToUnSign(row.NewsTypeName) : NewsTypeID.ToString()) + "/hltw" + NewsTypeID + ".aspx" + (PageSize == 10 ? "?" : "?pagesize=" + PageSize + "&");
+        var url = CurrentPage.UrlRoot + "/" + (row != null ? XuLyChuoi.ConvertToUnSign(row.NewsTypeName) : NewsTypeID.ToString()) + "/hltw" + NewsTypeID + ".aspx" + (PageSize == 30 ? "?" : "?pagesize=" + PageSize + "&");
 
         var html = "";
         var nSumOfPage = (total - 1) / PageSize + 1;

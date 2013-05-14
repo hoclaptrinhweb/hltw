@@ -1356,9 +1356,12 @@ direction:rtl;
 .cat_article {
        overflow:hidden;
        background:#fff;
-       border:1px solid #e0e0e0;
+       border:1px solid #ccc;
        padding:0 20px 0 20px;
 
+}
+.cat_article_title:hover {
+    background: #FFE4CE;
 }
 .cat_article_title {
        font-size:12px;
@@ -1367,7 +1370,7 @@ direction:rtl;
        padding:10px 10px 10px 10px;
        border-bottom:1px solid #ebebeb;
        margin-bottom:10px;
-       background:#f8f8f8;
+     /*  background:#f8f8f8;*/
        margin:0 -20px 0 -20px;
 }
 .page_title {
