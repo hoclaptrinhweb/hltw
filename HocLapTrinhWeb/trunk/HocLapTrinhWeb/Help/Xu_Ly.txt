@@ -10,7 +10,3 @@ Viết thêm hỏi và đáp
 
 ==> Đang xử lý phần tag trong tin tức
 ==> Dựa vào acc vatgia để tính số lượng click tối đa
-
-update tbl_Video
-set VideoURL = SUBSTRING(videoURL,0,43),
-RefAddress = SUBSTRING(RefAddress,0,43)
