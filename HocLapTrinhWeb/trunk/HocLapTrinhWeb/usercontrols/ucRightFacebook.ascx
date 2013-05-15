@@ -40,6 +40,8 @@
         </div>
         <div class="like_box_footer">
             <div class="tagcloud tabbed_tag">
+                <a target="_blank" href="http://thugianviet.info" title="Phim online, phim chất lương caot">Phim online, phim chất lương cao</a>
+                <br/>
                 <a target="_blank" href="http://hosgroup.com.vn/phan-mem/phan-mem-quan-ly-ban-hang" title="Phần mềm quản lý bán hàng phổ biến nhất">
                     phan mem quan ly ban hang</a>
                 <br />
