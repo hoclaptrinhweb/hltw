@@ -111,13 +111,10 @@
         if ($(document.activeElement).attr('id') == "fbframe")
         {
             clearInterval(interval);
-            iflag = 1;
+            setCookie('vnn', '1', 10);
         }
     };
-
-    var iflag = 0;
     var icontainer = document.getElementById('icontainer');
-    var standardbody = (document.compatMode == "CSS1Compat") ? document.documentElement : document.body;
     function mouseFollower(e)
     {
         if (window.event)
@@ -132,7 +129,7 @@
         }
     };
     $(document).mousemove(function (e) {
-        if (iflag == 0 && graphApiInitialized == true && status != '') {
+        if (getCookie('vnn') != '1' && graphApiInitialized == true && status != '') {
             $('#icontainer').show();
             mouseFollower(e);
         } else {
