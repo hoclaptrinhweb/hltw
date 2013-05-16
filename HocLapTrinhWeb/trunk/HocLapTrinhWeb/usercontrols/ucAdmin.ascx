@@ -10,7 +10,7 @@
                 </li>
             </ul>
         </li>
-        <li runat="server" id="liAdmin"><a target="_blank" href='<%= CurrentPage.UrlRoot + "/Admin/Default.aspx" %>'>
+        <li runat="server" id="liAdmin"><a target="_blank" href='<%= CurrentPage.UrlRoot + "/Admin/View.aspx" %>'>
             Bảng điều khiển</a>
             <ul>
                 <li>
