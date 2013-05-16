@@ -8,26 +8,41 @@
     {
         width: 100%;
         float: left;
-        padding-bottom: 5px;
         margin-bottom: 10px;
+        margin-top: 10px;
         border-bottom: 1px solid #E0E0E0;
         font-family: play;
         font-size: 13px;
+        background: #e0e0e0;
     }
     .treeview li
     {
         float: left;
-        margin-left: 10px;
+    }
+    .treeview li a
+    {
+        font-size: 12px;
+        display: inline-block;
+        font-weight: bold;
+        position: relative;
+        padding: 5px 18px 5px 8px;
+        display: inline-block;
+        background: url('<%= CurrentPage.UrlRoot %>/images/chevron1.png') no-repeat right center;
     }
     .link-rss
     {
         float: right;
+        display: none;
+    }
+    a.home {
+        background: url('<%= CurrentPage.UrlRoot %>/images/bg-timo.png') no-repeat right center !important;
+        color: white;
     }
 </style>
 <div class="top-menu-wrap" xmlns:v="http://rdf.data-vocabulary.org/#">
     <ul class="treeview" itemprop="breadcrumb">
-        <li typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href='<%= CurrentPage.UrlRoot + "/video/" %>'>
-            Home</a></li>
+        <li typeof="v:Breadcrumb"><a class="home" rel="v:url" property="v:title" href='<%= CurrentPage.UrlRoot + "/video/" %>'>
+            Trang chủ</a></li>
         <asp:Literal ID="lrTreeView" runat="server"></asp:Literal>
     </ul>
 </div>
