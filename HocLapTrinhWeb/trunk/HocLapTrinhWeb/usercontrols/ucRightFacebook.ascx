@@ -10,7 +10,7 @@
         <uc1:ucTagCount ID="ucTagCount1" runat="server" />
     </div>
 </div>
-<div class="box_outer">
+<%--<div class="box_outer">
     <div class="widget">
         <h3 class="widget_title">
             Facebook</h3>
@@ -22,7 +22,7 @@
                 height: 290px;" allowtransparency="true"></iframe>
         </div>
     </div>
-</div>
+</div>--%>
 <div id="right_ad360" class="box_outer ads360">
     <script type="text/javascript">
         var _ad360_id = 3099;
