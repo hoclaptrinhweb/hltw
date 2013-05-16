@@ -78,7 +78,7 @@ public partial class administrator_usercontrols_NewsDetail : HocLapTrinhWeb.UI.U
             var pathImage = CheckUploadImageThumbnail(XuLyChuoi.ConvertToUnSign(txtTitle.Text), fileuploadThumbnail, false, Global.MaxThumbnailSize, int.Parse(dropNewsType.SelectedValue));
             row.Thumbnail = pathImage != "" ? pathImage : imgThumbnail.ImageUrl.Replace("~/", "");
             row.Image = "";
-            row.IsHot = false;
+            row.IsHot = cboxHot.Checked;
             row.IsShowImage = false;
             row.IsActive = cboxActive.Checked;
             var newsId = Request.QueryString["NewsID"];
