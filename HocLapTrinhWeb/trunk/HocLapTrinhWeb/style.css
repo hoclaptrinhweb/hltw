@@ -454,12 +454,12 @@ display:block;
  *******************************************************************/
 #navigation {
     height:38px;
-    border-bottom:1px solid #e0e0e0;
+    border-bottom:1px solid black;
     margin-bottom:5px;
-    background:#fff;
+    background:black;
 }
 #navigation .nav_wrap {
-    background:#eaeaea url(~/images/nav_bg.png) repeat-x;
+    background:#3262aa;
     height:35px;
     border-top:1px solid #eaeaea;
 }
@@ -484,18 +484,19 @@ display:block;
     position:relative;
 }
 #navigation ul.nav > li a {
-    color:#40454d;
-    font-size:16px;
-    padding:0 15px;
-    display:inline-block;
-    height:35px;
+    color: white;
+    font-size: 13px;
+    padding: 0 15px;
+    display: inline-block;
+    height: 35px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 #navigation ul.nav li:hover > a, #navigation ul.nav > li.current-menu-item > a, #navigation ul.nav > li.current-menu-ancestor > a {
-    background:#fff;
+    background:#3262aa;
     height:35px;
-    color:#a50000;
+    color:yellow;
 }
 
 /*home icon*/
