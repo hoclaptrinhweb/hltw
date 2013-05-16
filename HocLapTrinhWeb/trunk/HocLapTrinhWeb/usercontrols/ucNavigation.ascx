@@ -6,13 +6,13 @@
             <ul class="nav">
                 <li><a href='<%= CurrentPage.UrlRoot %>'>Trang chủ</a></li>
                  <li>
-                <a href="<%= CurrentPage.UrlRoot + "/video/" %>"> Video </a>
+                <a class="<%= SetClass("/video/")  %>" href="<%= CurrentPage.UrlRoot + "/video/" %>"> Video </a>
                 </li>
                 <li>
-                <a href="<%= CurrentPage.UrlRoot + "/upnews.aspx" %>">Đăng tin</a>
+                <a class="<%= SetClass("/upnews.aspx")  %>" href="<%= CurrentPage.UrlRoot + "/upnews.aspx" %>">Đăng tin</a>
                 </li>
-               <li><a href='<%= CurrentPage.UrlRoot + "/contact.aspx" %>'>Liên hệ</a></li>
-                 <li><a href='<%= CurrentPage.UrlRoot + "/lienket.aspx"%>'>Liên kết</a></li>
+               <li><a class="<%= SetClass("/contact.aspx")  %>" href='<%= CurrentPage.UrlRoot + "/contact.aspx" %>'>Liên hệ</a></li>
+                 <li><a class="<%= SetClass("/lienket.aspx")  %>" href='<%= CurrentPage.UrlRoot + "/lienket.aspx"%>'>Liên kết</a></li>
                  <li><a rel="nofollow" target="_blank" href='http://mediafire.com/hoclaptrinhweb'>Tài liệu</a></li>
                 
                 <li>

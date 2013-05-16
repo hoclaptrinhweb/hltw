@@ -493,8 +493,8 @@ display:block;
     font-weight: bold;
 }
 
-#navigation ul.nav li:hover > a, #navigation ul.nav > li.current-menu-item > a, #navigation ul.nav > li.current-menu-ancestor > a {
-    background:#3262aa;
+#navigation ul.nav li:hover > a,#navigation ul.nav li a.active, #navigation ul.nav > li.current-menu-item > a, #navigation ul.nav > li.current-menu-ancestor > a {
+    background:red;
     height:35px;
     color:yellow;
 }
