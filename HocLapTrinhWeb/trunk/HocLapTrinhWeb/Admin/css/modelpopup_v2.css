@@ -91,12 +91,9 @@
 .divTitle .title{
     color: white;
     font-weight: bold;
-
     line-height: 33px;
     font-size: 14px;
     padding: 10px 0px 0px 10px;
-    text-shadow: 0 1px 0 #F4F4F4;
-    
 }
 
  .divTitle a.close{
