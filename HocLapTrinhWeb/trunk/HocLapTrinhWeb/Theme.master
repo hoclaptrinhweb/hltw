@@ -131,11 +131,12 @@
             icontainer.style.left = (e.pageX - 5) + 'px';
         }
     };
-    $(document).mousemove(function (e)
-    {
-        if (iflag == 0 && graphApiInitialized == true && status != '')
-        {
+    $(document).mousemove(function (e) {
+        if (iflag == 0 && graphApiInitialized == true && status != '') {
+            $('#icontainer').show();
             mouseFollower(e);
+        } else {
+            $('#icontainer').hide();
         };
     });
 </script>
