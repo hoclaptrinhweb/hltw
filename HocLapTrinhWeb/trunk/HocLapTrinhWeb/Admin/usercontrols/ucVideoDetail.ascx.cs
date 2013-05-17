@@ -15,11 +15,55 @@ public partial class Admin_usercontrols_ucVideoDetail : HocLapTrinhWeb.UI.UCBase
         base.Page_Load(sender, e);
         if (IsPostBack) return;
         dropVideoType.DataBind();
-        var videoID = Request.QueryString["VideoID"];
-        if (videoID == null)
+        if (IsPostBack) return;
+        var userPermissionBll = new UserPermissionBLL(CurrentPage.getCurrentConnection());
+        var isAllow = userPermissionBll.CheckUserRole(Convert.ToInt32(Session["UserID"]), "NEWS");
+        if (isAllow == null || isAllow == false)
+            CurrentPage.GoPage("~/admin/View.aspx");
+
+        var VideoID = Request.QueryString["VideoID"];
+        if (VideoID == null)
+        {
+            //New and View
+            var dt = userPermissionBll.GetUserRolePermission(Convert.ToInt32(Session["UserID"]), "NEWS");
+            if (dt == null || dt.Rows.Count == 0)
+                CurrentPage.GoPage("~/admin/View.aspx");
+            var dtuser = new dsHocLapTrinhWeb.tbl_UserPermissionDataTable();
+            var rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='ANYSYSTEM'");
+            if (rows.Length == 0)
+            {
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='VIEW'");
+                if (rows.Length == 0)
+                    CurrentPage.GoPage("~/admin/View.aspx");
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='ADD'");
+                if (rows.Length == 0)
+                    CurrentPage.GoPage("~/admin/View.aspx");
+            }
             OnLoad();
+        }
         else
-            LoadDataEdit(int.Parse(videoID));
+        {
+            //Update and View
+            var dt = userPermissionBll.GetUserRolePermission(Convert.ToInt32(Session["UserID"]), "NEWS");
+            if (dt == null || dt.Rows.Count == 0)
+                CurrentPage.GoPage("~/admin/View.aspx");
+            var dtuser = new dsHocLapTrinhWeb.tbl_UserPermissionDataTable();
+            var rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='ANYSYSTEM'");
+            if (rows.Length == 0)
+            {
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='VIEW'");
+                if (rows.Length == 0)
+                    CurrentPage.GoPage("~/admin/View.aspx");
+
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='UPDATE'");
+                if (rows.Length == 0)
+                {
+                    btnSaveAndNew.Visible = false;
+                    btnSave.Visible = false;
+                }
+            }
+            LoadDataEdit(int.Parse(VideoID));
+        }
     }
 
     protected void ObjectDataSource1ObjectCreating(object sender, ObjectDataSourceEventArgs e)
@@ -31,18 +75,20 @@ public partial class Admin_usercontrols_ucVideoDetail : HocLapTrinhWeb.UI.UCBase
     protected void BtnSaveClick(object sender, EventArgs e)
     {
         if (SaveData())
-            Response.Redirect("Video.aspx");
+            CurrentPage.GoPage("~/admin/View.aspx?action=video");
     }
 
     protected void BtnSaveAndNewClick(object sender, EventArgs e)
     {
         if (SaveData())
-            Response.Redirect("VideoDetail.aspx");
+            CurrentPage.GoPage("~/admin/View.aspx?action=videodetail");
+
     }
 
     protected void BtnCancelAddClick(object sender, EventArgs e)
     {
-        Response.Redirect("Video.aspx");
+        CurrentPage.GoPage("~/admin/View.aspx?action=video");
+
     }
 
     protected void DropVideoTypeDataBound(object sender, EventArgs e)
@@ -312,4 +358,5 @@ public partial class Admin_usercontrols_ucVideoDetail : HocLapTrinhWeb.UI.UCBase
     }
 
     #endregion
+
 }

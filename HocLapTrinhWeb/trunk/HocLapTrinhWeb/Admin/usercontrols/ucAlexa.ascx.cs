@@ -10,6 +10,41 @@ public partial class Admin_usercontrols_ucAlexa : HocLapTrinhWeb.UI.UCBase
     protected override void Page_Load(object sender, EventArgs e)
     {
         base.Page_Load(sender, e);
+        if (!IsPostBack)
+        {
+            var userPermissionBll = new UserPermissionBLL(CurrentPage.getCurrentConnection());
+            var isAllow = userPermissionBll.CheckUserRole(Convert.ToInt32(Session["UserID"]), "ALEXA");
+            if (isAllow == null || isAllow == false)
+                CurrentPage.GoPage("~/admin/View.aspx");
+            var dt = userPermissionBll.GetUserRolePermission(Convert.ToInt32(Session["UserID"]), "ALEXA");
+            if (dt == null || dt.Rows.Count == 0)
+            {
+                CurrentPage.GoPage("~/admin/View.aspx");
+                return;
+            }
+            var dtuser = new dsHocLapTrinhWeb.tbl_UserPermissionDataTable();
+            var rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='ANYSYSTEM'");
+            if (rows.Length == 0)
+            {
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='VIEW'");
+                if (rows.Length == 0)
+                    CurrentPage.GoPage("~/admin/View.aspx");
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='DELETE'");
+                if (rows.Length == 0)
+                    btnDelete.Visible = false;
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='ADD'");
+                if (rows.Length == 0)
+                    btnNew.Visible = false;
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='UPDATE'");
+                if (rows.Length == 0)
+                {
+                    btnUpdate.Visible = false;
+                    btnEdit.Visible = false;
+                }
+
+            }
+
+        }
         gvData.PageSize = Global.Pagesize;
         gvData.PagerSettings.PageButtonCount = Global.PageButtonCount;
     }

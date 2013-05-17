@@ -10,6 +10,37 @@ public partial class Admin_usercontrols_ucVideoType : HocLapTrinhWeb.UI.UCBase
     protected override void Page_Load(object sender, EventArgs e)
     {
         base.Page_Load(sender, e);
+        if (!IsPostBack)
+        {
+            var userPermissionBll = new UserPermissionBLL(CurrentPage.getCurrentConnection());
+            var isAllow = userPermissionBll.CheckUserRole(Convert.ToInt32(Session["UserID"]), "VIDEOTYPE");
+            if (isAllow == null || isAllow == false)
+                CurrentPage.GoPage("~/admin/View.aspx");
+            var dt = userPermissionBll.GetUserRolePermission(Convert.ToInt32(Session["UserID"]), "VIDEOTYPE");
+            if (dt == null || dt.Rows.Count == 0)
+            {
+                CurrentPage.GoPage("~/admin/View.aspx");
+                return;
+            }
+            var dtuser = new dsHocLapTrinhWeb.tbl_UserPermissionDataTable();
+            var rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='ANYSYSTEM'");
+            if (rows.Length == 0)
+            {
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='VIEW'");
+                if (rows.Length == 0)
+                    CurrentPage.GoPage("~/admin/View.aspx");
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='DELETE'");
+                if (rows.Length == 0)
+                    btnDelete.Visible = false;
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='ADD'");
+                if (rows.Length == 0)
+                    btnNew.Visible = false;
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='UPDATE'");
+                if (rows.Length == 0)
+                    btnEdit.Visible = false;
+            }
+
+        }
         gvData.PageSize = Global.Pagesize;
         gvData.PagerSettings.PageButtonCount = Global.PageButtonCount;
     }
@@ -148,15 +179,12 @@ public partial class Admin_usercontrols_ucVideoType : HocLapTrinhWeb.UI.UCBase
 
     protected void ObjDataSelected(object sender, ObjectDataSourceStatusEventArgs e)
     {
-        if (e.Exception == null && e.ReturnValue != null)
-        {
-            if (_bGetSelectCount)
-                lbTotal.Text += " / " + e.ReturnValue;
-            else
-                lbTotal.Text = ((vnn_dsHocLapTrinhWeb.vnn_vw_VideoTypeDataTable)e.ReturnValue).Count.ToString();
-        }
+        if (e.Exception != null || e.ReturnValue == null) return;
+        if (_bGetSelectCount)
+            lbTotal.Text += " / " + e.ReturnValue;
+        else
+            lbTotal.Text = ((vnn_dsHocLapTrinhWeb.vnn_vw_VideoTypeDataTable)e.ReturnValue).Count.ToString();
     }
-
 
     #endregion
 
@@ -175,13 +203,13 @@ public partial class Admin_usercontrols_ucVideoType : HocLapTrinhWeb.UI.UCBase
     /// <summary>
     /// Load lên level cần chỉnh sửa
     /// </summary>
-    /// <param name="pID"></param>
-    private void LoadDataEdit(int pID)
+    /// <param name="pId"></param>
+    private void LoadDataEdit(int pId)
     {
         var vnnVideoTypeBll = new vnn_VideoTypeBLL(CurrentPage.getCurrentConnection());
         try
         {
-            var rVideoType = vnnVideoTypeBll.GetVideoTypeByID(pID);
+            var rVideoType = vnnVideoTypeBll.GetVideoTypeByID(pId);
             if (rVideoType != null)
             {
                 hdVideoTypeID.Value = rVideoType.VideoTypeID.ToString();
