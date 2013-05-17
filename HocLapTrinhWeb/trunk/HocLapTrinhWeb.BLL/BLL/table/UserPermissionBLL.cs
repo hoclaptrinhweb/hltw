@@ -2,7 +2,6 @@
 using System.Data;
 using System.Collections;
 using HocLapTrinhWeb.DAL;
-using HocLapTrinhWeb.DAL;
 
 namespace HocLapTrinhWeb.BLL
 {
