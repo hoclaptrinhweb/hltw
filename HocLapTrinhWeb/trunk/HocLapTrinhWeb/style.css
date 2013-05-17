@@ -1057,13 +1057,13 @@ a.nb_recent_more:hover {
 }
 
 .sidebar .widget .widget_title {
-    background:#e0e0e0;
+    background:#17B2E1;
     height:30px;
     line-height:30px;
     margin:-11px;
     padding:0 10px;
     font-size:17px;
-    color:black;
+    color:white;
     margin-bottom:2px;
     font-weight: bold;
     font-family:play;
