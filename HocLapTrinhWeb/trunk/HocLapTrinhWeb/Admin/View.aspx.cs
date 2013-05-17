@@ -70,15 +70,21 @@ public partial class Admin_View : HocLapTrinhWeb.UI.PageBase
                 Page.Title = "Quản lý Role - Hoclaptrinhweb.com";
                 pCenter.Controls.Add(Page.LoadControl("~/Admin/usercontrols/ucRole.ascx"));
                 break;
-                     case "changepassword":
+            case "permission":
+                Page.Title = "Quản lý Permission - Hoclaptrinhweb.com";
+                pCenter.Controls.Add(Page.LoadControl("~/Admin/usercontrols/ucPermission.ascx"));
+                break;
+            case "userpermission":
+                Page.Title = "Quản lý UserPermission - Hoclaptrinhweb.com";
+                pCenter.Controls.Add(Page.LoadControl("~/Admin/usercontrols/ucUserPermission.ascx"));
+                break;
+            case "changepassword":
                 Page.Title = "Thay đổi mật khẩu - Hoclaptrinhweb.com";
                 pCenter.Controls.Add(Page.LoadControl("~/Admin/usercontrols/ucChangePassword.ascx"));
                 break;
             default:
                 Page.Title = "Bảng điều khiển | HocLapTrinhWeb.com";
-                 pCenter.Controls.Add(Page.LoadControl("~/Admin/usercontrols/ucDefault.ascx"));
-
-                
+                pCenter.Controls.Add(Page.LoadControl("~/Admin/usercontrols/ucDefault.ascx"));
                 break;
         }
     }

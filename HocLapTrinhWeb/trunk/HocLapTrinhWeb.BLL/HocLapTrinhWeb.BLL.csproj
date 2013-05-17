@@ -77,6 +77,7 @@
     <Compile Include="BLL\table\AutoAdvBLL.cs" />
     <Compile Include="BLL\table\ContactBLL.cs" />
     <Compile Include="BLL\table\CommentNewsBLL.cs" />
+    <Compile Include="BLL\table\PermissionBLL.cs" />
     <Compile Include="BLL\table\t_ConfigBLL.cs" />
     <Compile Include="BLL\table\t_VideoTagBLL.cs" />
     <Compile Include="BLL\table\VideoTypeBLL.cs" />
@@ -100,6 +101,8 @@
     <Compile Include="BLL\table\UserBLL.cs" />
     <Compile Include="BLL\table\UserPermissionBLL.cs" />
     <Compile Include="BLL\table\t_VideoBLL.cs" />
+    <Compile Include="BLL\view\vnn_PermissionBLL.cs" />
+    <Compile Include="BLL\view\vnn_UserPermissionBLL.cs" />
     <Compile Include="BLL\view\v_ConfigBLL.cs" />
     <Compile Include="BLL\view\v_VideoTagBLL.cs" />
     <Compile Include="BLL\view\vnn_VideoTypeBLL.cs" />
