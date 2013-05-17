@@ -101,8 +101,7 @@
             <asp:Literal ID="lbKeyword" runat="server"></asp:Literal>
         </div>
         <div class="ratings" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-            <span itemprop="ratingValue">100</span> out of <span itemprop="bestRating">100</span>
-            based on <span itemprop="ratingCount">
+            <span itemprop="ratingValue">100</span> out of <span itemprop="bestRating">100</span>based on <span itemprop="ratingCount">
                 <asp:Literal ID="lbRatingCount" runat="server"></asp:Literal></span> user ratings
         </div>
         <div class="single_share">
@@ -131,16 +130,6 @@
 </div>
 <div class="box_inner" style="margin-top: 10px; margin-bottom: 10px;">
     <div class="news_box">
-        <div id="fb-root">
-        </div>
-        <script type="text/javascript">
-            (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=312319252170353";
-                fjs.parentNode.insertBefore(js, fjs);
-            } (document, 'script', 'facebook-jssdk'));</script>
         <div id="cmFacebook" runat="server" class="fb-comments" data-num-posts="5" data-width="609">
         </div>
     </div>
