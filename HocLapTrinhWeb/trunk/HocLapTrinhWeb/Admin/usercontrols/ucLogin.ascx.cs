@@ -5,17 +5,13 @@ using HocLapTrinhWeb.BLL;
 public partial class administrator_usercontrols_ucLogin : HocLapTrinhWeb.UI.UCBase
 {
 
-    #region Variables
-
-    #endregion
-
     #region Event Page
 
     protected override void Page_Load(object sender, EventArgs e)
     {
         base.Page_Load(sender, e);
         if (Session["UserName"] != null)
-            CurrentPage.GoPage("~/admin/Default.aspx");
+            CurrentPage.GoPage("~/admin/View.aspx");
         txtUserName.Focus();
     }
 
@@ -29,9 +25,8 @@ public partial class administrator_usercontrols_ucLogin : HocLapTrinhWeb.UI.UCBa
         aCookie1.Expires = DateTime.Now.AddDays(7);
         Response.Cookies.Add(aCookie1);
 
-        CurrentPage.GoPage(p != "" ? p : "~/admin/Default.aspx");
+        CurrentPage.GoPage(p != "" ? p : "~/admin/View.aspx");
     }
-
 
     #endregion
 
@@ -57,13 +52,6 @@ public partial class administrator_usercontrols_ucLogin : HocLapTrinhWeb.UI.UCBa
             {
                 SaveValidate.IsValid = false;
                 SaveValidate.ErrorMessage = msg.GetMessage("ERR-LOG007");
-                txtUserName.Focus();
-                return false;
-            }
-            if (!row.IsAdmin)
-            {
-                SaveValidate.IsValid = false;
-                SaveValidate.ErrorMessage = "Bạn không có quyền truy cập!";
                 txtUserName.Focus();
                 return false;
             }

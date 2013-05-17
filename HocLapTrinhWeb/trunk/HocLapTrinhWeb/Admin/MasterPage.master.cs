@@ -41,10 +41,6 @@ public partial class administrator_MasterPage : System.Web.UI.MasterPage
             {
                 return false;
             }
-            if (!row.IsAdmin)
-            {
-                return false;
-            }
             if (row.Pass != Request.Cookies["UserName"].Values["Password"])
             {
                 return false;
