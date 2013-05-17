@@ -66,13 +66,19 @@ public partial class Admin_View : HocLapTrinhWeb.UI.PageBase
                 Page.Title = "Chi tiết alexa - Hoclaptrinhweb.com";
                 pCenter.Controls.Add(Page.LoadControl("~/Admin/usercontrols/ucAlexaDetail.ascx"));
                 break;
-            case "changepassword":
+            case "role":
+                Page.Title = "Quản lý Role - Hoclaptrinhweb.com";
+                pCenter.Controls.Add(Page.LoadControl("~/Admin/usercontrols/ucRole.ascx"));
+                break;
+                     case "changepassword":
                 Page.Title = "Thay đổi mật khẩu - Hoclaptrinhweb.com";
                 pCenter.Controls.Add(Page.LoadControl("~/Admin/usercontrols/ucChangePassword.ascx"));
                 break;
             default:
                 Page.Title = "Bảng điều khiển | HocLapTrinhWeb.com";
                  pCenter.Controls.Add(Page.LoadControl("~/Admin/usercontrols/ucDefault.ascx"));
+
+                
                 break;
         }
     }
