@@ -10,6 +10,30 @@ public partial class Admin_usercontrols_ucContact : HocLapTrinhWeb.UI.UCBase
     protected override void Page_Load(object sender, EventArgs e)
     {
         base.Page_Load(sender, e);
+        if (!IsPostBack)
+        {
+            var userPermissionBll = new UserPermissionBLL(CurrentPage.getCurrentConnection());
+            var isAllow = userPermissionBll.CheckUserRole(Convert.ToInt32(Session["UserID"]), "CONTACT");
+            if (isAllow == null || isAllow == false)
+                CurrentPage.GoPage("~/admin/view.aspx");
+
+            var dt = userPermissionBll.GetUserRolePermission(Convert.ToInt32(Session["UserID"]), "CONTACT");
+            if (dt == null || dt.Rows.Count == 0)
+                CurrentPage.GoPage("~/admin/view.aspx");
+
+            var dtuser = new dsHocLapTrinhWeb.tbl_UserPermissionDataTable();
+            var rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='ANYSYSTEM'");
+            if (rows.Length == 0)
+            {
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='VIEW'");
+                if (rows.Length == 0)
+                    CurrentPage.GoPage("~/admin/view.aspx");
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='DELETE'");
+                if (rows.Length == 0)
+                    btnDelete.Visible = false;
+            }
+
+        }
         gvData.PageSize = Global.Pagesize;
         gvData.PagerSettings.PageButtonCount = Global.PageButtonCount;
     }

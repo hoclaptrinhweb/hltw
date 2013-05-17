@@ -14,6 +14,42 @@ public partial class Admin_usercontrols_ucVideo : HocLapTrinhWeb.UI.UCBase
     protected override void Page_Load(object sender, EventArgs e)
     {
         base.Page_Load(sender, e);
+        if (!IsPostBack)
+        {
+            var userPermissionBll = new UserPermissionBLL(CurrentPage.getCurrentConnection());
+            var isAllow = userPermissionBll.CheckUserRole(Convert.ToInt32(Session["UserID"]), "VIDEO");
+            if (isAllow == null || isAllow == false)
+                CurrentPage.GoPage("~/admin/View.aspx");
+            var dt = userPermissionBll.GetUserRolePermission(Convert.ToInt32(Session["UserID"]), "VIDEO");
+            if (dt == null || dt.Rows.Count == 0)
+            {
+                CurrentPage.GoPage("~/admin/View.aspx");
+                return;
+            }
+            var dtuser = new dsHocLapTrinhWeb.tbl_UserPermissionDataTable();
+            var rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='ANYSYSTEM'");
+            if (rows.Length == 0)
+            {
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='VIEW'");
+                if (rows.Length == 0)
+                    CurrentPage.GoPage("~/admin/View.aspx");
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='DELETE'");
+                if (rows.Length == 0)
+                    btnDelete.Visible = false;
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='ADD'");
+                if (rows.Length == 0)
+                    btnNew.Visible = false;
+                rows = dt.Select(dtuser.PermissionIDColumn.ColumnName + "='UPDATE'");
+                if (rows.Length == 0)
+                {
+                    btnEditExpress.Visible = false;
+                    btnMoveVideo.Visible = false;
+                    btnEdit.Visible = false;
+                }
+
+            }
+
+        }
         if (Session["PageSize"] == null)
             Session["PageSize"] = Global.Pagesize.ToString();
         gvData.PageSize = int.Parse(Session["PageSize"].ToString());
@@ -108,19 +144,19 @@ public partial class Admin_usercontrols_ucVideo : HocLapTrinhWeb.UI.UCBase
         var videoBll = new t_VideoBLL(CurrentPage.getCurrentConnection());
         try
         {
-            var arrID = new ArrayList();
+            var arrId = new ArrayList();
             var arrImage = new ArrayList();
             foreach (GridViewRow row in gvData.Rows)
             {
                 var chckDelete = (CheckBox)row.FindControl("chckSelect");
                 if (!chckDelete.Checked) continue;
-                var hdVideoID = (HiddenField)row.FindControl("hdVideoID");
-                arrID.Add(hdVideoID.Value);
+                var hdVideoId = (HiddenField)row.FindControl("hdVideoID");
+                arrId.Add(hdVideoId.Value);
                 var hdThumbnail = (HiddenField)row.FindControl("hdThumbnail");
                 if (!string.IsNullOrEmpty(hdThumbnail.Value))
                     arrImage.Add(hdThumbnail.Value);
             }
-            if (videoBll.Delete(arrID))
+            if (videoBll.Delete(arrId))
             {
                 foreach (var t in arrImage)
                 {
@@ -150,8 +186,8 @@ public partial class Admin_usercontrols_ucVideo : HocLapTrinhWeb.UI.UCBase
             {
                 var chckDelete = (CheckBox)row.FindControl("chckSelect");
                 if (!chckDelete.Checked) continue;
-                var hdVideoID = (HiddenField)row.FindControl("hdVideoID");
-                CurrentPage.GoPageWithAjax("VideoDetail.aspx?VideoId=" + hdVideoID.Value);
+                var hdVideoId = (HiddenField)row.FindControl("hdVideoID");
+                CurrentPage.GoPageWithAjax("~/Admin/View.aspx?action=videodetail&VideoId=" + hdVideoId.Value);
             }
         }
         catch
@@ -163,7 +199,7 @@ public partial class Admin_usercontrols_ucVideo : HocLapTrinhWeb.UI.UCBase
 
     protected void BtnNewClick(object sender, EventArgs e)
     {
-        CurrentPage.GoPage("VideoDetail.aspx");
+        CurrentPage.GoPage("~/Admin/View.aspx?action=videodetail");
     }
 
     protected void ObjectDataSource1ObjectCreating(object sender, ObjectDataSourceEventArgs e)
@@ -197,11 +233,11 @@ public partial class Admin_usercontrols_ucVideo : HocLapTrinhWeb.UI.UCBase
             foreach (GridViewRow row in gvData.Rows)
             {
                 var r = dt.Newtbl_VideoRow();
-                var hdVideoID = (HiddenField)row.FindControl("hdVideoID");
+                var hdVideoId = (HiddenField)row.FindControl("hdVideoID");
                 var chckThumbnail = (CheckBox)row.FindControl("chckThumbnail");
                 var chckIsActive = (CheckBox)row.FindControl("chckIsActive");
                 var txtTitle = (TextBox)row.FindControl("txtTitle");
-                r.VideoID = int.Parse(hdVideoID.Value);
+                r.VideoID = int.Parse(hdVideoId.Value);
                 r.Title = txtTitle.Text;
                 r.IsActive = chckThumbnail.Checked && chckIsActive.Checked;
                 r.CreatedDate = DateTime.Now;
@@ -249,11 +285,11 @@ public partial class Admin_usercontrols_ucVideo : HocLapTrinhWeb.UI.UCBase
                 var chckDelete = (CheckBox)row.FindControl("chckSelect");
                 if (!chckDelete.Checked) continue;
                 var r = dt.Newtbl_VideoRow();
-                var hdVideoID = (HiddenField)row.FindControl("hdVideoID");
-                var hdVideoTypeID = (HiddenField)row.FindControl("hdVideoTypeID");
-                r.VideoID = int.Parse(hdVideoID.Value);
+                var hdVideoId = (HiddenField)row.FindControl("hdVideoID");
+                var hdVideoTypeId = (HiddenField)row.FindControl("hdVideoTypeID");
+                r.VideoID = int.Parse(hdVideoId.Value);
                 r.VideoTypeID = int.Parse(drVideoTypeMove.SelectedValue);
-                r.MoveFrom = int.Parse(hdVideoTypeID.Value);
+                r.MoveFrom = int.Parse(hdVideoTypeId.Value);
                 r.UpdatedBy = int.Parse(Session["UserID"].ToString());
                 dt.Addtbl_VideoRow(r);
             }
@@ -309,4 +345,5 @@ public partial class Admin_usercontrols_ucVideo : HocLapTrinhWeb.UI.UCBase
     #region Method Page
 
     #endregion
+
 }

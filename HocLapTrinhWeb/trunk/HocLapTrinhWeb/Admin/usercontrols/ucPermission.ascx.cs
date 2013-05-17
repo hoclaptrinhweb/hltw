@@ -10,13 +10,15 @@ public partial class Admin_usercontrols_ucPermission : HocLapTrinhWeb.UI.UCBase
     protected override void Page_Load(object sender, EventArgs e)
     {
         base.Page_Load(sender, e);
+        if (!IsPostBack)
+        {
+            var userPermissionBll = new UserPermissionBLL(CurrentPage.getCurrentConnection());
+            var isAllow = userPermissionBll.CheckUserIsAdmin(Convert.ToInt32(Session["UserID"]));
+            if (isAllow == null || isAllow == false)
+                CurrentPage.GoPage("~/admin/view.aspx");
+        }
         gvData.PageSize = Global.Pagesize;
         gvData.PagerSettings.PageButtonCount = Global.PageButtonCount;
-        if (IsPostBack) return;
-        var userPermissionBll = new UserPermissionBLL(CurrentPage.getCurrentConnection());
-        var isAllow = userPermissionBll.CheckUserIsAdmin(Convert.ToInt32(Session["UserID"]));
-        if (isAllow == null || isAllow == false)
-            CurrentPage.GoPage("~/admin/view.aspx");
     }
 
     protected void ObjDataObjectCreating(object sender, ObjectDataSourceEventArgs e)
