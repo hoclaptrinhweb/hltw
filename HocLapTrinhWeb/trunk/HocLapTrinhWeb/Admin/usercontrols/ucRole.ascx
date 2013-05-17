@@ -5,7 +5,7 @@
 <div id="page-content">
     <div id="page-header">
         <h1>
-            <asp:Label ID="lblPageHeader" runat="server" Text="Quản lý Trang"></asp:Label></h1>
+            <asp:Label ID="lblPageHeader" runat="server" Text="Quản lý Role"></asp:Label></h1>
     </div>
     <div class="container">
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
@@ -19,10 +19,18 @@
                     <table cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                             <td>
-                                <asp:Label ID="Label2" runat="server" Text="Danh sách"></asp:Label>
+                                <asp:Label ID="lbTotal" runat="server"></asp:Label>
                             </td>
                             <td align="right">
-                                <asp:Label ID="lbTotal" runat="server"></asp:Label>&nbsp;
+                                <asp:Button ID="btnNew" runat="server" CssClass="button" EnableViewState="False"
+                                    Text="Thêm mới" CausesValidation="False" OnClientClick="showClose=true;isAdd=true;"
+                                    OnClick="BtnNewClick" />
+                                <asp:Button ID="btnEdit" CssClass="button" runat="server" UseSubmitBehavior="False"
+                                    Text="Sửa" CausesValidation="False" OnClientClick="if(!IsEdit('chckSelect','notselect')) return; showClose=true;isEdit=true;"
+                                    OnClick="BtnEditClick" />
+                                <asp:Button ID="btnDelete" CssClass="button" runat="server" UseSubmitBehavior="false"
+                                    Text="Xóa" OnClientClick="if(! IsDelete('chckSelect','notselect','deleteconfirm')) return;"
+                                    CausesValidation="False" OnClick="BtnDeleteClick" />
                             </td>
                         </tr>
                     </table>
@@ -33,15 +41,14 @@
                         OnDataBound="GvDataDataBound" OnPageIndexChanging="GvDataPageIndexChanging">
                         <Columns>
                             <asp:TemplateField>
-                                <HeaderStyle Width="5%"></HeaderStyle>
-                                <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                                <HeaderStyle Width="5%" />
+                                <ItemStyle CssClass="cbxCheck" HorizontalAlign="Center"></ItemStyle>
                                 <HeaderTemplate>
                                     <asp:CheckBox ID="chckAll" onclick="ChangeAllCheckBoxStates('chckSelect',this.checked);ShowHideBtnEdit();"
                                         runat="server" ToolTip="Chọn/Bỏ chọn tất cả" />
                                 </HeaderTemplate>
                                 <ItemTemplate>
-                                    <asp:CheckBox ID="chckSelect" onclick="ChangeHeaderAsNeeded('chckSelect','chckAll');ShowHideBtnEdit();"
-                                        runat="server" />
+                                    <asp:CheckBox ID="chckSelect" runat="server" onclick="ChangeHeaderAsNeeded('chckSelect','chckAll',$(this));ShowHideBtnEdit();" />
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Role">
@@ -59,7 +66,7 @@
                         </Columns>
                         <HeaderStyle CssClass="GridTitle" />
                         <RowStyle CssClass="RowStyle" />
-                        <AlternatingRowStyle CssClass="AlternateRowStyle" />
+                        <AlternatingRowStyle CssClass="RowStyle" />
                         <EmptyDataRowStyle HorizontalAlign="Center" />
                         <PagerStyle CssClass="Paging" HorizontalAlign="Left" />
                         <PagerSettings Mode="NumericFirstLast" />
@@ -70,7 +77,7 @@
                     <asp:ObjectDataSource ID="ObjData" runat="server" TypeName="HocLapTrinhWeb.BLL.vnn_RoleBLL"
                         MaximumRowsParameterName="maximumRows" StartRowIndexParameterName="startRowIndex"
                         EnablePaging="True" SelectMethod="GetAllRoleForGridView" SelectCountMethod="GetAllRoleRowCount"
-                        OnObjectCreating="ObjDataObjectCreating"></asp:ObjectDataSource>
+                        OnObjectCreating="ObjDataObjectCreating"  OnSelected="ObjDataSelected" OnSelecting="ObjDataSelecting"></asp:ObjectDataSource>
                 </div>
             </ContentTemplate>
             <Triggers>
@@ -176,91 +183,87 @@
                 </Triggers>
             </asp:UpdatePanel>
         </div>
-        <asp:Button ID="btnNew" runat="server" CssClass="button" EnableViewState="False"
-            Text="Thêm mới" CausesValidation="False" OnClientClick="showClose=true;isAdd=true;"
-            OnClick="BtnNewClick" />
-        <asp:Button ID="btnEdit" CssClass="button" runat="server" UseSubmitBehavior="False"
-            Text="Sửa" CausesValidation="False" OnClientClick="if(!IsEdit('chckSelect','notselect')) return; showClose=true;isEdit=true;"
-            OnClick="BtnEditClick" />
-        <asp:Button ID="btnDelete" CssClass="button" runat="server" UseSubmitBehavior="false"
-            Text="Xóa" OnClientClick="if(! IsDelete('chckSelect','notselect','deleteconfirm')) return;"
-            CausesValidation="False" OnClick="BtnDeleteClick" />
     </div>
 </div>
-
 <script type="text/javascript">
-        var isAdd=false, isEdit=false;
-        var prm = Sys.WebForms.PageRequestManager.getInstance(); 
-        prm.add_beginRequest(BeginRequestHandler);   
-        prm.add_endRequest(EndRequestHandler);
-        function BeginRequestHandler(sender, args)//begin ajax
-        { 
-           
-        }
-        
-        function EndRequestHandler(sender, args)//ajax return value
+    var isAdd = false, isEdit = false;
+    var prm = Sys.WebForms.PageRequestManager.getInstance();
+    prm.add_beginRequest(BeginRequestHandler);
+    prm.add_endRequest(EndRequestHandler);
+    function BeginRequestHandler(sender, args)//begin ajax
+    {
+
+    }
+
+    function EndRequestHandler(sender, args)//ajax return value
+    {
+        if (isAdd)
         {
-            if(isAdd)
-            {
-                    showPopupDiv('divAdd','Thêm Role', null, null, true,null,null,null);//absolute
-                    isAdd=false;
-            }
-             if(isEdit)
-            {
-                    showPopupDiv('divAdd','Sửa thông tin Role', null, null, true,null,null,null);
-                    isEdit=false;
-            }
-            var hdIsSuccessful = document.getElementById('<%= hdIsAddSuccessful.ClientID%>');
-            if(hdIsSuccessful!=null && hdIsSuccessful.value=="1")
-            {
-                hdIsSuccessful.value = "0";
-                hidePopup();
-            }
+            showPopupDiv('divAdd', 'Thêm Role', null, null, true, null, null, null); //absolute
+            isAdd = false;
         }
-            
-        function ShowHideBtnEdit()
-        {   
-            var checkedRow;   
-            var gvData = $("table[id$='gvData']")[0];           
-            var checkboxs = gvData.getElementsByTagName("input");     
-            var mCount = 0;
-            for(i=0;i<checkboxs.length;i++)
-                if(checkboxs[i].type=="checkbox" && checkboxs[i].checked && checkboxs[i].id.indexOf("chckSelect") >0)
-                   mCount++;
-            if(mCount > 1)
-                EnableButton(document.getElementById('<%=btnEdit.ClientID %>'),false);   
-            else
-                EnableButton(document.getElementById('<%=btnEdit.ClientID %>'),true);   
+        if (isEdit)
+        {
+            showPopupDiv('divAdd', 'Sửa thông tin Role', null, null, true, null, null, null);
+            isEdit = false;
         }
-        function getScrollXY() {
-            var scrOfX = 0, scrOfY = 0;
-            if (typeof (window.pageYOffset) == 'number') {
-                /*Netscape compliant*/
-                scrOfY = window.pageYOffset;
-                scrOfX = window.pageXOffset;
-            } else if (document.body && (document.body.scrollLeft || document.body.scrollTop)) {
-                /*DOM compliant*/
-                scrOfY = document.body.scrollTop;
-                scrOfX = document.body.scrollLeft;
-            } else if (document.documentElement && (document.documentElement.scrollLeft || document.documentElement.scrollTop)) {
-                /*IE6 standards compliant mode*/
-                scrOfY = document.documentElement.scrollTop;
-                scrOfX = document.documentElement.scrollLeft;
-            }
-            return [scrOfX, scrOfY];
+        var hdIsSuccessful = document.getElementById('<%= hdIsAddSuccessful.ClientID%>');
+        if (hdIsSuccessful != null && hdIsSuccessful.value == "1")
+        {
+            hdIsSuccessful.value = "0";
+            hidePopup();
         }
-$(document).ready(function() {
-    $(window).scroll(function() {
-        var nHeight = getScrollXY()[1];
-        var winwidth = document.all ? document.body.clientWidth : window.innerWidth;
-        var left = (winwidth - 980)/2;
-        var eleWidth = $('.GridStyle').width();
-        if (nHeight >= 170)
-            $(".box-header").addClass("topActive").css({"position":"fixed","top":"0px","width":eleWidth - 30}); // Padding = 15 => eleWidth - 30
+        EventCheckBox();
+    }
+
+    function ShowHideBtnEdit()
+    {
+        var checkedRow;
+        var gvData = $("table[id$='gvData']")[0];
+        var checkboxs = gvData.getElementsByTagName("input");
+        var mCount = 0;
+        for (i = 0; i < checkboxs.length; i++)
+            if (checkboxs[i].type == "checkbox" && checkboxs[i].checked && checkboxs[i].id.indexOf("chckSelect") > 0)
+                mCount++;
+        if (mCount > 1)
+            EnableButton(document.getElementById('<%=btnEdit.ClientID %>'), false);
         else
-            $(".box-header").removeClass("topActive").css({"position":"","top":"0px","width":""});
+            EnableButton(document.getElementById('<%=btnEdit.ClientID %>'), true);
+    }
+    function getScrollXY()
+    {
+        var scrOfX = 0, scrOfY = 0;
+        if (typeof (window.pageYOffset) == 'number')
+        {
+            /*Netscape compliant*/
+            scrOfY = window.pageYOffset;
+            scrOfX = window.pageXOffset;
+        } else if (document.body && (document.body.scrollLeft || document.body.scrollTop))
+        {
+            /*DOM compliant*/
+            scrOfY = document.body.scrollTop;
+            scrOfX = document.body.scrollLeft;
+        } else if (document.documentElement && (document.documentElement.scrollLeft || document.documentElement.scrollTop))
+        {
+            /*IE6 standards compliant mode*/
+            scrOfY = document.documentElement.scrollTop;
+            scrOfX = document.documentElement.scrollLeft;
+        }
+        return [scrOfX, scrOfY];
+    }
+    $(document).ready(function ()
+    {
+        $(window).scroll(function ()
+        {
+            var nHeight = getScrollXY()[1];
+            var winwidth = document.all ? document.body.clientWidth : window.innerWidth;
+            var left = (winwidth - 980) / 2;
+            var eleWidth = $('.GridStyle').width();
+            if (nHeight >= 170)
+                $(".box-header").addClass("topActive").css({ "position": "fixed", "top": "0px", "width": eleWidth - 30 }); // Padding = 15 => eleWidth - 30
+            else
+                $(".box-header").removeClass("topActive").css({ "position": "", "top": "0px", "width": "" });
+        });
     });
-});
 
 </script>
-
