@@ -15,7 +15,7 @@ public partial class usercontrols_ucNavigation : HocLapTrinhWeb.UI.UCBase
             {
                 if (t == "" && CurrentPage.GetRequestURL().ToLower() == CurrentPage.UrlRoot.ToLower())
                     return "active";
-                if (CurrentPage.GetRequestURL().ToLower().Contains(t.ToLower()))
+                if (t != "" && CurrentPage.GetRequestURL().ToLower().Contains(t.ToLower()))
                     return "active";
             }
             return "";
