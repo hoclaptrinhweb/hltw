@@ -5,6 +5,30 @@
 <input id="deleteconfirm" type="hidden" value='<%=msg.GetMessage("ERR-000008")%>' />
 <input id="hdDateFormat" type="hidden" value="<%= CurrentPage.Language%>" />
 <input id="DateError" type="hidden" value="Ngày không hợp lệ" />
+<link rel="stylesheet" href="js/autocomplete/themes/base/jquery.ui.all.css">
+<link rel="stylesheet" href="js/autocomplete/demos.css">
+<style>
+    .ui-button
+    {
+        margin-left: -1px;
+    }
+    .ui-button-icon-only .ui-button-text
+    {
+        padding: 0.35em;
+    }
+    .ui-autocomplete-input
+    {
+        margin: 0;
+        padding: 0.48em 0 0.47em 0.45em;
+        width: 400px;
+    }
+</style>
+<script type="text/javascript" language="javascript" src="js/autocomplete/jquery-1.7.1.js"></script>
+<script type="text/javascript" language="javascript" src="js/autocomplete/jquery.ui.core.js"></script>
+<script type="text/javascript" language="javascript" src="js/autocomplete/jquery.ui.widget.js"></script>
+<script type="text/javascript" language="javascript" src="js/autocomplete/jquery.ui.button.js"></script>
+<script type="text/javascript" language="javascript" src="js/autocomplete/jquery.ui.position.js"></script>
+<script type="text/javascript" language="javascript" src="js/autocomplete/jquery.ui.autocomplete.js"></script>
 <div id="page-content">
     <div id="page-header">
         <h1>
@@ -29,8 +53,8 @@
                                     <asp:Button ID="btnDelete" runat="server" CausesValidation="False" CssClass="button"
                                         OnClick="btnDelete_Click" OnClientClick="if(! IsDelete('chckSelect','notselect','deleteconfirm')) return;"
                                         Text="Xóa" UseSubmitBehavior="false" />
-                                    <asp:Button ID="btnVTQC" runat="server" PostBackUrl="~/admin/View.aspx?action=role" CausesValidation="False"
-                                        CssClass="button" EnableViewState="False" Text="Role" />
+                                    <asp:Button ID="btnVTQC" runat="server" PostBackUrl="~/admin/View.aspx?action=role"
+                                        CausesValidation="False" CssClass="button" EnableViewState="False" Text="Role" />
                                     <asp:Button ID="btnChude" runat="server" CausesValidation="False" PostBackUrl="~/admin/View.aspx?action=user"
                                         CssClass="button" EnableViewState="False" Text="User" />
                                 </div>
@@ -38,8 +62,8 @@
                             <td align="right">
                                 <asp:Label ID="Label4" runat="server" Text="UserName"></asp:Label>
                                 <asp:DropDownList ID="dropUser" runat="server" AutoPostBack="True" DataSourceID="ObjectDataSource1"
-                                    DataTextField="UserName" DataValueField="UserID" 
-                                    OnDataBound="dropUser_DataBound" Width="100px">
+                                    DataTextField="UserName" DataValueField="UserID" OnDataBound="dropUser_DataBound"
+                                    Width="100px">
                                 </asp:DropDownList>
                                 &nbsp;
                                 <asp:Label ID="Role" runat="server" Text="Role"></asp:Label>&nbsp;<asp:DropDownList
@@ -97,7 +121,7 @@
                         <EmptyDataTemplate>
                             <asp:Label ID="lblNoItem" runat="server" Text="Chưa có dữ liệu"></asp:Label>
                         </EmptyDataTemplate>
-                          <HeaderStyle CssClass="GridTitle" />
+                        <HeaderStyle CssClass="GridTitle" />
                         <RowStyle CssClass="RowStyle" />
                         <AlternatingRowStyle CssClass="RowStyle" />
                         <EmptyDataRowStyle HorizontalAlign="Center" />
@@ -145,20 +169,14 @@
                                         </td>
                                         <td class="tdempty">
                                         </td>
-                                        <td class="Require">
-                                            &nbsp;
+                                        <td>
                                         </td>
                                         <td>
-                                            <asp:DropDownList ID="dropUserAdd" runat="server" DataSourceID="ObjectDataSource1"
-                                                DataTextField="UserName" DataValueField="UserID" OnDataBound="dropUserAdd_DataBound"
-                                                Width="220px">
-                                            </asp:DropDownList>
-                                            <asp:ObjectDataSource ID="ObjectDataSource1Add" runat="server" OnObjectCreating="ObjectUser_ObjectCreating"
-                                                SelectMethod="GetAllUserForGridView" TypeName="HocLapTrinhWeb.BLL.ltk_UserBLL">
-                                            </asp:ObjectDataSource>
+                                            <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
+                                            <asp:HiddenField ID="hdUserIDAdd" runat="server" />
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr class="trEmpty">
                                         <td colspan="3">
                                         </td>
                                         <td>
@@ -170,7 +188,7 @@
                                         </td>
                                         <td>
                                         </td>
-                                        <td class="Require">
+                                        <td>
                                         </td>
                                         <td>
                                             <asp:DropDownList ID="dropRoleAdd" runat="server" DataSourceID="ObjectDataSource2"
@@ -182,7 +200,7 @@
                                             </asp:ObjectDataSource>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr class="trEmpty">
                                         <td colspan="3">
                                         </td>
                                         <td>
@@ -194,23 +212,22 @@
                                         </td>
                                         <td>
                                         </td>
-                                        <td class="Require">
+                                        <td>
                                         </td>
                                         <td>
                                             <asp:DropDownList ID="dropPermissionAdd" runat="server" DataSourceID="ObjectDataSource3Add"
                                                 DataTextField="PermissionID" DataValueField="PermissionID" OnDataBound="dropPermission_DataBound"
                                                 Width="220px">
                                             </asp:DropDownList>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3">
-                                        </td>
-                                        <td>
-                                            &nbsp;
                                             <asp:ObjectDataSource ID="ObjectDataSource3Add" runat="server" SelectMethod="GetAllPermissionForGridView"
                                                 TypeName="HocLapTrinhWeb.BLL.vnn_PermissionBLL" OnObjectCreating="ObjectDataSource3Add_ObjectCreating">
                                             </asp:ObjectDataSource>
+                                        </td>
+                                    </tr>
+                                    <tr class="trEmpty">
+                                        <td colspan="3">
+                                        </td>
+                                        <td>
                                         </td>
                                     </tr>
                                     <tr>
@@ -270,6 +287,13 @@
             hidePopup();
         }
         EventCheckBox();
+        $('#<%= txtUserName.ClientID %>').autocomplete({
+            source: "<%= CurrentPage.UrlRoot %>/Handler/AutoComplete.ashx",
+            select: function (event, ui)
+            {
+                $('#<%= hdUserIDAdd.ClientID %>').val(ui.item.id);
+            }
+        });
     }
 
 
