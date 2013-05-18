@@ -4,7 +4,7 @@
     <div class="nav_wrap">
         <div class="inner">
             <ul class="nav">
-                <li><a href='<%= CurrentPage.UrlRoot %>'>Trang chủ</a></li>
+                <li><a class="<%= SetClass("")  %>" href='<%= CurrentPage.UrlRoot %>'>Trang chủ</a></li>
                  <li>
                 <a class="<%= SetClass("/video/")  %>" href="<%= CurrentPage.UrlRoot + "/video/" %>"> Video </a>
                 </li>
