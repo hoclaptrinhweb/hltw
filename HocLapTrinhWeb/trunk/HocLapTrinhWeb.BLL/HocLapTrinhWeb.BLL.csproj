@@ -101,6 +101,7 @@
     <Compile Include="BLL\table\UserBLL.cs" />
     <Compile Include="BLL\table\UserPermissionBLL.cs" />
     <Compile Include="BLL\table\t_VideoBLL.cs" />
+    <Compile Include="BLL\view\v_UserBLL.cs" />
     <Compile Include="BLL\view\vnn_PermissionBLL.cs" />
     <Compile Include="BLL\view\vnn_UserPermissionBLL.cs" />
     <Compile Include="BLL\view\v_ConfigBLL.cs" />
