@@ -340,14 +340,6 @@ public class XuLyChuoi
         return strContent;
     }
 
-    public static bool ConvertActive(string strHref)
-    {
-        var url = new Uri(strHref);
-        strHref = url.Host;
-        strHref = strHref.Replace("www.", "");
-        return Global.DomainActive.ToLower().Contains(strHref);
-    }
-
     public static string ConvertHtmlToText(string strText)
     {
         strText = strText.Replace("<", "&lt;");
