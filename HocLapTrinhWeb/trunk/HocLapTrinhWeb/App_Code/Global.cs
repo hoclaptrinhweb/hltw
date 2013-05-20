@@ -25,8 +25,6 @@ public static class Global
     public static int MaxWithImageSize = Convert.ToInt16(ConfigurationManager.AppSettings["MaxWithImageSize"]);
     public static int MaxHeightImageSize = Convert.ToInt16(ConfigurationManager.AppSettings["MaxHeightImageSize"]);
 
-    public static string DomainActive = ConfigurationManager.AppSettings["DomainActive"];
-    
     public static int Warning = Convert.ToInt16(ConfigurationManager.AppSettings["Warning"]);
 
     public static string cs_sqlserver = ConfigurationManager.ConnectionStrings["cs_sqlserver"].ToString();
