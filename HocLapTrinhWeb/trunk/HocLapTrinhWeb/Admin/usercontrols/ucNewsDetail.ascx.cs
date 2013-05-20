@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Globalization;
+using System.Net;
 using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
 using System.IO;
@@ -18,7 +19,7 @@ public partial class administrator_usercontrols_NewsDetail : HocLapTrinhWeb.UI.U
         var isAllow = userPermissionBll.CheckUserRole(Convert.ToInt32(Session["UserID"]), "NEWS");
         if (isAllow == null || isAllow == false)
             CurrentPage.GoPage("~/admin/View.aspx");
-    
+
         var newsId = Request.QueryString["NewsID"];
         if (newsId == null)
         {
@@ -42,7 +43,7 @@ public partial class administrator_usercontrols_NewsDetail : HocLapTrinhWeb.UI.U
         else
         {
             //Update and View
-            var dt = userPermissionBll.GetUserRolePermission(Convert.ToInt32(Session["UserID"]),"NEWS");
+            var dt = userPermissionBll.GetUserRolePermission(Convert.ToInt32(Session["UserID"]), "NEWS");
             if (dt == null || dt.Rows.Count == 0)
                 CurrentPage.GoPage("~/admin/View.aspx");
             var dtuser = new dsHocLapTrinhWeb.tbl_UserPermissionDataTable();
@@ -119,8 +120,30 @@ public partial class administrator_usercontrols_NewsDetail : HocLapTrinhWeb.UI.U
             row.UpdatedDate = DateTime.Now;
             row.IPUpdate = txtIPUpdate.Text;
             row.RefAddress = txtNguon.Text;
-            var pathImage = CheckUploadImageThumbnail(XuLyChuoi.ConvertToUnSign(txtTitle.Text), fileuploadThumbnail, false, Global.MaxThumbnailSize, int.Parse(dropNewsType.SelectedValue));
-            row.Thumbnail = pathImage != "" ? pathImage : imgThumbnail.ImageUrl.Replace("~/", "");
+            if (cbxImage.Checked)
+            {
+                if (txtImage.Text != "")
+                    try
+                    {
+                        var webClient = new WebClient();
+                        var path = txtImage.Text;
+                        var fileName = path.Substring(path.LastIndexOf("/", StringComparison.Ordinal) + 1);
+                        var suffixImage = Path.GetExtension(fileName).ToLower();
+                        fileName = DateTime.Now.ToString("ddMMyyyy") + "_" + XuLyChuoi.ConvertToUnSign(row.Title) + suffixImage;
+                        webClient.DownloadFile(path, Server.MapPath("~/" + Global.ImagesNews + fileName));
+                        row.Thumbnail = Global.ImagesNews + fileName;
+                    }
+                    catch (Exception)
+                    {
+                        row.Thumbnail = Global.ImagesNews + "noimage.jpg";
+                    }
+            }
+            else
+            {
+                var pathImage = CheckUploadImageThumbnail(XuLyChuoi.ConvertToUnSign(txtTitle.Text), fileuploadThumbnail, false, Global.MaxThumbnailSize, int.Parse(dropNewsType.SelectedValue));
+                row.Thumbnail = pathImage != "" ? pathImage : imgThumbnail.ImageUrl.Replace("~/", "");
+            }
+
             row.Image = "";
             row.IsHot = cboxHot.Checked;
             row.IsShowImage = false;
@@ -190,7 +213,7 @@ public partial class administrator_usercontrols_NewsDetail : HocLapTrinhWeb.UI.U
                 var arrDels = new ArrayList();
                 for (var i = 0; i < arrKey.Length; i++)
                 {
-                    if(arrKey[i] == "")
+                    if (arrKey[i] == "")
                         continue;
                     var dtNewsTag = new dsHocLapTrinhWeb.tbl_NewsTagDataTable();
                     var rowNewsTag = dtNewsTag.Newtbl_NewsTagRow();
@@ -212,7 +235,7 @@ public partial class administrator_usercontrols_NewsDetail : HocLapTrinhWeb.UI.U
                     rowNewsTag.NewsID = dt[0].NewsID;
 
                     //Kiểm tra tag đã tồn tại trong newstag chưa
-                    var rowExist = tNewsTag.Get_NewsTagByID(rowTag.TagID,dt[0].NewsID);
+                    var rowExist = tNewsTag.Get_NewsTagByID(rowTag.TagID, dt[0].NewsID);
                     if (rowExist == null)
                     {
                         dtNewsTag.Addtbl_NewsTagRow(rowNewsTag);
