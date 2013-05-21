@@ -137,8 +137,8 @@ public partial class Admin_usercontrols_ucCommentNews : HocLapTrinhWeb.UI.UCBase
             {
                 var chckDelete = (CheckBox)row.FindControl("chckSelect");
                 if (!chckDelete.Checked) continue;
-                var commentNewsID = (HiddenField)row.FindControl("hdCommentNewsID");
-                LoadDataEdit(Convert.ToInt16(commentNewsID.Value));
+                var commentNewsId = (HiddenField)row.FindControl("hdCommentNewsID");
+                LoadDataEdit(Convert.ToInt16(commentNewsId.Value));
             }
         }
         catch
