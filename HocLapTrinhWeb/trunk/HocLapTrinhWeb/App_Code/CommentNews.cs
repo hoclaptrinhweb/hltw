@@ -192,6 +192,8 @@ public class CommentNews : WebService
                 var ntype = 1;
                 if (type.Contains("360"))
                     ntype = 0;
+                if (type.Contains("Adnet"))
+                    ntype = 2;
                 var row = autoAdv.GetAutoAdvByDate(DateTime.Now.ToString("MM/dd/yyyy"), ntype);
                 if (row == null)
                     return "0";
@@ -233,6 +235,17 @@ public class CommentNews : WebService
                             return "1";
                         break;
                     case "360":
+                        dt = new dsHocLapTrinhWeb.tbl_AutoAdvDataTable();
+                        rowUpdate = dt.Newtbl_AutoAdvRow();
+                        rowUpdate.AutoAdvID = row.AutoAdvID;
+                        rowUpdate.TotalClick = row.TotalClick + 1;
+                        rowUpdate.CurrentClick = row.CurrentClick > 1 ? row.CurrentClick - 1 : 0;
+                        rowUpdate.UpdatedDate = DateTime.Now;
+                        dt.Addtbl_AutoAdvRow(rowUpdate);
+                        if (autoAdv.Update(dt, "TotalClick", "CurrentClick", "UpdatedDate"))
+                            return "1";
+                        break;
+                    case "topAdnet":
                         dt = new dsHocLapTrinhWeb.tbl_AutoAdvDataTable();
                         rowUpdate = dt.Newtbl_AutoAdvRow();
                         rowUpdate.AutoAdvID = row.AutoAdvID;
