@@ -10,7 +10,7 @@ public partial class usercontrols_ucAdmin : HocLapTrinhWeb.UI.UCBase
         base.Page_Load(sender, e);
         CheckLogin();
         lblFullName.Text = Session["FullName"] == null ? "Guest" : Session["FullName"].ToString();
-        hpEdit.NavigateUrl = "~/admin/NewsDetail.aspx?NewsID=" + NewsID.ToString();
+        hpEdit.NavigateUrl = "~/Admin/View.aspx?action=newsdetail&NewsID=" + NewsID.ToString();
 
     }
 
