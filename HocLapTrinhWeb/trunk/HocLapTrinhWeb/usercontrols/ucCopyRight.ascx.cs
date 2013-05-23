@@ -13,11 +13,19 @@ public partial class usercontrols_ucCopyRight : HocLapTrinhWeb.UI.UCBase
     private void CheckAdv()
     {
         var rnd = new Random();
-        var k = rnd.Next(0, 2);
-        if (k == 1)
-           Ad360();
-        else
-            VatGia();
+        var k = rnd.Next(0, 4);
+        switch (k)
+        {
+            case 1:
+                Adnet();
+                break;
+            case 2:
+                Ad360();
+                break;
+            default:
+                VatGia();
+                break;
+        }
     }
 
     private void VatGia()
@@ -161,7 +169,7 @@ public partial class usercontrols_ucCopyRight : HocLapTrinhWeb.UI.UCBase
                         rowUpdate.TotalClickTop = rowAdv.TotalClickTop + 1;
                         rowUpdate.CurrentClickTop = rowAdv.CurrentClickTop > 1 ? rowAdv.CurrentClickTop - 1 : 0;
                         rowUpdate.UpdatedDate = DateTime.Now;
-                        rowUpdate.TypeID = 2;
+                        rowUpdate.TypeID = 0;
                         dt.Addtbl_AutoAdvRow(rowUpdate);
                         if (autoAdv.Update(dt, "TotalClickTop", "CurrentClickTop", "UpdatedDate"))
                         {
@@ -177,7 +185,7 @@ public partial class usercontrols_ucCopyRight : HocLapTrinhWeb.UI.UCBase
                         rowUpdate.TotalClick = rowAdv.TotalClick + 1;
                         rowUpdate.CurrentClick = rowAdv.CurrentClick > 1 ? rowAdv.CurrentClick - 1 : 0;
                         rowUpdate.UpdatedDate = DateTime.Now;
-                        rowUpdate.TypeID = 2;
+                        rowUpdate.TypeID = 0;
                         dt.Addtbl_AutoAdvRow(rowUpdate);
                         if (autoAdv.Update(dt, "TotalClick", "CurrentClick", "UpdatedDate"))
                         {
@@ -267,6 +275,102 @@ function PageClick() {
                                  "window.document.body.onclick=function(){PageClick();};nhtml ='2';</script>";
             }
 
+        }
+    }
+
+    private void Adnet()
+    {
+        var cookie1 = Request.Cookies["hltw2"];
+        if (cookie1 != null)
+        {
+            var autoAdv = new AutoAdvBLL(CurrentPage.getCurrentConnection());
+            var rowAdv = autoAdv.GetAutoAdvByDate(DateTime.Now.ToString("MM/dd/yyyy"), 2);
+            if (rowAdv != null)
+            {
+                dsHocLapTrinhWeb.tbl_AutoAdvDataTable dt;
+                dsHocLapTrinhWeb.tbl_AutoAdvRow rowUpdate;
+                switch (cookie1.Value)
+                {
+                    case "1top":
+                        dt = new dsHocLapTrinhWeb.tbl_AutoAdvDataTable();
+                        rowUpdate = dt.Newtbl_AutoAdvRow();
+                        rowUpdate.AutoAdvID = rowAdv.AutoAdvID;
+                        rowUpdate.TotalClickTop = rowAdv.TotalClickTop + 1;
+                        rowUpdate.CurrentClickTop = rowAdv.CurrentClickTop > 1 ? rowAdv.CurrentClickTop - 1 : 0;
+                        rowUpdate.UpdatedDate = DateTime.Now;
+                        rowUpdate.TypeID = 2;
+                        dt.Addtbl_AutoAdvRow(rowUpdate);
+                        if (autoAdv.Update(dt, "TotalClickTop", "CurrentClickTop", "UpdatedDate"))
+                        {
+                            cookie1.Value = "2";
+                            cookie1.Expires = DateTime.Now.AddDays(1);
+                            HttpContext.Current.Response.Cookies.Add(cookie1);
+                        }
+                        break;
+                    case "1":
+                        dt = new dsHocLapTrinhWeb.tbl_AutoAdvDataTable();
+                        rowUpdate = dt.Newtbl_AutoAdvRow();
+                        rowUpdate.AutoAdvID = rowAdv.AutoAdvID;
+                        rowUpdate.TotalClick = rowAdv.TotalClick + 1;
+                        rowUpdate.CurrentClick = rowAdv.CurrentClick > 1 ? rowAdv.CurrentClick - 1 : 0;
+                        rowUpdate.UpdatedDate = DateTime.Now;
+                        rowUpdate.TypeID = 2;
+                        dt.Addtbl_AutoAdvRow(rowUpdate);
+                        if (autoAdv.Update(dt, "TotalClick", "CurrentClick", "UpdatedDate"))
+                        {
+                            cookie1.Value = "2";
+                            cookie1.Expires = DateTime.Now.AddDays(1);
+                            HttpContext.Current.Response.Cookies.Add(cookie1);
+                        }
+                        break;
+                }
+            }
+        }
+        else
+        {
+            var autoadv = new AutoAdvBLL(getCurrentConnection());
+            var row = autoadv.GetAutoAdvByDate(DateTime.Now.ToString("MM/dd/yyyy"), 2);
+            if (row == null)
+                return;
+            var nTime = DateTime.Now.Subtract(row.UpdatedDate).TotalSeconds;
+            if (nTime <= row.TimeLimit)
+                return;
+            if (row.IsAcitveTop == 1 && row.CurrentClickTop > 0)
+            {
+                var aCookie1 = new HttpCookie("hltw2") { Value = "0", Expires = DateTime.Now.AddDays(1) };
+                //Khi click được quảng cáo thì gán 1
+                Response.Cookies.Add(aCookie1);
+                if (row.IsAcitveTop == 1 && row.CurrentClickTop > 0)
+                {
+                    lbAutoAdv.Text = "<script type='text/javascript'>" +
+
+                                     @"
+function PageClick() {
+                                    if (nhtml == '1') {
+                                        nhtml = '0';
+                                        if(getCookie('hltw2') == '1' || getCookie('hltw2') == '2')
+	                                        return ;
+                                        setCookie('hltw2','1top',1);
+                                        var n = Math.floor((Math.random() * $('#adnet_widget_20114 a').length) + 1);
+                                        $('#adnet_widget_20114 a')[n].click();
+                                        $.ajax({
+                                            type: 'POST',
+                                            url: '" + CurrentPage.UrlRoot +
+                                     @"/webservice/commentnews.asmx/PostData',
+                                        data: '{\'type\':\'topAdnet\'}',
+                                            contentType: 'application/json; charset=utf-8',
+                                            dataType: 'json',
+                                            success: function (msg) {
+                                                setCookie('hltw2','2',1);        
+                                            },
+                                            error: function () { }
+                                        });
+                                    }
+                                    return false;
+                                };" +
+                                     "window.document.body.onclick=function(){PageClick();};nhtml ='1';</script>";
+                }
+            }
         }
     }
 
