@@ -13,7 +13,7 @@ public partial class usercontrols_ucNavigation : HocLapTrinhWeb.UI.UCBase
         {
             foreach (var t in defaultpage)
             {
-                if (t == "" && CurrentPage.GetRequestURL().ToLower() == CurrentPage.UrlRoot.ToLower())
+                if (t == "" && CurrentPage.GetRequestURL().ToLower() == "/index.aspx")
                     return "active";
                 if (t != "" && CurrentPage.GetRequestURL().ToLower().Contains(t.ToLower()))
                     return "active";
