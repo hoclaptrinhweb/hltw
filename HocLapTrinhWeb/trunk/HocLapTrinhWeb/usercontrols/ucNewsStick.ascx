@@ -4,7 +4,7 @@
         <ul>
             <asp:Repeater ID="rpData" runat="server">
                 <ItemTemplate>
-                   <%# BindData((RepeaterItem)Container)%>
+                    <%# BindData((RepeaterItem)Container)%>
                 </ItemTemplate>
             </asp:Repeater>
         </ul>
@@ -133,10 +133,14 @@
     }
     .typicalevents li .newsphoto_small
     {
-        width: 80px;
         height: auto;
         float: left;
         margin-right: 10px;
+    }
+    .newsphoto_med, .newsphoto_small, .newsphoto_smaller
+    {
+        border: 1px solid #a5a5a5;
+        overflow: hidden;
     }
     .typical_news
     {
