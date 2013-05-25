@@ -34,7 +34,7 @@ public partial class usercontrols_ucNewsStick : HocLapTrinhWeb.UI.UCBase
                   XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/" +
                   XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw" + Eval("NewsID") + ".aspx' title='" +
                   Eval("Title").ToString().Replace("'", "") + "'>" +
-                  "<img class='newsphoto_small' src='" + CurrentPage.UrlRoot + "/images/w93-" +
+                  "<img class='newsphoto_small' src='" + CurrentPage.UrlRoot + "/images/w380-" +
                   row.Thumbnail.ToLower().Replace(Global.ImagesNews.ToLower(), "") + ".ashx' alt='" +
                   Eval("Title").ToString().Replace("'", "") + "' />" +
                   "<div>" +
