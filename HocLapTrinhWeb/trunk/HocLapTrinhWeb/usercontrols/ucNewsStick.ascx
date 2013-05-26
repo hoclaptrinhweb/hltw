@@ -13,7 +13,7 @@
         <asp:Repeater ID="rpDataNewsRandom" runat="server">
             <ItemTemplate>
                 <li itemscope itemtype="http://schema.org/Article"><a title='<%# Eval("Title").ToString().Replace("'","") %>'
-                    href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/hltw"  + Eval("NewsTypeID") +  ".aspx" %>'>
+                    href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("NewsID") +  ".aspx" %>'>
                     <img class="newsphoto_small" itemprop="image" src="<%# CurrentPage.UrlRoot + "/images/w80-" + Eval("Thumbnail").ToString().ToLower().Replace(Global.ImagesNews.ToLower(), "") + ".ashx" %>"
                         alt='<%# Eval("Title") %>' />
                     <h2>
