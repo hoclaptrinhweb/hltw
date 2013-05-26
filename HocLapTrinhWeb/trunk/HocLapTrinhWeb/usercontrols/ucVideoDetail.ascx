@@ -101,7 +101,7 @@
             <asp:Literal ID="lbKeyword" runat="server"></asp:Literal>
         </div>
         <div class="ratings" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-            <span itemprop="ratingValue">100</span> out of <span itemprop="bestRating">100</span>based on <span itemprop="ratingCount">
+            <span itemprop="ratingValue">100</span> out of <span itemprop="bestRating">100</span> based on <span itemprop="ratingCount">
                 <asp:Literal ID="lbRatingCount" runat="server"></asp:Literal></span> user ratings
         </div>
         <div class="single_share">
