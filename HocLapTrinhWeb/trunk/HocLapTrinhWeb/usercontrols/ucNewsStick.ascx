@@ -106,7 +106,7 @@
     .typicalevents li
     {
         border-bottom: 1px solid #eee;
-        margin-bottom: 8px;
+        padding: 5px 0px 5px 0px;
         display: block;
         width: 100%;
         overflow: hidden;
@@ -120,7 +120,6 @@
     }
     .typicalevents li a h2
     {
-        height: 58px;
         overflow: hidden;
         padding: 0px;
         font-weight: normal;
@@ -136,6 +135,8 @@
         height: auto;
         float: left;
         margin-right: 10px;
+        max-width: 50px;
+        max-height: 50px;
     }
     .newsphoto_med, .newsphoto_small, .newsphoto_smaller
     {
