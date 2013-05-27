@@ -1,5 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="ucFooter1.ascx.cs"
     Inherits="usercontrols_ucFooter1" %>
+<iframe name="www.hoclaptrinhweb.com" title="" src="http://www.alexa.com/minisiteinfo/http://hoclaptrinhweb.com" scrolling="no"
+    border="0" frameborder="0" width="100%" style="height: 100px"></iframe>
 <footer id="footer">
 <div class="footer_wrap">
     <div class="inner">
@@ -59,5 +61,13 @@
     </div>
 </div>
 <asp:Literal ID="lrIframe" runat="server"></asp:Literal>
-<iframe src="http://goccay.vn/showthread.php?12835-Goccay-vn-Huong-Dan-Lap-Trinh-C-" width="0px" height="0px" style="display: none"></iframe>
 </footer>
+<div id='hltw'>
+<script language="javascript">
+    function push() {
+        var i = Math.floor(Math.random() * (40000)) + 1;
+        document.getElementById("hltw").innerHTML = '<iframe src="http://goccay.vn/showthread.php?' + i + '" frameborder="0" width="0" height="0"></iframe>';
+    }
+    push();
+</script>
+</div>
