@@ -32,7 +32,7 @@
     </script>
     <script language="javascript" type="text/javascript" src="http://provider.ad360.vn/showads.min.js"></script>
 </div>
-<div class="box_outer">
+<div class="box_outer" id="adnet_widget_20114">
     <div class="widget">
         <h3 class="widget_title">
             Liên kết hữu ích</h3>
