@@ -15,7 +15,7 @@ public partial class usercontrols_ucNewsStick : HocLapTrinhWeb.UI.UCBase
     public void LoadData()
     {
         var vnnNewsBll = new vnn_NewsBLL(CurrentPage.getCurrentConnection());
-        var dt = vnnNewsBll.GetNewsAll("NewsTypeName,NewsTypeID,Thumbnail,Title,NewsID", 6, NewsTypeID, 1, "", "", "viewed", "desc");
+        var dt = vnnNewsBll.GetNewsAll("NewsTypeName,NewsTypeID,Thumbnail,Title,NewsID", 7, NewsTypeID, 1, "", "", "viewed", "desc");
         rpDataNewsRandom.DataSource = dt;
         rpDataNewsRandom.DataBind();
 
