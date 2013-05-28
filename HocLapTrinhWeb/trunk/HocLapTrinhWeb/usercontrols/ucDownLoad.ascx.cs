@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.IO;
 using System.Net;
 using Facebook;
@@ -26,6 +27,15 @@ public partial class usercontrols_ucDownLoad : HocLapTrinhWeb.UI.UCBase
 
         try
         {
+            var fb = new FacebookClient(hdAccess.Value);
+
+            dynamic parameters = new ExpandoObject();
+            parameters.method = "pages.isFan";
+            parameters.page_id = "308727535854790";
+
+            var r = fb.Get(parameters);
+            bool isFan = r == true;
+            return;
             var filename = System.IO.Path.GetFileName(hdUser.Value + "." + hdiType.Value);
             var fbApp = new FacebookClient(hdAccess.Value);
             var result = (IDictionary<string, object>)fbApp.Get("me/permissions");
