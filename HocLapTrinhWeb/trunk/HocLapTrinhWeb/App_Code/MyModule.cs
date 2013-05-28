@@ -20,6 +20,7 @@ namespace AspNetResources.Web
             if (app.Context.Request.FilePath.ToLower().Contains("/contact.aspx") ||
                 app.Context.Request.FilePath.ToLower().Contains(".ashx") ||
                 app.Context.Request.FilePath.ToLower().Contains("/admin/") ||
+                 app.Context.Request.FilePath.ToLower().Contains("/download/") ||
                 app.Context.Request.FilePath.ToLower().Contains("/test/") ||
                 app.Context.Request.FilePath.ToLower().Contains("/members/") ||
                 app.Context.Request.FilePath.ToLower().Contains("/newspost.aspx") ||
