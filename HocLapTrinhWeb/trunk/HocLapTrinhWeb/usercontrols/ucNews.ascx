@@ -56,7 +56,7 @@
                             <%# Eval("Title") %>
                         </span></a>
                 </h2>
-                <div class="cat_article_warap none">
+                <div class="cat_article_warap">
                     <div class="cat_article_img">
                         <div class="cat_img">
                             <a title="<%# Eval("Title").ToString().Replace('"',' ') %>" href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("NewsID") +  ".aspx" %>'>
