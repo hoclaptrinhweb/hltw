@@ -113,7 +113,7 @@
                     <td colspan="5">
                     </td>
                 </tr>
-                 <tr valign="top">
+                <tr valign="top">
                     <td>
                         <asp:Label ID="Label7" runat="server" Text="Link Video" CssClass="Caption"></asp:Label>
                     </td>
@@ -158,7 +158,8 @@
                     <td colspan="3">
                     </td>
                     <td colspan="6">
-                        &nbsp;</td>
+                        &nbsp;
+                    </td>
                 </tr>
                 <tr class="trEmpty">
                     <td colspan="3">
@@ -238,10 +239,12 @@
                     <td>
                     </td>
                     <td colspan="6">
-                        <table>
+                        <table width="100%">
                             <tr>
                                 <td>
                                     <asp:FileUpload ID="fileuploadThumbnail" runat="server" />
+                                    <asp:TextBox ID="txtImage" Width="90%" Style="display: none;" runat="server"></asp:TextBox>
+                                    <asp:CheckBox ID="cbxImage" onclick="ChangeImage(this);" runat="server" />
                                 </td>
                             </tr>
                             <tr>
@@ -475,30 +478,48 @@
 </div>
 <script type="text/javascript">
     var test = '<%= FCKContent.ClientID %>';
-    function ShowAdv(t) {
-        if ($(t).text() == "Hiện thêm thông tin") {
+    function ShowAdv(t)
+    {
+        if ($(t).text() == "Hiện thêm thông tin")
+        {
             $(t).text('Ẩn thông tin');
             $(".none").show();
-        } else {
+        } else
+        {
             $(t).text('Hiện thêm thông tin');
             $(".none").hide();
         }
     }
-    $(function () {
+    $(function ()
+    {
         $('#<%= txtkeyword.ClientID %>').tagsInput({
             width: 'auto',
             autocomplete_url: '<%= CurrentPage.UrlRoot %>/Handler/AutoCompleteTag.ashx'
         });
     });
+    
+
+   function ChangeImage(t) {
+        if(t.checked) {
+            $('#<%= fileuploadThumbnail.ClientID %>').hide();
+            $('#<%= txtImage.ClientID %>').show();
+        } else {
+            $('#<%= fileuploadThumbnail.ClientID %>').show();
+            $('#<%= txtImage.ClientID %>').hide();
+        }
+    }
 
 
-    function onAddTag() {
+    function onAddTag()
+    {
         alert('add');
     }
-    function onRemoveTag() {
+    function onRemoveTag()
+    {
         alert('remove');
     }
-    function onChange() {
+    function onChange()
+    {
         alert('change');
     }
 </script>
