@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Globalization;
+using System.Net;
 using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
 using System.IO;
@@ -124,8 +125,29 @@ public partial class Admin_usercontrols_ucVideoDetail : HocLapTrinhWeb.UI.UCBase
             row.UpdatedDate = DateTime.Now;
             row.IPUpdate = txtIPUpdate.Text;
             row.RefAddress = txtNguon.Text;
-            var pathImage = CheckUploadImageThumbnail(XuLyChuoi.ConvertToUnSign(txtTitle.Text), fileuploadThumbnail, false, Global.MaxThumbnailSize, int.Parse(dropVideoType.SelectedValue));
-            row.Thumbnail = pathImage != "" ? pathImage : imgThumbnail.ImageUrl.Replace("~/", "");
+            if (cbxImage.Checked)
+            {
+                if (txtImage.Text != "")
+                    try
+                    {
+                        var webClient = new WebClient();
+                        var path = txtImage.Text;
+                        var fileName = path.Substring(path.LastIndexOf("/", StringComparison.Ordinal) + 1);
+                        var suffixImage = Path.GetExtension(fileName).ToLower();
+                        fileName = DateTime.Now.ToString("ddMMyyyy") + "_" + XuLyChuoi.ConvertToUnSign(row.Title) + suffixImage;
+                        webClient.DownloadFile(path, Server.MapPath("~/" + Global.ImagesVideo + fileName));
+                        row.Thumbnail = Global.ImagesVideo + fileName;
+                    }
+                    catch (Exception)
+                    {
+                        row.Thumbnail = Global.ImagesVideo + "noimage.jpg";
+                    }
+            }
+            else
+            {
+                var pathImage = CheckUploadImageThumbnail(XuLyChuoi.ConvertToUnSign(txtTitle.Text), fileuploadThumbnail, false, Global.MaxThumbnailSize, int.Parse(dropVideoType.SelectedValue));
+                row.Thumbnail = pathImage != "" ? pathImage : imgThumbnail.ImageUrl.Replace("~/", "");
+            }
             row.IsHot = false;
             row.IsActive = cboxActive.Checked;
             var videoId = Request.QueryString["VideoID"];
