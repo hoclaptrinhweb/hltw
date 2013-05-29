@@ -37,6 +37,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HocLapTrinhWeb.UI", "HocLap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HocLapTrinhWeb.DAL", "HocLapTrinhWeb.DAL\HocLapTrinhWeb.DAL.csproj", "{5EED6170-8745-4082-8497-CB0054B4FC36}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "m_HocLapTrinhWeb", "m_HocLapTrinhWeb\", "{2254458A-0566-4A11-8BA0-62534A3850E8}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/m_HocLapTrinhWeb"
+		Debug.AspNetCompiler.PhysicalPath = "m_HocLapTrinhWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\m_HocLapTrinhWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/m_HocLapTrinhWeb"
+		Release.AspNetCompiler.PhysicalPath = "m_HocLapTrinhWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\m_HocLapTrinhWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "14917"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -101,6 +121,18 @@ Global
 		{5EED6170-8745-4082-8497-CB0054B4FC36}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{5EED6170-8745-4082-8497-CB0054B4FC36}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{5EED6170-8745-4082-8497-CB0054B4FC36}.Release|x86.ActiveCfg = Release|Any CPU
+		{2254458A-0566-4A11-8BA0-62534A3850E8}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{2254458A-0566-4A11-8BA0-62534A3850E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2254458A-0566-4A11-8BA0-62534A3850E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2254458A-0566-4A11-8BA0-62534A3850E8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2254458A-0566-4A11-8BA0-62534A3850E8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2254458A-0566-4A11-8BA0-62534A3850E8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2254458A-0566-4A11-8BA0-62534A3850E8}.Release|.NET.ActiveCfg = Debug|Any CPU
+		{2254458A-0566-4A11-8BA0-62534A3850E8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2254458A-0566-4A11-8BA0-62534A3850E8}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{2254458A-0566-4A11-8BA0-62534A3850E8}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2254458A-0566-4A11-8BA0-62534A3850E8}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2254458A-0566-4A11-8BA0-62534A3850E8}.Release|x86.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

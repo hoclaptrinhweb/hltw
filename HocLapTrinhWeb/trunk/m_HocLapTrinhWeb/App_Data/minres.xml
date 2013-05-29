@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<combres xmlns='urn:combres'>
+  <filters>
+    <!-- This filter allows relative urls to be used in Css files like in .NET; e.g. "~/MyFolder/MyPic.png"-->
+    <filter type="Combres.Filters.FixUrlsInCssFilter, Combres" />
+    <!-- This filter changes Combres order of ops so that common css variables can be defined in a single
+         file and used throughout multiple css files, instead of having to define them in each file. -->
+    <!--<filter type="Combres.Filters.DotLessCssCombineFilter, Combres" acceptedResourceSets="dotLessCss"/>-->
+  </filters>
+  <jsMinifiers>
+    <minifier name="msajax" type="Combres.Minifiers.MSAjaxJSMinifier, Combres" binderType="Combres.Binders.SimpleObjectBinder, Combres">
+      <param name="CollapseToLiteral" type="bool" value="true" />
+      <param name="EvalsAreSafe" type="bool" value="true" />
+      <param name="MacSafariQuirks" type="bool" value="true" />
+      <param name="CatchAsLocal" type="bool" value="true" />
+      <param name="LocalRenaming" type="string" value="CrunchAll" />
+      <param name="OutputMode" type="string" value="SingleLine" />
+      <param name="RemoveUnneededCode" type="bool" value="true" />
+      <param name="StripDebugStatements" type="bool" value="true" />
+    </minifier>
+  </jsMinifiers>
+  <resourceSets url="~/minres.axd"
+                defaultDuration="30"
+                defaultVersion="auto"
+                defaultDebugEnabled="auto">
+    <resourceSet name="DefaultJs" type="js">
+      <resource path="~/js/jquery-1.4.1.min.js" />
+    </resourceSet>
+    <resourceSet name="DefaultThemeJs" type="js">
+      <resource path="~/js/jquery.js" />
+      <resource path="~/js/jquery.cluetip.min.js" />
+      <resource path="~/js/custom.js" />
+    </resourceSet>
+    <resourceSet name="syntaxhighlighter" type="js" >
+      <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shCore.js" />
+      <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js" />
+      <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shBrushXml.js" />
+      <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shBrushCss.js" />
+      <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shBrushPhp.js" />
+      <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shBrushCSharp.js" />
+      <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shBrushSql.js" />
+    </resourceSet>
+    <resourceSet name="DefaultCss" type="css" >
+      <resource path="~/css/news.css" />
+      <resource path="~/css/StyleSheet.css" />
+      <resource path="~/js/syntaxhighlighter_3.0.83/styles/shCoreDefault.css" />
+    </resourceSet>
+    <resourceSet name="DefaultThemeCss" type="css" debugEnabled="true" >
+      <resource path="~/style.css" />
+      <resource path="~/css/jquery.cluetip.css" />
+      <resource path="~/js/syntaxhighlighter_3.0.83/styles/shCoreDefault.css" />
+    </resourceSet>
+    <!--<resourceSet name="dotLessCss" type="css" version="auto" minifierRef="off">
+      <resource path="~/css/dotLess.css.less" />
+    </resourceSet>-->
+  </resourceSets>
+</combres>
