@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <asp:Literal ID="lrStyle" runat="server"></asp:Literal>
     <asp:Literal ID="lrScript" runat="server"></asp:Literal>
     <script type="text/javascript">
@@ -33,12 +33,21 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <uc2:ucHeader ID="ucHeader1" runat="server" />
-    <div data-role="content">
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
+    <div data-role="page">
+        <uc2:ucHeader ID="ucHeader1" runat="server" />
+        <div data-role="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <uc1:ucFooter ID="ucFooter1" runat="server" />
+        <div data-role="panel" id="mypanel" data-position="left" data-display="reveal"
+            data-dismissible="true" data-theme="d">
+            <ul data-role="listview" data-count-theme="c" data-inset="true">
+                <li><a href="<%= UrlRoot %>">Trang chủ</a></li>
+                <li><a>Liên hệ</a></li>
+            </ul>
+        </div>
     </div>
-    <uc1:ucFooter ID="ucFooter1" runat="server" />
     </form>
     <script type="text/javascript">
 
