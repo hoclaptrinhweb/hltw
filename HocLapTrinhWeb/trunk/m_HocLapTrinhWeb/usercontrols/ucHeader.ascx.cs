@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
-public partial class usercontrols_ucHeader : System.Web.UI.UserControl
+public partial class usercontrols_ucHeader : HocLapTrinhWeb.UI.UCBase
 {
-    protected void Page_Load(object sender, EventArgs e)
+    protected override void Page_Load(object sender, EventArgs e)
     {
-
+        base.Page_Load(sender,e);
     }
 }
