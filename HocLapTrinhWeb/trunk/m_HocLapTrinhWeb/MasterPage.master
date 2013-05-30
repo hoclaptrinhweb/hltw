@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Src="usercontrols/ucFooter.ascx" TagName="ucFooter" TagPrefix="uc1" %>
+<%@ Register Src="usercontrols/ucHeader.ascx" TagName="ucHeader" TagPrefix="uc2" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <asp:Literal ID="lrStyle" runat="server"></asp:Literal>
+    <asp:Literal ID="lrScript" runat="server"></asp:Literal>
+ 
+    <script type="text/javascript">
+        $(document).bind("mobileinit", function ()
+        {
+            $.mobile.page.prototype.options.addBackBtn = true;
+        });    
+    </script>
+    <asp:Literal ID="lrScriptMobile" runat="server"></asp:Literal>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <uc2:ucHeader ID="ucHeader1" runat="server" />
+    <div data-role="content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <uc1:ucFooter ID="ucFooter1" runat="server" />
+    </form>
+</body>
+</html>
