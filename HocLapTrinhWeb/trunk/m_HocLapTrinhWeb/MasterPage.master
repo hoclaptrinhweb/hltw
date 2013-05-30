@@ -1,4 +1,5 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="MasterPage.master.cs"
+    Inherits="MasterPage" %>
 
 <%@ Register Src="usercontrols/ucFooter.ascx" TagName="ucFooter" TagPrefix="uc1" %>
 <%@ Register Src="usercontrols/ucHeader.ascx" TagName="ucHeader" TagPrefix="uc2" %>
@@ -8,15 +9,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <asp:Literal ID="lrStyle" runat="server"></asp:Literal>
     <asp:Literal ID="lrScript" runat="server"></asp:Literal>
- 
     <script type="text/javascript">
-        $(document).bind("mobileinit", function ()
-        {
+        $(document).bind("mobileinit", function () {
             $.mobile.page.prototype.options.addBackBtn = true;
         });    
     </script>
     <asp:Literal ID="lrScriptMobile" runat="server"></asp:Literal>
-
+    <meta runat="server" id="metaDesc" name="description" content="Hoclaptrinhweb.com là một website chuyên về Lập trình - Thiết kế website Graphic - HTML - CSS - Jquery - Photography - Tin công nghệ - Game. Hoclaptrinhweb.com là một website tổng hợp thông tin hoàn toàn được điều khiển tự động bởi máy tính. Mỗi ngày  tin tức từ  nhiều nguồn chính thức của các web điện tử và trang tin được Hoclaptrinhweb.com tự động tổng hợp, phân loại, phát hiện các bài đăng lại...." />
+    <meta runat="server" id="metaKeywords" name="keywords" content="web online, hoc lap trinh web, hoc lap trinh, học lập trình web, lập trình web" />
+    <meta property="og:title" content="" runat="server" id="metaTitle" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="http://www.hoclaptrinhweb.com" />
+    <meta property="og:url" content="" runat="server" id="metaUrl" />
+    <meta property="og:image" content="" runat="server" id="metaImage" />
+    <meta property="og:description" content="Hoclaptrinhweb.com là một website chuyên về Lập trình - Thiết kế website Graphic - HTML - CSS - Jquery - Photography - Tin công nghệ - Game. Hoclaptrinhweb.com là một website tổng hợp thông tin hoàn toàn được điều khiển tự động bởi máy tính. Mỗi ngày  tin tức từ  nhiều nguồn chính thức của các web điện tử và trang tin được Hoclaptrinhweb.com tự động tổng hợp, phân loại, phát hiện các bài đăng lại...."
+        id="metaDescFb" />
+    <meta prefix="fb: http://ogp.me/ns/fb#" property="fb:app_id" content="312319252170353" />
+    <meta http-equiv="REFRESH" content="1800" />
+    <meta name="alexaVerifyID" content="N-eLjeUgLZY0YPY61XUqot_heyI" />
+    <meta name="verify-adnet" content="dac9efd0b7344c3d593bfd5cf511ce30" />
+    <meta name="robots" content="index,follow" />
+    <meta name="Googlebot" content="INDEX,FOLLOW" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -27,5 +40,20 @@
     </div>
     <uc1:ucFooter ID="ucFooter1" runat="server" />
     </form>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-30339288-1']);
+        _gaq.push(['_setDomainName', 'hoclaptrinhweb.com']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
 </body>
 </html>
