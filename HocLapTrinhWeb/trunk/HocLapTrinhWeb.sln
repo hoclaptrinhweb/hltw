@@ -40,6 +40,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "m_HocLapTrinhWeb", "m_HocLapTrinhWeb\", "{2254458A-0566-4A11-8BA0-62534A3850E8}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{4B2A1A68-1A24-424A-95BB-29475FB4E10B}|HocLapTrinhWeb.UI.dll;{5EED6170-8745-4082-8497-CB0054B4FC36}|HocLapTrinhWeb.DAL.dll;{74D8ED7C-1363-4E9B-9640-771409D3599E}|HocLapTrinhWeb.BLL.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/m_HocLapTrinhWeb"
 		Debug.AspNetCompiler.PhysicalPath = "m_HocLapTrinhWeb\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\m_HocLapTrinhWeb\"
