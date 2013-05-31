@@ -140,6 +140,9 @@ public partial class usercontrols_ucNews : HocLapTrinhWeb.UI.UCBase
         if (strTitle.Length < 100)
             strTitle = strTitle + " - hoclaptrinhweb.com";
         CurrentPage.Title = strTitle;
+        var lbHeaderTilte = (HtmlGenericControl)Page.Master.FindControl("ucHeader1").FindControl("hHeaderTitle");
+        if (lbHeaderTilte != null)
+            lbHeaderTilte.InnerText = strTitle;
         if (Page.Master == null) return;
         var metaTitle = (HtmlMeta)Page.Master.FindControl("metaTitle");
         if (metaTitle != null)
