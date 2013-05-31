@@ -40,7 +40,7 @@
             </asp:ContentPlaceHolder>
         </div>
         <uc1:ucFooter ID="ucFooter1" runat="server" />
-        <div data-role="panel" id="mypanel" data-position="left" data-display="reveal"
+        <div data-role="panel" id="mypanel" data-position="left" data-display="overlay"
             data-dismissible="true" data-theme="d">
             <ul data-role="listview" data-count-theme="c" data-inset="true">
                 <li><a href="<%= UrlRoot %>">Trang chủ</a></li>
