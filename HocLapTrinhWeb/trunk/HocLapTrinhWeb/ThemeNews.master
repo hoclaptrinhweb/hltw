@@ -48,7 +48,8 @@
 </div>
 
 <script type="text/javascript">
-    if (navigator.userAgent.match(/iPad|android|iPhone/i)) {
+    if (navigator.userAgent.match(/iPad|android|webOS|iPod|BlackBerry|iPhone|ZuneWP|WPDesktop|Windows Phone/i))
+    {
         window.location = 'http://m.hoclaptrinhweb.com';
     } else if (navigator.userAgent.match(/midp|mobile|cldc/i)) {
         window.location = "http://m.hoclaptrinhweb.com";
