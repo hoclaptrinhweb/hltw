@@ -10,8 +10,9 @@ public partial class usercontrols_ucNews : HocLapTrinhWeb.UI.UCBase
     protected override void Page_Load(object sender, EventArgs e)
     {
         base.Page_Load(sender, e);
-        if (!IsPostBack)
-            LoadData();
+        if (IsPostBack) return;
+        GetMenuNewsType(NewsTypeID);
+        LoadData();
     }
 
     #endregion
@@ -65,40 +66,15 @@ public partial class usercontrols_ucNews : HocLapTrinhWeb.UI.UCBase
 
         var html = "";
         var nSumOfPage = (total - 1) / PageSize + 1;
-        var nPageShow = nSumOfPage > 7 ? 7 : nSumOfPage;
         if (nSumOfPage > 1 || total > PageSize)
         {
             if (PageIndex > 1)
             {
-                html += "<li class=\"first\"><a href=\"" + url + "trang=1" + "\" ><< Đầu tiên</a></li>";
-                html += "<li class=\"previous\"><a href=\"" + url + "trang=" + (PageIndex - 1) + "\">< Trước</a></li>";
-            }
-            var delta = 0;
-            for (var i = 0; i < nPageShow; i++)
-            {
-                var number = PageIndex - 3 + i;
-                if (number <= 0)
-                {
-                    delta = 3 + 1 - PageIndex;
-                }
-                if (number > nSumOfPage)
-                {
-                    break;
-                }
-                number += delta;
-                if (number == PageIndex)
-                {
-                    html += "<li class=\"pages selected\"><a>" + number + "</a></li>";
-                }
-                else
-                {
-                    html += "<li class=\"pages\"><a href=\"" + url + "trang=" + number + "\" >" + number + "</a></li>";
-                }
+                html += "<a data-role=\"button\" data-icon=\"arrow-l\"  data-inline=\"true\" data-theme=\"b\" href=\"" + url + "trang=" + (PageIndex - 1) + "\">Sau</a>";
             }
             if (PageIndex < nSumOfPage)
             {
-                html += "<li class=\"next\"><a href=\"" + url + "trang=" + (PageIndex + 1) + "\">Tiếp theo ></a></li>";
-                html += "<li class=\"last\"><a href=\"" + url + "trang=" + (nSumOfPage) + "\">Cuối >></a></li>";
+                html += "<a data-role=\"button\" data-icon=\"arrow-r\" data-inline=\"true\" data-theme=\"b\" data-iconpos=\"right\" href=\"" + url + "trang=" + (PageIndex + 1) + "\">Tới</a>";
             }
         }
         return html;
@@ -126,7 +102,7 @@ public partial class usercontrols_ucNews : HocLapTrinhWeb.UI.UCBase
         if (dt != null && dt.Count > 0)
         {
             var total = vnnNewsBll.GetAllNewsRowCount("", rchildren, 1, "", "", "");
-            //  Paging.InnerHtml = BindPaging(total);
+            divPaging.InnerHtml = BindPaging(total);
         }
         vnnNewsTypeBll = new vnn_NewsTypeBLL(CurrentPage.getCurrentConnection());
         var rNewsType = vnnNewsTypeBll.GetNewsTypeByID(NewsTypeID);
@@ -187,6 +163,29 @@ public partial class usercontrols_ucNews : HocLapTrinhWeb.UI.UCBase
         }
     }
 
+    private void GetMenuNewsType(int productID)
+    {
+        try
+        {
+            var vnnNewsTypeBll = new vnn_NewsTypeBLL(CurrentPage.getCurrentConnection());
+            var dt = vnnNewsTypeBll.GetDataByParentID("NewsTypeName,NewsTypeID,TotalNews", productID);
+            if (dt == null || dt.Count <= 0) return;
+            lbProductType.Text += "<ul  data-role=\"listview\" data-inset=\"true\" data-count-theme=\"b\">";
+            lbProductType.Text += "<li data-role=\"list-divider\">Mục con</li>";
+            foreach (var t in dt)
+            {
+                lbProductType.Text += "<li><a href='" + CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(t.NewsTypeName) + "/hltw" + t.NewsTypeID + ".aspx'>" + t.NewsTypeName + "<span class=\"ui-li-count\">" + t.TotalNews.ToString() + "</span></a>";
+                lbProductType.Text += "</li>";
+            }
+
+            lbProductType.Text += "</ul>";
+        }
+        catch
+        {
+            return;
+        }
+
+    }
 
     #endregion
 
