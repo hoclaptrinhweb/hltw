@@ -82,7 +82,7 @@ public partial class usercontrols_ucNewsDetail : HocLapTrinhWeb.UI.UCBase
         vnnNewsBll.UpdateChange(dt, dt.ViewedColumn.ColumnName);
 
         SeoConfig(rNews.Title, rNews.Brief, rNews.IsKeywordNull() ? "" : rNews.Keyword, rNews.Thumbnail, CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(rNews.NewsTypeName) + "/" + XuLyChuoi.ConvertToUnSign(rNews.Title) + "-hltw" + rNews.NewsID + ".aspx");
-        LoadDataOld(NewsID, rNews.NewsTypeID, DateTime.Now);
+        LoadDataOld(NewsID, rNews.NewsTypeID, rNews.CreatedDate);
     }
 
 
@@ -90,11 +90,11 @@ public partial class usercontrols_ucNewsDetail : HocLapTrinhWeb.UI.UCBase
     private void LoadDataOld(int notNewsID, int newsTypeID, DateTime currdate)
     {
         var vnnNewsBll = new vnn_NewsBLL(CurrentPage.getCurrentConnection());
-        var dt = vnnNewsBll.GetAllNewsNewForRepeater("Title,brief,NewsID,NewsTypeName,CreatedDate,Thumbnail", 10, notNewsID, newsTypeID, 1, currdate);
-        rpData.DataSource = dt.Select("", "createddate desc");
-        rpData.DataBind();
-        if (dt.Rows.Count != 0) return;
-        dt = vnnNewsBll.GetAllNewsOldForRepeater("Title,brief,NewsID,NewsTypeName,CreatedDate,Thumbnail", 10, notNewsID,
+        //var dt = vnnNewsBll.GetAllNewsNewForRepeater("Title,brief,NewsID,NewsTypeName,CreatedDate,Thumbnail", 10, notNewsID, newsTypeID, 1, currdate);
+        //rpData.DataSource = dt.Select("", "createddate desc");
+        //rpData.DataBind();
+        //if (dt.Rows.Count != 0) return;
+        var dt = vnnNewsBll.GetAllNewsOldForRepeater("Title,brief,NewsID,NewsTypeName,CreatedDate,Thumbnail", 10, notNewsID,
                                                  newsTypeID, 1, currdate);
         rpData.DataSource = dt;
         rpData.DataBind();
