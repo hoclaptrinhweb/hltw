@@ -51,6 +51,7 @@
 			</ul>
             <ul class="menu">
                 <li class="menu_title"><h3>Liên kết & hợp tác</h3></li>
+				<li><a href="http://m.hoclaptrinhweb.com" target="_blank">Phiên bản trên mobile</a></li>
 				<li><a href="http://www.facebook.com/groups/hoclaptrinhweb/" target="_blank">Group Facebook</a></li>
                 <li><a href="http://www.facebook.com/hoclaptrinhweb" target="_blank">Page Facebook</a></li>
 				<li><a href="http://www.deptainha.com" target="_blank">Đẹp tại nhà</a></li>
