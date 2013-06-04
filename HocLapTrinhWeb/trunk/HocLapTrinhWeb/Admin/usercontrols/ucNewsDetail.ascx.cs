@@ -190,8 +190,9 @@ public partial class administrator_usercontrols_NewsDetail : HocLapTrinhWeb.UI.U
                     tNewsTag.Add(dtNewsTag);
                     return true;
                 }
-                else
-                    return false;
+                SaveValidate.IsValid = false;
+                SaveValidate.ErrorMessage = msg.GetMessage(newsBll.getMsgCode());
+                return false;
             }
             row.IPUpdate = DH.Utilities.Net.GetVisitorIPAddress();
             row.UpdatedBy = int.Parse(Session["UserID"].ToString());
@@ -249,6 +250,8 @@ public partial class administrator_usercontrols_NewsDetail : HocLapTrinhWeb.UI.U
                 tNewsTag.Delete(dtDel);
                 return true;
             }
+            SaveValidate.IsValid = false;
+            SaveValidate.ErrorMessage = msg.GetMessage(newsBll.getMsgCode());
             return false;
 
         }
