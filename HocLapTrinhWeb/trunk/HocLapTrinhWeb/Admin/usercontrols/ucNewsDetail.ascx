@@ -197,6 +197,16 @@
                         <asp:TextBox ID="txtNguon" runat="server" Width="100%"></asp:TextBox>
                     </td>
                 </tr>
+                  <tr>
+                    <td colspan="3">
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNguon"
+                            Display="Dynamic" ErrorMessage="Phải nhập URL nguồn"></asp:RequiredFieldValidator>
+                    </td>
+                    <td colspan="5">
+                    </td>
+                </tr>
                 <tr class="trEmpty">
                     <td colspan="3">
                     </td>
