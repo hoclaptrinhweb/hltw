@@ -42,13 +42,6 @@
             <div class="tagcloud tabbed_tag">
                 <a target="_blank" href="http://thugianviet.info" title="Phim online, phim chất lương caot">Phim online, phim chất lương cao</a>
                 <br/>
-                <a target="_blank" href="http://hosgroup.com.vn/phan-mem/phan-mem-quan-ly-ban-hang" title="Phần mềm quản lý bán hàng phổ biến nhất">
-                    phan mem quan ly ban hang</a>
-                <br />
-                <a target="_blank" href="http://www.phanmembanhang.com" title="Phần mềm bán hàng tối ưu nhất">phan mem
-                    ban hang</a><br />
-                <a  target="_blank" href="http://www.hosco.com.vn/phan-mem-quan-ly-nhan-su.html" title="phần mềm quản lý nhân sự chuyên nghiệp nhất">phần mềm quản lý nhân sự</a>
-                <br />
                 Tin tức mới nhất về <a target="_blank" href="http://www.tinmoi.vn/samsung-galaxy-s4-e218.html">Samsung
                     Galaxy S4</a>
                 <br />Chuyên mục <a target="_blank" href="http://www.techz.vn/C/dien-thoai-rv">đánh giá điện thoại</a> smartphone 2013
