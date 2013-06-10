@@ -44,7 +44,7 @@ public partial class usercontrols_ucRssDetail : HocLapTrinhWeb.UI.UCBase
                                 XuLyChuoi.ConvertToUnSign(t.Title) + "-hltw" + t.NewsID + ".aspx"
                         };
 
-                    item.Description = @"<a href='" + item.Link + "' alt='" + t.Title.Replace('"', ' ') + "'><img  border='0' align='left' src='" + CurrentPage.UrlRoot + "/images/w-" + (t.IsThumbnailNull() ? "" : (t.Thumbnail.ToLower().Replace(Global.ImagesNews.ToLower(), ""))) + ".ashx' alt='" + t.Title + "'/></a>" + (t.Brief.Length > 300 ? t.Brief.Substring(0, 300) : t.Brief);
+                    item.Description = @"<a href='" + item.Link + "' alt='" + t.Title.Replace('"', ' ') + "'><img  border='0' align='left' src='" + CurrentPage.UrlRoot + "/images/w149-" + (t.IsThumbnailNull() ? "" : (t.Thumbnail.ToLower().Replace(Global.ImagesNews.ToLower(), ""))) + ".ashx' alt='" + t.Title + "'/></a>" + (t.Brief.Length > 300 ? t.Brief.Substring(0, 300) : t.Brief);
                     item.pubDate = t.CreatedDate.ToString("r");
                     rss.AddRssItem(item);
                 }
