@@ -9,13 +9,12 @@ public partial class usercontrols_ucRandomNews : HocLapTrinhWeb.UI.UCBase
         var rnd = new Random();
         var n = rnd.Next(0, 2);
 
-        if (n == 0 && Request.UrlReferrer != null && Request.UrlReferrer.Host.ToLower() == "luanvanthacsi.edu.vn")
+        if (Request.UrlReferrer != null && (Request.UrlReferrer.Host.ToLower() == "luanvanthacsi.edu.vn" || Request.UrlReferrer.Host.ToLower() == "goccay.vn"))
         {
             Response.Status = "301 Moved Permanently";
-            Response.AddHeader("Location", "http://forum.hoclaptrinhweb.com/threads/slide-bai-giang-tong-quan-co-ban-ve-html-css-javascript.90/");
-            return;
+            Response.AddHeader("Location",
+                               "http://forum.hoclaptrinhweb.com/threads/slide-bai-giang-tong-quan-co-ban-ve-html-css-javascript.90/");
         }
-        n = rnd.Next(0, 2);
         if (n == 0)
         {
             var vnnNewsBll = new vnn_NewsBLL(CurrentPage.getCurrentConnection());
