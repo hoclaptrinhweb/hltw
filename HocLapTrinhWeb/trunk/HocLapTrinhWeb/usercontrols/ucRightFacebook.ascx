@@ -40,21 +40,24 @@
         </div>
         <div class="like_box_footer">
             <div class="tagcloud tabbed_tag">
-                <a target="_blank" href="http://thugianviet.info" title="Phim online, phim chất lương caot">Phim online, phim chất lương cao</a>
-                <br/>
-                LINK VAO <a  target="_blank" href="http://www.cacuoc1.com">M88</a> NHÀ CÁI M88
-                <br/>
-                Tin tức mới nhất về <a target="_blank" href="http://www.tinmoi.vn/samsung-galaxy-s4-e218.html">Samsung
-                    Galaxy S4</a>
-                <br />Chuyên mục <a target="_blank" href="http://www.techz.vn/C/dien-thoai-rv">đánh giá điện thoại</a> smartphone 2013
-                <br/>Lap trinh <a target="_blank" href="http://maybanhang.net/phan-mem-quan-ly-ban-hang/">phan mem ban hang</a> tiet kiem va hieu qua
+                <a target="_blank" href="http://www.iqviet.org/" title=" IQ Việt - Cộng Đồng IQ Việt Thủ Thuật Photoshop | template wordpress | Giao diện Joompla  | Thiết kế web đẹp giá rẻ | Khơi nguồn cảm hứng sáng tạo | bóc cháy đam mê ">
+                    Giao diện web đẹp</a>
+                <br />
+                <a target="_blank" href="http://thugianviet.info" title="Phim online, phim chất lương caot">
+                    Phim online, phim chất lương cao</a>
+                <br />
+                Tin tức mới nhất về <a target="_blank" href="http://www.tinmoi.vn/samsung-galaxy-s4-e218.html">
+                    Samsung Galaxy S4</a>
+                <br />
+                Chuyên mục <a target="_blank" href="http://www.techz.vn/C/dien-thoai-rv">đánh giá điện thoại</a> smartphone 2013
+                <br />
+                Lap trinh <a target="_blank" href="http://maybanhang.net/phan-mem-quan-ly-ban-hang/">
+                    phan mem ban hang</a> tiet kiem va hieu qua
+                <br />
+                LINK VAO <a href="http://www.cacuoc1.com">M88</a> NHÀ CÁI M88
+                <br />
+                Wapso1.mobi <a href="http://wapso1.mobi/tai-opera-mini">tai opera mini</a> mien phi
             </div>
         </div>
     </div>
 </div>
-<%--<div>
-    <div id="adnet_widget_20114" style="display: none;">
-    </div>
-    <script type="text/javascript">        var is_load_adnet_lib = is_load_adnet_lib || 1; if (is_load_adnet_lib == 1) { is_load_adnet_lib = 2; if (typeof (jQuery) == 'undefined') { document.write(unescape("%3Cscript src='http://s0.adnet.vn/jquery.min.js' type='text/javascript'%3E%3C/script%3E")); } document.write(unescape("%3Cscript src='http://s0.adnet.vn/js/adnet34.js' type='text/javascript'%3E%3C/script%3E")); }</script>
-    <script type="text/javascript" src="http://widget.adnet.vn/js/js.php?widget_id=20114"></script>
-</div>--%>
