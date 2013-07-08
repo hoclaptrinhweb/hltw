@@ -9,7 +9,7 @@
                 <a class="<%= SetClass("/video/")  %>" href="<%= CurrentPage.UrlRoot + "/video/" %>"> Video </a>
                 </li>
                 <li>
-                <a class="<%= SetClass("/upnews.aspx")  %>" href="<%= CurrentPage.UrlRoot + "/upnews.aspx" %>">Đăng tin</a>
+                <a href="http://forum.hoclaptrinhweb.com" target="_blank">Diễn đàn</a>
                 </li>
                <li><a class="<%= SetClass("/contact.aspx")  %>" href='<%= CurrentPage.UrlRoot + "/contact.aspx" %>'>Liên hệ</a></li>
                  <li><a class="<%= SetClass("/lienket.aspx")  %>" href='<%= CurrentPage.UrlRoot + "/lienket.aspx"%>'>Liên kết</a></li>
