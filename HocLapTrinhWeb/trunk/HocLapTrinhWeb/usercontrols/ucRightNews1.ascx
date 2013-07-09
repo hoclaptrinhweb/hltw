@@ -13,7 +13,7 @@
                     <ul class="blog_posts_widget">
                         <asp:Repeater ID="rpDataNewsRandom" runat="server">
                             <ItemTemplate>
-                                <li itemscope itemtype="http://schema.org/Article" class="blog_post"><a href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/hltw"  + Eval("NewsTypeID") +  ".aspx" %>'>
+                                <li itemscope itemtype="http://schema.org/Article" class="blog_post"><a href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("NewsID") +  ".aspx" %>'>
                                     <img itemprop="image" src="<%# CurrentPage.UrlRoot + "/images/w50-" + Eval("Thumbnail").ToString().ToLower().Replace(Global.ImagesNews.ToLower(), "") + ".ashx" %>"
                                         alt='<%# Eval("Title") %>' class="alignleft"></a>
                                     <p>
@@ -26,32 +26,32 @@
                     </ul>
                 </div>
                 <div class="tabbed_content" style="display: none;">
-                    <ul class="blog_posts_widget">
-                        <asp:Repeater ID="rpDataNewsMore" runat="server">
-                            <ItemTemplate>
-                                <li itemscope itemtype="http://schema.org/Article" class="blog_post"><a href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/hltw"  + Eval("NewsTypeID") +  ".aspx" %>'>
-                                    <img itemprop="image" src="<%# CurrentPage.UrlRoot + "/images/w50-" + Eval("Thumbnail").ToString().ToLower().Replace(Global.ImagesNews.ToLower(), "") + ".ashx" %>"
-                                        alt='<%# Eval("Title") %>' class="alignleft"></a>
-                                    <p>
-                                        <a itemprop="url" itemprop="name" href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("NewsID") +  ".aspx" %>'>
-                                            <%# Eval("Title") %></a><a class="cat" href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/hltw"  + Eval("NewsTypeID") +  ".aspx" %>'>
-                                                <%# Eval("NewsTypeName") %></a></p>
-                                </li>
-                            </ItemTemplate>
-                        </asp:Repeater>
-                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <script type="text/javascript">
-    $('.tabbed_nav li').click(function () {
+    $('.tabbed_nav li').click(function ()
+    {
         $('.tabbed_nav li a').removeClass();
         var i = $(this).attr('val');
         $(this).children().addClass('current');
         $('.tabbed_content').hide();
         $('.tabbed_content')[i].style.display = '';
+        if ($(this).attr('class') == "tabbed2") {
+            $('.tabbed_content')[i].innerHTML = "Đang tải dữ liệu !";
+            $.ajax({
+                type: 'POST',
+                url: '<%= CurrentPage.UrlRoot %>/handler/news.ashx?NewsTypeID=<%= NewsTypeID %>',
+                contentType: 'application/json; charset=utf-8',
+                success: function (msg)
+                {
+                    $('.tabbed_content')[i].innerHTML = msg;
+                },
+                error: function () { }
+            });
+        }
     });
 </script>
 <div class="box_outer">
