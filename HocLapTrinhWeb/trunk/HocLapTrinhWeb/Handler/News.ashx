@@ -32,13 +32,13 @@ public class News : IHttpHandler
                 tmpHtml = tmpHtml.Replace("{linkimage}", UrlRoot + "/images/w50-" + dt[i].Thumbnail.ToLower().Replace(Global.ImagesNews.ToLower(), "") + ".ashx");
                 tmpHtml = tmpHtml.Replace("{titlenews}", dt[i].Title);
                 tmpHtml = tmpHtml.Replace("{titlecat}", dt[i].NewsTypeName);
-                tmpHtml = tmpHtml.Replace("{imgalt}", dt[i].Title.Replace("'",""));
+                tmpHtml = tmpHtml.Replace("{imgalt}", dt[i].Title.Replace("'", ""));
                 tmpHtml = tmpHtml.Replace("{linkcat}", UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(dt[i].NewsTypeName) + "/hltw" + dt[i].NewsTypeID.ToString() + ".aspx");
 
             }
         }
         else
-            tmpHtml += "Dữ liệu không tồn tại";
+            tmpHtml += "Dữ liệu không tồn tại" + vnnNewsBll.getMessage();
         tmpHtml += "</ul>";
         context.Response.ContentType = "text/html";
         context.Response.Write(tmpHtml);
