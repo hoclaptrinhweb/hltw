@@ -122,7 +122,9 @@ public partial class usercontrols_ucNews : HocLapTrinhWeb.UI.UCBase
         GetTreeView(row.NewsTypeID);
         var rchildren = vnnNewsTypeBll.GetDataAllChildrenByPathID("NewsTypeName,NewsTypeID,PathID", row.PathID);
         var vnnNewsBll = new vnn_NewsBLL(CurrentPage.getCurrentConnection());
-        var dt = vnnNewsBll.GetAllNewsForGridView((PageIndex - 1) * PageSize, PageSize, "NewsTypeName,Title,NewsID,RefAddress,UpdatedDate,Viewed,Thumbnail,Brief", rchildren, 1, "", "", "");
+
+        var dt = vnnNewsBll.GetAllNewsForGridView((PageIndex - 1) * PageSize, PageSize, true, "NewsTypeName,Title,NewsID,RefAddress,UpdatedDate,Viewed,Thumbnail,Brief", rchildren, 1, "", "", "");
+
         rpData.DataSource = dt;
         rpData.DataBind();
         if (dt != null && dt.Count > 0)
