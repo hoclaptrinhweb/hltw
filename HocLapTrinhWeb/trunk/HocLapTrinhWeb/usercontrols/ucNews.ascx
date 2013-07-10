@@ -82,7 +82,7 @@
     <ul class="pagination" runat="server" id="Paging">
     </ul>
 </div>
-<script type="text/javascript">
+<%--<script type="text/javascript">
     jQuery(document).ready(function ($)
     {
         $('.cat_article_title a').cluetip({
@@ -94,3 +94,4 @@
         });
     });
 </script>
+--%>
