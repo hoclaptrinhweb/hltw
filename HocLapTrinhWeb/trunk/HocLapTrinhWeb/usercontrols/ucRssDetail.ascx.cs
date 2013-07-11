@@ -27,12 +27,27 @@ public partial class usercontrols_ucRssDetail : HocLapTrinhWeb.UI.UCBase
         }
     }
 
+    public int PageIndex
+    {
+        get
+        {
+            try
+            {
+                return Request.QueryString["pageindex"] != null ? int.Parse(Request.QueryString["pageindex"]) : 1;
+            }
+            catch
+            {
+                return 50;
+            }
+        }
+    }
+
     private void GetRSS(int newsType)
     {
         try
         {
             var vnnNewsBll = new vnn_NewsBLL(CurrentPage.getCurrentConnection());
-            var dt = vnnNewsBll.GetAllNewsForGridView(0, PageSize, "Title,NewsID,Thumbnail,Brief,CreatedDate,Content,RefAddress", newsType, 1, "", "", "");
+            var dt = vnnNewsBll.GetAllNewsForGridView((PageIndex - 1) * PageSize, PageSize, "Title,NewsID,Thumbnail,Brief,CreatedDate,Content,RefAddress", newsType, 1, "", "", "");
             if (dt == null) return;
             var vnnNewsTypeBll = new vnn_NewsTypeBLL(CurrentPage.getCurrentConnection());
             var row = vnnNewsTypeBll.GetNewsTypeByID(newsType);
