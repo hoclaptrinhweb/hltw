@@ -31,7 +31,7 @@ public partial class usercontrols_ucLoginUser : HocLapTrinhWeb.UI.UCBase
         if (!Login()) return;
         var aCookie1 = new HttpCookie("UserName");
         aCookie1.Values["UserName"] = txtUserName.Text;
-        aCookie1.Values["Password"] = DH.Utilities.Cryptography.EncryptMD5(txtPassword.Text);
+        aCookie1.Values["Password"] = HocLapTrinhWeb.Utilities.Cryptography.EncryptMD5(txtPassword.Text);
         aCookie1.Expires = DateTime.Now.AddDays(7);
         Response.Cookies.Add(aCookie1);
 
@@ -67,7 +67,7 @@ public partial class usercontrols_ucLoginUser : HocLapTrinhWeb.UI.UCBase
                 txtUserName.Focus();
                 return false;
             }
-            if (row.Pass != DH.Utilities.Cryptography.EncryptMD5(txtPassword.Text))
+            if (row.Pass != HocLapTrinhWeb.Utilities.Cryptography.EncryptMD5(txtPassword.Text))
             {
                 SaveValidate.IsValid = false;
                 SaveValidate.ErrorMessage = msg.GetMessage("ERR-LOG003");

@@ -21,7 +21,7 @@ public partial class administrator_usercontrols_ucLogin : HocLapTrinhWeb.UI.UCBa
         if (!Login()) return;
         var aCookie1 = new HttpCookie("UserName");
         aCookie1.Values["UserName"] = txtUserName.Text;
-        aCookie1.Values["Password"] = DH.Utilities.Cryptography.EncryptMD5(txtPass.Text);
+        aCookie1.Values["Password"] = HocLapTrinhWeb.Utilities.Cryptography.EncryptMD5(txtPass.Text);
         aCookie1.Expires = DateTime.Now.AddDays(7);
         Response.Cookies.Add(aCookie1);
 
@@ -55,7 +55,7 @@ public partial class administrator_usercontrols_ucLogin : HocLapTrinhWeb.UI.UCBa
                 txtUserName.Focus();
                 return false;
             }
-            if (row.Pass != DH.Utilities.Cryptography.EncryptMD5(txtPass.Text))
+            if (row.Pass != HocLapTrinhWeb.Utilities.Cryptography.EncryptMD5(txtPass.Text))
             {
                 SaveValidate.IsValid = false;
                 SaveValidate.ErrorMessage = msg.GetMessage("ERR-LOG003");//mat khau ko dung

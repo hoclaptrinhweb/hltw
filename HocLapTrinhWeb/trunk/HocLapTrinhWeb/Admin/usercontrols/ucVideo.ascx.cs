@@ -243,7 +243,7 @@ public partial class Admin_usercontrols_ucVideo : HocLapTrinhWeb.UI.UCBase
                 r.CreatedDate = DateTime.Now;
                 r.UpdatedBy = int.Parse(Session["UserID"].ToString());
                 r.UpdatedDate = DateTime.Now;
-                r.IPUpdate = DH.Utilities.Net.GetVisitorIPAddress();
+                r.IPUpdate = HocLapTrinhWeb.Utilities.Net.GetVisitorIPAddress();
                 dt.Addtbl_VideoRow(r);
             }
             var vVideoBll = new v_VideoBLL(CurrentPage.getCurrentConnection());

@@ -196,7 +196,7 @@ public partial class administrator_usercontrols_ucUser : HocLapTrinhWeb.UI.UCBas
         txtCurrentDate.SetNullValueDate = false;
         txtCurrentDate.Value = DateTime.Now;
         txtHomePage.Text = "";
-        txtIpAddress.Text = DH.Utilities.Net.GetVisitorIPAddress();
+        txtIpAddress.Text = HocLapTrinhWeb.Utilities.Net.GetVisitorIPAddress();
     }
 
     private void LoadDataEdit(int pID)
@@ -253,11 +253,11 @@ public partial class administrator_usercontrols_ucUser : HocLapTrinhWeb.UI.UCBas
             row.IsAdmin = chckIsAdmin.Checked;
             row.IsActive = chckIsActive.Checked;
             row.CreatedDate = txtCreatedDate.Value;
-            row.IpAddress = DH.Utilities.Net.GetVisitorIPAddress();
+            row.IpAddress = HocLapTrinhWeb.Utilities.Net.GetVisitorIPAddress();
             row.HomePage = txtHomePage.Text;
             if (hdEdit.Value == "0")
             {
-                row.Pass = DH.Utilities.Cryptography.EncryptMD5(txtPass.Text);
+                row.Pass = HocLapTrinhWeb.Utilities.Cryptography.EncryptMD5(txtPass.Text);
                 dt.Addtbl_UserRow(row);
                 if (userBll.Add(dt))
                     return true;
@@ -265,7 +265,7 @@ public partial class administrator_usercontrols_ucUser : HocLapTrinhWeb.UI.UCBas
                 SaveValidate1.ErrorMessage = msg.GetMessage(userBll.getMsgCode());
                 return false;
             }
-            row.Pass = chckChangePass.Checked ? DH.Utilities.Cryptography.EncryptMD5(txtPass.Text) : hdPass.Value;
+            row.Pass = chckChangePass.Checked ? HocLapTrinhWeb.Utilities.Cryptography.EncryptMD5(txtPass.Text) : hdPass.Value;
             row.UserID = Convert.ToInt32(hdUserID.Value);
             dt.Addtbl_UserRow(row);
             if (userBll.Update(dt))

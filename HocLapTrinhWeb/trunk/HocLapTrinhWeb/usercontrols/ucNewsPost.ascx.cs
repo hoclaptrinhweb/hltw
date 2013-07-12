@@ -140,7 +140,7 @@ public partial class usercontrols_ucNewsPost : HocLapTrinhWeb.UI.UCBase
                 else
                     return false;
             }
-            row.IPUpdate = DH.Utilities.Net.GetVisitorIPAddress();
+            row.IPUpdate = HocLapTrinhWeb.Utilities.Net.GetVisitorIPAddress();
             row.UpdatedBy = int.Parse(Session["UserID"].ToString());
             row.NewsTypeID = int.Parse(dropNewsType.SelectedValue);
             row.MoveFrom = int.Parse(hdNewsTypeID.Value);
@@ -209,8 +209,8 @@ public partial class usercontrols_ucNewsPost : HocLapTrinhWeb.UI.UCBase
 
     void OnLoad()
     {
-        txtIPCreate.Text = DH.Utilities.Net.GetVisitorIPAddress();
-        txtIPUpdate.Text = DH.Utilities.Net.GetVisitorIPAddress();
+        txtIPCreate.Text = HocLapTrinhWeb.Utilities.Net.GetVisitorIPAddress();
+        txtIPUpdate.Text = HocLapTrinhWeb.Utilities.Net.GetVisitorIPAddress();
         txtNgaytao.Text = DateTime.Now.ToString(CultureInfo.InvariantCulture);
         txtSolanxem.Text = "0";
         txtNgaycapnhat.Text = DateTime.Now.ToString(CultureInfo.InvariantCulture);
@@ -279,7 +279,7 @@ public partial class usercontrols_ucNewsPost : HocLapTrinhWeb.UI.UCBase
         try
         {
             if (resizeImage)
-                DH.Utilities.ImageResizer.ResizeFromStream(fileupload.PostedFile.InputStream, maxSize,
+                HocLapTrinhWeb.Utilities.ImageResizer.ResizeFromStream(fileupload.PostedFile.InputStream, maxSize,
                                                            System.Drawing.Drawing2D.InterpolationMode.
                                                                HighQualityBilinear,
                                                            Server.MapPath("~/" + Global.ImagesNews + pathImage));
@@ -309,12 +309,12 @@ public partial class usercontrols_ucNewsPost : HocLapTrinhWeb.UI.UCBase
         try
         {
             if (resizeImage)
-                DH.Utilities.ImageResizer.ResizeFromStream(fileupload.PostedFile.InputStream, maxWithSize,
+                HocLapTrinhWeb.Utilities.ImageResizer.ResizeFromStream(fileupload.PostedFile.InputStream, maxWithSize,
                                                            maxHeightSize,
                                                            System.Drawing.Drawing2D.InterpolationMode.
                                                                HighQualityBilinear,
-                                                           DH.Utilities.EnumImageResizer.Align.Center,
-                                                           DH.Utilities.EnumImageResizer.Valign.Middle,
+                                                           HocLapTrinhWeb.Utilities.EnumImageResizer.Align.Center,
+                                                           HocLapTrinhWeb.Utilities.EnumImageResizer.Valign.Middle,
                                                            Server.MapPath("~/" + Global.ImagesNews + pathImage));
             else
                 fileupload.SaveAs(Server.MapPath("~/" + Global.ImagesNews + pathImage));

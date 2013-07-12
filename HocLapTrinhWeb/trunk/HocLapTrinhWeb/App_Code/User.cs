@@ -32,7 +32,7 @@ public class User : WebService
                 if (row != null && !row.IsActive)
                     strResult = "\"Tài khoản chưa kích hoạt\"";
 
-                if (row != null && row.Pass != DH.Utilities.Cryptography.EncryptMD5(password))
+                if (row != null && row.Pass != HocLapTrinhWeb.Utilities.Cryptography.EncryptMD5(password))
                     strResult = "\"Mật khẩu không đúng\"";
                 strValue = "{";
                 strValue += "\"id\":" + row.UserID.ToString(CultureInfo.InvariantCulture) + ",";
@@ -44,7 +44,7 @@ public class User : WebService
                 Session["FullName"] = row.FullName;
                 var aCookie1 = new HttpCookie("UserName");
                 aCookie1.Values["UserName"] = username;
-                aCookie1.Values["Password"] = DH.Utilities.Cryptography.EncryptMD5(password);
+                aCookie1.Values["Password"] = HocLapTrinhWeb.Utilities.Cryptography.EncryptMD5(password);
                 aCookie1.Expires = DateTime.Now.AddDays(7);
                 HttpContext.Current.Response.Cookies.Add(aCookie1);
             }
