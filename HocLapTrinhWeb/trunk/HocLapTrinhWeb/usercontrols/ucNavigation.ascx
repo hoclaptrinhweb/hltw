@@ -5,16 +5,14 @@
         <div class="inner">
             <ul class="nav">
                 <li><a class="<%= SetClass("")  %>" href='<%= CurrentPage.UrlRoot %>'>Trang chủ</a></li>
+                                <li>
+                <a href="http://forum.hoclaptrinhweb.com" target="_blank">Diễn đàn</a>
+                </li>
                  <li>
                 <a class="<%= SetClass("/video/")  %>" href="<%= CurrentPage.UrlRoot + "/video/" %>"> Video </a>
                 </li>
-                <li>
-                <a href="http://forum.hoclaptrinhweb.com" target="_blank">Diễn đàn</a>
-                </li>
                <li><a class="<%= SetClass("/contact.aspx")  %>" href='<%= CurrentPage.UrlRoot + "/contact.aspx" %>'>Liên hệ</a></li>
                  <li><a rel="nofollow" target="_blank" href='http://mediafire.com/hoclaptrinhweb'>Tài liệu</a></li>
-                 <li><a href='http://forum.hoclaptrinhweb.com'>Diễn đàn</a></li>
-                
                 <li>
                 <div style="margin-top:8px;">
                 <div class="g-plusone" data-size="medium" data-href="http://www.hoclaptrinhweb.com"></div>
