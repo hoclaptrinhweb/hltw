@@ -3,7 +3,7 @@
         lập trình web cơ bản - nâng cao" %>
 <%@ Register Src="usercontrols/ucNewsType.ascx" TagName="ucNewsType" TagPrefix="uc2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="box_outer">
+    <div class="box_outer" style="clear: both;">
     </div>
     <uc2:ucNewsType ID="ucNewsType1" runat="server" />
 </asp:Content>
