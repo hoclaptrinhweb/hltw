@@ -44,6 +44,7 @@
             data-dismissible="true" data-theme="d">
             <ul data-role="listview" data-count-theme="c" data-inset="true">
                 <li><a href="<%= UrlRoot %>">Trang chủ</a></li>
+                <li><a href="http://forum.hoclaptrinhweb.com">Diễn đàn</a></li>
                 <li><a>Liên hệ</a></li>
             </ul>
         </div>
