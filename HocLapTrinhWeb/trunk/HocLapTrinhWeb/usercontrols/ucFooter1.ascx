@@ -9,11 +9,9 @@
             <ul class="menu">
 				<li class="menu_title"><h3>Hoclaptrinhweb.com</h3></li>
 				<li><a href="<%= CurrentPage.UrlRoot %>">Trang chủ</a></li>
-				<li><a href="<%= CurrentPage.UrlRoot %>/upnews.aspx">Đăng tin</a></li>
 				<li><a href="<%= CurrentPage.UrlRoot %>/contact.aspx">Liên hệ</a></li>
 				<li><a href="<%= CurrentPage.UrlRoot %>/lienket.aspx">Liên kết</a></li>
                 <li><a href="<%= CurrentPage.UrlRoot %>/rss/rss.aspx">RSS</a></li>
-				<li><a href="http://mediafire.com/hoclaptrinhweb" target="_blank">Tài liệu</a></li>
 			</ul>
             <ul class="menu">
 				<li class="menu_title"><h3>Chuyên mục</h3></li>
@@ -52,9 +50,6 @@
             <ul class="menu">
                 <li class="menu_title"><h3>Liên kết & hợp tác</h3></li>
 				<li><a href="http://m.hoclaptrinhweb.com" target="_blank">Phiên bản trên mobile</a></li>
-				<li><a href="http://www.facebook.com/groups/hoclaptrinhweb/" target="_blank">Group Facebook</a></li>
-                <li><a href="http://www.facebook.com/hoclaptrinhweb" target="_blank">Page Facebook</a></li>
-				<li><a href="http://www.deptainha.com" target="_blank">Đẹp tại nhà</a></li>
 				<li><a href="http://apkviet.com/" target="_blank">APK Việt</a></li>
 				<li><a href="http://www.vietbando.com" target="_blank">Bản đồ</a></li>
 			</ul>
