@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
 using System.Data;
