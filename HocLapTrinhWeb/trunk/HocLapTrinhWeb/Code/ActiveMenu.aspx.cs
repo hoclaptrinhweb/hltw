@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Net;
 
 public partial class Code_ActiveMenu : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        var request = (HttpWebRequest)WebRequest.Create("http://services.odata.org/Northwind/Northwind.svc/$metadata");
+        request.Headers.Add("Authorization", "Basic Og==");
+        var response = (HttpWebResponse)request.GetResponse();
 
     }
 

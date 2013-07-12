@@ -49,7 +49,7 @@ public static class Global
         var strResult = pContent;
         if (pContent.Length > pLength)
         {
-            strResult = DH.Utilities.StringExtension.SubString(pContent, pLength - 3) + "...";
+            strResult = HocLapTrinhWeb.Utilities.StringExtension.SubString(pContent, pLength - 3) + "...";
         }
         return strResult;
     }

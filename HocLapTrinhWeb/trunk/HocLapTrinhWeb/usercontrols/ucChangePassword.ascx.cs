@@ -27,9 +27,9 @@ public partial class usercontrols_ucChangePassword : HocLapTrinhWeb.UI.UCBase
             var row = userBll.GetUserByID(Convert.ToInt16(Session["UserID"].ToString()));
             if (row != null)
             {
-                if (row.Pass.Equals(DH.Utilities.Cryptography.EncryptMD5(txtPassOld.Text)))
+                if (row.Pass.Equals(HocLapTrinhWeb.Utilities.Cryptography.EncryptMD5(txtPassOld.Text)))
                 {
-                    row.Pass = DH.Utilities.Cryptography.EncryptMD5(txtPassNew.Text);
+                    row.Pass = HocLapTrinhWeb.Utilities.Cryptography.EncryptMD5(txtPassNew.Text);
                     dt.ImportRow(row);
                     if (userBll.Update(dt))
                     {

@@ -16,7 +16,7 @@ public partial class usercontrols_ucRegisterUser : HocLapTrinhWeb.UI.UCBase
             return;
         }
         if (!SaveData()) return;
-        var guid = DH.Utilities.Cryptography.EncryptMD5(txtEmail.Text + "hoclaptrinhweb.com");
+        var guid = HocLapTrinhWeb.Utilities.Cryptography.EncryptMD5(txtEmail.Text + "hoclaptrinhweb.com");
         var link = CurrentPage.UrlRoot + "/activeuser.aspx?email=" + txtEmail.Text + "&guid=" + guid;
         SendMail.SendMailFrom(txtEmail.Text, "Kích hoạt tài khoản trên Hoclaptrinhweb.com", "<a href='" + link + "' title='kích hoạt tài khoản' >" + link + "</a>");
         ClearText();
@@ -54,9 +54,9 @@ public partial class usercontrols_ucRegisterUser : HocLapTrinhWeb.UI.UCBase
             row.IsAdmin = false;
             row.IsActive = false;
             row.CreatedDate = DateTime.Now;
-            row.IpAddress = DH.Utilities.Net.GetVisitorIPAddress();
+            row.IpAddress = HocLapTrinhWeb.Utilities.Net.GetVisitorIPAddress();
             row.HomePage = txtWebsite.Text;
-            row.Pass = DH.Utilities.Cryptography.EncryptMD5(txtPass.Text);
+            row.Pass = HocLapTrinhWeb.Utilities.Cryptography.EncryptMD5(txtPass.Text);
             dt.Addtbl_UserRow(row);
             if (userBll.Add(dt))
                 return true;

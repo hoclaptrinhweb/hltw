@@ -100,8 +100,8 @@ public partial class Code_DangKhoa_YouTuBe : HocLapTrinhWeb.UI.PageBase
                 //Chú ý
                 row.VideoTypeID = 10;
                 row.VideoURL = "http://www.youtube.com" + t.Attributes["href"].Value.Substring(0, 20);
-                row.IPAddress = DH.Utilities.Net.GetVisitorIPAddress();
-                row.IPUpdate = DH.Utilities.Net.GetVisitorIPAddress();
+                row.IPAddress = HocLapTrinhWeb.Utilities.Net.GetVisitorIPAddress();
+                row.IPUpdate = HocLapTrinhWeb.Utilities.Net.GetVisitorIPAddress();
                 row.Priority = 0;
                 row.Viewed = 0;
                 row.IsActive = false;
@@ -159,8 +159,8 @@ public partial class Code_DangKhoa_YouTuBe : HocLapTrinhWeb.UI.PageBase
                 //Chú ý
                 row.VideoTypeID = 10;
                 row.VideoURL = t.Attributes["href"].Value;
-                row.IPAddress = DH.Utilities.Net.GetVisitorIPAddress();
-                row.IPUpdate = DH.Utilities.Net.GetVisitorIPAddress();
+                row.IPAddress = HocLapTrinhWeb.Utilities.Net.GetVisitorIPAddress();
+                row.IPUpdate = HocLapTrinhWeb.Utilities.Net.GetVisitorIPAddress();
                 row.Priority = 0;
                 row.Viewed = 0;
                 row.IsActive = false;

@@ -38,9 +38,9 @@ public partial class administrator_usercontrols_ucChangePassword : HocLapTrinhWe
             var row = userBll.GetUserByID(Convert.ToInt16(Session["UserID"].ToString()));
             if (row != null)
             {
-                if (row.Pass.Equals(DH.Utilities.Cryptography.EncryptMD5(txtOldPass.Text)))
+                if (row.Pass.Equals(HocLapTrinhWeb.Utilities.Cryptography.EncryptMD5(txtOldPass.Text)))
                 {
-                    row.Pass = DH.Utilities.Cryptography.EncryptMD5(txtPass.Text);
+                    row.Pass = HocLapTrinhWeb.Utilities.Cryptography.EncryptMD5(txtPass.Text);
                     dt.ImportRow(row);
                     if (userBll.Update(dt))
                     {

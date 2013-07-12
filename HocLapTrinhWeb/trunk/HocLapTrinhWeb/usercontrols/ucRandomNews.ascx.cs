@@ -14,6 +14,7 @@ public partial class usercontrols_ucRandomNews : HocLapTrinhWeb.UI.UCBase
             Response.Status = "301 Moved Permanently";
             Response.AddHeader("Location",
                                "http://forum.hoclaptrinhweb.com/threads/slide-bai-giang-tong-quan-co-ban-ve-html-css-javascript.90/");
+            return;
         }
         if (n == 0)
         {

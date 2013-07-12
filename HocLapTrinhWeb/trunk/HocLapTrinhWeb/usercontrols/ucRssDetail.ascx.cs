@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using HocLapTrinhWeb.BLL;
-using DH.Utilities;
+using HocLapTrinhWeb.Utilities;
 
 public partial class usercontrols_ucRssDetail : HocLapTrinhWeb.UI.UCBase
 {

@@ -9,7 +9,7 @@ public partial class usercontrols_ucActiveUser : HocLapTrinhWeb.UI.UCBase
         base.Page_Load(sender, e);
         if (Email != "" && Guid != "")
         {
-            if (DH.Utilities.Cryptography.EncryptMD5(Email + "hoclaptrinhweb.com") == Guid)
+            if (HocLapTrinhWeb.Utilities.Cryptography.EncryptMD5(Email + "hoclaptrinhweb.com") == Guid)
             {
                 var userBll = new UserBLL(CurrentPage.getCurrentConnection());
                 var dtUser = new dsHocLapTrinhWeb.tbl_UserDataTable();

@@ -172,7 +172,7 @@ public class CommentNews : WebService
         if (keyname.ToLower() != HttpContext.Current.Session["captcha"].ToString().ToLower())
             return "nhập mã không đúng";
 
-        var guid = DH.Utilities.Cryptography.EncryptMD5(email + "hoclaptrinhweb.com");
+        var guid = HocLapTrinhWeb.Utilities.Cryptography.EncryptMD5(email + "hoclaptrinhweb.com");
         var link = "http://hoclaptrinhweb.com/activeuser.aspx?email=" + email + "&guid=" + guid;
         var b = SendMail.SendMailFrom(email, "Kích hoạt tài khoản trên Hoclaptrinhweb.com", "<a href='" + link + "' title='kích hoạt tài khoản' >" + link + "</a>");
         return b ? "1" : "0";
