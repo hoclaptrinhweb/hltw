@@ -155,12 +155,11 @@
   <ItemGroup>
     <Content Include="DLLS\AjaxControlToolkit.dll" />
     <Content Include="DLLS\CollectionPager.dll" />
-    <Content Include="DLLS\DH.Utilities.dll" />
-    <Content Include="DLLS\DH.Utilities.XML" />
     <Content Include="DLLS\DropOptGroup.dll" />
     <Content Include="DLLS\FredCK.FCKeditorV2.dll" />
     <Content Include="DLLS\HtmlAgilityPack.dll" />
     <Content Include="DLLS\INNO.WebControls.dll" />
+    <Content Include="DLLS\itextsharp.dll" />
     <Content Include="DLLS\LIBDatePicker.dll" />
     <Content Include="DLLS\NatsNet.Web.UI.Controls.dll" />
     <Content Include="DLLS\TInternet.dll" />
@@ -169,7 +168,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="DLLS\Test.rar" />
     <None Include="dsHocLapTrinhWeb.xsc">
       <DependentUpon>dsHocLapTrinhWeb.xsd</DependentUpon>
     </None>
