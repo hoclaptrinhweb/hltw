@@ -38,7 +38,7 @@ public static class Global
     public static string PostMail = ConfigurationManager.AppSettings["PostMail"];
     public static string MailPass = "[vnn183492760505]";
 
-    
+
 
     #endregion
 
@@ -49,7 +49,7 @@ public static class Global
         var strResult = pContent;
         if (pContent.Length > pLength)
         {
-            strResult = DH.Utilities.StringExtension.SubString(pContent, pLength - 3) + "...";
+            strResult = HocLapTrinhWeb.Utilities.StringExtension.SubString(pContent, pLength - 3) + "...";
         }
         return strResult;
     }
@@ -120,8 +120,7 @@ public static class Global
         else
             keyArray = Encoding.UTF8.GetBytes(key);
 
-        var tdes = new TripleDESCryptoServiceProvider
-            {Key = keyArray, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7};
+        var tdes = new TripleDESCryptoServiceProvider { Key = keyArray, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 };
 
         var cTransform = tdes.CreateEncryptor();
         var resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
@@ -142,8 +141,7 @@ public static class Global
         else
             keyArray = Encoding.UTF8.GetBytes(key);
 
-        var tdes = new TripleDESCryptoServiceProvider
-            {Key = keyArray, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7};
+        var tdes = new TripleDESCryptoServiceProvider { Key = keyArray, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 };
 
         var cTransform = tdes.CreateDecryptor();
         var resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);

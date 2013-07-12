@@ -143,7 +143,7 @@
         <div class="container">
             <div class="main">
                 <uc9:ucNewsStick ID="ucNewsStick1" runat="server" />
-                <div id="adVatgia_block_2" style="margin-bottom: 5px;">
+                <div id="adVatgia_block_2" style="margin-bottom: 5px;float: left;">
                 </div>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
