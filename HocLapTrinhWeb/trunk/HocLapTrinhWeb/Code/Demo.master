@@ -4,6 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="../App_Themes/Admin/GlobalStyle.css" rel="stylesheet" />
+    <link href="../App_Themes/Admin/TagsStyle.css" rel="stylesheet" />
+    <link href="../App_Themes/Admin/FormStyle.css" rel="stylesheet" />
+    <link href="../App_Themes/Admin/Button.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
