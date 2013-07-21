@@ -1,5 +1,4 @@
 using System.Data;
-using HocLapTrinhWeb.DAL;
 
 namespace HocLapTrinhWeb.DAL
 {

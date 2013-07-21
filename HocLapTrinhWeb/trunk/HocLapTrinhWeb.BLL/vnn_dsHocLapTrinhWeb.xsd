@@ -2,7 +2,7 @@
 <xs:schema id="vnn_dsHocLapTrinhWeb" targetNamespace="http://tempuri.org/vnn_dsHocLapTrinhWeb.xsd" xmlns:mstns="http://tempuri.org/vnn_dsHocLapTrinhWeb.xsd" xmlns="http://tempuri.org/vnn_dsHocLapTrinhWeb.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="7" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="8" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HocLapTrinhWeb_MyLifeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HocLapTrinhWeb_MyLifeConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HocLapTrinhWeb.BLL.Properties.Settings.GlobalReference.Default.HocLapTrinhWeb_MyLifeConnectionString" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HocLapTrinhWeb_MyLifeConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HocLapTrinhWeb_MyLifeConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HocLapTrinhWeb.BLL.Properties.Settings.GlobalReference.Default.HocLapTrinhWeb_MyLifeConnectionString1" Provider="System.Data.SqlClient" />
@@ -12,6 +12,7 @@
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HLTW_MyLifeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HLTW_MyLifeConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HocLapTrinhWeb.BLL.Properties.Settings.GlobalReference.Default.HLTW_MyLifeConnectionString" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HocLapTrinhWeb_MyLifeConnectionString5" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HocLapTrinhWeb_MyLifeConnectionString5 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HocLapTrinhWeb.BLL.Properties.Settings.GlobalReference.Default.HocLapTrinhWeb_MyLifeConnectionString5" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HLTW_MyLifeConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HLTW_MyLifeConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HocLapTrinhWeb.BLL.Properties.Settings.GlobalReference.Default.HLTW_MyLifeConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HocLapTrinhWeb_comConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HocLapTrinhWeb_comConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HocLapTrinhWeb.BLL.Properties.Settings.GlobalReference.Default.HocLapTrinhWeb_comConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables />
         <Sources />
@@ -21,7 +22,7 @@
   <xs:element name="vnn_dsHocLapTrinhWeb" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="vnn_dsHocLapTrinhWeb" msprop:Generator_UserDSName="vnn_dsHocLapTrinhWeb">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="vnn_vw_UpUserForum" msprop:Generator_UserTableName="vnn_vw_UpUserForum" msprop:Generator_RowEvArgName="vnn_vw_UpUserForumRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpUserForum" msprop:Generator_TablePropName="vnn_vw_UpUserForum" msprop:Generator_RowDeletingName="vnn_vw_UpUserForumRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpUserForumRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpUserForumRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpUserForumRowChangeEventHandler" msprop:Generator_RowChangedName="vnn_vw_UpUserForumRowChanged" msprop:Generator_TableClassName="vnn_vw_UpUserForumDataTable" msprop:Generator_RowClassName="vnn_vw_UpUserForumRow">
+        <xs:element name="vnn_vw_UpUserForum" msprop:Generator_UserTableName="vnn_vw_UpUserForum" msprop:Generator_RowEvArgName="vnn_vw_UpUserForumRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpUserForum" msprop:Generator_TablePropName="vnn_vw_UpUserForum" msprop:Generator_RowDeletingName="vnn_vw_UpUserForumRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpUserForumRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpUserForumRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpUserForumRowChangeEventHandler" msprop:Generator_TableClassName="vnn_vw_UpUserForumDataTable" msprop:Generator_RowChangedName="vnn_vw_UpUserForumRowChanged" msprop:Generator_RowClassName="vnn_vw_UpUserForumRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:int" />
@@ -52,7 +53,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ltk_vw_UserPermission" msprop:Generator_UserTableName="ltk_vw_UserPermission" msprop:Generator_RowEvArgName="ltk_vw_UserPermissionRowChangeEvent" msprop:Generator_TableVarName="tableltk_vw_UserPermission" msprop:Generator_TablePropName="ltk_vw_UserPermission" msprop:Generator_RowDeletingName="ltk_vw_UserPermissionRowDeleting" msprop:Generator_RowChangingName="ltk_vw_UserPermissionRowChanging" msprop:Generator_RowDeletedName="ltk_vw_UserPermissionRowDeleted" msprop:Generator_RowEvHandlerName="ltk_vw_UserPermissionRowChangeEventHandler" msprop:Generator_RowChangedName="ltk_vw_UserPermissionRowChanged" msprop:Generator_TableClassName="ltk_vw_UserPermissionDataTable" msprop:Generator_RowClassName="ltk_vw_UserPermissionRow">
+        <xs:element name="ltk_vw_UserPermission" msprop:Generator_UserTableName="ltk_vw_UserPermission" msprop:Generator_RowEvArgName="ltk_vw_UserPermissionRowChangeEvent" msprop:Generator_TableVarName="tableltk_vw_UserPermission" msprop:Generator_TablePropName="ltk_vw_UserPermission" msprop:Generator_RowDeletingName="ltk_vw_UserPermissionRowDeleting" msprop:Generator_RowChangingName="ltk_vw_UserPermissionRowChanging" msprop:Generator_RowDeletedName="ltk_vw_UserPermissionRowDeleted" msprop:Generator_RowEvHandlerName="ltk_vw_UserPermissionRowChangeEventHandler" msprop:Generator_TableClassName="ltk_vw_UserPermissionDataTable" msprop:Generator_RowChangedName="ltk_vw_UserPermissionRowChanged" msprop:Generator_RowClassName="ltk_vw_UserPermissionRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:int" />
@@ -118,7 +119,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_UpCategory" msprop:Generator_UserTableName="vnn_vw_UpCategory" msprop:Generator_RowEvArgName="vnn_vw_UpCategoryRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpCategory" msprop:Generator_TablePropName="vnn_vw_UpCategory" msprop:Generator_RowDeletingName="vnn_vw_UpCategoryRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpCategoryRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpCategoryRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpCategoryRowChangeEventHandler" msprop:Generator_RowChangedName="vnn_vw_UpCategoryRowChanged" msprop:Generator_TableClassName="vnn_vw_UpCategoryDataTable" msprop:Generator_RowClassName="vnn_vw_UpCategoryRow">
+        <xs:element name="vnn_vw_UpCategory" msprop:Generator_UserTableName="vnn_vw_UpCategory" msprop:Generator_RowEvArgName="vnn_vw_UpCategoryRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpCategory" msprop:Generator_TablePropName="vnn_vw_UpCategory" msprop:Generator_RowDeletingName="vnn_vw_UpCategoryRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpCategoryRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpCategoryRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpCategoryRowChangeEventHandler" msprop:Generator_TableClassName="vnn_vw_UpCategoryDataTable" msprop:Generator_RowChangedName="vnn_vw_UpCategoryRowChanged" msprop:Generator_RowClassName="vnn_vw_UpCategoryRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CategoryID" msprop:Generator_ColumnVarNameInTable="columnCategoryID" msprop:Generator_ColumnPropNameInRow="CategoryID" msprop:Generator_ColumnPropNameInTable="CategoryIDColumn" msprop:Generator_UserColumnName="CategoryID" type="xs:int" />
@@ -142,7 +143,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_UpCategoryForum" msprop:Generator_UserTableName="vnn_vw_UpCategoryForum" msprop:Generator_RowEvArgName="vnn_vw_UpCategoryForumRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpCategoryForum" msprop:Generator_TablePropName="vnn_vw_UpCategoryForum" msprop:Generator_RowDeletingName="vnn_vw_UpCategoryForumRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpCategoryForumRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpCategoryForumRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpCategoryForumRowChangeEventHandler" msprop:Generator_RowChangedName="vnn_vw_UpCategoryForumRowChanged" msprop:Generator_TableClassName="vnn_vw_UpCategoryForumDataTable" msprop:Generator_RowClassName="vnn_vw_UpCategoryForumRow">
+        <xs:element name="vnn_vw_UpCategoryForum" msprop:Generator_UserTableName="vnn_vw_UpCategoryForum" msprop:Generator_RowEvArgName="vnn_vw_UpCategoryForumRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpCategoryForum" msprop:Generator_TablePropName="vnn_vw_UpCategoryForum" msprop:Generator_RowDeletingName="vnn_vw_UpCategoryForumRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpCategoryForumRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpCategoryForumRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpCategoryForumRowChangeEventHandler" msprop:Generator_TableClassName="vnn_vw_UpCategoryForumDataTable" msprop:Generator_RowChangedName="vnn_vw_UpCategoryForumRowChanged" msprop:Generator_RowClassName="vnn_vw_UpCategoryForumRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CategoryID" msprop:Generator_ColumnVarNameInTable="columnCategoryID" msprop:Generator_ColumnPropNameInRow="CategoryID" msprop:Generator_ColumnPropNameInTable="CategoryIDColumn" msprop:Generator_UserColumnName="CategoryID" type="xs:int" />
@@ -179,7 +180,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_UpForum" msprop:Generator_UserTableName="vnn_vw_UpForum" msprop:Generator_RowEvArgName="vnn_vw_UpForumRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpForum" msprop:Generator_TablePropName="vnn_vw_UpForum" msprop:Generator_RowDeletingName="vnn_vw_UpForumRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpForumRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpForumRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpForumRowChangeEventHandler" msprop:Generator_RowChangedName="vnn_vw_UpForumRowChanged" msprop:Generator_TableClassName="vnn_vw_UpForumDataTable" msprop:Generator_RowClassName="vnn_vw_UpForumRow">
+        <xs:element name="vnn_vw_UpForum" msprop:Generator_UserTableName="vnn_vw_UpForum" msprop:Generator_RowEvArgName="vnn_vw_UpForumRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpForum" msprop:Generator_TablePropName="vnn_vw_UpForum" msprop:Generator_RowDeletingName="vnn_vw_UpForumRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpForumRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpForumRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpForumRowChangeEventHandler" msprop:Generator_TableClassName="vnn_vw_UpForumDataTable" msprop:Generator_RowChangedName="vnn_vw_UpForumRowChanged" msprop:Generator_RowClassName="vnn_vw_UpForumRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ForumID" msprop:Generator_ColumnVarNameInTable="columnForumID" msprop:Generator_ColumnPropNameInRow="ForumID" msprop:Generator_ColumnPropNameInTable="ForumIDColumn" msprop:Generator_UserColumnName="ForumID" type="xs:int" />
@@ -204,7 +205,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_UpNews" msprop:Generator_UserTableName="vnn_vw_UpNews" msprop:Generator_RowEvArgName="vnn_vw_UpNewsRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpNews" msprop:Generator_TablePropName="vnn_vw_UpNews" msprop:Generator_RowDeletingName="vnn_vw_UpNewsRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpNewsRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpNewsRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpNewsRowChangeEventHandler" msprop:Generator_RowChangedName="vnn_vw_UpNewsRowChanged" msprop:Generator_TableClassName="vnn_vw_UpNewsDataTable" msprop:Generator_RowClassName="vnn_vw_UpNewsRow">
+        <xs:element name="vnn_vw_UpNews" msprop:Generator_UserTableName="vnn_vw_UpNews" msprop:Generator_RowEvArgName="vnn_vw_UpNewsRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpNews" msprop:Generator_TablePropName="vnn_vw_UpNews" msprop:Generator_RowDeletingName="vnn_vw_UpNewsRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpNewsRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpNewsRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpNewsRowChangeEventHandler" msprop:Generator_TableClassName="vnn_vw_UpNewsDataTable" msprop:Generator_RowChangedName="vnn_vw_UpNewsRowChanged" msprop:Generator_RowClassName="vnn_vw_UpNewsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NewsID" msprop:Generator_ColumnVarNameInTable="columnNewsID" msprop:Generator_ColumnPropNameInRow="NewsID" msprop:Generator_ColumnPropNameInTable="NewsIDColumn" msprop:Generator_UserColumnName="NewsID" type="xs:int" />
@@ -250,7 +251,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_UpPost" msprop:Generator_UserTableName="vnn_vw_UpPost" msprop:Generator_RowEvArgName="vnn_vw_UpPostRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpPost" msprop:Generator_TablePropName="vnn_vw_UpPost" msprop:Generator_RowDeletingName="vnn_vw_UpPostRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpPostRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpPostRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpPostRowChangeEventHandler" msprop:Generator_RowChangedName="vnn_vw_UpPostRowChanged" msprop:Generator_TableClassName="vnn_vw_UpPostDataTable" msprop:Generator_RowClassName="vnn_vw_UpPostRow">
+        <xs:element name="vnn_vw_UpPost" msprop:Generator_UserTableName="vnn_vw_UpPost" msprop:Generator_RowEvArgName="vnn_vw_UpPostRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpPost" msprop:Generator_TablePropName="vnn_vw_UpPost" msprop:Generator_RowDeletingName="vnn_vw_UpPostRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpPostRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpPostRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpPostRowChangeEventHandler" msprop:Generator_TableClassName="vnn_vw_UpPostDataTable" msprop:Generator_RowChangedName="vnn_vw_UpPostRowChanged" msprop:Generator_RowClassName="vnn_vw_UpPostRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Password" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_UserColumnName="Password" minOccurs="0">
@@ -288,7 +289,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_UpPostNews" msprop:Generator_UserTableName="vnn_vw_UpPostNews" msprop:Generator_RowEvArgName="vnn_vw_UpPostNewsRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpPostNews" msprop:Generator_TablePropName="vnn_vw_UpPostNews" msprop:Generator_RowDeletingName="vnn_vw_UpPostNewsRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpPostNewsRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpPostNewsRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpPostNewsRowChangeEventHandler" msprop:Generator_RowChangedName="vnn_vw_UpPostNewsRowChanged" msprop:Generator_TableClassName="vnn_vw_UpPostNewsDataTable" msprop:Generator_RowClassName="vnn_vw_UpPostNewsRow">
+        <xs:element name="vnn_vw_UpPostNews" msprop:Generator_UserTableName="vnn_vw_UpPostNews" msprop:Generator_RowEvArgName="vnn_vw_UpPostNewsRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpPostNews" msprop:Generator_TablePropName="vnn_vw_UpPostNews" msprop:Generator_RowDeletingName="vnn_vw_UpPostNewsRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpPostNewsRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpPostNewsRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpPostNewsRowChangeEventHandler" msprop:Generator_TableClassName="vnn_vw_UpPostNewsDataTable" msprop:Generator_RowChangedName="vnn_vw_UpPostNewsRowChanged" msprop:Generator_RowClassName="vnn_vw_UpPostNewsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Password" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_UserColumnName="Password" minOccurs="0">
@@ -333,7 +334,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_UpUser" msprop:Generator_UserTableName="vnn_vw_UpUser" msprop:Generator_RowEvArgName="vnn_vw_UpUserRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpUser" msprop:Generator_TablePropName="vnn_vw_UpUser" msprop:Generator_RowDeletingName="vnn_vw_UpUserRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpUserRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpUserRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpUserRowChangeEventHandler" msprop:Generator_RowChangedName="vnn_vw_UpUserRowChanged" msprop:Generator_TableClassName="vnn_vw_UpUserDataTable" msprop:Generator_RowClassName="vnn_vw_UpUserRow">
+        <xs:element name="vnn_vw_UpUser" msprop:Generator_UserTableName="vnn_vw_UpUser" msprop:Generator_RowEvArgName="vnn_vw_UpUserRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpUser" msprop:Generator_TablePropName="vnn_vw_UpUser" msprop:Generator_RowDeletingName="vnn_vw_UpUserRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpUserRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpUserRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpUserRowChangeEventHandler" msprop:Generator_TableClassName="vnn_vw_UpUserDataTable" msprop:Generator_RowChangedName="vnn_vw_UpUserRowChanged" msprop:Generator_RowClassName="vnn_vw_UpUserRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UserID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:int" />
@@ -361,53 +362,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_NewsTypeRefSite" msprop:Generator_UserTableName="vnn_vw_NewsTypeRefSite" msprop:Generator_RowEvArgName="vnn_vw_NewsTypeRefSiteRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_NewsTypeRefSite" msprop:Generator_TablePropName="vnn_vw_NewsTypeRefSite" msprop:Generator_RowDeletingName="vnn_vw_NewsTypeRefSiteRowDeleting" msprop:Generator_RowChangingName="vnn_vw_NewsTypeRefSiteRowChanging" msprop:Generator_RowDeletedName="vnn_vw_NewsTypeRefSiteRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_NewsTypeRefSiteRowChangeEventHandler" msprop:Generator_RowChangedName="vnn_vw_NewsTypeRefSiteRowChanged" msprop:Generator_TableClassName="vnn_vw_NewsTypeRefSiteDataTable" msprop:Generator_RowClassName="vnn_vw_NewsTypeRefSiteRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="NewsTypeID" msprop:Generator_ColumnVarNameInTable="columnNewsTypeID" msprop:Generator_ColumnPropNameInRow="NewsTypeID" msprop:Generator_ColumnPropNameInTable="NewsTypeIDColumn" msprop:Generator_UserColumnName="NewsTypeID" type="xs:int" />
-              <xs:element name="NewsTypeName" msprop:Generator_ColumnVarNameInTable="columnNewsTypeName" msprop:Generator_ColumnPropNameInRow="NewsTypeName" msprop:Generator_ColumnPropNameInTable="NewsTypeNameColumn" msprop:Generator_UserColumnName="NewsTypeName">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="250" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="1000" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="RefAddress" msprop:Generator_ColumnVarNameInTable="columnRefAddress" msprop:Generator_ColumnPropNameInRow="RefAddress" msprop:Generator_ColumnPropNameInTable="RefAddressColumn" msprop:Generator_UserColumnName="RefAddress" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="500" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="RefSite" msprop:Generator_ColumnVarNameInTable="columnRefSite" msprop:Generator_ColumnPropNameInRow="RefSite" msprop:Generator_ColumnPropNameInTable="RefSiteColumn" msprop:Generator_UserColumnName="RefSite">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="IsAutoRun" msprop:Generator_ColumnVarNameInTable="columnIsAutoRun" msprop:Generator_ColumnPropNameInRow="IsAutoRun" msprop:Generator_ColumnPropNameInTable="IsAutoRunColumn" msprop:Generator_UserColumnName="IsAutoRun" type="xs:boolean" />
-              <xs:element name="UpdatedDate" msprop:Generator_ColumnVarNameInTable="columnUpdatedDate" msprop:Generator_ColumnPropNameInRow="UpdatedDate" msprop:Generator_ColumnPropNameInTable="UpdatedDateColumn" msprop:Generator_UserColumnName="UpdatedDate" type="xs:dateTime" />
-              <xs:element name="UpdateRows" msprop:Generator_ColumnVarNameInTable="columnUpdateRows" msprop:Generator_ColumnPropNameInRow="UpdateRows" msprop:Generator_ColumnPropNameInTable="UpdateRowsColumn" msprop:Generator_UserColumnName="UpdateRows" type="xs:int" />
-              <xs:element name="ReferenceSiteID" msprop:Generator_ColumnVarNameInTable="columnReferenceSiteID" msprop:Generator_ColumnPropNameInRow="ReferenceSiteID" msprop:Generator_ColumnPropNameInTable="ReferenceSiteIDColumn" msprop:Generator_UserColumnName="ReferenceSiteID" type="xs:int" />
-              <xs:element name="RefSiteDescription" msprop:Generator_ColumnVarNameInTable="columnRefSiteDescription" msprop:Generator_ColumnPropNameInRow="RefSiteDescription" msprop:Generator_ColumnPropNameInTable="RefSiteDescriptionColumn" msprop:Generator_UserColumnName="RefSiteDescription" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="250" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="vnn_vw_UpNewsType" msprop:Generator_UserTableName="vnn_vw_UpNewsType" msprop:Generator_RowEvArgName="vnn_vw_UpNewsTypeRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpNewsType" msprop:Generator_TablePropName="vnn_vw_UpNewsType" msprop:Generator_RowDeletingName="vnn_vw_UpNewsTypeRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpNewsTypeRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpNewsTypeRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpNewsTypeRowChangeEventHandler" msprop:Generator_RowChangedName="vnn_vw_UpNewsTypeRowChanged" msprop:Generator_TableClassName="vnn_vw_UpNewsTypeDataTable" msprop:Generator_RowClassName="vnn_vw_UpNewsTypeRow">
+        <xs:element name="vnn_vw_UpNewsType" msprop:Generator_UserTableName="vnn_vw_UpNewsType" msprop:Generator_RowEvArgName="vnn_vw_UpNewsTypeRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_UpNewsType" msprop:Generator_TablePropName="vnn_vw_UpNewsType" msprop:Generator_RowDeletingName="vnn_vw_UpNewsTypeRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UpNewsTypeRowChanging" msprop:Generator_RowDeletedName="vnn_vw_UpNewsTypeRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_UpNewsTypeRowChangeEventHandler" msprop:Generator_TableClassName="vnn_vw_UpNewsTypeDataTable" msprop:Generator_RowChangedName="vnn_vw_UpNewsTypeRowChanged" msprop:Generator_RowClassName="vnn_vw_UpNewsTypeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
@@ -428,7 +383,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_Alexa" msprop:Generator_UserTableName="vnn_vw_Alexa" msprop:Generator_RowEvArgName="vnn_vw_AlexaRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_Alexa" msprop:Generator_TablePropName="vnn_vw_Alexa" msprop:Generator_RowDeletingName="vnn_vw_AlexaRowDeleting" msprop:Generator_RowChangingName="vnn_vw_AlexaRowChanging" msprop:Generator_RowDeletedName="vnn_vw_AlexaRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_AlexaRowChangeEventHandler" msprop:Generator_RowChangedName="vnn_vw_AlexaRowChanged" msprop:Generator_TableClassName="vnn_vw_AlexaDataTable" msprop:Generator_RowClassName="vnn_vw_AlexaRow">
+        <xs:element name="vnn_vw_Alexa" msprop:Generator_UserTableName="vnn_vw_Alexa" msprop:Generator_RowEvArgName="vnn_vw_AlexaRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_Alexa" msprop:Generator_TablePropName="vnn_vw_Alexa" msprop:Generator_RowDeletingName="vnn_vw_AlexaRowDeleting" msprop:Generator_RowChangingName="vnn_vw_AlexaRowChanging" msprop:Generator_RowDeletedName="vnn_vw_AlexaRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_AlexaRowChangeEventHandler" msprop:Generator_TableClassName="vnn_vw_AlexaDataTable" msprop:Generator_RowChangedName="vnn_vw_AlexaRowChanged" msprop:Generator_RowClassName="vnn_vw_AlexaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AlexaID" msprop:Generator_ColumnVarNameInTable="columnAlexaID" msprop:Generator_ColumnPropNameInRow="AlexaID" msprop:Generator_ColumnPropNameInTable="AlexaIDColumn" msprop:Generator_UserColumnName="AlexaID" type="xs:int" />
@@ -443,7 +398,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_AlexaDetail" msprop:Generator_UserTableName="vnn_vw_AlexaDetail" msprop:Generator_RowEvArgName="vnn_vw_AlexaDetailRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_AlexaDetail" msprop:Generator_TablePropName="vnn_vw_AlexaDetail" msprop:Generator_RowDeletingName="vnn_vw_AlexaDetailRowDeleting" msprop:Generator_RowChangingName="vnn_vw_AlexaDetailRowChanging" msprop:Generator_RowDeletedName="vnn_vw_AlexaDetailRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_AlexaDetailRowChangeEventHandler" msprop:Generator_RowChangedName="vnn_vw_AlexaDetailRowChanged" msprop:Generator_TableClassName="vnn_vw_AlexaDetailDataTable" msprop:Generator_RowClassName="vnn_vw_AlexaDetailRow">
+        <xs:element name="vnn_vw_AlexaDetail" msprop:Generator_UserTableName="vnn_vw_AlexaDetail" msprop:Generator_RowEvArgName="vnn_vw_AlexaDetailRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_AlexaDetail" msprop:Generator_TablePropName="vnn_vw_AlexaDetail" msprop:Generator_RowDeletingName="vnn_vw_AlexaDetailRowDeleting" msprop:Generator_RowChangingName="vnn_vw_AlexaDetailRowChanging" msprop:Generator_RowDeletedName="vnn_vw_AlexaDetailRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_AlexaDetailRowChangeEventHandler" msprop:Generator_TableClassName="vnn_vw_AlexaDetailDataTable" msprop:Generator_RowChangedName="vnn_vw_AlexaDetailRowChanged" msprop:Generator_RowClassName="vnn_vw_AlexaDetailRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AlexaDetailID" msprop:Generator_ColumnVarNameInTable="columnAlexaDetailID" msprop:Generator_ColumnPropNameInRow="AlexaDetailID" msprop:Generator_ColumnPropNameInTable="AlexaDetailIDColumn" msprop:Generator_UserColumnName="AlexaDetailID" type="xs:int" />
@@ -462,7 +417,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_SeoConfig" msprop:Generator_TableClassName="vnn_vw_SeoConfigDataTable" msprop:Generator_RowEvArgName="vnn_vw_SeoConfigRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_SeoConfig" msprop:Generator_TablePropName="vnn_vw_SeoConfig" msprop:Generator_RowDeletingName="vnn_vw_SeoConfigRowDeleting" msprop:Generator_UserTableName="vnn_vw_SeoConfig" msprop:Generator_RowChangingName="vnn_vw_SeoConfigRowChanging" msprop:Generator_RowDeletedName="vnn_vw_SeoConfigRowDeleted" msprop:Generator_RowChangedName="vnn_vw_SeoConfigRowChanged" msprop:Generator_RowEvHandlerName="vnn_vw_SeoConfigRowChangeEventHandler" msprop:Generator_RowClassName="vnn_vw_SeoConfigRow">
+        <xs:element name="vnn_vw_SeoConfig" msprop:Generator_TableClassName="vnn_vw_SeoConfigDataTable" msprop:Generator_RowEvArgName="vnn_vw_SeoConfigRowChangeEvent" msprop:Generator_TableVarName="tablevnn_vw_SeoConfig" msprop:Generator_TablePropName="vnn_vw_SeoConfig" msprop:Generator_RowDeletingName="vnn_vw_SeoConfigRowDeleting" msprop:Generator_RowChangingName="vnn_vw_SeoConfigRowChanging" msprop:Generator_RowDeletedName="vnn_vw_SeoConfigRowDeleted" msprop:Generator_RowEvHandlerName="vnn_vw_SeoConfigRowChangeEventHandler" msprop:Generator_RowChangedName="vnn_vw_SeoConfigRowChanged" msprop:Generator_UserTableName="vnn_vw_SeoConfig" msprop:Generator_RowClassName="vnn_vw_SeoConfigRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SeoConfigID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSeoConfigID" msprop:Generator_ColumnPropNameInRow="SeoConfigID" msprop:Generator_ColumnPropNameInTable="SeoConfigIDColumn" msprop:Generator_UserColumnName="SeoConfigID" type="xs:int" />
@@ -505,7 +460,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_Contact" msprop:Generator_TableClassName="vnn_vw_ContactDataTable" msprop:Generator_TableVarName="tablevnn_vw_Contact" msprop:Generator_TablePropName="vnn_vw_Contact" msprop:Generator_RowDeletingName="vnn_vw_ContactRowDeleting" msprop:Generator_UserTableName="vnn_vw_Contact" msprop:Generator_RowChangingName="vnn_vw_ContactRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_ContactRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_ContactRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_ContactRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_ContactRowChanged" msprop:Generator_RowClassName="vnn_vw_ContactRow">
+        <xs:element name="vnn_vw_Contact" msprop:Generator_TableClassName="vnn_vw_ContactDataTable" msprop:Generator_TableVarName="tablevnn_vw_Contact" msprop:Generator_RowChangedName="vnn_vw_ContactRowChanged" msprop:Generator_TablePropName="vnn_vw_Contact" msprop:Generator_RowDeletingName="vnn_vw_ContactRowDeleting" msprop:Generator_RowChangingName="vnn_vw_ContactRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_ContactRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_ContactRowDeleted" msprop:Generator_RowClassName="vnn_vw_ContactRow" msprop:Generator_UserTableName="vnn_vw_Contact" msprop:Generator_RowEvArgName="vnn_vw_ContactRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:int" />
@@ -557,7 +512,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_CommentNews" msprop:Generator_TableClassName="vnn_vw_CommentNewsDataTable" msprop:Generator_TableVarName="tablevnn_vw_CommentNews" msprop:Generator_TablePropName="vnn_vw_CommentNews" msprop:Generator_RowDeletingName="vnn_vw_CommentNewsRowDeleting" msprop:Generator_UserTableName="vnn_vw_CommentNews" msprop:Generator_RowChangingName="vnn_vw_CommentNewsRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_CommentNewsRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_CommentNewsRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_CommentNewsRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_CommentNewsRowChanged" msprop:Generator_RowClassName="vnn_vw_CommentNewsRow">
+        <xs:element name="vnn_vw_CommentNews" msprop:Generator_TableClassName="vnn_vw_CommentNewsDataTable" msprop:Generator_TableVarName="tablevnn_vw_CommentNews" msprop:Generator_RowChangedName="vnn_vw_CommentNewsRowChanged" msprop:Generator_TablePropName="vnn_vw_CommentNews" msprop:Generator_RowDeletingName="vnn_vw_CommentNewsRowDeleting" msprop:Generator_RowChangingName="vnn_vw_CommentNewsRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_CommentNewsRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_CommentNewsRowDeleted" msprop:Generator_RowClassName="vnn_vw_CommentNewsRow" msprop:Generator_UserTableName="vnn_vw_CommentNews" msprop:Generator_RowEvArgName="vnn_vw_CommentNewsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CommentNewsID" msprop:Generator_ColumnVarNameInTable="columnCommentNewsID" msprop:Generator_ColumnPropNameInRow="CommentNewsID" msprop:Generator_ColumnPropNameInTable="CommentNewsIDColumn" msprop:Generator_UserColumnName="CommentNewsID" type="xs:int" />
@@ -589,7 +544,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_News" msprop:Generator_TableClassName="vnn_vw_NewsDataTable" msprop:Generator_TableVarName="tablevnn_vw_News" msprop:Generator_TablePropName="vnn_vw_News" msprop:Generator_RowDeletingName="vnn_vw_NewsRowDeleting" msprop:Generator_UserTableName="vnn_vw_News" msprop:Generator_RowChangingName="vnn_vw_NewsRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_NewsRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_NewsRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_NewsRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_NewsRowChanged" msprop:Generator_RowClassName="vnn_vw_NewsRow">
+        <xs:element name="vnn_vw_News" msprop:Generator_TableClassName="vnn_vw_NewsDataTable" msprop:Generator_TableVarName="tablevnn_vw_News" msprop:Generator_RowChangedName="vnn_vw_NewsRowChanged" msprop:Generator_TablePropName="vnn_vw_News" msprop:Generator_RowDeletingName="vnn_vw_NewsRowDeleting" msprop:Generator_RowChangingName="vnn_vw_NewsRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_NewsRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_NewsRowDeleted" msprop:Generator_RowClassName="vnn_vw_NewsRow" msprop:Generator_UserTableName="vnn_vw_News" msprop:Generator_RowEvArgName="vnn_vw_NewsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NewsID" msprop:Generator_ColumnVarNameInTable="columnNewsID" msprop:Generator_ColumnPropNameInRow="NewsID" msprop:Generator_ColumnPropNameInTable="NewsIDColumn" msprop:Generator_UserColumnName="NewsID" type="xs:int" />
@@ -721,7 +676,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ltk_vw_User" msprop:Generator_TableClassName="ltk_vw_UserDataTable" msprop:Generator_TableVarName="tableltk_vw_User" msprop:Generator_TablePropName="ltk_vw_User" msprop:Generator_RowDeletingName="ltk_vw_UserRowDeleting" msprop:Generator_UserTableName="ltk_vw_User" msprop:Generator_RowChangingName="ltk_vw_UserRowChanging" msprop:Generator_RowEvHandlerName="ltk_vw_UserRowChangeEventHandler" msprop:Generator_RowDeletedName="ltk_vw_UserRowDeleted" msprop:Generator_RowEvArgName="ltk_vw_UserRowChangeEvent" msprop:Generator_RowChangedName="ltk_vw_UserRowChanged" msprop:Generator_RowClassName="ltk_vw_UserRow">
+        <xs:element name="ltk_vw_User" msprop:Generator_TableClassName="ltk_vw_UserDataTable" msprop:Generator_TableVarName="tableltk_vw_User" msprop:Generator_RowChangedName="ltk_vw_UserRowChanged" msprop:Generator_TablePropName="ltk_vw_User" msprop:Generator_RowDeletingName="ltk_vw_UserRowDeleting" msprop:Generator_RowChangingName="ltk_vw_UserRowChanging" msprop:Generator_RowEvHandlerName="ltk_vw_UserRowChangeEventHandler" msprop:Generator_RowDeletedName="ltk_vw_UserRowDeleted" msprop:Generator_RowClassName="ltk_vw_UserRow" msprop:Generator_UserTableName="ltk_vw_User" msprop:Generator_RowEvArgName="ltk_vw_UserRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UserID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:int" />
@@ -787,7 +742,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_News_and_NewsType" msprop:Generator_TableClassName="vnn_vw_News_and_NewsTypeDataTable" msprop:Generator_TableVarName="tablevnn_vw_News_and_NewsType" msprop:Generator_TablePropName="vnn_vw_News_and_NewsType" msprop:Generator_RowDeletingName="vnn_vw_News_and_NewsTypeRowDeleting" msprop:Generator_UserTableName="vnn_vw_News_and_NewsType" msprop:Generator_RowChangingName="vnn_vw_News_and_NewsTypeRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_News_and_NewsTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_News_and_NewsTypeRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_News_and_NewsTypeRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_News_and_NewsTypeRowChanged" msprop:Generator_RowClassName="vnn_vw_News_and_NewsTypeRow">
+        <xs:element name="vnn_vw_News_and_NewsType" msprop:Generator_TableClassName="vnn_vw_News_and_NewsTypeDataTable" msprop:Generator_TableVarName="tablevnn_vw_News_and_NewsType" msprop:Generator_RowChangedName="vnn_vw_News_and_NewsTypeRowChanged" msprop:Generator_TablePropName="vnn_vw_News_and_NewsType" msprop:Generator_RowDeletingName="vnn_vw_News_and_NewsTypeRowDeleting" msprop:Generator_RowChangingName="vnn_vw_News_and_NewsTypeRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_News_and_NewsTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_News_and_NewsTypeRowDeleted" msprop:Generator_RowClassName="vnn_vw_News_and_NewsTypeRow" msprop:Generator_UserTableName="vnn_vw_News_and_NewsType" msprop:Generator_RowEvArgName="vnn_vw_News_and_NewsTypeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NewsID" msprop:Generator_ColumnVarNameInTable="columnNewsID" msprop:Generator_ColumnPropNameInRow="NewsID" msprop:Generator_ColumnPropNameInTable="NewsIDColumn" msprop:Generator_UserColumnName="NewsID" type="xs:int" />
@@ -877,7 +832,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_Tag" msprop:Generator_TableClassName="vnn_vw_TagDataTable" msprop:Generator_TableVarName="tablevnn_vw_Tag" msprop:Generator_TablePropName="vnn_vw_Tag" msprop:Generator_RowDeletingName="vnn_vw_TagRowDeleting" msprop:Generator_UserTableName="vnn_vw_Tag" msprop:Generator_RowChangingName="vnn_vw_TagRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_TagRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_TagRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_TagRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_TagRowChanged" msprop:Generator_RowClassName="vnn_vw_TagRow">
+        <xs:element name="vnn_vw_Tag" msprop:Generator_TableClassName="vnn_vw_TagDataTable" msprop:Generator_TableVarName="tablevnn_vw_Tag" msprop:Generator_RowChangedName="vnn_vw_TagRowChanged" msprop:Generator_TablePropName="vnn_vw_Tag" msprop:Generator_RowDeletingName="vnn_vw_TagRowDeleting" msprop:Generator_RowChangingName="vnn_vw_TagRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_TagRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_TagRowDeleted" msprop:Generator_RowClassName="vnn_vw_TagRow" msprop:Generator_UserTableName="vnn_vw_Tag" msprop:Generator_RowEvArgName="vnn_vw_TagRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TagID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTagID" msprop:Generator_ColumnPropNameInRow="TagID" msprop:Generator_ColumnPropNameInTable="TagIDColumn" msprop:Generator_UserColumnName="TagID" type="xs:int" />
@@ -891,7 +846,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_AutoAdv" msprop:Generator_TableClassName="vnn_vw_AutoAdvDataTable" msprop:Generator_TableVarName="tablevnn_vw_AutoAdv" msprop:Generator_TablePropName="vnn_vw_AutoAdv" msprop:Generator_RowDeletingName="vnn_vw_AutoAdvRowDeleting" msprop:Generator_UserTableName="vnn_vw_AutoAdv" msprop:Generator_RowChangingName="vnn_vw_AutoAdvRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_AutoAdvRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_AutoAdvRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_AutoAdvRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_AutoAdvRowChanged" msprop:Generator_RowClassName="vnn_vw_AutoAdvRow">
+        <xs:element name="vnn_vw_AutoAdv" msprop:Generator_TableClassName="vnn_vw_AutoAdvDataTable" msprop:Generator_TableVarName="tablevnn_vw_AutoAdv" msprop:Generator_RowChangedName="vnn_vw_AutoAdvRowChanged" msprop:Generator_TablePropName="vnn_vw_AutoAdv" msprop:Generator_RowDeletingName="vnn_vw_AutoAdvRowDeleting" msprop:Generator_RowChangingName="vnn_vw_AutoAdvRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_AutoAdvRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_AutoAdvRowDeleted" msprop:Generator_RowClassName="vnn_vw_AutoAdvRow" msprop:Generator_UserTableName="vnn_vw_AutoAdv" msprop:Generator_RowEvArgName="vnn_vw_AutoAdvRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CurrentClick" msprop:Generator_ColumnVarNameInTable="columnCurrentClick" msprop:Generator_ColumnPropNameInRow="CurrentClick" msprop:Generator_ColumnPropNameInTable="CurrentClickColumn" msprop:Generator_UserColumnName="CurrentClick" type="xs:int" minOccurs="0" />
@@ -908,7 +863,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_NewsTag" msprop:Generator_TableClassName="vnn_vw_NewsTagDataTable" msprop:Generator_TableVarName="tablevnn_vw_NewsTag" msprop:Generator_TablePropName="vnn_vw_NewsTag" msprop:Generator_RowDeletingName="vnn_vw_NewsTagRowDeleting" msprop:Generator_UserTableName="vnn_vw_NewsTag" msprop:Generator_RowChangingName="vnn_vw_NewsTagRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_NewsTagRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_NewsTagRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_NewsTagRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_NewsTagRowChanged" msprop:Generator_RowClassName="vnn_vw_NewsTagRow">
+        <xs:element name="vnn_vw_NewsTag" msprop:Generator_TableClassName="vnn_vw_NewsTagDataTable" msprop:Generator_TableVarName="tablevnn_vw_NewsTag" msprop:Generator_RowChangedName="vnn_vw_NewsTagRowChanged" msprop:Generator_TablePropName="vnn_vw_NewsTag" msprop:Generator_RowDeletingName="vnn_vw_NewsTagRowDeleting" msprop:Generator_RowChangingName="vnn_vw_NewsTagRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_NewsTagRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_NewsTagRowDeleted" msprop:Generator_RowClassName="vnn_vw_NewsTagRow" msprop:Generator_UserTableName="vnn_vw_NewsTag" msprop:Generator_RowEvArgName="vnn_vw_NewsTagRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NewsTagID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNewsTagID" msprop:Generator_ColumnPropNameInRow="NewsTagID" msprop:Generator_ColumnPropNameInTable="NewsTagIDColumn" msprop:Generator_UserColumnName="NewsTagID" type="xs:int" />
@@ -917,7 +872,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_TagCount" msprop:Generator_TableClassName="vnn_vw_TagCountDataTable" msprop:Generator_TableVarName="tablevnn_vw_TagCount" msprop:Generator_TablePropName="vnn_vw_TagCount" msprop:Generator_RowDeletingName="vnn_vw_TagCountRowDeleting" msprop:Generator_UserTableName="vnn_vw_TagCount" msprop:Generator_RowChangingName="vnn_vw_TagCountRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_TagCountRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_TagCountRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_TagCountRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_TagCountRowChanged" msprop:Generator_RowClassName="vnn_vw_TagCountRow">
+        <xs:element name="vnn_vw_TagCount" msprop:Generator_TableClassName="vnn_vw_TagCountDataTable" msprop:Generator_TableVarName="tablevnn_vw_TagCount" msprop:Generator_RowChangedName="vnn_vw_TagCountRowChanged" msprop:Generator_TablePropName="vnn_vw_TagCount" msprop:Generator_RowDeletingName="vnn_vw_TagCountRowDeleting" msprop:Generator_RowChangingName="vnn_vw_TagCountRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_TagCountRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_TagCountRowDeleted" msprop:Generator_RowClassName="vnn_vw_TagCountRow" msprop:Generator_UserTableName="vnn_vw_TagCount" msprop:Generator_RowEvArgName="vnn_vw_TagCountRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TagID" msprop:Generator_ColumnVarNameInTable="columnTagID" msprop:Generator_ColumnPropNameInRow="TagID" msprop:Generator_ColumnPropNameInTable="TagIDColumn" msprop:Generator_UserColumnName="TagID" type="xs:int" />
@@ -932,7 +887,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_VideoType" msprop:Generator_TableClassName="vnn_vw_VideoTypeDataTable" msprop:Generator_TableVarName="tablevnn_vw_VideoType" msprop:Generator_TablePropName="vnn_vw_VideoType" msprop:Generator_RowDeletingName="vnn_vw_VideoTypeRowDeleting" msprop:Generator_UserTableName="vnn_vw_VideoType" msprop:Generator_RowChangingName="vnn_vw_VideoTypeRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_VideoTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_VideoTypeRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_VideoTypeRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_VideoTypeRowChanged" msprop:Generator_RowClassName="vnn_vw_VideoTypeRow">
+        <xs:element name="vnn_vw_VideoType" msprop:Generator_TableClassName="vnn_vw_VideoTypeDataTable" msprop:Generator_TableVarName="tablevnn_vw_VideoType" msprop:Generator_RowChangedName="vnn_vw_VideoTypeRowChanged" msprop:Generator_TablePropName="vnn_vw_VideoType" msprop:Generator_RowDeletingName="vnn_vw_VideoTypeRowDeleting" msprop:Generator_RowChangingName="vnn_vw_VideoTypeRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_VideoTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_VideoTypeRowDeleted" msprop:Generator_RowClassName="vnn_vw_VideoTypeRow" msprop:Generator_UserTableName="vnn_vw_VideoType" msprop:Generator_RowEvArgName="vnn_vw_VideoTypeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="VideoTypeID" msprop:Generator_ColumnVarNameInTable="columnVideoTypeID" msprop:Generator_ColumnPropNameInRow="VideoTypeID" msprop:Generator_ColumnPropNameInTable="VideoTypeIDColumn" msprop:Generator_UserColumnName="VideoTypeID" type="xs:int" />
@@ -991,7 +946,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_Video" msprop:Generator_TableClassName="vnn_vw_VideoDataTable" msprop:Generator_TableVarName="tablevnn_vw_Video" msprop:Generator_TablePropName="vnn_vw_Video" msprop:Generator_RowDeletingName="vnn_vw_VideoRowDeleting" msprop:Generator_UserTableName="vnn_vw_Video" msprop:Generator_RowChangingName="vnn_vw_VideoRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_VideoRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_VideoRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_VideoRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_VideoRowChanged" msprop:Generator_RowClassName="vnn_vw_VideoRow">
+        <xs:element name="vnn_vw_Video" msprop:Generator_TableClassName="vnn_vw_VideoDataTable" msprop:Generator_TableVarName="tablevnn_vw_Video" msprop:Generator_RowChangedName="vnn_vw_VideoRowChanged" msprop:Generator_TablePropName="vnn_vw_Video" msprop:Generator_RowDeletingName="vnn_vw_VideoRowDeleting" msprop:Generator_RowChangingName="vnn_vw_VideoRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_VideoRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_VideoRowDeleted" msprop:Generator_RowClassName="vnn_vw_VideoRow" msprop:Generator_UserTableName="vnn_vw_Video" msprop:Generator_RowEvArgName="vnn_vw_VideoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="VideoID" msprop:Generator_ColumnVarNameInTable="columnVideoID" msprop:Generator_ColumnPropNameInRow="VideoID" msprop:Generator_ColumnPropNameInTable="VideoIDColumn" msprop:Generator_UserColumnName="VideoID" type="xs:int" />
@@ -1087,7 +1042,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_VideoTag" msprop:Generator_TableClassName="vnn_vw_VideoTagDataTable" msprop:Generator_TableVarName="tablevnn_vw_VideoTag" msprop:Generator_TablePropName="vnn_vw_VideoTag" msprop:Generator_RowDeletingName="vnn_vw_VideoTagRowDeleting" msprop:Generator_UserTableName="vnn_vw_VideoTag" msprop:Generator_RowChangingName="vnn_vw_VideoTagRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_VideoTagRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_VideoTagRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_VideoTagRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_VideoTagRowChanged" msprop:Generator_RowClassName="vnn_vw_VideoTagRow">
+        <xs:element name="vnn_vw_VideoTag" msprop:Generator_TableClassName="vnn_vw_VideoTagDataTable" msprop:Generator_TableVarName="tablevnn_vw_VideoTag" msprop:Generator_RowChangedName="vnn_vw_VideoTagRowChanged" msprop:Generator_TablePropName="vnn_vw_VideoTag" msprop:Generator_RowDeletingName="vnn_vw_VideoTagRowDeleting" msprop:Generator_RowChangingName="vnn_vw_VideoTagRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_VideoTagRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_VideoTagRowDeleted" msprop:Generator_RowClassName="vnn_vw_VideoTagRow" msprop:Generator_UserTableName="vnn_vw_VideoTag" msprop:Generator_RowEvArgName="vnn_vw_VideoTagRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="VideoTagID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnVideoTagID" msprop:Generator_ColumnPropNameInRow="VideoTagID" msprop:Generator_ColumnPropNameInTable="VideoTagIDColumn" msprop:Generator_UserColumnName="VideoTagID" type="xs:int" />
@@ -1096,7 +1051,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_Config" msprop:Generator_TableClassName="vnn_vw_ConfigDataTable" msprop:Generator_TableVarName="tablevnn_vw_Config" msprop:Generator_TablePropName="vnn_vw_Config" msprop:Generator_RowDeletingName="vnn_vw_ConfigRowDeleting" msprop:Generator_UserTableName="vnn_vw_Config" msprop:Generator_RowChangingName="vnn_vw_ConfigRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_ConfigRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_ConfigRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_ConfigRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_ConfigRowChanged" msprop:Generator_RowClassName="vnn_vw_ConfigRow">
+        <xs:element name="vnn_vw_Config" msprop:Generator_TableClassName="vnn_vw_ConfigDataTable" msprop:Generator_TableVarName="tablevnn_vw_Config" msprop:Generator_RowChangedName="vnn_vw_ConfigRowChanged" msprop:Generator_TablePropName="vnn_vw_Config" msprop:Generator_RowDeletingName="vnn_vw_ConfigRowDeleting" msprop:Generator_RowChangingName="vnn_vw_ConfigRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_ConfigRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_ConfigRowDeleted" msprop:Generator_RowClassName="vnn_vw_ConfigRow" msprop:Generator_UserTableName="vnn_vw_Config" msprop:Generator_RowEvArgName="vnn_vw_ConfigRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ConfigID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnConfigID" msprop:Generator_ColumnPropNameInRow="ConfigID" msprop:Generator_ColumnPropNameInTable="ConfigIDColumn" msprop:Generator_UserColumnName="ConfigID" type="xs:int" />
@@ -1118,7 +1073,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_UserPermission" msprop:Generator_TableClassName="vnn_vw_UserPermissionDataTable" msprop:Generator_TableVarName="tablevnn_vw_UserPermission" msprop:Generator_TablePropName="vnn_vw_UserPermission" msprop:Generator_RowDeletingName="vnn_vw_UserPermissionRowDeleting" msprop:Generator_UserTableName="vnn_vw_UserPermission" msprop:Generator_RowChangingName="vnn_vw_UserPermissionRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_UserPermissionRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_UserPermissionRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_UserPermissionRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_UserPermissionRowChanged" msprop:Generator_RowClassName="vnn_vw_UserPermissionRow">
+        <xs:element name="vnn_vw_UserPermission" msprop:Generator_TableClassName="vnn_vw_UserPermissionDataTable" msprop:Generator_TableVarName="tablevnn_vw_UserPermission" msprop:Generator_RowChangedName="vnn_vw_UserPermissionRowChanged" msprop:Generator_TablePropName="vnn_vw_UserPermission" msprop:Generator_RowDeletingName="vnn_vw_UserPermissionRowDeleting" msprop:Generator_RowChangingName="vnn_vw_UserPermissionRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_UserPermissionRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_UserPermissionRowDeleted" msprop:Generator_RowClassName="vnn_vw_UserPermissionRow" msprop:Generator_UserTableName="vnn_vw_UserPermission" msprop:Generator_RowEvArgName="vnn_vw_UserPermissionRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:int" />
@@ -1146,7 +1101,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vnn_vw_NewsType" msprop:Generator_TableClassName="vnn_vw_NewsTypeDataTable" msprop:Generator_TableVarName="tablevnn_vw_NewsType" msprop:Generator_TablePropName="vnn_vw_NewsType" msprop:Generator_RowDeletingName="vnn_vw_NewsTypeRowDeleting" msprop:Generator_UserTableName="vnn_vw_NewsType" msprop:Generator_RowChangingName="vnn_vw_NewsTypeRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_NewsTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_NewsTypeRowDeleted" msprop:Generator_RowEvArgName="vnn_vw_NewsTypeRowChangeEvent" msprop:Generator_RowChangedName="vnn_vw_NewsTypeRowChanged" msprop:Generator_RowClassName="vnn_vw_NewsTypeRow">
+        <xs:element name="vnn_vw_NewsType" msprop:Generator_TableClassName="vnn_vw_NewsTypeDataTable" msprop:Generator_TableVarName="tablevnn_vw_NewsType" msprop:Generator_RowChangedName="vnn_vw_NewsTypeRowChanged" msprop:Generator_TablePropName="vnn_vw_NewsType" msprop:Generator_RowDeletingName="vnn_vw_NewsTypeRowDeleting" msprop:Generator_RowChangingName="vnn_vw_NewsTypeRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_NewsTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_NewsTypeRowDeleted" msprop:Generator_RowClassName="vnn_vw_NewsTypeRow" msprop:Generator_UserTableName="vnn_vw_NewsType" msprop:Generator_RowEvArgName="vnn_vw_NewsTypeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NewsTypeID" msprop:Generator_ColumnVarNameInTable="columnNewsTypeID" msprop:Generator_ColumnPropNameInRow="NewsTypeID" msprop:Generator_ColumnPropNameInTable="NewsTypeIDColumn" msprop:Generator_UserColumnName="NewsTypeID" type="xs:int" />
@@ -1199,6 +1154,59 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="vnn_vw_NewsTypeRefSite" msprop:Generator_TableClassName="vnn_vw_NewsTypeRefSiteDataTable" msprop:Generator_TableVarName="tablevnn_vw_NewsTypeRefSite" msprop:Generator_TablePropName="vnn_vw_NewsTypeRefSite" msprop:Generator_RowDeletingName="vnn_vw_NewsTypeRefSiteRowDeleting" msprop:Generator_RowChangingName="vnn_vw_NewsTypeRefSiteRowChanging" msprop:Generator_RowEvHandlerName="vnn_vw_NewsTypeRefSiteRowChangeEventHandler" msprop:Generator_RowDeletedName="vnn_vw_NewsTypeRefSiteRowDeleted" msprop:Generator_UserTableName="vnn_vw_NewsTypeRefSite" msprop:Generator_RowChangedName="vnn_vw_NewsTypeRefSiteRowChanged" msprop:Generator_RowEvArgName="vnn_vw_NewsTypeRefSiteRowChangeEvent" msprop:Generator_RowClassName="vnn_vw_NewsTypeRefSiteRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NewsTypeID" msprop:Generator_ColumnVarNameInTable="columnNewsTypeID" msprop:Generator_ColumnPropNameInRow="NewsTypeID" msprop:Generator_ColumnPropNameInTable="NewsTypeIDColumn" msprop:Generator_UserColumnName="NewsTypeID" type="xs:int" />
+              <xs:element name="NewsTypeName" msprop:Generator_ColumnVarNameInTable="columnNewsTypeName" msprop:Generator_ColumnPropNameInRow="NewsTypeName" msprop:Generator_ColumnPropNameInTable="NewsTypeNameColumn" msprop:Generator_UserColumnName="NewsTypeName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RefAddress" msprop:Generator_ColumnVarNameInTable="columnRefAddress" msprop:Generator_ColumnPropNameInRow="RefAddress" msprop:Generator_ColumnPropNameInTable="RefAddressColumn" msprop:Generator_UserColumnName="RefAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RefSite" msprop:Generator_ColumnVarNameInTable="columnRefSite" msprop:Generator_ColumnPropNameInRow="RefSite" msprop:Generator_ColumnPropNameInTable="RefSiteColumn" msprop:Generator_UserColumnName="RefSite">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsAutoRun" msprop:Generator_ColumnVarNameInTable="columnIsAutoRun" msprop:Generator_ColumnPropNameInRow="IsAutoRun" msprop:Generator_ColumnPropNameInTable="IsAutoRunColumn" msprop:Generator_UserColumnName="IsAutoRun" type="xs:boolean" />
+              <xs:element name="UpdatedDate" msprop:Generator_ColumnVarNameInTable="columnUpdatedDate" msprop:Generator_ColumnPropNameInRow="UpdatedDate" msprop:Generator_ColumnPropNameInTable="UpdatedDateColumn" msprop:Generator_UserColumnName="UpdatedDate" type="xs:dateTime" />
+              <xs:element name="UpdateRows" msprop:Generator_ColumnVarNameInTable="columnUpdateRows" msprop:Generator_ColumnPropNameInRow="UpdateRows" msprop:Generator_ColumnPropNameInTable="UpdateRowsColumn" msprop:Generator_UserColumnName="UpdateRows" type="xs:int" />
+              <xs:element name="ReferenceSiteID" msprop:Generator_ColumnVarNameInTable="columnReferenceSiteID" msprop:Generator_ColumnPropNameInRow="ReferenceSiteID" msprop:Generator_ColumnPropNameInTable="ReferenceSiteIDColumn" msprop:Generator_UserColumnName="ReferenceSiteID" type="xs:int" />
+              <xs:element name="RefSiteDescription" msprop:Generator_ColumnVarNameInTable="columnRefSiteDescription" msprop:Generator_ColumnPropNameInRow="RefSiteDescription" msprop:Generator_ColumnPropNameInTable="RefSiteDescriptionColumn" msprop:Generator_UserColumnName="RefSiteDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ConfigSite" msprop:Generator_ColumnVarNameInTable="columnConfigSite" msprop:Generator_ColumnPropNameInRow="ConfigSite" msprop:Generator_ColumnPropNameInTable="ConfigSiteColumn" msprop:Generator_UserColumnName="ConfigSite" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1225,11 +1233,6 @@
     <xs:unique name="vnn_vw_UpUser_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:vnn_vw_UpUser" />
       <xs:field xpath="mstns:UserID" />
-    </xs:unique>
-    <xs:unique name="vnn_vw_NewsTypeRefSite_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:vnn_vw_NewsTypeRefSite" />
-      <xs:field xpath="mstns:NewsTypeID" />
-      <xs:field xpath="mstns:ReferenceSiteID" />
     </xs:unique>
     <xs:unique name="vnn_vw_UpNewsType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:vnn_vw_UpNewsType" />
@@ -1290,6 +1293,11 @@
     <xs:unique name="vnn_vw_Config_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:vnn_vw_Config" />
       <xs:field xpath="mstns:ConfigID" />
+    </xs:unique>
+    <xs:unique name="vnn_vw_NewsTypeRefSite_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vnn_vw_NewsTypeRefSite" />
+      <xs:field xpath="mstns:NewsTypeID" />
+      <xs:field xpath="mstns:ReferenceSiteID" />
     </xs:unique>
   </xs:element>
 </xs:schema>

@@ -261,7 +261,7 @@ namespace HocLapTrinhWeb.BLL
                     for (var i = 1; i < ArrayListNotVideoTypeID.Count + 1; i++)
                     {
                         strWhereClause += "@" + i + ",";
-                        _ClassBaseDAL.AddParams(i.ToString(), SqlDbType.Int, Convert.ToInt16(ArrayListNotVideoTypeID[i - 1].ToString()), ParameterDirection.Input);
+                        _ClassBaseDAL.AddParams(i.ToString(), SqlDbType.Int, int.Parse(ArrayListNotVideoTypeID[i - 1].ToString()), ParameterDirection.Input);
                     }
                     _ClassBaseDAL.WhereClause = strWhereClause.Substring(0, strWhereClause.Length - 1) + ")";
 
