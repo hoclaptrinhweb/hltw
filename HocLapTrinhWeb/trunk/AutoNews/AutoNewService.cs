@@ -41,9 +41,8 @@ namespace AutoNews
         {
             try
             {
-                var path = ConfigurationManager.AppSettings["Uploads"];
-                path += "\\nhatnam.txt";
-                var file = new StreamWriter(path, true);
+                HTLWTimer t = new HTLWTimer();
+                t.StartTimer();
             }
             catch (Exception ex)
             {
