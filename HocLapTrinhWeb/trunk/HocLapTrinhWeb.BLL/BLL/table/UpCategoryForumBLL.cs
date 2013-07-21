@@ -236,7 +236,7 @@ namespace HocLapTrinhWeb.BLL
                     for (var i = 1; i < arrayID.Count + 1; i++)
                     {
                         strWhereClause += "@" + i + ",";
-                        _classBaseDAL.AddParams(i.ToString(CultureInfo.InvariantCulture), SqlDbType.Int, Convert.ToInt16(arrayID[i - 1].ToString()), ParameterDirection.Input);
+                        _classBaseDAL.AddParams(i.ToString(CultureInfo.InvariantCulture), SqlDbType.Int, int.Parse(arrayID[i - 1].ToString()), ParameterDirection.Input);
                     }
                     _classBaseDAL.WhereClause = strWhereClause.Substring(0, strWhereClause.Length - 1) + ")";
                     if (_classBaseDAL.DeleteDirect())
