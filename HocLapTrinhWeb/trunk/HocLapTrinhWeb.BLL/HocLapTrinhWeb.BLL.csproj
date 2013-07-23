@@ -157,6 +157,7 @@
     <Content Include="DLLS\CollectionPager.dll" />
     <Content Include="DLLS\DropOptGroup.dll" />
     <Content Include="DLLS\FredCK.FCKeditorV2.dll" />
+    <Content Include="DLLS\MaHoa_HocLapTrinhWeb.DAL.dll" />
     <Content Include="DLLS\HtmlAgilityPack.dll" />
     <Content Include="DLLS\INNO.WebControls.dll" />
     <Content Include="DLLS\itextsharp.dll" />
