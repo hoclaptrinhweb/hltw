@@ -57,6 +57,8 @@
                 LINK VAO <a href="http://www.cacuoc1.com">M88</a> NHÀ CÁI M88
                 <br />
                 Wapso1.mobi <a href="http://wapso1.mobi/tai-opera-mini">tai opera mini</a> mien phi
+                <br />
+                <a href="http://www.bhiu.edu.vn/hop-tac-quoc-te/hp-tac-quc-t/doi-tac.html">Lien ket dao tao quoc te</a>
             </div>
         </div>
     </div>
