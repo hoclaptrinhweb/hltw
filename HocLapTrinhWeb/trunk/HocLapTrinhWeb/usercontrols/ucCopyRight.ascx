@@ -6,17 +6,9 @@
             <li class="twitter"><a target="_blank" href="https://twitter.com/hoclaptrinhweb">twitter</a></li>
             <li class="gplus"><a target="_blank" href="https://plus.google.com/s/110890830763375677721">
                 google plus</a></li>
-            <li class="linkedin"><a target="_blank" href="http://www.linkedin.com/in/hoclaptrinhweb">
-                LinkedIn</a></li>
             <li class="youtube"><a target="_blank" href="http://www.youtube.com/hoclaptrinhweb">
                 youtube</a></li>
-            <li class="flickr"><a target="_blank" href="http://www.flickr.com/photos/79809479@N07/">
-                flickr</a></li>
-            <li class="picasa"><a target="_blank" href="https://picasaweb.google.com/webhoclaptrinh">
-                picasa</a></li>
             <li class="digg"><a rel="author" href="http://www.hoclaptrinhweb.com/about.html">about</a></li>
-            <li class="vimeo"><a target="_blank" href="https://vimeo.com/hoclaptrinhweb">Vimeo</a></li>
-            <li class="tumblr"><a target="_blank" href="http://hoclaptrinhweb.tumblr.com/">tumblr</a></li>
             <li>, <a class="lienket" href="http://blog.hmclip.vn" title="Chia sẻ là niềm vui"
                 target="_blank">Chia sẻ là niềm vui</a> </li>
             <li>,<a class="lienket" target="_blank" href="http://www.studynet.vn" title="hoc tieng anh online">
