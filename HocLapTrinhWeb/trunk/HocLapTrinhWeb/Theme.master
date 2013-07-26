@@ -108,7 +108,7 @@
         var adblock = {
             'adblock1': {
                 'divIdShow': 'adVatgia_block_1',
-                'numAd': 4,
+                'numAd': 2,
                 'typeShow': 0,
                 'style': { 'width': 300 }
             },
