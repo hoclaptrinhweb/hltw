@@ -85,7 +85,7 @@
                     'stretching': 'uniform',
                     'autostart': 'false',
                     'file': '<%= hdLink.Value %>',
-                    'logo.file': '<%= CurrentPage.UrlRoot %>/Code/jwp58l/logo.png',
+                    'logo.file': '<%= CurrentPage.UrlRoot %>/images/icon_video.png',
                     'logo.hide': 'false',
                     'logo.position': 'top-right',
                     'logo.link': 'http://www.hoclaptrinhweb.com',
