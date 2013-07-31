@@ -17,6 +17,12 @@ public partial class administrator_usercontrols_ucLogin : HocLapTrinhWeb.UI.UCBa
 
     protected void BtnLoginClick(object sender, EventArgs e)
     {
+        if (txtImgVerify.Text != ImageVerifier1.Text)
+        {
+            SaveValidate.IsValid = false;
+            SaveValidate.ErrorMessage = "Mã xác nhận nhập không đúng, hãy nhập lại!";
+            return;
+        }
         var p = Request.QueryString["nextpage"] == null ? "" : Server.UrlDecode(Request.QueryString["nextpage"]);
         if (!Login()) return;
         var aCookie1 = new HttpCookie("UserName");
