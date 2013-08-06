@@ -17,3 +17,10 @@
 <div runat="server" id="divPaging" data-role="controlgroup" data-type="horizontal"
     style="text-align: center;">
 </div>
+<style>
+    .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-thumb
+    {
+        min-height: 59px !important;
+        padding-left: 100px !important;
+    }
+</style>
