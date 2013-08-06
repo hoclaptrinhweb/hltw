@@ -143,5 +143,16 @@ namespace HocLapTrinhWeb.BLL.Properties {
                 return ((string)(this["HocLapTrinhWeb_comConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=103.8.49.97;Initial Catalog=HocLapTrinhWeb.com;Persist Security Info=" +
+            "True;User ID=vnn;Password=vnn123456")]
+        public string HocLapTrinhWeb_comConnectionString1 {
+            get {
+                return ((string)(this["HocLapTrinhWeb_comConnectionString1"]));
+            }
+        }
     }
 }

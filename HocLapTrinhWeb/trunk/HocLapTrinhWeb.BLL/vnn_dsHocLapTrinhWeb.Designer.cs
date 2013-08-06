@@ -78,9 +78,9 @@ namespace HocLapTrinhWeb.BLL {
         
         private vnn_vw_UserPermissionDataTable tablevnn_vw_UserPermission;
         
-        private vnn_vw_NewsTypeDataTable tablevnn_vw_NewsType;
-        
         private vnn_vw_NewsTypeRefSiteDataTable tablevnn_vw_NewsTypeRefSite;
+        
+        private vnn_vw_NewsTypeDataTable tablevnn_vw_NewsType;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -191,11 +191,11 @@ namespace HocLapTrinhWeb.BLL {
                 if ((ds.Tables["vnn_vw_UserPermission"] != null)) {
                     base.Tables.Add(new vnn_vw_UserPermissionDataTable(ds.Tables["vnn_vw_UserPermission"]));
                 }
-                if ((ds.Tables["vnn_vw_NewsType"] != null)) {
-                    base.Tables.Add(new vnn_vw_NewsTypeDataTable(ds.Tables["vnn_vw_NewsType"]));
-                }
                 if ((ds.Tables["vnn_vw_NewsTypeRefSite"] != null)) {
                     base.Tables.Add(new vnn_vw_NewsTypeRefSiteDataTable(ds.Tables["vnn_vw_NewsTypeRefSite"]));
+                }
+                if ((ds.Tables["vnn_vw_NewsType"] != null)) {
+                    base.Tables.Add(new vnn_vw_NewsTypeDataTable(ds.Tables["vnn_vw_NewsType"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -489,9 +489,9 @@ namespace HocLapTrinhWeb.BLL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public vnn_vw_NewsTypeDataTable vnn_vw_NewsType {
+        public vnn_vw_NewsTypeRefSiteDataTable vnn_vw_NewsTypeRefSite {
             get {
-                return this.tablevnn_vw_NewsType;
+                return this.tablevnn_vw_NewsTypeRefSite;
             }
         }
         
@@ -499,9 +499,9 @@ namespace HocLapTrinhWeb.BLL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public vnn_vw_NewsTypeRefSiteDataTable vnn_vw_NewsTypeRefSite {
+        public vnn_vw_NewsTypeDataTable vnn_vw_NewsType {
             get {
-                return this.tablevnn_vw_NewsTypeRefSite;
+                return this.tablevnn_vw_NewsType;
             }
         }
         
@@ -653,11 +653,11 @@ namespace HocLapTrinhWeb.BLL {
                 if ((ds.Tables["vnn_vw_UserPermission"] != null)) {
                     base.Tables.Add(new vnn_vw_UserPermissionDataTable(ds.Tables["vnn_vw_UserPermission"]));
                 }
-                if ((ds.Tables["vnn_vw_NewsType"] != null)) {
-                    base.Tables.Add(new vnn_vw_NewsTypeDataTable(ds.Tables["vnn_vw_NewsType"]));
-                }
                 if ((ds.Tables["vnn_vw_NewsTypeRefSite"] != null)) {
                     base.Tables.Add(new vnn_vw_NewsTypeRefSiteDataTable(ds.Tables["vnn_vw_NewsTypeRefSite"]));
+                }
+                if ((ds.Tables["vnn_vw_NewsType"] != null)) {
+                    base.Tables.Add(new vnn_vw_NewsTypeDataTable(ds.Tables["vnn_vw_NewsType"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -854,16 +854,16 @@ namespace HocLapTrinhWeb.BLL {
                     this.tablevnn_vw_UserPermission.InitVars();
                 }
             }
-            this.tablevnn_vw_NewsType = ((vnn_vw_NewsTypeDataTable)(base.Tables["vnn_vw_NewsType"]));
-            if ((initTable == true)) {
-                if ((this.tablevnn_vw_NewsType != null)) {
-                    this.tablevnn_vw_NewsType.InitVars();
-                }
-            }
             this.tablevnn_vw_NewsTypeRefSite = ((vnn_vw_NewsTypeRefSiteDataTable)(base.Tables["vnn_vw_NewsTypeRefSite"]));
             if ((initTable == true)) {
                 if ((this.tablevnn_vw_NewsTypeRefSite != null)) {
                     this.tablevnn_vw_NewsTypeRefSite.InitVars();
+                }
+            }
+            this.tablevnn_vw_NewsType = ((vnn_vw_NewsTypeDataTable)(base.Tables["vnn_vw_NewsType"]));
+            if ((initTable == true)) {
+                if ((this.tablevnn_vw_NewsType != null)) {
+                    this.tablevnn_vw_NewsType.InitVars();
                 }
             }
         }
@@ -930,10 +930,10 @@ namespace HocLapTrinhWeb.BLL {
             base.Tables.Add(this.tablevnn_vw_Config);
             this.tablevnn_vw_UserPermission = new vnn_vw_UserPermissionDataTable();
             base.Tables.Add(this.tablevnn_vw_UserPermission);
-            this.tablevnn_vw_NewsType = new vnn_vw_NewsTypeDataTable();
-            base.Tables.Add(this.tablevnn_vw_NewsType);
             this.tablevnn_vw_NewsTypeRefSite = new vnn_vw_NewsTypeRefSiteDataTable();
             base.Tables.Add(this.tablevnn_vw_NewsTypeRefSite);
+            this.tablevnn_vw_NewsType = new vnn_vw_NewsTypeDataTable();
+            base.Tables.Add(this.tablevnn_vw_NewsType);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1100,13 +1100,13 @@ namespace HocLapTrinhWeb.BLL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializevnn_vw_NewsType() {
+        private bool ShouldSerializevnn_vw_NewsTypeRefSite() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializevnn_vw_NewsTypeRefSite() {
+        private bool ShouldSerializevnn_vw_NewsType() {
             return false;
         }
         
@@ -1247,10 +1247,10 @@ namespace HocLapTrinhWeb.BLL {
         public delegate void vnn_vw_UserPermissionRowChangeEventHandler(object sender, vnn_vw_UserPermissionRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void vnn_vw_NewsTypeRowChangeEventHandler(object sender, vnn_vw_NewsTypeRowChangeEvent e);
+        public delegate void vnn_vw_NewsTypeRefSiteRowChangeEventHandler(object sender, vnn_vw_NewsTypeRefSiteRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void vnn_vw_NewsTypeRefSiteRowChangeEventHandler(object sender, vnn_vw_NewsTypeRefSiteRowChangeEvent e);
+        public delegate void vnn_vw_NewsTypeRowChangeEventHandler(object sender, vnn_vw_NewsTypeRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -11438,405 +11438,6 @@ namespace HocLapTrinhWeb.BLL {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class vnn_vw_NewsTypeDataTable : global::System.Data.TypedTableBase<vnn_vw_NewsTypeRow> {
-            
-            private global::System.Data.DataColumn columnNewsTypeID;
-            
-            private global::System.Data.DataColumn columnNewsTypeName;
-            
-            private global::System.Data.DataColumn columnPriority;
-            
-            private global::System.Data.DataColumn columnIsActive;
-            
-            private global::System.Data.DataColumn columnParentID;
-            
-            private global::System.Data.DataColumn columnParentName;
-            
-            private global::System.Data.DataColumn columnDescription;
-            
-            private global::System.Data.DataColumn columnPath;
-            
-            private global::System.Data.DataColumn columnTreeView;
-            
-            private global::System.Data.DataColumn columnPathID;
-            
-            private global::System.Data.DataColumn columnTotalNews;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vnn_vw_NewsTypeDataTable() {
-                this.TableName = "vnn_vw_NewsType";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal vnn_vw_NewsTypeDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected vnn_vw_NewsTypeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NewsTypeIDColumn {
-                get {
-                    return this.columnNewsTypeID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NewsTypeNameColumn {
-                get {
-                    return this.columnNewsTypeName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PriorityColumn {
-                get {
-                    return this.columnPriority;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IsActiveColumn {
-                get {
-                    return this.columnIsActive;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ParentIDColumn {
-                get {
-                    return this.columnParentID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ParentNameColumn {
-                get {
-                    return this.columnParentName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DescriptionColumn {
-                get {
-                    return this.columnDescription;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PathColumn {
-                get {
-                    return this.columnPath;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TreeViewColumn {
-                get {
-                    return this.columnTreeView;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PathIDColumn {
-                get {
-                    return this.columnPathID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TotalNewsColumn {
-                get {
-                    return this.columnTotalNews;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vnn_vw_NewsTypeRow this[int index] {
-                get {
-                    return ((vnn_vw_NewsTypeRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vnn_vw_NewsTypeRowChangeEventHandler vnn_vw_NewsTypeRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vnn_vw_NewsTypeRowChangeEventHandler vnn_vw_NewsTypeRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vnn_vw_NewsTypeRowChangeEventHandler vnn_vw_NewsTypeRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vnn_vw_NewsTypeRowChangeEventHandler vnn_vw_NewsTypeRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Addvnn_vw_NewsTypeRow(vnn_vw_NewsTypeRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vnn_vw_NewsTypeRow Addvnn_vw_NewsTypeRow(int NewsTypeID, string NewsTypeName, int Priority, int IsActive, int ParentID, string ParentName, string Description, string Path, string TreeView, string PathID, int TotalNews) {
-                vnn_vw_NewsTypeRow rowvnn_vw_NewsTypeRow = ((vnn_vw_NewsTypeRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        NewsTypeID,
-                        NewsTypeName,
-                        Priority,
-                        IsActive,
-                        ParentID,
-                        ParentName,
-                        Description,
-                        Path,
-                        TreeView,
-                        PathID,
-                        TotalNews};
-                rowvnn_vw_NewsTypeRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowvnn_vw_NewsTypeRow);
-                return rowvnn_vw_NewsTypeRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                vnn_vw_NewsTypeDataTable cln = ((vnn_vw_NewsTypeDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new vnn_vw_NewsTypeDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnNewsTypeID = base.Columns["NewsTypeID"];
-                this.columnNewsTypeName = base.Columns["NewsTypeName"];
-                this.columnPriority = base.Columns["Priority"];
-                this.columnIsActive = base.Columns["IsActive"];
-                this.columnParentID = base.Columns["ParentID"];
-                this.columnParentName = base.Columns["ParentName"];
-                this.columnDescription = base.Columns["Description"];
-                this.columnPath = base.Columns["Path"];
-                this.columnTreeView = base.Columns["TreeView"];
-                this.columnPathID = base.Columns["PathID"];
-                this.columnTotalNews = base.Columns["TotalNews"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnNewsTypeID = new global::System.Data.DataColumn("NewsTypeID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNewsTypeID);
-                this.columnNewsTypeName = new global::System.Data.DataColumn("NewsTypeName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNewsTypeName);
-                this.columnPriority = new global::System.Data.DataColumn("Priority", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPriority);
-                this.columnIsActive = new global::System.Data.DataColumn("IsActive", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIsActive);
-                this.columnParentID = new global::System.Data.DataColumn("ParentID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnParentID);
-                this.columnParentName = new global::System.Data.DataColumn("ParentName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnParentName);
-                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDescription);
-                this.columnPath = new global::System.Data.DataColumn("Path", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPath);
-                this.columnTreeView = new global::System.Data.DataColumn("TreeView", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTreeView);
-                this.columnPathID = new global::System.Data.DataColumn("PathID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPathID);
-                this.columnTotalNews = new global::System.Data.DataColumn("TotalNews", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotalNews);
-                this.columnNewsTypeID.AllowDBNull = false;
-                this.columnNewsTypeName.AllowDBNull = false;
-                this.columnNewsTypeName.MaxLength = 250;
-                this.columnParentName.MaxLength = 250;
-                this.columnDescription.MaxLength = 1000;
-                this.columnPath.ReadOnly = true;
-                this.columnPath.MaxLength = 4000;
-                this.columnTreeView.ReadOnly = true;
-                this.columnTreeView.MaxLength = 4000;
-                this.columnPathID.ReadOnly = true;
-                this.columnPathID.MaxLength = 4000;
-                this.columnTotalNews.ReadOnly = true;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vnn_vw_NewsTypeRow Newvnn_vw_NewsTypeRow() {
-                return ((vnn_vw_NewsTypeRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new vnn_vw_NewsTypeRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(vnn_vw_NewsTypeRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.vnn_vw_NewsTypeRowChanged != null)) {
-                    this.vnn_vw_NewsTypeRowChanged(this, new vnn_vw_NewsTypeRowChangeEvent(((vnn_vw_NewsTypeRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.vnn_vw_NewsTypeRowChanging != null)) {
-                    this.vnn_vw_NewsTypeRowChanging(this, new vnn_vw_NewsTypeRowChangeEvent(((vnn_vw_NewsTypeRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.vnn_vw_NewsTypeRowDeleted != null)) {
-                    this.vnn_vw_NewsTypeRowDeleted(this, new vnn_vw_NewsTypeRowChangeEvent(((vnn_vw_NewsTypeRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.vnn_vw_NewsTypeRowDeleting != null)) {
-                    this.vnn_vw_NewsTypeRowDeleting(this, new vnn_vw_NewsTypeRowChangeEvent(((vnn_vw_NewsTypeRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Removevnn_vw_NewsTypeRow(vnn_vw_NewsTypeRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                vnn_dsHocLapTrinhWeb ds = new vnn_dsHocLapTrinhWeb();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "vnn_vw_NewsTypeDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class vnn_vw_NewsTypeRefSiteDataTable : global::System.Data.TypedTableBase<vnn_vw_NewsTypeRefSiteRow> {
             
             private global::System.Data.DataColumn columnNewsTypeID;
@@ -12203,6 +11804,420 @@ namespace HocLapTrinhWeb.BLL {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "vnn_vw_NewsTypeRefSiteDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class vnn_vw_NewsTypeDataTable : global::System.Data.TypedTableBase<vnn_vw_NewsTypeRow> {
+            
+            private global::System.Data.DataColumn columnNewsTypeID;
+            
+            private global::System.Data.DataColumn columnNewsTypeName;
+            
+            private global::System.Data.DataColumn columnPriority;
+            
+            private global::System.Data.DataColumn columnIsActive;
+            
+            private global::System.Data.DataColumn columnParentID;
+            
+            private global::System.Data.DataColumn columnParentName;
+            
+            private global::System.Data.DataColumn columnDescription;
+            
+            private global::System.Data.DataColumn columnPath;
+            
+            private global::System.Data.DataColumn columnTreeView;
+            
+            private global::System.Data.DataColumn columnPathID;
+            
+            private global::System.Data.DataColumn columnTotalNews;
+            
+            private global::System.Data.DataColumn columnImageURL;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public vnn_vw_NewsTypeDataTable() {
+                this.TableName = "vnn_vw_NewsType";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal vnn_vw_NewsTypeDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected vnn_vw_NewsTypeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NewsTypeIDColumn {
+                get {
+                    return this.columnNewsTypeID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NewsTypeNameColumn {
+                get {
+                    return this.columnNewsTypeName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PriorityColumn {
+                get {
+                    return this.columnPriority;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IsActiveColumn {
+                get {
+                    return this.columnIsActive;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ParentIDColumn {
+                get {
+                    return this.columnParentID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ParentNameColumn {
+                get {
+                    return this.columnParentName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DescriptionColumn {
+                get {
+                    return this.columnDescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PathColumn {
+                get {
+                    return this.columnPath;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TreeViewColumn {
+                get {
+                    return this.columnTreeView;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PathIDColumn {
+                get {
+                    return this.columnPathID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TotalNewsColumn {
+                get {
+                    return this.columnTotalNews;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ImageURLColumn {
+                get {
+                    return this.columnImageURL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public vnn_vw_NewsTypeRow this[int index] {
+                get {
+                    return ((vnn_vw_NewsTypeRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event vnn_vw_NewsTypeRowChangeEventHandler vnn_vw_NewsTypeRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event vnn_vw_NewsTypeRowChangeEventHandler vnn_vw_NewsTypeRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event vnn_vw_NewsTypeRowChangeEventHandler vnn_vw_NewsTypeRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event vnn_vw_NewsTypeRowChangeEventHandler vnn_vw_NewsTypeRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addvnn_vw_NewsTypeRow(vnn_vw_NewsTypeRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public vnn_vw_NewsTypeRow Addvnn_vw_NewsTypeRow(int NewsTypeID, string NewsTypeName, int Priority, int IsActive, int ParentID, string ParentName, string Description, string Path, string TreeView, string PathID, int TotalNews, string ImageURL) {
+                vnn_vw_NewsTypeRow rowvnn_vw_NewsTypeRow = ((vnn_vw_NewsTypeRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        NewsTypeID,
+                        NewsTypeName,
+                        Priority,
+                        IsActive,
+                        ParentID,
+                        ParentName,
+                        Description,
+                        Path,
+                        TreeView,
+                        PathID,
+                        TotalNews,
+                        ImageURL};
+                rowvnn_vw_NewsTypeRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowvnn_vw_NewsTypeRow);
+                return rowvnn_vw_NewsTypeRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                vnn_vw_NewsTypeDataTable cln = ((vnn_vw_NewsTypeDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new vnn_vw_NewsTypeDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnNewsTypeID = base.Columns["NewsTypeID"];
+                this.columnNewsTypeName = base.Columns["NewsTypeName"];
+                this.columnPriority = base.Columns["Priority"];
+                this.columnIsActive = base.Columns["IsActive"];
+                this.columnParentID = base.Columns["ParentID"];
+                this.columnParentName = base.Columns["ParentName"];
+                this.columnDescription = base.Columns["Description"];
+                this.columnPath = base.Columns["Path"];
+                this.columnTreeView = base.Columns["TreeView"];
+                this.columnPathID = base.Columns["PathID"];
+                this.columnTotalNews = base.Columns["TotalNews"];
+                this.columnImageURL = base.Columns["ImageURL"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnNewsTypeID = new global::System.Data.DataColumn("NewsTypeID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNewsTypeID);
+                this.columnNewsTypeName = new global::System.Data.DataColumn("NewsTypeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNewsTypeName);
+                this.columnPriority = new global::System.Data.DataColumn("Priority", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPriority);
+                this.columnIsActive = new global::System.Data.DataColumn("IsActive", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIsActive);
+                this.columnParentID = new global::System.Data.DataColumn("ParentID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnParentID);
+                this.columnParentName = new global::System.Data.DataColumn("ParentName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnParentName);
+                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescription);
+                this.columnPath = new global::System.Data.DataColumn("Path", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPath);
+                this.columnTreeView = new global::System.Data.DataColumn("TreeView", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTreeView);
+                this.columnPathID = new global::System.Data.DataColumn("PathID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPathID);
+                this.columnTotalNews = new global::System.Data.DataColumn("TotalNews", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalNews);
+                this.columnImageURL = new global::System.Data.DataColumn("ImageURL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnImageURL);
+                this.columnNewsTypeID.AllowDBNull = false;
+                this.columnNewsTypeName.AllowDBNull = false;
+                this.columnNewsTypeName.MaxLength = 250;
+                this.columnParentName.MaxLength = 250;
+                this.columnDescription.MaxLength = 1000;
+                this.columnPath.ReadOnly = true;
+                this.columnPath.MaxLength = 4000;
+                this.columnTreeView.ReadOnly = true;
+                this.columnTreeView.MaxLength = 4000;
+                this.columnPathID.ReadOnly = true;
+                this.columnPathID.MaxLength = 4000;
+                this.columnTotalNews.ReadOnly = true;
+                this.columnImageURL.MaxLength = 250;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public vnn_vw_NewsTypeRow Newvnn_vw_NewsTypeRow() {
+                return ((vnn_vw_NewsTypeRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new vnn_vw_NewsTypeRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(vnn_vw_NewsTypeRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.vnn_vw_NewsTypeRowChanged != null)) {
+                    this.vnn_vw_NewsTypeRowChanged(this, new vnn_vw_NewsTypeRowChangeEvent(((vnn_vw_NewsTypeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.vnn_vw_NewsTypeRowChanging != null)) {
+                    this.vnn_vw_NewsTypeRowChanging(this, new vnn_vw_NewsTypeRowChangeEvent(((vnn_vw_NewsTypeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.vnn_vw_NewsTypeRowDeleted != null)) {
+                    this.vnn_vw_NewsTypeRowDeleted(this, new vnn_vw_NewsTypeRowChangeEvent(((vnn_vw_NewsTypeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.vnn_vw_NewsTypeRowDeleting != null)) {
+                    this.vnn_vw_NewsTypeRowDeleting(this, new vnn_vw_NewsTypeRowChangeEvent(((vnn_vw_NewsTypeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removevnn_vw_NewsTypeRow(vnn_vw_NewsTypeRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                vnn_dsHocLapTrinhWeb ds = new vnn_dsHocLapTrinhWeb();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "vnn_vw_NewsTypeDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -17681,295 +17696,6 @@ namespace HocLapTrinhWeb.BLL {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class vnn_vw_NewsTypeRow : global::System.Data.DataRow {
-            
-            private vnn_vw_NewsTypeDataTable tablevnn_vw_NewsType;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal vnn_vw_NewsTypeRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablevnn_vw_NewsType = ((vnn_vw_NewsTypeDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int NewsTypeID {
-                get {
-                    return ((int)(this[this.tablevnn_vw_NewsType.NewsTypeIDColumn]));
-                }
-                set {
-                    this[this.tablevnn_vw_NewsType.NewsTypeIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NewsTypeName {
-                get {
-                    return ((string)(this[this.tablevnn_vw_NewsType.NewsTypeNameColumn]));
-                }
-                set {
-                    this[this.tablevnn_vw_NewsType.NewsTypeNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Priority {
-                get {
-                    try {
-                        return ((int)(this[this.tablevnn_vw_NewsType.PriorityColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Priority\' in table \'vnn_vw_NewsType\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevnn_vw_NewsType.PriorityColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int IsActive {
-                get {
-                    try {
-                        return ((int)(this[this.tablevnn_vw_NewsType.IsActiveColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IsActive\' in table \'vnn_vw_NewsType\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevnn_vw_NewsType.IsActiveColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ParentID {
-                get {
-                    try {
-                        return ((int)(this[this.tablevnn_vw_NewsType.ParentIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ParentID\' in table \'vnn_vw_NewsType\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevnn_vw_NewsType.ParentIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ParentName {
-                get {
-                    try {
-                        return ((string)(this[this.tablevnn_vw_NewsType.ParentNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ParentName\' in table \'vnn_vw_NewsType\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevnn_vw_NewsType.ParentNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Description {
-                get {
-                    try {
-                        return ((string)(this[this.tablevnn_vw_NewsType.DescriptionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Description\' in table \'vnn_vw_NewsType\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevnn_vw_NewsType.DescriptionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Path {
-                get {
-                    try {
-                        return ((string)(this[this.tablevnn_vw_NewsType.PathColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Path\' in table \'vnn_vw_NewsType\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevnn_vw_NewsType.PathColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string TreeView {
-                get {
-                    try {
-                        return ((string)(this[this.tablevnn_vw_NewsType.TreeViewColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TreeView\' in table \'vnn_vw_NewsType\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevnn_vw_NewsType.TreeViewColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string PathID {
-                get {
-                    try {
-                        return ((string)(this[this.tablevnn_vw_NewsType.PathIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PathID\' in table \'vnn_vw_NewsType\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevnn_vw_NewsType.PathIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int TotalNews {
-                get {
-                    try {
-                        return ((int)(this[this.tablevnn_vw_NewsType.TotalNewsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TotalNews\' in table \'vnn_vw_NewsType\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevnn_vw_NewsType.TotalNewsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPriorityNull() {
-                return this.IsNull(this.tablevnn_vw_NewsType.PriorityColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPriorityNull() {
-                this[this.tablevnn_vw_NewsType.PriorityColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsIsActiveNull() {
-                return this.IsNull(this.tablevnn_vw_NewsType.IsActiveColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetIsActiveNull() {
-                this[this.tablevnn_vw_NewsType.IsActiveColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsParentIDNull() {
-                return this.IsNull(this.tablevnn_vw_NewsType.ParentIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetParentIDNull() {
-                this[this.tablevnn_vw_NewsType.ParentIDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsParentNameNull() {
-                return this.IsNull(this.tablevnn_vw_NewsType.ParentNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetParentNameNull() {
-                this[this.tablevnn_vw_NewsType.ParentNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDescriptionNull() {
-                return this.IsNull(this.tablevnn_vw_NewsType.DescriptionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDescriptionNull() {
-                this[this.tablevnn_vw_NewsType.DescriptionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPathNull() {
-                return this.IsNull(this.tablevnn_vw_NewsType.PathColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPathNull() {
-                this[this.tablevnn_vw_NewsType.PathColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTreeViewNull() {
-                return this.IsNull(this.tablevnn_vw_NewsType.TreeViewColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTreeViewNull() {
-                this[this.tablevnn_vw_NewsType.TreeViewColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPathIDNull() {
-                return this.IsNull(this.tablevnn_vw_NewsType.PathIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPathIDNull() {
-                this[this.tablevnn_vw_NewsType.PathIDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTotalNewsNull() {
-                return this.IsNull(this.tablevnn_vw_NewsType.TotalNewsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTotalNewsNull() {
-                this[this.tablevnn_vw_NewsType.TotalNewsColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class vnn_vw_NewsTypeRefSiteRow : global::System.Data.DataRow {
             
             private vnn_vw_NewsTypeRefSiteDataTable tablevnn_vw_NewsTypeRefSite;
@@ -18169,6 +17895,323 @@ namespace HocLapTrinhWeb.BLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetConfigSiteNull() {
                 this[this.tablevnn_vw_NewsTypeRefSite.ConfigSiteColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class vnn_vw_NewsTypeRow : global::System.Data.DataRow {
+            
+            private vnn_vw_NewsTypeDataTable tablevnn_vw_NewsType;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal vnn_vw_NewsTypeRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablevnn_vw_NewsType = ((vnn_vw_NewsTypeDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int NewsTypeID {
+                get {
+                    return ((int)(this[this.tablevnn_vw_NewsType.NewsTypeIDColumn]));
+                }
+                set {
+                    this[this.tablevnn_vw_NewsType.NewsTypeIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NewsTypeName {
+                get {
+                    return ((string)(this[this.tablevnn_vw_NewsType.NewsTypeNameColumn]));
+                }
+                set {
+                    this[this.tablevnn_vw_NewsType.NewsTypeNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Priority {
+                get {
+                    try {
+                        return ((int)(this[this.tablevnn_vw_NewsType.PriorityColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Priority\' in table \'vnn_vw_NewsType\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevnn_vw_NewsType.PriorityColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int IsActive {
+                get {
+                    try {
+                        return ((int)(this[this.tablevnn_vw_NewsType.IsActiveColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IsActive\' in table \'vnn_vw_NewsType\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevnn_vw_NewsType.IsActiveColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ParentID {
+                get {
+                    try {
+                        return ((int)(this[this.tablevnn_vw_NewsType.ParentIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ParentID\' in table \'vnn_vw_NewsType\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevnn_vw_NewsType.ParentIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ParentName {
+                get {
+                    try {
+                        return ((string)(this[this.tablevnn_vw_NewsType.ParentNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ParentName\' in table \'vnn_vw_NewsType\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevnn_vw_NewsType.ParentNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Description {
+                get {
+                    try {
+                        return ((string)(this[this.tablevnn_vw_NewsType.DescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Description\' in table \'vnn_vw_NewsType\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevnn_vw_NewsType.DescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Path {
+                get {
+                    try {
+                        return ((string)(this[this.tablevnn_vw_NewsType.PathColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Path\' in table \'vnn_vw_NewsType\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevnn_vw_NewsType.PathColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TreeView {
+                get {
+                    try {
+                        return ((string)(this[this.tablevnn_vw_NewsType.TreeViewColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TreeView\' in table \'vnn_vw_NewsType\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevnn_vw_NewsType.TreeViewColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PathID {
+                get {
+                    try {
+                        return ((string)(this[this.tablevnn_vw_NewsType.PathIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PathID\' in table \'vnn_vw_NewsType\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevnn_vw_NewsType.PathIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int TotalNews {
+                get {
+                    try {
+                        return ((int)(this[this.tablevnn_vw_NewsType.TotalNewsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalNews\' in table \'vnn_vw_NewsType\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevnn_vw_NewsType.TotalNewsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ImageURL {
+                get {
+                    try {
+                        return ((string)(this[this.tablevnn_vw_NewsType.ImageURLColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ImageURL\' in table \'vnn_vw_NewsType\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevnn_vw_NewsType.ImageURLColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPriorityNull() {
+                return this.IsNull(this.tablevnn_vw_NewsType.PriorityColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPriorityNull() {
+                this[this.tablevnn_vw_NewsType.PriorityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIsActiveNull() {
+                return this.IsNull(this.tablevnn_vw_NewsType.IsActiveColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIsActiveNull() {
+                this[this.tablevnn_vw_NewsType.IsActiveColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsParentIDNull() {
+                return this.IsNull(this.tablevnn_vw_NewsType.ParentIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetParentIDNull() {
+                this[this.tablevnn_vw_NewsType.ParentIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsParentNameNull() {
+                return this.IsNull(this.tablevnn_vw_NewsType.ParentNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetParentNameNull() {
+                this[this.tablevnn_vw_NewsType.ParentNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDescriptionNull() {
+                return this.IsNull(this.tablevnn_vw_NewsType.DescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDescriptionNull() {
+                this[this.tablevnn_vw_NewsType.DescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPathNull() {
+                return this.IsNull(this.tablevnn_vw_NewsType.PathColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPathNull() {
+                this[this.tablevnn_vw_NewsType.PathColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTreeViewNull() {
+                return this.IsNull(this.tablevnn_vw_NewsType.TreeViewColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTreeViewNull() {
+                this[this.tablevnn_vw_NewsType.TreeViewColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPathIDNull() {
+                return this.IsNull(this.tablevnn_vw_NewsType.PathIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPathIDNull() {
+                this[this.tablevnn_vw_NewsType.PathIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTotalNewsNull() {
+                return this.IsNull(this.tablevnn_vw_NewsType.TotalNewsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTotalNewsNull() {
+                this[this.tablevnn_vw_NewsType.TotalNewsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsImageURLNull() {
+                return this.IsNull(this.tablevnn_vw_NewsType.ImageURLColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetImageURLNull() {
+                this[this.tablevnn_vw_NewsType.ImageURLColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -19094,22 +19137,22 @@ namespace HocLapTrinhWeb.BLL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class vnn_vw_NewsTypeRowChangeEvent : global::System.EventArgs {
+        public class vnn_vw_NewsTypeRefSiteRowChangeEvent : global::System.EventArgs {
             
-            private vnn_vw_NewsTypeRow eventRow;
+            private vnn_vw_NewsTypeRefSiteRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vnn_vw_NewsTypeRowChangeEvent(vnn_vw_NewsTypeRow row, global::System.Data.DataRowAction action) {
+            public vnn_vw_NewsTypeRefSiteRowChangeEvent(vnn_vw_NewsTypeRefSiteRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vnn_vw_NewsTypeRow Row {
+            public vnn_vw_NewsTypeRefSiteRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -19128,22 +19171,22 @@ namespace HocLapTrinhWeb.BLL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class vnn_vw_NewsTypeRefSiteRowChangeEvent : global::System.EventArgs {
+        public class vnn_vw_NewsTypeRowChangeEvent : global::System.EventArgs {
             
-            private vnn_vw_NewsTypeRefSiteRow eventRow;
+            private vnn_vw_NewsTypeRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vnn_vw_NewsTypeRefSiteRowChangeEvent(vnn_vw_NewsTypeRefSiteRow row, global::System.Data.DataRowAction action) {
+            public vnn_vw_NewsTypeRowChangeEvent(vnn_vw_NewsTypeRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vnn_vw_NewsTypeRefSiteRow Row {
+            public vnn_vw_NewsTypeRow Row {
                 get {
                     return this.eventRow;
                 }
