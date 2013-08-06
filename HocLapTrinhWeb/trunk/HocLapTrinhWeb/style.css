@@ -4161,3 +4161,6 @@ padding: 0 17px;
     background-image:-webkit-gradient( linear, left bottom, left top, color-stop(0.32, #F38600), color-stop(0.66, #F89100), color-stop(0.83, #FC9B00), color-stop(0.92, #FFA200) );
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFA200', endColorstr='#F38600', GradientType=0)
 }
+#divTag {
+width: 307px;
+}
