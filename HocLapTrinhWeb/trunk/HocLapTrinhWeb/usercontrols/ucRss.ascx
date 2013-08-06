@@ -5,7 +5,7 @@
 <div class="box_outer">
     <div class="cat_article" itemscope itemtype="http://schema.org/Article">
         <h1 class="cat_article_title" itemprop="name">
-            <a>Nội quy và cách tham gia viết cùng Hoclaptrinhweb.com</a>
+            <a>RSS là gì?</a>
         </h1>
         <div class="article_meta">
             <span class="meta_author">Posted by: <a>Hoclaptrinhweb</a></span>
@@ -14,15 +14,6 @@
             <asp:Literal ID="lbBrief" runat="server"></asp:Literal>
         </div>
         <div id="article_content" class="single_article_content" itemprop="articleBody">
-            <p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 12px;
-                background-color: rgb(255, 255, 255); color: rgb(85, 85, 85); font-family: Arial, Tahoma;
-                font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal;
-                line-height: 16px; orphans: 2; text-align: start; text-indent: 0px; text-transform: none;
-                white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto;
-                -webkit-text-stroke-width: 0px; background-position: initial initial; background-repeat: initial initial;">
-                <b style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 12px;
-                    background-color: transparent; background-position: initial initial; background-repeat: initial initial;">
-                    RSS là gì?</b></p>
             <p style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 12px;
                 background-color: rgb(255, 255, 255); color: rgb(85, 85, 85); font-family: Arial, Tahoma;
                 font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal;
