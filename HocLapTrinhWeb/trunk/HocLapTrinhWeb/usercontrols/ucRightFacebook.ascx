@@ -49,14 +49,10 @@
                 Tin tức mới nhất về <a target="_blank" href="http://www.tinmoi.vn/samsung-galaxy-s4-e218.html">
                     Samsung Galaxy S4</a>
                 <br />
-                Chuyên mục <a target="_blank" href="http://www.techz.vn/C/dien-thoai-rv">đánh giá điện thoại</a> smartphone 2013
-                <br />
                 Lap trinh <a target="_blank" href="http://maybanhang.net/phan-mem-quan-ly-ban-hang/">
                     phan mem ban hang</a> tiet kiem va hieu qua
                 <br />
                 LINK VAO <a href="http://www.cacuoc1.com">M88</a> NHÀ CÁI M88
-                <br />
-                Wapso1.mobi <a href="http://wapso1.mobi/tai-opera-mini">tai opera mini</a> mien phi
                 <br />
                 <a href="http://www.bhiu.edu.vn/hop-tac-quoc-te/hp-tac-quc-t/doi-tac.html">Lien ket dao tao quoc te</a>
                 <br />
