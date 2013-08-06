@@ -21,7 +21,8 @@
                     <h2>
                         <%# Eval("Title")%></h2>
                     <p>
-                        <%# Eval("Brief") %></p>
+                        <%# Eval("Brief") %>
+                    </p>
                 </a></li>
             </ItemTemplate>
         </asp:Repeater>
