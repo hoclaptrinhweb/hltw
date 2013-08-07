@@ -13,6 +13,7 @@ public partial class Admin_usercontrols_ucAlexaDetail : HocLapTrinhWeb.UI.UCBase
         base.Page_Load(sender, e);
         gvData.PageSize = Global.Pagesize;
         gvData.PagerSettings.PageButtonCount = Global.PageButtonCount;
+
     }
 
     protected void ObjDataObjectCreating(object sender, ObjectDataSourceEventArgs e)
@@ -100,6 +101,37 @@ public partial class Admin_usercontrols_ucAlexaDetail : HocLapTrinhWeb.UI.UCBase
                 return -1;
             }
         }
+    }
+
+    public string Test()
+    {
+        var strCat = "";
+        var vnnAlexaDetailBll = new vnn_AlexaDetailBLL(CurrentPage.getCurrentConnection());
+        var dt = vnnAlexaDetailBll.GetAllAlexaDetailForGridView(0, 50, AlexaID);
+        strCat = "[";
+        foreach (var r in dt)
+        {
+            strCat += "'" + r.UpdatedDate.ToString("dd") + "',";
+        }
+        strCat = strCat.TrimEnd(',');
+        strCat += "]";
+        return strCat;
+    }
+
+    public string Data()
+    {
+        var strCat = "";
+        var vnnAlexaDetailBll = new vnn_AlexaDetailBLL(CurrentPage.getCurrentConnection());
+        var dt = vnnAlexaDetailBll.GetAllAlexaDetailForGridView(0, 0, AlexaID);
+        strCat += "[{name :'Hạng Việt Nam + ',";
+        strCat += "data : [";
+        for (var i = (dt.Count - 1); i >= 0; i--)
+        {
+            strCat += dt[i].TrafficRankVn.ToString() + ",";
+        }
+        strCat = strCat.TrimEnd(',');
+        strCat += "]}]";
+        return strCat;
     }
 
 }
