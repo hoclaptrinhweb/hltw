@@ -1,9 +1,4 @@
-﻿/*
-    Author: Le Tan Kiet
-    Created Date: 19/10/2010
-    Description: Bao gom nhung ham script
-*/
-
+﻿
 //Hàm thay đổi trạng thái tất cả check con khi check header thay đổi
 function ChangeAllCheckBoxStates(CheckboxSelectName, checkState)
 {

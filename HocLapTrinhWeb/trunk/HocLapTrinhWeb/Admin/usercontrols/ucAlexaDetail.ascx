@@ -11,6 +11,49 @@
             <asp:Label ID="lblPageHeader" runat="server" Text="Chi tiết thống kê"></asp:Label></h1>
     </div>
     <div class="container">
+        <script type="text/javascript">
+            $(function () {
+                $('#container').highcharts({
+                    title: {
+                        text: 'Monthly Average Temperature',
+                        x: -20
+                    },
+                    subtitle: {
+                        text: 'Source: WorldClimate.com',
+                        x: -20
+                    },
+                    xAxis: {
+                        categories: <%= Test() %>
+                        },
+                    yAxis: {
+                        title: {
+                            text: 'Temperature (°C)'
+                        },
+                        plotLines: [{
+                            value: 0,
+                            width: 1,
+                            color: '#808080'
+                        }]
+                    },
+                    tooltip: {
+                        valueSuffix: ''
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'right',
+                        verticalAlign: 'middle',
+                        borderWidth: 0
+                    },
+                    series: <%= Data() %>
+                });
+            });
+
+
+        </script>
+        <script src="<%= CurrentPage.UrlRoot %>/Code/Highcharts-3.0.4/js/highcharts.js"></script>
+        <script src="<%= CurrentPage.UrlRoot %>/Code/Highcharts-3.0.4/js/modules/exporting.js"></script>
+
+        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
                 <div>
@@ -72,7 +115,7 @@
                                     <asp:Label ID="lbSiteLink" runat="server" Text='<%# String.Format("{0:0,0.#}", double.Parse(Eval("SiteLink").ToString())) %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                             <asp:TemplateField HeaderText="Ngày cập nhật" SortExpression="UpdatedDate">
+                            <asp:TemplateField HeaderText="Ngày cập nhật" SortExpression="UpdatedDate">
                                 <ItemTemplate>
                                     <asp:Label ID="lbUpdatedDate" runat="server" Text='<%# Eval("UpdatedDate") %>'></asp:Label>
                                 </ItemTemplate>
@@ -87,8 +130,7 @@
                     </asp:GridView>
                     <asp:ObjectDataSource ID="ObjData" runat="server" TypeName="HocLapTrinhWeb.BLL.vnn_AlexaDetailBLL"
                         EnablePaging="True" SelectMethod="GetAllAlexaDetailForGridView" SelectCountMethod="GetAllAlexaDetailRowCount"
-                        OnObjectCreating="ObjDataObjectCreating" OnSelected="ObjDataSelected" OnSelecting="ObjDataSelecting">
-                    </asp:ObjectDataSource>
+                        OnObjectCreating="ObjDataObjectCreating" OnSelected="ObjDataSelected" OnSelecting="ObjDataSelecting"></asp:ObjectDataSource>
                 </div>
             </ContentTemplate>
             <Triggers>
@@ -99,24 +141,24 @@
 </div>
 
 <script type="text/javascript">
-        var isAdd=false, isEdit=false;
-        var prm = Sys.WebForms.PageRequestManager.getInstance(); 
-        prm.add_beginRequest(BeginRequestHandler);   
-        prm.add_endRequest(EndRequestHandler);
-        function BeginRequestHandler(sender, args)//begin ajax
-        { 
+    var isAdd=false, isEdit=false;
+    var prm = Sys.WebForms.PageRequestManager.getInstance(); 
+    prm.add_beginRequest(BeginRequestHandler);   
+    prm.add_endRequest(EndRequestHandler);
+    function BeginRequestHandler(sender, args)//begin ajax
+    { 
            
-        }
+    }
         
-        function EndRequestHandler(sender, args)//ajax return value
-        { 
+    function EndRequestHandler(sender, args)//ajax return value
+    { 
          
-        }
+    }
             
-        function ShowHideBtnEdit()
-        {   
+    function ShowHideBtnEdit()
+    {   
            
-        }
+    }
 
 
 </script>
