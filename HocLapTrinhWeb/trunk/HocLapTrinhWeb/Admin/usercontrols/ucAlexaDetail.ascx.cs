@@ -121,16 +121,25 @@ public partial class Admin_usercontrols_ucAlexaDetail : HocLapTrinhWeb.UI.UCBase
     public string Data()
     {
         var strCat = "";
+        var srtVN = "";
+        var srtEN = "";
         var vnnAlexaDetailBll = new vnn_AlexaDetailBLL(CurrentPage.getCurrentConnection());
         var dt = vnnAlexaDetailBll.GetAllAlexaDetailForGridView(0, 0, AlexaID);
-        strCat += "[{name :'Hạng Việt Nam + ',";
-        strCat += "data : [";
+
+        srtVN += "{name :'Hạng Việt Nam + ',";
+        srtEN += "{name :'Hạng Thế Giới + ',";
+        srtVN += "data : [";
+        srtEN += "data : [";
         for (var i = (dt.Count - 1); i >= 0; i--)
         {
-            strCat += dt[i].TrafficRankVn.ToString() + ",";
+            srtVN += dt[i].TrafficRankVn.ToString() + ",";
+            srtEN += dt[i].TrafficRank.ToString() + ",";
         }
-        strCat = strCat.TrimEnd(',');
-        strCat += "]}]";
+        srtVN = srtVN.TrimEnd(',');
+        srtEN = srtEN.TrimEnd(',');
+        srtVN += "]}";
+        srtEN += "]}";
+        strCat = "[" + srtVN + "," + srtEN + "]";
         return strCat;
     }
 
