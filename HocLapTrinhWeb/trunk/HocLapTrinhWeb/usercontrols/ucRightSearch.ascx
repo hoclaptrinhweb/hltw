@@ -6,6 +6,6 @@
         type="application/x-shockwave-flash" allowscriptaccess="always" wmode="transparent"
         quality="high">--%>
     <a href="http://forum.hoclaptrinhweb.com" target="_blank" title="Cùng học tập - Cùng chia sẽ">
-        <img alt="Cùng học tập - Cùng chia sẽ" src="http://hoclaptrinhweb.com/images/ads_forum.png" style="width: 305px;" />
+        <img alt="Cùng học tập - Cùng chia sẽ" src="<%= CurrentPage.UrlRoot %>/images/ads_forum.png" style="width: 305px;" />
     </a>
 </div>

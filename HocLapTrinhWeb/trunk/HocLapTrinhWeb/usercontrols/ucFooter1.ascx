@@ -50,7 +50,6 @@
             <ul class="menu">
                 <li class="menu_title"><h3>Liên kết & hợp tác</h3></li>
 				<li><a href="http://m.hoclaptrinhweb.com" target="_blank">Phiên bản trên mobile</a></li>
-				<li><a href="http://apkviet.com/" target="_blank">APK Việt</a></li>
 				<li><a href="http://www.vietbando.com" target="_blank">Bản đồ</a></li>
 			</ul>
         </div>
