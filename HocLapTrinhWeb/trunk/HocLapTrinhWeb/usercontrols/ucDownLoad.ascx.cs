@@ -7,9 +7,9 @@ using Facebook;
 
 public partial class usercontrols_ucDownLoad : HocLapTrinhWeb.UI.UCBase
 {
-    protected void Page_Load(object sender, EventArgs e)
+    protected override void Page_Load(object sender, EventArgs e)
     {
-
+        base.Page_Load(sender, e);
     }
 
     /// <summary>
@@ -24,7 +24,7 @@ public partial class usercontrols_ucDownLoad : HocLapTrinhWeb.UI.UCBase
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-
+        var msg = "";
         try
         {
             var fb = new FacebookClient(hdAccess.Value);
@@ -35,7 +35,6 @@ public partial class usercontrols_ucDownLoad : HocLapTrinhWeb.UI.UCBase
 
             var r = fb.Get(parameters);
             bool isFan = r == true;
-            return;
             var filename = System.IO.Path.GetFileName(hdUser.Value + "." + hdiType.Value);
             var fbApp = new FacebookClient(hdAccess.Value);
             var result = (IDictionary<string, object>)fbApp.Get("me/permissions");
@@ -62,6 +61,7 @@ public partial class usercontrols_ucDownLoad : HocLapTrinhWeb.UI.UCBase
         }
         catch (Exception ex)
         {
+            msg = ex.Message;
         }
 
     }

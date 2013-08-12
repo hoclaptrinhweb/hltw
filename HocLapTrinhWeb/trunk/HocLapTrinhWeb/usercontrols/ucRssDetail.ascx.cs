@@ -44,6 +44,7 @@ public partial class usercontrols_ucRssDetail : HocLapTrinhWeb.UI.UCBase
 
     private void GetRSS(int newsType)
     {
+        var msg = "";
         try
         {
             var vnnNewsBll = new vnn_NewsBLL(CurrentPage.getCurrentConnection());
@@ -80,9 +81,9 @@ public partial class usercontrols_ucRssDetail : HocLapTrinhWeb.UI.UCBase
                     item.pubDate = t.CreatedDate.ToString("r");
                     rss.AddRssItem(item);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-
+                    msg = ex.Message;
                 }
             }
             Response.Clear();
@@ -92,7 +93,7 @@ public partial class usercontrols_ucRssDetail : HocLapTrinhWeb.UI.UCBase
         }
         catch (Exception ex)
         {
-
+            msg = ex.Message;
         }
     }
 }
