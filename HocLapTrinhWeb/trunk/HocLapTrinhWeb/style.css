@@ -294,6 +294,24 @@ display:block;
 /*******************************************************************
  * 		Inner
  *******************************************************************/
+.nav_wrap .inner {
+    background: url(~/Code/Site/daihoc_v4%20html_05062012/css/default/images/bg/nav_bg.png) repeat-x;
+    width:978px;
+    margin:0 auto;
+    position:relative;
+       	border-radius:4px;
+	-khtml-border-radius:4px;
+	-ms-border-radius:4px;
+	-o-border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	box-shadow:rgba(0, 0, 0, 0.3) 0 1px 2px;
+	-khtml-box-shadow:rgba(0, 0, 0, 0.3) 0 1px 2px;
+	-ms-box-shadow:rgba(0, 0, 0, 0.3) 0 1px 2px;
+	-o-box-shadow:rgba(0, 0, 0, 0.3) 0 1px 2px;
+	-moz-box-shadow:rgba(0, 0, 0, 0.3) 0 1px 2px;
+	-webkit-box-shadow:rgba(0, 0, 0, 0.3) 0 1px 2px;
+}
 .inner {
     width:978px;
     margin:0 auto;
@@ -454,14 +472,11 @@ display:block;
  *******************************************************************/
 #navigation {
     height:38px;
-    border-bottom:1px solid black;
-    margin-bottom:5px;
-    background:black;
+    margin-bottom:10px;
+    margin-top:10px;
 }
 #navigation .nav_wrap {
-    background:#3262aa;
     height:35px;
-    border-top:1px solid #eaeaea;
 }
 #navigation ul.nav {
     margin-bottom:0;
@@ -470,18 +485,15 @@ display:block;
 }
 #navigation ul.nav > li {
     float:left;
-    border-right-width:1px;
-    border-style:solid;
-    border-color:#eaeaea;
     height:35px;
 
 }
 #navigation ul.nav > li:first-child  {
-    border-left:1px solid #eaeaea;
 }
 
 #navigation ul.nav li {
     position:relative;
+    background:url("~/Code/Site/daihoc_v4%20html_05062012/css/default/images/bg/nav_line1.png") no-repeat scroll right top transparent
 }
 #navigation ul.nav > li a {
     color: white;
@@ -489,14 +501,15 @@ display:block;
     padding: 0 15px;
     display: inline-block;
     height: 35px;
+    width:100px;
+    text-align:center;
     cursor: pointer;
     font-weight: bold;
 }
 
 #navigation ul.nav li:hover > a,#navigation ul.nav li a.active, #navigation ul.nav > li.current-menu-item > a, #navigation ul.nav > li.current-menu-ancestor > a {
-    background:red;
+    background:url("~/Code/Site/daihoc_v4%20html_05062012/css/default/images/bg/nav_hover1.png") no-repeat scroll 0px 0px transparent;
     height:35px;
-    color:yellow;
 }
 
 /*home icon*/
