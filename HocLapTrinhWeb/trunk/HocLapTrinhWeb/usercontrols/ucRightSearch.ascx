@@ -1,7 +1,9 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="ucRightSearch.ascx.cs"
     Inherits="usercontrols_ucRightSearch" %>
 <div id="vbdAd" class="box_outer">
-
+    <img alt="Liên hệ quảng cáo" src="<%= CurrentPage.UrlRoot %>/images/ads300_Ringht.png"  title="Liên hệ quảng cáo Hoclaptrinhweb.com"/>
+    <br />
+    <br />
     <a href="http://forum.hoclaptrinhweb.com" target="_blank" title="Cùng học tập - Cùng chia sẽ">
         <img alt="Cùng học tập - Cùng chia sẽ" src="<%= CurrentPage.UrlRoot %>/images/ads_forum.png" style="width: 305px;" />
     </a>
