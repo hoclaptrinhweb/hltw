@@ -1,0 +1,78 @@
+
+/* Positions the contact form so it doesn't interfere with any other content, as well as a z-index above any other elements on the page */	
+#contactFormContainer {
+	position:absolute;
+	right:0;
+	z-index:100;
+	}
+	
+/* Hides the whole contact form until needed */	
+#contactForm {
+	height:auto;width:558px;
+	background:#515151 url(images/contactform/birdy.jpg) no-repeat 241px 11px; 
+	border:1px solid #929191;
+	padding:7px 12px; 
+	color:#fff;
+	display:none;
+	float:right;
+	}   
+
+
+	
+/* Some styling for the contact button */
+#contactFormContainer .contact {
+	height:47px; width:132px;
+	background:url(images/contactform/contact_me.png); 
+	position:absolute; 
+	right:5px; bottom:-44px; 
+	cursor:pointer;
+	}
+			
+/* Hides the darkening layer for the Modal effect. The z-index is necessary for layering purposes, and be sure to keep the positioning/height/width the same */	
+#backgroundContactPopup{
+	display:none; 
+	position:fixed; 
+	_position:absolute; 
+	height:100%; width:100%; 
+	top:0; left:0;
+	background:#000; 
+	z-index:99;
+	}  
+	
+/* Form styling from here on out. There is nothing in here that you HAVE to use to get this to work */	
+#contactForm textarea, #contactForm input {
+	width:210px; 
+	background:#6d6d6d url(images/contactform/contact_input.png) repeat-x top; 
+	color:#fff; 
+	border:1px solid #8a8a8a; 
+	height:15px; 
+	line-height:14px; 
+	font-size:11px; 
+	padding:2px 2px 0px;
+	}
+#contactForm input {background-position:0px -20px;}
+#contactForm textarea {height:100px; width:310px; font-family:Verdana, Geneva, sans-serif;}
+#contactForm .submit {
+	border:1px solid #aba8a8; 
+	background:#e5e5e5; 
+	text-transform:uppercase; 
+	color:#4d4d4d; 
+	font-weight:bold; 
+	padding:7px 15px; 
+	height:32px; width:80px; 
+	cursor:pointer; 
+	
+	}
+#contactForm .submit:active {background:#cacaca; }
+#contactForm label {padding-left:0px; font-weight:bold;}
+#contactForm p {padding-bottom:8px;}
+#contactForm .input_boxes {float:left; width:450px;}
+/* This hides the form validation alert messages until needed */
+#contactForm .required { 
+
+	font-size:10px; 
+	line-height:10px; 
+	padding-left:6px; 
+	color:#f5c478;
+	}
+

@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+
+/*---------Document detail----------*/
+#document_detail
+{
+	position:relative;
+	width: 668px;
+	height: auto;	
+	line-height:1.5em;
+}
+
+.position {
+    border: 1px solid #DDDDDD;
+    border-radius:3px;
+    color: #EB7F00;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    padding: 2px 0 2px 5px;
+    margin-bottom:10px;
+}
+
+
+.position a{
+	color:#EB7F00;
+	}
+.position a:hover{
+	 color: #5FBDCE;
+    text-decoration: underline;
+	}
+
+#book{
+	position:relative;
+	float:left;
+	margin-top:20px;
+	width:inherit;
+}
+
+#book img.bia {
+    box-shadow: 1px 1px 10px #000000;
+	max-width:150px;
+	position:relative;
+	float:left;
+}
+
+
+.book-detail{
+	position:relative;
+	float:right;
+	width: 500px;
+}
+.book-detail .title
+{
+	position:relative;
+	font-size:16px;
+	font-weight:bold;
+	color:#EB7F00;
+	padding: 0px 0px 5px 0px;
+	margin-bottom:5px;
+	border-bottom: 1px solid #DDDDDD;
+	background:none;
+	text-transform:none;
+}
+.book-detail .description
+{
+	font-size: 14px;
+	line-height: 1.5em;
+    float: left;
+    position: relative;
+    width: 100%;
+	padding: 10px 0px 5px 0px;
+	
+}
+
+/*----------end Document detail-----------*/
+
+/*---------/download---------*/
+.down-capcha {
+    margin:25px 0px 0px 15px;
+}
+.down-capcha, .down-capcha .first, .down-capcha .second, .down-capcha .third {
+    float: left;
+}
+.down-capcha .first, .down-capcha .third {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border: 1px solid #AAAAAA;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 1px 0 #FFFFFF inset, -1px -1px 0 #FFFFFF inset;
+    height: 165px;
+    overflow: hidden;
+    padding: 10px 20px;
+    position: relative;
+    text-align: center;
+    width: 222px;
+}
+.down-capcha {
+    width: inherit;
+}
+.down-capcha .second {
+    height: 65px !important;
+    margin: 0 15px;
+    padding: 55px 0 0;
+    text-align: center;
+    width: 75px;
+}
+.down-capcha .third {
+    text-align: center;
+}
+.doc-download {
+    bottom: 8px;
+    left: 50px;
+    position: absolute;
+}
+.down-capcha .first > p {
+    font-weight: 700;
+    margin-top: 10px;
+}
+.down-capcha .third > p {
+    font-weight: 700;
+}
+#divnotFB {
+    color: red;
+    margin-top: 30px;
+}
+#divnotFBBig {
+    color: red;
+    height: 100px;
+    margin-top: 180px;
+    text-align: center;
+}
+
+#ImageVerifier1 {
+    border-color: #999999;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.first a.link,.first a.visited  {
+    border-color: #999999;
+    border-style: solid;
+    border-width: 1px;
+	text-decoration:underline;
+}
+
+/*---------/download---------*/

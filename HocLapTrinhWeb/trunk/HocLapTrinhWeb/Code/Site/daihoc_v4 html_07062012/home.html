@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Trang chủ</title>
+<link type="text/css" rel="stylesheet" href="css/default/reset.css" />
+<link type="text/css" rel="stylesheet" href="css/default/general.css" />
+<link type="text/css" rel="stylesheet" href="css/default/home.css" />
+
+<!--[if lt IE 8]>
+	<link type="text/css" rel="stylesheet" href="css/default/ie7.css" />
+<![endif]-->
+
+<!--[if IE 8]>
+<link type="text/css" rel="stylesheet" href="css/default/ie8.css" />
+<![endif]-->
+
+<!--[if gte IE 8]>
+
+<![endif]-->
+<link href="css/default/tooltip/style.css" rel="stylesheet" type="text/css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/default/contactform.css" />
+<link type="text/css" rel="stylesheet" href="css/default/rssform.css" />
+<script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+
+<script src="js/contactform.js" type="text/javascript"></script>
+<script src="js/rssform.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.betterTooltip.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.tTip').betterTooltip({speed: 150, delay: 300});
+	});
+</script>
+</head>
+<body>
+<div id="wrapper"> 
+  <!--Start Body-->
+  
+  <div id="main">
+    <div id="container">
+     	<!--Form lien he-->
+          <div id="contactFormContainer">
+            <div id="contactForm">
+                    <p>Liên hệ với chúng tôi bất cứ điều gì. Gọi điện trực tiếp hoặc gửi email nhanh bằng mẫu phía dưới.<br/> Chân thành cảm ơn!</p>
+                    <div class="input_boxes">
+                        <p><label for="name">Tên</label><span class="required">(*)</span><br />
+                        <input id="name" type="text" value="" name="name" /></p>
+                        <p><label for="e-mail">E-mail</label><span class="required">(*)</span><br />
+                        <input id="e-mail" type="text" value="" name="email" /></p>
+                         <p><label for="e-mail">Số điện thoại</label><br />
+                        <input id="e-mail" type="text" value="" name="email" /></p>
+                        <p><label for="message">Tin nhắn</label><span class="required">(*)</span><br />
+                        <textarea id="message" rows="" cols="" name="message"></textarea></p>
+                        <input class="submit" type="submit" name="submit" value="Gửi" onfocus="this.blur()"  />
+                     </div>    
+                <div class="contact"></div>
+          </div>
+        </div>
+         <!--/Form lien he-->
+         <!--RSS Form-->
+          <div id="rssFormContainer">
+                <div id="rssForm">
+                        <p>Rss diễn đàn đại học</p>
+                        <ul>
+                            <li><img src="css/default/images/rssform/rss_trangchu.png" /><a href="#">Tất cả</a></li>
+                            <li><img src="css/default/images/rssform/rss_giaoduc.png" /><a href="#" >Giáo dục</a></li>
+                            <li><img src="css/default/images/rssform/rss_tuyensinh.png" /><a  >Tuyển sinh</a></li>
+                            <li><img src="css/default/images/rssform/rss_duhoc.png" /><a href="" >Du học - Học bổng</a></li>
+                          </ul>
+                        
+                    <div class="rss"></div>
+              </div>
+            </div>
+         <!--/Rss form-->
+     	<!--background contactpopup-->
+ 			<div id="backgroundContactPopup"></div>
+  		<!--/background contactpopup-->
+      <ul id="navtop">
+        <li><img src="css/default/images/icon/home_trangchu.png" /><a href="home.html" title="Trang chủ">Trang chủ</a></li>
+        <li><img src="css/default/images/icon/home_giaoduc.png" /><a href="giaoduc.html" title="Tin giáo dục">Giáo dục</a></li>
+        <li><img src="css/default/images/icon/home_tuyensinh.png" /><a href="tuyensinh.html" title="Tin tuyển sinh, điểm chuẩn, học phí, xem điểm thi, Tài liệu ôn thi đại học..." >Tuyển sinh</a></li>
+        <li><img src="css/default/images/icon/home_duhoc.png" /><a href="duhochocbong.html" title="Tin du học, học bổng. Tư vấn du học" >Du học - Học bổng</a></li>
+        <li><img src="css/default/images/icon/home_forum.png" /><a href="/forum" title="Diễn đàn sinh viên, thư viện chia sẻ tài liệu">Diễn đàn</a></li>
+        <li><img src="css/default/images/icon/home_video.png" /><a href="http://www.youtube.com/user/diendandaihocvn" title="Video giáo dục, du học, học bổng, tuyển sinh, công nghệ, giải trí...">Video</a></li>
+        <li><img src="css/default/images/icon/home_email.png" /><a href="#contactFormContainer" class="contact">Liên hệ</a></li>
+      </ul>
+      <div id="searchbox">
+        <input type="text" onblur="if (this.value == '') {this.value = 'Tìm kiếm';}" onfocus="if (this.value == 'Tìm kiếm') {this.value = '';}" class="s_text" value="Tìm kiếm" />
+        <div class="s_select">
+          <select datasourceid="ODSource" onchange="cboDDCategoriesChange();" id="ddCategories" name="ddCategories" visible="true">
+            <option selected="selected" value="-1">Tất cả</option>
+            <option value="1">Giáo dục</option>
+            <option value="2">Tuyển sinh</option>
+            <option value="3">Du học - học bổng</option>
+            <option value="4">Tài liệu LTĐH</option>
+            <option value="5">Tài liệu, bài giảng ĐH</option>
+          </select>
+        </div>
+        <input type="image" src="css/default/images/home_search_button.png" class="s_submit" />
+      </div>
+      <img class="banner" src="css/default/images/banner.png" /> 
+      <script type="text/javascript" src="js/cicle.js"></script>
+      <div id="cicle">
+        <div class="cicle_large"> <img class="cicle_logo tTip" src="css/default/images/home_cicle_logo.png" title="<h3><span>D</span>iendandaihoc.vn</h3>Thư viện chia sẻ tài liệu, tin tức, video cho học sinh sinh viên." />
+          <div class="cicle c1 tTip" title="<h3><span>T</span>in tức <span>g</span>iáo dục</h3>Có 5 tin mới.">
+            <p>Giáo Dục<br />
+              <a>(5)</a></p>
+          </div>
+          <div class="cicle c2 tTip"  title="<h3><span>T</span>in tức <span>t</span>uyển sinh</h3>Có 6 tin mới.">
+            <p>Tuyển Sinh<br />
+              <a >(6)</a></p>
+          </div>
+          <div class="cicle c3 tTip" title="<h3><span>T</span>in tức <span>D</span>u học-<span>H</span>ọc bổng</h3>Có 8 tin mới.">
+            <p>Du Học <br />
+              Học Bổng<br />
+              <a>(8)</a></p>
+          </div>
+          <div class="cicle c4 tTip" title="<h3><span>T</span>ài liệu luyện thi CĐ-ĐH</h3>Có 1 tài liệu mới.">
+            <p >Tài Liệu <br />
+              Luyện Thi CĐ-ĐH<br />
+              <a  >(1)</a></p>
+          </div>
+          <div class="cicle c5 tTip"  title="<h3><span>T</span>ài liệu, bài giảng cho sinh viên</h3>Có 4 tài liệu mới.">
+            <p>Tài Liệu CĐ-ĐH<br />
+              <a>(4)</a></p>
+          </div>
+          <div class="cicle c6 tTip"  title="<h3><span>V</span>ideo</h3>Có 2 video mới.">
+            <p>Video<br />
+              <a >(2)</a></p>
+          </div>
+        </div>
+        <p class="cicle_shadow"></p>
+      </div>
+      <!--End Cicle--> 
+      
+      <span class="hr"></span> 
+      <!--Hot news-->
+      <div id="news">
+        <div class="hotnews news1"><i class="img" style="background-image:url(images/news1.jpg)"></i>
+          <p><a href="#"><span>Hội thảo thông tin học bổng du học trường Southern Cross University</span></a><span class="bg"></span></p>
+        </div>
+        <div class="hotnews news2"><i class="img" style="background-image:url(images/news2.jpg)"></i>
+          <p><a href="#"><span>Mời tải về Windows 8 Release Preview</span></a><span class="bg"></span></p>
+        </div>
+        <div class="hotnews news3"><i class="img" style="background-image:url(images/news3.jpg)"></i>
+          <p><a href="#"><span>Tuần lễ du học Singapore cùng StudyLink International</span></a><span class="bg"></span></p>
+        </div>
+        <div class="hotnews news4"><i class="img" style="background-image:url(images/news5.jpg)"></i>
+          <p><a href="#"><span>Tỷ lệ "chọi" vào trường phổ thông năng khiếu</span></a><span class="bg"></span></p>
+        </div>
+        <div class="hotnews news5"><i class="img" style="background-image:url(images/news6.jpg)"></i>
+          <p><a href="#"><span>Danh sách máy tính được mang vào phòng thi ĐH, CĐ</span></a><span class="bg"></span></p>
+        </div>
+        <div class="hotnews news6"><i class="img" style="background-image:url(images/news4.jpg)"></i>
+          <p><a href="#"><span>Thanh Hóa: 8 học sinh được miễn thi tốt nghiệp THPT năm 2012</span></a><span class="bg"></span></p>
+        </div>
+        <div class="hotnews news7"><i class="img" style="background-image:url(images/news7.jpg)"></i>
+          <p><a href="#"><span>Kỳ thi trung học phổ thông 2012</span></a><span class="bg"></span></p>
+        </div>
+      </div>
+      <p class="hotnews_shadow"></p>
+      <!--End Hot news--> 
+      
+    </div>
+  </div>
+  <!--End Body--> 
+  
+  <!--Start Footer-->
+  
+  <div id="footer">
+    <div class="top"></div>
+    <div class="container">
+      <div class="title1"><span>Diendandaihoc.vn</span></div>
+      <div class="title2"><span>Quảng cáo - Hợp tác</span></div>
+      <div class="title3"><span>Thông tin</span></div>
+      <ul class="inner1">
+        <li><img src="css/default/images/icon/footer_home.png" class="left" /><span>Địa chỉ: 5A Sông Đà, Phường 2, Tân Bình, TP.HCM</span></li>
+        <li><img src="css/default/images/icon/footer_phone.png" class="left" /><span>Hotline: 0989.248.186 (Mr.Kiệt)</span></li>
+        <li><img src="css/default/images/icon/footer_email.png" class="left" /><span>Email: admin@diendandaihoc.vn</span></li>
+        <li><img src="css/default/images/icon/footer_chat.png" class="left" /><span>Yahoo: contactdiendandaihoc</span></li>
+      </ul>
+      <ul class="inner2">
+        <li><img src="css/default/images/icon/footer_currency.png" class="left" /><span><a href="">Vị trí và Bảng giá quảng cáo</a></span></li>
+        <li><img src="css/default/images/icon/footer_phone.png" class="left" /><span>Điện thoại: 0902 47 9559 (Mr.Tiến)</span></li>
+        <li><img src="css/default/images/icon/footer_email.png" class="left" /><span>Email: tiengnguyen@diendandaihoc.vn</span></li>
+        <li><img src="css/default/images/icon/footer_chat.png" class="left" /><span>Yahoo: tiengnguyen</span></li>
+        <li><img src="css/default/images/icon/footer_skype.png" class="left" /><span>Skype: tiengnguyen</span></li>
+      </ul>
+      <ul class="inner3">
+        <li><img src="css/default/images/icon/footer_copyright.png" class="left" /><span>Copyright © 2012. All rights reserved</span></li>
+        <li><img src="css/default/images/icon/footer_info.png" class="left" /><span>Diendandaihoc.vn-Cộng đồng sinh viên Việt Nam</span></li>
+        <li><img src="css/default/images/icon/footer_info.png" class="left" /><span>Website hiển thị tốt nhất ở trình duyệt Firefox, Chrome,IE 9</span></li>
+        <li>
+            <ul class="socialnetwork">
+                <li><a href="http://www.facebook.com/diendandaihoc.vn" title="Facebook"><img src="css/default/images/icon/footer_facebook.png" /></a></li>
+                <li><a href="https://plus.google.com/s/diendandaihoc.vn" title="Google plus"><img src="css/default/images/icon/footer_googleplus.png" /></a></li>
+                 <li><a href="" title="twitter"><img src="css/default/images/icon/footer_twitter.png" /></a></li>
+                <li><a href="http://www.youtube.com/user/diendandaihocvn" title="Video giáo dục, du học, học bổng, tuyển sinh, công nghệ, giải trí..."><img src="css/default/images/icon/footer_youtube.png" /></a></li>
+                 <li><a href="#rssFormContainer" class="rss" title="Rss"><img src="css/default/images/icon/footer_rss.png" /></a></li>
+            </ul>
+      	</li>
+      </ul>
+    </div>
+  </div>
+  
+  <!--End Footer--> 
+</div>
+</body>
+</html>

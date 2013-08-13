@@ -1,0 +1,181 @@
+@CHARSET "UTF-8";
+/*--------tai lieu luyen thi--------*/
+
+h2.title{
+	border-bottom: 1px solid #DDDDDD;
+    color: #EB7F00;
+    font-size: 16px;
+	text-transform:uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 6px 0px 10px 40px;
+    position: relative;
+	background: url(images/icon/ts_tailieu.png) no-repeat scroll 0 0 transparent;
+}
+
+.document_pagging{
+
+	position:relative;
+
+	margin:10px 0px 0px 0px;
+	widows:100%;
+}
+
+#vtab {
+    height: 100%;
+    width: inherit;
+	position:relative;
+	float:left;
+	
+}
+#vtab a:link,#vtab a:visited {
+    color: #666666;
+    outline: medium none;
+    text-decoration: none;
+} 
+
+
+#vtab > ul > li {
+ 
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FFFFFF !important;
+    border-color: #FFFFFF;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    list-style-type: none;
+    margin: auto;
+    opacity: 0.75;
+    padding-left: 40px;
+    position: relative;
+    width: 70px;
+	font-size:14px;
+}
+#vtab > ul > li.tab1 {
+    background: url("images/mathematics.png") no-repeat scroll left center transparent;
+}
+#vtab > ul > li.tab2 {
+    background: url("images/physical.png") no-repeat scroll left center transparent;
+}
+#vtab > ul > li.tab3 {
+    background: url("images/chemical.png") no-repeat scroll left center transparent;
+}
+#vtab > ul > li.tab4 {
+    background: url("images/biology.png") no-repeat scroll left center transparent;
+}
+#vtab > ul > li.tab5 {
+    background: url("images/historical.png") no-repeat scroll left center transparent;
+}
+#vtab > ul > li.tab6 {
+    background: url("images/geography.png") no-repeat scroll left center transparent;
+}
+#vtab > ul > li.tab7 {
+    background: url("images/literature.png") no-repeat scroll left center transparent;
+}
+#vtab > ul > li.tab8 {
+    background: url("images/english.png") no-repeat scroll left center transparent;
+}
+#vtab > ul > li.selected {
+  	-moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FAFAFA !important;
+    border-color: #DDDDDD;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    opacity: 1;
+    position: relative;
+    z-index: 10;
+}
+#vtab > ul {
+    display: block;
+    float: left;
+    margin: auto 0;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    top: 0px;
+    width: 110px;
+}
+#vtab > div {
+
+	background-color:#FAFAFA;
+    border: 1px solid #DDDDDD;
+	-moz-border-radius: 0px 5px 5px 5px; -webkit-border-radius:0px 5px 5px 5px; khtml-border-radius:0px 5px 5px 5px; border-radius:0px 5px 5px 5px; -o-border-radius:0px 5px 5px 5px;
+
+    min-height: 350px;
+    padding: 5px;
+    position: relative;
+	float:right;
+   	z-index:9;
+	width:546px;
+}
+#vtab > div > ul {
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#vtab > div > ul > li {
+    float: left;
+    margin: 5px;
+    width: 261px;
+	background-color:#FBFBFB;
+	border:1px solid #CCC;
+	-moz-border-radius: 5px; -webkit-border-radius:5px; khtml-border-radius:5px; border-radius:5px; -o-border-radius:5px;
+	transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+}
+#vtab > div > ul > li:hover {
+    background-color: #eeeeee;
+}
+
+#vtab > div > ul > li:hover > a{
+    
+	color:#EB7F00;
+}
+
+#vtab > div > ul > li > a {
+    background-position: left center;
+    background-repeat: no-repeat;
+    display: block;
+    height: 40px;
+    margin: 0;
+    padding: 5px 5px 0 35px;
+    width: 218px;
+
+}
+
+
+#vtab > div > ul > li.pdf a {
+    background-image: url("images/pdf.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+#vtab > div > ul > li.zip a {
+    background-image: url("images/zip.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+#vtab > div > ul > li.rar a {
+    background-image: url("images/zip.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+#vtab > div > ul > li.none a {
+    background-image: url("images/book.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+}

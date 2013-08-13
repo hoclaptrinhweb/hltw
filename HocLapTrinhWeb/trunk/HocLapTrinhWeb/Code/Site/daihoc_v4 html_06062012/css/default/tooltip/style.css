@@ -1,0 +1,39 @@
+/*-----------------------------------------------------------------------------------------------*/
+/*                   A BETTER TOOLTIP - POWERED BY JQUERY AWESOMENESS                            */
+/*                   AUTHOR: jon cazier                                                          */
+/*                   EMAIL: jon at 3nhanced dot com                                              */
+/*-----------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------*/
+/*                                  CSS RESET THANKS TO ERIC MEYER                               */
+/*                   http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/                */
+/*-----------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------*/
+/*                                         TOOLTIP STYLES                                        */
+/*-----------------------------------------------------------------------------------------------*/
+
+.tip {
+	width: 212px;
+	padding-top: 23px;
+	overflow: hidden;
+	display: none;
+	position: absolute;
+	z-index: 500;
+	background: transparent url(images/tipTop.png) no-repeat top;}
+	
+.tipMid {background: url(images/tipMid.png) repeat-y scroll 0px 0px transparent ; padding: 0 25px 5px 25px;}
+.tipBtm {background: transparent url(images/tipBtm.png) no-repeat bottom; height: 32px;}
+
+.tip h3 {
+    border-bottom: 1px solid #DDDDDD;
+    color: #838383;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 0 0 5px;
+}
+.tip h3 span {
+    color: #EB7F00;
+    font-size: 15px;
+}

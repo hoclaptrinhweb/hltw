@@ -1,0 +1,138 @@
+@CHARSET "UTF-8";
+/*--------tai lieu luyen thi--------*/
+#vtab {
+    height: 100%;
+    
+    width: inherit;
+}
+#vtab a:link,#vtab a:visited {
+    color: #14688F;
+    outline: medium none;
+    text-decoration: none;
+} 
+
+
+#vtab > ul > li {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FFFFFF !important;
+    border-color: #FFFFFF -moz-use-text-color #FFFFFF #FFFFFF;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    list-style-type: none;
+    margin: auto;
+    opacity: 0.75;
+    padding-left: 40px;
+    position: relative;
+    width: 70px;
+}
+#vtab > ul > li.tab1 {
+    background: url("images/mathematics.png") no-repeat scroll left center transparent;
+}
+#vtab > ul > li.tab2 {
+    background: url("images/physical.png") no-repeat scroll left center transparent;
+}
+#vtab > ul > li.tab3 {
+    background: url("images/chemical.png") no-repeat scroll left center transparent;
+}
+#vtab > ul > li.tab4 {
+    background: url("images/biology.png") no-repeat scroll left center transparent;
+}
+#vtab > ul > li.tab5 {
+    background: url("images/historical.png") no-repeat scroll left center transparent;
+}
+#vtab > ul > li.tab6 {
+    background: url("images/geography.png") no-repeat scroll left center transparent;
+}
+#vtab > ul > li.tab7 {
+    background: url("images/literature.png") no-repeat scroll left center transparent;
+}
+#vtab > ul > li.tab8 {
+    background: url("images/english.png") no-repeat scroll left center transparent;
+}
+#vtab > ul > li.selected {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FAFAFA !important;
+    border-color: #DDDDDD -moz-use-text-color #DDDDDD #DDDDDD;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    opacity: 1;
+    position: relative;
+    z-index: 10;
+}
+#vtab > ul {
+    display: block;
+    float: left;
+    margin: auto 0;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    top: 30px;
+    width: 110px;
+}
+#vtab > div {
+
+    border: 1px solid #DDDDDD;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 110px;
+    min-height: 385px;
+    padding: 5px;
+    position: relative;
+    z-index: 9;
+}
+#vtab > div > ul {
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#vtab > div > ul > li {
+    float: left;
+    margin: 5px 10px;
+    width: 204px;
+}
+#vtab > div > ul > li > a {
+    background-position: left center;
+    background-repeat: no-repeat;
+    display: block;
+    height: 40px;
+    margin: 0;
+    padding: 5px 10px 0 35px;
+    width: 170px;
+}
+#vtab > div > ul > li > a:hover {
+    background-color: #E3F1FA;
+    outline: 1px solid #CDE7F6;
+}
+#vtab > div > ul > li.pdf a {
+    background-image: url("images/pdf.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+#vtab > div > ul > li.zip a {
+    background-image: url("images/zip.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+#vtab > div > ul > li.rar a {
+    background-image: url("images/zip.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+#vtab > div > ul > li.none a {
+    background-image: url("images/book.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+}
