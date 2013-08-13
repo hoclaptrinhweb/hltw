@@ -1,13 +1,13 @@
-﻿Viết plugin cho CKE upload ảnh.
+﻿
+
 Quản lý ảnh của user
-
-Viết chương trình auto update bài viết Cái này viết Ứng dụng winform
-- Sử dụng settimeout
-- Su dung Ajax
-
 Viết thêm hỏi và đáp
 
-==> Đang xử lý phần tag trong tin tức
 ==> Dựa vào acc vatgia để tính số lượng click tối đa
 
 ==> Sử dụng stick giống forum và diễn đàn
+
+
+==> Tạo trang sử dụng iframe giống sinhvienit :http://sinhvienit.net/forum/url/?http%3A%2F%2Fforum.hoclaptrinhweb.com%2Fthreads%2Fcode-phan-trang-them-xoa-sua-trong-gridview-nang-cao-co-vi-du-dinh-kem.5325%2F
+	1. Tăng lượng truy cập
+	2. Giảm số lượng rồi trang
