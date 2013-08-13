@@ -1,0 +1,634 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Giáo dục</title>
+<link type="text/css" rel="stylesheet" href="css/default/reset.css" />
+<link type="text/css" rel="stylesheet" href="css/default/general.css" />
+<link type="text/css" rel="stylesheet" href="css/default/menu.css" />
+<link type="text/css" rel="stylesheet" href="css/default/news.css" />
+<link type="text/css" rel="stylesheet" href="css/default/controls.css" />
+<link href="css/default/tooltip/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="js/menu.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.betterTooltip.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.tTip').betterTooltip({speed: 0, delay: 0});
+	});
+</script>
+</head>
+<body>
+<div id="wrapper"> 
+  <!--Start Header-->
+  <div id="header">
+    <div class="container">
+      <div class="top">
+        <div class="left"></div>
+        <div class="center">
+          <ul>
+            <li><img src="css/default/images/icon/header_home.png" /><a href="#">Đặt làm trang chủ</a></li>
+            <li><img src="css/default/images/icon/header_widget.png" /><a href="#" >Widget</a></li>
+            <li><img src="css/default/images/icon/header_rss.png" /><a href="#" >Rss</a></li>
+            <li class="end"><img src="css/default/images/icon/header_email.png" /><a href="#">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="right"></div>
+      </div>
+      <img class="logo" src="css/default/images/logo.png" />
+      <div class="banner"></div>
+    </div>
+  </div>
+  <!--End Header-->
+  
+  <div id="navigation">
+    <div id="container"> 
+      <script>
+        <!--start-script cho menu over-->
+            $(function() {
+                
+                //Over vào mục con
+                $('.icon_down').hover(function() {
+        
+                    $('.icon_down').each(function() {
+                        $(this).parent().find('.subl_2').hide();
+                        $(this).parent().removeClass('active12');
+        
+                    });
+                    $(this).parent().find('.subl_2').show();
+        
+                    $(this).parent().addClass('active12');
+                });
+        
+        
+            });
+            <!--end-script cho menu over-->
+        </script> 
+      <a id="homeicon" href="home.html" >Home</a>
+      <ul id="navtop">
+        <li class="active"><i class="left"></i><a href="giaoduc.html"><span>Giáo dục</span></a></li>
+        <li><i class="left"></i><a href="tuyensinh.html"><span>Tuyển sinh</span></a></li>
+        <li><i class="left"></i><a href="duhochocbong.html"><span>Du học - Học bổng</span></a></li>
+        <li><a href="#"><span>Diễn đàn</span></a> <i class="left"></i><i class="right"></i>
+          <div style="width:530px;" class="chon-submenu1">
+            <div class="subl_1">
+              <ul style="position: relative;">
+                <li class="  active12" style="position: static;"> <a class="icon_down" href="#"> Hoạt động diễn đàn</a>
+                  <div style="position: absolute; top: 0px; right: 0px; display: block;" class="subl_2">
+                    <div class="submenu">
+                      <div class="col_2" >
+                        <div class="col_2c2">
+                          <div class="col_2c2_inner" id="diendan">
+                            <ul class="ul-store">
+                              <h3> Nội quy - Thông báo</h3>
+                              <li><a style="background:none !important;" href=""> Thông báo</a></li>
+                              <li><a style="background:none !important;" href=""> Hướng dẫn</a></li>
+                              <h3> Xây dựng diễn đàn</h3>
+                              <li><a style="background:none !important;" href=""> Góp ý</a></li>
+                              <li><a style="background:none !important;" href=""> Vi phạm</a></li>
+                              <li><a style="background:none !important;" href=""> Dự thính</a></li>
+                            </ul>
+                            <ul class="ul-store">
+                              <h3> Sự kiện</h3>
+                              <li><a style="background:none !important;" href=""> Quà tặng</a></li>
+                              <li><a style="background:none !important;" href=""> Hoạt động offline</a></li>
+                              <li><a style="background:none !important;" href=""> Sự kiện khác</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="  " style="position: static;"> <a class="icon_down" href="#"> Kỹ thuật</a>
+                  <div style="position: absolute; top: 0px; right: 0px; display: none;" class="subl_2">
+                    <div class="submenu">
+                      <div class="col_2" >
+                        <div class="col_2c2">
+                          <div class="col_2c2_inner" id="kythuat">
+                            <ul class="ul-store">
+                              <h3> Công nghệ thông tin</h3>
+                              <li><a style="background:none !important;" href=""> Tin học căn bản</a></li>
+                              <li><a style="background:none !important;" href=""> Lập trình</a></li>
+                              <li><a style="background:none !important;" href=""> Cơ sở dữ liệu</a></li>
+                              <li><a style="background:none !important;" href=""> Phân tích, thiết kế HTTT</a></li>
+                              <li><a style="background:none !important;" href=""> CTDL và giải thuật</a></li>
+                              <li><a style="background:none !important;" href=""> Quản trị dự án CNTT</a></li>
+                              <li><a style="background:none !important;" href=""> Kiến trúc máy tính</a></li>
+                              <li><a style="background:none !important;" href=""> Mạng - Bảo Mật</a></li>
+                              <li><a style="background:none !important;" href=""> Đồ Họa</a></li>
+                              <li><a style="background:none !important;" href=""> Phần cứng</a></li>
+                              <li><a style="background:none !important;" href=""> Phần mềm</a></li>
+                              <li><a style="background:none !important;" href=""> Thủ thuật - Mẹo vặt</a></li>
+                            </ul>
+                            <ul class="ul-store">
+                              <h3> Công Nghệ Hóa & Thực Phẩm</h3>
+                              <li><a style="background:none !important;" href=""> CN Thực Phẩm</a></li>
+                              <li><a style="background:none !important;" href=""> Dược</a></li>
+                              <li><a style="background:none !important;" href=""> Hóa Học</a></li>
+                              <li><a style="background:none !important;" href=""> Năng Lượng</a></li>
+                              <li><a style="background:none !important;" href=""> Vật Liệu</a></li>
+                            </ul>
+                            <ul class="ul-store">
+                              <h3> Điện - Điện tử - Viễn thông</h3>
+                              <li><a style="background:none !important;" href=""> Cơ sở ngành</a></li>
+                              <li><a style="background:none !important;" href=""> Điện tử</a></li>
+                              <li><a style="background:none !important;" href=""> Viễn thông</a></li>
+                              <li><a style="background:none !important;" href=""> Tự động hóa</a></li>
+                              <li><a style="background:none !important;" href=""> Thông Tin</a></li>
+                            </ul>
+                            <ul class="ul-store">
+                              <h3> Cơ Khí - Chế Tạo</h3>
+                              <li><a style="background:none !important;" href=""> Cơ sở ngành</a></li>
+                              <li><a style="background:none !important;" href=""> Hệ thống công nghiệp</a></li>
+                              <li><a style="background:none !important;" href=""> Kỹ thuật nhiệt lạnh</a></li>
+                              <li><a style="background:none !important;" href=""> Kỹ thuật chế tạo</a></li>
+                              <li><a style="background:none !important;" href=""> Cơ điện tử</a></li>
+                              <li><a style="background:none !important;" href=""> Thông Tin</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="ch_arr"> <a class="none-background" style="background:none !important;" id="pre" onclick="PrevPagging('kythuat');" href="#"><em>Trước</em><img src="css/default/images/icon/prev-slide-list.gif"></a> <a class="none-background" style="background:none !important;" onclick="NextPagging('kythuat');" id="next" href="#"><em>Sau</em><img src="css/default/images/icon/next-slide-list.gif"></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class=" " style="position: static;"> <a class="icon_down" href="#"> Kinh tế</a>
+                  <div style="position: absolute; top: 0px; right: 0px; display: none;" class="subl_2">
+                    <div class="submenu">
+                      <div class="col_2" >
+                        <div class="col_2c2">
+                          <div class="col_2c2_inner" id="kinhte">
+                            <ul class="ul-store" style="padding-right:0px">
+                              <h3> Đại cương</h3>
+                              <li><a style="background:none !important;" href=""> Toán cao cấp</a></li>
+                              <li><a style="background:none !important;" href=""> Địa lý kinh tế</a></li>
+                              <li><a style="background:none !important;" href=""> Kinh tế vi mô</a></li>
+                              <li><a style="background:none !important;" href=""> Kinh tế vĩ mô</a></li>
+                              <li><a style="background:none !important;" href=""> Marketing căn bản</a></li>
+                              <li><a style="background:none !important;" href=""> Kinh tế lượng</a></li>
+                              <li><a style="background:none !important;" href=""> Tổ chức HT thông tin</a></li>
+                              <li><a style="background:none !important;" href=""> Tâm lý học quản lý</a></li>
+                              <li><a style="background:none !important;" href=""> Giao tiếp kinh doanh</a></li>
+                              <li><a style="background:none !important;" href=""> PP nghiên cứu trong KD</a></li>
+                              <li><a style="background:none !important;" href=""> Nghệ thuật lãnh đạo</a></li>
+                              <li><a style="background:none !important;" href=""> Hành vi tổ chức</a></li>
+                            </ul>
+                            <ul class="ul-store" style="padding-right:20px">
+                              <h3>&nbsp; </h3>
+                              <li><a style="background:none !important;" href=""> Phân tích và dự báo kinh tế</a></li>
+                              <li><a style="background:none !important;" href=""> Thương mại điện tử</a></li>
+                              <li><a style="background:none !important;" href=""> Luật doanh nghiệp</a></li>
+                            </ul>
+                            <ul class="ul-store">
+                              <h3> Ngân hàng</h3>
+                              <li><a style="background:none !important;" href=""> Nghiệp vụ ngân hàng</a></li>
+                              <li><a style="background:none !important;" href=""> Nghiệp vụ ngoại thương</a></li>
+                              <li><a style="background:none !important;" href=""> Thanh toán quốc tế</a></li>
+                              <li><a style="background:none !important;" href=""> Thẩm định dự án</a></li>
+                              <li><a style="background:none !important;" href=""> Thẩm định tín dụng</a></li>
+                              <li><a style="background:none !important;" href=""> Thị trường chứng khoán</a></li>
+                            </ul>
+                            <ul class="ul-store">
+                              <h3> Kế toán</h3>
+                              <li><a style="background:none !important;" href=""> Cơ sở ngành</a></li>
+                              <li><a style="background:none !important;" href=""> Điện tử</a></li>
+                              <li><a style="background:none !important;" href=""> Viễn thông</a></li>
+                              <li><a style="background:none !important;" href=""> Tự động hóa</a></li>
+                              <li><a style="background:none !important;" href=""> Thông Tin</a></li>
+                            </ul>
+                            <ul class="ul-store">
+                              <h3> Quản trị</h3>
+                              <li><a style="background:none !important;" href=""> Cơ sở ngành</a></li>
+                              <li><a style="background:none !important;" href=""> Hệ thống công nghiệp</a></li>
+                              <li><a style="background:none !important;" href=""> Kỹ thuật nhiệt lạnh</a></li>
+                              <li><a style="background:none !important;" href=""> Kỹ thuật chế tạo</a></li>
+                              <li><a style="background:none !important;" href=""> Cơ điện tử</a></li>
+                              <li><a style="background:none !important;" href=""> Thông Tin</a></li>
+                            </ul>
+                            <ul class="ul-store">
+                              <h3> Tài chính</h3>
+                              <li><a style="background:none !important;" href=""> Cơ sở ngành</a></li>
+                              <li><a style="background:none !important;" href=""> Hệ thống công nghiệp</a></li>
+                              <li><a style="background:none !important;" href=""> Kỹ thuật nhiệt lạnh</a></li>
+                              <li><a style="background:none !important;" href=""> Kỹ thuật chế tạo</a></li>
+                              <li><a style="background:none !important;" href=""> Cơ điện tử</a></li>
+                              <li><a style="background:none !important;" href=""> Thông Tin</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="ch_arr"> <a class="none-background" style="background:none !important;" id="pre" onclick="PrevPagging('kinhte');" href="#"><em>Trước</em><img src="css/default/images/icon/prev-slide-list.gif"></a> <a class="none-background" style="background:none !important;" onclick="NextPagging('kinhte');" id="next" href="#"><em>Sau</em><img src="css/default/images/icon/next-slide-list.gif"></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="  " style="position: static;"> <a class="icon_down" href="#"> Xã hội</a>
+                  <div style="position: absolute; top: 0px; right: 0px; display: none;" class="subl_2">
+                    <div class="submenu">
+                      <div class="col_2" >
+                        <div class="col_2c2">
+                          <div class="col_2c2_inner" id="xahoi">
+                            <ul class="ul-store">
+                              <h3> Đại cương</h3>
+                              <li><a style="background:none !important;" href=""> Kinh tế chính trị</a></li>
+                              <li><a style="background:none !important;" href=""> Tư tưởng Hồ Chí Minh</a></li>
+                              <li><a style="background:none !important;" href=""> Triết học Mac - Lênin</a></li>
+                              <li><a style="background:none !important;" href=""> Lịch sử đảng</a></li>
+                              <li><a style="background:none !important;" href=""> Chủ nghĩa xã hội khoa học</a></li>
+                              <li><a style="background:none !important;" href=""> Dân số học</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="  " style="position: static;"> <a class="icon_down" href="#"> Ngoại ngữ</a>
+                  <div style="position: absolute; top: 0px; right: 0px; display: none;" class="subl_2">
+                    <div class="submenu">
+                      <div class="col_2" >
+                        <div class="col_2c2">
+                          <div class="col_2c2_inner" id="ngoaingu">
+                            <ul class="ul-store">
+                              <h3> Tiếng anh</h3>
+                              <li><a style="background:none !important;" href=""> Grammar</a></li>
+                              <li><a style="background:none !important;" href=""> Vocabulary</a></li>
+                              <li><a style="background:none !important;" href=""> Speaking</a></li>
+                              <li><a style="background:none !important;" href=""> Listening</a></li>
+                              <li><a style="background:none !important;" href=""> Reading & Writing</a></li>
+                              <li><a style="background:none !important;" href=""> Others</a></li>
+                              <li><a style="background:none !important;" href=""> Certificates</a></li>
+                            </ul>
+                            <ul class="ul-store">
+                              <h3> Ngoại ngữ khác</h3>
+                              <li><a style="background:none !important;" href=""> Tiếng nhật</a></li>
+                              <li><a style="background:none !important;" href=""> Tiếng hoa</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="  " style="position: static;"> <a class="icon_down" href="#"> Góc sinh viên</a>
+                  <div style="position: absolute; top: 0px; right: 0px; display: none;" class="subl_2">
+                    <div class="submenu">
+                      <div class="col_2" >
+                        <div class="col_2c2">
+                          <div class="col_2c2_inner" id="sinhvien">
+                            <ul class="ul-store">
+                              <h3> Thông tin cho sinh viên</h3>
+                              <li><a style="background:none !important;" href=""> Giao lưu, kết bạn</a></li>
+                              <li><a style="background:none !important;" href=""> Sinh viên làm thêm</a></li>
+                              <li><a style="background:none !important;" href=""> Tán gẫu</a></li>
+                              <li><a style="background:none !important;" href=""> Thông tin công nghệ</a></li>
+                              <li><a style="background:none !important;" href=""> Hỏi gì - đáp nấy</a></li>
+                            </ul>
+                            <ul class="ul-store">
+                              <h3> Góc thư giãn</h3>
+                              <li><a style="background:none !important;" href=""> Game</a></li>
+                              <li><a style="background:none !important;" href=""> Địa điểm ăn uống, vui chơi</a></li>
+                              <li><a style="background:none !important;" href=""> Truyện cười - Thơ vui</a></li>
+                              <li><a style="background:none !important;" href=""> Thể thao</a></li>
+                              <li><a style="background:none !important;" href=""> Phim ảnh</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="  " style="position: static;"> <a class="icon_down" href="#"> Trung tâm thương mại</a>
+                  <div style="position: absolute; top: 0px; right: 0px; display: none;" class="subl_2">
+                    <div class="submenu">
+                      <div class="col_2" >
+                        <div class="col_2c2">
+                          <div class="col_2c2_inner" id="raovat">
+                            <ul class="ul-store">
+                              <h3> Mua bán, rao vặt, trao đổi</h3>
+                              <li><a style="background:none !important;" href=""> Hàng công nghệ</a></li>
+                              <li><a style="background:none !important;" href=""> Rao vặt khác</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div id="searchbox">
+        <input type="text" onblur="if (this.value == '') {this.value = 'Tìm kiếm';}" onfocus="if (this.value == 'Tìm kiếm') {this.value = '';}" class="s_text" value="Tìm kiếm" />
+        <div class="s_select">
+          <select datasourceid="ODSource" onchange="cboDDCategoriesChange();" id="ddCategories" name="ddCategories" visible="true">
+            <option selected="selected" value="-1">Tất cả</option>
+            <option value="1">Giáo dục</option>
+            <option value="2">Tuyển sinh</option>
+            <option value="3">Du học - học bổng</option>
+            <option value="4">Tài liệu LTĐH</option>
+            <option value="5">Tài liệu, bài giảng ĐH</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Start Body-->
+  <div id="main">
+    <div id="container">
+      <div id="col_left"> 
+        <!--Hot news-->
+        <div id="hotnews">
+          <div class="icon"></div>
+          <a href="giaoducchitiet.html">
+          <h3 class="title">Anh: 50.000 ngàn sinh viên biểu tình phản đối tăng học phí phản đối tăng học phí</h3>
+          </a>
+          <p class="content"> <img src="images/ads/news1.jpg" /> Tại trường THPT Trần Phú (ở Tây Ninh), có 13 học sinh lớp 12 không được thi tốt nghiệp vì học lực kém, một bạn học sinh giỏi suýt không tham gia kỳ thi này vì giáo viên vào nhầm điểm </p>
+          <p class="shadow"></p>
+        </div>
+        <!--End Hot news--> 
+        <!--news list item-->
+        <div class="newsitem"> <a  href="giaoducchitiet.html"><img class="left" src="images/ads/news1.jpg" /> </a> <a href="giaoducchitiet.html">
+          <h3 class="title">Anh: 50.000 ngàn sinh viên biểu tình phản đối tăng học phí phản đối tăng học phí</h3>
+          </a>
+          <p> Tại trường THPT Trần Phú (ở Tây Ninh), có 13 học sinh lớp 12 không được thi tốt nghiệp vì học lực kém, một bạn học sinh giỏi suýt không tham gia kỳ thi này vì giáo viên vào nhầm điểm </p>
+        </div>
+        <br class="clearfix">
+        <hr />
+        <div class="newsitem"> <a  href="#"><img class="left" src="images/ads/news1.jpg" /> </a> <a href="#">
+          <h3 class="title">50.000 ngàn sinh viên biểu tình phản đối tăng học phí phản đối tăng học phí</h3>
+          </a>
+          <p> Tại trường THPT Trần Phú (ở Tây Ninh), có 13 học sinh lớp 12 không được thi tốt nghiệp vì học lực kém, một bạn học sinh giỏi suýt không tham gia kỳ thi này vì giáo viên vào nhầm điểm </p>
+        </div>
+        <br class="clearfix">
+        <hr />
+        <div class="newsitem"> <a href="#">
+          <h3 class="title">Anh: 50.000 ngàn sinh viên biểu tình phản đối tăng học phí phản đối tăng học phí</h3>
+          </a>
+          <p> Tại trường THPT Trần Phú (ở Tây Ninh), có 13 học sinh lớp 12 không được thi tốt nghiệp vì học lực kém, một bạn học sinh giỏi suýt không tham gia kỳ thi này vì giáo viên vào nhầm điểm </p>
+        </div>
+        <br class="clearfix">
+        <hr />
+        <div class="newsitem"> <a  href="#"><img class="left" src="images/ads/news1.jpg" /> </a> <a href="#">
+          <h3 class="title">Anh: 50.000 ngàn sinh viên biểu tình phản đối tăng học phí phản đối tăng học phí</h3>
+          </a>
+          <p> Tại trường THPT Trần Phú (ở Tây Ninh), có 13 học sinh lớp 12 không được thi tốt nghiệp vì học lực kém, một bạn học sinh giỏi suýt không tham gia kỳ thi này vì giáo viên vào nhầm điểm </p>
+        </div>
+        <br class="clearfix">
+        <hr />
+        <div class="newsitem"> <a  href="#"><img class="left" src="images/ads/news1.jpg" /> </a> <a href="#">
+          <h3 class="title">50.000 ngàn sinh viên biểu tình phản đối tăng học phí phản đối tăng học phí</h3>
+          </a>
+          <p> Tại trường THPT Trần Phú (ở Tây Ninh), có 13 học sinh lớp 12 không được thi tốt nghiệp vì học lực kém, một bạn học sinh giỏi suýt không tham gia kỳ thi này vì giáo viên vào nhầm điểm </p>
+        </div>
+        <br class="clearfix">
+        <hr />
+        <div class="newsitem"> <a  href="#"><img class="left" src="images/ads/news1.jpg" /> </a> <a href="#">
+          <h3 class="title">Anh: 50.000 ngàn sinh viên biểu tình phản đối tăng học phí phản đối tăng học phí</h3>
+          </a>
+          <p> Tại trường THPT Trần Phú (ở Tây Ninh), có 13 học sinh lớp 12 không được thi tốt nghiệp vì học lực kém, một bạn học sinh giỏi suýt không tham gia kỳ thi này vì giáo viên vào nhầm điểm </p>
+        </div>
+        <br class="clearfix">
+        <hr />
+        <div class="newsitem"> <a  href="#"><img class="left" src="images/ads/news1.jpg" /> </a> <a href="#">
+          <h3 class="title">50.000 ngàn sinh viên biểu tình phản đối tăng học phí phản đối tăng học phí</h3>
+          </a>
+          <p> Tại trường THPT Trần Phú (ở Tây Ninh), có 13 học sinh lớp 12 không được thi tốt nghiệp vì học lực kém, một bạn học sinh giỏi suýt không tham gia kỳ thi này vì giáo viên vào nhầm điểm </p>
+        </div>
+        <br class="clearfix">
+        <hr />
+        <div class="newsitem"> <a  href="#"><img class="left" src="images/ads/news1.jpg" /> </a> <a href="#">
+          <h3 class="title">Anh: 50.000 ngàn sinh viên biểu tình phản đối tăng học phí phản đối tăng học phí</h3>
+          </a>
+          <p> Tại trường THPT Trần Phú (ở Tây Ninh), có 13 học sinh lớp 12 không được thi tốt nghiệp vì học lực kém, một bạn học sinh giỏi suýt không tham gia kỳ thi này vì giáo viên vào nhầm điểm </p>
+        </div>
+        <br class="clearfix">
+        <hr />
+        <div class="newsitem"> <a  href="#"><img class="left" src="images/ads/news1.jpg" /> </a> <a href="#">
+          <h3 class="title">50.000 ngàn sinh viên biểu tình phản đối tăng học phí phản đối tăng học phí</h3>
+          </a>
+          <p> Tại trường THPT Trần Phú (ở Tây Ninh), có 13 học sinh lớp 12 không được thi tốt nghiệp vì học lực kém, một bạn học sinh giỏi suýt không tham gia kỳ thi này vì giáo viên vào nhầm điểm </p>
+        </div>
+        <br class="clearfix">
+        <hr />
+        <div class="newsitem"> <a  href="#"><img class="left" src="images/ads/news1.jpg" /> </a> <a href="#">
+          <h3 class="title">50.000 ngàn sinh viên biểu tình phản đối tăng học phí phản đối tăng học phí</h3>
+          </a>
+          <p> Tại trường THPT Trần Phú (ở Tây Ninh), có 13 học sinh lớp 12 không được thi tốt nghiệp vì học lực kém, một bạn học sinh giỏi suýt không tham gia kỳ thi này vì giáo viên vào nhầm điểm </p>
+        </div>
+        <br class="clearfix">
+        <hr />
+        <!--End news list item--> 
+        <!--start pagging-->
+        <div class="pagination orange">
+          <div>
+            <div><span>« Đầu&nbsp;« Lùi</span><span style="padding-left:6"></span><span><b>1</b>&nbsp;<a href="#">2</a>&nbsp;<a href="#">3</a></span><span style="padding-left:6"></span><span><a href="#">Tới »</a>&nbsp;<a href="#">Cuối »</a></span></div>
+          </div>
+        </div>
+        <!--End pagging-->
+        <div class="searchbydate"><span>X</span>em theo ngày:&nbsp;
+          <input type="text" value="" style="width:80px" class="itext"/>
+          &nbsp;
+          <input type="submit" class="ibutton" value="Xem" />
+        </div>
+      </div>
+      <!--End Left col--> 
+      
+      <!--Right Col-->
+      <div id="col_right"> 
+        <!--news cicle-->
+        <div id="newscicle"> 
+          <script>
+			 $(function() {
+					var imgactived = $('#img_map').attr("src");
+						
+					 $('#tieudiem').mouseover(function(){ 
+					 	imgactived = $('#img_map').attr("src"); 
+					 	$('#Image31').attr('src', 'css/default/images/bg/newscicle_bg_1.png');
+					});
+					 $('#tieudiem').mouseout(function(){$('#img_map').attr('src', imgactived); });
+					$('#tieudiem').click(function(){
+						$('#img_map').attr('src', 'css/default/images/bg/newscicle_bg_1.png'); 
+						imgactived = 'css/default/images/bg/newscicle_bg_1.png'; 
+						
+						$('.docnhieu').hide();
+						$('.chuadoc').hide();
+						$('.tieudiem').show('slow');
+					 });
+					
+					 
+					 
+					 $('#docnhieu').mouseover(function(){
+						 imgactived = $('#img_map').attr("src"); 
+						 $('#img_map').attr('src', 'css/default/images/bg/newscicle_bg_2.png') });
+						 $('#docnhieu').mouseout(function(){$('#img_map').attr('src', imgactived); });
+					 $('#docnhieu').click(function(){
+						 $('#img_map').attr('src', 'css/default/images/bg/newscicle_bg_2.png'); 
+					 	imgactived = 'css/default/images/bg/newscicle_bg_2.png'; 
+						$('.tieudiem').hide();
+						$('.chuadoc').hide();
+						$('.docnhieu').show('slow');
+					});
+					  
+					 
+					 $('#chuadoc').mouseover(function(){
+						 imgactived = $('#img_map').attr("src"); 
+						 $('#img_map').attr('src', 'css/default/images/bg/newscicle_bg_3.png') });
+					 $('#chuadoc').mouseout(function(){$('#img_map').attr('src', imgactived); });
+					 $('#chuadoc').click(function(){
+						 $('#img_map').attr('src', 'css/default/images/bg/newscicle_bg_3.png'); 
+					 	 imgactived = 'css/default/images/bg/newscicle_bg_3.png';
+						 $('.tieudiem').hide();
+						$('.docnhieu').hide();
+						$('.chuadoc').show('slow');
+					 });
+					  
+					 
+					 
+			 });
+		</script> 
+          <img src="css/default/images/bg/newscicle_bg_1.png" name="img" width="288" height="288" border="0" usemap="#imgMap" id="img_map" />
+          <map name="imgMap" id="imgMap">
+            <area shape="poly" coords="144,145,103,117,137,92,167,101,188,118" href="#" id="tieudiem"  title="Tin tiêu điểm" />
+            <area shape="poly" coords="144,145,98,122,93,150,108,181,145,194" href="#" id="docnhieu"  title="Tin đọc nhiều" />
+            <area shape="poly" coords="144,146,151,193,176,184,196,157,190,124" href="#" id="chuadoc" title="Tin chưa đọc"  />
+          </map>
+          <div class="tieudiem" style="display:block">
+            <div class="cicle c1 tTip" title="Đại học kinh tế tuyển sinh ngành y dược với hơn 300 chỉ tiêu">
+              <p> <a href="#">Đại học kinh tế tuyển sinh ngành...</a></p>
+            </div>
+            <div class="cicle c2 tTip" title="Đại học kinh tế tuyển sinh ngành y dược">
+              <p> <a href="#">Đại học kinh tế tuyển sinh ngành...</a></p>
+            </div>
+            <div class="cicle c3 tTip" title="Đại học kinh tế tuyển sinh ngành y dược">
+              <p> <a href="#">Đại học kinh tế tuyển sinh ngành...</a></p>
+            </div>
+            <div class="cicle c4 tTip" title="Đại học kinh tế tuyển sinh ngành y dược">
+              <p> <a >Tuyển sinh tuyển sinh ngành...</a></p>
+            </div>
+            <div class="cicle c5 tTip" title="Du học hè 2012">
+              <p> <a >Du học úc hè 2012</a></p>
+            </div>
+            <div class="cicle c6 tTip" title="Du học hè 2012">
+              <p> <a href="#">Du học úc hè 2012</a></p>
+            </div>
+            <div class="cicle c7 tTip" title="Du học hè 2012">
+              <p> <a href="#">Du học úc hè 2012</a></p>
+            </div>
+          </div>
+          <div class="docnhieu" style="display:none">
+            <div class="cicle c1 tTip" title="Đại học kinh tế tuyển sinh ngành y dược với hơn 300 chỉ tiêu">
+              <p> <a href="#">Công bố học phí trường công lập...</a></p>
+            </div>
+            <div class="cicle c2 tTip" title="Đại học kinh tế tuyển sinh ngành y dược">
+              <p> <a href="#">Đại học kinh tế tuyển sinh ngành...</a></p>
+            </div>
+            <div class="cicle c3 tTip" title="Đại học kinh tế tuyển sinh ngành y dược">
+              <p> <a href="#">Đại học kinh tế tuyển sinh ngành...</a></p>
+            </div>
+            <div class="cicle c4 tTip" title="Đại học kinh tế tuyển sinh ngành y dược">
+              <p> <a >Tuyển sinh tuyển sinh ngành...</a></p>
+            </div>
+            <div class="cicle c5 tTip" title="Du học hè 2012">
+              <p> <a >Du học úc hè 2012</a></p>
+            </div>
+            <div class="cicle c6 tTip" title="Du học hè 2012">
+              <p> <a href="#">Du học úc hè 2012</a></p>
+            </div>
+            <div class="cicle c7 tTip" title="Du học hè 2012">
+              <p> <a href="#">Du học úc hè 2012</a></p>
+            </div>
+          </div>
+          <div class="chuadoc" style="display:none">
+            <div class="cicle c1 tTip" title="Đại học kinh tế tuyển sinh ngành y dược với hơn 300 chỉ tiêu">
+              <p> <a href="#">Y Dược TP.HCM tuyển thẳng...</a></p>
+            </div>
+            <div class="cicle c2 tTip" title="Đại học kinh tế tuyển sinh ngành y dược">
+              <p> <a href="#">Đại học kinh tế tuyển sinh ngành...</a></p>
+            </div>
+            <div class="cicle c3 tTip" title="Đại học kinh tế tuyển sinh ngành y dược">
+              <p> <a href="#">Đại học kinh tế tuyển sinh ngành...</a></p>
+            </div>
+            <div class="cicle c4 tTip" title="Đại học kinh tế tuyển sinh ngành y dược">
+              <p> <a >Tuyển sinh tuyển sinh ngành...</a></p>
+            </div>
+            <div class="cicle c5 tTip" title="Du học hè 2012">
+              <p> <a >Du học úc hè 2012</a></p>
+            </div>
+            <div class="cicle c6 tTip" title="Du học hè 2012">
+              <p> <a href="#">Du học úc hè 2012</a></p>
+            </div>
+            <div class="cicle c7 tTip" title="Du học hè 2012">
+              <p> <a href="#">Du học úc hè 2012</a></p>
+            </div>
+          </div>
+          <p class="cicle_shadow"></p>
+        </div>
+        <!--End news cicle-->
+        
+        <div class="right_box">
+          <div class="box_header"><img src="css/default/images/boxheader_partner.png" />
+            <h2>Nhà tài trợ</h2>
+          </div>
+          <div class="box_content"> <img src="images/ads/qc2.jpg" width="264px" title="width:264"/> <img src="images/ads/qc1.jpg" width="264px" title="width:264" /> </div>
+          <p class="box_shadow"></p>
+        </div>
+        <div class="right_box">
+          <div class="box_header"><img src="css/default/images/boxheader_socialnetwork.png" />
+            <h2>Mạng xã hội Diendandaihoc.vn</h2>
+          </div>
+          <div class="box_content"> <br class="clearfix" />
+            <table width="100%">
+              <tr>
+                <td  align="center"><a></a><img src="css/default/images/icon/facebook.png" width="100px" /></td>
+                <td align="center"><img src="css/default/images/icon/google.jpg" width="100px" /></td>
+              </tr>
+              <tr>
+                <td  align="center"><img src="css/default/images/icon/twitter.png" width="100px" /></td>
+                <td align="center"><a href="http://www.youtube.com/diendandaihocvn"><img src="css/default/images/icon/youtube.png" width="80px" /></a></td>
+              </tr>
+            </table>
+          </div>
+          <p class="box_shadow"></p>
+        </div>
+      </div>
+      <!--End Right Col--> 
+    </div>
+  </div>
+  <!--End Body--> 
+  
+  <!--Start Footer-->
+  
+  <div id="footer">
+    <div class="top"></div>
+    <div class="container">
+      <div class="title1"><span>Diendandaihoc.vn</span></div>
+      <div class="title2"><span>Quảng cáo - Hợp tác</span></div>
+      <div class="title3"><span>Thông tin</span></div>
+      <ul class="inner1">
+        <li><img src="css/default/images/icon/footer_home.png" class="left" /><span>Địa chỉ: 5A Sông Đà, Phường 2, Tân Bình, TP.HCM</span></li>
+        <li><img src="css/default/images/icon/footer_phone.png" class="left" /><span>Hotline: 0989.248.186 (Mr.Kiệt)</span></li>
+        <li><img src="css/default/images/icon/footer_email.png" class="left" /><span>Email: admin@diendandaihoc.vn</span></li>
+        <li><img src="css/default/images/icon/footer_chat.png" class="left" /><span>Yahoo: contactdiendandaihoc</span></li>
+      </ul>
+      <ul class="inner2">
+        <li><img src="css/default/images/icon/footer_currency.png" class="left" /><span><a href="">Vị trí và Bảng giá quảng cáo</a></span></li>
+        <li><img src="css/default/images/icon/footer_phone.png" class="left" /><span>Điện thoại: 0902 47 9559 (Mr.Tiến)</span></li>
+        <li><img src="css/default/images/icon/footer_email.png" class="left" /><span>Email: tiengnguyen@diendandaihoc.vn</span></li>
+        <li><img src="css/default/images/icon/footer_chat.png" class="left" /><span>Yahoo: tiengnguyen</span></li>
+        <li><img src="css/default/images/icon/footer_skype.png" class="left" /><span>Skype: tiengnguyen</span></li>
+      </ul>
+      <ul class="inner3">
+        <li><img src="css/default/images/icon/footer_copyright.png" class="left" /><span>Copyright © 2012. All rights reserved</span></li>
+        <li><img src="css/default/images/icon/footer_info.png" class="left" /><span>Diendandaihoc.vn-Cộng đồng sinh viên Việt Nam</span></li>
+        <li><img src="css/default/images/icon/footer_info.png" class="left" /><span>Website hiển thị tốt nhất ở trình duyệt Firefox, Chrome,IE 9</span></li>
+      </ul>
+    </div>
+  </div>
+  
+  <!--End Footer--> 
+</div>
+</body>
+</html>

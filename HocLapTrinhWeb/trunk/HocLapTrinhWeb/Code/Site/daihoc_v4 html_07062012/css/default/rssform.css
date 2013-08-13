@@ -1,0 +1,82 @@
+
+/* Positions the contact form so it doesn't interfere with any other content, as well as a z-index above any other elements on the page */	
+#rssFormContainer {
+	position:absolute;
+	right:0;
+	z-index:100;
+	}
+	
+/* Hides the whole contact form until needed */	
+#rssForm {
+	height:200px;
+	width:450px;
+	background:#515151 url(images/rssform/rss.png) no-repeat 230px 11px; 
+	border:1px solid #929191;
+	padding:7px 12px; 
+	color:#fff;
+	display:none;
+	float:right;
+	}   
+
+
+	
+/* Some styling for the contact button */
+#rssFormContainer .rss {
+	height:47px; width:132px;
+	background:url(images/rssform/contact_me.png); 
+	position:absolute; 
+	right:5px; bottom:-44px; 
+	cursor:pointer;
+	}
+			
+/* Hides the darkening layer for the Modal effect. The z-index is necessary for layering purposes, and be sure to keep the positioning/height/width the same */	
+#backgroundContactPopup{
+	display:none; 
+	position:fixed; 
+	_position:absolute; 
+	height:100%; width:100%; 
+	top:0; left:0;
+	background:#000; 
+	z-index:99;
+	}  
+
+#rssForm p {
+	padding: 10px 5px 10px 20px;
+	font: bold 18px Calibri,Tahoma,Arial,Helvetica,sans-serif;
+	color:#FFA800;
+	}
+
+#rssForm ul {
+    list-style: none outside none;
+  
+	margin-left:20px;
+}
+
+#rssForm ul li {
+    height: 38px;
+    width: 210px;
+}
+#rssForm ul li img {
+    transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+    float: left;
+    margin: 10px 5px 0 0;
+    opacity: 0.8;
+}
+#rssForm ul li a {
+    transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+    color: #F7F7F7;
+    cursor: pointer;
+    display: block;
+    font: bold 12px/38px Calibri,Tahoma,Arial,Helvetica,sans-serif;
+    text-transform: uppercase;
+}
+#rssForm ul li:hover a, #rssForm ul li:hover img {
+    color: #5FBDCE;
+    opacity: 1;
+}

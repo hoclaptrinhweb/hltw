@@ -1,0 +1,377 @@
+@charset "utf-8";
+
+#wrapper {
+	
+	background-image:none !important;
+	background-color:#fff !important;
+}
+
+
+
+img.banner{
+
+    top: 80px;
+    position: absolute;
+    z-index: 20;
+	left:-7px;
+}
+/*------nav home----*/
+
+ul#navtop
+{
+    list-style: none outside none;
+    position: absolute;
+    width: 220px;
+    top:265px;
+}
+
+ul#navtop li {
+    
+	width:210px;
+	background: url("images/bg/home_nav_line.jpg") no-repeat scroll left bottom transparent;
+	height:38px;
+}
+
+
+ul#navtop li img{
+    float:left;
+	margin:12px 5px 0px 0px;
+	opacity:0.5;
+	transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+}
+ul#navtop li a {
+   
+   	transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	
+    display: block;
+    font:bold 12px/18px  Arial,Verdana,sans-serif;
+    line-height: 38px;
+	color:#666;
+	
+	cursor:pointer;
+
+	text-transform:uppercase;
+	
+}
+
+
+ul#navtop li:hover a,ul#navtop li:hover img{
+    color: #EB7F00;
+  	opacity:1;
+}
+/*-------/nav home-----*/
+
+
+/*-------start search box--------*/
+#searchbox {
+
+	margin:0;
+    position: absolute;
+    top: 635px;
+	background: url("images/bg/home_bg_search.gif") no-repeat scroll 0 0 transparent;
+    height: 33px;
+ 
+    width: 450px;
+}
+
+#searchbox .s_text {
+    background-color: #F9F9F9;
+    border: 0 none;
+    font: 1.2em/150% Helvetica,Arial,sans-serif;
+    height: 20px;
+    margin: 7px 0 0 30px;
+    width: 200px;
+	color:#666;
+}
+
+#searchbox .s_select {
+    background: none repeat scroll 0 0 transparent;
+    border-left: 1px solid #666666;
+    color: #666666;
+    height: 15px;
+    padding: 0;
+    position: absolute;
+    right: 100px;
+    top: 10px;
+}
+#searchbox .s_select select {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 solid;
+    color: #666666;
+    font: 11px/1.4em Arial,Helvetica,sans-serif;
+    height: 15px;
+    width: 105px;
+}
+#searchbox .s_select select option {
+    background: none repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 2px 5px !important;
+    top: 19px;
+}
+
+#searchbox .s_submit {
+    
+    cursor: pointer;
+    height: 29px;
+    position: absolute;
+    right: 1px;
+    top: 2px;
+    width: 93px;
+
+}
+/*---------end search box--------*/
+
+
+
+/*-----start cicle----*/
+#cicle
+{
+	position:relative;
+	width:560px;
+	float:right;
+	margin-top:70px;
+	margin-bottom:10px;
+}
+.cicle_large
+{
+	background: url(images/bg/home_cicle_large.png) no-repeat scroll -40px -40px transparent;
+	position:relative;
+	float:left;
+	margin-top: 0px;
+	width: 560px;
+	height:560px;
+	text-align:left;
+}
+
+.cicle_large .cicle_logo
+{
+	/*background: url(images/home_cicle_logo.png) no-repeat scroll 0 0 transparent;*/
+	position:absolute;
+	float:left;
+	width: 200px;
+	top: 210px;
+	left: 180px;
+}
+
+.cicle_large .cicle
+{
+	position:absolute;
+	float:left;
+	width: 140px;
+	height:140px;
+	text-align:center;
+	color: #FFFFFF;
+    font-family: PalatinoLinotypeRegular,Georgia,serif;
+    font-size: 16px;
+	text-transform:uppercase;
+	
+}
+.cicle p{
+	padding:55px 10px 0px;
+	text-shadow: 1px 1px 1px #545454;
+}
+.c3 p{
+	padding:45px 10px 0px;
+	
+}
+.c4 p{
+	padding:35px 10px 0px;
+	
+}
+.c5 p{
+	padding:45px 10px 0px;
+	
+}
+.cicle a{
+	color: #ffff00;
+	font-size: 14px;
+}
+
+/*action*/
+.cicle a:hover{
+	color: #00ffff;
+	font-size: 14px;
+}
+.cicle:hover
+{
+	cursor:pointer;
+	opacity:0.5;
+}
+.cicle:hover a
+{
+	text-decoration:blink;
+
+}
+/*end action*/
+.cicle_large .c1
+{
+	top: 18px;
+	left: 205px;
+	background: url(images/bg/cicle1.png) no-repeat scroll 0 0 transparent;
+}
+.cicle_large .c2
+{
+	top: 120px;
+	left: 41px;
+	background: url(images/bg/cicle6.png) no-repeat scroll 0 0 transparent;
+}
+.cicle_large .c3
+{
+	bottom: 120px;
+	left: 41px;
+	background: url(images/bg/cicle5.png) no-repeat scroll 0 0 transparent;
+}
+
+.cicle_large .c4
+{
+	bottom: 20px;
+	left: 205px;
+	background: url(images/bg/cicle4.png) no-repeat scroll 0 0 transparent;
+}
+
+.cicle_large .c5
+{
+	bottom: 120px;
+	right: 41px;
+	background: url(images/bg/cicle3.png) no-repeat scroll 0 0 transparent;
+}
+.cicle_large .c6
+{
+	
+	top: 120px;
+	right: 41px;
+	background: url(images/bg/cicle2.png) no-repeat scroll 0 0 transparent;
+}
+
+#cicle .cicle_shadow {
+    background: url(images/bg/home_cicle_shadow.png) no-repeat scroll 0px center transparent;
+    height: 40px;
+	width: 425px;
+	position:relative;
+	float:right;
+	top:0px;
+	right:70px;
+}
+
+
+/*-------------end cicle--------------*/
+
+.hr{
+	background: url("images/hr.png") repeat-x scroll right top transparent;
+    display: block;
+    height: 2px;
+    margin-top: 20px;
+	position:relative;
+	clear:both;
+}
+
+/*--------start news---------*/
+#news{
+	float:left;
+	position:relative;
+	margin-top:10px;
+	width:100%;
+	
+}
+.hotnews{
+	float:left;
+	position:relative;
+	margin:0px 3px 3px 0px;
+	height:140px;
+	overflow:hidden;
+}
+
+.hotnews p{
+	float:left;
+	position:absolute;
+	bottom:0px;
+	padding:5px;
+	line-height:1.5em;
+	height:auto;
+	width:inherit;
+}
+
+.hotnews i.img{
+	float:left;
+	position:relative;
+	background-position: top 50%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: block;
+	width:inherit;
+	height:inherit;
+}
+
+.hotnews p span.bg{
+	background: none repeat scroll 0 0 #000;
+    border: 0 none;
+    bottom: 0;
+    height: 100%;
+	width: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+}
+.hotnews p a{
+	position: relative;
+    z-index: 50;
+	color:#FFF;
+}
+.hotnews p a:hover{
+	color:#ffff00;
+}
+
+/*private*/
+.news1{
+	width:400px;
+	
+}
+
+
+.news2{
+	width:320px;
+}
+
+.news3{
+	width:251px;
+	
+}
+.news4{
+	width:350px;
+}
+
+
+.news5{
+	width:250px;
+	
+}
+
+.news6{
+	width:200px;
+	
+}
+.news7{
+	width:168px;
+	
+}
+
+
+
+.hotnews_shadow {
+    background: url("images/bg/home_news_shadow.png") no-repeat scroll 0 top transparent;
+    height: 10px;
+    position:relative;
+	float:left;
+	right:0px;
+	top:-2px;
+    width: 980px;
+    
+}
+
+/*-------------end news--------------*/

@@ -1,0 +1,86 @@
+@CHARSET "UTF-8";
+
+/******* MENU *******/
+#tab_container{
+	
+	width: inherit;
+	
+}
+#tab_container ul{
+	list-style: none;
+	list-style-position: outside;
+}
+#tab_container ul.tab_menu li{
+	float: left;
+	margin-right: 5px;
+	margin-bottom: -1px;
+}
+#tab_container ul.tab_menu li{
+	font-weight: 700;
+	display: block;
+	padding: 5px 13px;
+	background: #efefef;
+	margin-bottom: -1px;
+	border: 1px solid #d0ccc9;
+	border-width: 1px 1px 1px 1px;
+	position: relative;
+	color: #898989;
+	cursor: pointer;
+}
+#tab_container ul.tab_menu li#miennam{
+padding-right: 17px;
+margin-right:0px;
+}
+
+#tab_container ul.tab_menu li.active{
+	background: #fff;
+	top: 1px;
+	border-bottom: 0;
+	color: #5f95ef;
+}
+/******* /MENU *******/
+/******* CONTENT *******/
+.tab_content{
+	margin: 0pt auto;
+	background: #efefef;
+	background: #fff;
+	border: 1px solid #d0ccc9;
+	text-align: left;
+	font-size: 11px;
+	width:252px;
+	height: 200px;
+	padding:5px;
+}
+
+
+.tab_content ul{
+	 text-align:left;
+	 position:relative;
+}
+.tab_content ul li{
+	background: url("images/icon/bullet1.png") no-repeat scroll 0 0 transparent;
+    margin: 5px 0;
+    padding-left: 17px;
+}
+.tab_content ul a{
+	 text-align:left;
+	 color: #333333;
+	 font-family: inherit;
+	 font-size: 12px;
+}
+.tab_content ul a:hover{
+	 color: #5FBDCE;
+	 text-decoration:underline;
+}
+
+/******* /CONTENT *******/
+.tab_content.mienbac{
+	display:block;
+	}
+.tab_content.mientrung{
+display:none;
+}
+.tab_content.miennam{
+display:none;
+
+}
