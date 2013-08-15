@@ -62,7 +62,7 @@ public partial class usercontrols_ucNews : HocLapTrinhWeb.UI.UCBase
     {
         var vnnNewsTypeBll = new vnn_NewsTypeBLL(CurrentPage.getCurrentConnection());
         var row = vnnNewsTypeBll.GetNewsTypeByID(NewsTypeID);
-        var url = CurrentPage.UrlRoot + "/" + (row != null ? XuLyChuoi.ConvertToUnSign(row.NewsTypeName) : NewsTypeID.ToString()) + "/hltw" + NewsTypeID + ".aspx" + (PageSize == 30 ? "?" : "?pagesize=" + PageSize + "&");
+        var url = CurrentPage.UrlRoot + "/" + (row != null ? XuLyChuoi.ConvertToUnSign(row.NewsTypeName) : NewsTypeID.ToString()) + (Type == "xem-nhieu" ? "/xem-nhieu" : "") + "/hltw" + NewsTypeID + ".aspx" + (PageSize == 30 ? "?" : "?pagesize=" + PageSize + "&");
 
         var html = "";
         var nSumOfPage = (total - 1) / PageSize + 1;
@@ -123,7 +123,7 @@ public partial class usercontrols_ucNews : HocLapTrinhWeb.UI.UCBase
         var rchildren = vnnNewsTypeBll.GetDataAllChildrenByPathID("NewsTypeName,NewsTypeID,PathID", row.PathID);
         var vnnNewsBll = new vnn_NewsBLL(CurrentPage.getCurrentConnection());
 
-        var dt = vnnNewsBll.GetAllNewsForGridView((PageIndex - 1) * PageSize, PageSize, true, "NewsTypeName,Title,NewsID,RefAddress,UpdatedDate,Viewed,Thumbnail,Brief", rchildren, 1, "", "", "");
+        var dt = vnnNewsBll.GetAllNewsForGridView((PageIndex - 1) * PageSize, PageSize, true, "NewsTypeName,Title,NewsID,RefAddress,UpdatedDate,Viewed,Thumbnail,Brief", rchildren, 1, "", "", "", (Type == "xem-nhieu" ? true : false));
 
         rpData.DataSource = dt;
         rpData.DataBind();
@@ -170,6 +170,14 @@ public partial class usercontrols_ucNews : HocLapTrinhWeb.UI.UCBase
         get
         {
             return string.IsNullOrEmpty(Request.QueryString["title"]) == false ? Request.QueryString["title"] : "";
+        }
+    }
+
+    public string Type
+    {
+        get
+        {
+            return string.IsNullOrEmpty(Request.QueryString["type"]) == false ? Request.QueryString["type"] : "";
         }
     }
 
