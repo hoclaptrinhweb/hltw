@@ -34,13 +34,43 @@
         background: url('<%= CurrentPage.UrlRoot %>/images/bg-timo.png') no-repeat right center !important;
         color: white;
     }
+    .zonetab {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .button a 
+    {
+        display: inline-block;
+        border: solid 1px #ddd;
+        font-size: 11px;
+        font-weight: bold;
+        padding: 4px 12px;
+        box-shadow: 0 1px 2px #ddd;
+        background: -webkit-linear-gradient(bottom,#eee,#fff);
+        text-shadow: 0 1px #fff;
+        margin-left: 3px;
+    }
+    .button.active a {
+        background: #c00;
+        color: #fff;
+        border: solid 1px #c00;
+        text-shadow: 0 1px #333;
+    }
+    .top-menu-wrap
+    {
+        position: relative;
+    }
 </style>
 <div class="top-menu-wrap" xmlns:v="http://rdf.data-vocabulary.org/#">
     <ul class="treeview" itemprop="breadcrumb">
-        <li typeof="v:Breadcrumb"><a class="home" rel="v:url" property="v:title" href='<%= CurrentPage.UrlRoot %>'>
-            Trang chủ</a></li>
+        <li typeof="v:Breadcrumb"><a class="home" rel="v:url" property="v:title" href='<%= CurrentPage.UrlRoot %>'>Trang chủ</a></li>
         <asp:Literal ID="lrTreeView" runat="server"></asp:Literal>
     </ul>
+    <div class="zonetab">
+        <span class="<%= "button " + (Type != "xem-nhieu" ? "active" : "")  %>"><a href='<%= CurrentPage.UrlRoot + "/" + Title + "/hltw" + NewsTypeID +".aspx" + (PageIndex == 1 ? "" : "?trang=" + PageIndex) %>'>Tin mới</a></span>
+        <span class="<%= "button " + (Type == "xem-nhieu" ? "active" : "")  %>"><a href='<%= CurrentPage.UrlRoot + "/" + Title + "/xem-nhieu/hltw" + NewsTypeID +".aspx" + (PageIndex == 1 ? "" : "?trang=" + PageIndex) %>'>Xem nhiều</a></span>
+    </div>
     <%--<asp:Literal ID="lrRss" runat="server" Text="&lt;a class=&quot;link-rss&quot; rel=&quot;nofollow&quot; href=&quot;{href}&quot;&gt;RSS&lt;img class=&quot;img-rss&quot; alt=&quot;{des}&quot; src=&quot;<%= CurrentPage.UrlRoot >/Images/icon/rss.gif&quot;&gt;&lt;/a&gt;"></asp:Literal>--%>
 </div>
 <div style="clear: both;">
@@ -68,8 +98,7 @@
                         <p itemprop="description">
                             <%# Eval("Brief") %>
                         </p>
-                        <a class="article_read_more" href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("NewsID") +  ".aspx" %>'>
-                            Chi tiết <span>›</span></a>
+                        <a class="article_read_more" href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("NewsID") +  ".aspx" %>'>Chi tiết <span>›</span></a>
                     </div>
                 </div>
             </div>
