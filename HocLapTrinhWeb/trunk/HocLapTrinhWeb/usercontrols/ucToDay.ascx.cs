@@ -98,12 +98,14 @@ public partial class usercontrols_ucToDay : HocLapTrinhWeb.UI.UCBase
     private void LoadData()
     {
         var vnnNewsBll = new vnn_NewsBLL(CurrentPage.getCurrentConnection());
-        var dt = vnnNewsBll.GetAllNewsForRepeater("NewsTypeName,Title,NewsID,RefAddress,UpdatedDate,Viewed,Thumbnail,Brief", (PageIndex - 1) * 10, 10, -1, 1, StrDate.Insert(2, "/").Insert(5, "/"), StrDate.Insert(2, "/").Insert(5, "/"), "NewsID", "Desc");
+        var arr = StrDate.Insert(2, "/").Insert(5, "/").Split('/');
+        var frDate = new DateTime(int.Parse(arr[2]), int.Parse(arr[0]), int.Parse(arr[1]));
+        var dt = vnnNewsBll.GetAllNewsForRepeater("NewsTypeName,Title,NewsID,RefAddress,UpdatedDate,Viewed,Thumbnail,Brief", (PageIndex - 1) * 10, 10, -1, 1, frDate.ToString("MM/dd/yyyy"), frDate.AddDays(1).ToString("MM/dd/yyyy"), "NewsID", "Desc");
         rpData.DataSource = dt;
         rpData.DataBind();
         if (dt != null && dt.Count > 0)
         {
-            var total = vnnNewsBll.GetAllNewsRowCount("",-1, 1,"", StrDate.Insert(2, "/").Insert(5, "/"), StrDate.Insert(2, "/").Insert(5, "/"));
+            var total = vnnNewsBll.GetAllNewsRowCount("", -1, 1, "", StrDate.Insert(2, "/").Insert(5, "/"), StrDate.Insert(2, "/").Insert(5, "/"));
             Paging.InnerHtml = BindPaging(total);
         }
         SeoConfig("Tin trong ngày " + StrDate.Substring(2, 2) + " tháng " + StrDate.Substring(0, 2) + " năm " + StrDate.Substring(4), "Chuyên về lĩnh vực Lập trình - Thiết kế website Graphic - HTML/CSS - Jquery - Website -Photography - Tin công nghệ - Game. Hoclaptrinhweb.com là một website tổng hợp thông tin hoàn toàn được điều khiển tự động bởi máy tính. Mỗi ngày  tin tức từ  nhiều nguồn chính thức của các web điện tử và trang tin được Hoclaptrinhweb.com tự động tổng hợp, phân loại, phát hiện các bài đăng lại....", "web online, hoc lap trinh web, hoc lap trinh, học lập trình web, lập trình web", "", CurrentPage.UrlRoot + Request.RawUrl);
