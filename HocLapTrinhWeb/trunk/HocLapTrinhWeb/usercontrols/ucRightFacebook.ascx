@@ -59,6 +59,8 @@
                 Apple <a href="http://www.ngocmobile.vn/product/49/iphone-4-cu-16gb-trang-quoc-te-moi-98-99-ngocmobile-vn.html">iphone 4 cũ</a>
                 <br />
                 <a href="http://mtaigame.com/mobile-game/game-ai-la-trieu-phu.html">Game ai la triệu phú</a> free cho mobile
+                <br />
+                Chia sẽ kinh nghiệm <a href="http://www.yeutretho.com/handmade-c300/">handmade</a> tại yeutretho.com
             </div>
         </div>
     </div>
