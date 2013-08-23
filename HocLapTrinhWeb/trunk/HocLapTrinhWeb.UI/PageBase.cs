@@ -78,10 +78,17 @@ namespace HocLapTrinhWeb.UI
             }
             catch (Exception exception)
             {
-                if (CurrentConnect.IConnect.GetConnected() != null)
-                    this.msg.AddMessage("ERR-000000", exception.Message, 0);
-                else
-                    base.Server.Transfer(base.Request.ApplicationPath + "/Error.html");
+                try
+                {
+                    if (CurrentConnect.IConnect.GetConnected() != null)
+                        this.msg.AddMessage("ERR-000000", exception.Message, 0);
+                    else
+                        base.Server.Transfer(base.Request.ApplicationPath + "/Error.html?001");
+                }
+                catch (Exception exception)
+                {
+                    base.Server.Transfer(base.Request.ApplicationPath + "/Error.html?002");
+                }
             }
         }
 
@@ -207,7 +214,7 @@ namespace HocLapTrinhWeb.UI
         {
             try
             {
-                var metaDesc = new HtmlMeta {Name = name, Content = content};
+                var metaDesc = new HtmlMeta { Name = name, Content = content };
                 base.Page.Header.Controls.Add(metaDesc);
             }
             catch
@@ -224,7 +231,7 @@ namespace HocLapTrinhWeb.UI
         {
             try
             {
-                var metaDesc = new HtmlMeta {Name = "description", Content = description};
+                var metaDesc = new HtmlMeta { Name = "description", Content = description };
                 base.Page.Header.Controls.Add(metaDesc);
             }
             catch
@@ -241,7 +248,7 @@ namespace HocLapTrinhWeb.UI
         {
             try
             {
-                var metaKey = new HtmlMeta {Name = "keywords", Content = keyword};
+                var metaKey = new HtmlMeta { Name = "keywords", Content = keyword };
                 base.Page.Header.Controls.Add(metaKey);
             }
             catch
@@ -254,7 +261,7 @@ namespace HocLapTrinhWeb.UI
         {
             try
             {
-                var metaKey = new HtmlMeta {Name = "title", Content = title};
+                var metaKey = new HtmlMeta { Name = "title", Content = title };
                 base.Page.Header.Controls.Add(metaKey);
             }
             catch
