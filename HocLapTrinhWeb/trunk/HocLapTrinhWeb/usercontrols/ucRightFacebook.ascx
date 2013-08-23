@@ -84,8 +84,6 @@
         </div>
         <div class="like_box_footer">
             <div class="tagcloud tabbed_tag">
-                <a target="_blank" href="http://www.iqviet.org/" title=" IQ Việt - Cộng Đồng IQ Việt Thủ Thuật Photoshop | template wordpress | Giao diện Joompla  | Thiết kế web đẹp giá rẻ | Khơi nguồn cảm hứng sáng tạo | bóc cháy đam mê ">Giao diện web đẹp</a>
-                <br />
                 <a target="_blank" href="http://thugianviet.info" title="Phim online, phim chất lương caot">Phim online, phim chất lương cao</a>
                 <br />
                 Tin tức mới nhất về <a target="_blank" href="http://www.tinmoi.vn/samsung-galaxy-s4-e218.html">Samsung Galaxy S4</a>
