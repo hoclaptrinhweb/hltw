@@ -61,6 +61,13 @@
                                     <asp:Label ID="lbTagName" runat="server" Text='<%# Eval("TagName") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Xem">
+                                <HeaderStyle Width="6%" />
+                                <ItemTemplate>
+                                    <asp:HyperLink ID="htLink" Target="_blank" runat="server" NavigateUrl='<%# CurrentPage.UrlRoot + "/tag/" +  Eval("TagName").ToString() + ".aspx" %>'
+                                        Text="Xem"></asp:HyperLink>
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                         <HeaderStyle CssClass="GridTitle" />
                         <RowStyle CssClass="RowStyle" />
@@ -73,8 +80,7 @@
                     </asp:GridView>
                     <asp:ObjectDataSource ID="ObjData" runat="server" TypeName="HocLapTrinhWeb.BLL.v_TagBLL"
                         EnablePaging="True" SelectMethod="GetAllTagForGridView" SelectCountMethod="GetAllTagRowCount"
-                        OnObjectCreating="ObjDataObjectCreating" OnSelected="ObjDataSelected" OnSelecting="ObjDataSelecting">
-                    </asp:ObjectDataSource>
+                        OnObjectCreating="ObjDataObjectCreating" OnSelected="ObjDataSelected" OnSelecting="ObjDataSelecting"></asp:ObjectDataSource>
                 </div>
             </ContentTemplate>
             <Triggers>
@@ -91,12 +97,10 @@
                     <asp:HiddenField runat="server" ID="hdTagID" Value="0" />
                     <table cellpadding="3">
                         <tr>
-                            <td class="midleft">
-                            </td>
+                            <td class="midleft"></td>
                             <td class="miditem">
                                 <div style="padding-left: 20px">
-                                    <asp:ValidationSummary ID="valError1" ValidationGroup="vSave" runat="server" EnableClientScript="False">
-                                    </asp:ValidationSummary>
+                                    <asp:ValidationSummary ID="valError1" ValidationGroup="vSave" runat="server" EnableClientScript="False"></asp:ValidationSummary>
                                     <asp:CustomValidator ID="SaveValidate1" ValidationGroup="vSave" runat="server" Display="None"
                                         ErrorMessage="CustomValidator" /><div class="Spacer">
                                         </div>
@@ -106,29 +110,23 @@
                                         <td>
                                             <asp:Label ID="lblTagName" CssClass="Caption" runat="server" Text="Tên"></asp:Label>
                                         </td>
-                                        <td class="tdempty">
-                                        </td>
-                                        <td class="Require">
-                                        </td>
+                                        <td class="tdempty"></td>
+                                        <td class="Require"></td>
                                         <td>
                                             <asp:TextBox ID="txtTagName" Width="500px" runat="server"></asp:TextBox>
                                         </td>
                                     </tr>
                                     <tr valign="top">
-                                        <td>
-                                        </td>
-                                        <td>
-                                        </td>
-                                        <td>
-                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                         <td>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtTagName"
                                                 Display="Dynamic" ErrorMessage="Hãy nhập dữ liệu" ValidationGroup="vAdd"></asp:RequiredFieldValidator>
                                         </td>
                                     </tr>
                                     <tr class="trEmpty">
-                                        <td colspan="4">
-                                        </td>
+                                        <td colspan="4"></td>
                                     </tr>
                                     <tr>
                                         <td colspan="4" align="right">
@@ -142,16 +140,12 @@
                                     </tr>
                                 </table>
                             </td>
-                            <td class="midright">
-                            </td>
+                            <td class="midright"></td>
                         </tr>
                         <tr>
-                            <td class="footerleft">
-                            </td>
-                            <td class="footeritem">
-                            </td>
-                            <td class="footerright">
-                            </td>
+                            <td class="footerleft"></td>
+                            <td class="footeritem"></td>
+                            <td class="footerright"></td>
                         </tr>
                     </table>
                 </ContentTemplate>
