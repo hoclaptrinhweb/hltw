@@ -85,7 +85,7 @@ namespace HocLapTrinhWeb.UI
                     else
                         base.Server.Transfer(base.Request.ApplicationPath + "/Error.html?001");
                 }
-                catch (Exception exception)
+                catch (Exception ex)
                 {
                     base.Server.Transfer(base.Request.ApplicationPath + "/Error.html?002");
                 }
