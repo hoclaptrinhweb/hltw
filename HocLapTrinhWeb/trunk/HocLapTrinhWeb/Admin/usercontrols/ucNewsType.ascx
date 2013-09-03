@@ -69,11 +69,10 @@
                                     <asp:Label ID="lbDescription" runat="server" Text='<%# Global.GetSubContent(Eval("Description").ToString(),60) %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Thứ tự" SortExpression="priority">
-                                <HeaderStyle Width="10%"></HeaderStyle>
-                                <ItemStyle HorizontalAlign="Center" />
+                            <asp:TemplateField HeaderText="Bài viết" SortExpression="TotalNews">
+                                <ItemStyle HorizontalAlign="Left" />
                                 <ItemTemplate>
-                                    <asp:Label ID="lblLogin" runat="server" Text='<%# Eval("priority") %>'></asp:Label>
+                                    <asp:Label ID="lblLogin" runat="server" Text='<%# Eval("TotalNews") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
@@ -88,8 +87,7 @@
                     </asp:GridView>
                     <asp:ObjectDataSource ID="ObjData" runat="server" TypeName="HocLapTrinhWeb.BLL.vnn_NewsTypeBLL"
                         EnablePaging="True" SelectMethod="GetAllNewsTypeForGridView" SelectCountMethod="GetAllNewsTypeRowCount"
-                        OnObjectCreating="ObjDataObjectCreating" OnSelected="ObjDataSelected" OnSelecting="ObjDataSelecting">
-                    </asp:ObjectDataSource>
+                        OnObjectCreating="ObjDataObjectCreating" OnSelected="ObjDataSelected" OnSelecting="ObjDataSelecting"></asp:ObjectDataSource>
                 </div>
             </ContentTemplate>
             <Triggers>
@@ -106,12 +104,10 @@
                     <asp:HiddenField runat="server" ID="hdNewsTypeID" Value="0" />
                     <table cellpadding="3">
                         <tr>
-                            <td class="midleft">
-                            </td>
+                            <td class="midleft"></td>
                             <td class="miditem">
                                 <div style="padding-left: 20px">
-                                    <asp:ValidationSummary ID="valError1" ValidationGroup="vSave" runat="server" EnableClientScript="False">
-                                    </asp:ValidationSummary>
+                                    <asp:ValidationSummary ID="valError1" ValidationGroup="vSave" runat="server" EnableClientScript="False"></asp:ValidationSummary>
                                     <asp:CustomValidator ID="SaveValidate1" ValidationGroup="vSave" runat="server" Display="None"
                                         ErrorMessage="CustomValidator" /><div class="Spacer">
                                         </div>
@@ -121,17 +117,14 @@
                                         <td>
                                             <asp:Label ID="Label1" runat="server" CssClass="Caption" Text="Thuộc"></asp:Label>
                                         </td>
-                                        <td>
-                                        </td>
-                                        <td class="Require">
-                                        </td>
+                                        <td></td>
+                                        <td class="Require"></td>
                                         <td>
                                             <asp:DropDownList ID="dropNewsType" runat="server" AutoPostBack="False" DataSourceID="ObjNewsType"
                                                 DataTextField="TreeView" DataValueField="NewsTypeID" OnDataBound="DropNewsTypeDataBound">
                                             </asp:DropDownList>
                                             <asp:ObjectDataSource ID="ObjNewsType" runat="server" OnObjectCreating="ObjNewsTypeObjectCreating"
-                                                SelectMethod="GetAllNewsTypeForGridView" TypeName="HocLapTrinhWeb.BLL.vnn_NewsTypeBLL">
-                                            </asp:ObjectDataSource>
+                                                SelectMethod="GetAllNewsTypeForGridView" TypeName="HocLapTrinhWeb.BLL.vnn_NewsTypeBLL"></asp:ObjectDataSource>
                                         </td>
                                     </tr>
                                     <tr class="trEmpty">
@@ -140,17 +133,14 @@
                                         <td>
                                             <asp:Label ID="lblNewsTypeName" CssClass="Caption" runat="server" Text="Tên"></asp:Label>
                                         </td>
-                                        <td class="tdempty">
-                                        </td>
-                                        <td class="Require">
-                                        </td>
+                                        <td class="tdempty"></td>
+                                        <td class="Require"></td>
                                         <td>
                                             <asp:TextBox ID="txtNewsTypeName" runat="server" Width="300px"></asp:TextBox>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="3">
-                                        </td>
+                                        <td colspan="3"></td>
                                         <td>
                                             <asp:RequiredFieldValidator ID="rfvNewsTypeName" runat="server" ErrorMessage="Phải nhập tên"
                                                 Display="Dynamic" ValidationGroup="vAdd" ControlToValidate="txtNewsTypeName"
@@ -163,10 +153,8 @@
                                         <td>
                                             <asp:Label ID="Label2" runat="server" CssClass="Caption" Text="Nội dung"></asp:Label>
                                         </td>
-                                        <td>
-                                        </td>
-                                        <td>
-                                        </td>
+                                        <td></td>
+                                        <td></td>
                                         <td>
                                             <asp:TextBox ID="txtDescription" runat="server" Width="300px" TextMode="MultiLine"
                                                 Height="100px"></asp:TextBox>
@@ -178,10 +166,8 @@
                                         <td>
                                             <asp:Label ID="Label3" runat="server" CssClass="Caption" Text="Thứ tự"></asp:Label>
                                         </td>
-                                        <td>
-                                        </td>
-                                        <td class="Require">
-                                        </td>
+                                        <td></td>
+                                        <td class="Require"></td>
                                         <td>
                                             <inno:NumericTextBox ID="txtPriority" runat="server" Alignment="Left" Width="300px"></inno:NumericTextBox>
                                         </td>
@@ -203,16 +189,12 @@
                                     </tr>
                                 </table>
                             </td>
-                            <td class="midright">
-                            </td>
+                            <td class="midright"></td>
                         </tr>
                         <tr>
-                            <td class="footerleft">
-                            </td>
-                            <td class="footeritem">
-                            </td>
-                            <td class="footerright">
-                            </td>
+                            <td class="footerleft"></td>
+                            <td class="footeritem"></td>
+                            <td class="footerright"></td>
                         </tr>
                     </table>
                 </ContentTemplate>
