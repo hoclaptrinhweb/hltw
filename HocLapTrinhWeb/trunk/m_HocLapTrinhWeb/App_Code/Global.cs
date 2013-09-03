@@ -36,7 +36,7 @@ public static class Global
     public static string EmailCC = ConfigurationManager.AppSettings["EmailCC"];
     public static string HostMail = ConfigurationManager.AppSettings["HostMail"];
     public static string PostMail = ConfigurationManager.AppSettings["PostMail"];
-    public static string MailPass = "[vnn183492760505]";
+    public static string MailPass = "";
 
 
 
