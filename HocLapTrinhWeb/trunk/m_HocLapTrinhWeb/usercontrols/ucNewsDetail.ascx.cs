@@ -90,10 +90,6 @@ public partial class usercontrols_ucNewsDetail : HocLapTrinhWeb.UI.UCBase
     private void LoadDataOld(int notNewsID, int newsTypeID, DateTime currdate)
     {
         var vnnNewsBll = new vnn_NewsBLL(CurrentPage.getCurrentConnection());
-        //var dt = vnnNewsBll.GetAllNewsNewForRepeater("Title,brief,NewsID,NewsTypeName,CreatedDate,Thumbnail", 10, notNewsID, newsTypeID, 1, currdate);
-        //rpData.DataSource = dt.Select("", "createddate desc");
-        //rpData.DataBind();
-        //if (dt.Rows.Count != 0) return;
         var dt = vnnNewsBll.GetAllNewsOldForRepeater("Title,brief,NewsID,NewsTypeName,CreatedDate,Thumbnail", 10, notNewsID,
                                                  newsTypeID, 1, currdate);
         rpData.DataSource = dt;
