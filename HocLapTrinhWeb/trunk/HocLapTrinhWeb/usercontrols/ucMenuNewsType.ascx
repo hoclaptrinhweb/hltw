@@ -1,14 +1,13 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ucMenuNewsType.ascx.cs" Inherits="usercontrols_ucMenuNewsType" %>
 <style>
-    .cat-list
-    {
-        float: left;
-        width: 120px;
-        margin: 1px;
-        border-bottom: 1px solid #dedede;
-        padding: 8px;
-        font-size: 1.1em;
-    }
+	.cat-list {
+		float: left;
+		width: 125px;
+		margin: 1px;
+		border-bottom: 1px solid #dedede;
+		padding: 5px;
+		font-size: 1.1em;
+	}
 
     .float-right
     {
@@ -22,6 +21,7 @@
     .cat-list img {
         margin-bottom: -2px;
         margin-right: 5px;
+		width:23px;
     }
     .cat-list a
     {
