@@ -2,7 +2,7 @@
     AutoEventWireup="true" CodeFile="ActiveMenu.aspx.cs" Inherits="Code_ActiveMenu" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <link href="../style.css" rel="stylesheet" type="text/css" />
+    <%= Combres.WebExtensions.CombresLink("DefaultThemeCss") %>
     <nav id="navigation">
     <div class="nav_wrap">
         <div class="inner">
