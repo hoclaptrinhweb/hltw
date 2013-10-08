@@ -4177,3 +4177,16 @@ padding: 0 17px;
 #divTag {
 width: 307px;
 }
+
+#icontainer
+{
+    overflow: hidden;
+    width: 10px;
+    height: 12px;
+    position: absolute;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0.0;
+    -khtml-opacity: 0.0;
+    opacity: 0.0;
+    z-index: 9999999;
+}

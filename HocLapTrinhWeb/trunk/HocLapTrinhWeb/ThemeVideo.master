@@ -6,6 +6,8 @@
 <%@ Register Src="usercontrols/ucHeader.ascx" TagName="ucHeader" TagPrefix="uc4" %>
 <%@ Register Src="usercontrols/ucHeaderFix.ascx" TagName="ucHeaderFix" TagPrefix="uc5" %>
 <%@ Register Src="usercontrols/ucNavigation.ascx" TagName="ucNavigation" TagPrefix="uc6" %>
+<%@ Register Src="~/usercontrols/ucHackLike.ascx" TagPrefix="uc1" TagName="ucHackLike" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
 <head id="Head1" runat="server">
@@ -17,7 +19,6 @@
         <script type="text/javascript" src="http://www.hoclaptrinhweb.com/js/IE9.js"></script>
         <script type="text/javascript" src="http://www.hoclaptrinhweb.com/js/html5.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="http://ad.vatgia.com/static/jsv2/advatgia.js"></script>
     <asp:Literal ID="lrStyle" runat="server"></asp:Literal>
     <asp:Literal ID="lrScript" runat="server"></asp:Literal>
     <asp:Literal ID="lrScriptDetail" runat="server"></asp:Literal>
@@ -41,92 +42,7 @@
     <meta name="Googlebot" content="INDEX,FOLLOW" />
 </head>
 <body>
-    <style>
-        #icontainer
-        {
-            overflow: hidden;
-            width: 10px;
-            height: 12px;
-            position: absolute;
-            filter: alpha(opacity=0);
-            -moz-opacity: 0.0;
-            -khtml-opacity: 0.0;
-            opacity: 0.0;
-            z-index: 9999999;
-        }
-    </style>
-    <div id='fb-root'>
-    </div>
-    <div id="icontainer">
-        <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fhoclaptrinhweb&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=tahoma&amp;colorscheme=light&amp;height=80"
-            scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 50px;
-            height: 23px; position: absolute; left: -30px;" allowtransparency="true" id="fbframe"
-            name="fbframe"></iframe>
-    </div>
-    <script type="text/javascript">
-        var inter;
-        $(function () {
-            inter = setInterval("updateActive();", 50);
-        });
-
-        function updateActive() {
-            if ($(document.activeElement).attr('id') == "fbframe") {
-                clearInterval(inter);
-                setCookie('vnn', '1', 10);
-            }
-        };
-        var icontainer = document.getElementById('icontainer');
-        function mouseFollower(e) {
-            if (window.event) {
-                icontainer.style.top = (e.pageY - 5) + 'px';
-                icontainer.style.left = (e.pageX - 5) + 'px';
-            }
-            else {
-                icontainer.style.top = (e.pageY - 5) + 'px';
-                icontainer.style.left = (e.pageX - 5) + 'px';
-            }
-        };
-        $(document).mousemove(function (e) {
-            if (getCookie('vnn') != '1') {
-                $('#icontainer').show();
-                mouseFollower(e);
-            } else {
-                $('#icontainer').hide();
-            };
-        });
-    </script>
-    <script type="text/javascript">
-        var pageOptions = {
-            'webId': 661,
-            'category': 0
-        };
-        var adblock = {
-            'adblock1': {
-                'divIdShow': 'adVatgia_block_1',
-                'numAd': 4,
-                'typeShow': 0,
-                'style': { 'width': 300 }
-            },
-            'adblock2': {
-                'divIdShow': 'adVatgia_block_2',
-                'numAd': 3,
-                'typeShow': 1,
-                'style': { 'width': 650 }
-            },
-            'adblock3': {
-                'divIdShow': 'adVatgia_block_3',
-                'numAd': 6,
-                'typeShow': 1,
-                'style': { 'width': 1000 }
-            },
-            'adblock4': {
-                'divIdShow': 'adVatgia_block_4',
-                'numAd': 4,
-                'typeShow': 2,
-                'style': { 'width': 310, 'height': 230, 'link': '#aaa', 'border': '#2D81FB', 'align': 'right' }
-            }
-        };
-    </script>
+    <uc1:ucHackLike runat="server" ID="ucHackLike" />
     <form id="form1" runat="server">
     <uc5:ucHeaderFix ID="ucHeaderFix1" runat="server" />
     <uc4:ucHeader ID="ucHeader1" runat="server" />
@@ -134,8 +50,6 @@
     <div class="inner">
         <div class="container">
             <div class="main">
-                <div id="adVatgia_block_2" style="margin-bottom: 5px;">
-                </div>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
@@ -149,17 +63,11 @@
             </div>
             <div class="clear">
             </div>
-            <div id="adVatgia_block_3">
-            </div>
-            <div id="adVatgia_block_4">
-            </div>
         </div>
     </div>
     <uc1:ucFooter1 ID="ucFooter11" runat="server" />
     <uc2:ucCopyRight ID="ucCopyRight1" runat="server" />
-    <script type="text/javascript">        new vatgiaAd(pageOptions, adblock).Ads();</script>
     <script type="text/javascript">
-
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-30339288-1']);
         _gaq.push(['_setDomainName', 'hoclaptrinhweb.com']);
