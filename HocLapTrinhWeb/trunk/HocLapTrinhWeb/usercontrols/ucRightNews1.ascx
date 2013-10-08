@@ -19,7 +19,8 @@
                                     <p>
                                         <a itemprop="url" itemprop="name" href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("NewsID") +  ".aspx" %>'>
                                             <%# Eval("Title") %></a><a class="cat" href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/hltw"  + Eval("NewsTypeID") +  ".aspx" %>'>
-                                                <%# Eval("NewsTypeName") %></a></p>
+                                                <%# Eval("NewsTypeName") %></a>
+                                    </p>
                                 </li>
                             </ItemTemplate>
                         </asp:Repeater>
@@ -32,8 +33,7 @@
     </div>
 </div>
 <script type="text/javascript">
-    $('.tabbed_nav li').click(function ()
-    {
+    $('.tabbed_nav li').click(function () {
         $('.tabbed_nav li a').removeClass();
         var i = $(this).attr('val');
         $(this).children().addClass('current');
@@ -45,8 +45,7 @@
                 type: 'POST',
                 url: '<%= CurrentPage.UrlRoot %>/handler/news.ashx?NewsTypeID=<%= NewsTypeID %>',
                 contentType: 'application/json; charset=utf-8',
-                success: function (msg)
-                {
+                success: function (msg) {
                     $('.tabbed_content')[i].innerHTML = msg;
                 },
                 error: function () { }
@@ -55,6 +54,14 @@
     });
 </script>
 <div class="box_outer">
-    <div id="adVatgia_block_1">
-    </div>
+    <!-- Begin Adlite -->
+    <script language="javascript" type="text/javascript">
+        var adlite_zoneId = 'va_C75DB0D2E5D31761';
+        var adlite_width = '300';
+        var adlite_height = '450';
+        var adlite_sizeId = '55';
+        var adlite_typeId = '4';
+    </script>
+    <script type="text/javascript" src="http://embed.adlite.net/adlite.js"></script>
+    <!-- End: Adlite -->
 </div>
