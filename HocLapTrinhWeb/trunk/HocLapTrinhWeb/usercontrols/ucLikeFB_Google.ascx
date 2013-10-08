@@ -10,7 +10,6 @@
 
                 <script type="text/javascript">
                     window.___gcfg = { lang: 'vi' };
-
                     (function () {
                         var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
                         po.src = 'https://apis.google.com/js/plusone.js';
@@ -20,21 +19,8 @@
 
             </td>
             <td style="padding-left: 10px">
-
-                <script>
-                    (function (d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id)) { return; }
-                        js = d.createElement(s); js.id = id;
-                        js.src = "//connect.facebook.net/en_US/all.js#appId=209755295756012&xfbml=1";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    } (document, 'script', 'facebook-jssdk'));
-                </script>
-
                 <div class="fb-like" data-send="false" href="http://facebook.com/hoclaptrinhweb" data-layout="button_count" data-width="80"
                     data-show-faces="true">
-                </div>
-                <div id="fb-root">
                 </div>
             </td>
         </tr>
