@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="ucRightFacebook.ascx.cs"
     Inherits="usercontrols_ucRightFacebook" %>
 <%@ Register Src="ucTagCount.ascx" TagName="ucTagCount" TagPrefix="uc1" %>
-<%@ Register src="ucMenuNewsType.ascx" tagname="ucMenuNewsType" tagprefix="uc2" %>
+<%@ Register Src="ucMenuNewsType.ascx" TagName="ucMenuNewsType" TagPrefix="uc2" %>
 <div class="box_outer">
     <div class="widget">
         <h3 class="widget_title">Từ khoá nổi bật</h3>
@@ -12,8 +12,7 @@
 </div>
 <div id="divTag" class="box_outer">
     <div class="widget">
-        <h3 class="widget_title">
-            Chuyên mục</h3>
+        <h3 class="widget_title">Chuyên mục</h3>
         <div class="wid_border">
         </div>
         <div class="">
@@ -24,9 +23,11 @@
 <style>
     .video, .video a
     {
-        position:relative;
+        position: relative;
     }
-    .icon_play {
+
+    .icon_play
+    {
         display: inline-block;
         position: absolute;
         right: 70px;
@@ -85,8 +86,6 @@
             <div class="tagcloud tabbed_tag">
                 <a target="_blank" href="http://thugianviet.info" title="Phim online, phim chất lương caot">Phim online, phim chất lương cao</a>
                 <br />
-                Tin tức mới nhất về <a target="_blank" href="http://www.tinmoi.vn/samsung-galaxy-s4-e218.html">Samsung Galaxy S4</a>
-                <br />
                 Lap trinh <a target="_blank" href="http://maybanhang.net/phan-mem-quan-ly-ban-hang/">phan mem ban hang</a> tiet kiem va hieu qua
                 <br />
                 LINK VAO <a href="http://www.cacuoc1.com">M88</a> NHÀ CÁI M88
@@ -97,19 +96,35 @@
                 <br />
                 Chia sẽ kinh nghiệm <a href="http://www.yeutretho.com/handmade-c300/">handmade</a> tại yeutretho.com
 				<br />
-				<a href="http://duhocvietnhat.com/du-hoc-nhat-ban/">Du hoc Nhat Ban</a> giá rẻ tại JellyFish Education
-				<br/>
-				<a href="http://dulich-singapore.vn">Du lich malaysia</a>
-				<br/>
-				<a href="http://bizzone.vn">Phần mềm quản lý nhân sự</a>
-				<br/>
-				<a href="http://superwatch.vn/cid-92/dong-ho-thoi-trang.html">Dong ho thoi trang</a> tại Superwatch.vn
-				<br/>
-				Tải <a href="http://kenhgame.vn/838/tai-ucweb.html">ucweb</a> cho điện thoại
-				<br/>
-				<a href="http://insky.vn/">Thiết kế logo</a> chuyên nghiệp
-				<br/>
-				Phukiendientu.vn chuyên <a href="http://phukiendientu.vn/sanpham/day-cap-day-chuyen-doi/cap-tin-hieu-vga-dvi">cap VGA</a> chính hãng, giá rẻ
+                <a href="http://duhocvietnhat.com/du-hoc-nhat-ban/">Du hoc Nhat Ban</a> giá rẻ tại JellyFish Education
+				<br />
+                <a href="http://superwatch.vn/cid-92/dong-ho-thoi-trang.html">Dong ho thoi trang</a> tại Superwatch.vn
+				<br />
+                <a href="http://insky.vn/">Thiết kế logo</a> chuyên nghiệp
+				<br />
+                Phukiendientu.vn chuyên <a href="http://phukiendientu.vn/sanpham/day-cap-day-chuyen-doi/cap-tin-hieu-vga-dvi">cap VGA</a> chính hãng, giá rẻ
+				<br />
+                các bài hát <a href="http://www.vietvideos.vn/list/phuong-my-chi.html">phuong my chi</a> The Voice Kid
+				<br />
+                <a href="http://www.bhiu.edu.vn/xet-tuyn-nv2.html">Xet tuyen nguyen vong hai</a>
+                <br />
+                viet <a href="http://www.vietvideos.vn">video</a> s.vn
+				<br />
+                <a href="http://vietsupply.com.vn/xem-san-pham/quat-huong-truc-chuyen-dong-gian-tiep-it30">Quạt hướng trục</a> - Vietsupply.com.vn
+				<br />
+                <a href="http://densuoiphongtam.com/">Den suoi nha tam</a> giá rẻ tại densuoiphongtam.com
+				<br />
+                <a href="http://www.game24h.vn/">Game 24h</a>
+                <br />
+                đọc <a href="http://thethao247.vn">Báo bóng đá</a> trên Thể thao 247
+				<br />
+                <a href="http://sany.vn/man-chieu-42/">Man chieu</a> chính hãng
+				<br />
+                <a href="http://www.capbalo.com/cat/san-pham/balo-laptop/200">Balo laptop</a> giá rẻ
+				<br />
+                <a href="http://viettelidc.com.vn/thue-vps">Cloud VPS</a> là gì?
+				<br />
+                Tải <a href="http://www.1vs.vn/SanPham/1CQuanLyVanBan/">phần mềm quản lý văn bản</a> miễn phí
             </div>
         </div>
     </div>
