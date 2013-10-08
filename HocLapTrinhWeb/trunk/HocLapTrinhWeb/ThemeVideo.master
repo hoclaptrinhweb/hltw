@@ -44,43 +44,55 @@
 <body>
     <uc1:ucHackLike runat="server" ID="ucHackLike" />
     <form id="form1" runat="server">
-    <uc5:ucHeaderFix ID="ucHeaderFix1" runat="server" />
-    <uc4:ucHeader ID="ucHeader1" runat="server" />
-    <uc6:ucNavigation ID="ucNavigation1" runat="server" />
-    <div class="inner">
-        <div class="container">
-            <div class="main">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-            </div>
-            <div class="sidebar">
-                <div id="vbdAd" class="box_outer">
-                    <a href="http://forum.hoclaptrinhweb.com" target="_blank" title="Cùng học tập - Cùng chia sẽ">
-                        <img alt="Cùng học tập - Cùng chia sẽ" src="http://hoclaptrinhweb.com/images/ads_forum.png" style="width: 305px;" />
-                    </a>
+        <uc5:ucHeaderFix ID="ucHeaderFix1" runat="server" />
+        <uc4:ucHeader ID="ucHeader1" runat="server" />
+        <uc6:ucNavigation ID="ucNavigation1" runat="server" />
+        <div class="inner">
+            <div class="container">
+                <div class="main">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
                 </div>
-                <uc3:ucRightFacebook ID="ucRightFacebook1" runat="server" />
-            </div>
-            <div class="clear">
+                <div class="sidebar">
+                    <div id="vbdAd" class="box_outer">
+                        <a href="http://forum.hoclaptrinhweb.com" target="_blank" title="Cùng học tập - Cùng chia sẽ">
+                            <img alt="Cùng học tập - Cùng chia sẽ" src="http://hoclaptrinhweb.com/images/ads_forum.png" style="width: 305px;" />
+                        </a>
+                    </div>
+                    <uc3:ucRightFacebook ID="ucRightFacebook1" runat="server" />
+                </div>
+                <div class="clear">
+                </div>
             </div>
         </div>
-    </div>
-    <uc1:ucFooter1 ID="ucFooter11" runat="server" />
-    <uc2:ucCopyRight ID="ucCopyRight1" runat="server" />
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-30339288-1']);
-        _gaq.push(['_setDomainName', 'hoclaptrinhweb.com']);
-        _gaq.push(['_setAllowLinker', true]);
-        _gaq.push(['_trackPageview']);
+        <div style="text-align: center">
+            <!-- Begin Adlite -->
+            <script language="javascript" type="text/javascript">
+                var adlite_zoneId = 'va_6CE149DDB4F7FC46';
+                var adlite_width = '970';
+                var adlite_height = '180';
+                var adlite_sizeId = '57';
+                var adlite_typeId = '4';
+            </script>
+            <script type="text/javascript" src="http://embed.adlite.net/adlite.js"></script>
+            <!-- End: Adlite -->
+        </div>
+        <uc1:ucFooter1 ID="ucFooter11" runat="server" />
+        <uc2:ucCopyRight ID="ucCopyRight1" runat="server" />
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-30339288-1']);
+            _gaq.push(['_setDomainName', 'hoclaptrinhweb.com']);
+            _gaq.push(['_setAllowLinker', true]);
+            _gaq.push(['_trackPageview']);
 
-        (function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
 
-    </script>
+        </script>
     </form>
 </body>
 </html>
