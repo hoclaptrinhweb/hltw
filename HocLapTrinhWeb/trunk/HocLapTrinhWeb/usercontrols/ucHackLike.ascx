@@ -43,7 +43,7 @@
 
     function updateActiveElement() {
         if ($(document.activeElement).attr('id') == "fbframe") {
-            clearInterval(interval);
+            clearInterval(inter);
             setCookie('vnn', '1', 10);
         }
     };
