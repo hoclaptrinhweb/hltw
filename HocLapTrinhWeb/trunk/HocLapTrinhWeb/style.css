@@ -4079,7 +4079,7 @@ padding: 5px;
 
 .c-view li {
 padding: 5px;
-height: 138px;
+height: 200px;
 width: 190px;
 }
 .view li {
@@ -4089,22 +4089,22 @@ overflow: hidden;
 .thumb {
 position: relative;
 }
-.c-view .c-thumb .thumb-link {
-height: 92px;
-width: 182px;
+.thumb-link
+{
+    border: 1px solid #919191;
+    padding: 3px;
 }
-.c-thumb .thumb-link {
-width: 128px;
-height: 72px;
+.thumb-link img
+{
+    border: 1px solid #919191;
 }
+
 .thumb-link {
 position: relative;
 display: inline-block;
 overflow: hidden;
-border: 4px solid #fff;
-box-shadow: 0 0 1px 1px #e9e9e9;
 }
-.thumb-link:hover{border-color:#000}
+
 .c-thumb .thumb-link img.thumbnail {
 bottom: -17%;
 }
@@ -4119,6 +4119,18 @@ padding: 0 4px;
 .c-view .title-link {
 height: 35px;
 overflow: hidden;
+color: #545454;
+font-weight: bold;
+}
+
+.icon_plays {
+display: inline-block;
+position: absolute;
+left: 10px;
+bottom: 10px;
+background: url(http://st.f1.thethao.vnexpress.net/c/v2/images/graphics/bg_icon_play.png) no-repeat top left;
+height: 26px;
+width: 26px;
 }
 .title-link {
 margin-bottom: 5px;
@@ -4136,10 +4148,6 @@ bottom: 7px;
 right: 4px;
 }
 .box-content {
-background: #edeff4;
-border: 1px solid #d4dbe8;
-padding: 10px 19px;
-margin-bottom: 10px;
 position: relative;
 float:left;
 }
