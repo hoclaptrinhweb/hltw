@@ -7,6 +7,8 @@
 <%@ Register Src="usercontrols/ucHeaderFix.ascx" TagName="ucHeaderFix" TagPrefix="uc5" %>
 <%@ Register Src="usercontrols/ucNavigation.ascx" TagName="ucNavigation" TagPrefix="uc6" %>
 <%@ Register Src="~/usercontrols/ucHackLike.ascx" TagPrefix="uc1" TagName="ucHackLike" %>
+<%@ Register Src="~/usercontrols/ucRightSearch.ascx" TagPrefix="uc1" TagName="ucRightSearch" %>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
@@ -54,11 +56,7 @@
                     </asp:ContentPlaceHolder>
                 </div>
                 <div class="sidebar">
-                    <div id="vbdAd" class="box_outer">
-                        <a href="http://forum.hoclaptrinhweb.com" target="_blank" title="Cùng học tập - Cùng chia sẽ">
-                            <img alt="Cùng học tập - Cùng chia sẽ" src="http://www.hoclaptrinhweb.com/images/ads_forum.png" style="width: 305px;" />
-                        </a>
-                    </div>
+                    <uc1:ucRightSearch runat="server" ID="ucRightSearch" />
                     <uc3:ucRightFacebook ID="ucRightFacebook1" runat="server" />
                 </div>
                 <div class="clear">
