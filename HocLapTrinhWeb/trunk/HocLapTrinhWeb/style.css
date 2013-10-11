@@ -3852,6 +3852,19 @@ color: #98CCE6;
 line-height: 24px;
 color: White  !important;
 }
+.keyword
+{
+    border-top: dashed 1px #c1c1c1;
+border-bottom: dashed 1px #c1c1c1;
+padding: 10px 0;
+}
+.keyword h4 {
+font-size: 20px;
+float: left;
+margin: 0;
+margin-right: 18px;
+margin-top: 5px;
+}
 
 .keyword a {
 	display: inline-block;
@@ -4027,24 +4040,24 @@ line-height: 1;
 margin:0px;
 color:Black;
 }
-.entry-related ul {
-overflow: hidden;
-padding: 5px 10px 10px;
-background:white;
-}
-.entry-related ul li {
-border-bottom: 1px solid #ECEDE8;
-padding: 3px 0;
-color: #999;
-position: relative;
-top: -1px;
-}
-.entry-related li a {
-display: block;
-background: url(http://demo.theme-junkie.com/daily/wp-content/themes/daily/images/ico-bullet.gif) no-repeat 0 5px;
-padding-left: 12px;
-color:#326693;
-}
+.entry-related li a{
+				position: relative;
+				display: block;
+				padding: 7px 7px 7px 30px;
+				*padding: .4em;
+				margin: 5px 0px 5px 0px;
+				background: #FFF;
+				color: #444;
+				text-decoration: none;
+				-moz-border-radius: .3em;
+				-webkit-border-radius: .3em;
+				border-radius: .3em;
+			}
+
+.entry-related li a:hover{
+				background: #cbe7f8;
+				text-decoration:underline;
+			}
 .entry-related li a:hover
 {
     text-decoration:underline;
@@ -4198,4 +4211,29 @@ width: 307px;
     -khtml-opacity: 0.0;
     opacity: 0.0;
     z-index: 9999999;
+}
+.newmore {counter-reset:section;}
+    .newmore li
+    {
+        margin-left: 15px;
+    }
+.entry-related li a:before
+{
+counter-increment:section;
+content:counter(section);
+position: absolute;
+left: -1.3em;
+top: 50%;
+margin-top: -1.3em;
+background: #87ceeb;
+height: 2em;
+width: 2em;
+line-height: 2em;
+border: .3em solid #fff;
+text-align: center;
+font-weight: bold;
+-moz-border-radius: 2em;
+-webkit-border-radius: 2em;
+border-radius: 2em;
+color: #FFF;
 }
