@@ -40,7 +40,6 @@
                     </ul>
                 </div>
             </div>
-             
         </div>
 
     </ItemTemplate>

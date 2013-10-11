@@ -41,8 +41,7 @@
 </style>
 <div class="top-menu-wrap" xmlns:v="http://rdf.data-vocabulary.org/#">
     <ul class="treeview" itemprop="breadcrumb">
-        <li typeof="v:Breadcrumb"><a class="home" rel="v:url" property="v:title" href='<%= CurrentPage.UrlRoot + "/video/" %>'>
-            Trang chủ</a></li>
+        <li typeof="v:Breadcrumb"><a class="home" rel="v:url" property="v:title" href='<%= CurrentPage.UrlRoot + "/video/" %>'>Trang chủ</a></li>
         <asp:Literal ID="lrTreeView" runat="server"></asp:Literal>
     </ul>
 </div>
@@ -107,15 +106,15 @@
         <div class="single_share">
             <div style="padding-bottom: 7px">
                 Nếu bạn thấy bài viết hữu ích, hãy nhấn +1 và các liên kết chia sẻ để website ngày
-                càng phát triển hơn. Xin cám ơn bạn!</div>
+                càng phát triển hơn. Xin cám ơn bạn!
+            </div>
             <uc1:ucLikeFB_Google ID="ucLikeFB_Google1" runat="server" />
         </div>
         <div class="dots">
         </div>
         <div class="articles_nav">
-            <span class="prev_article"><a id="aPrev" visible="false" runat="server" rel="prev"><span>
-                ‹</span> Video cũ hơn</a></span> <span class="next_article"><a id="aNext" visible="false"
-                    runat="server" rel="next">Video mới hơn <span>›</span></a></span>
+            <span class="prev_article"><a id="aPrev" visible="false" runat="server" rel="prev"><span>‹</span> Video cũ hơn</a></span> <span class="next_article"><a id="aNext" visible="false"
+                runat="server" rel="next">Video mới hơn <span>›</span></a></span>
         </div>
         <div style="margin-left: -15px;">
             <script type="text/javascript">
@@ -134,67 +133,82 @@
         </div>
     </div>
 </div>
-<div class="box-content">
-    <h4 class="section-title">
-        Video mới hơn</h4>
-    <ul class="view c-view clear">
-        <asp:Repeater ID="rpDataNew" runat="server">
-            <ItemTemplate>
-                <li>
-                    <div class="in2">
-                        <div class="thumb c-thumb">
+<div class="box_outer">
+    <div class="news_box">
+        <div class="news_box_heading">
+            <div class="nb_dots">
+                <h2><a>Video mới hơn</a></h2>
+            </div>
+        </div>
+        <div class="box-content">
+            <ul class="view c-view clear">
+                <asp:Repeater ID="rpDataNew" runat="server">
+                    <ItemTemplate>
+                        <li>
                             <div class="in2">
-                                <a class="thumb-link" href="<%# CurrentPage.UrlRoot + "/video/" +  XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("VideoID") +  ".aspx" %>"
-                                    title="<%# Eval("Title").ToString().Replace('"',' ') %>">
-                                    <%# Eval("Thumbnail").ToString() == "" ? "" : "<img alt=\"" + Eval("Title").ToString().Replace('"', ' ') + "\" itemprop=\"image\" class=\"left\" src=\"" + (Eval("Thumbnail").ToString().Contains("http://") ? Eval("Thumbnail").ToString() : CurrentPage.UrlRoot + "/images/video/w180-" + Eval("Thumbnail").ToString().ToLower().Replace(Global.ImagesVideo.ToLower(), "") + ".ashx") + "\" />"%>
-                                </a>
-                                <div class="ticker">
-                                    <span title="Thời lượng">01:30</span>
+                                <div class="thumb c-thumb">
+                                    <div class="in2">
+                                        <a class="thumb-link" href="<%# CurrentPage.UrlRoot + "/video/" +  XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("VideoID") +  ".aspx" %>"
+                                            title="<%# Eval("Title").ToString().Replace('"',' ') %>">
+                                            <%# Eval("Thumbnail").ToString() == "" ? "" : "<img alt=\"" + Eval("Title").ToString().Replace('"', ' ') + "\" itemprop=\"image\" class=\"left\" src=\"" + (Eval("Thumbnail").ToString().Contains("http://") ? Eval("Thumbnail").ToString() : "http://www.hoclaptrinhweb.com" + "/images/video/w180-" + Eval("Thumbnail").ToString().ToLower().Replace(Global.ImagesVideo.ToLower(), "") + ".ashx") + "\" />"%>
+                                            <span class="icon_plays">&nbsp;</span>
+                                        </a>
+                                        <div class="ticker">
+                                            <span title="Thời lượng">01:30</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="title">
+                                    <div class="in2">
+                                        <a class="title-link" href="<%# CurrentPage.UrlRoot + "/video/" +  XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("VideoID") +  ".aspx" %>"
+                                            title="<%# Eval("Title").ToString().Replace('"',' ') %>">
+                                            <%# Eval("Title") %></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="title">
-                            <div class="in2">
-                                <a class="title-link" href="<%# CurrentPage.UrlRoot + "/video/" +  XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("VideoID") +  ".aspx" %>"
-                                    title="<%# Eval("Title").ToString().Replace('"',' ') %>">
-                                    <%# Eval("Title") %></a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ItemTemplate>
-        </asp:Repeater>
-    </ul>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </ul>
+        </div>
+    </div>
 </div>
-<div class="box-content">
-    <h4 class="section-title">
-        Video cũ hơn</h4>
-    <ul class="view c-view clear">
-        <asp:Repeater ID="rpDataOld" runat="server">
-            <ItemTemplate>
-                <li>
-                    <div class="in2">
-                        <div class="thumb c-thumb">
+
+<div class="box_outer">
+    <div class="news_box">
+        <div class="news_box_heading">
+            <div class="nb_dots">
+                <h2><a>Video cũ hơn</a></h2>
+            </div>
+        </div>
+        <div class="box-content">
+            <ul class="view c-view clear">
+                <asp:Repeater ID="rpDataOld" runat="server">
+                    <ItemTemplate>
+                        <li>
                             <div class="in2">
-                                <a class="thumb-link" href="<%# CurrentPage.UrlRoot + "/video/" +  XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("VideoID") +  ".aspx" %>"
-                                    title="<%# Eval("Title").ToString().Replace('"',' ') %>">
-                                    <%# Eval("Thumbnail").ToString() == "" ? "" : "<img alt=\"" + Eval("Title").ToString().Replace('"', ' ') + "\" itemprop=\"image\" class=\"left\" src=\"" + (Eval("Thumbnail").ToString().Contains("http://") ? Eval("Thumbnail").ToString() : CurrentPage.UrlRoot + "/images/video/w180-" + Eval("Thumbnail").ToString().ToLower().Replace(Global.ImagesVideo.ToLower(), "") + ".ashx") + "\" />"%>
-                                </a>
-                                <div class="ticker">
-                                    <span title="Thời lượng">01:30</span>
+                                <div class="thumb c-thumb">
+                                    <div class="in2">
+                                        <a class="thumb-link" href="<%# CurrentPage.UrlRoot + "/video/" +  XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("VideoID") +  ".aspx" %>"
+                                            title="<%# Eval("Title").ToString().Replace('"',' ') %>">
+                                            <%# Eval("Thumbnail").ToString() == "" ? "" : "<img alt=\"" + Eval("Title").ToString().Replace('"', ' ') + "\" itemprop=\"image\" class=\"left\" src=\"" + (Eval("Thumbnail").ToString().Contains("http://") ? Eval("Thumbnail").ToString() : "http://www.hoclaptrinhweb.com" + "/images/video/w180-" + Eval("Thumbnail").ToString().ToLower().Replace(Global.ImagesVideo.ToLower(), "") + ".ashx") + "\" />"%>
+                                            <span class="icon_plays">&nbsp;</span>
+                                        </a>
+                                        <div class="ticker">
+                                            <span title="Thời lượng">01:30</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="title">
+                                    <div class="in2">
+                                        <a class="title-link" href="<%# CurrentPage.UrlRoot + "/video/" +  XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("VideoID") +  ".aspx" %>"
+                                            title="<%# Eval("Title").ToString().Replace('"',' ') %>">
+                                            <%# Eval("Title") %></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="title">
-                            <div class="in2">
-                                <a class="title-link" href="<%# CurrentPage.UrlRoot + "/video/" +  XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("VideoID") +  ".aspx" %>"
-                                    title="<%# Eval("Title").ToString().Replace('"',' ') %>">
-                                    <%# Eval("Title") %></a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ItemTemplate>
-        </asp:Repeater>
-    </ul>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </ul>
+        </div>
+    </div>
 </div>
