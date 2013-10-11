@@ -4150,6 +4150,7 @@ right: 4px;
 .box-content {
 position: relative;
 float:left;
+background:white;
 }
 .box-title {
 background: #414141;
