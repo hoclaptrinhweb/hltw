@@ -39,8 +39,7 @@
 </style>
 <div class="top-menu-wrap" xmlns:v="http://rdf.data-vocabulary.org/#">
     <ul class="treeview" itemprop="breadcrumb">
-        <li typeof="v:Breadcrumb"><a class="home" rel="v:url" property="v:title" href='<%= CurrentPage.UrlRoot %>'>
-            Trang chủ</a></li>
+        <li typeof="v:Breadcrumb"><a class="home" rel="v:url" property="v:title" href='<%= CurrentPage.UrlRoot %>'>Trang chủ</a></li>
         <asp:Literal ID="lrTreeView" runat="server"></asp:Literal>
     </ul>
     <asp:Literal ID="lrRss" runat="server" Text="&lt;a class=&quot;link-rss&quot; rel=&quot;nofollow&quot; href=&quot;{href}&quot;&gt;RSS&lt;img class=&quot;img-rss&quot; alt=&quot;{des}&quot; src=&quot;/Images/icon/rss.gif&quot;&gt;&lt;/a&gt;"></asp:Literal>
@@ -71,6 +70,7 @@
             </div>
         </div>
         <div itemprop="keywords" class="keyword">
+            <h4>Tags:</h4>
             <asp:Literal ID="lbKeyword" runat="server"></asp:Literal>
         </div>
         <div class="ratings" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
@@ -81,43 +81,41 @@
         <div class="single_share">
             <div style="padding-bottom: 7px">
                 Nếu bạn thấy bài viết hữu ích, hãy nhấn +1 và các liên kết chia sẻ để website ngày
-                càng phát triển hơn. Xin cám ơn bạn!</div>
+                càng phát triển hơn. Xin cám ơn bạn!
+            </div>
             <uc1:ucLikeFB_Google ID="ucLikeFB_Google1" runat="server" />
         </div>
         <div class="dots">
         </div>
         <div class="articles_nav">
-            <span class="prev_article"><a id="aPrev" visible="false" runat="server" rel="prev"><span>‹</span> Tin cũ hơn</a></span> 
-            <span class="next_article"><a id="aNext" visible="false" runat="server" rel="next">
-                    Tin mới hơn <span>›</span></a></span>
+            <span class="prev_article"><a id="aPrev" visible="false" runat="server" rel="prev"><span>‹</span> Tin cũ hơn</a></span>
+            <span class="next_article"><a id="aNext" visible="false" runat="server" rel="next">Tin mới hơn <span>›</span></a></span>
         </div>
         <!--Ad360.vn-ad-2874-640-90-start -->
-        <div style="margin-left:-15px;">
-        <script type="text/javascript">
-            var _ad360_id = 2874;
-            var _ad360_w = 640;
-            var _ad360_h = 90;
-            var _ad360_pos = 0;
-        </script>
-        <script language="javascript" type="text/javascript" src="http://provider.ad360.vn/showads.min.js"></script>
+        <div style="margin-left: -15px;">
+            <script type="text/javascript">
+                var _ad360_id = 2874;
+                var _ad360_w = 640;
+                var _ad360_h = 90;
+                var _ad360_pos = 0;
+            </script>
+            <script language="javascript" type="text/javascript" src="http://provider.ad360.vn/showads.min.js"></script>
         </div>
         <!-- Ad360.vn-ad-2874-640-90-ends -->
         <asp:Panel ID="pGuest" runat="server">
             <div class="single_share">
                 <div id="_commentNotiBox">
                     <p class="notification attention">
-                        Nếu là khách, bạn phải <a style="color: Blue;" href="<%= CurrentPage.UrlRoot %>/members/register.aspx">
-                            đăng ký</a> tài khoản và kích hoạt tài khoản để bình luận được hiển thị ở đây.
+                        Nếu là khách, bạn phải <a style="color: Blue;" href="<%= CurrentPage.UrlRoot %>/members/register.aspx">đăng ký</a> tài khoản và kích hoạt tài khoản để bình luận được hiển thị ở đây.
                         <br />
-                        Thông tin kích hoạt gửi đến mail của bạn. <a rel="nofollow" title="Đóng" class="close">
-                        </a>
+                        Thông tin kích hoạt gửi đến mail của bạn. <a rel="nofollow" title="Đóng" class="close"></a>
                     </p>
                 </div>
             </div>
         </asp:Panel>
     </div>
 </div>
-<div class="box_inner" style="margin-top:10px;margin-bottom:10px;">
+<div class="box_inner" style="margin-top: 10px; margin-bottom: 10px;">
     <div class="news_box">
         <div class="_commentList">
             <asp:HiddenField ID="hdNewsID" runat="server" />
@@ -148,8 +146,7 @@
     <div id="respond">
         <div class="box_inner">
             <div class="news_box">
-                <h2 class="news_box_title2">
-                    Gửi bình luận
+                <h2 class="news_box_title2">Gửi bình luận
                 </h2>
                 <div class="add_comment">
                     <p>
@@ -158,7 +155,7 @@
                         <label for="url">
                             <img class="imgCaptcha" src='<%= CurrentPage.UrlRoot + "/handler/captcha.ashx" %>'
                                 alt="captcha hoclaptrinhweb.com" />
-                            <a rel="nofollow" style="cursor: pointer;margin-left: 10px;color: blue;font-weight: bold;" onclick="NewCaptcha();">Mã mới</a>
+                            <a rel="nofollow" style="cursor: pointer; margin-left: 10px; color: blue; font-weight: bold;" onclick="NewCaptcha();">Mã mới</a>
                         </label>
                     </p>
                     <p>
@@ -203,8 +200,7 @@
     </div>
 </asp:Panel>
 <div class="entry-related" style="float: left; width: 49%;">
-    <h4 class="section-title">
-        Tin mới hơn</h4>
+    <h4 class="section-title">Tin mới hơn</h4>
     <ul class="newmore">
         <asp:Repeater ID="rpDataNew" runat="server">
             <ItemTemplate>
@@ -212,7 +208,7 @@
                     rel='<%# CurrentPage.UrlRoot + "/Handler/tooltip.ashx?id=" + Eval("NewsID") %>'
                     href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("NewsID") +  ".aspx" %>'>
                     <span itemprop="name">
-                        <%# Eval("Title") %></span> </a>
+                        <%# Global.GetSubContent(Eval("Title").ToString(),40) %></span> </a>
                     <meta itemprop="startDate" content='<%# ((DateTime)Eval("CreatedDate")).ToString("yyyy-MM-dd") %>'>
                 </li>
             </ItemTemplate>
@@ -220,8 +216,7 @@
     </ul>
 </div>
 <div class="entry-related" style="float: right; width: 49%;">
-    <h4 class="section-title">
-        Tin cũ hơn</h4>
+    <h4 class="section-title">Tin cũ hơn</h4>
     <ul class="newmore">
         <asp:Repeater ID="rpDataOld" runat="server">
             <ItemTemplate>
@@ -229,7 +224,7 @@
                     rel='<%# CurrentPage.UrlRoot + "/Handler/tooltip.ashx?id=" + Eval("NewsID") %>'
                     href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("NewsID") +  ".aspx" %>'>
                     <span itemprop="name">
-                        <%# Eval("Title") %></span> </a>
+                        <%# Global.GetSubContent(Eval("Title").ToString(),40) %></span> </a>
                     <meta itemprop="startDate" content='<%# ((DateTime)Eval("CreatedDate")).ToString("yyyy-MM-dd") %>'>
                 </li>
             </ItemTemplate>
