@@ -69,7 +69,7 @@ public class Thumbnail : IHttpHandler
             graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
             graphics.DrawImage(photo, 0, 0, width, height);
 
-            if (width > 100)
+            if (width > 1000)
             {
                 const string strCopyright = " hoclaptrinhweb ";
                 var drFont = new Font("Times New Roman", 9, FontStyle.Bold);
