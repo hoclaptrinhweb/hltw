@@ -3,7 +3,7 @@
   <filters>
     <!-- This filter allows relative urls to be used in Css files like in .NET; e.g. "~/MyFolder/MyPic.png"-->
     <filter type="Combres.Filters.FixUrlsInCssFilter, Combres" />
-    <!-- This filter changes Combres order of ops so that common css variables can be defined in a single
+   <!-- This filter changes Combres order of ops so that common css variables can be defined in a single
          file and used throughout multiple css files, instead of having to define them in each file. -->
     <!--<filter type="Combres.Filters.DotLessCssCombineFilter, Combres" acceptedResourceSets="dotLessCss"/>-->
   </filters>
@@ -22,16 +22,19 @@
   <resourceSets url="~/minres.axd"
                 defaultDuration="30"
                 defaultVersion="auto"
-                defaultDebugEnabled="auto">
+               defaultDebugEnabled="auto">
     <resourceSet name="DefaultJs" type="js">
       <resource path="~/js/jquery-1.4.1.min.js" />
     </resourceSet>
-    <resourceSet name="DefaultThemeJs" type="js">
+    <resourceSet name="DefaultThemeJs" type="js" debugEnabled="false">
       <resource path="~/js/jquery.js" />
       <resource path="~/js/jquery.cluetip.min.js" />
       <resource path="~/js/custom.js" />
     </resourceSet>
-    <resourceSet name="syntaxhighlighter" type="js" >
+    <resourceSet name="DefaultThemeFB" type="js" debugEnabled="false">
+      <resource path="~/js/fblike.js" />
+    </resourceSet>
+    <resourceSet name="syntaxhighlighter" type="js" debugEnabled="false">
       <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shCore.js" />
       <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js" />
       <resource path="~/js/syntaxhighlighter_3.0.83/scripts/shBrushXml.js" />
