@@ -3,9 +3,6 @@
 <div class="bottom_bar">
     <div class="inner">
         <ul class="social_icons">
-            <li class="gplus"><a target="_blank" href="https://plus.google.com/s/110890830763375677721">
-                google plus</a></li>
-            <li class="digg"><a rel="author" href="http://www.hoclaptrinhweb.com/about.html">about</a></li>
             <li>, <a class="lienket" href="http://blog.hmclip.vn" title="Chia sẻ là niềm vui"
                 target="_blank">Chia sẻ là niềm vui</a> </li>
             <li>,<a class="lienket" href="http://www.ewebvn.com" title="Học thiết kế web - Kiến thức lập trình web"
