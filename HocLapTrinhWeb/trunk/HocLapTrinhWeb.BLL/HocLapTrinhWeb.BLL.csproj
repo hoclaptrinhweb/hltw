@@ -156,6 +156,7 @@
     <Content Include="DLLS\AjaxControlToolkit.dll" />
     <Content Include="DLLS\CollectionPager.dll" />
     <Content Include="DLLS\DropOptGroup.dll" />
+    <Content Include="DLLS\FastDataAccess.dll" />
     <Content Include="DLLS\FredCK.FCKeditorV2.dll" />
     <Content Include="DLLS\MaHoa\HocLapTrinhWeb.DAL.dll" />
     <Content Include="DLLS\MaHoa\HocLapTrinhWeb.UI.dll" />
