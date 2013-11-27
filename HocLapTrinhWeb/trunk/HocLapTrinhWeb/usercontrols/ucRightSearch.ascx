@@ -7,12 +7,6 @@
     <a href="http://forum.hoclaptrinhweb.com" target="_blank" title="Cùng học tập - Cùng chia sẽ">
         <img alt="Cùng học tập - Cùng chia sẽ" src="<%= CurrentPage.UrlRoot %>/images/ads_forum.png" style="width: 305px;" />
     </a>
-    <a id="aVietos" href="" target="_blank" title="Giải pháp mã nguồn mở"><img alt="Cùng học tập - Cùng chia sẽ" src="http://www.hoclaptrinhweb.com/images/Ads/vietos.vn.gif" style="width: 305px;">
-    <script>
-        document.getElementById("aVietos").href = "http://www.vietos.vn";
-    </script>
-    </a>
-
     <br/>
     <br/>
     <embed onmousedown="AdsvnRenderClick(912)" src="<%= CurrentPage.UrlRoot %>/images/ads/vietbando336x140.swf"
