@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MvcHocLapTrinhWeb.Models.tbl_News>
+﻿@model IEnumerable<dynamic>
 
 @{
     ViewBag.Title = "Home Page";
@@ -22,11 +22,11 @@
 }
 <h3>We suggest the following:</h3>
 <ol class="round">
-    @foreach (var n in Model)
+    @foreach (dynamic item in Model)
     {
         <li>
-            <h5>@n.tbl_News_Types.NewsTypeName - @n.Title</h5>
-            @n.Brief
+            <h5>@item.NewsTypeName - @item.Title</h5>
+            <p>@item.Brief</p>
             <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
         </li>
     }
