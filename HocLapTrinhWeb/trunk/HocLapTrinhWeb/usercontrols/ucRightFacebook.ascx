@@ -84,47 +84,28 @@
         </div>
         <div class="like_box_footer">
             <div class="tagcloud tabbed_tag">
-                <a target="_blank" href="http://thugianviet.info" title="Phim online, phim chất lương caot">Phim online, phim chất lương cao</a>
-                <br />
-                Lap trinh <a target="_blank" href="http://maybanhang.net/phan-mem-quan-ly-ban-hang/">phan mem ban hang</a> tiet kiem va hieu qua
-                <br />
-                LINK VAO <a href="http://www.cacuoc1.com">M88</a> NHÀ CÁI M88
-                <br />
-                <a href="http://www.bhiu.edu.vn/hop-tac-quoc-te/hp-tac-quc-t/doi-tac.html">Lien ket dao tao quoc te</a>
-                <br />
+                Lap trinh <a target="_blank" href="http://maybanhang.net/phan-mem-quan-ly-ban-hang/">phan mem ban hang</a> tiet kiem va hieu qua , 
+                <a href="http://www.bhiu.edu.vn/hop-tac-quoc-te/hp-tac-quc-t/doi-tac.html">Lien ket dao tao quoc te</a> , 
                 Apple <a href="http://www.ngocmobile.vn/product/49/iphone-4-cu-16gb-trang-quoc-te-moi-98-99-ngocmobile-vn.html">iphone 4 cũ</a>
-                <br />
-                Chia sẽ kinh nghiệm <a href="http://www.yeutretho.com/handmade-c300/">handmade</a> tại yeutretho.com
-				<br />
-                <a href="http://duhocvietnhat.com/du-hoc-nhat-ban/">Du hoc Nhat Ban</a> giá rẻ tại JellyFish Education
-				<br />
-                <a href="http://superwatch.vn/cid-92/dong-ho-thoi-trang.html">Dong ho thoi trang</a> tại Superwatch.vn
-				<br />
-                <a href="http://insky.vn/">Thiết kế logo</a> chuyên nghiệp
-				<br />
-                Phukiendientu.vn chuyên <a href="http://phukiendientu.vn/sanpham/day-cap-day-chuyen-doi/cap-tin-hieu-vga-dvi">cap VGA</a> chính hãng, giá rẻ
-				<br />
-                các bài hát <a href="http://www.vietvideos.vn/list/phuong-my-chi.html">phuong my chi</a> The Voice Kid
-				<br />
-                <a href="http://www.bhiu.edu.vn/xet-tuyn-nv2.html">Xet tuyen nguyen vong hai</a>
-                <br />
-                viet <a href="http://www.vietvideos.vn">video</a> s.vn
-				<br />
-                <a href="http://vietsupply.com.vn/xem-san-pham/quat-huong-truc-chuyen-dong-gian-tiep-it30">Quạt hướng trục</a> - Vietsupply.com.vn
-				<br />
-                <a href="http://densuoiphongtam.com/">Den suoi nha tam</a> giá rẻ tại densuoiphongtam.com
-				<br />
-                <a href="http://www.game24h.vn/">Game 24h</a>
-                <br />
-                đọc <a href="http://thethao247.vn">Báo bóng đá</a> trên Thể thao 247
-				<br />
-                <a href="http://sany.vn/man-chieu-42/">Man chieu</a> chính hãng
-				<br />
-                <a href="http://www.capbalo.com/cat/san-pham/balo-laptop/200">Balo laptop</a> giá rẻ
-				<br />
-                <a href="http://viettelidc.com.vn/thue-vps">Cloud VPS</a> là gì?
-				<br />
-                Tải <a href="http://www.1vs.vn/SanPham/1CQuanLyVanBan/">phần mềm quản lý văn bản</a> miễn phí
+                Chia sẽ kinh nghiệm <a href="http://www.yeutretho.com/handmade-c300/">handmade</a> tại yeutretho.com , 
+                <a href="http://insky.vn/">Thiết kế logo</a> chuyên nghiệp , 
+                <a href="http://densuoiphongtam.com/">Den suoi nha tam</a> giá rẻ tại densuoiphongtam.com , 
+                <a href="http://www.game24h.vn/">Game 24h</a> , 
+                đọc <a href="http://thethao247.vn">Báo bóng đá</a> trên Thể thao 247 , 
+                <a href="http://sany.vn/man-chieu-42/">Man chieu</a> chính hãng , 
+                <a href="http://www.capbalo.com/cat/san-pham/balo-laptop/200">Balo laptop</a> giá rẻ , 
+                <a href="http://viettelidc.com.vn/thue-vps">Cloud VPS</a> là gì? , 
+                Tải <a href="http://www.1vs.vn/SanPham/1CQuanLyVanBan/">phần mềm quản lý văn bản</a> miễn phí , 
+                <a href="http://www.vuongquocgame.com/games/Sex_And_The_City">game sex</a> , 
+                <a href="http://www.thamtutu.com.vn">Văn phòng thám tử </a>VDT , 
+                LINK VAO <a href="http://www.fun122.com/lm/aff/biiichfi_vi">FUN88</a> , 
+                <a href="http://www.vanphongluatsu.com.vn/thue-luat-su-bao-chua-va-co-che-khi-tham-gia-bao-chua-trong-vu-an-hinh-su/">Thuê luật sư bào chữa</a> tại công ty luật Dragon , 
+                công ty <a href="http://htsb.com.vn">thiet ke web</a> uy tín , 
+                <a href="http://linkm88.blogspot.com" target="_blank">M88</a> , 
+                <a href="http://cachvaom88.net" target="_blank" title="M88">M88</a> , 
+                Tải <a href="http://kenhgame.vn/838/tai-ucweb.html">ucweb</a> cho điện thoại , 
+                <a href="http://hosgroup.com.vn/phan-mem/phan-mem-quan-ly-ban-hang" title="Phần mềm bán hàng">Phần mềm bán hàng</a> , 
+                <a href="http://hosgroup.com.vn/phan-mem/phan-mem-quan-ly-ban-hang" title="Phần mềm quản lý bán hàng">Phần mềm quản lý bán hàng</a>
             </div>
         </div>
     </div>
