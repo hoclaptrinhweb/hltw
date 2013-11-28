@@ -72,18 +72,6 @@
                 </div>
             </div>
         </div>
-        <div style="text-align:center">
-            <!-- Begin Adlite -->
-            <script language="javascript" type="text/javascript">
-                var adlite_zoneId = 'va_6CE149DDB4F7FC46';
-                var adlite_width = '970';
-                var adlite_height = '180';
-                var adlite_sizeId = '57';
-                var adlite_typeId = '4';
-            </script>
-            <script type="text/javascript" src="http://embed.adlite.net/adlite.js"></script>
-            <!-- End: Adlite -->
-        </div>
         <uc1:ucFooter1 ID="ucFooter11" runat="server" />
         <uc2:ucCopyRight ID="ucCopyRight1" runat="server" />
         <script type="text/javascript">
