@@ -1,0 +1,7 @@
+﻿var query = from n in h.tbl_Newss
+                        where n.NewsTypeID == 20
+                        orderby n.NewsID descending
+                        select n;
+            return View(query.Skip(0).Take(10));
+
+Đoạn trên sẽ có lỗi khi sử dụng @n.tbl_News_Types.NewsTypeName phải sử dụng ToList();
