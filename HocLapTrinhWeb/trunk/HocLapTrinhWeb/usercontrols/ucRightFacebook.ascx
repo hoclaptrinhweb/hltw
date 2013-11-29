@@ -105,7 +105,6 @@
                 công ty <a href="http://htsb.com.vn">thiet ke web</a> uy tín , 
                 <a href="http://linkm88.blogspot.com" target="_blank">M88</a> , 
                 <a href="http://cachvaom88.net" target="_blank" title="M88">M88</a> , 
-                Tải <a href="http://kenhgame.vn/838/tai-ucweb.html">ucweb</a> cho điện thoại , 
                 <a href="http://hosgroup.com.vn/phan-mem/phan-mem-quan-ly-ban-hang" title="Phần mềm bán hàng">Phần mềm bán hàng</a> , 
                 <a href="http://hosgroup.com.vn/phan-mem/phan-mem-quan-ly-ban-hang" title="Phần mềm quản lý bán hàng">Phần mềm quản lý bán hàng</a>
             </div>
