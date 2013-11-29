@@ -1,0 +1,159 @@
+﻿@model IEnumerable<MvcHocLapTrinhWeb.Models.tbl_News>
+
+@{
+    ViewBag.Title = "View1";
+}
+
+<h2>View1</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NewsTypeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VideoID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Brief)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Thumbnail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsShowImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Keyword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsHot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Viewed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Priority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IPAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsDelete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IPUpdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RefAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MoveFrom)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewsTypeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VideoID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Brief)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Content)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Thumbnail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsShowImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Keyword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsHot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Viewed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Priority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IPAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsDelete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IPUpdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RefAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MoveFrom)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NewsID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NewsID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NewsID })
+        </td>
+    </tr>
+}
+
+</table>
