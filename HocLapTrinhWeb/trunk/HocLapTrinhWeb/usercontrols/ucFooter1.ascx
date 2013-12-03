@@ -13,15 +13,15 @@
 </style>
 
 <div class="ads">
-    <!--Ad360.vn-ad-4629-728-90-start -->
-    <script type="text/javascript">
-        var _ad360_id = 4629;
-        var _ad360_w = 728;
-        var _ad360_h = 90;
-        var _ad360_pos = 0;
-    </script>
-    <script language="javascript" type="text/javascript" src="http://provider.ad360.vn/showads.min.js"></script>
-    <!-- Ad360.vn-ad-4629-728-90-ends -->
+<!--Ad360.vn-ad-4711-728-90-start -->
+<script type="text/javascript">
+    var _ad360_id = 4711;
+    var _ad360_w = 728;
+    var _ad360_h = 90;
+    var _ad360_pos = 0;
+</script>
+<script language="javascript" type="text/javascript" src="http://provider.ad360.vn/showads.min.js"></script>
+<!-- Ad360.vn-ad-4711-728-90-ends -->
 </div>
 
 
