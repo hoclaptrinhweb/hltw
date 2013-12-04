@@ -2,10 +2,13 @@
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MvcMusicStoreHocLapTrinhWeb.Models
 {
     [Bind(Exclude = "AlbumId")]
+    //Nếu ko đặt tên thì nó sẽ thành Albums
+    [Table("Album")]
     public class Album
     {
         [ScaffoldColumn(false)]
