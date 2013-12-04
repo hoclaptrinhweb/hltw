@@ -65,6 +65,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watermar", "Watermar\Waterm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcHocLapTrinhWeb", "MvcHocLapTrinhWeb\MvcHocLapTrinhWeb.csproj", "{535E406C-3322-4DA3-A401-593D134A4112}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMusicStoreHocLapTrinhWeb", "MvcMusicStoreHocLapTrinhWeb\MvcMusicStoreHocLapTrinhWeb.csproj", "{08251A87-A92F-4AC1-B3DB-D7E5A711C481}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -189,6 +191,18 @@ Global
 		{535E406C-3322-4DA3-A401-593D134A4112}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{535E406C-3322-4DA3-A401-593D134A4112}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{535E406C-3322-4DA3-A401-593D134A4112}.Release|x86.ActiveCfg = Release|Any CPU
+		{08251A87-A92F-4AC1-B3DB-D7E5A711C481}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{08251A87-A92F-4AC1-B3DB-D7E5A711C481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08251A87-A92F-4AC1-B3DB-D7E5A711C481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08251A87-A92F-4AC1-B3DB-D7E5A711C481}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{08251A87-A92F-4AC1-B3DB-D7E5A711C481}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{08251A87-A92F-4AC1-B3DB-D7E5A711C481}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{08251A87-A92F-4AC1-B3DB-D7E5A711C481}.Release|.NET.ActiveCfg = Release|Any CPU
+		{08251A87-A92F-4AC1-B3DB-D7E5A711C481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08251A87-A92F-4AC1-B3DB-D7E5A711C481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08251A87-A92F-4AC1-B3DB-D7E5A711C481}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{08251A87-A92F-4AC1-B3DB-D7E5A711C481}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{08251A87-A92F-4AC1-B3DB-D7E5A711C481}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
