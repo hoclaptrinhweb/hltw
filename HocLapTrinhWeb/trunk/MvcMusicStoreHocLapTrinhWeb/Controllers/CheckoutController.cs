@@ -5,7 +5,7 @@ using MvcMusicStoreHocLapTrinhWeb.Models;
 
 namespace MvcMusicStoreHocLapTrinhWeb.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class CheckoutController : Controller
     {
         MusicStoreEntities storeDB = new MusicStoreEntities();

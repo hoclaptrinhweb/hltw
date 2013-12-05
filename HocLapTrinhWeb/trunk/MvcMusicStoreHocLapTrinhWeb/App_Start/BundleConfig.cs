@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace MvcMusicStoreHocLapTrinhWebHocLapTrinhWeb
+namespace MvcMusicStoreHocLapTrinhWeb
 {
     public class BundleConfig
     {

@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="MvcMusicStoreHocLapTrinhWebHocLapTrinhWeb.MvcApplication" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="MvcMusicStoreHocLapTrinhWeb.MvcApplication" Language="C#" %>

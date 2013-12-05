@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Web.WebPages.OAuth;
-using MvcMusicStoreHocLapTrinhWebHocLapTrinhWeb.Models;
+using MvcMusicStoreHocLapTrinhWeb.Models;
 
-namespace MvcMusicStoreHocLapTrinhWebHocLapTrinhWeb
+namespace MvcMusicStoreHocLapTrinhWeb
 {
     public static class AuthConfig
     {
