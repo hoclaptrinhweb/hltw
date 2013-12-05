@@ -8,10 +8,10 @@ using System.Web.Security;
 using DotNetOpenAuth.AspNet;
 using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
-using MvcMusicStoreHocLapTrinhWebHocLapTrinhWeb.Filters;
-using MvcMusicStoreHocLapTrinhWebHocLapTrinhWeb.Models;
+using MvcMusicStoreHocLapTrinhWeb.Models;
+using MvcMusicStoreHocLapTrinhWeb.Filters;
 
-namespace MvcMusicStoreHocLapTrinhWebHocLapTrinhWeb.Controllers
+namespace MvcMusicStoreHocLapTrinhWeb.Controllers
 {
     [Authorize]
     [InitializeSimpleMembership]
