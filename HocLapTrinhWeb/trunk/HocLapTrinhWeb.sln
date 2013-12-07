@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHocLapTrinhWeb", "Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc4KnockoutCRUD", "Knockout\Mvc4KnockoutCRUD\Mvc4KnockoutCRUD.csproj", "{BCA3807F-60E6-49C8-BF76-103BEC757E61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bootstrap", "Bootstrap\Bootstrap.csproj", "{F775447A-C680-43E7-A38A-FBA179E8B640}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -231,6 +233,18 @@ Global
 		{BCA3807F-60E6-49C8-BF76-103BEC757E61}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{BCA3807F-60E6-49C8-BF76-103BEC757E61}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{BCA3807F-60E6-49C8-BF76-103BEC757E61}.Release|x86.ActiveCfg = Release|Any CPU
+		{F775447A-C680-43E7-A38A-FBA179E8B640}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{F775447A-C680-43E7-A38A-FBA179E8B640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F775447A-C680-43E7-A38A-FBA179E8B640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F775447A-C680-43E7-A38A-FBA179E8B640}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F775447A-C680-43E7-A38A-FBA179E8B640}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F775447A-C680-43E7-A38A-FBA179E8B640}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F775447A-C680-43E7-A38A-FBA179E8B640}.Release|.NET.ActiveCfg = Release|Any CPU
+		{F775447A-C680-43E7-A38A-FBA179E8B640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F775447A-C680-43E7-A38A-FBA179E8B640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F775447A-C680-43E7-A38A-FBA179E8B640}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F775447A-C680-43E7-A38A-FBA179E8B640}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F775447A-C680-43E7-A38A-FBA179E8B640}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
