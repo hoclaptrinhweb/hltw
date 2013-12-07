@@ -68,6 +68,27 @@
     <Content Include="Example\Bootstrap_1.html" />
     <Content Include="Example\bootstrap_2_grid.html" />
     <Content Include="Example\bootstrap_3_grid.html" />
+    <Content Include="Example\images\blogger.png" />
+    <Content Include="Example\images\browser-statistics.png" />
+    <Content Include="Example\images\digo.png" />
+    <Content Include="Example\images\facebook.png" />
+    <Content Include="Example\images\fixed-layout-output.png" />
+    <Content Include="Example\images\gplus.png" />
+    <Content Include="Example\images\gridbg.gif" />
+    <Content Include="Example\images\html5_logo.png" />
+    <Content Include="Example\images\ipad.png" />
+    <Content Include="Example\images\javascript-logo.png" />
+    <Content Include="Example\images\json.gif" />
+    <Content Include="Example\images\linkedin.png" />
+    <Content Include="Example\images\mysql-logo.png" />
+    <Content Include="Example\images\netvibes.png" />
+    <Content Include="Example\images\newsvine.png" />
+    <Content Include="Example\images\orkut.png" />
+    <Content Include="Example\images\php.png" />
+    <Content Include="Example\images\reditt.png" />
+    <Content Include="Example\images\scrollspy-thumb.png" />
+    <Content Include="Example\images\twitter.png" />
+    <Content Include="Example\images\zapface.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
