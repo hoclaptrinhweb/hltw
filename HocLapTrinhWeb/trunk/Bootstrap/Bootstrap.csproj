@@ -68,6 +68,7 @@
     <Content Include="Example\Bootstrap_1.html" />
     <Content Include="Example\bootstrap_2_grid.html" />
     <Content Include="Example\bootstrap_3_grid.html" />
+    <Content Include="Example\bootstrap_4_grid.html" />
     <Content Include="Example\images\blogger.png" />
     <Content Include="Example\images\browser-statistics.png" />
     <Content Include="Example\images\digo.png" />
@@ -95,6 +96,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Example\twitter-bootstrap.zip" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
