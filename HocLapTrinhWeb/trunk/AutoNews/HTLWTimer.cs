@@ -29,7 +29,7 @@ namespace AutoNews
             if (DateTime.Now.TimeOfDay > TimeSpan.Parse("23:29:00") && DateTime.Now.TimeOfDay < TimeSpan.Parse("23:59:59"))
             {
                 // Bảo trì hệ thống
-                RestartService(ConfigurationManager.AppSettings["NameService"], ConfigurationManager.AppSettings["TimeOutRestart"]);
+                RestartService(ConfigurationManager.AppSettings["NameService"], int.Parse(ConfigurationManager.AppSettings["TimeOutRestart"]));
             }
             else
             {
