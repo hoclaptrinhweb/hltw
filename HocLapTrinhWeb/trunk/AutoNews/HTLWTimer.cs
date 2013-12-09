@@ -5,6 +5,7 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.ServiceProcess;
 using System.Text;
 using System.Timers;
 using System.Web;
@@ -25,17 +26,25 @@ namespace AutoNews
 
         private static void OnTimedEvent(object source, ElapsedEventArgs e)
         {
-            var con = new Connection();
-            if (con.CreateConnection(ConfigurationManager.AppSettings["cs_sqlserver"], ConfigurationManager.AppSettings["Key"], ConfigurationManager.AppSettings["ValidKey"]))
+            if (DateTime.Now.TimeOfDay > TimeSpan.Parse("23:29:00") && DateTime.Now.TimeOfDay < TimeSpan.Parse("23:59:59"))
             {
-                var ltk = new ltk_ReferenceSiteBLL(con);
-                var dt = ltk.GetNewsTypeRefSiteForGridView(0, 0, -1, -1);
-                foreach (var r in dt)
-                {
-                    UpdateNews(r);
-                }
+                // Bảo trì hệ thống
+                RestartService(ConfigurationManager.AppSettings["NameService"], ConfigurationManager.AppSettings["TimeOutRestart"]);
             }
-            con.Close();
+            else
+            {
+                var con = new Connection();
+                if (con.CreateConnection(ConfigurationManager.AppSettings["cs_sqlserver"], ConfigurationManager.AppSettings["Key"], ConfigurationManager.AppSettings["ValidKey"]))
+                {
+                    var ltk = new ltk_ReferenceSiteBLL(con);
+                    var dt = ltk.GetNewsTypeRefSiteForGridView(0, 0, -1, -1);
+                    foreach (var r in dt)
+                    {
+                        UpdateNews(r);
+                    }
+                }
+                con.Close();
+            }
         }
 
         private static bool UpdateNews(vnn_dsHocLapTrinhWeb.vnn_vw_NewsTypeRefSiteRow r)
@@ -99,7 +108,7 @@ namespace AutoNews
                         if (fileName == "")
                             fileName = XuLyChuoi.ConvertToUnSign(rNews.Title) + ".jpg";
                         fileName = DateTime.Now.ToString("ddMMyyyy") + fileName;
-                        webClient.DownloadFile(path, ConfigurationManager.AppSettings["Uploads"] + "\\"+ fileName);
+                        webClient.DownloadFile(path, ConfigurationManager.AppSettings["Uploads"] + "\\" + fileName);
                     }
                     catch (Exception)
                     {
@@ -121,12 +130,12 @@ namespace AutoNews
                     rNews.Priority = i;
                     rNews.IPAddress = "127.0.0.1";
                     rNews.CreatedDate = DateTime.Now.AddMilliseconds(double.Parse(i.ToString()));
-                    rNews.CreatedBy =1;
+                    rNews.CreatedBy = 1;
                     rNews.UpdatedDate = DateTime.Now.AddMilliseconds(double.Parse(i.ToString()));
                     rNews.UpdatedBy = 1;
                     rNews.IPUpdate = "127.0.0.1";
                     rNews.IsDelete = false;
-                    rNews.IsActive =r.IsAutoRun;
+                    rNews.IsActive = r.IsAutoRun;
                     rNews.MoveFrom = r.NewsTypeID;
                     dt.Addtbl_NewsRow(rNews);
                 }
@@ -145,6 +154,31 @@ namespace AutoNews
                 return false;
             }
             return false;
+        }
+
+
+        public static void RestartService(string serviceName, int timeoutMilliseconds)
+        {
+            ServiceController service = new ServiceController(serviceName);
+            try
+            {
+                int millisec1 = Environment.TickCount;
+                TimeSpan timeout = TimeSpan.FromMilliseconds(timeoutMilliseconds);
+
+                service.Stop();
+                service.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
+
+                // count the rest of the timeout
+                int millisec2 = Environment.TickCount;
+                timeout = TimeSpan.FromMilliseconds(timeoutMilliseconds - (millisec2 - millisec1));
+
+                service.Start();
+                service.WaitForStatus(ServiceControllerStatus.Running, timeout);
+            }
+            catch
+            {
+                // ...
+            }
         }
     }
 }
