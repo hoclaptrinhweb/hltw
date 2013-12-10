@@ -187,6 +187,9 @@
     <Content Include="Example\bootstrap_2_grid.html" />
     <Content Include="Example\bootstrap_3_grid.html" />
     <Content Include="Example\bootstrap_4_grid.html" />
+    <Content Include="Example\font-awesome-4.0.3\css\font-awesome.css" />
+    <Content Include="Example\font-awesome-4.0.3\css\font-awesome.min.css" />
+    <Content Include="Example\font-awesome-4.0.3\fonts\fontawesome-webfont.svg" />
     <Content Include="Example\images\blogger.png" />
     <Content Include="Example\images\browser-statistics.png" />
     <Content Include="Example\images\digo.png" />
@@ -591,6 +594,36 @@
     <Content Include="Example\bootstrap-3.0.3\package.json" />
     <Content Include="Example\bootstrap-3.0.3\README.md" />
     <Content Include="Example\bootstrap-3.0.3\_config.yml" />
+    <Content Include="Example\font-awesome-4.0.3\fonts\fontawesome-webfont.eot" />
+    <Content Include="Example\font-awesome-4.0.3\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Example\font-awesome-4.0.3\fonts\fontawesome-webfont.woff" />
+    <Content Include="Example\font-awesome-4.0.3\fonts\FontAwesome.otf" />
+    <Content Include="Example\font-awesome-4.0.3\less\bordered-pulled.less" />
+    <Content Include="Example\font-awesome-4.0.3\less\core.less" />
+    <Content Include="Example\font-awesome-4.0.3\less\fixed-width.less" />
+    <Content Include="Example\font-awesome-4.0.3\less\font-awesome.less" />
+    <Content Include="Example\font-awesome-4.0.3\less\icons.less" />
+    <Content Include="Example\font-awesome-4.0.3\less\larger.less" />
+    <Content Include="Example\font-awesome-4.0.3\less\list.less" />
+    <Content Include="Example\font-awesome-4.0.3\less\mixins.less" />
+    <Content Include="Example\font-awesome-4.0.3\less\path.less" />
+    <Content Include="Example\font-awesome-4.0.3\less\rotated-flipped.less" />
+    <Content Include="Example\font-awesome-4.0.3\less\spinning.less" />
+    <Content Include="Example\font-awesome-4.0.3\less\stacked.less" />
+    <Content Include="Example\font-awesome-4.0.3\less\variables.less" />
+    <Content Include="Example\font-awesome-4.0.3\scss\font-awesome.scss" />
+    <Content Include="Example\font-awesome-4.0.3\scss\_bordered-pulled.scss" />
+    <Content Include="Example\font-awesome-4.0.3\scss\_core.scss" />
+    <Content Include="Example\font-awesome-4.0.3\scss\_fixed-width.scss" />
+    <Content Include="Example\font-awesome-4.0.3\scss\_icons.scss" />
+    <Content Include="Example\font-awesome-4.0.3\scss\_larger.scss" />
+    <Content Include="Example\font-awesome-4.0.3\scss\_list.scss" />
+    <Content Include="Example\font-awesome-4.0.3\scss\_mixins.scss" />
+    <Content Include="Example\font-awesome-4.0.3\scss\_path.scss" />
+    <Content Include="Example\font-awesome-4.0.3\scss\_rotated-flipped.scss" />
+    <Content Include="Example\font-awesome-4.0.3\scss\_spinning.scss" />
+    <Content Include="Example\font-awesome-4.0.3\scss\_stacked.scss" />
+    <Content Include="Example\font-awesome-4.0.3\scss\_variables.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
