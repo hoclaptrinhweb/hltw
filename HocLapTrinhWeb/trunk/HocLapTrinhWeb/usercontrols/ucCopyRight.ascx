@@ -7,22 +7,21 @@
                 target="_blank">Học thiết kế web</a> </li>
             <li>, <a class="lienket" href="http://raovat.yolo.vn" title="diễn đàn rao vặt" target="_blank">
                 dien dan rao vat</a> </li>
-                <li><a class="lienket" href="http://www.goccay.vn" title="Dien Dan Hoc Tap" target="_blank">Diễn Đàn Học Tập</a></li>
-				<li> <a class="lienket" href="http://vietweb24.com/" title="thiet ke website mien phi" target="_blank">Thiết kế website miễn phí</a></li>
 				<li>
-                <!-- Histats.com  (div with counter) --><div id="histats_counter" style="margin-top:16px;"></div>
-<!-- Histats.com  START  (aync)-->
-<script type="text/javascript">var _Hasync = _Hasync || [];
-    _Hasync.push(['Histats.start', '1,2403491,4,128,112,33,00011111']);
-    _Hasync.push(['Histats.fasi', '1']);
-    _Hasync.push(['Histats.track_hits', '']);
-    (function () {
-        var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-        hs.src = ('http://s10.histats.com/js15_as.js');
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-    })();</script>
-<noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?2403491&101" alt="counter easy hit" border="0"></a></noscript>
-<!-- Histats.com  END  -->
+                <!-- Histats.com  (div with counter) -->
+                <div id="histats_counter" style="margin-top:16px;"></div>
+                <!-- Histats.com  START  (aync)-->
+                <script type="text/javascript">var _Hasync = _Hasync || [];
+                    _Hasync.push(['Histats.start', '1,2403491,4,128,112,33,00011111']);
+                    _Hasync.push(['Histats.fasi', '1']);
+                    _Hasync.push(['Histats.track_hits', '']);
+                    (function () {
+                        var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+                        hs.src = ('http://s10.histats.com/js15_as.js');
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+                    })();</script>
+                <noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?2403491&101" alt="counter easy hit" border="0"></a></noscript>
+                <!-- Histats.com  END  -->
             </li>
         </ul>
         <p class="copyrights">
