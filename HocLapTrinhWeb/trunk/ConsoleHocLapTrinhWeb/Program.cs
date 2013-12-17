@@ -47,5 +47,8 @@ namespace ConsoleHocLapTrinhWeb
                 yield return numberResult;
             }
         }
+
+       
+
     }
 }

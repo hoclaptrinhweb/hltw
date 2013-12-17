@@ -96,7 +96,7 @@
                 <asp:AsyncPostBackTrigger ControlID="btnEdit" />
             </Triggers>
         </asp:UpdatePanel>
-        <div id="divAdd" class="popup" style="display: none">
+        <div id="divAdd" class="popup">
             <asp:UpdatePanel ID="updatepanel2" runat="server">
                 <ContentTemplate>
                     <asp:HiddenField runat="server" ID="hdIsAddSuccessful" Value="0" />
@@ -127,8 +127,6 @@
                                                 SelectMethod="GetAllNewsTypeForGridView" TypeName="HocLapTrinhWeb.BLL.vnn_NewsTypeBLL"></asp:ObjectDataSource>
                                         </td>
                                     </tr>
-                                    <tr class="trEmpty">
-                                    </tr>
                                     <tr valign="top">
                                         <td>
                                             <asp:Label ID="lblNewsTypeName" CssClass="Caption" runat="server" Text="Tên"></asp:Label>
@@ -147,8 +145,6 @@
                                                 SetFocusOnError="True"></asp:RequiredFieldValidator>
                                         </td>
                                     </tr>
-                                    <tr class="trEmpty">
-                                    </tr>
                                     <tr valign="top">
                                         <td>
                                             <asp:Label ID="Label2" runat="server" CssClass="Caption" Text="Nội dung"></asp:Label>
@@ -160,7 +156,17 @@
                                                 Height="100px"></asp:TextBox>
                                         </td>
                                     </tr>
-                                    <tr class="trEmpty">
+                                    <tr valign="top">
+                                        <td>
+                                            <asp:Label ID="Label4" runat="server" CssClass="Caption" Text="Hình ảnh"></asp:Label>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <asp:Image ID="ImageUrl" runat="server" Width="80px" />
+                                            <br />
+                                            <asp:FileUpload ID="fileuploadImage" runat="server" Width="90%" />
+                                        </td>
                                     </tr>
                                     <tr valign="top">
                                         <td>
@@ -172,10 +178,6 @@
                                             <inno:NumericTextBox ID="txtPriority" runat="server" Alignment="Left" Width="300px"></inno:NumericTextBox>
                                         </td>
                                     </tr>
-                                    <tr class="trEmpty">
-                                    </tr>
-                                    <tr class="trEmpty">
-                                    </tr>
                                     <tr>
                                         <td colspan="4" align="right">
                                             <asp:Button ID="btnSave" runat="server" Text="Lưu" ValidationGroup="vAdd" CssClass="button"
@@ -183,8 +185,7 @@
                                             <asp:Button ID="btnSaveAndNew" runat="server" Text="Lưu & Tạo mới" ValidationGroup="vAdd"
                                                 CssClass="button" OnClick="BtnSaveAndNewClick" meta:resourcekey="btnSaveAndNewResource1" />
                                             <asp:Button ID="btnCancelAdd" UseSubmitBehavior="False" runat="server" Text="Đóng"
-                                                OnClientClick="hidePopup();" CausesValidation="False" CssClass="button" OnClick="BtnCancelAddClick"
-                                                meta:resourcekey="btnCancelAddResource1" />
+                                                OnClientClick="hidePopup();return false;" CausesValidation="False" CssClass="button" />
                                         </td>
                                     </tr>
                                 </table>
@@ -199,6 +200,7 @@
                     </table>
                 </ContentTemplate>
                 <Triggers>
+                    <asp:PostBackTrigger ControlID="btnSave" />
                     <asp:AsyncPostBackTrigger ControlID="btnNew" />
                     <asp:AsyncPostBackTrigger ControlID="btnEdit" />
                 </Triggers>

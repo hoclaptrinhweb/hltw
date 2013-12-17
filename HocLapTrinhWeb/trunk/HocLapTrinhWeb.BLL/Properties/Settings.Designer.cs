@@ -154,5 +154,15 @@ namespace HocLapTrinhWeb.BLL.Properties {
                 return ((string)(this["HocLapTrinhWeb_comConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=HocLapTrinhWeb.com;Integrated Security=True")]
+        public string HocLapTrinhWeb_comConnectionString2 {
+            get {
+                return ((string)(this["HocLapTrinhWeb_comConnectionString2"]));
+            }
+        }
     }
 }
