@@ -9,7 +9,6 @@
 <%@ Register Src="usercontrols/ucNavigation.ascx" TagName="ucNavigation" TagPrefix="uc6" %>
 <%@ Register Src="usercontrols/ucRightNews1.ascx" TagName="ucRightNews1" TagPrefix="uc7" %>
 <%@ Register Src="usercontrols/ucRightSearch.ascx" TagName="ucRightSearch" TagPrefix="uc8" %>
-<%@ Register Src="usercontrols/ucNewsTicker.ascx" TagName="ucNewsTicker" TagPrefix="uc11" %>
 <%@ Register Src="usercontrols/ucNewsStick.ascx" TagName="ucNewsStick" TagPrefix="uc9" %>
 <%@ Register Src="~/usercontrols/ucHackLike.ascx" TagPrefix="uc1" TagName="ucHackLike" %>
 
@@ -55,7 +54,6 @@
         <uc5:ucHeaderFix ID="ucHeaderFix1" runat="server" />
         <uc4:ucHeader ID="ucHeader1" runat="server" />
         <uc6:ucNavigation ID="ucNavigation1" runat="server" />
-        <uc11:ucNewsTicker ID="ucNewsTicker1" runat="server" />
         <div class="inner">
             <div class="container">
                 <div class="main">
