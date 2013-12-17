@@ -1,15 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="ucRightFacebook.ascx.cs"
     Inherits="usercontrols_ucRightFacebook" %>
-<%@ Register Src="ucTagCount.ascx" TagName="ucTagCount" TagPrefix="uc1" %>
 <%@ Register Src="ucMenuNewsType.ascx" TagName="ucMenuNewsType" TagPrefix="uc2" %>
-<div class="box_outer">
-    <div class="widget">
-        <h3 class="widget_title">Từ khoá nổi bật</h3>
-        <div class="wid_border">
-        </div>
-        <uc1:ucTagCount ID="ucTagCount1" runat="server" />
-    </div>
-</div>
 <div id="divTag" class="box_outer">
     <div class="widget">
         <h3 class="widget_title">Chuyên mục</h3>
