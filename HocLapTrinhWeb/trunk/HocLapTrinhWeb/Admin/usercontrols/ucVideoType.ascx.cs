@@ -163,14 +163,6 @@ public partial class Admin_usercontrols_ucVideoType : HocLapTrinhWeb.UI.UCBase
         gvData.DataBind();
     }
 
-    protected void BtnCancelAddClick(object sender, EventArgs e)
-    {
-        RefreshControl();
-        hdEdit.Value = "0";
-        ObjData.Page.DataBind();
-        gvData.DataBind();
-    }
-
     bool _bGetSelectCount;
     protected void ObjDataSelecting(object sender, ObjectDataSourceSelectingEventArgs e)
     {
