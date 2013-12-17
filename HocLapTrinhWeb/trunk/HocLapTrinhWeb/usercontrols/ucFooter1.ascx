@@ -1,5 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="ucFooter1.ascx.cs"
     Inherits="usercontrols_ucFooter1" %>
+<%@ Register Src="~/usercontrols/ucTagCount.ascx" TagPrefix="uc1" TagName="ucTagCount" %>
+
 <style>
     .ads
     {
@@ -10,23 +12,38 @@
         {
             width: 100% !important;
         }
+
+    .tags
+    {
+        text-align: left;
+        background-color:white;
+    }
+
+        .tags div
+        {
+            width: 100% !important;
+            padding:10px;
+        }
 </style>
 
 <div class="ads">
-<!--Ad360.vn-ad-4711-728-90-start -->
-<script type="text/javascript">
-    var _ad360_id = 4711;
-    var _ad360_w = 728;
-    var _ad360_h = 90;
-    var _ad360_pos = 0;
-</script>
-<script language="javascript" type="text/javascript" src="http://provider.ad360.vn/showads.min.js"></script>
-<!-- Ad360.vn-ad-4711-728-90-ends -->
+    <!--Ad360.vn-ad-4711-728-90-start -->
+    <script type="text/javascript">
+        var _ad360_id = 4711;
+        var _ad360_w = 728;
+        var _ad360_h = 90;
+        var _ad360_pos = 0;
+    </script>
+    <script language="javascript" type="text/javascript" src="http://provider.ad360.vn/showads.min.js"></script>
+    <!-- Ad360.vn-ad-4711-728-90-ends -->
 </div>
 
 
 <iframe name="www.hoclaptrinhweb.com" title="" src="http://www.alexa.com/minisiteinfo/http://hoclaptrinhweb.com" scrolling="no"
     border="0" frameborder="0" width="100%" style="height: 100px"></iframe>
+<div class="tags">
+    <uc1:ucTagCount runat="server" ID="ucTagCount" />
+</div>
 <footer id="footer">
     <div class="footer_wrap">
         <div class="inner">

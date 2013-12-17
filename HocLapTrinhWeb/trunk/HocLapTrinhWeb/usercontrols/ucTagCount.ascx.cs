@@ -7,7 +7,7 @@ public partial class usercontrols_ucTagCount : HocLapTrinhWeb.UI.UCBase
     {
         base.Page_Load(sender, e);
         var vTagCountBll = new t_TagCountBLL(getCurrentConnection());
-        var dt = vTagCountBll.GetAll(50);
+        var dt = vTagCountBll.GetAll(100);
         if (dt == null || dt.Count <= 0) return;
         var vNewsBll = new vnn_NewsBLL(getCurrentConnection());
         hdNewsCount.Value = vNewsBll.GetAllNewsRowCount("", -1, 1, "", "", "").ToString();
