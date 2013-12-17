@@ -197,8 +197,7 @@
                                             <asp:Button ID="btnSaveAndNew" runat="server" Text="Lưu & Tạo mới" ValidationGroup="vAdd"
                                                 CssClass="button" OnClick="BtnSaveAndNewClick" meta:resourcekey="btnSaveAndNewResource1" />
                                             <asp:Button ID="btnCancelAdd" UseSubmitBehavior="False" runat="server" Text="Đóng"
-                                                OnClientClick="hidePopup();" CausesValidation="False" CssClass="button" OnClick="BtnCancelAddClick"
-                                                meta:resourcekey="btnCancelAddResource1" />
+                                                OnClientClick="hidePopup();return false;" CausesValidation="False" CssClass="button"  />
                                         </td>
                                     </tr>
                                 </table>
