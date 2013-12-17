@@ -16,6 +16,7 @@ public static class Global
     public static int PageButtonCount = Convert.ToInt16(ConfigurationManager.AppSettings["PageButtonCount"]);
     public static string ImagesProducts = ConfigurationManager.AppSettings["ImagesProducts"];
     public static string ImagesNews = ConfigurationManager.AppSettings["ImagesNews"];
+    public static string ImagesNewsType = ConfigurationManager.AppSettings["ImagesNewsType"];
     public static string ImagesVideo = ConfigurationManager.AppSettings["ImagesVideo"];
     public static int SubTitle = int.Parse(ConfigurationManager.AppSettings["SubTitle"]);
     public static int SubBrief = int.Parse(ConfigurationManager.AppSettings["SubBrief"]);
