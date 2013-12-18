@@ -12,7 +12,6 @@
                 <a class="<%= SetClass("/video/")  %>" href="<%= CurrentPage.UrlRoot + "/video/" %>"> Video </a>
                 </li>
                <li><a class="<%= SetClass("/contact.aspx")  %>" href='<%= CurrentPage.UrlRoot + "/contact.aspx" %>'>Liên hệ</a></li>
-                 <li><a rel="nofollow" target="_blank" href='http://mediafire.com/hoclaptrinhweb'>Tài liệu</a></li>
                 <li>
                 <div style="margin-top:8px;">
                 <div class="g-plusone" data-size="medium" data-href="http://www.hoclaptrinhweb.com"></div>
