@@ -46,10 +46,12 @@
     <resourceSet name="DefaultCss" type="css" >
       <resource path="~/css/news.css" />
       <resource path="~/css/StyleSheet.css" />
+      <resource path="~/css/font-awesome-4.0.3/css/font-awesome.min.css" />
       <resource path="~/js/syntaxhighlighter_3.0.83/styles/shCoreDefault.css" />
     </resourceSet>
     <resourceSet name="DefaultThemeCss" type="css" debugEnabled="true" >
       <resource path="~/style.css" />
+      <resource path="~/css/font-awesome-4.0.3/css/font-awesome.min.css" />
       <resource path="~/css/jquery.cluetip.css" />
       <resource path="~/js/syntaxhighlighter_3.0.83/styles/shCoreDefault.css" />
     </resourceSet>

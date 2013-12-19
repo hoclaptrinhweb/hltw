@@ -1,52 +1,18 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ucVideoDetail.ascx.cs"
     Inherits="usercontrols_ucVideoDetail" %>
 <%@ Register Src="ucLikeFB_Google.ascx" TagName="ucLikeFB_Google" TagPrefix="uc1" %>
+<%@ Register Src="~/usercontrols/ucTreeView.ascx" TagPrefix="uc1" TagName="ucTreeView" %>
+
 <script src="<%= CurrentPage.UrlRoot %>/Code/jwp58l/swfobject.js" type="text/javascript"></script>
 <script src="<%= CurrentPage.UrlRoot %>/Code/jwp58l/jwplayer.js" type="text/javascript"></script>
-<style type="text/css">
-    .top-menu-wrap
-    {
-        width: 100%;
-        float: left;
-        margin-bottom: 10px;
-        margin-top: 10px;
-        border-bottom: 1px solid #E0E0E0;
-        font-family: play;
-        font-size: 13px;
-        background: #e0e0e0;
-    }
-    .treeview li
-    {
-        float: left;
-    }
-    .treeview li a
-    {
-        font-size: 12px;
-        display: inline-block;
-        font-weight: bold;
-        position: relative;
-        padding: 5px 18px 5px 8px;
-        display: inline-block;
-        background: url('<%= CurrentPage.UrlRoot %>/images/chevron1.png') no-repeat right center;
-    }
-    .link-rss
-    {
-        float: right;
-        display: none;
-    }
-    a.home {
-        background: url('<%= CurrentPage.UrlRoot %>/images/bg-timo.png') no-repeat right center !important;
-        color: white;
-    }
-</style>
-<div class="top-menu-wrap" xmlns:v="http://rdf.data-vocabulary.org/#">
-    <ul class="treeview" itemprop="breadcrumb">
-        <li typeof="v:Breadcrumb"><a class="home" rel="v:url" property="v:title" href='<%= CurrentPage.UrlRoot + "/video/" %>'>Trang chủ</a></li>
-        <asp:Literal ID="lrTreeView" runat="server"></asp:Literal>
-    </ul>
+
+<div class="metro" xmlns:v="http://rdf.data-vocabulary.org/#">
+    <uc1:ucTreeView runat="server" ID="ucTreeView" />
 </div>
+
 <div style="clear: both;">
 </div>
+
 <div class="box_outer">
     <div class="cat_article" itemscope itemtype="http://schema.org/Article">
         <h1 class="cat_article_title" itemprop="name">

@@ -21,8 +21,8 @@
     {
         display: inline-block;
         position: absolute;
-        right: 70px;
-        top: 55px;
+        right: 35px;
+        top: 25px;
         bottom: 3px;
         background: url(http://st.f1.thethao.vnexpress.net/c/v2/images/graphics/bg_icon_play.png) no-repeat top left;
         height: 26px;
@@ -40,7 +40,7 @@
                         <asp:Repeater ID="rpDataVideoViewed" runat="server">
                             <ItemTemplate>
                                 <li itemscope itemtype="http://schema.org/Article" class="blog_post video"><a href='<%# CurrentPage.UrlRoot + "/video/" +  XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("VideoID") +  ".aspx" %>'>
-                                    <img itemprop="image" src="<%# (Eval("Thumbnail").ToString().Contains("http://") ? Eval("Thumbnail").ToString() : CurrentPage.UrlRoot + "/images/video/w100-" + Eval("Thumbnail").ToString().ToLower().Replace(Global.ImagesVideo.ToLower(), "") + ".ashx") %>"
+                                    <img itemprop="image" src="<%# (Eval("Thumbnail").ToString().Contains("http://") ? Eval("Thumbnail").ToString() : CurrentPage.UrlRoot + "/images/video/w90-" + Eval("Thumbnail").ToString().ToLower().Replace(Global.ImagesVideo.ToLower(), "") + ".ashx") %>"
                                         alt='<%# Eval("Title") %>' class="alignleft">
                                     <span class="icon_play">&nbsp;</span></a>
                                     <p>

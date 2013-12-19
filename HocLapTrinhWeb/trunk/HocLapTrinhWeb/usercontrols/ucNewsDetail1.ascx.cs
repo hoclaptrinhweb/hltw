@@ -166,16 +166,20 @@ public partial class usercontrols_ucNewsDetail1 : HocLapTrinhWeb.UI.UCBase
 
     private void GetTreeView(int newsTypeID)
     {
-        var vnnNewsTypeBll = new vnn_NewsTypeBLL(CurrentPage.getCurrentConnection());
-        var row = vnnNewsTypeBll.GetNewsTypeByID(newsTypeID);
-        if (row == null)
-        {
-            lrTreeView.Text = lrTreeView.Text;
-            return;
-        }
-        lrTreeView.Text = "<li typeof=\"v:Breadcrumb\"><a rel=\"v:url\" property=\"v:title\" href='" + CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(row.NewsTypeName) + "/hltw" + row.NewsTypeID + ".aspx' >" + row.NewsTypeName + "</a></li>" + lrTreeView.Text;
-        if (row.ParentID != -1)
-            GetTreeView(row.ParentID);
+         var lrTreeView = (Literal)ucTreeView.FindControl("lrTreeView");
+         if (lrTreeView != null)
+         {
+             var vnnNewsTypeBll = new vnn_NewsTypeBLL(CurrentPage.getCurrentConnection());
+             var row = vnnNewsTypeBll.GetNewsTypeByID(newsTypeID);
+             if (row == null)
+             {
+                 lrTreeView.Text = lrTreeView.Text;
+                 return;
+             }
+             lrTreeView.Text = "<li typeof=\"v:Breadcrumb\"><a rel=\"v:url\" property=\"v:title\" href='" + CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(row.NewsTypeName) + "/hltw" + row.NewsTypeID + ".aspx' >" + row.NewsTypeName + "</a></li>" + lrTreeView.Text;
+             if (row.ParentID != -1)
+                 GetTreeView(row.ParentID);
+         }
     }
 
     public void SetBase()

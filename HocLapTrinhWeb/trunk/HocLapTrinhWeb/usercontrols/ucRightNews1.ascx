@@ -53,15 +53,3 @@
         }
     });
 </script>
-<div class="box_outer">
-    <!-- Begin Adlite -->
-    <script language="javascript" type="text/javascript">
-        var adlite_zoneId = 'va_C75DB0D2E5D31761';
-        var adlite_width = '300';
-        var adlite_height = '450';
-        var adlite_sizeId = '55';
-        var adlite_typeId = '4';
-    </script>
-    <script type="text/javascript" src="http://embed.adlite.net/adlite.js"></script>
-    <!-- End: Adlite -->
-</div>

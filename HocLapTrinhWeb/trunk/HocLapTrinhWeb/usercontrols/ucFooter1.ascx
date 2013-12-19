@@ -21,7 +21,7 @@
 
         .tags div
         {
-            width: 100% !important;
+            width: 98% !important;
             padding:10px;
         }
 </style>
