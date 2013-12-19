@@ -453,7 +453,6 @@ display:block;
     float:right;
     margin-top:10px;
     width:730px;
-    height:90px;
 }
 #header .top_ad img {
        width:468px;
@@ -2887,27 +2886,8 @@ padding: 0;
 ul.newsticker span {
 margin: 0 10px 0 0;
 }
-/*--------------------------------------------------*/
-/*	breadcrumbs
-/*-------------------------------------------------*/
-#crumbs {
-       padding-bottom:5px;
-       margin-bottom:10px;
-       border-bottom:1px solid #e0e0e0;
-       font-family:play;
-       font-size:13px;
-}
 
-#crumbs a {
-}
-#crumbs a:hover {
-       
-}
-#crumbs .delimiter {
-       font-family:play;
-       font-size:14px;
-       margin:0 5px;
-}
+
 .box_banner {
        margin-bottom:20px;
 }

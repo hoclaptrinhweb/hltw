@@ -3,64 +3,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
-    <script src="../js/jquery.js" type="text/javascript"></script>
-    <script src="../js/custom.js" type="text/javascript"></script>
+    <link href="http://localhost/hltw/css/font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet" />
 </head>
 <body>
-<style>
-    #icontainer
-    {
-        overflow: hidden;
-        width: 10px;
-        height: 12px;
-        position: absolute;
-        filter: alpha(opacity=0);
-        -moz-opacity: 0.0;
-        -khtml-opacity: 0.0;
-        opacity: 0.0;
-		z-index:9999999;
-    }
-</style>
+    <ul>
+        <li><a href="index.html" class="blightblue"><i class="fa fa-home"></i>Trang chủ</a></li>
+        <li><a href="#" rel="ddsubmenu2" class="bred"><i class="fa-desktop"></i>Pages
+        </a>
+        </li>
+        <li><a href="#" rel="ddsubmenu2" class="bviolet"><i class="fa-tablet"></i>Pages
+        </a>
+        </li>
 
-<div id="icontainer">
-    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fhoclaptrinhweb&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=tahoma&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 50px;height: 23px;position: absolute;left: -30px;" allowtransparency="true" id="fbframe" name="fbframe"></iframe>
-</div>
-    <script type="text/javascript">
-        if (navigator.userAgent.match(/iPad|android|webOS|iPod|BlackBerry|iPhone|ZuneWP|WPDesktop|Windows Phone/i)) {
-            window.location = 'http://m.hoclaptrinhweb.com';
-        } else if (navigator.userAgent.match(/midp|mobile|cldc/i)) {
-            window.location = "http://m.hoclaptrinhweb.com";
-        };
-        var inter;
-        $(function () {
-            inter = setInterval("updateActive();", 50);
-        });
+        <li><a href="#" rel="ddsubmenu2" class="bgreen"><i class="fa-comments"></i>Diễn đàn</a>
+        </li>
 
-        function updateActive() {
-            if ($(document.activeElement).attr('id') == "fbframe") {
-                clearInterval(inter);
-                setCookie('vnn', '1', 10);
-            }
-        };
-        var icontainer = document.getElementById('icontainer');
-        function mouseFollower(e) {
-            if (window.event) {
-                icontainer.style.top = (e.pageY - 5) + 'px';
-                icontainer.style.left = (e.pageX - 5) + 'px';
-            }
-            else {
-                icontainer.style.top = (e.pageY - 5) + 'px';
-                icontainer.style.left = (e.pageX - 5) + 'px';
-            }
-        };
-        $(document).mousemove(function (e) {
-            if (getCookie('vnn') != '1') {
-                $('#icontainer').show();
-                mouseFollower(e);
-            } else {
-                $('#icontainer').hide();
-            };
-        });
-    </script>
+        <li><a href="portfolio.html" class="borange"><i class="fa-video-camera"></i>Video</a></li>
+
+        <li><a href="contactus.html" class="bblue"><i class="fa-envelope-o"></i>Contact</a></li>
+    </ul>
 </body>
 </html>

@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Web;
 using HocLapTrinhWeb.BLL;
 using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
 
 public partial class usercontrols_ucVideoDetail : HocLapTrinhWeb.UI.UCBase
 {
@@ -106,16 +107,20 @@ public partial class usercontrols_ucVideoDetail : HocLapTrinhWeb.UI.UCBase
 
     private void GetTreeView(int newsTypeID)
     {
-        var vnnVideoTypeBll = new vnn_VideoTypeBLL(CurrentPage.getCurrentConnection());
-        var row = vnnVideoTypeBll.GetVideoTypeByID(newsTypeID);
-        if (row == null)
+        var lrTreeView = (Literal)ucTreeView.FindControl("lrTreeView");
+        if (lrTreeView != null)
         {
-            lrTreeView.Text = lrTreeView.Text;
-            return;
+            var vnnVideoTypeBll = new vnn_VideoTypeBLL(CurrentPage.getCurrentConnection());
+            var row = vnnVideoTypeBll.GetVideoTypeByID(newsTypeID);
+            if (row == null)
+            {
+                lrTreeView.Text = lrTreeView.Text;
+                return;
+            }
+            lrTreeView.Text = "<li typeof=\"v:Breadcrumb\"><a rel=\"v:url\" property=\"v:title\" href='" + CurrentPage.UrlRoot + "/video/" + XuLyChuoi.ConvertToUnSign(row.VideoTypeName) + "/hltw" + row.VideoTypeID + ".aspx' >" + row.VideoTypeName + "</a></li>" + lrTreeView.Text;
+            if (row.ParentID != -1)
+                GetTreeView(row.ParentID);
         }
-        lrTreeView.Text = "<li typeof=\"v:Breadcrumb\"><a rel=\"v:url\" property=\"v:title\" href='" + CurrentPage.UrlRoot + "/video/" + XuLyChuoi.ConvertToUnSign(row.VideoTypeName) + "/hltw" + row.VideoTypeID + ".aspx' >" + row.VideoTypeName + "</a></li>" + lrTreeView.Text;
-        if (row.ParentID != -1)
-            GetTreeView(row.ParentID);
     }
 
     private void LoadDataOld(int notVideoID, int newsTypeID, DateTime currdate)

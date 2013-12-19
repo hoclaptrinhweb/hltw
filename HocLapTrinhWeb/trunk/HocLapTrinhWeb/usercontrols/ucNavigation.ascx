@@ -1,16 +1,12 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ucNavigation.ascx.cs"
     Inherits="usercontrols_ucNavigation" %>
-<nav id="navigation">
+<%--<nav id="navigation">
     <div class="nav_wrap">
         <div class="inner">
             <ul class="nav">
                 <li><a class="<%= SetClass("")  %>" href='<%= CurrentPage.UrlRoot %>'>Trang chủ</a></li>
-                                <li>
-                <a href="http://forum.hoclaptrinhweb.com" target="_blank">Diễn đàn</a>
-                </li>
-                 <li>
-                <a class="<%= SetClass("/video/")  %>" href="<%= CurrentPage.UrlRoot + "/video/" %>"> Video </a>
-                </li>
+                 <li><a class="<%= SetClass("/video/")  %>" href="<%= CurrentPage.UrlRoot + "/video/" %>"> Video </a></li>
+                <li><a href="http://forum.hoclaptrinhweb.com" target="_blank">Diễn đàn</a></li>
                <li><a class="<%= SetClass("/contact.aspx")  %>" href='<%= CurrentPage.UrlRoot + "/contact.aspx" %>'>Liên hệ</a></li>
                 <li>
                 <div style="margin-top:8px;">
@@ -40,4 +36,16 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav>--%>
+<script>
+    $(".inner li").hover(
+                         function () {
+                             if ($(this).children('a').next().length == 1)
+                                 $(this).children('a').next().show();
+                         },
+                         function () {
+                             if ($(this).children('a').next().length == 1)
+                                 $(this).children('a').next().hide();
+                         }
+                   );
+</script>
