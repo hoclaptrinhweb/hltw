@@ -4,7 +4,7 @@
     <ItemTemplate>
         <div class="box_outer">
             <div class="news_box">
-                <div class="news_box_heading">
+                <div class="news_box_heading bblue">
                     <div class="nb_dots">
                         <h2>
                             <a title='<%# Eval("Description") %>' href='<%# CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/hltw" + Eval("NewsTypeID") + ".aspx" %>'>
