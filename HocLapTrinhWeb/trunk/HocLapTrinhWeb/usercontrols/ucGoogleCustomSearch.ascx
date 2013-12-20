@@ -24,6 +24,10 @@
         background: white;
         position: absolute !important;
     }
+    .gssb_c
+    {
+        margin-top:10px;
+    }
     .googlesearch table, .googlesearch div
     {
         padding: 0px;

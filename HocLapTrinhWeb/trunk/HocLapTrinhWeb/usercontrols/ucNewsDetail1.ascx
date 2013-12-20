@@ -52,7 +52,7 @@
         </div>
         <div class="single_share">
             <div style="padding-bottom: 7px">
-                Nếu bạn thấy bài viết hữu ích, hãy nhấn +1 và các liên kết chia sẻ để website ngày
+                Nếu bạn thấy bài viết hữu ích, hãy nhấn +1 và các liên kết chia sẻ để website ngày 
                 càng phát triển hơn. Xin cám ơn bạn!
             </div>
             <uc1:ucLikeFB_Google ID="ucLikeFB_Google1" runat="server" />
@@ -118,7 +118,7 @@
     <div id="respond">
         <div class="box_inner">
             <div class="news_box">
-                <h2 class="news_box_title2">Gửi bình luận
+                <h2 class="news_box_title2 blightblue">Gửi bình luận
                 </h2>
                 <div class="add_comment">
                     <p>
@@ -134,7 +134,7 @@
                         <textarea cols="5" rows="4" class="mingid-inputTxt" id="cmContent"></textarea>
                     </p>
                     <p class="form-submit">
-                        <button class="send_comment" type="button" onclick="return Send()" id="submit">
+                        <button class="send_comment bred" type="button" onclick="return Send()" id="submit">
                             Gửi
                         </button>
                         <label id="result">
@@ -172,7 +172,7 @@
     </div>
 </asp:Panel>
 <div class="entry-related" style="float: left; width: 49%;">
-    <h4 class="section-title">Tin mới hơn</h4>
+    <h4 class="section-title bviolet">Tin mới hơn</h4>
     <ul class="newmore">
         <asp:Repeater ID="rpDataNew" runat="server">
             <ItemTemplate>
@@ -188,7 +188,7 @@
     </ul>
 </div>
 <div class="entry-related" style="float: right; width: 49%;">
-    <h4 class="section-title">Tin cũ hơn</h4>
+    <h4 class="section-title bblue">Tin cũ hơn</h4>
     <ul class="newmore">
         <asp:Repeater ID="rpDataOld" runat="server">
             <ItemTemplate>
