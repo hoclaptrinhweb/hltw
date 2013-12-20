@@ -858,7 +858,6 @@ ul.slider_nav li.activeSlide a img {
     margin:0 -20px 10px -20px;
 }
 .news_box .news_box_heading .nb_dots {
-    background:url(~/images/dots_pat.png) repeat-x center;
     overflow:hidden;
     height:20px;
     line-height:23px;
@@ -868,12 +867,11 @@ ul.slider_nav li.activeSlide a img {
     font-weight:700;
     margin-bottom:0;
     color:#2f2f2f;
-    background:#f8f8f8;
     float:left;
     padding:0 15px 0 0;
 }
 .news_box .news_box_heading h2 a {
-    color:blue;
+    color:white;
     font-weight:bold;
 }
 a.nb_recent_more {

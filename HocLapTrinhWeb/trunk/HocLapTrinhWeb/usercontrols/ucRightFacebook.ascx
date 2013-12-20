@@ -1,16 +1,9 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="ucRightFacebook.ascx.cs"
     Inherits="usercontrols_ucRightFacebook" %>
 <%@ Register Src="ucMenuNewsType.ascx" TagName="ucMenuNewsType" TagPrefix="uc2" %>
-<div id="divTag" class="box_outer">
-    <div class="widget">
-        <h3 class="widget_title">Chuyên mục</h3>
-        <div class="wid_border">
-        </div>
-        <div class="">
-            <uc2:ucMenuNewsType ID="ucMenuNewsType1" runat="server" />
-        </div>
-    </div>
-</div>
+
+<uc2:ucMenuNewsType ID="ucMenuNewsType1" runat="server" />
+
 <style>
     .video, .video a
     {
@@ -29,10 +22,11 @@
         width: 26px;
     }
 </style>
+
 <div class="box_outer">
     <div class="widget">
         <div class="tabbed_widget">
-            <h3 class="widget_title">Video ngẫu nhiên</h3>
+            <h3 class="widget_title bred">Video ngẫu nhiên</h3>
             <div class="wid_border"></div>
             <div class="tabbed_container">
                 <div class="tabbed_content" style="display: block;">
