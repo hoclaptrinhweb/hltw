@@ -52,6 +52,7 @@
     <Compile Include="PDF.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RSS.cs" />
+    <Compile Include="SendMail.cs" />
     <Compile Include="String.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
