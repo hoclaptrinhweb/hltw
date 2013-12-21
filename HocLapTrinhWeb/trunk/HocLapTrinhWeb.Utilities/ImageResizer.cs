@@ -359,14 +359,14 @@ namespace HocLapTrinhWeb.Utilities
         }
     }
 
-    public class Image
+    public class clsImage
     {
         public static bool CheckIsImage(string fileExt)
         {
             string[] ArrExtensions = new string[] { ".gif", ".jpeg", ".jpg", ".png", ".GIF", ".JPEG", ".JPG", ".PNG" };
             for (int i = 0; i < ArrExtensions.Length; i++)
             {
-                if (ext == ArrExtensions[i])
+                if (fileExt == ArrExtensions[i])
                     return true;
             }
             return false;
