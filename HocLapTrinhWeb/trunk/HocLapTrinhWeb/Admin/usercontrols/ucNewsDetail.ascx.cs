@@ -330,8 +330,7 @@ public partial class administrator_usercontrols_NewsDetail : HocLapTrinhWeb.UI.U
         if (fileupload.PostedFile.ContentLength == 0)
             return "";
         var suffixImage = Path.GetExtension(fileupload.FileName).ToLower();
-        if (suffixImage != ".jpg" && suffixImage != ".jpeg" && suffixImage != ".tif" && suffixImage != ".png" &&
-            suffixImage != ".gif" && suffixImage != ".bmp")
+        if (!HocLapTrinhWeb.Utilities.Image.CheckIsImage(suffixImage))
             return "";
         var pathImage = imgfilename + DateTime.Now.ToString("hhmmssddMMyyyy") + suffixImage;
         try
@@ -358,8 +357,7 @@ public partial class administrator_usercontrols_NewsDetail : HocLapTrinhWeb.UI.U
         if (fileupload.PostedFile.ContentLength == 0)
             return "";
         var suffixImage = Path.GetExtension(fileupload.FileName).ToLower();
-        if (suffixImage != ".jpg" && suffixImage != ".jpeg" && suffixImage != ".tif" && suffixImage != ".png" &&
-            suffixImage != ".gif" && suffixImage != ".bmp")
+        if (!HocLapTrinhWeb.Utilities.Image.CheckIsImage(suffixImage))
             return "";
         var imgfilename = fileupload.FileName.Substring(0, fileupload.FileName.Length - 4);
         var pathImage = imgfilename + DateTime.Now.ToString("hhmmssddMMyyyy") + suffixImage;
