@@ -323,7 +323,7 @@ public partial class Admin_usercontrols_ucVideoDetail : HocLapTrinhWeb.UI.UCBase
         if (fileupload.PostedFile.ContentLength == 0)
             return "";
         var suffixImage = Path.GetExtension(fileupload.FileName).ToLower();
-        if (!HocLapTrinhWeb.Utilities.Image.CheckIsImage(suffixImage))
+        if (!HocLapTrinhWeb.Utilities.clsImage.CheckIsImage(suffixImage))
             return "";
         var pathImage = imgfilename + DateTime.Now.ToString("hhmmssddMMyyyy") + suffixImage;
         try
@@ -350,7 +350,7 @@ public partial class Admin_usercontrols_ucVideoDetail : HocLapTrinhWeb.UI.UCBase
         if (fileupload.PostedFile.ContentLength == 0)
             return "";
         var suffixImage = Path.GetExtension(fileupload.FileName).ToLower();
-        if (!HocLapTrinhWeb.Utilities.Image.CheckIsImage(suffixImage))
+        if (!HocLapTrinhWeb.Utilities.clsImage.CheckIsImage(suffixImage))
             return "";
         var imgfilename = fileupload.FileName.Substring(0, fileupload.FileName.Length - 4);
         var pathImage = imgfilename + DateTime.Now.ToString("hhmmssddMMyyyy") + suffixImage;
