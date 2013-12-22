@@ -127,18 +127,29 @@ public partial class usercontrols_ucVideoDetail : HocLapTrinhWeb.UI.UCBase
     {
         var vnnVideoBll = new v_VideoBLL(CurrentPage.getCurrentConnection());
         var dt = vnnVideoBll.GetAllVideoOldForRepeater("Title,VideoID,VideoTypeName,CreatedDate,Thumbnail", 6, notVideoID, newsTypeID, 1, currdate);
-        rpDataOld.DataSource = dt;
-        rpDataOld.DataBind();
+        var rpDataOld = (Repeater)ucListVideoOld.FindControl("rpData");
+        if (rpDataOld != null)
+        {
+            rpDataOld.DataSource = dt;
+            rpDataOld.DataBind();
+        }
+
         if (dt != null && dt.Count > 0)
         {
             aPrev.Visible = true;
             aPrev.HRef = CurrentPage.UrlRoot + "/video/" + XuLyChuoi.ConvertToUnSign(dt[0].VideoTypeName) + "/" + XuLyChuoi.ConvertToUnSign(dt[0].Title) + "-hltw" + dt[0].VideoID + ".aspx";
             aPrev.Title = dt[0].Title.Replace("\"", "");
         }
+
         dt = vnnVideoBll.GetAllVideoNewForRepeater("Title,VideoID,VideoTypeName,CreatedDate,Thumbnail", 6, notVideoID, newsTypeID, 1, currdate);
         if (dt == null || dt.Count == 0) return;
-        rpDataNew.DataSource = dt.Select("", "createddate desc");
-        rpDataNew.DataBind();
+        var rpDataNew = (Repeater)ucListVideoNew.FindControl("rpData");
+        if (rpDataNew != null)
+        {
+            rpDataNew.DataSource = dt.Select("", "createddate desc");
+            rpDataNew.DataBind();
+        }
+
         aNext.Visible = true;
         aNext.HRef = CurrentPage.UrlRoot + "/video/" + XuLyChuoi.ConvertToUnSign(dt[0].VideoTypeName) + "/" + XuLyChuoi.ConvertToUnSign(dt[0].Title) + "-hltw" + dt[0].VideoID + ".aspx";
         aNext.Title = dt[0].Title.Replace("\"", "");
