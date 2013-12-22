@@ -76,7 +76,9 @@ public partial class usercontrols_ucVideoDetail : HocLapTrinhWeb.UI.UCBase
         }
         lbCreatedDate.Text = rVideo.UpdatedDate.ToString(CultureInfo.InvariantCulture);
         SeoConfig(rVideo.Title, rVideo.Brief, rVideo.IsKeywordNull() ? "" : rVideo.Keyword, rVideo.Thumbnail, CurrentPage.UrlRoot + "/video/" + XuLyChuoi.ConvertToUnSign(rVideo.VideoTypeName) + "/" + XuLyChuoi.ConvertToUnSign(rVideo.Title) + "-hltw" + rVideo.VideoID + ".aspx", rVideo.VideoURL);
+
         GetTreeView(rVideo.VideoTypeID);
+
         var dt = new dsHocLapTrinhWeb.tbl_VideoDataTable();
         var rowUpdate = dt.Newtbl_VideoRow();
         rowUpdate.VideoID = VideoID;
@@ -120,6 +122,9 @@ public partial class usercontrols_ucVideoDetail : HocLapTrinhWeb.UI.UCBase
             lrTreeView.Text = "<li typeof=\"v:Breadcrumb\"><a rel=\"v:url\" property=\"v:title\" href='" + CurrentPage.UrlRoot + "/video/" + XuLyChuoi.ConvertToUnSign(row.VideoTypeName) + "/hltw" + row.VideoTypeID + ".aspx' >" + row.VideoTypeName + "</a></li>" + lrTreeView.Text;
             if (row.ParentID != -1)
                 GetTreeView(row.ParentID);
+            else
+                lrTreeView.Text = "<li typeof=\"v:Breadcrumb\"><a rel=\"v:url\" property=\"v:title\" href='" + CurrentPage.UrlRoot + "/video/' >Video</a></li>" + lrTreeView.Text;
+
         }
     }
 

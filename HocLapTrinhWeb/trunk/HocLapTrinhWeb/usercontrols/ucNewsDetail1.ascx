@@ -2,6 +2,8 @@
     Inherits="usercontrols_ucNewsDetail1" %>
 <%@ Register Src="ucLikeFB_Google.ascx" TagName="ucLikeFB_Google" TagPrefix="uc1" %>
 <%@ Register Src="~/usercontrols/ucTreeView.ascx" TagPrefix="uc1" TagName="ucTreeView" %>
+<%@ Register Src="~/usercontrols/ucListNews.ascx" TagPrefix="uc1" TagName="ucListNews" %>
+
 
 <style type="text/css">
 
@@ -174,33 +176,13 @@
 <div class="entry-related" style="float: left; width: 49%;">
     <h4 class="section-title bviolet">Tin mới hơn</h4>
     <ul class="newmore">
-        <asp:Repeater ID="rpDataNew" runat="server">
-            <ItemTemplate>
-                <li itemscope itemtype="http://schema.org/Event"><a itemprop="url" title='<%# Eval("Title") %>'
-                    rel='<%# CurrentPage.UrlRoot + "/Handler/tooltip.ashx?id=" + Eval("NewsID") %>'
-                    href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("NewsID") +  ".aspx" %>'>
-                    <span itemprop="name">
-                        <%# Global.GetSubContent(Eval("Title").ToString(),40) %></span> </a>
-                    <meta itemprop="startDate" content='<%# ((DateTime)Eval("CreatedDate")).ToString("yyyy-MM-dd") %>'>
-                </li>
-            </ItemTemplate>
-        </asp:Repeater>
+        <uc1:ucListNews runat="server" ID="ucListNews" />
     </ul>
 </div>
 <div class="entry-related" style="float: right; width: 49%;">
     <h4 class="section-title bblue">Tin cũ hơn</h4>
     <ul class="newmore">
-        <asp:Repeater ID="rpDataOld" runat="server">
-            <ItemTemplate>
-                <li itemscope itemtype="http://schema.org/Event"><a itemprop="url" title='<%# Eval("Title") %>'
-                    rel='<%# CurrentPage.UrlRoot + "/Handler/tooltip.ashx?id=" + Eval("NewsID") %>'
-                    href='<%# CurrentPage.UrlRoot + "/" +  XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/"  + XuLyChuoi.ConvertToUnSign(Eval("Title").ToString()) + "-hltw"  + Eval("NewsID") +  ".aspx" %>'>
-                    <span itemprop="name">
-                        <%# Global.GetSubContent(Eval("Title").ToString(),40) %></span> </a>
-                    <meta itemprop="startDate" content='<%# ((DateTime)Eval("CreatedDate")).ToString("yyyy-MM-dd") %>'>
-                </li>
-            </ItemTemplate>
-        </asp:Repeater>
+        <uc1:ucListNews runat="server" ID="ucListNewsOld" />
     </ul>
 </div>
 <script type="text/javascript">

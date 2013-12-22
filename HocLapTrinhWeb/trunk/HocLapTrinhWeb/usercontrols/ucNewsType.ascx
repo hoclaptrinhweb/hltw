@@ -7,6 +7,7 @@
                 <div class="news_box_heading bblue">
                     <div class="nb_dots">
                         <h2>
+                            <img src="<%# Eval("ImageURL") %>" alt="<%# Eval("NewsTypeName") %>">
                             <a title='<%# Eval("Description") %>' href='<%# CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(Eval("NewsTypeName").ToString()) + "/hltw" + Eval("NewsTypeID") + ".aspx" %>'>
                                 <%# Eval("newstypename") %></a></h2>
                     </div>

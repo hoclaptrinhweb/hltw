@@ -139,8 +139,12 @@ public partial class usercontrols_ucNewsDetail1 : HocLapTrinhWeb.UI.UCBase
     {
         var vnnNewsBll = new vnn_NewsBLL(CurrentPage.getCurrentConnection());
         var dt = vnnNewsBll.GetAllNewsOldForRepeater("Title,NewsID,NewsTypeName,CreatedDate", 10, notNewsID, newsTypeID, 1, currdate);
-        rpDataOld.DataSource = dt;
-        rpDataOld.DataBind();
+        var rpDataOld = (Repeater)ucListNewsOld.FindControl("rpData");
+        if (rpDataOld != null)
+        {
+            rpDataOld.DataSource = dt;
+            rpDataOld.DataBind();
+        }
         if (dt != null && dt.Count > 0)
         {
             aPrev.Visible = true;
@@ -149,8 +153,13 @@ public partial class usercontrols_ucNewsDetail1 : HocLapTrinhWeb.UI.UCBase
         }
 
         dt = vnnNewsBll.GetAllNewsNewForRepeater("Title,NewsID,NewsTypeName,CreatedDate", 10, notNewsID, newsTypeID, 1, currdate);
-        rpDataNew.DataSource = dt.Select("", "createddate desc");
-        rpDataNew.DataBind();
+        var rpDataNew = (Repeater)ucListNews.FindControl("rpData");
+        if (rpDataNew != null)
+        {
+            rpDataNew.DataSource = dt.Select("", "createddate desc");
+            rpDataNew.DataBind();
+        }
+
         if (dt.Count == 0) return;
         aNext.Visible = true;
         aNext.HRef = CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(dt[0].NewsTypeName) + "/" + XuLyChuoi.ConvertToUnSign(dt[0].Title) + "-hltw" + dt[0].NewsID + ".aspx";
