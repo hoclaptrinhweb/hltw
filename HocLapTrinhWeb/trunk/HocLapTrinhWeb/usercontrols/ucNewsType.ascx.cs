@@ -14,7 +14,7 @@ public partial class usercontrols_ucNewsType : HocLapTrinhWeb.UI.UCBase
         SetBase();
         var vnnNewsTypeBll = new vnn_NewsTypeBLL(CurrentPage.getCurrentConnection());
         var notNewsTypeID = new ArrayList { 14, 22, 23, 34, 36 };
-        var dt = vnnNewsTypeBll.GetNewsTypeByParentID("Description,NewsTypeName,NewsTypeID,PathID", -1, notNewsTypeID);
+        var dt = vnnNewsTypeBll.GetNewsTypeByParentID("Description,NewsTypeName,NewsTypeID,PathID,ImageURL", -1, notNewsTypeID);
         rpNewsType.DataSource = dt;
         rpNewsType.DataBind();
     }

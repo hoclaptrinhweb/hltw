@@ -4,7 +4,7 @@
     <ItemTemplate>
         <div class="box_outer">
             <div class="news_box">
-                <div class="news_box_heading">
+                <div class="news_box_heading bviolet">
                     <div class="nb_dots">
                         <h2><a title='<%# Eval("Description") %>' href='<%# CurrentPage.UrlRoot + "/video/" + XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/hltw" + Eval("VideoTypeID") + ".aspx" %>'><%# Eval("videotypename") %></a></h2>
                     </div>
