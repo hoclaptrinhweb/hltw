@@ -73,11 +73,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc4KnockoutCRUD", "Knockou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bootstrap", "Bootstrap\Bootstrap.csproj", "{F775447A-C680-43E7-A38A-FBA179E8B640}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeSample", "CodeSample", "{6F199113-6C31-44E0-A8FE-9D0C691A219B}"
-	ProjectSection(SolutionItems) = preProject
-		C:\Users\nhatnam\Desktop\Convert_DataTable.rar = C:\Users\nhatnam\Desktop\Convert_DataTable.rar
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
