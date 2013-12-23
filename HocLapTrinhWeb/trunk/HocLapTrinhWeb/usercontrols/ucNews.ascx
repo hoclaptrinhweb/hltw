@@ -1,6 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="ucNews.ascx.cs"
     Inherits="usercontrols_ucNews" %>
 <%@ Register Src="~/usercontrols/ucTreeView.ascx" TagPrefix="uc1" TagName="ucTreeView" %>
+<%@ Register Src="~/usercontrols/ucListNewsType.ascx" TagPrefix="uc1" TagName="ucListNewsType" %>
+
 <div class="metro" xmlns:v="http://rdf.data-vocabulary.org/#">
     <uc1:ucTreeView runat="server" ID="ucTreeView" />
     <div class="zonetab">
@@ -11,6 +13,8 @@
 
 <div style="clear: both;">
 </div>
+
+<uc1:ucListNewsType runat="server" ID="ucListNewsType" />
 
 <asp:Repeater ID="rpData" runat="server">
     <ItemTemplate>

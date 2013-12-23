@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
@@ -137,7 +138,16 @@ public partial class usercontrols_ucNews : HocLapTrinhWeb.UI.UCBase
         var rNewsType = vnnNewsTypeBll.GetNewsTypeByID(NewsTypeID);
         if (rNewsType != null)
             SeoConfig(rNewsType.NewsTypeName, rNewsType.IsDescriptionNull() ? "" : rNewsType.Description, "", "", CurrentPage.UrlRoot + Request.RawUrl);
+
+        var rpNewsType = (Repeater)ucListNewsType.FindControl("rpNewsType");
+        if (rpNewsType != null)
+        {
+            var dts = vnnNewsTypeBll.GetNewsTypeByParentID("Description,NewsTypeName,NewsTypeID,PathID,ImageURL", rNewsType.NewsTypeID, null);
+            rpNewsType.DataSource = dts;
+        }
     }
+
+
 
     private void SeoConfig(string strTitle, string strDescription, string strKeyWords, string strImage, string strUrl)
     {
@@ -207,19 +217,19 @@ public partial class usercontrols_ucNews : HocLapTrinhWeb.UI.UCBase
     private void GetTreeView(int newstypeid)
     {
         var lrTreeView = (Literal)ucTreeView.FindControl("lrTreeView");
-         if (lrTreeView != null)
-         {
-             var vnnNewsTypeBll = new vnn_NewsTypeBLL(CurrentPage.getCurrentConnection());
-             var row = vnnNewsTypeBll.GetNewsTypeByID(newstypeid);
-             if (row == null)
-             {
-                 lrTreeView.Text = lrTreeView.Text;
-                 return;
-             }
-             lrTreeView.Text = "<li typeof=\"v:Breadcrumb\"><a rel=\"v:url\" property=\"v:title\" href='" + CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(row.NewsTypeName) + "/hltw" + row.NewsTypeID + ".aspx' >" + row.NewsTypeName + "</a></li>" + lrTreeView.Text;
-             if (row.ParentID != -1)
-                 GetTreeView(row.ParentID);
-         }
+        if (lrTreeView != null)
+        {
+            var vnnNewsTypeBll = new vnn_NewsTypeBLL(CurrentPage.getCurrentConnection());
+            var row = vnnNewsTypeBll.GetNewsTypeByID(newstypeid);
+            if (row == null)
+            {
+                lrTreeView.Text = lrTreeView.Text;
+                return;
+            }
+            lrTreeView.Text = "<li typeof=\"v:Breadcrumb\"><a rel=\"v:url\" property=\"v:title\" href='" + CurrentPage.UrlRoot + "/" + XuLyChuoi.ConvertToUnSign(row.NewsTypeName) + "/hltw" + row.NewsTypeID + ".aspx' >" + row.NewsTypeName + "</a></li>" + lrTreeView.Text;
+            if (row.ParentID != -1)
+                GetTreeView(row.ParentID);
+        }
     }
 
 
