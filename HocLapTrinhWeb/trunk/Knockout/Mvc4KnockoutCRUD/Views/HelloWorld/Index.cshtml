@@ -1,0 +1,15 @@
+﻿@using PerpetuumSoft.Knockout
+@model Mvc4KnockoutCRUD.Models.HelloWorldModel
+
+<script src="~/Scripts/knockout-2.2.0.js"></script>
+<script src="~/Scripts/knockout.mapping-latest.js"></script>
+@{
+    ViewBag.Title = "Index";
+    var ko = Html.CreateKnockoutContext();
+}
+
+<p>First name: @ko.Html.TextBox(m => m.FirstName)</p>
+<p>Last name : @ko.Html.TextBox(m => m.LastName)</p>
+<p>Hello, @ko.Html.Span(m => m.FullName)!</p>
+@ko.Apply(Model)
+

@@ -135,10 +135,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HelloWorldController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\HelloWorldModel.cs" />
     <Compile Include="Models\IProductRepository.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductRepository.cs" />
@@ -245,6 +247,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Product\Product.cshtml" />
     <Content Include="Views\Product\TestProduct.cshtml" />
+    <Content Include="Views\HelloWorld\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
