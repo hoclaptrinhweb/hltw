@@ -1,0 +1,11 @@
+﻿@using PerpetuumSoft.Knockout
+@model Mvc4KnockoutCRUD.Models.ClickCounterModel
+
+@{
+    var ko = Html.CreateKnockoutContext();
+}
+
+<div>You've clicked @ko.Html.Span(m => m.NumberOfClicks) times</div>
+@ko.Html.Button("Click me","RegisterClick","ClickCounter").Disable(m => m.HasClickedTooManyTimes)
+
+@ko.Apply(Model);
