@@ -1,0 +1,16 @@
+﻿@model Mvc4KnockoutCRUD.Models.Product
+
+@using PerpetuumSoft.Knockout
+
+
+@{
+    ViewBag.Title = "Products' List";
+    var ko = Html.CreateKnockoutContext();
+}
+
+<p>First name: @ko.Html.TextBox(m => m.Name)</p>
+<h2>Hello, @ko.Html.Span(m => m.Price)!</h2>
+
+<script src="~/Scripts/knockout-2.2.0.js"></script>
+<script src="~/Scripts/knockout.mapping-latest.js"></script>
+@ko.Apply(Model)
