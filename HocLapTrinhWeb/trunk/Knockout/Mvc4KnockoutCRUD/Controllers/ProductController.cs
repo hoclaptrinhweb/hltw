@@ -9,11 +9,23 @@ namespace Mvc4KnockoutCRUD.Controllers
 {
     public class ProductController : Controller
     {
-       static readonly IProductRepository repository = new ProductRepository();
+        static readonly IProductRepository repository = new ProductRepository();
 
         public ActionResult Product()
         {
             return View();
+        }
+
+        public ActionResult TestProduct()
+        {
+            var p = new Product()
+            {
+                Name = "Nhatnam",
+                Id = 1,
+                Price = 1,
+                Category = "loại"
+            };
+            return View(p);
         }
 
         public JsonResult GetAllProducts()
@@ -21,7 +33,7 @@ namespace Mvc4KnockoutCRUD.Controllers
             return Json(repository.GetAll(), JsonRequestBehavior.AllowGet);
         }
 
-       public JsonResult AddProduct(Product item)
+        public JsonResult AddProduct(Product item)
         {
             item = repository.Add(item);
             return Json(item, JsonRequestBehavior.AllowGet);
