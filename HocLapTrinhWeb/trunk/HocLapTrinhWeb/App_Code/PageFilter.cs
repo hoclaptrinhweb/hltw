@@ -130,14 +130,14 @@ namespace AspNetResources.Web
 
                 re = new Regex("(<!--.*?-->)", RegexOptions.IgnoreCase);
                 finalHtml = re.Replace(finalHtml, CommentMatch);
-                finalHtml = Regex.Replace(finalHtml, "^\\s*", string.Empty, RegexOptions.Compiled |
-                                  RegexOptions.Multiline);
 
                 //Hiện tại bị lỗi khi có pre
                 if (!finalHtml.Contains("<pre"))
                 {
                     finalHtml = Regex.Replace(finalHtml, "\\r\\n", string.Empty, RegexOptions.Compiled |
                                       RegexOptions.Multiline);
+                    finalHtml = Regex.Replace(finalHtml, "^\\s*", string.Empty, RegexOptions.Compiled |
+                                  RegexOptions.Multiline);
                 }
                 // Write the formatted HTML back
                 var data = Encoding.UTF8.GetBytes(finalHtml);

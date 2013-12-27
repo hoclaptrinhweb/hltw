@@ -18,7 +18,6 @@ public partial class usercontrols_ucNewsDetail1 : HocLapTrinhWeb.UI.UCBase
             if (lrScriptDetail != null)
             {
                 lrScriptDetail.Text = Combres.WebExtensions.CombresLink("syntaxhighlighter");
-                //lrScriptDetail.Text = "<script type='text/javascript' src='" + CurrentPage.UrlRoot + "/js/syntaxhighlighter.js'></script>";
                 lrScriptDetail.Text += "<script type=\"text/javascript\">SyntaxHighlighter.all();</script>";
             }
         }

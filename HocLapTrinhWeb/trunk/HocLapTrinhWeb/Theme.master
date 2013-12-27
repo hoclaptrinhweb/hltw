@@ -26,6 +26,7 @@
     <asp:Literal ID="lrStyle" runat="server"></asp:Literal>
     <asp:Literal ID="lrScript" runat="server"></asp:Literal>
     <asp:Literal ID="lrScriptDetail" runat="server"></asp:Literal>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst" type="text/javascript"></script>
     <meta runat="server" id="metaDesc" name="description" content="Hoclaptrinhweb.com là một website chuyên về Lập trình - Thiết kế website Graphic - HTML - CSS - Jquery - Photography - Tin công nghệ - Game. Hoclaptrinhweb.com là một website tổng hợp thông tin hoàn toàn được điều khiển tự động bởi máy tính. Mỗi ngày  tin tức từ  nhiều nguồn chính thức của các web điện tử và trang tin được Hoclaptrinhweb.com tự động tổng hợp, phân loại, phát hiện các bài đăng lại...." />
     <meta runat="server" id="metaKeywords" name="keywords" content="web online, hoc lap trinh web, hoc lap trinh, học lập trình web, lập trình web" />
     <meta property="og:title" content="" runat="server" id="metaTitle" />
