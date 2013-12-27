@@ -12,6 +12,11 @@
         var _ad360_h = 250;
         var _ad360_pos = 0;
     </script>
+    <div style="text-align:center">
+        <a href="http://congdongcviet.com" title="Cộng đồng C Việt | Lập trình C, Lập trình C++, Lập trình C#, Lập trình Java">
+            <img alt="Cộng đồng C Việt - Cộng đồng lập trình lớn nhất Việt Nam" src="http://congdongcviet.com/logos/Logo.gif">
+        </a>
+    </div>
     <script language="javascript" type="text/javascript" src="http://provider.ad360.vn/showads.min.js"></script>
     <!-- Ad360.vn-ad-4710-300-250-ends -->
     <embed onmousedown="AdsvnRenderClick(912)" src="<%= CurrentPage.UrlRoot %>/images/ads/vietbando336x140.swf"
