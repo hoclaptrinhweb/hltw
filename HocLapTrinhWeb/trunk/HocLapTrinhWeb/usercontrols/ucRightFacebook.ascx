@@ -69,6 +69,8 @@
         </div>
         <div class="like_box_footer">
             <div class="tagcloud tabbed_tag">
+                <a href="http://superwatch.vn/cid-92/dong-ho-thoi-trang.html">Dong ho thoi trang</a> tại Superwatch.vn , 
+                <a href="http://game-hay.mobi/?k=game-java&x=java-game&a=game-nokia&w=game-iphone&c=game-samsung">game java</a> , 
                 <a href="http://sany.vn/may-photocopy-ricoh-181/">may photocopy ricoh</a> - Sany.vn , 
                 <a href="http://ahaha.vn/san-pham/thuc-pham-chuc-nang-sua-ong-chua-swanson-royal-jelly-1000mg-san-pham-chinh-hang-nk-hoa-ky/944/13">sữa ong chúa</a> tại Ahaha.vn , 
                 Lap trinh <a target="_blank" href="http://maybanhang.net/phan-mem-quan-ly-ban-hang/">phan mem ban hang</a> tiet kiem va hieu qua , 
