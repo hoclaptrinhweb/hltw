@@ -138,6 +138,7 @@
     <Compile Include="Controllers\ClickCounterController.cs" />
     <Compile Include="Controllers\HelloWorldController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\SimpleListController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -146,6 +147,7 @@
     <Compile Include="Models\IProductRepository.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductRepository.cs" />
+    <Compile Include="Models\SimpleListModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -251,6 +253,7 @@
     <Content Include="Views\Product\TestProduct.cshtml" />
     <Content Include="Views\HelloWorld\Index.cshtml" />
     <Content Include="Views\ClickCounter\Index.cshtml" />
+    <Content Include="Views\SimpleList\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
