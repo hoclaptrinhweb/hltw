@@ -72,7 +72,6 @@
                 <a href="http://superwatch.vn/cid-92/dong-ho-thoi-trang.html">Dong ho thoi trang</a> tại Superwatch.vn , 
                 <a href="http://game-hay.mobi/?k=game-java&x=java-game&a=game-nokia&w=game-iphone&c=game-samsung">game java</a> , 
                 <a href="http://sany.vn/may-photocopy-ricoh-181/">may photocopy ricoh</a> - Sany.vn , 
-                <a href="http://ahaha.vn/san-pham/thuc-pham-chuc-nang-sua-ong-chua-swanson-royal-jelly-1000mg-san-pham-chinh-hang-nk-hoa-ky/944/13">sữa ong chúa</a> tại Ahaha.vn , 
                 Lap trinh <a target="_blank" href="http://maybanhang.net/phan-mem-quan-ly-ban-hang/">phan mem ban hang</a> tiet kiem va hieu qua , 
                 <a href="http://www.bhiu.edu.vn/hop-tac-quoc-te/hp-tac-quc-t/doi-tac.html">Lien ket dao tao quoc te</a> , 
                 Apple <a href="http://www.ngocmobile.vn/product/49/iphone-4-cu-16gb-trang-quoc-te-moi-98-99-ngocmobile-vn.html">iphone 4 cũ</a>
