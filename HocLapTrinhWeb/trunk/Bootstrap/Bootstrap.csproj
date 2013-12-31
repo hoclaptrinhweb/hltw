@@ -65,6 +65,18 @@
     <Content Include="bootstrap\img\glyphicons-halflings.png" />
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="Example\Bootstrap 3-materials\css\amelia-bootstrap.min.css" />
+    <Content Include="Example\Bootstrap 3-materials\css\bootstrap-theme.css" />
+    <Content Include="Example\Bootstrap 3-materials\css\bootstrap-theme.min.css" />
+    <Content Include="Example\Bootstrap 3-materials\css\bootstrap.css" />
+    <Content Include="Example\Bootstrap 3-materials\css\bootstrap.min.css" />
+    <Content Include="Example\Bootstrap 3-materials\css\site.css" />
+    <Content Include="Example\Bootstrap 3-materials\css\yeti-bootstrap.css" />
+    <Content Include="Example\Bootstrap 3-materials\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Example\Bootstrap 3-materials\js\bootstrap.js" />
+    <Content Include="Example\Bootstrap 3-materials\js\bootstrap.min.js" />
+    <Content Include="Example\Bootstrap 3-materials\js\jquery-2.0.3.js" />
+    <Content Include="Example\Bootstrap 3-materials\js\jquery-2.0.3.min.js" />
     <Content Include="Example\bootstrap-3.0.3\about.html" />
     <Content Include="Example\bootstrap-3.0.3\components.html" />
     <Content Include="Example\bootstrap-3.0.3\css.html" />
@@ -956,6 +968,9 @@
     <Content Include="Example\Bootstrap 3-materials\m6\after\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Example\Bootstrap 3-materials\m6\before\css\img\icons\social\Thumbs.db" />
     <Content Include="Example\Bootstrap 3-materials\m6\before\css\img\Thumbs.db" />
+    <Content Include="Example\Bootstrap 3-materials\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Example\Bootstrap 3-materials\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Example\Bootstrap 3-materials\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
