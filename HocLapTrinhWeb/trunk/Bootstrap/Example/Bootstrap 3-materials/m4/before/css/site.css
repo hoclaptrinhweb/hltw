@@ -7,6 +7,11 @@
   background-color: transparent;
 }
 
+.dropdown-menu > .disabled > a,
+.dropdown-menu > .disabled > a:focus,
+.dropdown-menu > .disabled > a:hover {
+  color: #999;
+}
 
 /*@import url(http://fonts.googleapis.com/css?family=Vollkorn:700italic);
 
