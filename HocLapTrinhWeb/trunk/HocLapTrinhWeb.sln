@@ -1,12 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HocLapTrinhWeb", "HocLapTrinhWeb\", "{8E7A6398-F5DE-4158-8A86-ADCFB0114B83}"
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HocLapTrinhWeb", "http://localhost:55555", "{8E7A6398-F5DE-4158-8A86-ADCFB0114B83}"
 	ProjectSection(WebsiteProperties) = preProject
 		SccProjectName = "Svn"
 		SccAuxPath = "Svn"
 		SccLocalPath = "Svn"
 		SccProvider = "SubversionScc"
+		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		ProjectReferences = "{74D8ED7C-1363-4E9B-9640-771409D3599E}|HocLapTrinhWeb.BLL.dll;{4B2A1A68-1A24-424A-95BB-29475FB4E10B}|HocLapTrinhWeb.UI.dll;{5EED6170-8745-4082-8497-CB0054B4FC36}|HocLapTrinhWeb.DAL.dll;{7A40BEF4-9D2D-40EB-BFE1-772257CAF3F1}|HocLapTrinhWeb.Utilities.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/HocLapTrinhWeb"
@@ -23,6 +26,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HocLapTrinhWeb", "HocLapTri
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "HocLapTrinhWeb\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 	ProjectSection(SvnOrigin) = preProject
@@ -37,8 +41,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HocLapTrinhWeb.UI", "HocLap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HocLapTrinhWeb.DAL", "HocLapTrinhWeb.DAL\HocLapTrinhWeb.DAL.csproj", "{5EED6170-8745-4082-8497-CB0054B4FC36}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "m_HocLapTrinhWeb", "m_HocLapTrinhWeb\", "{2254458A-0566-4A11-8BA0-62534A3850E8}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "m_HocLapTrinhWeb", "http://localhost:14917", "{2254458A-0566-4A11-8BA0-62534A3850E8}"
 	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		ProjectReferences = "{4B2A1A68-1A24-424A-95BB-29475FB4E10B}|HocLapTrinhWeb.UI.dll;{5EED6170-8745-4082-8497-CB0054B4FC36}|HocLapTrinhWeb.DAL.dll;{74D8ED7C-1363-4E9B-9640-771409D3599E}|HocLapTrinhWeb.BLL.dll;{7A40BEF4-9D2D-40EB-BFE1-772257CAF3F1}|HocLapTrinhWeb.Utilities.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/m_HocLapTrinhWeb"
@@ -55,6 +60,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "m_HocLapTrinhWeb", "m_HocLa
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "m_HocLapTrinhWeb\"
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HocLapTrinhWeb.Utilities", "HocLapTrinhWeb.Utilities\HocLapTrinhWeb.Utilities.csproj", "{7A40BEF4-9D2D-40EB-BFE1-772257CAF3F1}"
