@@ -91,7 +91,7 @@
                 <a href="http://linkm88.blogspot.com" target="_blank">M88</a> , 
                 <a href="http://cachvaom88.net" target="_blank" title="M88">M88</a> , 
                 <a target="_blank" title="Phần mềm bán hàng chuyên nghiệp, 3 giải SAO KHUÊ 2013 , Hotline: 1900 6129" href="http://www.phanmembanhang.com/">Phần mềm bán hàng</a> , 
-                <a target="_blank" title="Phần mềm quản lý bán hàng chuyên nghiệp, 3 giải SAO KHUÊ 2013 , Hotline: 1900 6129" href="http://hosgroup.com.vn/">Phần mềm quản lý bán hàng</a>
+                <a target="_blank" title="Phần mềm quản lý bán hàng chuyên nghiệp, 3 giải SAO KHUÊ 2013 , Hotline: 1900 6129" href="http://hosgroup.com.vn/phan-mem/phan-mem-quan-ly-ban-hang">Phần mềm quản lý bán hàng</a>
             </div>
         </div>
     </div>
