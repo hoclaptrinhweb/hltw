@@ -1,0 +1,35 @@
+﻿.blightblue {
+    background: #52b9e9 !important;
+    border: 0px !important;
+}
+
+.bred {
+    background: #fa3031 !important;
+    border: 0px !important;
+}
+
+
+.bgreen {
+    background: #43c83c !important;
+    border: 0px !important;
+}
+
+    .bgreen a, .bviolet a, .bred a, .blightblue a {
+        color: #fff !important;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+.bviolet {
+    background: #932ab6 !important;
+    border: 0px !important;
+}
+
+.boxcat {
+    height: 40px;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding:0px;
+}
