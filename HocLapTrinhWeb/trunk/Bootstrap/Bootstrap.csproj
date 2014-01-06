@@ -77,6 +77,7 @@
     <Content Include="Example\Bootstrap 3-materials\js\bootstrap.min.js" />
     <Content Include="Example\Bootstrap 3-materials\js\jquery-2.0.3.js" />
     <Content Include="Example\Bootstrap 3-materials\js\jquery-2.0.3.min.js" />
+    <Content Include="Example\Bootstrap 3-materials\m4\before\js\site.js" />
     <Content Include="Example\bootstrap-3.0.3\about.html" />
     <Content Include="Example\bootstrap-3.0.3\components.html" />
     <Content Include="Example\bootstrap-3.0.3\css.html" />
