@@ -11,3 +11,5 @@ Viết thêm hỏi và đáp
 
 
 ==> Video mới nhất theo Account
+
+==> Hiển thị các mục con của forum ra ngoài trang chủ 
