@@ -23,7 +23,18 @@
         </div>
     </div>
 </header>
+
 <div class="ads">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Top Banner 728x90 -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:728px;height:90px"
+         data-ad-client="ca-pub-5338556037145111"
+         data-ad-slot="9888271788"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
     <script type="text/javascript">
         var _ad360_id = 2875;
         var _ad360_w = 728;
