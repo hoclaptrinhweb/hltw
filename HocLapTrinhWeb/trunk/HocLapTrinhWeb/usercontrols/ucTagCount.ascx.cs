@@ -6,11 +6,16 @@ public partial class usercontrols_ucTagCount : HocLapTrinhWeb.UI.UCBase
     protected override void Page_Load(object sender, EventArgs e)
     {
         base.Page_Load(sender, e);
-        var vTagCountBll = new t_TagCountBLL(getCurrentConnection());
-        var dt = vTagCountBll.GetAll(100);
-        if (dt == null || dt.Count <= 0) return;
-        var vNewsBll = new vnn_NewsBLL(getCurrentConnection());
-        hdNewsCount.Value = vNewsBll.GetAllNewsRowCount("", -1, 1, "", "", "").ToString();
+
+        var dt = (vnn_dsHocLapTrinhWeb.vnn_vw_TagCountDataTable)Cache["dataTag"];
+        if (dt == null)
+        {
+            var vTagCountBll = new t_TagCountBLL(getCurrentConnection());
+            Cache.Insert("dataTag", vTagCountBll.GetAll(100), null, DateTime.Now.AddDays(1), System.Web.Caching.Cache.NoSlidingExpiration);
+            dt = (vnn_dsHocLapTrinhWeb.vnn_vw_TagCountDataTable)Cache["dataTag"];
+            if (dt == null || dt.Count <= 0) return;
+        }
+       
         dt.DefaultView.Sort = "tagname asc";
         rpTagCount.DataSource = dt.DefaultView;
         rpTagCount.DataBind();
@@ -18,7 +23,14 @@ public partial class usercontrols_ucTagCount : HocLapTrinhWeb.UI.UCBase
 
     public string GetTagClass(int category)
     {
-        var result = (category * 10000) / int.Parse(hdNewsCount.Value);
+        var hdNewsCount = (int?)Cache["newsCount"];
+        if (hdNewsCount == null)
+        {
+            var vNewsBll = new vnn_NewsBLL(getCurrentConnection());
+            Cache.Insert("newsCount", vNewsBll.GetAllNewsRowCount("", -1, 1, "", "", ""), null, DateTime.Now.AddDays(1), System.Web.Caching.Cache.NoSlidingExpiration);
+            hdNewsCount = (int?)Cache["newsCount"];
+        }
+        var result = (category * 10000) / hdNewsCount;
         if (result <= 1)
             return "tag1";
         if (result <= 4)
