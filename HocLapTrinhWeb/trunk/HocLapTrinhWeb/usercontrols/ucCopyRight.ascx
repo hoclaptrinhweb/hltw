@@ -3,8 +3,6 @@
 <div class="bottom_bar">
     <div class="inner">
         <ul class="social_icons">
-            <li>,<a class="lienket" href="http://www.ewebvn.com" title="Học thiết kế web - Kiến thức lập trình web"
-                target="_blank">Học thiết kế web</a> </li>
             <li>, <a class="lienket" href="http://raovat.yolo.vn" title="diễn đàn rao vặt" target="_blank">
                 dien dan rao vat</a> </li>
 				<li>
