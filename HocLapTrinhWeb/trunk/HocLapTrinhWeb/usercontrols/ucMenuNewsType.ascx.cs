@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web.Caching;
 using HocLapTrinhWeb.BLL;
 
 public partial class usercontrols_ucMenuNewsType : HocLapTrinhWeb.UI.UCBase
@@ -11,10 +12,10 @@ public partial class usercontrols_ucMenuNewsType : HocLapTrinhWeb.UI.UCBase
         if (dt == null)
         {
             var vnnNewsTypeBll = new vnn_NewsTypeBLL(CurrentPage.getCurrentConnection());
-            Cache.Insert("dataMenu", vnnNewsTypeBll.GetDataByParentID("NewsTypeName,NewsTypeID,TotalNews,ImageURL", -1), null, DateTime.Now.AddDays(10), System.Web.Caching.Cache.NoSlidingExpiration);
-            dt = (vnn_dsHocLapTrinhWeb.vnn_vw_NewsTypeDataTable)Cache["dataMenu"];
+            SqlCacheDependency dependency = new SqlCacheDependency("HocLapTrinhWeb.com", "tbl_NewsType");
+            Cache.Insert("dataMenu", vnnNewsTypeBll.GetDataByParentID("NewsTypeName,NewsTypeID,TotalNews,ImageURL", -1), dependency);
         }
-        rpNewsType.DataSource = dt;
+        rpNewsType.DataSource = (vnn_dsHocLapTrinhWeb.vnn_vw_NewsTypeDataTable)Cache["dataMenu"];
         rpNewsType.DataBind();
     }
 

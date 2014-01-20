@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web.Caching;
 using HocLapTrinhWeb.BLL;
 
 public partial class usercontrols_ucHeaderFix : HocLapTrinhWeb.UI.UCBase
@@ -6,7 +7,15 @@ public partial class usercontrols_ucHeaderFix : HocLapTrinhWeb.UI.UCBase
     protected override void Page_Load(object sender, EventArgs e)
     {
         base.Page_Load(sender, e);
-       // GetMenuNewsType(-1);
+        if (Cache["dataMenuFix"] == null)
+        {
+            GetMenuNewsType(-1);
+            SqlCacheDependency dependency = new SqlCacheDependency("HocLapTrinhWeb.com", "tbl_NewsType");
+            Cache.Insert("dataMenuFix", lbProductType.Text, dependency);
+        }
+        else
+            lbProductType.Text = (string)Cache["dataMenuFix"];
+
     }
     private void GetMenuNewsType(int productID)
     {

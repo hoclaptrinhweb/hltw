@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Web.Caching;
 using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
 
@@ -15,13 +16,24 @@ public partial class usercontrols_ucNewsStick : HocLapTrinhWeb.UI.UCBase
     public void LoadData()
     {
         var vnnNewsBll = new vnn_NewsBLL(CurrentPage.getCurrentConnection());
-        var dt = vnnNewsBll.GetNewsAll("NewsTypeName,NewsTypeID,Thumbnail,Title,NewsID", 7, NewsTypeID, 1, "", "", "viewed", "desc");
-        rpDataNewsRandom.DataSource = dt;
-        rpDataNewsRandom.DataBind();
-
-        var dts = vnnNewsBll.GetAllNewsForRepeater("NewsTypeName,Title,NewsID,RefAddress,UpdatedDate,Viewed,Thumbnail,Brief", 3, NewsTypeID, 1, "", "", "NewsID", "Desc");
-        rpData.DataSource = dts;
+        var key = "dataStick" + NewsTypeID.ToString();
+        if (Cache[key] == null)
+        {
+            var dts = vnnNewsBll.GetAllNewsForRepeater("NewsTypeName,Title,NewsID,RefAddress,UpdatedDate,Viewed,Thumbnail,Brief", 3, NewsTypeID, 1, "", "", "NewsID", "Desc");
+            SqlCacheDependency dependency = new SqlCacheDependency("HocLapTrinhWeb.com", "tbl_News");
+            Cache.Insert(key, dts, dependency);
+        }
+        rpData.DataSource = (vnn_dsHocLapTrinhWeb.vnn_vw_NewsDataTable)Cache[key];
         rpData.DataBind();
+
+        var keyview = "dataView" + NewsTypeID.ToString();
+        if (Cache[keyview] == null)
+        {
+            var dt = vnnNewsBll.GetNewsAll("NewsTypeName,NewsTypeID,Thumbnail,Title,NewsID", 7, NewsTypeID, 1, "", "", "viewed", "desc");
+            Cache.Insert(keyview, dt, null, DateTime.Now.AddDays(1), System.Web.Caching.Cache.NoSlidingExpiration);
+        }
+        rpDataNewsRandom.DataSource = (vnn_dsHocLapTrinhWeb.vnn_vw_News_and_NewsTypeDataTable)Cache[keyview];
+        rpDataNewsRandom.DataBind();
     }
 
     public string BindData(RepeaterItem item)

@@ -6,12 +6,13 @@
     {
         // Code that runs on application startup
         System.Web.Routing.RouteTable.Routes.AddCombresRoute("Combres Route");
+        System.Data.SqlClient.SqlDependency.Start(Global.cs_sqlserver);
     }
 
     void Application_End(object sender, EventArgs e)
     {
         //  Code that runs on application shutdown
-
+        System.Data.SqlClient.SqlDependency.Stop(Global.cs_sqlserver);
     }
 
     void Application_Error(object sender, EventArgs e)
