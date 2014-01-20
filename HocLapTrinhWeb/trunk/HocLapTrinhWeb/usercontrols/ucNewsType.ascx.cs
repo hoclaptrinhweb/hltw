@@ -19,12 +19,13 @@ public partial class usercontrols_ucNewsType : HocLapTrinhWeb.UI.UCBase
     public void LoadData()
     {
         //Quản lý Cache ở phần admin
-        if(Cache["dataNewsType"] == null)
+        if (Cache["dataNewsType"] == null)
         {
             var vnnNewsTypeBll = new vnn_NewsTypeBLL(CurrentPage.getCurrentConnection());
             var notNewsTypeID = new ArrayList { 14, 22, 23, 34, 36 };
             var dt = vnnNewsTypeBll.GetNewsTypeByParentID("Description,NewsTypeName,NewsTypeID,PathID,ImageURL", -1, notNewsTypeID);
-            Cache.Insert("dataNewsType", dt);
+            SqlCacheDependency dependency = new SqlCacheDependency("HocLapTrinhWeb.com", "tbl_NewsType");
+            Cache.Insert("dataNewsType", dt, dependency);
         }
         var rpNewsType = (Repeater)ucListNewsType.FindControl("rpNewsType");
         if (rpNewsType != null)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.Caching;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
@@ -24,12 +25,16 @@ public partial class usercontrols_ucListNewsType : HocLapTrinhWeb.UI.UCBase
         if ((item.ItemType != ListItemType.Item) && (item.ItemType != ListItemType.AlternatingItem)) return;
         var rpNews = (Repeater)item.FindControl("rpNews");
         var row = (vnn_dsHocLapTrinhWeb.vnn_vw_NewsTypeRow)((DataRowView)(e.Item.DataItem)).Row;
-
-        var vnnNewsTypeBll = new vnn_NewsTypeBLL(getCurrentConnection());
-        var rchildren = vnnNewsTypeBll.GetDataAllChildrenByPathID("NewsTypeName,NewsTypeID,PathID", row.PathID);
-        var vnnNewsBll = new NewsBLL(CurrentPage.getCurrentConnection());
-        var dt = vnnNewsBll.GetNewsAll("NewsTypeName,Brief,Viewed,NewsTypeID,Thumbnail,Title,NewsID", 10, rchildren, 1, "", "", "NewsId", "Desc");
-        rpNews.DataSource = dt;
+        if (Cache[row.PathID] == null)
+        {
+            var vnnNewsTypeBll = new vnn_NewsTypeBLL(getCurrentConnection());
+            var rchildren = vnnNewsTypeBll.GetDataAllChildrenByPathID("NewsTypeName,NewsTypeID,PathID", row.PathID);
+            var vnnNewsBll = new NewsBLL(CurrentPage.getCurrentConnection());
+            var dt = vnnNewsBll.GetNewsAll("NewsTypeName,Brief,Viewed,NewsTypeID,Thumbnail,Title,NewsID", 10, rchildren, 1, "", "", "NewsId", "Desc");
+            SqlCacheDependency dependency = new SqlCacheDependency("HocLapTrinhWeb.com", "tbl_News");
+            Cache.Insert(row.PathID, dt,dependency);
+        }
+        rpNews.DataSource = (vnn_dsHocLapTrinhWeb.vnn_vw_News_and_NewsTypeDataTable)Cache[row.PathID];
         rpNews.DataBind();
     }
 

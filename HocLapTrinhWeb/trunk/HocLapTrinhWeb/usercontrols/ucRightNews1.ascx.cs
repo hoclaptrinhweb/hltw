@@ -12,9 +12,13 @@ public partial class usercontrols_ucRightNews1 : HocLapTrinhWeb.UI.UCBase
 
     public void LoadData()
     {
-        var vnnNewsBll = new NewsBLL(CurrentPage.getCurrentConnection());
-        var dt = vnnNewsBll.GetNewsAll("NewsTypeName,NewsTypeID,Thumbnail,Title,NewsID", 5, NewsTypeID, 1, "", "", "NEWID()", "");
-        rpDataNewsRandom.DataSource = dt;
+        if (Cache["dataRandom"] == null)
+        {
+            var vnnNewsBll = new NewsBLL(CurrentPage.getCurrentConnection());
+            var dt = vnnNewsBll.GetNewsAll("NewsTypeName,NewsTypeID,Thumbnail,Title,NewsID", 5, NewsTypeID, 1, "", "", "NEWID()", "");
+            Cache.Insert("dataRandom", dt, null, DateTime.Now.AddMinutes(30), System.Web.Caching.Cache.NoSlidingExpiration);
+        }
+        rpDataNewsRandom.DataSource = (vnn_dsHocLapTrinhWeb.vnn_vw_News_and_NewsTypeDataTable)Cache["dataRandom"];
         rpDataNewsRandom.DataBind();
     }
 

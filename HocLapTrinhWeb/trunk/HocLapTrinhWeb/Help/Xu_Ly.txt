@@ -13,3 +13,23 @@ Viết thêm hỏi và đáp
 ==> Video mới nhất theo Account
 
 ==> Hiển thị các mục con của forum ra ngoài trang chủ 
+
+--Bước 1 đang sa cho dbo
+use [HocLapTrinhWeb.com]
+exec sp_changedbowner 'sa','true'
+
+-- Bước 2 đang ký Service Broker
+USE master
+ALTER DATABASE [HocLapTrinhWeb.com] SET ENABLE_BROKER
+
+-- Bước 3 đăng ký và xóa trong Global
+
+
+-- Sử dụng Cache lắng nghe sự thay đổi ở database
+-- B1 
+-- vào CMD
+-- Gõ : cd C:\Windows\Microsoft.NET\Framework\v4.0.30319
+-- Gõ : aspnet_regsql.exe -S NHATNAM -U sa -P vnn123456 -d HocLapTrinhWeb.com -ed
+-- Đăng ký table gõ : aspnet_regsql.exe - S NHATNAM -U sa- P vnn123456 -d HocLapTrinhWeb.com -t tbl_NewsType -et
+-- Đăng ký lắng nghe tất các table đăng ký cache : aspnet_regsql.exe - S NHATNAM -U sa- P vnn123456 -d HocLapTrinhWeb.com -lt
+
