@@ -31,5 +31,5 @@ ALTER DATABASE [HocLapTrinhWeb.com] SET ENABLE_BROKER
 -- Gõ : cd C:\Windows\Microsoft.NET\Framework\v4.0.30319
 -- Gõ : aspnet_regsql.exe -S NHATNAM -U sa -P vnn123456 -d HocLapTrinhWeb.com -ed
 -- Đăng ký table gõ : aspnet_regsql.exe - S NHATNAM -U sa- P vnn123456 -d HocLapTrinhWeb.com -t tbl_NewsType -et
--- Đăng ký lắng nghe tất các table đăng ký cache : aspnet_regsql.exe - S NHATNAM -U sa- P vnn123456 -d HocLapTrinhWeb.com -lt
+-- Đăng ký lắng nghe tất các table đăng ký cache : aspnet_regsql.exe -S NHATNAM -U sa -P vnn123456 -d HocLapTrinhWeb.com -lt
 
