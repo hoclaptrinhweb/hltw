@@ -3,16 +3,27 @@ using System.Web.UI.WebControls;
 using HocLapTrinhWeb.BLL;
 using System.Data;
 using System.Collections;
+using System.Web.Caching;
 
 public partial class usercontrols_ucVideoIndex : HocLapTrinhWeb.UI.UCBase
 {
     protected override void Page_Load(object sender, EventArgs e)
     {
         base.Page_Load(sender, e);
-        var vnnVideoTypeBll = new vnn_VideoTypeBLL(CurrentPage.getCurrentConnection());
-        var notVideoTypeID = new ArrayList { 4 };
-        var dt = vnnVideoTypeBll.GetVideoTypeByParentID("Description,VideoTypeName,VideoTypeID,PathID", -1, notVideoTypeID);
-        rpVideoType.DataSource = dt;
+        LoadData();
+    }
+
+    public void LoadData()
+    {
+        if (Cache["dataVideo"] == null)
+        {
+            var vnnVideoTypeBll = new vnn_VideoTypeBLL(CurrentPage.getCurrentConnection());
+            var notVideoTypeID = new ArrayList { 4 };
+            var dt = vnnVideoTypeBll.GetVideoTypeByParentID("Description,VideoTypeName,VideoTypeID,PathID", -1, notVideoTypeID);
+            SqlCacheDependency dependency = new SqlCacheDependency("HocLapTrinhWeb.com", "tbl_videotype");
+            Cache.Insert("dataVideo", dt, dependency);
+        }
+        rpVideoType.DataSource = (vnn_dsHocLapTrinhWeb.vnn_vw_VideoTypeDataTable)Cache["dataVideo"];
         rpVideoType.DataBind();
     }
 
@@ -22,12 +33,16 @@ public partial class usercontrols_ucVideoIndex : HocLapTrinhWeb.UI.UCBase
         if ((item.ItemType != ListItemType.Item) && (item.ItemType != ListItemType.AlternatingItem)) return;
         var rpVideo = (Repeater)item.FindControl("rpVideo");
         var row = (vnn_dsHocLapTrinhWeb.vnn_vw_VideoTypeRow)((DataRowView)(e.Item.DataItem)).Row;
-
-        var vnnVideoTypeBll = new vnn_VideoTypeBLL(getCurrentConnection());
-        var rchildren = vnnVideoTypeBll.GetDataAllChildrenByPathID("VideoTypeName,VideoTypeID,PathID", row.PathID);
-        var vnnVideoBll = new v_VideoBLL(CurrentPage.getCurrentConnection());
-        var dt = vnnVideoBll.GetVideoAll("VideoTypeName,Brief,Viewed,VideoTypeID,Thumbnail,Title,VideoID", 6, rchildren, 1, "", "", "VideoId", "Desc");
-        rpVideo.DataSource = dt;
+        if (Cache["video" + row.PathID] == null)
+        {
+            var vnnVideoTypeBll = new vnn_VideoTypeBLL(getCurrentConnection());
+            var rchildren = vnnVideoTypeBll.GetDataAllChildrenByPathID("VideoTypeName,VideoTypeID,PathID", row.PathID);
+            var vnnVideoBll = new v_VideoBLL(CurrentPage.getCurrentConnection());
+            var dt = vnnVideoBll.GetVideoAll("VideoTypeName,Brief,Viewed,VideoTypeID,Thumbnail,Title,VideoID", 6, rchildren, 1, "", "", "VideoId", "Desc");
+            SqlCacheDependency dependency = new SqlCacheDependency("HocLapTrinhWeb.com", "tbl_video");
+            Cache.Insert("video" + row.PathID, dt, dependency);
+        }
+        rpVideo.DataSource = (vnn_dsHocLapTrinhWeb.vnn_vw_VideoDataTable)Cache["video" + row.PathID];
         rpVideo.DataBind();
     }
 

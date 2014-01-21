@@ -49,6 +49,13 @@
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
+            <asp:Repeater ID="Repeater1" runat="server">
+                <ItemTemplate>
+                    <div class='<%# ((RepeaterItem)Container).ItemIndex % 2 == 0 ? "cat-list float-right" : "cat-list float-left" %>'>
+                        <a href='<%# CurrentPage.UrlRoot + "/video/" + XuLyChuoi.ConvertToUnSign(Eval("VideoTypeName").ToString()) + "/hltw" + Eval("VideoTypeID") + ".aspx" %>'><%# Global.GetSubContent(Eval("VideoTypeName").ToString(),20) %></a>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
         </div>
     </div>
 </div>
