@@ -17,7 +17,7 @@
                     <li><a href="http://forum.hoclaptrinhweb.com" target="_blank" class="bgreen"><i class="fa fa-comments"></i>Diễn đàn</a></li>
                     <li><a href="<%= CurrentPage.UrlRoot %>/contact.aspx" class="bblue"><i class="fa fa-envelope-o"></i>Liên hệ</a></li>
                     <li><a href="http://m.hoclaptrinhweb.com" class="bviolet"><i class="fa fa-tablet"></i>Mobile</a>
-                    <li><a href="www.youtube.com/user/hoclaptrinhweb" target="_blank" class="borg"><i class="fa fa-youtube"></i>Tutorial</a>
+                    <li><a href="http://www.youtube.com/subscription_center?add_user=hoclaptrinhweb" target="_blank" class="borg"><i class="fa fa-youtube"></i>Tutorial</a>
                     </li>
                 </ul>
             </div>
@@ -26,16 +26,6 @@
 </header>
 
 <div class="ads">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Top Banner 728x90 -->
-    <ins class="adsbygoogle"
-        style="display: inline-block; width: 728px; height: 90px"
-        data-ad-client="ca-pub-5338556037145111"
-        data-ad-slot="9888271788"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
     <script type="text/javascript">
         var _ad360_id = 2875;
         var _ad360_w = 728;
