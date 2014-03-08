@@ -67,12 +67,20 @@
         </div>
         <div class="like_box_footer">
             <div class="tagcloud tabbed_tag">
-                <a href="http://hoaanhdao.edu.vn/Tuyen-sinh-du-hoc-Nhat-Ban-2014-p242">Tuyển sinh du học Nhật Bản</a>
+                Thiết bị <a href="http://d-olympic.vn/product/san-pham-khac/nha-thi-dau">nhà thi đấu</a> , 
+                Van phong <a href="http://congtyluatdragon.com/">luat su</a> Dragon , 			
+                Tin tức <a href="http://xuatkhaulaodongvietnhat.com/tuyen-dung/51-thong-tin-tuyen-dung-xuat-khau-lao-dong-nhat-ban.html">tuyển dụng xuất khẩu lao động nhật bản</a> , 
+                <a href="http://hinhanhhaihuoc.com" title="Hình ảnh đẹp hài huớc dễ thuơng nhất">Hình ảnh hài hước </a>, 
+                <a href="http://www.ngocmobile.vn/category/96/iphone-4s/" title="giá iphone 4s">giá iphone 4s</a> , 
+                <a href="http://taigameplay.com/">Tai game mien phi</a> , 				
+                <a href="http://nipponshop.vn/blog-18/sua-nao-tot-cho-be-.html">Sua nao tot cho be</a> , 
+                <a href="http://studyjapan.vn">du học Nhật Bản</a> , 
+                <a href="http://chinese.edu.vn/hoc-tieng-trung-online">hoc tieng trung online</a> tai CHINESE , 
+                Dịch vụ <a href="http://chuyennhadaiphat.vn/cho-thue-xe-tai/">cho thuê xe tải</a> Đại Phát , 
+                <a href="http://hoaanhdao.edu.vn/Tuyen-sinh-du-hoc-Nhat-Ban-2014-p242">Tuyển sinh du học Nhật Bản</a> , 
                 Những máy <a href="http://bep.vn/may-hut-khu-mui">hút mùi</a> khử mùi tốt nhất , 
-                <a href="http://viettelidc.com.vn/thue-vps">Cloud VPS</a> là gì? ,
-                <a href="http://game-hay.mobi/?k=game-java&x=java-game&a=game-nokia&w=game-iphone&c=game-samsung">game java</a> , 
-                <a href="http://viettelidc.com.vn/ten-mien">kiểm tra tên miền</a> tại viettelidc.com.vn , 
-		        <a href="http://seatimes.com.vn/doanh-nhan">Doanh nhân</a> thành đạt , 
+                <a href="http://game-hay.mobi/?k=game-java&amp;x=java-game&amp;a=game-nokia&amp;w=game-iphone&amp;c=game-samsung">game java</a> ,
+                <a href="http://seatimes.com.vn/doanh-nhan">Doanh nhân</a> thành đạt , 
                 <a href="http://sany.vn/may-photocopy-ricoh-181/">may photocopy ricoh</a> - Sany.vn , 
                 <a href="http://www.thamtutu.com.vn">Văn phòng thám tử </a>VDT , 
                 LINK VAO <a href="http://www.fun122.com/lm/aff/biiichfi_vi">FUN88</a> , 
@@ -80,14 +88,16 @@
                 <a href="http://www.game24h.vn/">Game 24h</a> , 
                 đọc <a href="http://thethao247.vn">Báo bóng đá</a> trên Thể thao 247 , 
                 <a href="http://sany.vn/man-chieu-42/">Man chieu</a> chính hãng , 
-                <a href="http://insky.vn/">Thiết kế logo</a> chuyên nghiệp ,  
-                <a href="http://superwatch.vn/cid-92/dong-ho-thoi-trang.html">Dong ho thoi trang</a> tại Superwatch.vn , 
+                <a href="http://insky.vn/">Thiết kế logo</a> chuyên nghiệp , 
                 Chia sẽ kinh nghiệm <a href="http://www.yeutretho.com/handmade-c300/">handmade</a> tại yeutretho.com , 
-                 
                 <a href="http://linkm88.blogspot.com" target="_blank">M88</a> , 
                 <a href="http://cachvaom88.net" target="_blank" title="M88">M88</a> , 
                 <a target="_blank" title="Phần mềm bán hàng chuyên nghiệp, 3 giải SAO KHUÊ 2013 , Hotline: 1900 6129" href="http://www.phanmembanhang.com/">Phần mềm bán hàng</a> , 
-                <a target="_blank" title="Phần mềm quản lý bán hàng chuyên nghiệp, 3 giải SAO KHUÊ 2013 , Hotline: 1900 6129" href="http://hosgroup.com.vn/phan-mem/phan-mem-quan-ly-ban-hang">Phần mềm quản lý bán hàng</a>
+                <a target="_blank" title="Phần mềm quản lý bán hàng chuyên nghiệp, 3 giải SAO KHUÊ 2013 , Hotline: 1900 6129" href="http://hosgroup.com.vn/phan-mem/phan-mem-quan-ly-ban-hang">Phần mềm quản lý bán hàng</a> , 
+                <a href="http://www.188beta.net" target="_blank" title="188BET"><b>188BET</b></a> , 
+                <a href="http://www.12betwin.net" target="_blank" title="12BET"><b>12BET</b></a> , 
+                <a href="http://www.w88ap.net" target="_blank" title="W88"><b>W88</b></a> , 
+                <a href="http://www.cadobongda.tv" target="_blank" title="CA DO BONG DA"><b>http://www.cadobongda.tv</b></a>            
             </div>
         </div>
     </div>
