@@ -12,12 +12,13 @@ public partial class usercontrols_ucCopyRight : HocLapTrinhWeb.UI.UCBase
 
     private void CheckAdv()
     {
-        var rnd = new Random();
-        var k = rnd.Next(0, 2);
-        if (k == 1)
-            Ad360();
-        else
-            VatGia();
+        Ad360();
+        //var rnd = new Random();
+        //var k = rnd.Next(0, 2);
+        //if (k == 1)
+        //    Ad360();
+        //else
+        //    VatGia();
     }
 
     private void VatGia()
