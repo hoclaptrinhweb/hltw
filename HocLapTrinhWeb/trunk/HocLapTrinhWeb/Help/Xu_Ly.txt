@@ -30,10 +30,13 @@ ALTER DATABASE [HocLapTrinhWeb.com] SET ENABLE_BROKER
 -- B1 
 -- vào CMD
 -- Gõ : cd C:\Windows\Microsoft.NET\Framework\v4.0.30319
--- Gõ : aspnet_regsql.exe -S NHATNAM -U sa -P vnn123456 -d HocLapTrinhWeb.com -ed
--- Đăng ký table gõ : aspnet_regsql.exe - S NHATNAM -U sa- P vnn123456 -d HocLapTrinhWeb.com -t tbl_NewsType -et
--- Đăng ký lắng nghe tất các table đăng ký cache : aspnet_regsql.exe -S NHATNAM -U sa -P vnn123456 -d HocLapTrinhWeb.com -lt
-
+-- Gõ : aspnet_regsql.exe -S . -U sa -P vnn123456 -d HocLapTrinhWeb.com -ed
+-- Đăng ký table gõ : aspnet_regsql.exe -S . -U sa -P vnn123456 -d HocLapTrinhWeb.com -t tbl_NewsType -et
+-- Đăng ký lắng nghe tất các table đăng ký cache : aspnet_regsql.exe -S Server -U sa -P vnn123456 -d HocLapTrinhWeb.com -lt
+ 
+ --change pass
+ alter login sa with check_policy = off
+sp_password NULL, 'vnn123456', 'sa'
 
 Đăng ký youtube giống Like của FB
 http://www.youtube.com/subscribe_widget?p=hoclaptrinhweb
