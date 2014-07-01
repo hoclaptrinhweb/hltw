@@ -109,6 +109,12 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Install.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="unInstall.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HocLapTrinhWeb.BLL\HocLapTrinhWeb.BLL.csproj">
