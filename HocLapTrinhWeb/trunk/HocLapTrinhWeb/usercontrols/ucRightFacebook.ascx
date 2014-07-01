@@ -58,7 +58,7 @@
         var _ad360_h = 250;
         var _ad360_pos = 0;
     </script>
-    <script language="javascript" type="text/javascript" src="http://provider.ad360.vn/showads.min.js"></script>
+    <script type="text/javascript" src="http://provider.ad360.vn/showads.min.js"></script>
 </div>
 <div class="box_outer" id="adnet_widget_20114">
     <div class="widget">
