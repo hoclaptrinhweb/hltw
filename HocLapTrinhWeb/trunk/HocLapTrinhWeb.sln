@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HocLapTrinhWeb", "http://localhost:55555", "{8E7A6398-F5DE-4158-8A86-ADCFB0114B83}"
 	ProjectSection(WebsiteProperties) = preProject
 		SccProjectName = "Svn"
@@ -76,8 +74,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHocLapTrinhWeb", "ConsoleHocLapTrinhWeb\ConsoleHocLapTrinhWeb.csproj", "{DA291B2C-9EC0-4E64-83FA-3ECD7D80D7E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc4KnockoutCRUD", "Knockout\Mvc4KnockoutCRUD\Mvc4KnockoutCRUD.csproj", "{BCA3807F-60E6-49C8-BF76-103BEC757E61}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bootstrap", "Bootstrap\Bootstrap.csproj", "{F775447A-C680-43E7-A38A-FBA179E8B640}"
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
@@ -239,18 +235,6 @@ Global
 		{BCA3807F-60E6-49C8-BF76-103BEC757E61}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{BCA3807F-60E6-49C8-BF76-103BEC757E61}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{BCA3807F-60E6-49C8-BF76-103BEC757E61}.Release|x86.ActiveCfg = Release|Any CPU
-		{F775447A-C680-43E7-A38A-FBA179E8B640}.Debug|.NET.ActiveCfg = Debug|Any CPU
-		{F775447A-C680-43E7-A38A-FBA179E8B640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F775447A-C680-43E7-A38A-FBA179E8B640}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F775447A-C680-43E7-A38A-FBA179E8B640}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{F775447A-C680-43E7-A38A-FBA179E8B640}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{F775447A-C680-43E7-A38A-FBA179E8B640}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{F775447A-C680-43E7-A38A-FBA179E8B640}.Release|.NET.ActiveCfg = Release|Any CPU
-		{F775447A-C680-43E7-A38A-FBA179E8B640}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F775447A-C680-43E7-A38A-FBA179E8B640}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F775447A-C680-43E7-A38A-FBA179E8B640}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{F775447A-C680-43E7-A38A-FBA179E8B640}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{F775447A-C680-43E7-A38A-FBA179E8B640}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
