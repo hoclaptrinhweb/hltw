@@ -200,7 +200,7 @@ namespace HocLapTrinhWeb.UI
         {
             get
             {
-                return (base.Request.Url.Scheme + "://" + base.Request.Url.Host + ((base.Request.Url.Port == 80) ? "" : (":" + base.Request.Url.Port)) + ((base.Request.ApplicationPath == "/") ? "" : base.Request.ApplicationPath));
+                return (base.Request.Url.Scheme + "://" + base.Request.Url.Host + ((base.Request.Url.Port == 80  || base.Request.Url.Port == 9000) ? "" : (":" + base.Request.Url.Port)) + ((base.Request.ApplicationPath == "/") ? "" : base.Request.ApplicationPath));
             }
         }
 
