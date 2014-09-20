@@ -49,7 +49,7 @@ public partial class ThemeVideo : System.Web.UI.MasterPage
     {
         get
         {
-            return (this.Request.Url.Scheme + "://" + Request.Url.Host + ((Request.Url.Port == 80) ? "" : (":" + Request.Url.Port)) + ((Request.ApplicationPath == "/") ? "" : Request.ApplicationPath));
+            return (this.Request.Url.Scheme + "://" + Request.Url.Host + ((Request.Url.Port == 80 || Request.Url.Port == 9000) ? "" : (":" + Request.Url.Port)) + ((Request.ApplicationPath == "/") ? "" : Request.ApplicationPath));
         }
     }
 }

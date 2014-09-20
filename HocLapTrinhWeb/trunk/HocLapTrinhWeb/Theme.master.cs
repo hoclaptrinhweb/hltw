@@ -5,7 +5,7 @@ public partial class Theme : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-       lrStyle.Text = Combres.WebExtensions.CombresLink("DefaultThemeCss");
+        lrStyle.Text = Combres.WebExtensions.CombresLink("DefaultThemeCss");
         lrScript.Text = Combres.WebExtensions.CombresLink("DefaultThemeJs");
         Login();
     }
@@ -49,7 +49,7 @@ public partial class Theme : System.Web.UI.MasterPage
     {
         get
         {
-            return (this.Request.Url.Scheme + "://" + Request.Url.Host + ((Request.Url.Port == 80) ? "" : (":" + Request.Url.Port)) + ((Request.ApplicationPath == "/") ? "" : Request.ApplicationPath));
+            return (this.Request.Url.Scheme + "://" + Request.Url.Host + ((Request.Url.Port == 80 || Request.Url.Port == 9000) ? "" : (":" + Request.Url.Port)) + ((Request.ApplicationPath == "/") ? "" : Request.ApplicationPath));
         }
     }
 }
