@@ -30,7 +30,7 @@ public class GSiteMapVideo : IHttpHandler
     {
         get
         {
-            return (HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.Url.Host + ((HttpContext.Current.Request.Url.Port == 80) ? "" : (":" + HttpContext.Current.Request.Url.Port)) + ((HttpContext.Current.Request.ApplicationPath == "/") ? "" : HttpContext.Current.Request.ApplicationPath));
+            return (HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.Url.Host + ((HttpContext.Current.Request.Url.Port == 80 || HttpContext.Current.Request.Url.Port == 9000) ? "" : (":" + HttpContext.Current.Request.Url.Port)) + ((HttpContext.Current.Request.ApplicationPath == "/") ? "" : HttpContext.Current.Request.ApplicationPath));
         }
     }
 

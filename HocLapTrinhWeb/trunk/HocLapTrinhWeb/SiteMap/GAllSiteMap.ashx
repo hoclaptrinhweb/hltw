@@ -28,7 +28,7 @@ public class GAllSiteMap : IHttpHandler
     {
         get
         {
-            return (HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.Url.Host + ((HttpContext.Current.Request.Url.Port == 80) ? "" : (":" + HttpContext.Current.Request.Url.Port)) + ((HttpContext.Current.Request.ApplicationPath == "/") ? "" : HttpContext.Current.Request.ApplicationPath));
+            return (HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.Url.Host + ((HttpContext.Current.Request.Url.Port == 80 || HttpContext.Current.Request.Url.Port == 9000) ? "" : (":" + HttpContext.Current.Request.Url.Port)) + ((HttpContext.Current.Request.ApplicationPath == "/") ? "" : HttpContext.Current.Request.ApplicationPath));
         }
     }
 
@@ -53,7 +53,7 @@ public class GAllSiteMap : IHttpHandler
 
     public void GenerateXML(System.IO.Stream stream, int pagesize)
     {
-        var settings = new XmlWriterSettings {Indent = true};
+        var settings = new XmlWriterSettings { Indent = true };
         using (var writer = XmlWriter.Create(stream, settings))
         {
             writer.WriteStartDocument();
@@ -62,7 +62,7 @@ public class GAllSiteMap : IHttpHandler
             con.CreateConnection(Global.cs_sqlserver, Global.Key, Global.ValidKey);
             var vnnNewsBll = new vnn_NewsBLL(con);
             //Tính tổng số page để tạo số sitemap con
-            var n = vnnNewsBll.GetAllNewsRowCount("",-1, 1,"", "", "");
+            var n = vnnNewsBll.GetAllNewsRowCount("", -1, 1, "", "", "");
             if (n > 0)
             {
                 var nSumOfPage = (n - 1) / pagesize + 1;
