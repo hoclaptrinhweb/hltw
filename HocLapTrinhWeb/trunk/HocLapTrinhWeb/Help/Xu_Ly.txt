@@ -44,3 +44,4 @@ http://www.youtube.com/subscribe_widget?p=hoclaptrinhweb
 
 Thêm video giới thiệu vào các video có sẵn ở trong D:\1.Document\ASP.NET\MVC\LongTieng\CuongMeo_Forum.SaoBacDau-acad.vn_VS2010_Longtieng\Screen Casts\ASP.NET MVC 2.0
 
+Gắn thêm video jwplayer

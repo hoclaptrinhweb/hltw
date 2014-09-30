@@ -3,18 +3,13 @@
 <%@ Register Src="ucLikeFB_Google.ascx" TagName="ucLikeFB_Google" TagPrefix="uc1" %>
 <%@ Register Src="~/usercontrols/ucTreeView.ascx" TagPrefix="uc1" TagName="ucTreeView" %>
 <%@ Register Src="~/usercontrols/ucListVideo.ascx" TagPrefix="uc1" TagName="ucListVideo" %>
-
-
-<script src="<%= CurrentPage.UrlRoot %>/Code/jwp58l/swfobject.js" type="text/javascript"></script>
-<script src="<%= CurrentPage.UrlRoot %>/Code/jwp58l/jwplayer.js" type="text/javascript"></script>
-
+<script src="<%= CurrentPage.UrlRoot %>/jwplayer/jwplayer.js"></script>
+<script>jwplayer.key = "qZ9n3jGs0KEkidVdQN747EBKQcC6rqV8uud0MpGVbEbwhLCXunTCW9eeU4A=";</script>
 <div class="metro" xmlns:v="http://rdf.data-vocabulary.org/#">
     <uc1:ucTreeView runat="server" ID="ucTreeView" />
 </div>
-
 <div style="clear: both;">
 </div>
-
 <div class="box_outer">
     <div class="cat_article" itemscope itemtype="http://schema.org/Article">
         <h1 class="cat_article_title" itemprop="name">
@@ -39,26 +34,8 @@
             <asp:HiddenField ID="hdLink" runat="server" />
             <script type="text/javascript">
                 jwplayer("jwplayer").setup({
-                    'flashplayer': "<%= CurrentPage.UrlRoot %>/Code/jwp58l/player.swf",
-                    'width': '100%',
-                    'height': '391',
-                    'allowfullscreen': 'true',
-                    'allowscriptaccess': 'always',
-                    'wmode': 'opaque',
-                    'controlbar': 'over',
-                    'dock': 'true',
-                    'dock.position': 'left',
-                    'mute': 'false',
-                    'stretching': 'uniform',
-                    'autostart': 'false',
-                    'file': '<%= hdLink.Value %>',
-                    'logo.file': '<%= CurrentPage.UrlRoot %>/images/icon_video.png',
-                    'logo.hide': 'false',
-                    'logo.position': 'top-right',
-                    'logo.link': 'http://www.hoclaptrinhweb.com',
-                    'abouttext': 'Hoclaptrinhweb',
-                    'aboutlink': 'http://www.hoclaptrinhweb.com',
-                    'skin': '<%= CurrentPage.UrlRoot %>/Code/jwp58l/NewTubeDark.zip'
+                    file: "<%= hdLink.Value %>",
+                    abouttext: "Bản quyền hoclaptrinhweb.com",
                 });
             </script>
             <div class="clear">
@@ -101,7 +78,6 @@
         </div>
     </div>
 </div>
-
 <div class="box_outer">
     <div class="news_box">
         <div class="news_box_heading bblue">
@@ -116,7 +92,6 @@
         </div>
     </div>
 </div>
-
 <div class="box_outer">
     <div class="news_box">
         <div class="news_box_heading bviolet">
