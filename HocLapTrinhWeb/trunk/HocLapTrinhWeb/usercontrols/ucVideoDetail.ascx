@@ -29,13 +29,16 @@
             <asp:Literal ID="lbBrief" runat="server"></asp:Literal>
         </h2>
         <div id="article_content" class="single_article_content" itemprop="articleBody">
-            <div id="jwplayer" style="position: relative; width: 100%; height: 391px;">
+            <div id="jwplayer" style="position: relative; width: 600px; height: 391px;">
             </div>
             <asp:HiddenField ID="hdLink" runat="server" />
             <script type="text/javascript">
                 jwplayer("jwplayer").setup({
                     file: "<%= hdLink.Value %>",
                     abouttext: "Bản quyền hoclaptrinhweb.com",
+                    ga: {},
+                    width: 600,
+                    height : 300
                 });
             </script>
             <div class="clear">

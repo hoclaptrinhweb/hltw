@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:jwplayer="http://developer.longtailvideo.com/trac/" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+  <title>Tears of Steel Trailer</title>
+  <description>Tears of Steel is Blender&#39;s fourth film. A completely open source pipeline was used to produce all visual effects.</description>
+  <link>http://mango.blender.org/</link>
+  <item>
+    <title>Bài 6 : Kết nối database, hiển thị dữ liệu - ASP.Net MVC4</title>
+    <link>http://mango.blender.org/</link>
+    <pubDate>Mon, 01 Oct 2012 12:41:00 -0000</pubDate>
+    <jwplayer:image>http://assets-jp.jwpsrv.com/thumbs/vM7nH0Kl-720.jpg</jwplayer:image>
+  </item>
+  <item>
+    <title>Sintel</title>
+    <link>http://www.sintel.org/</link>
+    <pubDate>Tue, 26 Oct 2010 11:04:00 -0000</pubDate>
+    <description>Sintel is a fantasy computer generated short movie. It&#39;s the third release from the Blender Open Movie Project.</description>
+
+    <media:group>
+      <media:content bitrate="3010" url="conversions/zWLy8Jer/videos/q1fx20VZ-1703854.mp4?eee6cc8084bc02b3096443468bd6269a25236a7cc572265bd247c3d9e88dc978cc60268739bf48a7dedb3ed5c494df5879db1c1940fdfdc39a9bc2d7ad1b2c39c88a8f7ea2528a293a8ee46f7ecf61dbc17c3bf6a04c86ed0a27bfe494014a593cc1981bf52aae0a62e815f1a433ce2c" width="1920" />
+      <media:content bitrate="2130" url="conversions/zWLy8Jer/videos/q1fx20VZ-364768.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95e9e9318b94425e50ec35898c997a3e6fbb32e94" width="1280" />
+      <media:content bitrate="1160" url="conversions/zWLy8Jer/videos/q1fx20VZ-364767.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95e9e9318b94425e50ec35898c997a3e9fbb32e94" width="720" />
+      <media:content bitrate="540" url="conversions/zWLy8Jer/videos/q1fx20VZ-1753142.mp4?eee6cc8084bc02b3096443468bd6269a25236a7cc572265bd247c3d9e88dc978cc60268739bf48a7dedb3ed5c494df5879db1c1940fdfdc39a9bc2d7ad1b2c39c88a8f7ea2528a293a8ee46f7ecf61dbc17c3bf6a04c86ed0a27bfe494014a593cc1981bf52aae0f89180f45c6ab33ce" width="640" />
+      <media:content bitrate="650" url="conversions/zWLy8Jer/videos/q1fx20VZ-364766.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95e9e9318b94425e50ec35898c997a3e8fbb32e94" width="480" />
+      <media:content bitrate="420" url="conversions/zWLy8Jer/videos/q1fx20VZ-364765.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95e9e9318b94425e50ec35898c997a3ebfbb32e94" width="320" />
+    </media:group>
+    <jwplayer:captions.labels>Chapters,Captions</jwplayer:captions.labels>
+    <jwplayer:captions.files>http://assets-jp.jwpsrv.com/tracks/XtwSLSdq.txt,http://assets-jp.jwpsrv.com/tracks/ATJIuJUB.vtt</jwplayer:captions.files>
+    <jwplayer:provider>rtmp</jwplayer:provider>
+    <jwplayer:duration>888.00</jwplayer:duration>
+    <jwplayer:streamer>rtmpe://fms.413C.edgecastcdn.net/00413C/content/</jwplayer:streamer>
+    <jwplayer:image>http://assets-jp.jwpsrv.com/thumbs/q1fx20VZ-720.jpg</jwplayer:image>
+    <jwplayer:playlist.image>http://assets-jp.jwpsrv.com/thumbs/q1fx20VZ-120.jpg</jwplayer:playlist.image>
+    <jwplayer:tags>blender</jwplayer:tags>
+    <jwplayer:mediaid>q1fx20VZ</jwplayer:mediaid>
+  </item>
+  <item>
+    <title>Sintel Trailer</title>
+    <link>http://www.sintel.org/</link>
+    <pubDate>Mon, 25 Oct 2010 11:45:00 -0000</pubDate>
+    <description>Sintel is a fantasy computer generated short movie. It&#39;s the third release from the Blender Open Movie Project.</description>
+
+    <media:group>
+      <media:content bitrate="2160" url="conversions/zWLy8Jer/videos/W9W9GtsM-1703854.mp4?eee6cc8084bc02b3096443468bd6269a25236a7cc572265bd247c3d9e88dc978cc60268739bf48a7dedb3ed5c494df5879db1c1940fdfdc39a9bc2d7ad1b2c39c88a8f7ea2528a293a8ee46f7ecf61dbc17c3bf6a04c86ed0a27bfe4b2097b18843a7af19bf16f2599680bcb48bed294" width="1920" />
+      <media:content bitrate="1060" url="conversions/zWLy8Jer/videos/W9W9GtsM-364768.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95eb89b29f86f6021f289976e740dce4cb4efca9d" width="1280" />
+      <media:content bitrate="480" url="conversions/zWLy8Jer/videos/W9W9GtsM-364767.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95eb89b29f86f6021f289976e740dce43b4efca9d" width="720" />
+      <media:content bitrate="410" url="conversions/zWLy8Jer/videos/W9W9GtsM-1753142.mp4?eee6cc8084bc02b3096443468bd6269a25236a7cc572265bd247c3d9e88dc978cc60268739bf48a7dedb3ed5c494df5879db1c1940fdfdc39a9bc2d7ad1b2c39c88a8f7ea2528a293a8ee46f7ecf61dbc17c3bf6a04c86ed0a27bfe4b2097b18843a7af19bf16f203cb5545624df64b4" width="640" />
+      <media:content bitrate="420" url="conversions/zWLy8Jer/videos/W9W9GtsM-364766.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95eb89b29f86f6021f289976e740dce42b4efca9d" width="480" />
+      <media:content bitrate="280" url="conversions/zWLy8Jer/videos/W9W9GtsM-364765.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95eb89b29f86f6021f289976e740dce41b4efca9d" width="320" />
+    </media:group>
+    <jwplayer:captions.labels>English,Japanese,Russian,Spanish,English</jwplayer:captions.labels>
+    <jwplayer:captions.files>http://assets-jp.jwpsrv.com/tracks/2UEDrDhv.txt,http://assets-jp.jwpsrv.com/tracks/6aaGiPcs.txt,http://assets-jp.jwpsrv.com/tracks/2nxzdRca.txt,http://assets-jp.jwpsrv.com/tracks/BMjSl0KC.txt,http://assets-jp.jwpsrv.com/tracks/3SjSiUfX.vtt</jwplayer:captions.files>
+    <jwplayer:provider>rtmp</jwplayer:provider>
+    <jwplayer:duration>52.20</jwplayer:duration>
+    <jwplayer:streamer>rtmpe://fms.413C.edgecastcdn.net/00413C/content/</jwplayer:streamer>
+    <jwplayer:image>http://assets-jp.jwpsrv.com/thumbs/3XnJSIm4-720.jpg</jwplayer:image>
+    <jwplayer:playlist.image>http://assets-jp.jwpsrv.com/thumbs/3XnJSIm4-120.jpg</jwplayer:playlist.image>
+    <jwplayer:tags>blender, speech2text, trailers</jwplayer:tags>
+    <jwplayer:mediaid>3XnJSIm4</jwplayer:mediaid>
+  </item>
+  <item>
+    <title>Big Buck Bunny Trailer</title>
+    <link>http://www.bigbuckbunny.org/</link>
+    <pubDate>Thu, 10 Apr 2008 14:01:00 -0000</pubDate>
+    <description>Big Buck Bunny is a short animated film by the Blender Institute. It is made using free and open source software.</description>
+
+    <jwplayer:author>Big Buck Bunny</jwplayer:author>
+    <media:group>
+      <media:content bitrate="2130" url="conversions/zWLy8Jer/videos/NnkfCwbn-1703854.mp4?eee6cc8084bc02b3096443468bd6269a25236a7cc572265bd247c3d9e88dc978cc60268739bf48a7dedb3ed5c494df5879db1c1940fdfdc39a9bc2d7ad1b2c39c88a8f7ea2528a293a8ee46f7ecf61dbc17c3bf6a04c86ed0a27bfe4ab5e4747969ee0f7938cdbdce4aea8cb7bd6f595" width="1920" />
+      <media:content bitrate="1110" url="conversions/zWLy8Jer/videos/NnkfCwbn-364768.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95ea1cc15a79c5757472e8abb21948c9cb2856a29" width="1280" />
+      <media:content bitrate="550" url="conversions/zWLy8Jer/videos/NnkfCwbn-364767.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95ea1cc15a79c5757472e8abb21948c93b2856a29" width="720" />
+      <media:content bitrate="470" url="conversions/zWLy8Jer/videos/NnkfCwbn-1753142.mp4?eee6cc8084bc02b3096443468bd6269a25236a7cc572265bd247c3d9e88dc978cc60268739bf48a7dedb3ed5c494df5879db1c1940fdfdc39a9bc2d7ad1b2c39c88a8f7ea2528a293a8ee46f7ecf61dbc17c3bf6a04c86ed0a27bfe4ab5e4747969ee0f7938cdbd952fcf3a2d6cf7d0c" width="640" />
+      <media:content bitrate="450" url="conversions/zWLy8Jer/videos/NnkfCwbn-364766.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95ea1cc15a79c5757472e8abb21948c92b2856a29" width="480" />
+      <media:content bitrate="330" url="conversions/zWLy8Jer/videos/NnkfCwbn-364765.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95ea1cc15a79c5757472e8abb21948c91b2856a29" width="320" />
+    </media:group>
+    <jwplayer:captions.file>http://assets-jp.jwpsrv.com/tracks/Y1lkLS9j.txt</jwplayer:captions.file>
+    <jwplayer:provider>rtmp</jwplayer:provider>
+    <jwplayer:duration>33.00</jwplayer:duration>
+    <jwplayer:streamer>rtmpe://fms.413C.edgecastcdn.net/00413C/content/</jwplayer:streamer>
+    <jwplayer:image>http://assets-jp.jwpsrv.com/thumbs/bkaovAYt-720.jpg</jwplayer:image>
+    <jwplayer:playlist.image>http://assets-jp.jwpsrv.com/thumbs/bkaovAYt-120.jpg</jwplayer:playlist.image>
+    <jwplayer:tags>blender, trailers</jwplayer:tags>
+    <jwplayer:mediaid>bkaovAYt</jwplayer:mediaid>
+  </item>
+  <item>
+    <title>Big Buck Bunny (tx3g track)</title>
+    <pubDate>Thu, 10 Apr 2008 10:33:00 -0000</pubDate>
+    <description>This specific MP4 of the bunny trailer has MPEG-4 Timed Text captions embedded. It is used by the Captions plugin tests/demos.</description>
+
+    <media:group>
+      <media:content bitrate="440" url="conversions/zWLy8Jer/videos/jeZGvF6Q-364765.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95e85c724864229ed61d2b87b85611ae6b5c5aeab" width="320" />
+    </media:group>
+    <jwplayer:provider>rtmp</jwplayer:provider>
+    <jwplayer:duration>32.97</jwplayer:duration>
+    <jwplayer:streamer>rtmpe://fms.413C.edgecastcdn.net/00413C/content/</jwplayer:streamer>
+    <jwplayer:image>http://assets-jp.jwpsrv.com/thumbs/aytCR4cx-720.jpg</jwplayer:image>
+    <jwplayer:playlist.image>http://assets-jp.jwpsrv.com/thumbs/aytCR4cx-120.jpg</jwplayer:playlist.image>
+    <jwplayer:tags>addons, blender</jwplayer:tags>
+    <jwplayer:mediaid>aytCR4cx</jwplayer:mediaid>
+  </item>
+  <item>
+    <title>Big Buck Bunny</title>
+    <link>http://www.bigbuckbunny.org/</link>
+    <pubDate>Thu, 10 Apr 2008 08:57:00 -0000</pubDate>
+    <description>Big Buck Bunny is a short animated film by the Blender Institute. It is made using free and open source software.</description>
+
+    <media:group>
+      <media:content bitrate="3300" url="conversions/zWLy8Jer/videos/s8BPzDe0-1703854.mp4?eee6cc8084bc02b3096443468bd6269a25236a7cc572265bd247c3d9e88dc978cc60268739bf48a7dedb3ed5c494df5879db1c1940fdfdc39a9bc2d7ad1b2c39c88a8f7ea2528a293a8ee46f7ecf61dbc17c3bf6a04c86ed0a27bfe496086e71e0766680172dd88fa49c0d201c9a021e" width="1920" />
+      <media:content bitrate="1650" url="conversions/zWLy8Jer/videos/s8BPzDe0-364768.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95e9c9a3c91f28cf350d6e943bffd57b4a031c2e0" width="1280" />
+      <media:content bitrate="770" url="conversions/zWLy8Jer/videos/s8BPzDe0-364767.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95e9c9a3c91f28cf350d6e943bffd57bba031c2e0" width="720" />
+      <media:content bitrate="690" url="conversions/zWLy8Jer/videos/s8BPzDe0-1753142.mp4?eee6cc8084bc02b3096443468bd6269a25236a7cc572265bd247c3d9e88dc978cc60268739bf48a7dedb3ed5c494df5879db1c1940fdfdc39a9bc2d7ad1b2c39c88a8f7ea2528a293a8ee46f7ecf61dbc17c3bf6a04c86ed0a27bfe496086e71e0766680172dd88ade3ddc305a5c8f61" width="640" />
+      <media:content bitrate="570" url="conversions/zWLy8Jer/videos/s8BPzDe0-364766.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95e9c9a3c91f28cf350d6e943bffd57baa031c2e0" width="480" />
+      <media:content bitrate="350" url="conversions/zWLy8Jer/videos/s8BPzDe0-364765.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95e9c9a3c91f28cf350d6e943bffd57b9a031c2e0" width="320" />
+    </media:group>
+    <jwplayer:provider>rtmp</jwplayer:provider>
+    <jwplayer:duration>596.48</jwplayer:duration>
+    <jwplayer:streamer>rtmpe://fms.413C.edgecastcdn.net/00413C/content/</jwplayer:streamer>
+    <jwplayer:image>http://assets-jp.jwpsrv.com/thumbs/s8BPzDe0-720.jpg</jwplayer:image>
+    <jwplayer:playlist.image>http://assets-jp.jwpsrv.com/thumbs/s8BPzDe0-120.jpg</jwplayer:playlist.image>
+    <jwplayer:tags>blender, test</jwplayer:tags>
+    <jwplayer:mediaid>s8BPzDe0</jwplayer:mediaid>
+  </item>
+  <item>
+    <title>Elephants Dream Trailer</title>
+    <link>http://www.elephantsdream.org/</link>
+    <pubDate>Fri, 24 Mar 2006 12:16:00 -0000</pubDate>
+    <description>Elephants Dream is the world’s first open movie, made entirely with open source graphics software such as Blender.</description>
+
+    <media:group>
+      <media:content bitrate="500" url="conversions/zWLy8Jer/videos/xLNc8cP0-364767.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95e97ee30a2b3f1443030fffe0ab46ec02b09dc75" width="720" />
+      <media:content bitrate="400" url="conversions/zWLy8Jer/videos/xLNc8cP0-1753142.mp4?eee6cc8084bc02b3096443468bd6269a25236a7cc572265bd247c3d9e88dc978cc60268739bf48a7dedb3ed5c494df5879db1c1940fdfdc39a9bc2d7ad1b2c39c88a8f7ea2528a293a8ee46f7ecf61dbc17c3bf6a04c86ed0a27bfe49d7c62428b2e117fb2e0a3ec873449c7529484c9" width="640" />
+      <media:content bitrate="360" url="conversions/zWLy8Jer/videos/xLNc8cP0-364766.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95e97ee30a2b3f1443030fffe0ab46ec12b09dc75" width="480" />
+      <media:content bitrate="250" url="conversions/zWLy8Jer/videos/xLNc8cP0-364765.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95e97ee30a2b3f1443030fffe0ab46ec22b09dc75" width="320" />
+    </media:group>
+    <jwplayer:provider>rtmp</jwplayer:provider>
+    <jwplayer:duration>75.30</jwplayer:duration>
+    <jwplayer:streamer>rtmpe://fms.413C.edgecastcdn.net/00413C/content/</jwplayer:streamer>
+    <jwplayer:image>http://assets-jp.jwpsrv.com/thumbs/kaUXWqTZ-720.jpg</jwplayer:image>
+    <jwplayer:playlist.image>http://assets-jp.jwpsrv.com/thumbs/kaUXWqTZ-120.jpg</jwplayer:playlist.image>
+    <jwplayer:tags>blender, trailers</jwplayer:tags>
+    <jwplayer:mediaid>kaUXWqTZ</jwplayer:mediaid>
+  </item>
+  <item>
+    <title>Elephants Dream</title>
+    <link>http://www.elephantsdream.org/</link>
+    <pubDate>Fri, 24 Mar 2006 10:09:00 -0000</pubDate>
+    <description>Elephants Dream is the world’s first open movie, made entirely with open source graphics software such as Blender.</description>
+
+    <media:group>
+      <media:content bitrate="4630" url="conversions/zWLy8Jer/videos/nhYDGoyh-1703854.mp4?eee6cc8084bc02b3096443468bd6269a25236a7cc572265bd247c3d9e88dc978cc60268739bf48a7dedb3ed5c494df5879db1c1940fdfdc39a9bc2d7ad1b2c39c88a8f7ea2528a293a8ee46f7ecf61dbc17c3bf6a04c86ed0a27bfe48b5875652a9d1475a9b845830f77d181211fdd0b" width="1920" />
+      <media:content bitrate="1910" url="conversions/zWLy8Jer/videos/nhYDGoyh-364768.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95e81ca27858f4c18e9d6afe149a55fca4ea10dcf" width="1280" />
+      <media:content bitrate="850" url="conversions/zWLy8Jer/videos/nhYDGoyh-364767.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95e81ca27858f4c18e9d6afe149a55fc54ea10dcf" width="720" />
+      <media:content bitrate="720" url="conversions/zWLy8Jer/videos/nhYDGoyh-1753142.mp4?eee6cc8084bc02b3096443468bd6269a25236a7cc572265bd247c3d9e88dc978cc60268739bf48a7dedb3ed5c494df5879db1c1940fdfdc39a9bc2d7ad1b2c39c88a8f7ea2528a293a8ee46f7ecf61dbc17c3bf6a04c86ed0a27bfe48b5875652a9d1475a9b84586a9f7d334fe835f81" width="640" />
+      <media:content bitrate="590" url="conversions/zWLy8Jer/videos/nhYDGoyh-364766.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95e81ca27858f4c18e9d6afe149a55fc44ea10dcf" width="480" />
+      <media:content bitrate="380" url="conversions/zWLy8Jer/videos/nhYDGoyh-364765.mp4?eee6cc8084bc02b30964434688d6269a2256881fa011dd7e81bd52373247184b02ee507770a202642f98d1dc01f8d11185ff9f8b6efb7c742be4c47f19e79bc5571e36f63cb242aab5bd436f7955f449f7d9c1fe431e5721af4cc95e81ca27858f4c18e9d6afe149a55fc74ea10dcf" width="320" />
+    </media:group>
+    <jwplayer:captions.file>http://assets-jp.jwpsrv.com/tracks/le7PxkTf.txt</jwplayer:captions.file>
+    <jwplayer:provider>rtmp</jwplayer:provider>
+    <jwplayer:duration>653.82</jwplayer:duration>
+    <jwplayer:streamer>rtmpe://fms.413C.edgecastcdn.net/00413C/content/</jwplayer:streamer>
+    <jwplayer:image>http://assets-jp.jwpsrv.com/thumbs/nhYDGoyh-720.jpg</jwplayer:image>
+    <jwplayer:playlist.image>http://assets-jp.jwpsrv.com/thumbs/nhYDGoyh-120.jpg</jwplayer:playlist.image>
+    <jwplayer:tags>blender, test</jwplayer:tags>
+    <jwplayer:mediaid>nhYDGoyh</jwplayer:mediaid>
+  </item>
+</channel>
+</rss>
