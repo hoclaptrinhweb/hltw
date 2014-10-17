@@ -1,9 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="ucRightFacebook.ascx.cs"
     Inherits="usercontrols_ucRightFacebook" %>
 <%@ Register Src="ucMenuNewsType.ascx" TagName="ucMenuNewsType" TagPrefix="uc2" %>
-
 <uc2:ucMenuNewsType ID="ucMenuNewsType1" runat="server" />
-
 <style>
     .video, .video a {
         position: relative;
@@ -20,7 +18,6 @@
         width: 26px;
     }
 </style>
-
 <div class="box_outer">
     <div class="widget">
         <div class="tabbed_widget">
