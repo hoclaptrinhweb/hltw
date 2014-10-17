@@ -1,7 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="ucFooter1.ascx.cs"
     Inherits="usercontrols_ucFooter1" %>
 <%@ Register Src="~/usercontrols/ucTagCount.ascx" TagPrefix="uc1" TagName="ucTagCount" %>
-
 <style>
     .ads
     {
@@ -25,7 +24,6 @@
             padding:10px;
         }
 </style>
-
 <div class="ads">
     <!--Ad360.vn-ad-4711-728-90-start -->
     <script type="text/javascript">
@@ -37,8 +35,6 @@
     <script language="javascript" type="text/javascript" src="http://provider.ad360.vn/showads.min.js"></script>
     <!-- Ad360.vn-ad-4711-728-90-ends -->
 </div>
-
-
 <iframe name="www.hoclaptrinhweb.com" title="" src="http://www.alexa.com/minisiteinfo/http://hoclaptrinhweb.com" scrolling="no"
     border="0" frameborder="0" width="100%" style="height: 100px"></iframe>
 <div class="tags">
@@ -106,6 +102,7 @@
                     </li>
                     <li><a href="http://m.hoclaptrinhweb.com" target="_blank">Phiên bản trên mobile</a></li>
                     <li><a href="http://www.vietbando.com" target="_blank">Bản đồ</a></li>
+                    <li><a href="http://www.invest-vietnam.vn" target="_blank">Invest VietNam</a></li>
                 </ul>
             </div>
         </div>
