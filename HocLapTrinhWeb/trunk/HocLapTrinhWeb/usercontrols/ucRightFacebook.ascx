@@ -2,22 +2,6 @@
     Inherits="usercontrols_ucRightFacebook" %>
 <%@ Register Src="ucMenuNewsType.ascx" TagName="ucMenuNewsType" TagPrefix="uc2" %>
 <uc2:ucMenuNewsType ID="ucMenuNewsType1" runat="server" />
-<style>
-    .video, .video a {
-        position: relative;
-    }
-
-    .icon_play {
-        display: inline-block;
-        position: absolute;
-        right: 35px;
-        top: 25px;
-        bottom: 3px;
-        background: url(http://st.f1.thethao.vnexpress.net/c/v2/images/graphics/bg_icon_play.png) no-repeat top left;
-        height: 26px;
-        width: 26px;
-    }
-</style>
 <div class="box_outer">
     <div class="widget">
         <div class="tabbed_widget">
@@ -64,12 +48,10 @@
         </div>
         <div class="like_box_footer">
             <div class="tagcloud tabbed_tag">
-                Thiết bị <a href="http://d-olympic.vn/product/san-pham-khac/nha-thi-dau">nhà thi đấu</a> , 
-                Tin tức <a href="http://xuatkhaulaodongvietnhat.com/tuyen-dung/51-thong-tin-tuyen-dung-xuat-khau-lao-dong-nhat-ban.html">tuyển dụng xuất khẩu lao động nhật bản</a> , 
-                LINK VAO <a href="http://www.fun122.com/lm/aff/biiichfi_vi">FUN88</a> , 
                 <a href="http://www.vuongquocgame.com/games/Sex_And_The_City">game sex</a> , 
                 <a href="http://www.game24h.vn/">Game 24h</a> , 
                 đọc <a href="http://thethao247.vn">Báo bóng đá</a> trên Thể thao 247 , 
+                Bản <a href="http://doanhnghiepvn.vn/cong-nghe.html">tin công nghệ</a> 24h qua , 
                 
                 <%-- 17 tháng 10 năm 2014 --%>
                 <a href="http://www.dangky88.com/">Link m88</a> , 
