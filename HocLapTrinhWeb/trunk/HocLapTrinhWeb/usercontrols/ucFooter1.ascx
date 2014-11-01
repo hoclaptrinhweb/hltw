@@ -1,29 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="ucFooter1.ascx.cs"
     Inherits="usercontrols_ucFooter1" %>
 <%@ Register Src="~/usercontrols/ucTagCount.ascx" TagPrefix="uc1" TagName="ucTagCount" %>
-<style>
-    .ads
-    {
-        text-align: center;
-    }
-
-        .ads div
-        {
-            width: 100% !important;
-        }
-
-    .tags
-    {
-        text-align: left;
-        background-color:white;
-    }
-
-        .tags div
-        {
-            width: 98% !important;
-            padding:10px;
-        }
-</style>
 <div class="ads">
     <!--Ad360.vn-ad-4711-728-90-start -->
     <script type="text/javascript">

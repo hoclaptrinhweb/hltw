@@ -42,15 +42,6 @@
     <meta name="alexaVerifyID" content="N-eLjeUgLZY0YPY61XUqot_heyI" />
     <meta name="robots" content="index,follow" />
     <meta name="Googlebot" content="INDEX,FOLLOW" />
-    <!-- Start Alexa Certify Javascript -->
-    <script type="text/javascript">
-        _atrk_opts = { atrk_acct: "izJ6k1a0Sn0081", domain: "hoclaptrinhweb.com", dynamic: true };
-        (function () { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(as, s); })();
-    </script>
-    <noscript>
-        <img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=izJ6k1a0Sn0081" style="display: none" height="1" width="1" alt="" />
-    </noscript>
-    <!-- End Alexa Certify Javascript -->
 </head>
 <body>
     <uc1:ucHackLike runat="server" ID="ucHackLike" />
